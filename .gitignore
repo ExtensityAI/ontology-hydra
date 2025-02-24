@@ -172,3 +172,5 @@ cython_debug/
 
 # TensorBoard runs
 runs/
+artifacts/.DS_Store
+.DS_Store
