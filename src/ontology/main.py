@@ -10,11 +10,8 @@ from ontology.scoping import generate_scope_document
 domain = "Antarctica"  # taken from SQuAD benchmark, has 525 questions
 
 
-sample_comittee_path = Path("out/sample-comittee.json")
-
-
-def get_scope_doc_path(idx: int):
-    return Path(f"out/scopes/{idx}.txt")
+sample_comittee_path = Path("artifacts/antarctica/sample-comittee.json")
+scopes_path = Path("artifacts/antarctica/scopes")
 
 
 def main():
@@ -31,12 +28,10 @@ def main():
         sample_comittee_path.read_text(encoding="utf-8")
     )
 
-    groups = comittee.divide_into_groups(4)
-
-    for group in groups:
-        for member in group:
-            scope = generate_scope_document(domain, member.persona)
-            print(scope)
+    # generate scope documents delineating the domain
+    for i, member in enumerate(comittee.members):
+        scope = generate_scope_document(domain, member.persona)
+        (scopes_path / f"scope_member_{i}.txt").write_text(scope, encoding="utf-8")
 
 
 if __name__ == "__main__":

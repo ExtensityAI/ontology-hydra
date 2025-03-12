@@ -1,0 +1,50 @@
+# Scope of Inquiry for Antarctica
+
+## Introduction
+As an environmental journalist focusing on the polar regions, specifically Antarctica, the scope of inquiry encompasses a multidisciplinary approach that examines the complex interactions between climate change, biodiversity, and human activity in this unique and fragile ecosystem. The following document delineates the defined boundaries of the inquiry, while also illustrating the critical dimensions relevant to the domain of Antarctica.
+
+## 1. Geographic Boundaries
+Antarctica is defined geographically as the continent located at the southernmost point of Earth, primarily situated within the Antarctic Circle. The geographic boundaries include:
+- **Landmass**: The entire Antarctic landmass, including major features such as the Antarctic Peninsula, East Antarctica, West Antarctica, and surrounding offshore islands.
+- **Surrounding Waters**: The Southern Ocean, including the Ross Sea, Weddell Sea, and Amundsen Sea, is also included due to its ecological significance and connection to the Antarctic ecosystem.
+
+### Exclusions
+- **Sub-Antarctic Islands**: While relevant for certain ecological and climatic studies, islands like the Falkland Islands and South Georgia are excluded from the primary scope unless they specifically relate to Antarctic climate interactions.
+- **Antarctic Treaty System**: While the governance mechanisms and treaties influencing Antarctic operations may be researched, they are excluded from detailed exploration unless they directly impact environmental aspects.
+
+## 2. Key Phenomena
+The inquiry encompasses various phenomena that are vital to understanding the dynamics of Antarctica:
+- **Climate Change**: Examining the effects of rising temperatures, melting ice sheets, and shifting snowfall patterns on both physical landscapes and wildlife habitats.
+- **Biodiversity**: Studying endemic species, including penguins, seals, and various marine organisms, with a focus on their adaptation strategies and roles within ecosystems.
+- **Ice Dynamics**: Investigating glacier movements, sea ice formation and decline, and the implications of these changes on sea levels and global weather patterns.
+
+### Exclusions
+- **Geological Studies**: While relevant to the history of the continent, geological formations and past tectonic activity are not the primary focus of this inquiry.
+- **Astrobiology Aspects**: The search for extraterrestrial life linked to Antarctic analog studies is excluded from the primary scope.
+
+## 3. Human Impact
+An essential dimension of inquiry is the impact of human activities on the Antarctic environment:
+- **Scientific Research**: Evaluating the environmental impact of research stations and activities related to climate science, biology, and glaciology.
+- **Tourism**: Analyzing the effects of increased tourism on the delicate ecosystems of Antarctica, particularly with regards to waste management and wildlife disturbances.
+- **Fishing Practices**: Investigating the implications of commercial fishing, particularly krill harvesting, on local species and the broader marine food web.
+
+### Exclusions
+- **Historical Exploration**: While significant, the historical context of Antarctic exploration, such as the age of discovery and past expeditions, is not the primary focus.
+- **Military Activities**: Any military presence or activities, while certainly current, are excluded from environmental examinations unless they pose a direct threat to ecological stability.
+
+## 4. Policy and Conservation
+The inquiry includes investigations into existing environmental policies and conservation initiatives:
+- **International Treaties**: Overview of the Antarctic Treaty System, including measures for conservation such as the Protocol on Environmental Protection.
+- **Biodiversity Conservation Efforts**: Evaluating ongoing initiatives aimed at protecting wildlife and habitats, including Marine Protected Areas (MPAs) and specific conservation campaigns.
+  
+### Exclusions
+- **Policy Implementation**: Detailed studies on the effectiveness of governance structures or political discussions outside direct environmental implications are not included.
+
+## 5. Methodological Approach
+The inquiry will utilize both qualitative and quantitative methodologies common in environmental journalism:
+- **Field Reporting**: Primary research through expeditions to gather firsthand accounts and data.
+- **Data Analysis**: Integration of scientific studies, satellite imagery, and climate models to illustrate trends and forecast impacts.
+- **Interviews**: Engaging with scientists, policy-makers, and indigenous voices when relevant for a holistic perspective.
+
+## Conclusion
+This document serves to clearly define the parameters of inquiry surrounding Antarctica, illuminating its ecological significance amidst the challenges resulting from climate change and human intervention. Understanding these dimensions is critical for fostering environmental awareness and dialogue, ultimately advocating for the protection of this vital region.

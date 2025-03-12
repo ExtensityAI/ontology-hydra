@@ -1,0 +1,55 @@
+## Scope of Inquiry for Antarctica
+
+### Introduction
+Antarctica, often referred to as the 'last continent,' is a unique environment characterized by its extreme climate and biodiversity. This document delineates the scope of inquiry into Antarctica, detailing the specific areas, phenomena, and entities encompassed within this domain from the perspective of a socio-environmental scientist.
+
+### I. Geographic Scope
+Antarctica comprises the landmass and ice shelves situated primarily south of the Antarctic Circle (66°34′S latitude). The geographic boundaries include the following:
+
+1. **Land Mass**: The Antarctic continent itself, which includes:
+   - East Antarctica
+   - West Antarctica 
+   - The Antarctic Peninsula
+
+2. **Surrounding Waters**: The Southern Ocean, which encompasses:
+   - Continental shelf regions
+   - Open oceanic zones
+
+3. **Outlying Islands**: Includes important islands like the South Shetland Islands, South Orkney Islands, and Bouvet Island.
+
+### II. Environmental Phenomena
+The inquiry will explore various environmental phenomena including:
+
+1. **Climate Change**: Investigating the impacts of global warming, including increasing temperatures, melting ice sheets, and changing sea ice patterns.
+2. **Oceanic Changes**: Examining shifts in sea temperature, acidity, and salinity due to anthropogenic factors.
+3. **Biodiversity and Ecosystems**: Analyzing terrestrial and marine biological systems, including:
+   - Endemic species (e.g., Adelie and Emperor penguins)
+   - Krill populations and their ecological significance
+
+### III. Socio-Economic Dimensions
+As a socio-environmental scientist, the scope will examine the socio-economic impacts of environmental changes, focusing on:
+
+1. **Fisheries**: The evolving landscape of local and international fishing industries reliant on Southern Ocean resources, specifically:
+   - Target species (e.g., Patagonian toothfish)
+   - Impacts of overfishing and regulations
+
+2. **Indigenous Communities**: Assessing the roles and rights of local communities with historical ties to the Antarctic region, where applicable.
+
+3. **Research and Governance**: Evaluating international treaties and cooperation surrounding Antarctic governance, such as the Antarctic Treaty System and its impact on environmental conservation and scientific exploration.
+
+### IV. Exclusions
+To provide clarity, the following elements will be explicitly excluded from this scope of inquiry:
+
+1. **Political Issues**: While governance will be acknowledged, detailed political analyses of territorial claims or conflicts are outside the domain's primary focus.
+2. **Non-Antarctic Areas**: Any discussions pertaining to Arctic regions or non-Antarctic marine ecosystems will be excluded.
+3. **Non-Environmental Social Dynamics**: Broader social issues unrelated to the socio-economic impacts of ocean changes (e.g., cultural studies unrelated to environmental dynamics).
+
+### V. Methodological Framework
+The inquiry will employ a combination of methodologies, including:
+
+1. **Participatory Approaches**: Engaging local fishermen and communities through workshops and interviews to gather qualitative data on the impacts of ocean changes.
+2. **Quantitative Assessments**: Analyzing ecological data on fish populations and ice core samples to understand historical and present climate trends.
+3. **Interdisciplinary Collaboration**: Working with oceanographers, ecologists, and policy-makers to gain comprehensive insights into the multifaceted aspects of the Antarctic environment.
+
+### Conclusion
+The scope of inquiry into Antarctica, as delineated in this document, emphasizes the interconnectedness of environmental phenomena and socio-economic factors. By engaging in rigorous research, this initiative aims to contribute to sustainable solutions that empower local communities and promote the conservation of this vital region.

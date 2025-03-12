@@ -33,8 +33,8 @@ PROPORTIONAL_TO_PRIORITY = -1
 
 # consider changing these values
 _priority_to_n = {
-    Priority.Value.HIGH: 5,
-    Priority.Value.MEDIUM: 3,
+    Priority.Value.HIGH: 3,
+    Priority.Value.MEDIUM: 2,
     Priority.Value.LOW: 1,
 }
 

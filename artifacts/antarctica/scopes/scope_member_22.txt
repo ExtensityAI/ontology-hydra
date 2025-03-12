@@ -1,0 +1,85 @@
+# Scope of Inquiry for Antarctica
+
+## Introduction
+Antarctica, the southernmost continent and site of the South Pole, is characterized by its extensive ice sheets, diverse ecosystems, and distinctive geological features. This document outlines the scope of inquiry for research pertaining to Antarctica, encompassing specific areas of interest, prominent phenomena, and various entities relevant to the domain. 
+
+## 1. Physical Geography
+### 1.1 Ice Sheets and Glaciers
+- **Research Areas:**
+  - West Antarctic Ice Sheet (WAIS)
+  - East Antarctic Ice Sheet (EAIS)
+  - Glacial dynamics including flow rates, mass balance, and response to climate change.
+- **Phenomena:**
+  - Greenland-ice-sheet interactions and their implications for global sea level rise.
+  - Subglacial lakes and their ecological significance.
+
+### 1.2 Cryosphere
+- **Research Areas:**
+  - Permafrost and its stability.
+  - Sea ice extent and seasonal variations.
+- **Phenomena:**
+  - Melting patterns and their impact on marine environments.
+  - Role of seasonal snow cover in influencing local ecosystems.
+
+## 2. Climate and Weather Patterns
+### 2.1 Climate Systems
+- **Research Areas:**
+  - Atmospheric conditions and their interactions with sea ice and glaciers.
+  - Historical climate data reconstructions.
+- **Phenomena:**
+  - Influence of the Antarctic Oscillation (AAO) on global weather patterns.
+  - Relationship between Southern Ocean currents and climate variability.
+
+### 2.2 Ecological Impacts
+- **Research Areas:**
+  - Impact of climate change on biodiversity and species distribution.
+  - Ocean acidification due to increased CO2 absorption.
+- **Phenomena:**
+  - Changes in habitat for species such as penguins and seals.
+
+## 3. Biota and Ecosystems
+### 3.1 Microbial Life
+- **Research Areas:**
+  - Extremophile organisms surviving in harsh conditions.
+  - Role of microbial communities in nutrient cycling.
+- **Phenomena:**
+  - Biogeochemical processes in ice and snow environments.
+
+### 3.2 Terrestrial and Marine Life
+- **Research Areas:**
+  - Biodiversity assessments in various ecosystems (e.g., sub-ice habitats, coastal areas).
+  - Studies on endemic species adaptations to extreme conditions.
+- **Phenomena:**
+  - Food web dynamics in Antarctic marine environments, particularly krill populations.
+
+## 4. Geological Aspects
+### 4.1 Geomorphology
+- **Research Areas:**
+  - Glacial and periglacial landforms and their formation processes.
+  - Impact of tectonic activity and volcanic features.
+- **Phenomena:**
+  - Analysis of rock core samples to understand historical climate changes.
+
+### 4.2 Resource Exploration
+- **Research Areas:**
+  - Evaluation of potential mineral and hydrocarbon resources.
+  - Assessments of the environmental impact of such explorations.
+  
+## 5. Human Activities and Governance
+### 5.1 Research Stations and Fieldwork
+- **Inclusions:**
+  - Established international research stations and collaborative missions.
+  - Methods and technologies used for data collection in the field (e.g., remote sensing).
+ 
+### 5.2 Political and Legal Framework
+- **Inclusions:**
+  - Antarctic Treaty System and its implications for scientific research and environmental protection.
+  - Environmental protocols and conservation efforts.
+
+## Exclusions
+- Specific studies conducted outside of Antarctica, such as polar-related research in the Arctic.
+- General climate change discussions not specifically contextualized to Antarctic impacts.
+- Research pertaining to tourist activities unrelated to scientific inquiry and conservation efforts.
+
+## Conclusion
+The scope of inquiry for Antarctica encompasses a wide range of disciplines and investigations, from glacial dynamics to ecological interactions and geophysical characteristics. By maintaining a clear structure and delineating boundaries, this document serves as a foundation for future research initiatives and collaborative endeavors aimed at understanding the complexities and significance of Antarctica in a changing world.

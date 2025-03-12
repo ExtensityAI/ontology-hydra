@@ -1,0 +1,73 @@
+# Scope of Inquiry for the Domain of Antarctica
+
+## Introduction
+Antarctica, the southernmost continent, is a unique and vital component of the Earth's biosphere. Its scientific inquiry encompasses diverse areas of research, including physical geography, marine biology, climate science, and environmental conservation. This document outlines the scope of inquiry surrounding Antarctica, delineating the specific phenomena, areas, and entities of concern while clarifying boundaries and exclusions.
+
+## 1. Geographic Scope
+The geographical boundaries of the domain of study include:
+
+- **Main Landmass of Antarctica**: The ice-covered continent itself, including the Antarctic Peninsula and surrounding islands.
+- **Surrounding Oceans**: The Southern Ocean, which includes the waters encircling Antarctica and their biological and physical characteristics.
+  
+### Inclusions
+- Sub-Antarctic islands (e.g., South Georgia, South Shetland Islands).
+- Ice shelves, glacial systems, and sea ice dynamics.
+
+### Exclusions
+- Areas outside the Southern Ocean and Antarctic landmass, such as the Arctic region or non-polar ecosystems.
+- Human-inhabited continental areas not directly related to Antarctic research, such as New Zealand and Australia.
+
+## 2. Biological Scope
+Biological research in Antarctica primarily focuses on marine and terrestrial life forms that inhabit or interact with the Antarctic ecosystem.
+
+### Inclusions
+- **Antarctic Krill**: Species such as Euphausia superba, which play a crucial role in the marine food web.
+- **Other Marine Life**: Including seals, penguins, whales, and a variety of benthic and pelagic fish species.
+- **Terrestrial Ecology**: Flora, including mosses, lichens, and microbial life adapted to extreme conditions.
+
+### Exclusions
+- Ecosystems and species that are not native to Antarctica or influenced heavily by climatic conditions found in Antarctica.
+
+## 3. Physical and Environmental Scope
+The study of physical phenomena in Antarctica covers a range of geophysical elements and their implications for global systems.
+
+### Inclusions
+- **Climate Dynamics**: Investigating climactic patterns, interactions, and anomalies specific to the Antarctic region.
+- **Glaciology**: Researching glaciers, ice sheets, and their contributions to sea level rise.
+
+### Exclusions
+- Climate systems unrelated to Antarctic dynamics, such as those in tropical or temperate regions.
+
+## 4. Climate Change Impact Scope
+The effects of climate change on Antarctic systems present critical avenues of research.
+
+### Inclusions
+- Trends in ice mass loss, including the implications for global sea level.
+- Changes in krill populations and their cascading effects on the Antarctic ecosystem.
+- Ocean acidification and shifts in marine biodiversity.
+
+### Exclusions
+- Climate change investigations conducted solely in non-Antarctic locales or without direct reference to Antarctic consequences.
+
+## 5. Conservation and Policy Scope
+Research in this domain includes conservation efforts and legal frameworks that govern Antarctic activities.
+
+### Inclusions
+- Strategies for protecting unique ecosystems and biodiversity.
+- Exploration of international treaties, such as the Antarctic Treaty System and conservation agreements.
+
+### Exclusions
+- Conservation strategies not directly involving Antarctic ecosystems or wildlife.
+
+## 6. Indigenous Knowledge Integration
+A vital aspect of exploring Antarctica includes the integration of indigenous knowledge, especially from Māori perspectives given New Zealand's historical ties.
+
+### Inclusions
+- Engaging with traditional ecological knowledge and its applications in contemporary research practices and environmental management.
+- Collaborative research efforts that bridge scientific inquiry with cultural heritage.
+
+### Exclusions
+- Indigenous knowledge that does not specifically relate to the Antarctic ecosystems or ecosystems affected by Antarctic conditions.
+
+## Conclusion
+The scope of inquiry for Antarctica is vast and interdisciplinary, reflecting its critical role in our understanding of global climates, marine biology, and conservation practices. The exploration of its unique ecosystems, the effects of climate change, and the interplay of traditional knowledge and scientific research encapsulate the rich tapestry of inquiry that informs our understanding and stewardship of this vital region. As research progresses, adherence to these delineations will ensure clarity and focus in the ongoing study of Antarctica.

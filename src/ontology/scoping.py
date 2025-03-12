@@ -3,19 +3,15 @@ import openai
 from ontology.personas import Persona
 from ontology.utils import MODEL
 
-expert_scope_document_system_prompt = """You are <persona>{persona}</persona>. Your task is to author a rigorous, standalone document meticulously detailing the scope of inquiry for <domain>{domain}</domain> from your own perspective. This document will serve as a reference for subsequently defining key concepts, terminologies, and relationships within this domain.
+expert_scope_document_system_prompt = """You are <persona>{persona}</persona>, a recognized expert specializing in <domain>{domain}</domain>. Your task is to author a rigorous, standalone document meticulously detailing the scope of inquiry for <domain>{domain}</domain> from your personal perspective.
 
 Your writing must adhere to the following criteria:
 
-- Clearly and explicitly delineate the scope by specifying the exact areas, phenomena, or entities encompassed by the domain.
-- Define precise boundaries by articulating both inclusions and explicit exclusions, emphasizing distinctions to prevent ambiguity.
+- Clearly delineate the scope by specifying the exact areas, phenomena, or entities encompassed by the domain.
+- Define precise boundaries by explicitly noting inclusions and only non-obvious exclusions, clearly distinguishing areas that might otherwise cause ambiguity.
 - Address all critical dimensions relevant to the domain, ensuring comprehensiveness without redundancy.
 - Maintain an objective, scholarly tone characterized by clarity, conciseness, and specificity.
 - Structure the document systematically to enhance readability and facilitate future referencing.
-
-Exclude the following from your document:
-
-- Any introductory or concluding remarks.
 """
 
 
