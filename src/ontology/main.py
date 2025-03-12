@@ -3,8 +3,9 @@ from pathlib import Path
 
 import openai
 
+import ontology.utils  # noqa: F401
 from ontology.comittee import Comittee
-from ontology.scoping import generate_scope_document
+from ontology.scoping import ScopeDocument, merge_scope_documents
 
 domain = "Antarctica"  # taken from SQuAD benchmark, has 525 questions
 
@@ -14,7 +15,6 @@ scopes_path = Path("artifacts/antarctica/scopes")
 
 
 def main():
-    load_dotenv()
     openai.api_key = os.getenv("OPENAI_API_KEY")
 
     # comittee = generate_comittee_for_domain(domain)
@@ -28,9 +28,22 @@ def main():
     )
 
     # generate scope documents delineating the domain
-    for i, member in enumerate(comittee.members):
-        scope = generate_scope_document(domain, member.persona)
-        (scopes_path / f"scope_member_{i}.txt").write_text(scope, encoding="utf-8")
+    # for i, member in enumerate(comittee.members):
+    #     scope = generate_scope_document(domain, member.persona)
+    #     (scopes_path / f"scope_member_{i}.txt").write_text(scope, encoding="utf-8")
+
+    # next steps: merge scope documents into single document
+
+    scope_documents = [
+        ScopeDocument(
+            author=member.persona,
+            content=(scopes_path / f"scope_member_{i}.txt").read_text("utf-8"),
+        )
+        for i, member in enumerate(comittee.members)
+    ]
+
+    merged_scope = merge_scope_documents(domain, scope_documents)
+    print(merged_scope)
 
 
 if __name__ == "__main__":

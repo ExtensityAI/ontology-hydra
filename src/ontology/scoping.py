@@ -1,4 +1,5 @@
 import openai
+from pydantic import BaseModel
 
 from ontology.personas import Persona
 from ontology.utils import MODEL
@@ -32,5 +33,55 @@ def generate_scope_document(domain: str, persona: Persona):
 
     if response.choices[0].message.content is None:
         raise ValueError("Failed to generate scope document")
+
+    return response.choices[0].message.content
+
+
+class ScopeDocument(BaseModel):
+    author: Persona
+    content: str
+
+
+merge_documents_prompt = """You are an expert in <domain>{domain}</domain>. Your task is to merge the provided scope documents into a single, coherent, clear, and exhaustive document. Each original document includes a persona description of its author; you must assume all provided personas when merging the documents. The merged document must:
+
+- Retain all essential information from each original document without adding any external information.
+- Reflect the perspectives and expertise of all provided personas.
+- Eliminate redundancies and maintain clarity and logical flow.
+- Ensure coherence and readability throughout.
+
+Do not include any information that is not explicitly present in the original scope documents."""
+
+# TODO
+# TODO merge documents in chunks - merging all at once is too much for the model!
+# TODO
+
+
+def merge_scope_documents(domain: str, documents: list[ScopeDocument]):
+    # sample into groups of 4 (or more), merge, then resample and merge until one remains
+    # use approach leo said: tell model to behave as all personas at the same time
+
+    document_messages: list = [
+        {
+            "role": "user",
+            "content": f"<persona>{doc.author.description}</persona>\n\n{doc.content}",
+        }
+        for doc in documents
+    ]
+
+    response = openai.chat.completions.create(
+        model=MODEL,
+        messages=[
+            {
+                "role": "system",
+                "content": merge_documents_prompt.format(
+                    domain=domain,
+                ),
+            },
+            *document_messages,
+        ],
+    )
+
+    if response.choices[0].message.content is None:
+        raise ValueError("Failed to merge scope documents")
 
     return response.choices[0].message.content
