@@ -2,7 +2,6 @@ import os
 from pathlib import Path
 
 import openai
-from dotenv import load_dotenv
 
 from ontology.comittee import Comittee
 from ontology.scoping import generate_scope_document
