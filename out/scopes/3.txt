@@ -1,0 +1,35 @@
+### Scope of the Ontology on Antarctica
+
+#### 1. Geographic and Environmental Characteristics
+- **Included**: All aspects of Antarctica's geographic features, including its landmass (continental and subglacial), ice shelves, glaciers, surrounding oceanic zones, and atmospheric conditions. Specific attention will be given to geographical coordinates, topography, and the unique climatic conditions that define the continent.
+- **Excluded**: Non-continental features such as the Antarctic Peninsula's connection to South America or geographical features unrelated to Antarctica.
+
+#### 2. Biological and Ecological Aspects
+- **Included**: Indigenous flora and fauna of Antarctica, including species found in its terrestrial and marine ecosystems. This encompasses adaptations of organisms to extreme cold, nutrient availability, and seasonal dynamics. Additionally, factors influencing biodiversity, ecological interactions, and food web structures will be explored.
+- **Excluded**: Invasive species or species not naturally occurring in Antarctica, as well as terrestrial and marine ecosystems unrelated to the Antarctic region.
+
+#### 3. Climate Change and Environmental Impact
+- **Included**: Research findings related to climate change's effects on Antarctic ice dynamics, including melting rates, ice mass loss, and contributions to global sea-level rise. The ontology will include data on greenhouse gas emissions, temperature variations, and patterns of climate variability specific to the region.
+- **Excluded**: General climate change discussions not specific to Antarctica or unrelated ecological regions.
+
+#### 4. Scientific Research and Methodologies
+- **Included**: Various research methodologies employed in Antarctic studies, including remote sensing technologies, ice core analysis, sediment sampling, and biological surveys. The ontology will document key scientific instruments, data collection techniques, and notable field research expeditions.
+- **Excluded**: Methodologies not associated with Antarctic research or pertaining to unrelated scientific fields.
+
+#### 5. Policy and Governance
+- **Included**: Legal frameworks and international treaties governing the use, conservation, and political status of Antarctica, such as the Antarctic Treaty System and associated protocols. Consideration will also be given to the governance of research activities, environmental protection policies, and implications of military and economic interests.
+- **Excluded**: Policies that pertain to non-Antarctic governance issues or that do not directly influence Antarctic research or conservation.
+
+#### 6. Societal and Cultural Intersection
+- **Included**: Human interactions with the Antarctic environment, including indigenous knowledge, historical exploration narratives, and contemporary research collaborations. The scope will consider socio-cultural implications of climate change, tourism, and public engagement efforts in Antarctic research.
+- **Excluded**: Genealogical or cultural studies unrelated to Antarctica or external societies not engaging with or affecting Antarctica.
+
+#### 7. Education and Outreach
+- **Included**: Educational initiatives aimed at promoting awareness of Antarctic research and climate issues, including programs for schools, community engagement strategies, and outreach through digital media. The focus will include successful case studies of public engagement.
+- **Excluded**: Educational topics that do not directly involve Antarctic issues or those that relate to broader global educational strategies without a specific Antarctic context.
+
+#### 8. Economic Aspects
+- **Included**: Economic activities associated with Antarctica, such as tourism, fishing, mineral extraction, and sustainable resource management. Analysis of economic benefits and risks related to environmental changes will be included.
+- **Excluded**: Economic sectors entirely disconnected from the Antarctic region or general economic theories not applicable to Antarctica.
+
+By clearly delineating these categories, the ontology aims to establish a structured representation of pertinent concepts, fostering a comprehensive understanding and exploration of the multifaceted nature of Antarctica within the scope of climate science, policy, and ecological research.

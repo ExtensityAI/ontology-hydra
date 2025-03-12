@@ -1,0 +1,53 @@
+**Scope of the Ontology on Antarctica**
+
+The ontology concerning Antarctica will focus on the multifaceted aspects of the continent, encapsulating both its physical characteristics and the socio-economic dynamics that emerge from ongoing environmental changes. This scope is grounded in the realities of polar research, emphasizing the crucial intersections between climatological phenomena and their implications on global coastal communities.
+
+**Inclusions:**
+
+1. **Geological and Geomorphological Features:**
+   - Classification of landforms, ice sheets, glaciers, and subglacial environments.
+   - Analysis of geological formations, including sedimentary, metamorphic, and igneous rocks.
+   - Description of the geomorphological processes that shape the Antarctic landscape.
+
+2. **Climatological Data:**
+   - Spatial and temporal climatic data, including temperature variations, precipitation patterns, and wind regimes specific to Antarctica.
+   - Assessments of historical and contemporary climate change effects on the Antarctic environment.
+   - Modeling of future climatic scenarios and their potential feedback effects on both local and global scales.
+
+3. **Ecological Systems:**
+   - Biodiversity records, including flora and fauna endemic to the Antarctic region.
+   - Ecological interactions and food web dynamics within the Antarctic ecosystem.
+   - Conservation statuses of different species and ecosystems, addressing threats posed by climate change and human activities.
+
+4. **Human Activities and Governance:**
+   - Overview of international treaties and agreements governing Antarctic research and environmental protection, including the Antarctic Treaty System.
+   - Socio-political implications of human presence, including research stations and their operational dynamics.
+   - Economic activities in and around Antarctica, such as fishing, tourism, and mineral exploration, and their implications for sustainability and governance.
+
+5. **Socio-Economic Impacts:**
+   - Examination of the socio-economic repercussions of climate change on polar and coastal communities, particularly those dependent on marine resources.
+   - Studies linking changes in Antarctic ice dynamics to global sea-level rise and its effects on coastal societies.
+   - Analysis of adaptation strategies employed by affected communities in response to environmental changes.
+
+6. **Research Methodologies:**
+   - Collection of methodologies used in polar research, including remote sensing, field studies, and modeling techniques.
+   - Standards and best practices for data collection, analysis, and dissemination in the context of Antarctic studies.
+
+**Exclusions:**
+
+1. **Pre-Antarctic Exploration:**
+   - Historical narratives and discussions pertaining to explorations and events occurring prior to the establishment of significant scientific research in Antarctica.
+
+2. **Non-Antarctic Ecosystems:**
+   - Ecosystems, species, or climatic discussions exclusively related to regions outside of Antarctica. 
+
+3. **Extraterrestrial Studies:**
+   - Any studies or discussions regarding extraterrestrial environments, materials, or comparisons unrelated to polar research.
+
+4. **Highly Speculative Climate Models:**
+   - Exclusion of speculative data and models lacking empirical support, focusing instead on validated research findings and established scientific consensus.
+
+5. **Local Cultural Perspectives:**
+   - While socio-economic implications are included, local cultural practices and beliefs specific to indigenous populations predominantly outside Antarctica will not be included unless they directly relate to the socio-economic impacts of Antarctic change.
+
+This outlined scope provides a framework intended to ensure that the ontology effectively captures the essential elements and interactions related to Antarctica, facilitating comprehensive understanding and research collaboration.

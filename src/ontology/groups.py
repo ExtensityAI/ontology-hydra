@@ -5,7 +5,9 @@ from pydantic import BaseModel, Field
 
 from ontology.utils import MODEL
 
-find_groups_prompt = """You are an ontology engineer tasked with creating an ontology on <topic>{topic}</topic>. As a first step, you are tasked with finding appropriate individuals to interview to get a grasp for the domain. What kind of people would you like to interview? Provide an exhaustive JSON list and nothing else."""
+# todo: hierarchies
+
+generate_groups_prompt = """You are an ontology engineer tasked with creating an ontology on <domain>{domain}</domain>. As a first step, you are tasked with finding appropriate individuals to interview. What kind of people would you like to interview? Provide an exhaustive JSON list and nothing else."""
 
 
 class Priority(BaseModel):
@@ -19,23 +21,23 @@ class Priority(BaseModel):
     value: Value
 
 
-class GroupDef(BaseModel):
+class Group(BaseModel):
     name: str
     description: str
     priority: Priority
 
 
-class GroupDefs(BaseModel):
-    items: list[GroupDef]
+class Groups(BaseModel):
+    items: list[Group]
 
 
-def generate_group_defs(topic: str):
+def generate_groups_for_domain(domain: str):
     response = openai.beta.chat.completions.parse(
         model=MODEL,
         messages=[
-            {"role": "system", "content": find_groups_prompt.format(topic=topic)},
+            {"role": "system", "content": generate_groups_prompt.format(domain=domain)},
         ],
-        response_format=GroupDefs,
+        response_format=Groups,
     )
 
     obj = response.choices[0].message.parsed

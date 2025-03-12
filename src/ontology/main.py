@@ -4,40 +4,39 @@ from pathlib import Path
 import openai
 from dotenv import load_dotenv
 
-from ontology.discussions.discussion import Discussion, Participant
-from ontology.personas.population import Population
+from ontology.comittee import Comittee
+from ontology.scoping import generate_scope_document
 
-topic = "European history of the 19th century"
+domain = "Antarctica"  # taken from SQuAD benchmark, has 525 questions
 
-# need a moderator to guide the discussion probably!
+
+sample_comittee_path = Path("out/sample-comittee.json")
+
+
+def get_scope_doc_path(idx: int):
+    return Path(f"out/scopes/{idx}.txt")
 
 
 def main():
     load_dotenv()
     openai.api_key = os.getenv("OPENAI_API_KEY")
 
-    sample_path = Path("sample-population.json")
+    # comittee = generate_comittee_for_domain(domain)
 
-    # population = generate_population(topic)
-    population = Population.model_validate_json(sample_path.read_text(encoding="utf-8"))
+    # sample_comittee_path.write_text(
+    #     comittee.model_dump_json(indent=2), encoding="utf-8"
+    # )
 
-    print(population.size)
-
-    sample = population.sample(5)
-
-    test_discussion = Discussion(
-        topic=topic,
-        participants=[
-            Participant(persona=persona, speaking_budget=1000) for persona in sample
-        ],
+    comittee = Comittee.model_validate_json(
+        sample_comittee_path.read_text(encoding="utf-8")
     )
 
-    for i in range(16):
-        if test_discussion.proceed():
-            print("finished!")
+    groups = comittee.divide_into_groups(4)
 
-    # with open("sample-population2.json", "wb") as f:
-    #     f.write(population.model_dump_json(indent=2).encode("utf-8"))
+    for group in groups:
+        for member in group:
+            scope = generate_scope_document(domain, member.persona)
+            print(scope)
 
 
 if __name__ == "__main__":

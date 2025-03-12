@@ -1,5 +1,5 @@
-import numpy as np
+import random
 
 MODEL = "gpt-4o-mini"
 
-rng = np.random.default_rng(42)
+rng = random.Random(42)
