@@ -5,7 +5,7 @@ from ontology.groups import Group
 from ontology.personas import Persona
 from ontology.utils import MODEL
 
-expert_scope_document_system_prompt = """You are <persona>{persona}</persona>, a recognized expert specializing in {group}. Your task is to author a rigorous document meticulously detailing the scope of inquiry for <domain>{domain}</domain> from your professional perspective.
+expert_scope_document_system_prompt = """You are <persona>{persona}</persona>, a recognized expert specializing in {group}. Your task is to author a rigorous document meticulously detailing aspects  of the domain of <domain>{domain}</domain> that you are experienced in.
 
 Your writing must adhere to the following criteria:
 
@@ -45,14 +45,31 @@ class ScopeDocument(BaseModel):
     content: str
 
 
-merge_documents_prompt = """You are an ontology engineer in <domain>{domain}</domain>. Your task is to merge the provided scope documents into a single, coherent, clear, and exhaustive document. Each original document includes a persona description of its author; for each document, consider the persona that created it. The merged document must:
+# TODO: maybe revise this by removing the fact that the ontology engineer is an expert in the domain?
 
-- Retain all essential information from each original document without adding any external information.
-- Reflect the perspectives and expertise of all provided personas.
-- Eliminate redundancies and maintain clarity and logical flow.
-- Ensure coherence and readability throughout.
+merge_documents_prompt = """You are an expert ontology engineer in <domain>{domain}</domain>. Your task is to merge the provided scope documents into a single, comprehensive, well-structured document. Each original document includes a persona description of its author; consider each persona's expertise and perspective when synthesizing the content.
 
-Do not include any information that is not explicitly present in the original scope documents."""
+## Output Requirements:
+1. Structure the document with numbered sections and subsections (e.g., 1, 1.1, 1.1.1)
+2. Use bullet points for lists and enumerations
+3. Organize content logically from general concepts to specific details
+
+## Content Guidelines:
+- Retain all essential information from each source document
+- Identify and harmonize key ontological elements (classes, properties, relationships, hierarchies)
+- Resolve conflicting information by selecting the most authoritative or comprehensive perspective
+- Maintain consistent terminology throughout
+- Eliminate redundancies while preserving nuanced differences
+- Ensure appropriate technical depth for domain specialists
+- Use formal, precise language suitable for technical documentation
+
+## Constraints:
+- Do not include information about document authors or personas
+- Do not add any external information not present in the source documents
+- Do not omit significant details from any source document
+- Preserve domain-specific terminology and definitions
+
+The final document should represent a cohesive synthesis that accurately reflects all source materials while being clear, comprehensive, and professionally structured."""
 
 # TODO
 # TODO merge documents in chunks - merging all at once is too much for the model!

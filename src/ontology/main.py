@@ -10,12 +10,12 @@ from ontology.scoping import (
     merge_scope_documents,
 )
 
-domain = "Antarctica"  # taken from SQuAD benchmark, has 525 questions
+domain = "The Python programming language, pure, not the ecosystem."
 
 
-comittee_path = Path("artifacts/antarctica/sample-comittee.json")
-scopes_path = Path("artifacts/antarctica/scopes")
-merged_scope_path = Path("artifacts/antarctica/merged-scope.txt")
+comittee_path = Path("artifacts/python/sample-comittee.json")
+scopes_path = Path("artifacts/python/scopes")
+merged_scope_path = Path("artifacts/python/merged-scope.txt")
 
 
 def main():
@@ -23,9 +23,7 @@ def main():
 
     """comittee = generate_comittee_for_domain(domain)
 
-    sample_comittee_path.write_text(
-        comittee.model_dump_json(indent=2), encoding="utf-8"
-    )"""
+    comittee_path.write_text(comittee.model_dump_json(indent=2), encoding="utf-8")"""
 
     comittee = Comittee.model_validate_json(comittee_path.read_text(encoding="utf-8"))
 
