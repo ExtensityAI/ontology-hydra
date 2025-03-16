@@ -30,6 +30,7 @@ class Personas(BaseModel):
 
 
 PROPORTIONAL_TO_PRIORITY = -1
+ZERO_OR_ONE = 0
 
 # consider changing these values
 _priority_to_n = {

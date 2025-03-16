@@ -15,3 +15,9 @@ for k, v in [line.strip().split("=") for line in DOTENV_PATH.read_text().splitli
     os.environ[k] = v
 
 MODEL = os.environ["NEUROSYMBOLIC_ENGINE_MODEL"]
+
+
+def chunked(lst: list, n: int):
+    """Yield successive n-sized chunks from lst."""
+    for i in range(0, len(lst), n):
+        yield lst[i : i + n]
