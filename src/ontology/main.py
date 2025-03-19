@@ -5,17 +5,15 @@ import openai
 
 import ontology.utils  # noqa: F401
 from ontology.comittee import Comittee
-from ontology.scoping import (
-    ScopeDocument,
-    merge_scope_documents,
-)
+from ontology.question_generation import generate_questions
+from ontology.scoping import ScopeDocument
 
 domain = "The Python programming language, pure, not the ecosystem."
 
 
-comittee_path = Path("artifacts/python/sample-comittee.json")
-scopes_path = Path("artifacts/python/scopes")
-merged_scope_path = Path("artifacts/python/merged-scope.txt")
+comittee_path = Path("artifacts/python2/sample-comittee.json")
+scopes_path = Path("artifacts/python2/scopes")
+merged_scope_path = Path("artifacts/python2/merged-scope.txt")
 
 
 def main():
@@ -42,8 +40,21 @@ def main():
         for i, member in enumerate(comittee.members)
     ]
 
-    merged_scope = merge_scope_documents(domain, scope_documents)
-    merged_scope_path.write_text(merged_scope.content, encoding="utf-8")
+    """merged_scope = merge_scope_documents(domain, scope_documents).content
+    merged_scope_path.write_text(merged_scope, encoding="utf-8")"""
+
+    merged_scope = Path.read_text(merged_scope_path, encoding="utf-8")
+
+    test_member = comittee.members[0]
+
+    print(
+        generate_questions(
+            domain,
+            test_member.persona,
+            test_member.group,
+            merged_scope,
+        )
+    )
 
 
 if __name__ == "__main__":

@@ -1,0 +1,67 @@
+# Scope Document: The Python Programming Language 
+
+## 1. Domain Boundaries
+
+### 1.1 Inclusion Criteria
+- The scope includes:
+  - The core syntax and structure of the Python language
+  - Fundamental programming concepts (variables, data types, control structures, functions, modules)
+  - Object-oriented programming principles as applied in Python
+  - Standard libraries and built-in functions provided by Python
+  - Performance considerations (e.g., memory management, execution speed)
+
+### 1.2 Exclusion Criteria
+- The scope explicitly excludes:
+  - Third-party libraries and frameworks (e.g., Django, Flask)
+  - Data science and machine learning techniques specifically implemented in Python
+  - Ecosystem components (e.g., package management, virtual environments)
+  - Python implementation versions (e.g., CPython, PyPy)
+
+### 1.3 Gray Areas
+- Discussions surrounding Python in the context of web development may arise; however, the focus should remain strictly on language features rather than applications.
+- Consideration of Python's role in various domains (data science, web development, etc.) is relevant but must be delineated from Python as a programming language itself.
+
+## 2. Core Terminology
+
+### 2.1 General Programming Concepts
+- **Syntax**: The set of rules that defines the combinations of symbols in a programming language.
+- **Variables**: Named storage locations in memory that hold data.
+- **Data Types**: Classification of data into categories (e.g., integers, strings, lists, dictionaries).
+- **Control Structures**: Constructs that dictate the flow of execution (e.g., loops, conditionals).
+
+### 2.2 Object-Oriented Programming
+- **Classes**: Blueprints for creating objects that encapsulate data and behaviors.
+- **Objects**: Instances of classes that hold data and can perform methods associated with their class.
+- **Inheritance**: Mechanism for creating a new class from an existing class, inheriting attributes and behaviors.
+
+### 2.3 Language Features
+- **Functions**: Reusable blocks of code designed to perform a specific task.
+- **Modules**: Files containing Python code that can define functions, classes, and variables.
+
+### 2.4 Core Libraries
+- **Standard Library**: A collection of modules and packages included with Python that provide standardized solutions for common tasks.
+
+## 3. Stakeholders and Perspectives
+
+### 3.1 Key Roles 
+- **Developers**: Individuals who write and maintain Python code.
+- **Educators**: Teachers and trainers who instruct others in Python programming.
+- **Researchers**: Scholars employing Python for algorithmic implementations or research in computational fields.
+
+### 3.2 Viewpoints
+- **Expert Users**: Experienced developers who approach Python from an advanced technical perspective.
+- **Novice Programmers**: Beginners who may focus on basic syntax and functionality, seeking accessible learning resources.
+
+## 4. Potential Interview Topics
+
+### 4.1 Areas for Exploration
+- Evolution of Python syntax from earlier versions to current.
+- Practical challenges faced by new users learning Python's syntax.
+- The impact of Python's object-oriented design on programming practices.
+  
+### 4.2 Clarification and Deeper Exploration
+- Differences between Python’s core data types and how they are used in programming.
+- Understanding memory management in Python and its implications for performance.
+- Exploration of the design philosophy guiding Python's development and community standards. 
+
+This scope document serves as a foundation for discussions around the Python programming language, establishing clear definitions and boundaries to facilitate better communication and understanding among stakeholders and researchers in the field.

@@ -1,0 +1,88 @@
+# Scope Document for The Python Programming Language
+
+## 1. Domain Boundaries
+
+### 1.1 Included Topics
+- **Syntax and Semantics**
+  - Language rules and structure
+  - Data types and data structures
+  - Control flow statements (loops, conditionals)
+  
+- **Function Definitions and Programming Constructs**
+  - Functions, lambdas, and decorators
+  - Object-oriented programming concepts
+  - Modules and packages
+
+- **Error Handling and Exceptions**
+  - Types of exceptions
+  - Exception handling mechanisms
+
+- **Standard Library**
+  - Built-in functions
+  - Core libraries (e.g., `math`, `sys`, `json`)
+
+- **Memory Management**
+  - Garbage collection principles
+  - Object lifecycle
+  - References and mutability
+
+### 1.2 Excluded Topics
+- **Ecosystem Considerations**
+  - Third-party libraries and frameworks (e.g., Django, Flask)
+  - Development environments and tools (e.g., IDEs, linters)
+
+- **Interoperability with Other Languages**
+  - Bridges and integration (e.g., Python with C or Java)
+
+- **Application Domains**
+  - Specific use cases (e.g., web development, data science)
+
+### 1.3 Gray Areas or Overlaps with Adjacent Domains
+- **Cross-language Features**
+  - Comparison with other programming languages (e.g., JavaScript, Ruby)
+- **Software Engineering Principles**
+  - Concepts that overlap with general software development practices (e.g., design patterns)
+
+## 2. Core Terminology
+
+### 2.1 Basic Terminology
+- **Syntax**: The set of rules that defines combinations of symbols in Python.
+- **Semantics**: The meaning behind the syntactic elements of Python code.
+
+### 2.2 Programming Constructs
+- **Function**: A reusable block of code that performs a specific task.
+- **Lambda**: An anonymous function defined with the `lambda` keyword.
+- **Decorator**: A function that modifies the behavior of another function.
+
+### 2.3 Data Handling
+- **Immutable**: An object whose state cannot be modified after it is created (e.g., tuples, strings).
+- **Mutable**: An object that can be modified after it is created (e.g., lists, dictionaries).
+
+### 2.4 Error Management
+- **Exception**: An error that disrupts the normal flow of a program.
+- **Try-Except block**: A construct for handling exceptions in Python.
+
+## 3. Stakeholders and Perspectives
+
+### 3.1 Key Roles
+- **Educators**: Individuals teaching Python, focusing on its use in programming curricula.
+- **Researchers**: Academics studying programming languages and their paradigms.
+- **Developers**: Practitioners writing Python code in various contexts.
+
+### 3.2 Viewpoints
+- **Pedagogical Perspective**: How Python constructions are taught for effective learning.
+- **Theoretical Perspective**: Language theory and its applications in Python design.
+- **Practical Perspective**: Real-world use cases and programming challenges in Python.
+
+## 4. Potential Interview Topics
+
+### 4.1 Key Areas for Exploration
+- **Teaching Approaches**: Effective methods for introducing Python syntax and semantics.
+- **Language Evolution**: Changes in Python over time and their impact on users.
+- **Error Handling Strategies**: Best practices for managing exceptions in Python applications.
+
+### 4.2 Clarification Topics
+- **Object-Oriented vs. Functional Paradigms**: Understanding the implementation of these paradigms within Python.
+- **Memory Management**: Insights into how Python manages memory allocation and collection.
+
+This scope document aims to set a clear foundation for discussions related to the Python programming language, focusing on its pure form while recognizing the boundaries of the domain and the relevant terminology.

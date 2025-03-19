@@ -1,0 +1,97 @@
+# Scope Document: The Python Programming Language
+
+## 1. Domain Boundaries
+
+### 1.1 Included Topics
+- **Basic Syntax and Semantics**
+  - Variables, data types, and operators
+  - Control structures (if statements, loops)
+  - Functions and scopes
+- **Data Structures**
+  - Lists, tuples, sets, and dictionaries
+  - Comprehensions and generators
+- **Object-Oriented Programming (OOP)**
+  - Classes and objects
+  - Inheritance, polymorphism, and encapsulation
+- **Modules and Packages**
+  - Importing modules
+  - Creating and distributing packages
+- **Error Handling and Exceptions**
+  - Try-except blocks
+  - Custom exceptions
+- **File Input/Output**
+  - Reading and writing text and binary files
+  - Context managers
+- **Standard Libraries**
+  - Overview of Python's standard library features
+  - Key modules (e.g., math, datetime, random)
+
+### 1.2 Excluded Topics
+- **Ecosystem Related Elements**
+  - Frameworks (e.g., Django, Flask)
+  - Libraries (e.g., NumPy, Pandas)
+- **Installation and Configurations**
+  - Python environment setup (venv, conda)
+- **Advanced Topics**
+  - Metaprogramming
+  - Multithreading and multiprocessing
+  - Performance optimization
+
+### 1.3 Gray Areas or Overlaps
+- **Integration with Other Languages**
+  - Boundaries include interaction with languages like C/C++ or Java.
+- **Development Practices**
+  - Tactics that cross into software engineering, such as version control.
+
+## 2. Core Terminology
+
+### 2.1 Basic Syntax and Concepts
+- **Variable**: A storage location with a name, representing a value.
+- **Control Structure**: A statement that governs the flow of control.
+- **Function**: A block of code organized to perform a specific task.
+
+### 2.2 Data Handling
+- **Data Structure**: A method of organizing data for efficient access and modification.
+- **Comprehension**: A concise way to create collections or generate sequences.
+
+### 2.3 Object-Oriented Programming
+- **Class**: A blueprint for creating objects that encapsulates data and behavior.
+- **Inheritance**: Mechanism for a new class to receive properties from an existing class.
+
+### 2.4 Error Handling
+- **Exception**: An event that disrupts the normal flow of execution.
+
+### 2.5 File Handling
+- **Context Manager**: A construct that ensures proper acquisition and release of resources.
+
+## 3. Stakeholders and Perspectives
+
+### 3.1 Key Roles
+- **Educators**: Teaching Python and developing curricula.
+- **Students**: Engaging with Python for the first time.
+- **Curriculum Developers**: Designing courses that include Python programming.
+
+### 3.2 Different Viewpoints
+- **Novice Learners**: Focus on fundamental understanding and basic applications.
+- **Experienced Programmers**: Interest in advanced features and best practices.
+- **Employers**: Seeking practical skills and job-ready candidates.
+
+## 4. Potential Interview Topics
+
+### 4.1 Core Understanding
+- Exploring effective teaching strategies for Python basics.
+- Key difficulties students face when learning Python.
+
+### 4.2 Curriculum Development
+- Trends in curriculum design that incorporate real-world applications.
+- Suggested projects or hands-on activities to enhance learning.
+
+### 4.3 Future Directions
+- Insights into evolving Python features that should be included in teaching.
+- Perspectives on how Python can serve students in various fields beyond programming.
+
+### 4.4 Cross-Disciplinary Applications
+- How Python can be integrated into other subjects (e.g., math, science).
+- Student experiences in applying Python to real-world situations.
+
+This scope document aims to provide a clear understanding of the Python programming language in an educational context while establishing common terminology and boundaries for future discussions.

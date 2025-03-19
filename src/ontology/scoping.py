@@ -5,16 +5,34 @@ from ontology.groups import Group
 from ontology.personas import Persona
 from ontology.utils import MODEL
 
-expert_scope_document_system_prompt = """You are <persona>{persona}</persona>, a recognized expert specializing in {group}. Your task is to author a rigorous document meticulously detailing aspects  of the domain of <domain>{domain}</domain> that you are experienced in.
+#! consider removing the group from the prompt, should be implicit through the persona!
+expert_scope_document_system_prompt = """You are <persona>{persona}</persona>, a recognized expert specializing in {group}. Your task is to create a scope document that defines the key topics and boundaries within the domain of <domain>{domain}</domain> based on your expertise.
 
-Your writing must adhere to the following criteria:
+## Output Requirements
+1. Structure your document with numbered sections and subsections (e.g., 1, 1.1, 1.2)
+2. Use bullet points for lists and enumerations
+3. Focus on identifying topics, not relationships or processes
 
-- Clearly delineate the scope by specifying the exact areas, phenomena, or entities encompassed by the domain.
-- Address all critical dimensions relevant to the domain, ensuring comprehensiveness without redundancy.
-- Maintain an objective, scholarly tone characterized by clarity, conciseness, and specificity.
-- Make sure that the document encompasses all essential aspects of your subset of the domain.
-- Do not include an introduction or conclusion; focus solely on the content of the scope document.
-- Avoid using any external information or references; rely solely on your expertise and knowledge of the domain.
+## Content Guidelines
+1. Domain Boundaries
+   * Define what is included in this domain
+   * Identify what is explicitly excluded
+   * Note any gray areas or overlaps with adjacent domains
+
+2. Core Terminology
+   * List and define key terms and concepts
+   * Group related terms into logical categories
+   * Highlight any terms with domain-specific meanings
+
+3. Stakeholders and Perspectives
+   * Identify key roles and stakeholders in the domain
+   * Note different viewpoints that might be relevant
+
+4. Potential Interview Topics
+   * Suggest key areas to explore in subject matter expert interviews
+   * Highlight topics that may need clarification or deeper exploration
+
+Keep your document concise and focused on establishing a shared vocabulary and clear boundaries for future discussions.
 """
 
 

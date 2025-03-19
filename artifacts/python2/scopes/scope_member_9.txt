@@ -1,0 +1,81 @@
+# Scope Document: The Python Programming Language
+
+## 1. Domain Boundaries
+
+1.1 **Included in this Domain**
+   - Core language fundamentals
+     - Syntax
+     - Data types (e.g., strings, integers, lists, dictionaries)
+     - Control structures (e.g., loops, conditionals)
+   - Functions and modules
+     - Defining functions
+     - Importing modules
+     - Scope and namespace
+   - Object-oriented programming
+     - Classes and objects
+     - Inheritance and polymorphism
+   - Error handling
+     - Exceptions
+     - Debugging techniques
+   - Basic input/output
+     - File handling
+     - Standard input/output operations
+   
+1.2 **Explicitly Excluded**
+   - Libraries and frameworks (e.g., NumPy, Pandas, Django)
+   - Ecosystem tools (e.g., pip, virtual environments)
+   - Python implementation details (e.g., CPython, PyPy)
+   - Advanced topics (e.g., concurrency, parallelism)
+
+1.3 **Gray Areas or Overlaps**
+   - Discussions about the Python ecosystem may surface when addressing the extensibility and capabilities of the core language.
+   - Benefits of Python compared to other programming languages could lead to points regarding libraries and applications, which are beyond core Python.
+
+## 2. Core Terminology
+
+2.1 **Core Language Fundamentals**
+   - **Syntax**: The set of rules that define the combinations of symbols and structures in the language.
+   - **Data Types**: Categories of data that determine what operations can be performed (e.g., integer, float, string, list, dictionary).
+   - **Control Structures**: Constructs that dictate the flow of execution (e.g., if statements, loops).
+   
+2.2 **Functions and Modules**
+   - **Function**: A reusable block of code that performs a specific task.
+   - **Module**: A file containing Python definitions and statements that can be imported to organize code logically.
+   
+2.3 **Object-Oriented Programming**
+   - **Class**: A blueprint for creating objects that encapsulates data and functionality.
+   - **Object**: An instance of a class containing data and methods defined by the class.
+
+2.4 **Error Handling**
+   - **Exception**: An error that occurs during the execution of a program which disrupts the normal flow.
+   - **Debugging**: The process of identifying and removing errors from code.
+
+2.5 **Input/Output**
+   - **File Handling**: Operations for reading from and writing to files.
+   - **Standard Input/Output**: Basic operations for receiving input and displaying output in the terminal.
+
+## 3. Stakeholders and Perspectives
+
+3.1 **Key Roles and Stakeholders**
+   - **Developers**: Individuals creating applications using Python without leveraging external libraries.
+   - **Educators**: Instructors teaching Python fundamentals and best practices.
+   - **Students**: Learners gaining foundational knowledge in programming.
+   - **Technical Writers**: Authors creating documentation and tutorials about Python syntax and usage.
+
+3.2 **Different Viewpoints**
+   - Beginners focusing on ease of learning and simplicity of syntax.
+   - Experienced programmers interested in the efficiency and performance of the core language.
+
+## 4. Potential Interview Topics
+
+4.1 **Key Areas to Explore**
+   - Best practices in writing clean and efficient Python code.
+   - Common challenges faced by developers when learning Python basics.
+   - The effectiveness of Python syntax in educational settings for new programmers.
+
+4.2 **Topics Needing Clarification or Deeper Exploration**
+   - The implications of dynamic typing in Python and its impact on program robustness.
+   - The evolution of Python syntax across different versions (e.g., 2.x vs 3.x).
+   - The role of decorators in enhancing function functionality within the core language. 
+
+This scope document establishes a clear understanding of the boundaries, terminology, stakeholders, and pertinent topics within the domain of the Python programming language, focusing purely on its core aspects.

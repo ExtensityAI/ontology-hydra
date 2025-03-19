@@ -1,0 +1,84 @@
+# Scope Document: The Python Programming Language
+
+## 1. Domain Boundaries
+
+### 1.1 Inclusion
+- The Python programming language itself
+  - Syntax and semantics
+  - Built-in data types and structures
+  - Control flow statements (loops, conditionals)
+  - Functions and modules
+  - Exception handling
+  - Object-oriented programming concepts
+  - Functional programming features
+
+### 1.2 Exclusion
+- Python libraries and frameworks (e.g., Django, Flask)
+- Ecosystem tools (e.g., package managers, IDEs)
+- Project management practices in Python (e.g., deployment strategies)
+- Language comparisons (e.g., with Java, JavaScript)
+
+### 1.3 Gray Areas
+- Hybrid programming paradigms (e.g., using Cython or Jython)
+- Interfacing Python with other languages
+- Embedded Python or behavior within other systems 
+
+## 2. Core Terminology
+
+### 2.1 Basic Constructs
+- **Variable**: Named storage location for data.
+- **Data type**: Classification of data (e.g., integers, strings).
+- **Function**: A defined block of reusable code that performs a specific task.
+
+### 2.2 Object-Oriented Concepts
+- **Class**: Blueprint for creating objects that encapsulates data and behavior.
+- **Object**: Instance of a class.
+- **Inheritance**: Mechanism for creating a new class based on an existing class.
+
+### 2.3 Control Structures
+- **Loop**: Control structure for repeating a block of code (e.g., `for`, `while`).
+- **Conditional**: Control statements that execute different blocks of code (e.g., `if`, `elif`, `else`).
+
+### 2.4 Advanced Features
+- **Decorator**: A function that modifies the behavior of another function.
+- **Generator**: A function that returns an iterator and maintains its state.
+
+### 2.5 Domain-Specific Terms
+- **PEP (Python Enhancement Proposal)**: A design document providing information to the Python community, describing new features or implementations.
+- **Namespace**: An environment that holds a collection of identifiers (variable names) and ensures uniqueness.
+
+## 3. Stakeholders and Perspectives
+
+### 3.1 Key Roles
+- **Developers**: Individuals who write Python code for various applications.
+- **Educators**: Professionals teaching Python in academic or training settings.
+- **Researchers**: Users applying Python for scientific computing or data analysis.
+
+### 3.2 Perspectives
+- **Novices**: Beginners learning Python and its syntax.
+- **Intermediate Developers**: Those with foundational knowledge looking to deepen their understanding.
+- **Advanced Practitioners**: Experienced developers focused on best practices and optimization techniques.
+
+## 4. Potential Interview Topics
+
+### 4.1 Core Language Features
+- Exploration of Python syntax and semantics.
+- Discussion on differences between Python 2 and Python 3.
+
+### 4.2 Language Philosophy
+- The principles of Python’s design, such as readability and simplicity.
+
+### 4.3 Functionality
+- In-depth look at functions, decorators, and generator functions.
+- The use of data types in Python and best practices for choosing data structures.
+
+### 4.4 Object-Oriented Programming
+- Applications of object-oriented programming in Python development.
+  
+### 4.5 Error Handling
+- Best practices for exception handling and debugging in Python.
+
+### 4.6 Future Directions
+- Insights on upcoming Python features based on recent PEPs.
+
+This scope document serves to establish a comprehensive understanding of the Python programming language, providing a foundation for further discussion and exploration among stakeholders.

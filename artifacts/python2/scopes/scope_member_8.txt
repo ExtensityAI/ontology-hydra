@@ -1,0 +1,92 @@
+# Scope Document: The Python Programming Language
+
+## 1. Domain Boundaries
+
+### 1.1 Included Topics
+- Syntax and Semantics
+  - Basic syntax rules
+  - Data types and structures
+  - Control flow
+  - Functions and modules
+- Object-Oriented Programming
+  - Classes and objects
+  - Inheritance and polymorphism
+  - Encapsulation
+- Error Handling and Exceptions
+- Standard Libraries
+  - Built-in functions and modules
+  - Commonly used libraries like `math`, `datetime`, etc.
+- Concurrency and Parallelism
+  - Threading
+  - Multiprocessing
+  - Asynchronous programming
+- Pythonic Principles
+  - Readability and simplicity
+  - The Zen of Python
+
+### 1.2 Excluded Topics
+- Python Ecosystem
+  - Frameworks (e.g., Django, Flask)
+  - Libraries (e.g., NumPy, Pandas)
+  - Development tools and environments (e.g., IDEs, package managers)
+- Deployment and Production
+  - Cloud services integration
+  - Containerization and microservices
+- Community and Governance
+  - Python Enhancement Proposals (PEPs)
+  - Community practices and conventions
+
+### 1.3 Gray Areas or Overlaps
+- Interaction with Other Languages
+  - Python’s interoperability with languages like C or Java
+- The Role of Python in Data Science
+  - While Python is a critical tool in data science, the broader data science ecosystem is not included in this scope.
+
+## 2. Core Terminology
+
+### 2.1 Programming Concepts
+- **Syntax**: The set of rules that defines the combinations of symbols that are considered to be correctly structured programs.
+- **Data Types**: Categories of data that determine the kind of operations that can be performed on them (e.g., integers, floats, strings).
+- **Control Flow**: The order in which individual statements, instructions, or function calls are executed in a program.
+
+### 2.2 Object-Oriented Concepts
+- **Class**: A blueprint for creating objects; defines a set of attributes and methods.
+- **Object**: An instance of a class.
+- **Inheritance**: A mechanism where one class can derive attributes and methods from another class.
+
+### 2.3 Error Handling
+- **Exception**: An event that occurs during the execution of a program that disrupts the normal flow of instructions.
+- **Try-Except Block**: A construct that allows handling exceptions gracefully.
+
+### 2.4 Pythonic Concepts
+- **Readability**: Python’s philosophy of writing clear and understandable code.
+- **The Zen of Python**: A collection of guiding principles for writing computer programs in Python (accessible via `import this`).
+
+## 3. Stakeholders and Perspectives
+
+### 3.1 Key Roles
+- Software Developers
+- Technical Leads
+- Software Architects
+- Educators and Trainers
+- Open Source Contributors
+
+### 3.2 Different Viewpoints
+- Novice Programmers vs. Experienced Developers
+- Theoretical vs. Practical Implementation
+- Different programming paradigms (procedural, object-oriented, functional)
+
+## 4. Potential Interview Topics
+
+### 4.1 Key Areas for Exploration
+- Best practices for writing Python code
+- Experiences with Python’s evolving features and syntax
+- Insights on Python’s object-oriented capabilities and their usage
+- Common pitfalls in error handling and exceptions
+
+### 4.2 Topics Needing Clarification or Exploration
+- Differences between Python 2 and Python 3 (if applicable)
+- The impact of Python’s dynamic typing on software design
+- How principles like readability influence code maintainability
+
+This document serves as a foundational reference point for discussions surrounding the core aspects of the Python programming language, delineating boundaries and establishing a common vernacular for effective communication.
