@@ -1,3 +1,5 @@
+import json
+from pathlib import Path
 from tqdm import tqdm
 from loguru import logger
 from pydantic import Field
@@ -54,7 +56,7 @@ class ChonkieChunker(Expression):
 class Entity(LLMDataModel):
     """Represents an entity in the ontology"""
     name: str = Field(description="Name of the entity")
-    type: str = Field(description="Type/category of the entity")
+    # type: str = Field(description="Type/category of the entity")
 
 class Relationship(LLMDataModel):
     """Represents a relationship type in the ontology"""
@@ -132,72 +134,89 @@ class OntologyTripletExtractor(Expression):
             "6. If triplets can't be found, default to None"
         )
 
+SAMPLE_ONTOLOGY = OntologySchema(
+    entities=[
+        # People and Organizations
+        Entity(name="Person", type="PERSON"),
+        Entity(name="Organization", type="ORG"),
+        Entity(name="Location", type="LOC"),
+
+        # Legal Entities
+        Entity(name="Agreement", type="AGREEMENT"),
+        Entity(name="Policy", type="POLICY"),
+        Entity(name="Service", type="SERVICE"),
+        Entity(name="Feature", type="FEATURE"),
+        Entity(name="Right", type="RIGHT"),
+        Entity(name="Obligation", type="OBLIGATION"),
+
+        # Data Related
+        Entity(name="PersonalData", type="PERSONAL_DATA"),
+        Entity(name="DataCategory", type="DATA_CATEGORY"),
+        Entity(name="DataProcessor", type="DATA_PROCESSOR"),
+
+        # Time and Events
+        Entity(name="Date", type="DATE"),
+        Entity(name="Event", type="EVENT"),
+
+        # Financial
+        Entity(name="Payment", type="PAYMENT"),
+        Entity(name="Currency", type="CURRENCY")
+    ],
+    relationships=[
+        # Organizational Relations
+        Relationship(name="works_for"),
+        Relationship(name="located_in"),
+        Relationship(name="owns"),
+        Relationship(name="operates"),
+
+        # Legal Relations
+        Relationship(name="governs"),
+        Relationship(name="requires"),
+        Relationship(name="prohibits"),
+        Relationship(name="permits"),
+        Relationship(name="provides"),
+
+        # Data Relations
+        Relationship(name="processes"),
+        Relationship(name="collects"),
+        Relationship(name="stores"),
+        Relationship(name="shares"),
+        Relationship(name="transfers"),
+
+        # Temporal Relations
+        Relationship(name="starts_on"),
+        Relationship(name="ends_on"),
+        Relationship(name="modified_on"),
+
+        # Financial Relations
+        Relationship(name="charges"),
+        Relationship(name="pays"),
+        Relationship(name="costs")
+    ]
+)
+
+
 if __name__ == "__main__":
-    sample_ontology = OntologySchema(
-        entities=[
-            # People and Organizations
-            Entity(name="Person", type="PERSON"),
-            Entity(name="Organization", type="ORG"),
-            Entity(name="Location", type="LOC"),
+    ROOT = Path(__file__).parent.parent
+    ARTIFACTS = ROOT / "artifacts"
+    DOMAIN = ROOT / "artifacts/domain"
+    if not (ARTIFACTS / "ontology.json").exists():
+        logger.info("No ontology file found, using sample ontology")
+        sample_ontology = SAMPLE_ONTOLOGY
+    else:
+        logger.info("Loading ontology from file")
+        ontology = json.load(open(ARTIFACTS / "ontology.json"))
+        sample_ontology = OntologySchema(entities=ontology["entities"], relationships=ontology["relationships"])
 
-            # Legal Entities
-            Entity(name="Agreement", type="AGREEMENT"),
-            Entity(name="Policy", type="POLICY"),
-            Entity(name="Service", type="SERVICE"),
-            Entity(name="Feature", type="FEATURE"),
-            Entity(name="Right", type="RIGHT"),
-            Entity(name="Obligation", type="OBLIGATION"),
-
-            # Data Related
-            Entity(name="PersonalData", type="PERSONAL_DATA"),
-            Entity(name="DataCategory", type="DATA_CATEGORY"),
-            Entity(name="DataProcessor", type="DATA_PROCESSOR"),
-
-            # Time and Events
-            Entity(name="Date", type="DATE"),
-            Entity(name="Event", type="EVENT"),
-
-            # Financial
-            Entity(name="Payment", type="PAYMENT"),
-            Entity(name="Currency", type="CURRENCY")
-        ],
-        relationships=[
-            # Organizational Relations
-            Relationship(name="works_for"),
-            Relationship(name="located_in"),
-            Relationship(name="owns"),
-            Relationship(name="operates"),
-
-            # Legal Relations
-            Relationship(name="governs"),
-            Relationship(name="requires"),
-            Relationship(name="prohibits"),
-            Relationship(name="permits"),
-            Relationship(name="provides"),
-
-            # Data Relations
-            Relationship(name="processes"),
-            Relationship(name="collects"),
-            Relationship(name="stores"),
-            Relationship(name="shares"),
-            Relationship(name="transfers"),
-
-            # Temporal Relations
-            Relationship(name="starts_on"),
-            Relationship(name="ends_on"),
-            Relationship(name="modified_on"),
-
-            # Financial Relations
-            Relationship(name="charges"),
-            Relationship(name="pays"),
-            Relationship(name="costs")
-        ]
-    )
     reader = FileReader()
     chunker = ChonkieChunker()
     extractor = OntologyTripletExtractor(tokenizer_name="Xenova/gpt-4o")
-    sample_text = reader("/Users/futurisold/Desktop/x-terms-of-service-2024-11-15.pdf")
-    chunks = chunker(data=Symbol(sample_text[0]), chunk_size=1024).value
+    files = [file for file in DOMAIN.iterdir() if file.is_file() and file.suffix.lower() in [".pdf", ".md", ".txt"]]
+    chunks = []
+    for file in tqdm(files):
+        sample_text = reader(str(file))
+        file_chunks = chunker(data=Symbol(sample_text[0]), chunk_size=1048).value
+        chunks.extend(file_chunks)
     triplets = []
     usage = None
 
@@ -219,5 +238,9 @@ if __name__ == "__main__":
         if triplet is None:
             continue
         logger.info(f"\n-------\n{triplet}\n-------\n")
+
+    with open(ARTIFACTS / "kg.json", "w") as f:
+        json.dump({i: triplet.model_dump() for i, triplet in enumerate(triplets)}, f, indent=2)
+
     logger.info(f"\nAPI Usage:\n{usage}")
     logger.info("\nExtraction Completed!\n")
