@@ -1,0 +1,67 @@
+# Scope Document: The Fundamentals of Different Programming Languages
+
+## 1. Domain Boundaries
+
+1.1 **Included in this Domain**
+- **Programming Paradigms:** 
+  - Procedural Programming
+  - Object-Oriented Programming (OOP)
+  - Functional Programming
+  - Concurrent Programming
+  - Logic Programming
+- **Syntax and Semantics:**
+  - Basic Syntax rules of various languages
+  - Variable Types and Scopes
+  - Control Structures (loops, conditionals)
+- **Language Constructs:**
+  - Functions and Procedures
+  - Data Structures (arrays, lists, dictionaries)
+  - Error Handling and Exceptions
+- **Popular Programming Languages:**
+  - High-level languages (e.g., Python, Java, C#)
+  - Low-level languages (e.g., C, Assembly)
+  - Scripting languages (e.g., JavaScript, Ruby)
+  - Functional languages (e.g., Haskell, Scala)
+
+1.2 **Excluded from this Domain**
+- **Advanced Programming Concepts:**
+  - Deep dives into algorithm complexity
+  - Design patterns and architectures
+  - Software development methodologies (Agile, DevOps)
+- **Development Tools and Environments:**
+  - IDEs, Debuggers, and Version Control Systems
+- **Specific Frameworks:**
+  - Web development frameworks (e.g., Django, Angular)
+  - Mobile development frameworks (e.g., React Native, Flutter)
+  
+1.3 **Gray Areas or Overlaps with Adjacent Domains**
+- **Software Engineering Principles:**
+  - Some engineering principles may inform language fundamentals (e.g., SOLID principles).
+- **Artificial Intelligence and Machine Learning:**
+  - Languages used in these fields often include domain-specific forms (e.g., Python for ML).
+- **Open Source Contributions:**
+  - While fundamental language knowledge is crucial, implementation practices and community aspects may intersect.
+
+## 2. Core Terminology
+
+2.1 **Programming Paradigms**
+- **Procedural Programming:** A paradigm based on the concept of procedure calls, where programs are structured as a sequence of instructions.
+- **Object-Oriented Programming (OOP):** A paradigm centered around objects (instances of classes), encapsulating data and behavior.
+- **Functional Programming:** A paradigm emphasizing computation through the evaluation of functions and avoiding changing state or mutable data.
+
+2.2 **Basic Language Constructs**
+- **Syntax:** The set of rules that defines the combinations of symbols in a programming language.
+- **Semantics:** The meaning behind the syntactical elements of a programming language.
+- **Data Types:** Categories of data items (e.g., integer, float, string, boolean) defining the kind of data that can be stored and manipulated.
+- **Control Structures:** Constructs that control the flow of execution in a program (e.g., `if`, `for`, `while`).
+
+2.3 **Development Concepts**
+- **Function/Procedure:** A block of code designed to perform a specific task; a function typically returns a value while a procedure may not.
+- **Variable Scope:** The context in which a variable is accessible, often categorized as local or global.
+- **Error Handling:** The mechanism for responding to and managing exceptions and errors that occur during program execution.
+
+2.4 **Domain-Specific Terms**
+- **Syntax Tree:** A tree representation that shows the structure of code in terms of its grammatical elements.
+- **Type System:** The classification of data types in a programming language, which can be static or dynamic, strong or weak.
+
+This scope document establishes foundational topics and terminology around the fundamentals of different programming languages, creating a common language for future discussions and developments in this domain.

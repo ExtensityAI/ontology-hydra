@@ -1,0 +1,84 @@
+# Scope Document: The Fundamentals of Different Programming Languages
+
+## 1. Domain Boundaries
+
+### 1.1 Included Topics
+- **Fundamental Concepts:**
+  - Syntax and Semantics
+  - Data Types and Structures
+  - Control Flow (loops, conditionals)
+  - Functions and Scope
+  - Object-Oriented Programming (OOP) Principles
+  - Functional Programming Concepts
+- **Programming Paradigms:**
+  - Imperative Programming
+  - Declarative Programming
+  - Event-driven Programming
+- **Development Tools:**
+  - Integrated Development Environments (IDEs)
+  - Version Control Systems (e.g., Git)
+  - Package Management
+- **Testing and Debugging:**
+  - Unit Testing
+  - Debugging Techniques
+  - Error Handling
+- **Real-world Applications:**
+  - Web Development
+  - Mobile Development
+  - Data Science
+  - Game Development
+
+### 1.2 Excluded Topics
+- **Advanced Language Features:**
+  - Metaprogramming
+  - Performance Optimizations
+  - Low-level System Programming
+- **Specific Libraries and Frameworks:**
+  - Framework-specific topics (e.g., React, Django)
+  - Third-party library usage and integration
+- **Hardware and Architecture:**
+  - Computer architecture 
+  - Network Programming
+- **Industry Standards and Compliance:**
+  - ISO Standards for Programming Languages
+  - Regulatory Compliance in Software Development
+
+### 1.3 Gray Areas / Overlaps
+- **Cross-disciplinary Topics:**
+  - Software Engineering Practices (if treated as a separate domain)
+  - Artificial Intelligence and Machine Learning (depending on language context)
+- **Specialized Areas:**
+  - Scripting vs. Programming Languages
+  - Language Interoperability
+- **Inclusion of Emerging Languages:**
+  - Trends and relevance of newer programming languages that may not yet have a fully developed community or framework
+
+## 2. Core Terminology
+
+### 2.1 Fundamental Concepts
+- **Syntax:** The set of rules that defines the combinations of symbols that are considered to be correctly structured programs in a programming language.
+- **Semantics:** The meaning of the statements and expressions in a programming language, distinguishing between valid syntax and what the code actually does.
+- **Data Type:** A classification that specifies which type of value a variable can hold, such as integers, strings, or booleans.
+- **Control Flow:** The order in which individual statements, instructions, or function calls are executed in a program.
+- **Function:** A block of reusable code designed to perform a specific task, often encapsulated with parameters and a return value.
+- **Object-Oriented Programming (OOP):** A programming paradigm based on the concept of "objects", which can contain data and code to manipulate that data.
+
+### 2.2 Programming Paradigms
+- **Imperative Programming:** A programming paradigm that uses statements to change a program's state.
+- **Declarative Programming:** A paradigm that expresses the logic of computation without explicitly detailing the control flow.
+- **Event-Driven Programming:** A programming paradigm in which the program flow is determined by events such as user actions or sensor outputs.
+
+### 2.3 Development Tools
+- **IDE (Integrated Development Environment):** A software application that provides comprehensive facilities to programmers for software development.
+- **Version Control (e.g., Git):** A system that records changes to files or sets of files over time so that specific versions can be recalled later.
+
+### 2.4 Testing and Debugging
+- **Unit Testing:** A software testing method by which individual pieces of code (units) are tested for correctness.
+- **Debugging:** The process of identifying and removing errors from computer hardware or software.
+
+### 2.5 Real-world Applications
+- **Web Development:** The work involved in developing a website for the internet or an intranet.
+- **Mobile Development:** The act of developing software applications for mobile devices.
+- **Data Science:** An interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from structured and unstructured data. 
+
+This scope document serves as a guideline for discussions and initiatives related to the fundamentals of different programming languages, recognizing both the breadth of inclusion and the limitations inherent in specifying this domain.

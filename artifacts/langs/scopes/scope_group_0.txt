@@ -1,0 +1,87 @@
+# Scope Document: The Fundamentals of Different Programming Languages
+
+## 1. Domain Boundaries
+
+### 1.1 Included Topics
+- **Basic Language Constructs**  
+  - Variables and Data Types  
+  - Control Structures (if statements, loops)  
+  - Functions and Scope  
+  - Error Handling and Exceptions  
+
+- **Object-Oriented Programming (OOP) Principles**  
+  - Classes and Objects  
+  - Inheritance and Polymorphism  
+  - Encapsulation and Abstraction  
+
+- **Functional Programming Concepts**  
+  - First-Class Functions  
+  - Pure Functions and Side Effects  
+  - Higher-Order Functions  
+  - Immutability  
+
+- **Programming Paradigms**  
+  - Procedural Programming  
+  - Object-Oriented Programming  
+  - Functional Programming  
+  - Logic Programming  
+
+- **Domain-Specific Languages (DSL)**  
+  - Characteristics and Use Cases  
+  - Popular DSLs in Web Development and Other Domains  
+
+- **Compiler Basics**  
+  - Lexical Analysis and Parsing  
+  - Semantic Analysis  
+  - Optimization Techniques  
+
+- **Performance and Efficiency**  
+  - Time Complexity and Space Complexity  
+  - Memory Management Techniques  
+
+### 1.2 Excluded Topics
+- Advanced Software Engineering Practices
+  - Design Patterns
+  - Software Development Life Cycle (SDLC)
+- Specific Libraries and Frameworks
+  - Not focusing on any specific libraries or frameworks like Django, React, etc.
+- Industry-specific Applications
+  - Topics related to the application of programming in domains like finance, healthcare, etc.
+
+### 1.3 Gray Areas and Overlaps
+- **Application of Programming Paradigms**: The foundational principles may overlap with software engineering best practices.
+- **Cultural Context in Programming**: While it significantly impacts how programming languages are used, specific cultural insights are beyond the fundamentals.
+- **Language Design and Evolution**: Discussions around compiler optimizations may touch on language implementation but will focus on underlying principles rather than specific languages.
+
+## 2. Core Terminology
+
+### 2.1 Basic Constructs
+- **Variable**: A storage location identified by a name that holds a value.
+- **Data Type**: A classification that specifies which type of value a variable can hold (e.g., integer, string).
+- **Function**: A block of reusable code that performs a specific task.
+
+### 2.2 Object-Oriented Programming
+- **Class**: A blueprint for creating objects that encapsulate data for the object.
+- **Object**: An instance of a class containing data and methods.
+- **Inheritance**: A mechanism to create a new class using properties and behaviors of an existing class.
+- **Polymorphism**: The ability to present the same interface for different underlying data types.
+
+### 2.3 Functional Programming
+- **First-Class Function**: A function treated like any other variable.
+- **Pure Function**: A function that always produces the same output for the same input and has no side effects.
+- **Higher-Order Function**: A function that takes other functions as arguments or returns a function.
+
+### 2.4 Compiler Basics
+- **Lexical Analysis**: The process of converting a sequence of characters into a sequence of tokens.
+- **Parsing**: The process of analyzing a sequence of tokens to determine its grammatical structure.
+- **Optimization**: Techniques used to improve the performance of compiled code.
+
+### 2.5 Performance Measures
+- **Time Complexity**: A computational complexity that describes the amount of time it takes to run an algorithm as a function of the length of the input.
+- **Space Complexity**: A computational complexity that describes the amount of memory space required for running an algorithm.
+
+### 2.6 Programming Paradigms
+- **Procedural Programming**: A programming paradigm based on the concept of procedure calls.
+- **Logic Programming**: A type of programming where program statements express facts and rules about some problem domain.
+
+By defining these domains, concepts, and terminologies, this document aims to provide a foundation for discussions about the fundamentals of different programming languages, making it easier to engage with varying perspectives while maintaining a clear focus.

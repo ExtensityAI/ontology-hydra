@@ -1,0 +1,76 @@
+# Scope Document: Antarctica 
+
+## 1. Domain Boundaries
+
+### 1.1 Included Areas
+- **Geographical Features**: 
+  - Antarctic Peninsula
+  - Ross Sea
+  - Weddell Sea
+  - East and West Antarctica
+  - Antarctic Islands (e.g., South Georgia, South Shetland Islands)
+  
+- **Ecological Aspects**: 
+  - Antarctic marine biodiversity (e.g., krill, penguins, seals)
+  - Terrestrial ecosystems 
+  - Ice sheet dynamics
+
+- **Climate Change Factors**: 
+  - Global warming impacts on ice melt and sea levels
+  - Ocean acidification effects on marine life  
+  - Changes in species distribution due to climate variability
+
+- **Human Activities**: 
+  - Antarctic tourism and its impacts on the ecosystem
+  - Scientific research and its contributions to climate knowledge
+  - Fisheries and their management
+
+- **Policy Frameworks**: 
+  - Antarctic Treaty System
+  - Environmental policies governing human activities
+  - Indigenous rights pertaining to Antarctic governance
+
+### 1.2 Explicitly Excluded Areas
+- **Non-Antarctic Regions**: 
+  - Arctic ecosystems and their dynamics
+  - Non-polar marine and terrestrial environments 
+  - Climate change impacts in tropical and temperate zones
+
+- **Economic Aspects**: 
+  - Commercial exploitation of non-Antarctic resources
+  - Trade policies unrelated to Antarctica
+  
+- **Sociological Studies**:
+  - Direct sociological studies on populations outside of the Antarctic community
+  
+### 1.3 Gray Areas/Overlaps
+- **Climate Policy**: 
+  - While climate change is included, discussions may overlap with broader global climate initiatives or policies affecting non-polar regions.
+  
+- **Ecological Research**: 
+  - Some ecological studies may involve Arctic contexts or global marine issues, but the focus will remain on Antarctic-specific implications.
+
+- **Tourism and Education**: 
+  - Discussions regarding tourism management may overlap with general tourism trends and environmental education practices on a global scale.
+
+## 2. Core Terminology
+
+### 2.1 Geographical and Environmental Terms
+- **Antarctic Peninsula**: A major landmass extending towards South America, notable for its rich biodiversity.
+- **Ecosystem Dynamics**: The complex interactions among organisms and their physical environment in Antarctica.
+- **Krill**: Small crustaceans critical to the Antarctic food web, serving as a primary food source for many marine species.
+- **Ice Shelf**: A floating extension of a glacier, critical in stabilizing Greenland and Antarctic ice sheets.
+
+### 2.2 Climate Change Terminology
+- **Global Warming**: The long-term increase in Earth’s average surface temperature due to human activities, impacting polar regions significantly.
+- **Ocean Acidification**: The reduction in pH of ocean waters primarily caused by CO2 absorption, affecting marine life, especially calcifying organisms.
+- **Species Distribution**: Refers to how species are spread out in the environment, which is changing in response to climate shifts.
+
+### 2.3 Policy and Governance Terms
+- **Antarctic Treaty**: A legally binding agreement established to regulate international relations regarding Antarctica, emphasizing scientific cooperation and environmental protection.
+- **Indigenous Rights**: Advocacy for the recognition and inclusion of indigenous populations in climate policy discussions, historically sidelined in environmental governance.
+
+### 2.4 Research and Methodology Terms
+- **GIS (Geographic Information Systems)**: Technology used for capturing, analyzing, and managing spatial and geographic data related to environmental research.
+- **Fieldwork**: Practical research conducted in the natural environment, critical for gathering data on Antarctic conditions and ecosystems.
+- **Ecological Modeling**: Computational simulations used to predict ecological dynamics and responses to environmental changes.

@@ -1,0 +1,77 @@
+# Scope Document for the Domain of Antarctica
+
+## 1. Domain Boundaries
+
+### 1.1 Included Topics
+- **Climate Science and Change**
+  - Global warming effects on polar ecosystems
+  - Antarctic temperature variations
+  - Ice melt and sea-level rise projections
+
+- **Marine and Oceanographic Research**
+  - Southern Ocean dynamics
+  - Impact of ocean temperature on biodiversity
+  - Citizen science applications in tracking ocean changes
+
+- **Glaciology and Ice Core Studies**
+  - Analysis of ice core samples for historical climate data
+  - Glacial movement and stability studies
+  - Isotopic analysis for climate reconstruction
+
+- **Indigenous Perspectives and Knowledge**
+  - Māori cultural connections to Antarctic ecosystems
+  - Integration of Indigenous knowledge in climate discussions
+  - Environmental stewardship practices of Indigenous peoples
+
+- **Biodiversity and Ecosystem Preservation**
+  - Native species and habitat assessments
+  - Climate change impact assessments on Antarctic species
+  - Conservation strategies for vulnerable ecosystems
+
+### 1.2 Excluded Topics
+- **Non-Polar Climate Issues**
+  - Climate change impacts outside polar regions
+  - Localized climatic phenomena unrelated to Antarctica
+
+- **Human Activities and Politics**
+  - International policy discussions excluding environmental aspects
+  - Non-scientific geopolitical issues affecting Antarctica
+
+- **Non-Scientific Narratives**
+  - General historical accounts that do not address scientific research
+  - Cultural narratives not linked to climate or environmental studies 
+
+### 1.3 Gray Areas or Overlaps with Adjacent Domains
+- **Marine Biology and Ecology**
+  - While marine research is included, specific studies focusing on non-Antarctic marine ecosystems are not covered.
+
+- **Meteorology**
+  - General atmospheric studies are excluded unless directly related to Antarctic conditions.
+
+- **Environmental Policy**
+  - Discussions on policy are included only insofar as they relate to scientific findings and Indigenous knowledge integration.
+
+## 2. Core Terminology
+
+### 2.1 Climate Science Terminology
+- **Global Warming:** Increase in Earth's average surface temperature due to greenhouse gas emissions.
+- **Ice Melt:** The process of glaciers and ice caps melting, contributing to sea level rise.
+- **Ecosystem Vulnerability:** The susceptibility of an ecosystem to harmful changes due to climate change.
+
+### 2.2 Oceanographic Terms
+- **Thermohaline Circulation:** Large-scale ocean currents driven by temperature and salinity differences.
+- **Biodiversity:** The variety of life in a particular ecosystem, important for ecosystem resilience.
+
+### 2.3 Glaciological Concepts
+- **Ice Core Sampling:** Technique to study past climates by extracting cylinders of ice from glaciers.
+- **Isotopic Analysis:** Method used to determine the composition of isotopes in ice core samples to infer historical temperature changes.
+
+### 2.4 Indigenous Knowledge Concepts
+- **Kaitiakitanga:** Māori concept of guardianship and protection of the environment, embodying stewardship practices.
+- **Mātauranga Māori:** Traditional Māori knowledge encompassing cultural, spiritual, and environmental wisdom.
+
+### 2.5 Cross-disciplinary Terms
+- **Citizen Science:** Public participation in scientific research, contributing data collection and analysis.
+- **Climate Models:** Computational tools used to simulate climate systems and project future changes.
+
+By establishing these boundaries and terminology, we aim to facilitate clear discussions and a mutual understanding among researchers, policymakers, and indigenous representatives engaged in Antarctic studies.

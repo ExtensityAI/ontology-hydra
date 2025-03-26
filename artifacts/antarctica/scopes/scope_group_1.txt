@@ -1,0 +1,61 @@
+# Scope Document for the Domain of Antarctica
+
+## 1. Domain Boundaries
+
+### 1.1 Included Topics
+- **Ecological Systems**
+  - Terrestrial ecosystems and biodiversity
+  - Invasive species and their impact on endemic flora
+  - Microbial communities in glacial systems
+- **Climate Change Impact**
+  - Effects of climate warming on glacial and terrestrial ecosystems
+  - Adaptation and resilience of species in changing environments
+- **Glaciology**
+  - Glacial structure and dynamics
+  - Ice melt and its contribution to global sea level rise
+- **Environmental Policy**
+  - Climate policy related to Antarctic ecosystems
+  - Environmental justice and indigenous community impacts
+- **Eco-Tourism**
+  - Responsible travel practices in Antarctica
+  - Educational eco-tourism initiatives and community engagement
+
+### 1.2 Excluded Topics
+- **Non-Scientific Aspects**
+  - Cultural aspects unrelated to ecological and environmental science (e.g., literature, arts specific to Antarctica)
+  - Political relationships not directly related to environmental issues
+- **Technological Innovations Outside Ecology**
+  - Broad technology development in sectors unrelated to environmental monitoring or conservation
+  - Non-ecological aspects of tourism, such as travel marketing strategies
+
+### 1.3 Gray Areas
+- **Art and Science**
+  - Intersection of art inspired by Antarctic landscapes with environmental messaging may be included but requires careful consideration of scientific relevance.
+- **Local Culture and History**
+  - Aspects of indigenous culture related to environmental practices may be included, but broader historical narratives about the region are excluded unless they inform current ecological or environmental discussions.
+
+## 2. Core Terminology
+
+### 2.1 Ecological Terminology
+- **Biodiversity**: The variety of life in a particular habitat or ecosystem.
+- **Endemic Species**: Species that are native to and restricted to a specific geographic location.
+- **Invasive Species**: Non-native species that adversely affect the ecosystems they invade.
+
+### 2.2 Climate and Glaciology Terminology
+- **Cryosphere**: The portions of Earth's surface where water is in solid form (ice).
+- **Glacial Retreat**: The process of glaciers shrinking in size due to melting or calving.
+- **Sea Level Rise**: The increase in the average level of the oceans as a result of climate change.
+
+### 2.3 Environmental Policy and Justice
+- **Climate Policy**: Strategies and regulations aimed at addressing climate change.
+- **Environmental Justice**: Fair treatment and meaningful involvement of all people in environmental decision-making.
+
+### 2.4 Eco-Tourism Terminology
+- **Sustainable Tourism**: Tourism that is environmentally friendly and socially responsible, ensuring minimal impact.
+- **Educational Tours**: Travel experiences designed to inform participants about ecological and environmental issues.
+
+### 2.5 Miscellaneous Terminology
+- **Microbial Diversity**: The variety of microorganisms present in a given environment.
+- **Genetic Analysis**: Techniques used to study DNA and genetic variation in organisms.
+
+This document establishes a shared vocabulary and clear boundaries of the Antarctica domain for ongoing discussions and studies among the collaborative team focused on its ecological and environmental significance.

@@ -1,0 +1,56 @@
+# Scope Document for the Domain of Antarctica
+
+## 1. Domain Boundaries
+
+### 1.1 Inclusion of Topics
+- Environmental Studies
+  - Antarctic ecosystems and their dynamics
+  - Climate change impacts on Antarctic flora and fauna
+  - Conservation efforts and wildlife protection
+  
+- Bird Research
+  - Breeding behaviors of Antarctic seabirds, particularly Emperor Penguins
+  - Migratory patterns and tracking methods using satellite telemetry
+
+- Oceanography
+  - Upwelling and downwelling currents and their effects on marine life
+  - Krill populations and their role in the Antarctic food web
+  - Interactions between oceanographic phenomena and climate change
+
+- Logistics and Operations
+  - Supply chain management for research expeditions in Antarctica
+  - Coordination of fieldwork and remote operations
+
+### 1.2 Exclusion of Topics
+- Non-scientific tourism activities in Antarctica
+- Military operations or geopolitical issues related to territorial claims
+- Land-based geology and glaciology unrelated to biological, oceanographic, or ecological research
+
+### 1.3 Gray Areas or Overlaps
+- Ecosystem interactions may involve geological processes, yet this document primarily focuses on biological and oceanographic aspects.
+- There may be overlaps with global climate change discussions that extend beyond Antarctica, with relevance to ice melting and sea-level rise.
+
+## 2. Core Terminology
+
+### 2.1 Environmental Studies Terms
+- **Ecosystem Dynamics:** Interactions between organisms and their environment in the Antarctic region.
+- **Climate Change:** Long-term shifts in temperatures and weather patterns affecting the Antarctic environment.
+
+### 2.2 Ornithology Terms
+- **Seabirds:** Birds that are predominantly associated with marine environments, particularly in the polar regions.
+- **Breeding Behaviors:** Reproductive strategies and patterns exhibited by seabirds, including nesting and parental care.
+
+### 2.3 Oceanography Terms
+- **Upwelling:** The process by which nutrient-rich waters rise to the surface, supporting marine life.
+- **Downwelling:** The process of surface waters sinking, often resulting in reduced nutrient availability for marine organisms.
+- **Krill:** Small shrimp-like crustaceans crucial to the Antarctic food web.
+
+### 2.4 Logistics Terms
+- **Supply Chain Management:** Coordination of resources and logistics to support research expeditions in extreme environments.
+- **Remote Operations:** Management of field activities in inaccessible locations, often requiring specialized planning and resources.
+
+### 2.5 General Terms
+- **Open Science:** An approach encouraging the sharing of research data and findings with the public and the wider scientific community.
+- **Satellite Telemetry:** A method for tracking the movements of animals through satellite signals.
+
+By establishing this scope document, we aim to enhance communication and understanding across various scientific disciplines concerning Antarctica, providing a foundation for collaborative research endeavors.

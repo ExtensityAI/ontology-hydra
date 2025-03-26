@@ -1,0 +1,89 @@
+# Scope Document: The Fundamentals of Different Programming Languages
+
+## 1. Domain Boundaries
+
+### 1.1 Included Topics
+- **Introduction to Programming Languages**
+  - Definition and purpose of programming languages
+  - Types of programming languages (e.g., compiled vs. interpreted)
+  
+- **Key Programming Languages Overview**
+  - High-level languages (e.g., Python, Java, JavaScript)
+  - Low-level languages (e.g., C, Assembly)
+  - Special-purpose languages (e.g., SQL, HTML, CSS)
+  
+- **Syntax and Semantics**
+  - Structure of programming language syntax
+  - Meaning of expressions, statements, and commands
+  
+- **Programming Paradigms**
+  - Procedural programming
+  - Object-oriented programming
+  - Functional programming
+  - Logic programming
+  
+- **Language Features**
+  - Variables and data types
+  - Control structures (e.g., loops, conditionals)
+  - Functions and modularity 
+  - Object-oriented principles (e.g., inheritance, polymorphism)
+  
+- **Development Environments**
+  - Integrated Development Environments (IDEs)
+  - Code editors and their role
+  
+- **Comparative Analysis**
+  - Language performance considerations
+  - Use cases and industry relevance
+  
+- **Trends and Evolution**
+  - Development and adoption of new languages
+  - Historical perspective on programming languages
+  
+### 1.2 Explicitly Excluded Topics
+- **Programming Language Implementation**
+  - Compiler and interpreter design
+  - Low-level machine interactions
+  
+- **Software Development Methods**
+  - Agile, DevOps, and organizational methods
+  
+- **Advanced Topics in Computer Science**
+  - Data structures and algorithms
+  - Software architecture and design patterns
+
+### 1.3 Gray Areas or Overlaps
+- **Language Interoperability**
+  - Overlap with software development practices regarding how multiple languages can work together
+  
+- **Tools for Programming**
+  - Coverage of libraries, frameworks, and their influence on language use could intersect software tool development topics
+
+---
+
+## 2. Core Terminology
+
+### 2.1 Language Types
+- **High-level Language**: A programming language that abstracts details of the computer hardware and focuses on ease of use (e.g., Python).
+- **Low-level Language**: A programming language that provides little abstraction from a computer’s instruction set architecture, often more difficult to read (e.g., C, Assembly).
+
+### 2.2 Syntax and Semantics
+- **Syntax**: The set of rules that defines the structure of a programming language.
+- **Semantics**: The meaning conveyed by syntactic constructs and how they are interpreted during execution.
+
+### 2.3 Programming Paradigms
+- **Imperative Programming**: A programming paradigm where commands for the computer are given in sequence.
+- **Functional Programming**: A paradigm that treats computation as the evaluation of mathematical functions and avoids changing state or mutable data.
+
+### 2.4 Language Features
+- **Variable**: A symbolic name associated with a value and whose associated value may be changed.
+- **Control Structure**: Constructs that manage the flow of control in a program (e.g., loops, conditionals).
+- **Function**: A self-contained block of code designed to perform a specific task.
+
+### 2.5 Development Environment
+- **IDE (Integrated Development Environment)**: A comprehensive facility to programmers for software development, including a code editor, debugger, and build automation tools.
+
+### 2.6 Trends
+- **Emerging Language**: A relatively new programming language gaining popularity, often with focuses on specific modern needs, such as data science or web development.
+
+This scope document lays the foundation for a shared understanding of the fundamentals of different programming languages, creating a framework for further exploration and discussion within the domain.
