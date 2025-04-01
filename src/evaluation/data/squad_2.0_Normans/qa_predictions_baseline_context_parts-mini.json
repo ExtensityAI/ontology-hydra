@@ -1,0 +1,3354 @@
+{
+  "predictions": [
+    {
+      "id": "56ddde6b9a695914005b9628",
+      "prediction_text": "France",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56ddde6b9a695914005b9629",
+      "prediction_text": "In the 10th and 11th centuries",
+      "no_answer_probability": 0.1
+    },
+    {
+      "id": "56ddde6b9a695914005b962a",
+      "prediction_text": "Denmark, Iceland and Norway",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56ddde6b9a695914005b962b",
+      "prediction_text": "Rollo",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56ddde6b9a695914005b962c",
+      "prediction_text": "10th century",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad39d53604f3c001a3fe8d1",
+      "prediction_text": "The Normans",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad39d53604f3c001a3fe8d2",
+      "prediction_text": "a region in France",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad39d53604f3c001a3fe8d3",
+      "prediction_text": "Rollo",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad39d53604f3c001a3fe8d4",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "56dddf4066d3e219004dad5f",
+      "prediction_text": "William the Conqueror",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56dddf4066d3e219004dad60",
+      "prediction_text": "Richard I of Normandy",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56dddf4066d3e219004dad61",
+      "prediction_text": "Christianity",
+      "no_answer_probability": 0.1
+    },
+    {
+      "id": "5ad3a266604f3c001a3fea27",
+      "prediction_text": "The Norman dynasty had a major political, cultural, and military impact on medieval Europe.",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3a266604f3c001a3fea28",
+      "prediction_text": "The Normans",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3a266604f3c001a3fea29",
+      "prediction_text": "The Normans",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3a266604f3c001a3fea2a",
+      "prediction_text": "Richard I of Normandy",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3a266604f3c001a3fea2b",
+      "prediction_text": "Principality of Antioch",
+      "no_answer_probability": 0.2
+    },
+    {
+      "id": "56dde0379a695914005b9636",
+      "prediction_text": "Northman",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56dde0379a695914005b9637",
+      "prediction_text": "9th century",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3ab70604f3c001a3feb89",
+      "prediction_text": "Normans",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3ab70604f3c001a3feb8a",
+      "prediction_text": "9th century",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56dde0ba66d3e219004dad75",
+      "prediction_text": "911",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56dde0ba66d3e219004dad76",
+      "prediction_text": "King Charles III of West Francia",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56dde0ba66d3e219004dad77",
+      "prediction_text": "the river Epte",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3ad61604f3c001a3fec0d",
+      "prediction_text": "The initially destructive incursions of Norse war bands evolved into more permanent encampments in the course of the 10th century.",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3ad61604f3c001a3fec0e",
+      "prediction_text": "the treaty of Saint-Clair-sur-Epte",
+      "no_answer_probability": 0.1
+    },
+    {
+      "id": "5ad3ad61604f3c001a3fec0f",
+      "prediction_text": "Rollo",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3ad61604f3c001a3fec10",
+      "prediction_text": "further Viking incursions",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56dde1d966d3e219004dad8d",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad3ae14604f3c001a3fec39",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad3ae14604f3c001a3fec3a",
+      "prediction_text": "Danes, Norwegians, Norse\u2013Gaels, Orkney Vikings, possibly Swedes, and Anglo-Danes",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56dde27d9a695914005b9651",
+      "prediction_text": "Catholicism (Christianity)",
+      "no_answer_probability": 0.1
+    },
+    {
+      "id": "56dde27d9a695914005b9652",
+      "prediction_text": "the north of France",
+      "no_answer_probability": 0.1
+    },
+    {
+      "id": "5ad3af11604f3c001a3fec63",
+      "prediction_text": "Catholicism (Christianity) and the Gallo-Romance language",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3af11604f3c001a3fec64",
+      "prediction_text": "Catholicism (Christianity) and the Gallo-Romance language of the local people",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3af11604f3c001a3fec65",
+      "prediction_text": "Catholicism (Christianity)",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56dde2fa66d3e219004dad9b",
+      "prediction_text": "fighting horsemen",
+      "no_answer_probability": 0.1
+    },
+    {
+      "id": "5ad3c626604f3c001a3ff011",
+      "prediction_text": "The Normans",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3c626604f3c001a3ff012",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad3c626604f3c001a3ff013",
+      "prediction_text": "Most Norman knights",
+      "no_answer_probability": 0.1
+    },
+    {
+      "id": "56de0f6a4396321400ee257f",
+      "prediction_text": "the Pechenegs, the Bulgars, and especially the Seljuk Turks",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3dbc6604f3c001a3ff3e9",
+      "prediction_text": "the Normans",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3dbc6604f3c001a3ff3ea",
+      "prediction_text": "the Pechenegs, the Bulgars, and especially the Seljuk Turks",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3dbc6604f3c001a3ff3eb",
+      "prediction_text": "the Lombards",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3dbc6604f3c001a3ff3ec",
+      "prediction_text": "the Sicilian campaign of George Maniaces",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de0ffd4396321400ee258d",
+      "prediction_text": "in the 1050s",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de0ffd4396321400ee258e",
+      "prediction_text": "In the 1060s",
+      "no_answer_probability": 0.1
+    },
+    {
+      "id": "56de0ffd4396321400ee258f",
+      "prediction_text": "Alexius Komnenos",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3de8b604f3c001a3ff467",
+      "prediction_text": "Herv\u00e9",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3de8b604f3c001a3ff468",
+      "prediction_text": "in the 1050s",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3de8b604f3c001a3ff469",
+      "prediction_text": "Roussel de Bailleul",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3de8b604f3c001a3ff46a",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "56de10b44396321400ee2593",
+      "prediction_text": "Afranji",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de10b44396321400ee2594",
+      "prediction_text": "Oursel",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de10b44396321400ee2595",
+      "prediction_text": "Turkish forces",
+      "no_answer_probability": 0.1
+    },
+    {
+      "id": "5ad3e96b604f3c001a3ff689",
+      "prediction_text": "Turkish forces",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3e96b604f3c001a3ff68a",
+      "prediction_text": "the Armenian state",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3e96b604f3c001a3ff68b",
+      "prediction_text": "Oursel",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3e96b604f3c001a3ff68c",
+      "prediction_text": "the upper Euphrates valley in northern Syria",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de11154396321400ee25aa",
+      "prediction_text": "The Raoulii family were descended from an Italo-Norman named Raoul.",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3ea79604f3c001a3ff6e9",
+      "prediction_text": "Byzantine Greece",
+      "no_answer_probability": 0.1
+    },
+    {
+      "id": "5ad3ea79604f3c001a3ff6ea",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad3ea79604f3c001a3ff6eb",
+      "prediction_text": "Sicilian expedition",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de148dcffd8e1900b4b5bc",
+      "prediction_text": "Robert Guiscard",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de148dcffd8e1900b4b5bd",
+      "prediction_text": "February 1082",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de148dcffd8e1900b4b5be",
+      "prediction_text": "30,000",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3ed26604f3c001a3ff799",
+      "prediction_text": "Robert Guiscard",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3ed26604f3c001a3ff79a",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad3ed26604f3c001a3ff79b",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad3ed26604f3c001a3ff79c",
+      "prediction_text": "30,000 men",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de15104396321400ee25b7",
+      "prediction_text": "the city of Deabolis",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de15104396321400ee25b8",
+      "prediction_text": "Bohemond",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de15104396321400ee25b9",
+      "prediction_text": "Deabolis",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3ee2d604f3c001a3ff7e1",
+      "prediction_text": "Dyrrachium",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3ee2d604f3c001a3ff7e2",
+      "prediction_text": "Bohemond",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3ee2d604f3c001a3ff7e3",
+      "prediction_text": "Robert's son",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de1563cffd8e1900b4b5c2",
+      "prediction_text": "1185",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de1563cffd8e1900b4b5c3",
+      "prediction_text": "Dyrrachium",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de1563cffd8e1900b4b5c4",
+      "prediction_text": "Adriatic",
+      "no_answer_probability": 0.1
+    },
+    {
+      "id": "5ad3f028604f3c001a3ff823",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad3f028604f3c001a3ff824",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad3f028604f3c001a3ff825",
+      "prediction_text": "Dyrrachium",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de15dbcffd8e1900b4b5c8",
+      "prediction_text": "King Ethelred II of England",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de15dbcffd8e1900b4b5c9",
+      "prediction_text": "Duke Richard II of Normandy",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de15dbcffd8e1900b4b5ca",
+      "prediction_text": "Normandy",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de15dbcffd8e1900b4b5cb",
+      "prediction_text": "Sweyn Forkbeard",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3f187604f3c001a3ff86f",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad3f187604f3c001a3ff870",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad3f187604f3c001a3ff871",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "56de1645cffd8e1900b4b5d0",
+      "prediction_text": "Harthacnut",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de1645cffd8e1900b4b5d1",
+      "prediction_text": "1041",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de1645cffd8e1900b4b5d2",
+      "prediction_text": "Robert of Jumi\u00e8ges",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3f350604f3c001a3ff8ef",
+      "prediction_text": "1041",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3f350604f3c001a3ff8f0",
+      "prediction_text": "English cavalry force",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3f350604f3c001a3ff8f1",
+      "prediction_text": "Edward the Confessor",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de16ca4396321400ee25c5",
+      "prediction_text": "at the Battle of Hastings",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de16ca4396321400ee25c6",
+      "prediction_text": "Duke William II of Normandy",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de16ca4396321400ee25c7",
+      "prediction_text": "1066",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de16ca4396321400ee25c8",
+      "prediction_text": "the Anglo-Saxons",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3f4b1604f3c001a3ff951",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad3f4b1604f3c001a3ff952",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad3f4b1604f3c001a3ff953",
+      "prediction_text": "The Anglo-Saxons",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3f4b1604f3c001a3ff954",
+      "prediction_text": "The early Norman kings of England",
+      "no_answer_probability": 0.1
+    },
+    {
+      "id": "56de1728cffd8e1900b4b5d7",
+      "prediction_text": "Modern English",
+      "no_answer_probability": 0.1
+    },
+    {
+      "id": "5ad3f5b0604f3c001a3ff9ab",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad3f5b0604f3c001a3ff9ac",
+      "prediction_text": "Old English",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3f5b0604f3c001a3ff9ad",
+      "prediction_text": "Geoffrey Chaucer",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de179dcffd8e1900b4b5da",
+      "prediction_text": "1169",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de179dcffd8e1900b4b5db",
+      "prediction_text": "Ireland",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de179dcffd8e1900b4b5dc",
+      "prediction_text": "Irish culture",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3f6f5604f3c001a3ffa09",
+      "prediction_text": "Bannow Bay",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3f6f5604f3c001a3ffa0a",
+      "prediction_text": "The Irish culture had a profound effect on the Normans.",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3f6f5604f3c001a3ffa0b",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "56de17f9cffd8e1900b4b5e0",
+      "prediction_text": "Edgar Atheling",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de17f9cffd8e1900b4b5e1",
+      "prediction_text": "King Malcolm III of Scotland",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de17f9cffd8e1900b4b5e2",
+      "prediction_text": "1072",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de17f9cffd8e1900b4b5e3",
+      "prediction_text": "Duncan",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3f7ac604f3c001a3ffa3b",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad3f7ac604f3c001a3ffa3c",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad3f7ac604f3c001a3ffa3d",
+      "prediction_text": "Duncan",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de3cd0cffd8e1900b4b6be",
+      "prediction_text": "Sybilla of Normandy",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de3cd0cffd8e1900b4b6bf",
+      "prediction_text": "Norman culture",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3f8d2604f3c001a3ffa8d",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad3f8d2604f3c001a3ffa8e",
+      "prediction_text": "Norman culture",
+      "no_answer_probability": 0.1
+    },
+    {
+      "id": "56de3d594396321400ee26ca",
+      "prediction_text": "Hereford",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de3d594396321400ee26cb",
+      "prediction_text": "the Welsh",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de3d594396321400ee26cc",
+      "prediction_text": "Edward the Confessor",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3fb01604f3c001a3ffb35",
+      "prediction_text": "The Normans",
+      "no_answer_probability": 0.1
+    },
+    {
+      "id": "5ad3fb01604f3c001a3ffb36",
+      "prediction_text": "Ralph",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de3dbacffd8e1900b4b6d2",
+      "prediction_text": "Wales",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3fb6e604f3c001a3ffb5f",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad3fb6e604f3c001a3ffb60",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "56de3e414396321400ee26d8",
+      "prediction_text": "1018",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de3e414396321400ee26d9",
+      "prediction_text": "William of Montreuil",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3fc41604f3c001a3ffb8f",
+      "prediction_text": "in Antioch",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3fc41604f3c001a3ffb90",
+      "prediction_text": "the Reconquista in Iberia",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3fc41604f3c001a3ffb91",
+      "prediction_text": "Roger de Tosny",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3fc41604f3c001a3ffb92",
+      "prediction_text": "War of Barbastro",
+      "no_answer_probability": 0.2
+    },
+    {
+      "id": "56de3ebc4396321400ee26e6",
+      "prediction_text": "1097",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de3ebc4396321400ee26e7",
+      "prediction_text": "Tancred",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de3ebc4396321400ee26e8",
+      "prediction_text": "the conquest of Jerusalem",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad4017a604f3c001a3ffd1f",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad4017a604f3c001a3ffd20",
+      "prediction_text": "Bohemond",
+      "no_answer_probability": 0.1
+    },
+    {
+      "id": "56de3efccffd8e1900b4b6fe",
+      "prediction_text": "380 years",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad401f2604f3c001a3ffd41",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad401f2604f3c001a3ffd42",
+      "prediction_text": "Western European forces",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de3f784396321400ee26fa",
+      "prediction_text": "a storm dispersed the fleet",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de3f784396321400ee26fb",
+      "prediction_text": "Berengaria",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de3f784396321400ee26fc",
+      "prediction_text": "1191",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de3f784396321400ee26fd",
+      "prediction_text": "Isaac Komnenos",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad40280604f3c001a3ffd57",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad40280604f3c001a3ffd58",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad40280604f3c001a3ffd59",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "56de40da4396321400ee2708",
+      "prediction_text": "Conrad of Montferrat",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de40da4396321400ee2709",
+      "prediction_text": "silver",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de40da4396321400ee270a",
+      "prediction_text": "Guy de Lusignan",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad404a6604f3c001a3ffde1",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad404a6604f3c001a3ffde2",
+      "prediction_text": "Richard",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad404a6604f3c001a3ffde3",
+      "prediction_text": "Richard",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de49564396321400ee277a",
+      "prediction_text": "Africa",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad40419604f3c001a3ffdb7",
+      "prediction_text": "Jean de Bethencourt and Gadifer de la Salle",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad40419604f3c001a3ffdb8",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "56de49a8cffd8e1900b4b7a7",
+      "prediction_text": "Bethencourt",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de49a8cffd8e1900b4b7a8",
+      "prediction_text": "Enrique P\u00e9rez de Guzm\u00e1n, 2nd Count de Niebla.",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de49a8cffd8e1900b4b7a9",
+      "prediction_text": "Maciot de Bethencourt",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad403c1604f3c001a3ffd97",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad403c1604f3c001a3ffd98",
+      "prediction_text": "Maciot de Bethencourt",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de4a474396321400ee2786",
+      "prediction_text": "in the Channel Islands",
+      "no_answer_probability": 0.1
+    },
+    {
+      "id": "56de4a474396321400ee2787",
+      "prediction_text": "two",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad40358604f3c001a3ffd7d",
+      "prediction_text": "The customary law of Normandy",
+      "no_answer_probability": 0.1
+    },
+    {
+      "id": "5ad40358604f3c001a3ffd7e",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad40358604f3c001a3ffd7f",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "56de4a89cffd8e1900b4b7bd",
+      "prediction_text": "a unique Romanesque idiom",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de4a89cffd8e1900b4b7be",
+      "prediction_text": "rounded arches",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad402ce604f3c001a3ffd67",
+      "prediction_text": "rounded arches",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de4b074396321400ee2793",
+      "prediction_text": "Early Gothic",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de4b074396321400ee2794",
+      "prediction_text": "Anglo-Saxon",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de4b074396321400ee2795",
+      "prediction_text": "the Kingdom of Sicily",
+      "no_answer_probability": 0.1
+    },
+    {
+      "id": "5ad400b0604f3c001a3ffcdf",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad400b0604f3c001a3ffce0",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad400b0604f3c001a3ffce1",
+      "prediction_text": "Normans",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de4b5c4396321400ee2799",
+      "prediction_text": "early 11th century",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de4b5c4396321400ee279a",
+      "prediction_text": "the dukes",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3ffd7604f3c001a3ffca7",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad3ffd7604f3c001a3ffca8",
+      "prediction_text": "the dukes",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3ffd7604f3c001a3ffca9",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad3ffd7604f3c001a3ffcaa",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "56de4bb84396321400ee27a2",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad3ff1b604f3c001a3ffc73",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad3ff1b604f3c001a3ffc74",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "56de4c324396321400ee27ab",
+      "prediction_text": "embroidery",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de4c324396321400ee27ac",
+      "prediction_text": "the Bayeux Tapestry",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de4c324396321400ee27ad",
+      "prediction_text": "Odo, the Bishop of Bayeux",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3fe91604f3c001a3ffc47",
+      "prediction_text": "the Bayeux Tapestry",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3fe91604f3c001a3ffc48",
+      "prediction_text": "Odo, the Bishop of Bayeux",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de51244396321400ee27ef",
+      "prediction_text": "mosaics",
+      "no_answer_probability": 0.1
+    },
+    {
+      "id": "5ad3fe0d604f3c001a3ffc1b",
+      "prediction_text": "",
+      "no_answer_probability": 1.0
+    },
+    {
+      "id": "5ad3fe0d604f3c001a3ffc1c",
+      "prediction_text": "mosaics",
+      "no_answer_probability": 0.3
+    },
+    {
+      "id": "5ad3fe0d604f3c001a3ffc1d",
+      "prediction_text": "Lombard Salerno",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de51c64396321400ee27f7",
+      "prediction_text": "11th century",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de51c64396321400ee27f8",
+      "prediction_text": "William of Volpiano and John of Ravenna",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3fd68604f3c001a3ffbe7",
+      "prediction_text": "The system of denoting notes by letters and the staff around which neumes were oriented developed in Normandy.",
+      "no_answer_probability": 0.1
+    },
+    {
+      "id": "5ad3fd68604f3c001a3ffbe8",
+      "prediction_text": "a centre of musical production and education",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de52614396321400ee27fb",
+      "prediction_text": "southern Italy",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de52614396321400ee27fc",
+      "prediction_text": "Sant'Eufemia",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de52614396321400ee27fd",
+      "prediction_text": "Robert Guiscard",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "56de52614396321400ee27fe",
+      "prediction_text": "singing",
+      "no_answer_probability": 0.0
+    },
+    {
+      "id": "5ad3fccf604f3c001a3ffbb5",
+      "prediction_text": "Several monks of Saint-Evroul",
+      "no_answer_probability": 0.0
+    }
+  ],
+  "references": [
+    {
+      "id": "56ddde6b9a695914005b9628",
+      "answers": [
+        {
+          "text": "France",
+          "answer_start": 159
+        },
+        {
+          "text": "France",
+          "answer_start": 159
+        },
+        {
+          "text": "France",
+          "answer_start": 159
+        },
+        {
+          "text": "France",
+          "answer_start": 159
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56ddde6b9a695914005b9629",
+      "answers": [
+        {
+          "text": "10th and 11th centuries",
+          "answer_start": 94
+        },
+        {
+          "text": "in the 10th and 11th centuries",
+          "answer_start": 87
+        },
+        {
+          "text": "10th and 11th centuries",
+          "answer_start": 94
+        },
+        {
+          "text": "10th and 11th centuries",
+          "answer_start": 94
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56ddde6b9a695914005b962a",
+      "answers": [
+        {
+          "text": "Denmark, Iceland and Norway",
+          "answer_start": 256
+        },
+        {
+          "text": "Denmark, Iceland and Norway",
+          "answer_start": 256
+        },
+        {
+          "text": "Denmark, Iceland and Norway",
+          "answer_start": 256
+        },
+        {
+          "text": "Denmark, Iceland and Norway",
+          "answer_start": 256
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56ddde6b9a695914005b962b",
+      "answers": [
+        {
+          "text": "Rollo",
+          "answer_start": 308
+        },
+        {
+          "text": "Rollo",
+          "answer_start": 308
+        },
+        {
+          "text": "Rollo",
+          "answer_start": 308
+        },
+        {
+          "text": "Rollo",
+          "answer_start": 308
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56ddde6b9a695914005b962c",
+      "answers": [
+        {
+          "text": "10th century",
+          "answer_start": 671
+        },
+        {
+          "text": "the first half of the 10th century",
+          "answer_start": 649
+        },
+        {
+          "text": "10th",
+          "answer_start": 671
+        },
+        {
+          "text": "10th",
+          "answer_start": 671
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad39d53604f3c001a3fe8d1",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad39d53604f3c001a3fe8d2",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad39d53604f3c001a3fe8d3",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad39d53604f3c001a3fe8d4",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56dddf4066d3e219004dad5f",
+      "answers": [
+        {
+          "text": "William the Conqueror",
+          "answer_start": 1022
+        },
+        {
+          "text": "William the Conqueror",
+          "answer_start": 1022
+        },
+        {
+          "text": "William the Conqueror",
+          "answer_start": 1022
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56dddf4066d3e219004dad60",
+      "answers": [
+        {
+          "text": "Richard I",
+          "answer_start": 573
+        },
+        {
+          "text": "Richard I",
+          "answer_start": 573
+        },
+        {
+          "text": "Richard I",
+          "answer_start": 573
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56dddf4066d3e219004dad61",
+      "answers": [
+        {
+          "text": "Catholic",
+          "answer_start": 230
+        },
+        {
+          "text": "Catholic orthodoxy",
+          "answer_start": 230
+        },
+        {
+          "text": "Catholic",
+          "answer_start": 230
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3a266604f3c001a3fea27",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3a266604f3c001a3fea28",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3a266604f3c001a3fea29",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3a266604f3c001a3fea2a",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3a266604f3c001a3fea2b",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56dde0379a695914005b9636",
+      "answers": [
+        {
+          "text": "Viking",
+          "answer_start": 341
+        },
+        {
+          "text": "Norseman, Viking",
+          "answer_start": 331
+        },
+        {
+          "text": "Norseman, Viking",
+          "answer_start": 331
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56dde0379a695914005b9637",
+      "answers": [
+        {
+          "text": "9th century",
+          "answer_start": 309
+        },
+        {
+          "text": "9th century",
+          "answer_start": 309
+        },
+        {
+          "text": "9th century",
+          "answer_start": 309
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ab70604f3c001a3feb89",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ab70604f3c001a3feb8a",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56dde0ba66d3e219004dad75",
+      "answers": [
+        {
+          "text": "911",
+          "answer_start": 244
+        },
+        {
+          "text": "911",
+          "answer_start": 244
+        },
+        {
+          "text": "911",
+          "answer_start": 244
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56dde0ba66d3e219004dad76",
+      "answers": [
+        {
+          "text": "King Charles III",
+          "answer_start": 324
+        },
+        {
+          "text": "King Charles III",
+          "answer_start": 324
+        },
+        {
+          "text": "King Charles III",
+          "answer_start": 324
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56dde0ba66d3e219004dad77",
+      "answers": [
+        {
+          "text": "Seine",
+          "answer_start": 711
+        },
+        {
+          "text": "Epte",
+          "answer_start": 524
+        },
+        {
+          "text": "Seine",
+          "answer_start": 711
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ad61604f3c001a3fec0d",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ad61604f3c001a3fec0e",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ad61604f3c001a3fec0f",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ad61604f3c001a3fec10",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56dde1d966d3e219004dad8d",
+      "answers": [
+        {
+          "text": "Rollo",
+          "answer_start": 7
+        },
+        {
+          "text": "Rollo",
+          "answer_start": 7
+        },
+        {
+          "text": "Rollo",
+          "answer_start": 7
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ae14604f3c001a3fec39",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ae14604f3c001a3fec3a",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56dde27d9a695914005b9651",
+      "answers": [
+        {
+          "text": "Catholicism",
+          "answer_start": 121
+        },
+        {
+          "text": "Catholicism",
+          "answer_start": 121
+        },
+        {
+          "text": "Catholicism",
+          "answer_start": 121
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56dde27d9a695914005b9652",
+      "answers": [
+        {
+          "text": "north",
+          "answer_start": 327
+        },
+        {
+          "text": "the north",
+          "answer_start": 323
+        },
+        {
+          "text": "north",
+          "answer_start": 327
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3af11604f3c001a3fec63",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3af11604f3c001a3fec64",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3af11604f3c001a3fec65",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56dde2fa66d3e219004dad9b",
+      "answers": [
+        {
+          "text": "fighting horsemen",
+          "answer_start": 428
+        },
+        {
+          "text": "fighting horsemen",
+          "answer_start": 428
+        },
+        {
+          "text": "fighting horsemen",
+          "answer_start": 428
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3c626604f3c001a3ff011",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3c626604f3c001a3ff012",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3c626604f3c001a3ff013",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de0f6a4396321400ee257f",
+      "answers": [
+        {
+          "text": "Seljuk Turks",
+          "answer_start": 161
+        },
+        {
+          "text": "the Pechenegs, the Bulgars, and especially the Seljuk Turks",
+          "answer_start": 114
+        },
+        {
+          "text": "the Seljuk Turks",
+          "answer_start": 157
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3dbc6604f3c001a3ff3e9",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3dbc6604f3c001a3ff3ea",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3dbc6604f3c001a3ff3eb",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3dbc6604f3c001a3ff3ec",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de0ffd4396321400ee258d",
+      "answers": [
+        {
+          "text": "1050s",
+          "answer_start": 85
+        },
+        {
+          "text": "in the 1050s",
+          "answer_start": 78
+        },
+        {
+          "text": "in the 1050s",
+          "answer_start": 78
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de0ffd4396321400ee258e",
+      "answers": [
+        {
+          "text": "1060s",
+          "answer_start": 292
+        },
+        {
+          "text": "In the 1060s",
+          "answer_start": 285
+        },
+        {
+          "text": "In the 1060s",
+          "answer_start": 285
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de0ffd4396321400ee258f",
+      "answers": [
+        {
+          "text": "Alexius Komnenos",
+          "answer_start": 522
+        },
+        {
+          "text": "Alexius Komnenos",
+          "answer_start": 522
+        },
+        {
+          "text": "Alexius Komnenos",
+          "answer_start": 522
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3de8b604f3c001a3ff467",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3de8b604f3c001a3ff468",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3de8b604f3c001a3ff469",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3de8b604f3c001a3ff46a",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de10b44396321400ee2593",
+      "answers": [
+        {
+          "text": "Afranji",
+          "answer_start": 539
+        },
+        {
+          "text": "Afranji",
+          "answer_start": 539
+        },
+        {
+          "text": "Afranji",
+          "answer_start": 539
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de10b44396321400ee2594",
+      "answers": [
+        {
+          "text": "Oursel",
+          "answer_start": 256
+        },
+        {
+          "text": "Oursel",
+          "answer_start": 256
+        },
+        {
+          "text": "Oursel",
+          "answer_start": 256
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de10b44396321400ee2595",
+      "answers": [
+        {
+          "text": "Turkish forces",
+          "answer_start": 20
+        },
+        {
+          "text": "Turkish forces",
+          "answer_start": 20
+        },
+        {
+          "text": "Turkish forces",
+          "answer_start": 20
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3e96b604f3c001a3ff689",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3e96b604f3c001a3ff68a",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3e96b604f3c001a3ff68b",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3e96b604f3c001a3ff68c",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de11154396321400ee25aa",
+      "answers": [
+        {
+          "text": "Norman mercenary",
+          "answer_start": 45
+        },
+        {
+          "text": "an Italo-Norman named Raoul",
+          "answer_start": 217
+        },
+        {
+          "text": "descended from an Italo-Norman named Raoul",
+          "answer_start": 202
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ea79604f3c001a3ff6e9",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ea79604f3c001a3ff6ea",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ea79604f3c001a3ff6eb",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de148dcffd8e1900b4b5bc",
+      "answers": [
+        {
+          "text": "Robert Guiscard",
+          "answer_start": 0
+        },
+        {
+          "text": "Robert Guiscard",
+          "answer_start": 0
+        },
+        {
+          "text": "Robert Guiscard",
+          "answer_start": 0
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de148dcffd8e1900b4b5bd",
+      "answers": [
+        {
+          "text": "1082",
+          "answer_start": 1315
+        },
+        {
+          "text": "February 1082",
+          "answer_start": 1306
+        },
+        {
+          "text": "February 1082",
+          "answer_start": 1306
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de148dcffd8e1900b4b5be",
+      "answers": [
+        {
+          "text": "30,000",
+          "answer_start": 492
+        },
+        {
+          "text": "30,000",
+          "answer_start": 492
+        },
+        {
+          "text": "30,000",
+          "answer_start": 492
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ed26604f3c001a3ff799",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ed26604f3c001a3ff79a",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ed26604f3c001a3ff79b",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ed26604f3c001a3ff79c",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de15104396321400ee25b7",
+      "answers": [
+        {
+          "text": "Deabolis",
+          "answer_start": 302
+        },
+        {
+          "text": "Deabolis",
+          "answer_start": 718
+        },
+        {
+          "text": "Deabolis",
+          "answer_start": 718
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de15104396321400ee25b8",
+      "answers": [
+        {
+          "text": "Bohemond",
+          "answer_start": 79
+        },
+        {
+          "text": "Bohemond",
+          "answer_start": 79
+        },
+        {
+          "text": "Bohemond",
+          "answer_start": 79
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de15104396321400ee25b9",
+      "answers": [
+        {
+          "text": "Deabolis",
+          "answer_start": 302
+        },
+        {
+          "text": "the river Deabolis",
+          "answer_start": 292
+        },
+        {
+          "text": "Deabolis",
+          "answer_start": 302
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ee2d604f3c001a3ff7e1",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ee2d604f3c001a3ff7e2",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ee2d604f3c001a3ff7e3",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de1563cffd8e1900b4b5c2",
+      "answers": [
+        {
+          "text": "1185",
+          "answer_start": 86
+        },
+        {
+          "text": "in 1185",
+          "answer_start": 83
+        },
+        {
+          "text": "1185",
+          "answer_start": 86
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de1563cffd8e1900b4b5c3",
+      "answers": [
+        {
+          "text": "Dyrrachium",
+          "answer_start": 125
+        },
+        {
+          "text": "Dyrrachium",
+          "answer_start": 205
+        },
+        {
+          "text": "Dyrrachium",
+          "answer_start": 205
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de1563cffd8e1900b4b5c4",
+      "answers": [
+        {
+          "text": "the Adriatic",
+          "answer_start": 257
+        },
+        {
+          "text": "the Adriatic",
+          "answer_start": 257
+        },
+        {
+          "text": "Adriatic",
+          "answer_start": 261
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f028604f3c001a3ff823",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f028604f3c001a3ff824",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f028604f3c001a3ff825",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de15dbcffd8e1900b4b5c8",
+      "answers": [
+        {
+          "text": "King Ethelred II",
+          "answer_start": 360
+        },
+        {
+          "text": "Ethelred II",
+          "answer_start": 365
+        },
+        {
+          "text": "King Ethelred II",
+          "answer_start": 360
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de15dbcffd8e1900b4b5c9",
+      "answers": [
+        {
+          "text": "Duke Richard II",
+          "answer_start": 327
+        },
+        {
+          "text": "Duke Richard II",
+          "answer_start": 327
+        },
+        {
+          "text": "Duke Richard II",
+          "answer_start": 327
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de15dbcffd8e1900b4b5ca",
+      "answers": [
+        {
+          "text": "Normandy",
+          "answer_start": 423
+        },
+        {
+          "text": "Normandy",
+          "answer_start": 423
+        },
+        {
+          "text": "Normandy",
+          "answer_start": 423
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de15dbcffd8e1900b4b5cb",
+      "answers": [
+        {
+          "text": "Sweyn Forkbeard",
+          "answer_start": 480
+        },
+        {
+          "text": "Sweyn Forkbeard",
+          "answer_start": 480
+        },
+        {
+          "text": "Sweyn Forkbeard",
+          "answer_start": 480
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f187604f3c001a3ff86f",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f187604f3c001a3ff870",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f187604f3c001a3ff871",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de1645cffd8e1900b4b5d0",
+      "answers": [
+        {
+          "text": "Harthacnut",
+          "answer_start": 115
+        },
+        {
+          "text": "Harthacnut",
+          "answer_start": 115
+        },
+        {
+          "text": "Harthacnut",
+          "answer_start": 115
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de1645cffd8e1900b4b5d1",
+      "answers": [
+        {
+          "text": "1041",
+          "answer_start": 71
+        },
+        {
+          "text": "in 1041",
+          "answer_start": 68
+        },
+        {
+          "text": "1041",
+          "answer_start": 71
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de1645cffd8e1900b4b5d2",
+      "answers": [
+        {
+          "text": "Robert of Jumi\u00e8ges",
+          "answer_start": 382
+        },
+        {
+          "text": "Robert of Jumi\u00e8ges",
+          "answer_start": 382
+        },
+        {
+          "text": "Robert of Jumi\u00e8ges",
+          "answer_start": 382
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f350604f3c001a3ff8ef",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f350604f3c001a3ff8f0",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f350604f3c001a3ff8f1",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de16ca4396321400ee25c5",
+      "answers": [
+        {
+          "text": "Battle of Hastings",
+          "answer_start": 85
+        },
+        {
+          "text": "the Battle of Hastings",
+          "answer_start": 81
+        },
+        {
+          "text": "at the Battle of Hastings",
+          "answer_start": 78
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de16ca4396321400ee25c6",
+      "answers": [
+        {
+          "text": "William II",
+          "answer_start": 14
+        },
+        {
+          "text": "Duke William II",
+          "answer_start": 9
+        },
+        {
+          "text": "Duke William II",
+          "answer_start": 9
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de16ca4396321400ee25c7",
+      "answers": [
+        {
+          "text": "1066",
+          "answer_start": 3
+        },
+        {
+          "text": "In 1066",
+          "answer_start": 0
+        },
+        {
+          "text": "1066",
+          "answer_start": 3
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de16ca4396321400ee25c8",
+      "answers": [
+        {
+          "text": "Anglo-Saxons",
+          "answer_start": 161
+        },
+        {
+          "text": "the Anglo-Saxons",
+          "answer_start": 157
+        },
+        {
+          "text": "Anglo-Saxons",
+          "answer_start": 161
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f4b1604f3c001a3ff951",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f4b1604f3c001a3ff952",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f4b1604f3c001a3ff953",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f4b1604f3c001a3ff954",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de1728cffd8e1900b4b5d7",
+      "answers": [
+        {
+          "text": "Modern English",
+          "answer_start": 629
+        },
+        {
+          "text": "Modern English",
+          "answer_start": 629
+        },
+        {
+          "text": "Modern English",
+          "answer_start": 629
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f5b0604f3c001a3ff9ab",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f5b0604f3c001a3ff9ac",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f5b0604f3c001a3ff9ad",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de179dcffd8e1900b4b5da",
+      "answers": [
+        {
+          "text": "1169",
+          "answer_start": 101
+        },
+        {
+          "text": "1169",
+          "answer_start": 101
+        },
+        {
+          "text": "1169",
+          "answer_start": 101
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de179dcffd8e1900b4b5db",
+      "answers": [
+        {
+          "text": "Ireland",
+          "answer_start": 379
+        },
+        {
+          "text": "Ireland",
+          "answer_start": 379
+        },
+        {
+          "text": "Ireland",
+          "answer_start": 379
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de179dcffd8e1900b4b5dc",
+      "answers": [
+        {
+          "text": "Irish",
+          "answer_start": 37
+        },
+        {
+          "text": "Irish",
+          "answer_start": 220
+        },
+        {
+          "text": "Irish",
+          "answer_start": 220
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f6f5604f3c001a3ffa09",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f6f5604f3c001a3ffa0a",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f6f5604f3c001a3ffa0b",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de17f9cffd8e1900b4b5e0",
+      "answers": [
+        {
+          "text": "Edgar",
+          "answer_start": 75
+        },
+        {
+          "text": "Edgar",
+          "answer_start": 157
+        },
+        {
+          "text": "Edgar Atheling",
+          "answer_start": 75
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de17f9cffd8e1900b4b5e1",
+      "answers": [
+        {
+          "text": "King Malcolm III of Scotland",
+          "answer_start": 120
+        },
+        {
+          "text": "King Malcolm III",
+          "answer_start": 120
+        },
+        {
+          "text": "King Malcolm III",
+          "answer_start": 120
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de17f9cffd8e1900b4b5e2",
+      "answers": [
+        {
+          "text": "1072",
+          "answer_start": 300
+        },
+        {
+          "text": "1072",
+          "answer_start": 300
+        },
+        {
+          "text": "1072",
+          "answer_start": 300
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de17f9cffd8e1900b4b5e3",
+      "answers": [
+        {
+          "text": "Duncan",
+          "answer_start": 440
+        },
+        {
+          "text": "Duncan",
+          "answer_start": 440
+        },
+        {
+          "text": "Duncan",
+          "answer_start": 440
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f7ac604f3c001a3ffa3b",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f7ac604f3c001a3ffa3c",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f7ac604f3c001a3ffa3d",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de3cd0cffd8e1900b4b6be",
+      "answers": [
+        {
+          "text": "Sybilla of Normandy",
+          "answer_start": 271
+        },
+        {
+          "text": "Sybilla of Normandy",
+          "answer_start": 271
+        },
+        {
+          "text": "Sybilla",
+          "answer_start": 271
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de3cd0cffd8e1900b4b6bf",
+      "answers": [
+        {
+          "text": "Norman",
+          "answer_start": 336
+        },
+        {
+          "text": "Norman",
+          "answer_start": 336
+        },
+        {
+          "text": "Norman",
+          "answer_start": 336
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f8d2604f3c001a3ffa8d",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3f8d2604f3c001a3ffa8e",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de3d594396321400ee26ca",
+      "answers": [
+        {
+          "text": "Hereford",
+          "answer_start": 158
+        },
+        {
+          "text": "Hereford",
+          "answer_start": 158
+        },
+        {
+          "text": "Hereford",
+          "answer_start": 158
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de3d594396321400ee26cb",
+      "answers": [
+        {
+          "text": "the Welsh",
+          "answer_start": 227
+        },
+        {
+          "text": "the Welsh",
+          "answer_start": 227
+        },
+        {
+          "text": "the Welsh",
+          "answer_start": 227
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de3d594396321400ee26cc",
+      "answers": [
+        {
+          "text": "Edward the Confessor",
+          "answer_start": 90
+        },
+        {
+          "text": "Edward the Confessor",
+          "answer_start": 90
+        },
+        {
+          "text": "Edward the Confessor",
+          "answer_start": 90
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3fb01604f3c001a3ffb35",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3fb01604f3c001a3ffb36",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de3dbacffd8e1900b4b6d2",
+      "answers": [
+        {
+          "text": "Wales",
+          "answer_start": 299
+        },
+        {
+          "text": "Wales",
+          "answer_start": 299
+        },
+        {
+          "text": "Wales",
+          "answer_start": 299
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3fb6e604f3c001a3ffb5f",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3fb6e604f3c001a3ffb60",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de3e414396321400ee26d8",
+      "answers": [
+        {
+          "text": "1018",
+          "answer_start": 221
+        },
+        {
+          "text": "1064",
+          "answer_start": 345
+        },
+        {
+          "text": "1018",
+          "answer_start": 221
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de3e414396321400ee26d9",
+      "answers": [
+        {
+          "text": "William of Montreuil",
+          "answer_start": 380
+        },
+        {
+          "text": "William of Montreuil",
+          "answer_start": 380
+        },
+        {
+          "text": "William of Montreuil",
+          "answer_start": 380
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3fc41604f3c001a3ffb8f",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3fc41604f3c001a3ffb90",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3fc41604f3c001a3ffb91",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3fc41604f3c001a3ffb92",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de3ebc4396321400ee26e6",
+      "answers": [
+        {
+          "text": "1097",
+          "answer_start": 267
+        },
+        {
+          "text": "1097",
+          "answer_start": 267
+        },
+        {
+          "text": "1097",
+          "answer_start": 267
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de3ebc4396321400ee26e7",
+      "answers": [
+        {
+          "text": "Tancred",
+          "answer_start": 100
+        },
+        {
+          "text": "Tancred",
+          "answer_start": 100
+        },
+        {
+          "text": "Tancred",
+          "answer_start": 100
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de3ebc4396321400ee26e8",
+      "answers": [
+        {
+          "text": "Jerusalem",
+          "answer_start": 390
+        },
+        {
+          "text": "Jerusalem",
+          "answer_start": 390
+        },
+        {
+          "text": "Jerusalem",
+          "answer_start": 390
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad4017a604f3c001a3ffd1f",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad4017a604f3c001a3ffd20",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de3efccffd8e1900b4b6fe",
+      "answers": [
+        {
+          "text": "380 years",
+          "answer_start": 189
+        },
+        {
+          "text": "380 years",
+          "answer_start": 189
+        },
+        {
+          "text": "380 years",
+          "answer_start": 189
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad401f2604f3c001a3ffd41",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad401f2604f3c001a3ffd42",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de3f784396321400ee26fa",
+      "answers": [
+        {
+          "text": "a storm",
+          "answer_start": 99
+        },
+        {
+          "text": "a storm",
+          "answer_start": 99
+        },
+        {
+          "text": "a storm",
+          "answer_start": 99
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de3f784396321400ee26fb",
+      "answers": [
+        {
+          "text": "Berengaria",
+          "answer_start": 218
+        },
+        {
+          "text": "Berengaria",
+          "answer_start": 218
+        },
+        {
+          "text": "Berengaria",
+          "answer_start": 218
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de3f784396321400ee26fc",
+      "answers": [
+        {
+          "text": "1191",
+          "answer_start": 9
+        },
+        {
+          "text": "1191",
+          "answer_start": 9
+        },
+        {
+          "text": "1191",
+          "answer_start": 9
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de3f784396321400ee26fd",
+      "answers": [
+        {
+          "text": "Isaac Komnenos",
+          "answer_start": 421
+        },
+        {
+          "text": "Isaac",
+          "answer_start": 522
+        },
+        {
+          "text": "Isaac Komnenos",
+          "answer_start": 421
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad40280604f3c001a3ffd57",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad40280604f3c001a3ffd58",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad40280604f3c001a3ffd59",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de40da4396321400ee2708",
+      "answers": [
+        {
+          "text": "Conrad of Montferrat",
+          "answer_start": 188
+        },
+        {
+          "text": "Conrad of Montferrat",
+          "answer_start": 188
+        },
+        {
+          "text": "Conrad of Montferrat",
+          "answer_start": 188
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de40da4396321400ee2709",
+      "answers": [
+        {
+          "text": "silver",
+          "answer_start": 565
+        },
+        {
+          "text": "silver",
+          "answer_start": 565
+        },
+        {
+          "text": "silver",
+          "answer_start": 565
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de40da4396321400ee270a",
+      "answers": [
+        {
+          "text": "Guy de Lusignan",
+          "answer_start": 85
+        },
+        {
+          "text": "Guy de Lusignan",
+          "answer_start": 508
+        },
+        {
+          "text": "Guy de Lusignan",
+          "answer_start": 508
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad404a6604f3c001a3ffde1",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad404a6604f3c001a3ffde2",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad404a6604f3c001a3ffde3",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de49564396321400ee277a",
+      "answers": [
+        {
+          "text": "Africa",
+          "answer_start": 219
+        },
+        {
+          "text": "Africa",
+          "answer_start": 219
+        },
+        {
+          "text": "Africa",
+          "answer_start": 219
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad40419604f3c001a3ffdb7",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad40419604f3c001a3ffdb8",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de49a8cffd8e1900b4b7a7",
+      "answers": [
+        {
+          "text": "Bethencourt",
+          "answer_start": 0
+        },
+        {
+          "text": "Bethencourt",
+          "answer_start": 0
+        },
+        {
+          "text": "Bethencourt",
+          "answer_start": 0
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de49a8cffd8e1900b4b7a8",
+      "answers": [
+        {
+          "text": "Enrique P\u00e9rez de Guzm\u00e1n",
+          "answer_start": 172
+        },
+        {
+          "text": "Enrique P\u00e9rez de Guzm\u00e1n",
+          "answer_start": 172
+        },
+        {
+          "text": "Enrique P\u00e9rez de Guzm\u00e1n",
+          "answer_start": 172
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de49a8cffd8e1900b4b7a9",
+      "answers": [
+        {
+          "text": "Maciot de Bethencourt",
+          "answer_start": 116
+        },
+        {
+          "text": "Maciot de Bethencourt",
+          "answer_start": 116
+        },
+        {
+          "text": "Maciot de Bethencourt",
+          "answer_start": 116
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad403c1604f3c001a3ffd97",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad403c1604f3c001a3ffd98",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de4a474396321400ee2786",
+      "answers": [
+        {
+          "text": "Channel Islands",
+          "answer_start": 155
+        },
+        {
+          "text": "the Channel Islands",
+          "answer_start": 151
+        },
+        {
+          "text": "the Channel Islands",
+          "answer_start": 151
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de4a474396321400ee2787",
+      "answers": [
+        {
+          "text": "two",
+          "answer_start": 212
+        },
+        {
+          "text": "two",
+          "answer_start": 212
+        },
+        {
+          "text": "two",
+          "answer_start": 212
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad40358604f3c001a3ffd7d",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad40358604f3c001a3ffd7e",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad40358604f3c001a3ffd7f",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de4a89cffd8e1900b4b7bd",
+      "answers": [
+        {
+          "text": "Romanesque",
+          "answer_start": 135
+        },
+        {
+          "text": "Romanesque",
+          "answer_start": 135
+        },
+        {
+          "text": "Romanesque",
+          "answer_start": 135
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de4a89cffd8e1900b4b7be",
+      "answers": [
+        {
+          "text": "rounded",
+          "answer_start": 332
+        },
+        {
+          "text": "rounded",
+          "answer_start": 332
+        },
+        {
+          "text": "rounded",
+          "answer_start": 332
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad402ce604f3c001a3ffd67",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de4b074396321400ee2793",
+      "answers": [
+        {
+          "text": "Early Gothic",
+          "answer_start": 108
+        },
+        {
+          "text": "Early Gothic",
+          "answer_start": 108
+        },
+        {
+          "text": "Early Gothic",
+          "answer_start": 108
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de4b074396321400ee2794",
+      "answers": [
+        {
+          "text": "Anglo-Saxon",
+          "answer_start": 79
+        },
+        {
+          "text": "Anglo-Saxon",
+          "answer_start": 79
+        },
+        {
+          "text": "Anglo-Saxon",
+          "answer_start": 79
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de4b074396321400ee2795",
+      "answers": [
+        {
+          "text": "Sicily",
+          "answer_start": 328
+        },
+        {
+          "text": "Sicily",
+          "answer_start": 328
+        },
+        {
+          "text": "Kingdom of Sicily",
+          "answer_start": 317
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad400b0604f3c001a3ffcdf",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad400b0604f3c001a3ffce0",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad400b0604f3c001a3ffce1",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de4b5c4396321400ee2799",
+      "answers": [
+        {
+          "text": "early 11th century",
+          "answer_start": 129
+        },
+        {
+          "text": "11th century",
+          "answer_start": 135
+        },
+        {
+          "text": "in the early 11th century",
+          "answer_start": 122
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de4b5c4396321400ee279a",
+      "answers": [
+        {
+          "text": "dukes",
+          "answer_start": 152
+        },
+        {
+          "text": "the dukes",
+          "answer_start": 422
+        },
+        {
+          "text": "dukes",
+          "answer_start": 426
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ffd7604f3c001a3ffca7",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ffd7604f3c001a3ffca8",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ffd7604f3c001a3ffca9",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ffd7604f3c001a3ffcaa",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de4bb84396321400ee27a2",
+      "answers": [
+        {
+          "text": "16th century",
+          "answer_start": 35
+        },
+        {
+          "text": "the 16th century",
+          "answer_start": 31
+        },
+        {
+          "text": "in the 16th century",
+          "answer_start": 28
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ff1b604f3c001a3ffc73",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3ff1b604f3c001a3ffc74",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de4c324396321400ee27ab",
+      "answers": [
+        {
+          "text": "embroidery",
+          "answer_start": 104
+        },
+        {
+          "text": "embroidery",
+          "answer_start": 104
+        },
+        {
+          "text": "embroidery",
+          "answer_start": 104
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de4c324396321400ee27ac",
+      "answers": [
+        {
+          "text": "Bayeux Tapestry",
+          "answer_start": 49
+        },
+        {
+          "text": "the Bayeux Tapestry",
+          "answer_start": 45
+        },
+        {
+          "text": "the Bayeux Tapestry",
+          "answer_start": 45
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de4c324396321400ee27ad",
+      "answers": [
+        {
+          "text": "Odo",
+          "answer_start": 139
+        },
+        {
+          "text": "Odo",
+          "answer_start": 139
+        },
+        {
+          "text": "Odo",
+          "answer_start": 139
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3fe91604f3c001a3ffc47",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3fe91604f3c001a3ffc48",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de51244396321400ee27ef",
+      "answers": [
+        {
+          "text": "mosaics",
+          "answer_start": 466
+        },
+        {
+          "text": "mosaics",
+          "answer_start": 466
+        },
+        {
+          "text": "mosaics",
+          "answer_start": 466
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3fe0d604f3c001a3ffc1b",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3fe0d604f3c001a3ffc1c",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3fe0d604f3c001a3ffc1d",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de51c64396321400ee27f7",
+      "answers": [
+        {
+          "text": "11th",
+          "answer_start": 97
+        },
+        {
+          "text": "the 11th",
+          "answer_start": 93
+        },
+        {
+          "text": "11th",
+          "answer_start": 97
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de51c64396321400ee27f8",
+      "answers": [
+        {
+          "text": "William of Volpiano and John of Ravenna",
+          "answer_start": 234
+        },
+        {
+          "text": "William of Volpiano and John of Ravenna",
+          "answer_start": 234
+        },
+        {
+          "text": "William of Volpiano and John of Ravenna",
+          "answer_start": 234
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3fd68604f3c001a3ffbe7",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3fd68604f3c001a3ffbe8",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de52614396321400ee27fb",
+      "answers": [
+        {
+          "text": "southern Italy",
+          "answer_start": 179
+        },
+        {
+          "text": "southern Italy",
+          "answer_start": 179
+        },
+        {
+          "text": "southern Italy",
+          "answer_start": 179
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de52614396321400ee27fc",
+      "answers": [
+        {
+          "text": "Latin monastery at Sant'Eufemia.",
+          "answer_start": 259
+        },
+        {
+          "text": "a Latin monastery at Sant'Eufemia",
+          "answer_start": 257
+        },
+        {
+          "text": "Sant'Eufemia",
+          "answer_start": 278
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de52614396321400ee27fd",
+      "answers": [
+        {
+          "text": "Robert Guiscard",
+          "answer_start": 225
+        },
+        {
+          "text": "Robert Guiscard",
+          "answer_start": 225
+        },
+        {
+          "text": "Robert Guiscard",
+          "answer_start": 225
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "56de52614396321400ee27fe",
+      "answers": [
+        {
+          "text": "singing",
+          "answer_start": 32
+        },
+        {
+          "text": "singing",
+          "answer_start": 32
+        },
+        {
+          "text": "singing",
+          "answer_start": 330
+        }
+      ],
+      "no_answer_threshold": 0.5
+    },
+    {
+      "id": "5ad3fccf604f3c001a3ffbb5",
+      "answers": [],
+      "no_answer_threshold": 0.5
+    }
+  ]
+}

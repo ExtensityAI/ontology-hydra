@@ -1,0 +1,680 @@
+  subject:
+    name: Normans
+    type: ETHNIC_GROUP
+  predicate:
+    name: emerges
+  object:
+    name: 10th century
+    type: CENTURY
+  confidence: 0.9
+
+  subject:
+    name: Normans
+    type: ETHNIC_GROUP
+  predicate:
+    name: conquers
+  object:
+    name: England
+    type: LOCATION
+  confidence: 0.8
+
+  subject:
+    name: Normans
+    type: ETHNIC_GROUP
+  predicate:
+    name: founded
+  object:
+    name: Kingdom of Sicily
+    type: KINGDOM
+  confidence: 0.85
+
+  subject:
+    name: Bohemond I
+    type: PERSON
+  predicate:
+    name: founded
+  object:
+    name: Principality of Antioch
+    type: PRINCIPALITY
+  confidence: 0.8
+
+  subject:
+    name: Rollo
+    type: PERSON
+  predicate:
+    name: swears_fealty_to
+  object:
+    name: King Charles III
+    type: RULER
+  confidence: 0.9
+
+  subject:
+    name: Normans
+    type: ETHNIC_GROUP
+  predicate:
+    name: adopts
+  object:
+    name: Gallo-Romance language
+    type: LANGUAGE
+  confidence: 0.75
+
+  subject:
+    name: Normans
+    type: ETHNIC_GROUP
+  predicate:
+    name: merges_with
+  object:
+    name: Carolingian-based cultures
+    type: CULTURE
+  confidence: 0.7
+
+  subject:
+    name: Duchy of Normandy
+    type: DUCHY
+  predicate:
+    name: establishes
+  object:
+    name: Saint-Clair-sur-Epte Treaty
+    type: TREATY
+  confidence: 0.9
+
+  subject:
+    name: Saint-Clair-sur-Epte Treaty
+    type: TREATY
+  predicate:
+    name: signs
+  object:
+    name: King Charles III
+    type: PERSON
+  confidence: 0.8
+
+  subject:
+    name: Saint-Clair-sur-Epte Treaty
+    type: TREATY
+  predicate:
+    name: signs
+  object:
+    name: Rollo
+    type: RULER
+  confidence: 0.8
+
+  subject:
+    name: Rollo
+    type: RULER
+  predicate:
+    name: rules_over
+  object:
+    name: Duchy of Normandy
+    type: DUCHY
+  confidence: 0.85
+
+  subject:
+    name: Norman language
+    type: LANGUAGE
+  predicate:
+    name: develops
+  object:
+    name: regional language
+    type: LANGUAGE
+  confidence: 0.8
+
+  subject:
+    name: Norman rulers
+    type: NOBLE
+  predicate:
+    name: adopts
+  object:
+    name: feudal doctrines
+    type: FEUDALISM
+  confidence: 0.85
+
+  subject:
+    name: Normans
+    type: ETHNIC_GROUP
+  predicate:
+    name: serves_under
+  object:
+    name: Italo-Norman prince Bohemund I
+    type: RULER
+  confidence: 0.9
+
+  subject:
+    name: Normans
+    type: ETHNIC_GROUP
+  predicate:
+    name: serves_under
+  object:
+    name: Anglo-Norman king Richard the Lion-Heart
+    type: RULER
+  confidence: 0.9
+
+  subject:
+    name: Normans
+    type: ETHNIC_GROUP
+  predicate:
+    name: enters
+  object:
+    name: Byzantine Empire
+    type: KINGDOM
+  confidence: 0.8
+
+  subject:
+    name: Normans
+    type: ETHNIC_GROUP
+  predicate:
+    name: enters
+  object:
+    name: Armenia
+    type: LOC
+  confidence: 0.8
+
+  subject:
+    name: Normans
+    type: ETHNIC_GROUP
+  predicate:
+    name: fights_against
+  object:
+    name: Seljuk Turks
+    type: ETHNIC_GROUP
+  confidence: 0.85
+
+  subject:
+    name: Hervé
+    type: Person
+  predicate:
+    name: serves_under
+  object:
+    name: Byzantine general
+    type: Person
+  confidence: 0.9
+
+  subject:
+    name: Isaac Komnenos
+    type: Person
+  predicate:
+    name: commands
+  object:
+    name: Norman mercenaries
+    type: Mercenary
+  confidence: 0.8
+
+  subject:
+    name: Alexius Komnenos
+    type: Person
+  predicate:
+    name: defeats
+  object:
+    name: Roussel de Bailleul
+    type: Person
+  confidence: 0.85
+
+  subject:
+    name: Oursel
+    type: Person
+  predicate:
+    name: commands
+  object:
+    name: Franks
+    type: Mercenary
+  confidence: 0.8
+
+  subject:
+    name: Amalfi
+    type: Location
+  predicate:
+    name: trades_with
+  object:
+    name: Antioch
+    type: Location
+  confidence: 0.7
+
+  subject:
+    name: Raoul
+    type: Person
+  predicate:
+    name: descends_from
+  object:
+    name: Raoulii
+    type: Dynasty
+  confidence: 0.75
+
+  subject:
+    name: Robert Guiscard
+    type: PERSON
+  predicate:
+    name: vassal_of
+  object:
+    name: Gregory VII
+    type: PERSON
+  confidence: 0.9
+
+  subject:
+    name: Robert Guiscard
+    type: PERSON
+  predicate:
+    name: conquers
+  object:
+    name: Balkan peninsula
+    type: LOC
+  confidence: 0.8
+
+  subject:
+    name: Robert Guiscard
+    type: PERSON
+  predicate:
+    name: allied_with
+  object:
+    name: Croatia
+    type: KINGDOM
+  confidence: 0.9
+
+  subject:
+    name: Robert Guiscard
+    type: PERSON
+  predicate:
+    name: captured
+  object:
+    name: Valona
+    type: LOC
+  confidence: 0.8
+
+  subject:
+    name: Robert Guiscard
+    type: PERSON
+  predicate:
+    name: captured
+  object:
+    name: Dyrrachium
+    type: LOC
+  confidence: 0.8
+
+  subject:
+    name: Alexius I Comnenus
+    type: PERSON
+  predicate:
+    name: commands
+  object:
+    name: Albanian official Comiscortes
+    type: PERSON
+  confidence: 0.7
+
+  subject:
+    name: Bohemond
+    type: PERSON
+  predicate:
+    name: commands
+  object:
+    name: Normans
+    type: ORG
+  confidence: 0.9
+
+  subject:
+    name: Normans
+    type: ORG
+  predicate:
+    name: invades
+  object:
+    name: Dyrrachium
+    type: LOC
+  confidence: 0.8
+
+  subject:
+    name: Emma
+    type: PERSON
+  predicate:
+    name: marries
+  object:
+    name: Ethelred II of England
+    type: RULER
+  confidence: 0.95
+
+  subject:
+    name: Ethelred II of England
+    type: RULER
+  predicate:
+    name: flees_to
+  object:
+    name: Normandy
+    type: DUCHY
+  confidence: 0.85
+
+  subject:
+    name: Edward the Confessor
+    type: PERSON
+  predicate:
+    name: related_to
+  object:
+    name: Harthacnut
+    type: PERSON
+  confidence: 0.9
+
+  subject:
+    name: Edward the Confessor
+    type: PERSON
+  predicate:
+    name: invites
+  object:
+    name: Eustace II
+    type: PERSON
+  confidence: 0.8
+
+  subject:
+    name: Duke William II
+    type: PERSON
+  predicate:
+    name: conquers
+  object:
+    name: England
+    type: KINGDOM
+  confidence: 0.95
+
+  subject:
+    name: Duke William II
+    type: PERSON
+  predicate:
+    name: defeats
+  object:
+    name: King Harold II
+    type: PERSON
+  confidence: 0.9
+
+  subject:
+    name: Normans
+    type: ETHNIC_GROUP
+  predicate:
+    name: replaces
+  object:
+    name: Anglo-Saxons
+    type: ETHNIC_GROUP
+  confidence: 0.85
+
+  subject:
+    name: Normans
+    type: ETHNIC_GROUP
+  predicate:
+    name: merges_with
+  object:
+    name: natives
+    type: ETHNIC_GROUP
+  confidence: 0.7
+
+  subject:
+    name: The Normans
+    type: EthnicGroup
+  predicate:
+    name: invades
+  object:
+    name: Ireland
+    type: Location
+  confidence: 0.9
+
+  subject:
+    name: Normans
+    type: EthnicGroup
+  predicate:
+    name: builds
+  object:
+    name: Trim Castle
+    type: Castle
+  confidence: 0.8
+
+  subject:
+    name: Normans
+    type: EthnicGroup
+  predicate:
+    name: builds
+  object:
+    name: Dublin Castle
+    type: Castle
+  confidence: 0.8
+
+  subject:
+    name: Malcolm III
+    type: Ruler
+  predicate:
+    name: marries
+  object:
+    name: Margaret
+    type: Person
+  confidence: 0.85
+
+  subject:
+    name: Malcolm III
+    type: Ruler
+  predicate:
+    name: pays_homage_to
+  object:
+    name: William
+    type: Ruler
+  confidence: 0.9
+
+  subject:
+    name: David I of Scotland
+    type: PERSON
+  predicate:
+    name: introduces
+  object:
+    name: Norman culture
+    type: TRADITION
+  confidence: 0.9
+
+  subject:
+    name: David I of Scotland
+    type: PERSON
+  predicate:
+    name: spent_time_at
+  object:
+    name: court of Henry I of England
+    type: ORGANIZATION
+  confidence: 0.8
+
+  subject:
+    name: Henry I of England
+    type: PERSON
+  predicate:
+    name: married
+  object:
+    name: Maud of Scotland
+    type: PERSON
+  confidence: 1.0
+
+  subject:
+    name: William the Lion
+    type: PERSON
+  predicate:
+    name: applied
+  object:
+    name: feudal system
+    type: FEUDALISM
+  confidence: 0.85
+
+  subject:
+    name: William of Montreuil
+    type: PERSON
+  predicate:
+    name: leads
+  object:
+    name: papal army
+    type: ARMY
+  confidence: 0.9
+
+  subject:
+    name: Bohemond of Taranto
+    type: PERSON
+  predicate:
+    name: leads
+  object:
+    name: Crusade
+    type: CRUSADE
+  confidence: 0.9
+
+  subject:
+    name: Richard the Lion-hearted
+    type: PERSON
+  predicate:
+    name: conquers
+  object:
+    name: Limassol
+    type: LOC
+  confidence: 0.85
+
+  subject:
+    name: Italo-Normans
+    type: ETHNIC_GROUP
+  predicate:
+    name: allied_with
+  object:
+    name: Bohemond of Taranto
+    type: PERSON
+  confidence: 0.8
+
+  subject:
+    name: Bohemond
+    type: PERSON
+  predicate:
+    name: founds
+  object:
+    name: Principality around Antioch
+    type: PRINCIPALITY
+  confidence: 0.75
+
+  subject:
+    name: Tancred
+    type: PERSON
+  predicate:
+    name: works_for
+  object:
+    name: Crusader Kingdom
+    type: KINGDOM
+  confidence: 0.7
+
+  subject:
+    name: Richard
+    type: PERSON
+  predicate:
+    name: conquers
+  object:
+    name: Cyprus
+    type: LOC
+  confidence: 0.9
+
+  subject:
+    name: Jean de Bethencourt
+    type: NOBLE
+  predicate:
+    name: conquers
+  object:
+    name: Canary Islands
+    type: LOC
+  confidence: 0.9
+
+  subject:
+    name: Jean de Bethencourt
+    type: PERSON
+  predicate:
+    name: vassal_of
+  object:
+    name: Henry III of Castile
+    type: PERSON
+  confidence: 0.8
+
+  subject:
+    name: Norman architecture
+    type: ARCHITECTURE
+  predicate:
+    name: influences
+  object:
+    name: Kingdom of Sicily
+    type: KINGDOM
+  confidence: 0.8
+
+  subject:
+    name: Norman dukes
+    type: NOBLE
+  predicate:
+    name: patronizes
+  object:
+    name: Church reform
+    type: CHURCH
+  confidence: 0.75
+
+  subject:
+    name: Norman dukes
+    type: NOBLE
+  predicate:
+    name: patronizes
+  object:
+    name: Cluniac reform of monasteries
+    type: MONASTERY
+  confidence: 0.8
+
+  subject:
+    name: Mont-Saint-Michel
+    type: MONASTERY
+  predicate:
+    name: belongs_to
+  object:
+    name: Norman art and scholarship renaissance
+    type: TRADITION
+  confidence: 0.85
+
+  subject:
+    name: French Wars of Religion
+    type: EVENT
+  predicate:
+    name: destroys
+  object:
+    name: Norman edifices
+    type: ARCHITECTURE
+  confidence: 0.7
+
+  subject:
+    name: French Revolution
+    type: EVENT
+  predicate:
+    name: destroys
+  object:
+    name: religious objects
+    type: ARTWORK
+  confidence: 0.7
+
+  subject:
+    name: Odo
+    type: PERSON
+  predicate:
+    name: commissions
+  object:
+    name: Bayeux Tapestry
+    type: TAPESTRY
+  confidence: 0.9
+
+  subject:
+    name: Fécamp Abbey
+    type: ORG
+  predicate:
+    name: develops
+  object:
+    name: system of denoting notes by letters
+    type: MUSIC
+  confidence: 0.8
+
+  subject:
+    name: Fécamp Abbey
+    type: ORG
+  predicate:
+    name: develops
+  object:
+    name: staff around which neumes were oriented
+    type: MUSIC
+  confidence: 0.8
+
+  subject:
+    name: Robert Guiscard
+    type: PERSON
+  predicate:
+    name: patronizes
+  object:
+    name: monks of Saint-Evroul
+    type: PERSON
+  confidence: 0.7
+
