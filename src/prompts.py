@@ -2,7 +2,11 @@ from symai.prompts import PromptLanguage, PromptRegistry
 
 prompt_registry = PromptRegistry()
 
-# Ontology Tags
+
+#==================================================#
+#----Ontology Generation---------------------------#
+#==================================================#
+# Tags
 prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_class", "OWL CLASS")
 prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_subclass_relation", "OWL SUBCLASS RELATION")
 prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_object_property", "OWL OBJECT PROPERTY")
@@ -168,5 +172,32 @@ Remember:
     3. Provide complete specifications for each extracted concept
     4. Ensure logical consistency with the existing ontology
     5. Focus on general, abstract concepts rather than specific instances
+    """
+)
+
+#==================================================#
+#----Triplet Extraction----------------------------#
+#==================================================#
+# Tags
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "triplet_extraction", "TRIPLET EXTRACTION")
+
+# Instructions
+prompt_registry.register_instruction(
+    PromptLanguage.ENGLISH,
+    "triplet_extraction",
+    f"""
+{prompt_registry.tag('triplet_extraction')}
+You are an expert at extracting semantic triplets from text based on a predefined ontology schema.
+Given a passage of text and an ontology that defines valid entities (classes) and relationships, perform the following tasks:
+
+1. Identify all relevant entities in the text that match the ontology’s defined classes.
+2. Determine the semantic relationships (predicates) that connect these entities according to the ontology.
+3. Assemble these into triplets of the form (subject, predicate, object) and assign each a confidence score between 0 and 1 that reflects how certain you are about each extraction.
+4. Ensure that no duplicate triplets are generated.
+5. If no valid triplets can be extracted, return None.
+6. Use CamelCase naming for entities (e.g., Person, ResearchPaper)
+7. Use camelCase naming for relationships (e.g., publishedIn)
+
+Return the output as a list of structured triplets where each triplet includes a subject, predicate, object, and confidence score.
     """
 )
