@@ -1,7 +1,7 @@
 import openai
 
-from ontology.personas import Persona
-from ontology.utils import MODEL
+from ontopipe.cqs.personas import Persona
+from ontopipe.cqs.utils import MODEL
 
 expert_scope_document_system_prompt = """You are a collaborative team of the following personas:
 {personas}
@@ -80,8 +80,6 @@ def merge_scope_documents(
 ) -> str:
     """Merge scope documents into a single document by splitting them into chunks and merging them recursively."""
 
-    print(f"Merging {len(documents)} scope documents...")
-
     if len(documents) == 1:
         return documents[0]
 
@@ -99,7 +97,6 @@ def merge_scope_documents(
 
 
 def _do_merge(domain: str, documents: list[str]):
-    # current format is: <document><authors>{authors}</authors>\n\n{content}</document>
     document_strs = [f"<document>{doc}</document>" for doc in documents]
 
     documents_message = "<documents>" + "\n\n".join(document_strs) + "</documents>"

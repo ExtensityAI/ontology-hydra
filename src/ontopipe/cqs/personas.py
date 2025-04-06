@@ -1,8 +1,8 @@
 import openai
 from pydantic import BaseModel
 
-from ontology.groups import Group, Priority
-from ontology.utils import MODEL
+from ontopipe.cqs.groups import Group, Priority
+from ontopipe.cqs.utils import MODEL
 
 # note: if personas seem low-dimensional, or if they "overfit" to our goal, maybe prompt to modify them without stating our goal, just to make them more realistic
 

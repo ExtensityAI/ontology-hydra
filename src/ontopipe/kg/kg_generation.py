@@ -2,22 +2,22 @@ import json
 from pathlib import Path
 
 from loguru import logger
-from pydantic import Field, field_validator
-from symai import Expression, Symbol
-from symai.components import FileReader, MetadataTracker
-from symai.models import LLMDataModel
+from symai import Expression
+from symai.components import MetadataTracker
 from symai.strategy import contract
 from tqdm import tqdm
 
-from ..prompts import prompt_registry
-from ..types import KG, Entity, Ontology, Relationship, Triplet
+from ontopipe.models import KG, KGState, Ontology, Triplet, TripletExtractorInput
+from ontopipe.prompts import prompt_registry
 
 
 @contract(
     pre_remedy=False,
     post_remedy=True,
     verbose=True,
-    remedy_retry_params=dict(tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False),
+    remedy_retry_params=dict(
+        tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False
+    ),
 )
 class TripletExtractor(Expression):
     def __init__(self, name: str, threshold: float = 0.7, *args, **kwargs):
@@ -39,7 +39,9 @@ class TripletExtractor(Expression):
             return True  # Nothing was extracted.
         for triplet in output.triplets:
             if triplet.confidence < self.threshold:
-                raise ValueError(f"Confidence score {triplet.confidence} is below threshold {self.threshold}!")
+                raise ValueError(
+                    f"Confidence score {triplet.confidence} is below threshold {self.threshold}!"
+                )
         return True
 
     @property
@@ -58,10 +60,7 @@ class TripletExtractor(Expression):
             self._triplets.update(new_triplets)
 
     def get_kg(self) -> KG:
-        return KG(
-            name=self.name,
-            triplets=self._triplets
-        )
+        return KG(name=self.name, triplets=self._triplets)
 
     def dump_kg(self, folder: Path, fname: str = "kg.json"):
         kg = self.get_kg()
@@ -78,7 +77,7 @@ def generate_kg(
     output_folder: Path,
     output_filename: str = "kg.json",
     threshold: float = 0.7,
-    batch_size: int = 1
+    batch_size: int = 1,
 ) -> KG:
     extractor = TripletExtractor(name=kg_name, threshold=threshold)
 
@@ -93,12 +92,12 @@ def generate_kg(
     triplets = []
     with MetadataTracker() as tracker:
         for i in tqdm(range(0, len(texts), batch_size)):
-            batch_texts = texts[i:i+batch_size]
+            batch_texts = texts[i : i + batch_size]
             for text in batch_texts:
                 input_data = TripletExtractorInput(
                     text=text,
                     ontology=ontology,
-                    state=KGState(triplets=triplets) if triplets else None
+                    state=KGState(triplets=triplets) if triplets else None,
                 )
                 try:
                     result = extractor(input=input_data)
@@ -125,10 +124,9 @@ if __name__ == "__main__":
         "especially in environments with high-dimensional, continuous observations and "
         "unknown dynamics. Supervised learning methods based on behavioral cloning (BC) "
         "suffer from distribution shift.",
-
         "Recent methods based on reinforcement learning (RL), "
         "such as inverse RL and generative adversarial imitation learning (GAIL), "
-        "overcome this by training an RL agent to match the demonstrations over a long horizon."
+        "overcome this by training an RL agent to match the demonstrations over a long horizon.",
     ]
 
     ROOT = Path(__file__).parent.parent
@@ -146,7 +144,7 @@ if __name__ == "__main__":
         output_folder=folder,
         output_filename=fname,
         threshold=0.7,
-        batch_size=1
+        batch_size=1,
     )
 
     logger.info(f"Extracted {len(kg.triplets)} triplets")

@@ -1,29 +1,14 @@
-import os
 import json
-import random
 from pathlib import Path
 
 from pyvis.network import Network
 
-DOTENV_PATH = Path(".env")
 COLOR_MAP = {
-    'CLASS': '#F1C40F',           # Golden for ontology classes
-    'OBJECT_PROPERTY': '#45B7D1', # Blue
-    'DATA_PROPERTY': '#9B59B6',   # Purple
-    'Unknown': '#808080'          # Gray fallback
+    "CLASS": "#F1C40F",  # Golden for ontology classes
+    "OBJECT_PROPERTY": "#45B7D1",  # Blue
+    "DATA_PROPERTY": "#9B59B6",  # Purple
+    "Unknown": "#808080",  # Gray fallback
 }
-
-rng = random.Random(42)
-
-
-if not DOTENV_PATH.exists():
-    raise FileNotFoundError(f"File not found: {DOTENV_PATH}")
-
-# load environment variables from .env file
-for k, v in [line.strip().split("=") for line in DOTENV_PATH.read_text().splitlines()]:
-    os.environ[k] = v
-
-MODEL = os.environ["NEUROSYMBOLIC_ENGINE_MODEL"]
 
 
 def chunked(lst: list, n: int):
@@ -40,7 +25,9 @@ def load_ontology(json_file: Path) -> dict:
 def build_ontology_graph(data: dict) -> Network:
     net = Network(height="100vh", width="100%", bgcolor="#ffffff", font_color="black")
     net.toggle_physics(True)
-    net.force_atlas_2based(gravity=-50, central_gravity=0.01, spring_length=100, spring_strength=0.08)
+    net.force_atlas_2based(
+        gravity=-50, central_gravity=0.01, spring_length=100, spring_strength=0.08
+    )
 
     # Visualize subclass relations as edges between classes
     for relation in data.get("subclass_relations", []):
@@ -48,8 +35,12 @@ def build_ontology_graph(data: dict) -> Network:
         superclass = relation["superclass"]["name"]
         # Both subclass and superclass are ontology classes.
         net.add_node(subclass, label=subclass, title="CLASS", color=COLOR_MAP["CLASS"])
-        net.add_node(superclass, label=superclass, title="CLASS", color=COLOR_MAP["CLASS"])
-        net.add_edge(subclass, superclass, label="subClassOf", color="#34495E", arrows="to")
+        net.add_node(
+            superclass, label=superclass, title="CLASS", color=COLOR_MAP["CLASS"]
+        )
+        net.add_edge(
+            subclass, superclass, label="subClassOf", color="#34495E", arrows="to"
+        )
 
     # Visualize object properties: create edges from each domain to each range using the property name.
     for prop in data.get("object_properties", []):
@@ -62,7 +53,13 @@ def build_ontology_graph(data: dict) -> Network:
             net.add_node(r, label=r, title="CLASS", color=COLOR_MAP["CLASS"])
         for d in domains:
             for r in ranges:
-                net.add_edge(d, r, label=prop_name, color=COLOR_MAP["OBJECT_PROPERTY"], arrows="to")
+                net.add_edge(
+                    d,
+                    r,
+                    label=prop_name,
+                    color=COLOR_MAP["OBJECT_PROPERTY"],
+                    arrows="to",
+                )
 
     # Visualize data properties: edges from domain classes to a literal node representing the datatype.
     for prop in data.get("data_properties", []):
@@ -70,10 +67,18 @@ def build_ontology_graph(data: dict) -> Network:
         domains = [d["name"] for d in prop.get("domain", [])]
         datatype = prop["range"]["value"]
         dt_node = f"datatype: {datatype}"
-        net.add_node(dt_node, label=datatype, title="Datatype", color=COLOR_MAP["DATA_PROPERTY"])
+        net.add_node(
+            dt_node, label=datatype, title="Datatype", color=COLOR_MAP["DATA_PROPERTY"]
+        )
         for d in domains:
             net.add_node(d, label=d, title="CLASS", color=COLOR_MAP["CLASS"])
-            net.add_edge(d, dt_node, label=prop_name, color=COLOR_MAP["DATA_PROPERTY"], arrows="to")
+            net.add_edge(
+                d,
+                dt_node,
+                label=prop_name,
+                color=COLOR_MAP["DATA_PROPERTY"],
+                arrows="to",
+            )
 
     return net
 

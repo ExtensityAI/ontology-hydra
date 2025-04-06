@@ -3,7 +3,7 @@ from enum import StrEnum
 import openai
 from pydantic import BaseModel, Field
 
-from ontology.utils import MODEL
+from ontopipe.cqs.utils import MODEL
 
 # todo: hierarchies
 

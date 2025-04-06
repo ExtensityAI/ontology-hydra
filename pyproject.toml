@@ -1,18 +1,17 @@
 [project]
-name = "ontology"
+name = "ontopipe"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = [
-    "numpy>=2.2.3",
-    "openai>=1.64.0",
-    "pydantic>=2.10.6",
-]
+dependencies = ["symbolicai"]
 
 [project.scripts]
-main = "ontology.main:main"
+eval = "ontopipe.eval.run:main"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.uv.sources]
+symbolicai = { git = "https://github.com/ExtensityAI/symbolicai.git", branch = "dev" }

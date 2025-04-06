@@ -1,36 +1,34 @@
 import json
-from enum import Enum
 from pathlib import Path
-from typing import List
 
 from loguru import logger
-from pydantic import Field, field_validator
 from symai import Expression
 from symai.components import MetadataTracker
-from symai.models import LLMDataModel
 from symai.strategy import contract
 from tqdm import tqdm
 
-from ..prompts import prompt_registry
-from ..types import (DataProperty, ObjectProperty, Ontology, OntologyState,
-                     OWLBuilderInput, OwlClass, SubClassRelation)
+from ontopipe.models import (
+    DataProperty,
+    ObjectProperty,
+    Ontology,
+    OntologyState,
+    OWLBuilderInput,
+    OwlClass,
+    SubClassRelation,
+)
+from ontopipe.prompts import prompt_registry
 
 
-#=========================================#
-#----Contract-----------------------------#
-#=========================================#
+# =========================================#
+# ----Contract-----------------------------#
+# =========================================#
 @contract(
     pre_remedy=False,
     post_remedy=True,
     verbose=True,
     remedy_retry_params=dict(
-        tries=25,
-        delay=0.5,
-        max_delay=15,
-        jitter=0.1,
-        backoff=2,
-        graceful=False
-    )
+        tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False
+    ),
 )
 class OWLBuilder(Expression):
     def __init__(self, name: str, *args, **kwargs):
@@ -54,11 +52,13 @@ class OWLBuilder(Expression):
         return True
 
     def post(self, output: OntologyState) -> bool:
-        #@TODO: 3rd party validation of the ontology (something like OOPS!)
+        # @TODO: 3rd party validation of the ontology (something like OOPS!)
         for concept in output.concepts:
             if isinstance(concept, OwlClass):
                 if concept in self._classes:
-                    raise ValueError(f"You've generated a duplicate concept: {concept}. It is already defined. Please focus on new and unique concepts while taking the history into account.")
+                    raise ValueError(
+                        f"You've generated a duplicate concept: {concept}. It is already defined. Please focus on new and unique concepts while taking the history into account."
+                    )
         return True
 
     def extend_concepts(self, concepts: list):
@@ -83,7 +83,7 @@ class OWLBuilder(Expression):
             name=self.name,
             subclass_relations=self._subclass_relations,
             object_properties=self._object_properties,
-            data_properties=self._data_properties
+            data_properties=self._data_properties,
         )
 
     def dump_ontology(self, folder: Path, fname: str = "ontology.json"):
@@ -96,13 +96,14 @@ class OWLBuilder(Expression):
     def to_rdf(self, folder: Path, fname: str = "ontology.rdf"):
         raise NotImplementedError("to_rdf method not implemented")
 
+
 def generate_ontology(
-        cqs: list[str],
-        ontology_name: str,
-        folder: Path,
-        fname: str = "ontology.json",
-        batch_size: int = 1,
-    ) -> Ontology:
+    cqs: list[str],
+    ontology_name: str,
+    folder: Path,
+    fname: str = "ontology.json",
+    batch_size: int = 1,
+) -> Ontology:
     builder = OWLBuilder(name=ontology_name)
 
     usage = None
@@ -110,8 +111,10 @@ def generate_ontology(
     concepts = []
     with MetadataTracker() as tracker:  # For gpt-* models
         for i in tqdm(range(0, len(cqs), batch_size)):
-            batch_cqs = cqs[i:i+batch_size]
-            input_data = OWLBuilderInput(competency_question=batch_cqs, ontology_state=state)
+            batch_cqs = cqs[i : i + batch_size]
+            input_data = OWLBuilderInput(
+                competency_question=batch_cqs, ontology_state=state
+            )
             try:
                 new_state = builder(input=input_data)
             except Exception as e:
@@ -128,6 +131,7 @@ def generate_ontology(
     logger.info("Ontology creation completed!")
 
     return builder.get_ontology()
+
 
 if __name__ == "__main__":
     cqs = ["What is the capital of France?", "What is the population of New York City?"]

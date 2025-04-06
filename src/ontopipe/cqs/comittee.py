@@ -1,8 +1,11 @@
+from random import Random
+
 from pydantic import BaseModel
 
-from ontology.groups import Group, generate_groups_for_domain
-from ontology.personas import Persona, generate_personas_for_group
-from ontology.utils import rng
+from ontopipe.cqs.groups import Group, generate_groups_for_domain
+from ontopipe.cqs.personas import Persona, generate_personas_for_group
+
+rng = Random(42)  # for reproducibility
 
 
 class ComitteeMember(BaseModel):
@@ -35,9 +38,7 @@ def generate_comittee_for_domain(domain: str):
     groups = generate_groups_for_domain(domain)
 
     for group in groups.items:
-        print(group.model_dump_json(indent=2))
         personas = generate_personas_for_group(domain, group)
-        print(personas.model_dump_json(indent=True))
 
         for persona in personas.items:
             comittee.members.append(ComitteeMember(persona=persona, group=group))
