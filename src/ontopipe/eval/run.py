@@ -16,14 +16,21 @@ DOMAINS = [
 
 def _init_logger(path: Path):
     logger = logging.getLogger("eval")
-    logger.setLevel(logging.INFO)
+    logger.setLevel(logging.DEBUG)
+
+    formatter = logging.Formatter(
+        "%(asctime)s | %(levelname)5s | %(name)s | %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S",
+    )
 
     stream = logging.StreamHandler()
+    stream.setFormatter(formatter)
     logger.addHandler(stream)
 
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H-%M-%S")
 
     file = logging.FileHandler(path / f"eval_{now}.log")
+    file.setFormatter(formatter)
     logger.addHandler(file)
 
     return logger
@@ -64,8 +71,8 @@ def main():
     )
 
     # run eval for each domain
-    for domain, domain_name in DOMAINS:
-        path = config.eval_path / domain
+    for id, domain in DOMAINS:
+        path = config.eval_path / id
         path.mkdir(exist_ok=True, parents=True)
 
         paths = EvalPaths(
@@ -80,9 +87,9 @@ def main():
         paths.cqs_path.mkdir(exist_ok=True, parents=True)
 
         params = EvalParams(
-            id=domain,
-            domain=domain_name,
-            logger=logger,
+            id=id,
+            domain=domain,
+            logger=logger.getChild(id),
             paths=paths,
             config=config,
         )
