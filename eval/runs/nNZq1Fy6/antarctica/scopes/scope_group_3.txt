@@ -1,0 +1,70 @@
+# Scope Document: Key Topics and Boundaries within the Domain of Antarctica
+
+## 1. Inclusion Criteria for the Antarctica Domain
+This section defines the key topics and areas that are explicitly included within the domain of Antarctica, leveraging the collective expertise of the team.
+
+### 1.1 Marine Ecosystems
+- Study of Antarctic marine biodiversity
+- Impact of climate change on marine life
+- Use of technologies for underwater imaging and monitoring 
+- Research involving underwater drones
+
+### 1.2 Glaciology
+- Dynamics of Antarctic ice sheets 
+- Historical changes in ice cover over the past century
+- Influence of glacial melting on sea-level rise
+- Remote sensing technologies for tracking ice movement
+
+### 1.3 Climate Change 
+- Effects of climate systems on polar regions
+- Analysis of climate modeling related to Antarctic weather patterns
+- Impacts of climate change on local and global ecosystems
+- Socio-economic ramifications of climate change connected to polar research
+
+### 1.4 Environmental Policy
+- Policy implications on climate action specific to vulnerable communities
+- Global equity in climate response and governance
+- Advocacy for sustainable practices in relation to Antarctica
+- Role of international agreements and collaborations on climate policies
+
+### 1.5 Outreach and Education
+- Engaging public awareness about Antarctic issues
+- Programs focused on the importance of Antarctic research 
+- Workshops and outreach conducted for diverse communities
+- Use of technology/digital tools to facilitate education
+
+## 2. Exclusion Criteria for the Antarctica Domain
+This section delineates topics that fall outside the scope of the Antarctica domain.
+
+### 2.1 Non-Antarctic Regions
+- Research related to the Arctic and non-polar regions
+- Studies focusing on tropical or temperate climates
+
+### 2.2 General Climate Change Not Specific to Polar Regions
+- Broad climate phenomena without direct ties to Antarctic data
+- Areas of climate science that do not involve polar dynamics or ecosystems
+
+### 2.3 Non-Environmental Policies
+- Issues unrelated to climate or environmental policy, such as economic policy unrelated to climate change
+- Political controversies not directly tied to Antarctic governance or conservation
+
+### 2.4 Behavior of Species Non-Native to Antarctica
+- Studies that focus solely on non-Antarctic species
+- Introduction of invasive species without context to their impact on Antarctica
+
+## 3. Gray Areas and Overlaps with Adjacent Domains
+This section identifies potential overlaps or gray areas that require careful consideration.
+
+### 3.1 Global Climate Change versus Local Impacts
+- The interaction between global climate trends and regional impacts on Antarctica.
+  
+### 3.2 Biodiversity and Conservation Efforts
+- Efforts to conserve biodiversity may intersect with policy advocacy and climate action, causing potential overlaps.
+
+### 3.3 Socio-Economic Factors and Environmental Change
+- The interplay between local community impacts from global decisions surrounding climate action and Antarctic research outcomes.
+
+### 3.4 Technology Impacts 
+- Use of technology in environmental monitoring may overlap with both research and policy domains, blurring the lines of application.
+
+By clearly defining these scopes, this document serves as a touchstone for discussions and initiatives focused on Antarctic research and policy, ensuring that all team members share a common understanding and language.

@@ -1,0 +1,56 @@
+# Scope Document: Domain of Antarctica
+
+## 1. Inclusion Criteria
+
+### 1.1. Geographic and Scientific Features
+- Glacial and ice sheet dynamics
+- Cryosphere interactions and processes
+- Oceanic and atmospheric systems specific to Antarctica
+- Geological formations, including mountains, valleys, and subglacial features
+- Ecosystems and biodiversity unique to the Antarctic region
+- Climate patterns and variations over time
+
+### 1.2. Research Areas
+- Climate change impacts on Antarctic ice and ecosystems
+- Glacial retreat and its implications for global sea level rise
+- Satellite remote sensing applications for monitoring Antarctic changes
+- Ice core sampling techniques and their significance for paleoclimate research
+
+### 1.3. Environmental and Societal Aspects
+- Environmental advocacy efforts and policies related to Antarctica
+- Conservation strategies and their implementation in the Antarctic region
+- The role of international agreements, such as the Antarctic Treaty System
+
+### 1.4. Technological Applications
+- Advanced data analysis techniques relevant to ice and climate research
+- GIS technology applications in mapping and visualizing ice melt patterns
+- Innovations in field research equipment and methodologies for Antarctic studies
+
+## 2. Exclusion Criteria
+
+### 2.1. Geographic Limitations
+- Non-Antarctic regions and their ecosystems
+- Studies focusing on the Arctic region, unless comparative analyses are made
+
+### 2.2. Irrelevant Scientific Disciplines
+- Non-cryospheric geology unrelated to Antarctica
+- Marine biology studies outside of the Antarctic context
+- Atmospheric studies that do not specifically pertain to Antarctic weather systems
+
+### 2.3. Societal Factors
+- Political discourse unrelated to Antarctic governance
+- Socioeconomic analyses not linked to Antarctic research or conservation efforts
+
+## 3. Gray Areas and Overlaps with Adjacent Domains
+
+### 3.1. Climate Change Research
+- Overlap with global climate change discussions regarding impacts and adaptations
+- Studies in other polar regions that may share methodologies or principles but differ significantly in context
+
+### 3.2. Marine Studies
+- Potential overlaps with oceanography in the Southern Ocean, focusing on currents and marine species’ interactions with Antarctic conditions
+
+### 3.3. Environmental Policy
+- Intersection with global environmental policies and treaties that affect international governance, potentially extending to more extensive discussions than just Antarctica
+
+This scope document serves to identify key topics and boundaries within the domain of Antarctica for collaborative discourse and focused research.

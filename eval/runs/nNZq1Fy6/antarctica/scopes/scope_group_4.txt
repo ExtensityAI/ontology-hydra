@@ -1,0 +1,62 @@
+# Scope Document for the Domain of Antarctica
+
+## 1. Introduction
+This document outlines the key topics and boundaries within the domain of Antarctica based on the expertise of our collaborative team. It serves as a foundational reference for discussions and initiatives related to geology, architecture, climate action, and engineering in extreme environments.
+
+## 2. Included Topics
+
+### 2.1 Geological Studies
+- Analysis of rock formations and sedimentary processes
+- Climate records and historical landform evolution
+- Sustainable research practices in polar environments
+
+### 2.2 Architectural Practices
+- Design of research stations and exploratory units 
+- Integration of renewable energy technologies
+- Use of climate-responsive materials
+- Evaluation of architecture in extreme environments
+
+### 2.3 Environmental Conservation
+- Climate action initiatives and policies related to Antarctica
+- Sustainable tourism practices and their impacts
+- Indigenous rights and involvement in conservation efforts
+- Public awareness campaigns for the fragility of the Antarctic ecosystem
+
+### 2.4 Mechanical and Infrastructure Engineering
+- Development of resilient mechanical systems for research stations
+- Use of remote monitoring systems and IoT solutions 
+- Approaches to infrastructure resilience in isolated settings
+
+### 2.5 Interdisciplinary Collaboration
+- Joint projects among geologists, architects, environmentalists, and engineers
+- Best practices for team communication and collaboration in remote research settings 
+
+## 3. Excluded Topics
+
+### 3.1 Non-Environmental Political Issues
+- Political governance of Antarctic territories unrelated to environmental policies 
+
+### 3.2 Non-Antarctic Geological Studies
+- Geological studies focused on non-Antarctic regions
+
+### 3.3 Cultural Studies
+- Non-environmental cultural studies unrelated to the Antarctic context
+
+### 3.4 Non-Relevant Engineering Disciplines
+- Engineering topics that do not pertain to mechanical systems or infrastructure within Antarctica
+
+## 4. Gray Areas and Overlaps with Adjacent Domains
+
+### 4.1 Climate Change Discussions
+- While climate change is noted as a topic, specific discussions surrounding global climate policies may overlap with political and non-polar discussions.
+
+### 4.2 Tourism and Economics
+- Environmentally sustainable tourism may overlap with economic discussions; however, the focus should remain strictly on conservation efforts.
+
+### 4.3 International Collaboration
+- While collaboration across borders is essential, geopolitical issues surrounding international treaties (e.g., the Antarctic Treaty) may require caution to avoid exclusionary discussions.
+
+### 4.4 Indigenous Rights
+- The employment of indigenous knowledge in environmental conservation is an area of overlap between environmentalism and cultural studies, necessitating careful navigation.
+
+This scope document serves to delineate our shared areas of focus while recognizing boundaries and gray areas as topics continue to evolve.

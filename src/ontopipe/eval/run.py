@@ -1,13 +1,17 @@
-import logging
 import secrets
+import sys
 from argparse import ArgumentParser
 from dataclasses import dataclass
-from datetime import datetime, timezone
 from pathlib import Path
+
+import loguru
+from loguru import logger
 
 from ontopipe.cqs.comittee import Comittee, ComitteeMember, generate_comittee_for_domain
 from ontopipe.cqs.question_generation import generate_questions
 from ontopipe.cqs.scoping import generate_scope_document, merge_scope_documents
+from ontopipe.models import Ontology
+from ontopipe.ontology.ontology_generation import generate_ontology
 
 DOMAINS = [
     ("antarctica", "Antarctica"),
@@ -15,25 +19,11 @@ DOMAINS = [
 
 
 def _init_logger(path: Path):
-    logger = logging.getLogger("eval")
-    logger.setLevel(logging.DEBUG)
+    log_path = path / "logs" / "eval_{time}.log"
+    log_path.parent.mkdir(exist_ok=True, parents=True)
 
-    formatter = logging.Formatter(
-        "%(asctime)s | %(levelname)5s | %(name)s | %(message)s",
-        datefmt="%Y-%m-%d %H:%M:%S",
-    )
-
-    stream = logging.StreamHandler()
-    stream.setFormatter(formatter)
-    logger.addHandler(stream)
-
-    now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H-%M-%S")
-
-    file = logging.FileHandler(path / f"eval_{now}.log")
-    file.setFormatter(formatter)
-    logger.addHandler(file)
-
-    return logger
+    logger.add(log_path, rotation="100 MB", level="DEBUG")
+    logger.add(sys.stderr, level="DEBUG")
 
 
 def _parse_args():
@@ -61,10 +51,10 @@ def main():
     eval_path = args.path / "runs" / args.run_id
     eval_path.mkdir(exist_ok=True, parents=True)
 
-    logger = _init_logger(eval_path)
-    config = EvalConfig(eval_path=eval_path, run_id=args.run_id, logger=logger)
+    _init_logger(eval_path)
+    config = EvalConfig(eval_path=eval_path, run_id=args.run_id)
 
-    config.logger.info(
+    logger.info(
         "Starting evaluation %s under %s",
         config.run_id,
         config.eval_path,
@@ -89,7 +79,7 @@ def main():
         params = EvalParams(
             id=id,
             domain=domain,
-            logger=logger.getChild(id),
+            logger=logger.bind(domain=id),
             paths=paths,
             config=config,
         )
@@ -102,7 +92,6 @@ class EvalConfig:
     """Config across the whole valuation run"""
 
     eval_path: Path
-    logger: logging.Logger
     run_id: str
 
 
@@ -124,10 +113,137 @@ class EvalParams:
     id: str
     domain: str
 
-    logger: logging.Logger
+    logger: "loguru.Logger"
 
     paths: EvalPaths
     config: EvalConfig
+
+
+def _read_comittee_if_cached(path: Path):
+    """Read the comittee from the cache if it exists, otherwise return None"""
+
+    if path.exists():
+        return Comittee.model_validate_json(path.read_text(encoding="utf-8"))
+
+
+def _generate_comittee(params: EvalParams):
+    params.logger.debug("Generating comittee for %s", params.domain)
+
+    comittee = _read_comittee_if_cached(params.paths.comittee_path)
+
+    if not comittee:
+        comittee = generate_comittee_for_domain(params.domain)
+
+        params.paths.comittee_path.write_text(
+            comittee.model_dump_json(indent=2), encoding="utf-8"
+        )
+
+    return comittee
+
+
+def _generate_scope_documents(groups: list[list[ComitteeMember]], params: EvalParams):
+    params.logger.debug("Generating scope documents...")
+
+    scope_documents = []
+
+    # generate or load scope documents for each group
+    for i, group in enumerate(groups):
+        path = params.paths.scopes_path / f"scope_group_{i}.txt"
+
+        # read cached scope document or else generate it
+        if path.exists():
+            scope = path.read_text(encoding="utf-8")
+        else:
+            scope = generate_scope_document(params.domain, [m.persona for m in group])
+
+            path.write_text(scope, encoding="utf-8")
+
+        scope_documents.append(scope)
+
+    return scope_documents
+
+
+def _merge_scope_documents(scope_documents: list[str], params: EvalParams):
+    params.logger.debug("Merging scope documents...")
+
+    path = params.paths.merged_scope_path
+
+    # read cached merged scope document or else generate it
+    if path.exists():
+        merged_scope = path.read_text(encoding="utf-8")
+    else:
+        merged_scope = merge_scope_documents(params.domain, scope_documents)
+        path.write_text(merged_scope, encoding="utf-8")
+
+    return merged_scope
+
+
+def _generate_all_cqs(groups: list[list[ComitteeMember]], params: EvalParams):
+    path = params.paths.all_cqs_path
+
+    # read cached list of all CQs or else generate them
+    if path.exists():
+        return path.read_text(encoding="utf-8").split("\n")
+
+    all_cqs = []
+    for i, group in enumerate(groups):
+        path = params.paths.cqs_path / f"cqs_group_{i}.txt"
+
+        if path.exists():
+            group_cqs = path.read_text(encoding="utf-8").split("\n")
+        else:
+            group_cqs = generate_questions(
+                params.domain,
+                group,
+                params.paths.merged_scope_path.read_text(encoding="utf-8"),
+            )
+
+            path.write_text("\n".join(group_cqs), encoding="utf-8")
+
+        all_cqs.extend(group_cqs)
+
+    path.write_text("\n".join(all_cqs), encoding="utf-8")
+
+    return all_cqs
+
+
+def _generate_cqs(params: EvalParams):
+    params.logger.info("Generating CQs...", params.domain)
+
+    comittee = _generate_comittee(params)
+    params.logger.debug("Generated comittee with %s members", len(comittee.members))
+
+    groups = comittee.divide_into_groups(4)
+
+    scope_documents = _generate_scope_documents(groups, params)
+    params.logger.debug("Generated %i scope documents", len(scope_documents))
+
+    merged_scope = _merge_scope_documents(scope_documents, params)
+    params.logger.debug("Merged scope document has %i characters", len(merged_scope))
+
+    return _generate_all_cqs(groups, params)
+
+
+def _generate_ontology(cqs: list[str], path: Path, params: EvalParams):
+    params.logger.info("Generating ontology...")
+
+    ontology_folder_path = path / "ontology"
+    ontology_folder_path.mkdir(exist_ok=True, parents=True)
+
+    ontology_file_path = ontology_folder_path / "ontology.json"
+
+    if ontology_file_path.exists():
+        return Ontology.model_validate_json(
+            ontology_file_path.read_text(encoding="utf-8")
+        )
+
+    else:
+        return generate_ontology(
+            cqs,
+            params.domain,
+            folder=ontology_folder_path,
+            fname=ontology_file_path.name,
+        )
 
 
 def eval(params: EvalParams):
@@ -143,99 +259,4 @@ def eval(params: EvalParams):
     path.mkdir(exist_ok=True, parents=True)
 
     cqs = _generate_cqs(params)
-    params.logger.info("Generated CQs for %s", params.domain)
-
-
-def _generate_comittee(params: EvalParams):
-    params.logger.debug("Generating comittee for %s", params.domain)
-
-    if params.paths.comittee_path.exists():
-        comittee = Comittee.model_validate_json(
-            params.paths.comittee_path.read_text(encoding="utf-8")
-        )
-    else:
-        comittee = generate_comittee_for_domain(params.domain)
-
-        params.paths.comittee_path.write_text(
-            comittee.model_dump_json(indent=2), encoding="utf-8"
-        )
-
-    return comittee
-
-
-def _generate_scope_documents(groups: list[list[ComitteeMember]], params: EvalParams):
-    params.logger.debug("Generating scope documents for %s", params.domain)
-
-    scope_documents = []
-
-    # generate or load scope documents for each group
-    for i, group in enumerate(groups):
-        group_scope_document_path = params.paths.scopes_path / f"scope_group_{i}.txt"
-
-        if group_scope_document_path.exists():
-            scope = group_scope_document_path.read_text(encoding="utf-8")
-        else:
-            scope = generate_scope_document(params.domain, [m.persona for m in group])
-
-            group_scope_document_path.write_text(scope, encoding="utf-8")
-
-        scope_documents.append(scope)
-
-    return scope_documents
-
-
-def _merge_scope_documents(scope_documents: list[str], params: EvalParams):
-    params.logger.debug("Merging scope documents for %s", params.domain)
-
-    if params.paths.merged_scope_path.exists():
-        merged_scope = params.paths.merged_scope_path.read_text(encoding="utf-8")
-    else:
-        merged_scope = merge_scope_documents(params.domain, scope_documents)
-        params.paths.merged_scope_path.write_text(merged_scope, encoding="utf-8")
-
-    return merged_scope
-
-
-def _generate_all_cqs(groups: list[list[ComitteeMember]], params: EvalParams):
-    params.logger.debug("Generating all CQs for %s", params.domain)
-
-    all_cqs = []
-    for i, group in enumerate(groups):
-        group_cqs_path = params.paths.cqs_path / f"cqs_group_{i}.txt"
-
-        if group_cqs_path.exists():
-            group_cqs = group_cqs_path.read_text(encoding="utf-8").split("\n")
-        else:
-            group_cqs = generate_questions(
-                params.domain,
-                group,
-                params.paths.merged_scope_path.read_text(encoding="utf-8"),
-            )
-
-            group_cqs_path.write_text("\n".join(group_cqs), encoding="utf-8")
-
-        all_cqs.extend(group_cqs)
-
-    params.paths.all_cqs_path.write_text("\n".join(all_cqs), encoding="utf-8")
-
-    return all_cqs
-
-
-def _generate_cqs(params: EvalParams):
-    params.logger.info("Generating CQs for %s", params.domain)
-
-    comittee = _generate_comittee(params)
-    params.logger.debug("Comittee has %s members", len(comittee.members))
-
-    groups = comittee.divide_into_groups(4)
-
-    scope_documents = _generate_scope_documents(groups, params)
-    params.logger.debug("Generated %i scope documents", len(scope_documents))
-
-    merged_scope = _merge_scope_documents(scope_documents, params)
-    params.logger.debug("Merged scope document has %i characters", len(merged_scope))
-
-    cqs = _generate_all_cqs(groups, params)
     params.logger.debug("Generated %i CQs", len(cqs))
-
-    return cqs
