@@ -1,0 +1,821 @@
+{
+    "name": "Antarctica",
+    "triplets": [
+        {
+            "subject": {
+                "name": "AlainHubert"
+            },
+            "predicate": {
+                "name": "stated"
+            },
+            "object": {
+                "name": "thisBaseWillBeTheFirstOfItsKind"
+            },
+            "confidence": 0.85
+        },
+        {
+            "subject": {
+                "name": "TransantarcticMountains"
+            },
+            "predicate": {
+                "name": "contains"
+            },
+            "object": {
+                "name": "Coal"
+            },
+            "confidence": 0.9
+        },
+        {
+            "subject": {
+                "name": "Penguins"
+            },
+            "predicate": {
+                "name": "areSpeciesInhabiting"
+            },
+            "object": {
+                "name": "Antarctica"
+            },
+            "confidence": 0.8
+        },
+        {
+            "subject": {
+                "name": "ScottExpedition"
+            },
+            "predicate": {
+                "name": "reached"
+            },
+            "object": {
+                "name": "thePole"
+            },
+            "confidence": 0.85
+        },
+        {
+            "subject": {
+                "name": "Antarctica"
+            },
+            "predicate": {
+                "name": "hasTemperature"
+            },
+            "object": {
+                "name": "\u221289.2 \u00b0C"
+            },
+            "confidence": 0.9
+        },
+        {
+            "subject": {
+                "name": "ErnestShackleton"
+            },
+            "predicate": {
+                "name": "madeFirsts"
+            },
+            "object": {
+                "name": "traverseTransantarcticMountains"
+            },
+            "confidence": 0.8
+        },
+        {
+            "subject": {
+                "name": "MeltingOfFloatingIceShelves"
+            },
+            "predicate": {
+                "name": "contributesTo"
+            },
+            "object": {
+                "name": "SeaLevelRise"
+            },
+            "confidence": 0.85
+        },
+        {
+            "subject": {
+                "name": "EllsworthMountainsRegion"
+            },
+            "predicate": {
+                "name": "hasStratigraphySimilarTo"
+            },
+            "object": {
+                "name": "EastAntarctica"
+            },
+            "confidence": 0.75
+        },
+        {
+            "subject": {
+                "name": "Antarctica"
+            },
+            "predicate": {
+                "name": "hasOrganisms"
+            },
+            "object": {
+                "name": "NativeOrganisms"
+            },
+            "confidence": 0.8
+        },
+        {
+            "subject": {
+                "name": "ErnestShackleton"
+            },
+            "predicate": {
+                "name": "led"
+            },
+            "object": {
+                "name": "NimrodExpedition"
+            },
+            "confidence": 0.9
+        },
+        {
+            "subject": {
+                "name": "ExpeditionTourism"
+            },
+            "predicate": {
+                "name": "isSubjectTo"
+            },
+            "object": {
+                "name": "AntarcticTreaty"
+            },
+            "confidence": 0.9
+        },
+        {
+            "subject": {
+                "name": "JohanBerte"
+            },
+            "predicate": {
+                "name": "is"
+            },
+            "object": {
+                "name": "leaderOfStationDesignTeam"
+            },
+            "confidence": 0.85
+        },
+        {
+            "subject": {
+                "name": "JohanBerte"
+            },
+            "predicate": {
+                "name": "is"
+            },
+            "object": {
+                "name": "managerOfProject"
+            },
+            "confidence": 0.85
+        },
+        {
+            "subject": {
+                "name": "PrincessElisabethStation"
+            },
+            "predicate": {
+                "name": "costs"
+            },
+            "object": {
+                "name": "$16.3 million"
+            },
+            "confidence": 0.9
+        },
+        {
+            "subject": {
+                "name": "Estimates"
+            },
+            "predicate": {
+                "name": "of"
+            },
+            "object": {
+                "name": "32000tonnes"
+            },
+            "confidence": 0.75
+        },
+        {
+            "subject": {
+                "name": "Snow"
+            },
+            "predicate": {
+                "name": "offsets"
+            },
+            "object": {
+                "name": "EffectOnSeaLevelRise"
+            },
+            "confidence": 0.8
+        },
+        {
+            "subject": {
+                "name": "PrincessElisabethStation"
+            },
+            "predicate": {
+                "name": "conductsResearchIn"
+            },
+            "object": {
+                "name": "climateChange"
+            },
+            "confidence": 0.85
+        },
+        {
+            "subject": {
+                "name": "FrankWild"
+            },
+            "predicate": {
+                "name": "wasPartOf"
+            },
+            "object": {
+                "name": "NimrodExpedition"
+            },
+            "confidence": 0.9
+        },
+        {
+            "subject": {
+                "name": "CurrentSystems"
+            },
+            "predicate": {
+                "name": "transport"
+            },
+            "object": {
+                "name": "EggsAndLarvalStages"
+            },
+            "confidence": 0.75
+        },
+        {
+            "subject": {
+                "name": "Tourists"
+            },
+            "predicate": {
+                "name": "cameFrom"
+            },
+            "object": {
+                "name": "CommercialShips"
+            },
+            "confidence": 0.85
+        },
+        {
+            "subject": {
+                "name": "RoaldAmundsen"
+            },
+            "predicate": {
+                "name": "led"
+            },
+            "object": {
+                "name": "expedition"
+            },
+            "confidence": 0.85
+        },
+        {
+            "subject": {
+                "name": "CensusOfMarineLife"
+            },
+            "predicate": {
+                "name": "hasFinding"
+            },
+            "object": {
+                "name": "RemarkableFindings"
+            },
+            "confidence": 0.9
+        },
+        {
+            "subject": {
+                "name": "DouglasMawson"
+            },
+            "predicate": {
+                "name": "assumedLeadershipOf"
+            },
+            "object": {
+                "name": "MagneticPoleParty"
+            },
+            "confidence": 0.8
+        },
+        {
+            "subject": {
+                "name": "Krill"
+            },
+            "predicate": {
+                "name": "playsRoleIn"
+            },
+            "object": {
+                "name": "AntarcticEcosystem"
+            },
+            "confidence": 0.9
+        },
+        {
+            "subject": {
+                "name": "CensusOfMarineLife"
+            },
+            "predicate": {
+                "name": "isPartOf"
+            },
+            "object": {
+                "name": "InternationalPolarYear"
+            },
+            "confidence": 0.8
+        },
+        {
+            "subject": {
+                "name": "Coal"
+            },
+            "predicate": {
+                "name": "is"
+            },
+            "object": {
+                "name": "MineralResource"
+            },
+            "confidence": 0.9
+        },
+        {
+            "subject": {
+                "name": "ExpeditionTourism"
+            },
+            "predicate": {
+                "name": "isRegulatedBy"
+            },
+            "object": {
+                "name": "InternationalAssociationOfAntarcticaTourOperators"
+            },
+            "confidence": 0.85
+        },
+        {
+            "subject": {
+                "name": "AntarcticPeninsula"
+            },
+            "predicate": {
+                "name": "wasFormedBy"
+            },
+            "object": {
+                "name": "upliftAndMetamorphism"
+            },
+            "confidence": 0.8
+        },
+        {
+            "subject": {
+                "name": "IAATO"
+            },
+            "predicate": {
+                "name": "accountsFor"
+            },
+            "object": {
+                "name": "95PercentOfTouristActivity"
+            },
+            "confidence": 0.9
+        },
+        {
+            "subject": {
+                "name": "ExploitationOfMineralResources"
+            },
+            "predicate": {
+                "name": "isBannedUntil"
+            },
+            "object": {
+                "name": "2048"
+            },
+            "confidence": 0.9
+        },
+        {
+            "subject": {
+                "name": "ErnestShackleton"
+            },
+            "predicate": {
+                "name": "madeFirsts"
+            },
+            "object": {
+                "name": "traverseRossIceShelf"
+            },
+            "confidence": 0.8
+        },
+        {
+            "subject": {
+                "name": "IllegalFishing"
+            },
+            "predicate": {
+                "name": "hasBeenIncreasing"
+            },
+            "object": {
+                "name": "toothfish"
+            },
+            "confidence": 0.8
+        },
+        {
+            "subject": {
+                "name": "JurassicPeriod"
+            },
+            "predicate": {
+                "name": "sawFormationOf"
+            },
+            "object": {
+                "name": "andesiteAndRhyoliteVolcanics"
+            },
+            "confidence": 0.8
+        },
+        {
+            "subject": {
+                "name": "EdgeworthDavid"
+            },
+            "predicate": {
+                "name": "led"
+            },
+            "object": {
+                "name": "parties"
+            },
+            "confidence": 0.8
+        },
+        {
+            "subject": {
+                "name": "Regulations"
+            },
+            "predicate": {
+                "name": "managing"
+            },
+            "object": {
+                "name": "SouthernOceanFisheries"
+            },
+            "confidence": 0.85
+        },
+        {
+            "subject": {
+                "name": "IndigenousSpecies"
+            },
+            "predicate": {
+                "name": "canBeExtracted"
+            },
+            "object": {
+                "name": "criminalPenalty"
+            },
+            "confidence": 0.8
+        },
+        {
+            "subject": {
+                "name": "PrincessElisabethStation"
+            },
+            "predicate": {
+                "name": "wasShippedTo"
+            },
+            "object": {
+                "name": "SouthPole"
+            },
+            "confidence": 0.85
+        },
+        {
+            "subject": {
+                "name": "ErnestShackleton"
+            },
+            "predicate": {
+                "name": "madeFirsts"
+            },
+            "object": {
+                "name": "setFootOnSouthPolarPlateau"
+            },
+            "confidence": 0.8
+        },
+        {
+            "subject": {
+                "name": "DouglasMawson"
+            },
+            "predicate": {
+                "name": "led"
+            },
+            "object": {
+                "name": "severalExpeditions"
+            },
+            "confidence": 0.75
+        },
+        {
+            "subject": {
+                "name": "PrinceCharlesMountains"
+            },
+            "predicate": {
+                "name": "contain"
+            },
+            "object": {
+                "name": "SignificantDepositsOfIronOre"
+            },
+            "confidence": 0.8
+        },
+        {
+            "subject": {
+                "name": "Toothfish"
+            },
+            "predicate": {
+                "name": "isMarketedAs"
+            },
+            "object": {
+                "name": "ChileanSeaBass"
+            },
+            "confidence": 0.85
+        },
+        {
+            "subject": {
+                "name": "AlienPlantsOrAnimals"
+            },
+            "predicate": {
+                "name": "canBring"
+            },
+            "object": {
+                "name": "criminalPenalty"
+            },
+            "confidence": 0.8
+        },
+        {
+            "subject": {
+                "name": "CCAMLR"
+            },
+            "predicate": {
+                "name": "is"
+            },
+            "object": {
+                "name": "InternationalTreaty"
+            },
+            "confidence": 0.9
+        },
+        {
+            "subject": {
+                "name": "Tourists"
+            },
+            "predicate": {
+                "name": "visited"
+            },
+            "object": {
+                "name": "Antarctica"
+            },
+            "confidence": 0.8
+        },
+        {
+            "subject": {
+                "name": "IceShelves"
+            },
+            "predicate": {
+                "name": "experience"
+            },
+            "object": {
+                "name": "DramaticCollapses"
+            },
+            "confidence": 0.85
+        },
+        {
+            "subject": {
+                "name": "IllegalFishing"
+            },
+            "predicate": {
+                "name": "remains"
+            },
+            "object": {
+                "name": "seriousProblem"
+            },
+            "confidence": 0.85
+        },
+        {
+            "subject": {
+                "name": "PrincessElisabethStation"
+            },
+            "predicate": {
+                "name": "isLocatedIn"
+            },
+            "object": {
+                "name": "Antarctica"
+            },
+            "confidence": 0.9
+        },
+        {
+            "subject": {
+                "name": "DisruptionOfIceShelves"
+            },
+            "predicate": {
+                "name": "mayResultIn"
+            },
+            "object": {
+                "name": "IncreasedGlacialOutflow"
+            },
+            "confidence": 0.8
+        },
+        {
+            "subject": {
+                "name": "OutflowOfIce"
+            },
+            "predicate": {
+                "name": "causes"
+            },
+            "object": {
+                "name": "RiseInGlobalSeaLevel"
+            },
+            "confidence": 0.9
+        },
+        {
+            "subject": {
+                "name": "32000tonnes"
+            },
+            "predicate": {
+                "name": "occurredIn"
+            },
+            "object": {
+                "name": "2000"
+            },
+            "confidence": 0.8
+        },
+        {
+            "subject": {
+                "name": "BeardmoreGlacier"
+            },
+            "predicate": {
+                "name": "wasRecordedBy"
+            },
+            "object": {
+                "name": "FrankWild"
+            },
+            "confidence": 0.85
+        },
+        {
+            "subject": {
+                "name": "NimrodExpedition"
+            },
+            "predicate": {
+                "name": "becameFirstToClimb"
+            },
+            "object": {
+                "name": "MountErebus"
+            },
+            "confidence": 0.85
+        },
+        {
+            "subject": {
+                "name": "RoaldAmundsen"
+            },
+            "predicate": {
+                "name": "becameFirstToReach"
+            },
+            "object": {
+                "name": "geographicSouthPole"
+            },
+            "confidence": 0.9
+        },
+        {
+            "subject": {
+                "name": "WestAntarctica"
+            },
+            "predicate": {
+                "name": "resembles"
+            },
+            "object": {
+                "name": "AndesMountainRange"
+            },
+            "confidence": 0.85
+        },
+        {
+            "subject": {
+                "name": "upliftAndMetamorphism"
+            },
+            "predicate": {
+                "name": "involves"
+            },
+            "object": {
+                "name": "seaBedSediments"
+            },
+            "confidence": 0.75
+        },
+        {
+            "subject": {
+                "name": "TouristActivity"
+            },
+            "predicate": {
+                "name": "isPredictedToIncreaseTo"
+            },
+            "object": {
+                "name": "80000By2010"
+            },
+            "confidence": 0.8
+        },
+        {
+            "subject": {
+                "name": "RossSea"
+            },
+            "predicate": {
+                "name": "isKnownFor"
+            },
+            "object": {
+                "name": "OilAndNaturalGasFields"
+            },
+            "confidence": 0.9
+        },
+        {
+            "subject": {
+                "name": "MarieByrdLand"
+            },
+            "predicate": {
+                "name": "hasEvidenceOf"
+            },
+            "object": {
+                "name": "volcanicActivity"
+            },
+            "confidence": 0.7
+        },
+        {
+            "subject": {
+                "name": "InternationalPolarFoundation"
+            },
+            "predicate": {
+                "name": "unveiled"
+            },
+            "object": {
+                "name": "PrincessElisabethStation"
+            },
+            "confidence": 0.9
+        },
+        {
+            "subject": {
+                "name": "AntarcticConservationAct"
+            },
+            "predicate": {
+                "name": "introduced"
+            },
+            "object": {
+                "name": "restrictions"
+            },
+            "confidence": 0.85
+        },
+        {
+            "subject": {
+                "name": "ResearchStations"
+            },
+            "predicate": {
+                "name": "areLocatedIn"
+            },
+            "object": {
+                "name": "Antarctica"
+            },
+            "confidence": 0.8
+        },
+        {
+            "subject": {
+                "name": "Antarctica"
+            },
+            "predicate": {
+                "name": "hasAnnualPrecipitation"
+            },
+            "object": {
+                "name": "200 mm"
+            },
+            "confidence": 0.85
+        },
+        {
+            "subject": {
+                "name": "MarineOrganisms"
+            },
+            "predicate": {
+                "name": "liveIn"
+            },
+            "object": {
+                "name": "PolarRegions"
+            },
+            "confidence": 0.85
+        },
+        {
+            "subject": {
+                "name": "PrincessElisabethStation"
+            },
+            "predicate": {
+                "name": "is"
+            },
+            "object": {
+                "name": "zeroEmissionsPolarScienceStation"
+            },
+            "confidence": 0.9
+        },
+        {
+            "subject": {
+                "name": "PolarRegions"
+            },
+            "predicate": {
+                "name": "isSeparatedBy"
+            },
+            "object": {
+                "name": "DistanceCovered"
+            },
+            "confidence": 0.7
+        },
+        {
+            "subject": {
+                "name": "Antarctica"
+            },
+            "predicate": {
+                "name": "is"
+            },
+            "object": {
+                "name": "Desert"
+            },
+            "confidence": 0.9
+        },
+        {
+            "subject": {
+                "name": "ProtocolOnEnvironmentalProtection"
+            },
+            "predicate": {
+                "name": "bans"
+            },
+            "object": {
+                "name": "ExploitationOfMineralResources"
+            },
+            "confidence": 0.85
+        },
+        {
+            "subject": {
+                "name": "Antarctica"
+            },
+            "predicate": {
+                "name": "hasAverageElevation"
+            },
+            "object": {
+                "name": "HighestAverageElevation"
+            },
+            "confidence": 0.85
+        }
+    ]
+}

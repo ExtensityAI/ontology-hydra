@@ -96,9 +96,7 @@ def generate_visjs_code(file_path):
 
 # Example usage
 if __name__ == "__main__":
-    input_file = (
-        "eval/runs/nNZq1Fy6/antarctica/ontology/ontology.json"  # <-- your JSON file
-    )
+    input_file = "eval/runs/nNZq1Fy6/To_Kill_A_Mockingbird/ontology/ontology.json"  # <-- your JSON file
     visjs_output = generate_visjs_code(input_file)
 
     with open("output_vis.js", "w") as out_file:

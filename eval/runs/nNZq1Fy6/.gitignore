@@ -1,2 +1,0 @@
-# ignore logs of evals
-./runs/*/logs/

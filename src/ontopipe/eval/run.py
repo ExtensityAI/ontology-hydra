@@ -1,3 +1,4 @@
+import json
 import secrets
 import sys
 from argparse import ArgumentParser
@@ -10,20 +11,36 @@ from loguru import logger
 from ontopipe.cqs.comittee import Comittee, ComitteeMember, generate_comittee_for_domain
 from ontopipe.cqs.question_generation import generate_questions
 from ontopipe.cqs.scoping import generate_scope_document, merge_scope_documents
-from ontopipe.models import Ontology
+from ontopipe.kg.kg_generation import generate_kg
+from ontopipe.models import KG, Ontology
 from ontopipe.ontology.ontology_generation import generate_ontology
 
 DOMAINS = [
-    ("antarctica", "Antarctica"),
+    ("To_Kill_A_Mockingbird", "To Kill A Mockingbird"),
 ]
+
+_colored_log_format = "<green>{time:YYYY-MM-DD HH:mm:ss.SSS}</green> | <level>{level: <8}</level> | {extra[domain_id]} | <level>{message}</level>"
+
+_uncolored_log_format = (
+    "{time:YYYY-MM-DD HH:mm:ss.SSS}| {level: <8} | {extra[domain_id]} | {message}"
+)
 
 
 def _init_logger(path: Path):
     log_path = path / "logs" / "eval_{time}.log"
     log_path.parent.mkdir(exist_ok=True, parents=True)
 
-    logger.add(log_path, rotation="100 MB", level="DEBUG")
-    logger.add(sys.stderr, level="DEBUG")
+    def is_ontopipe_log(record):
+        return "ontopipe" in record["name"]
+
+    logger.remove()
+
+    logger.configure(extra={"domain_id": "-"})
+
+    logger.add(log_path, rotation="300 MB", level="DEBUG", format=_uncolored_log_format)
+    logger.add(
+        sys.stderr, level="DEBUG", filter=is_ontopipe_log, format=_colored_log_format
+    )
 
 
 def _parse_args():
@@ -46,16 +63,37 @@ def _parse_args():
     return parser.parse_args()
 
 
+def _find_domain_train_data(train_data: dict, domain_id: str):
+    for entry in train_data["data"]:
+        if entry["title"].lower() == domain_id.lower():
+            return entry
+
+    raise ValueError(f"No training data found for domain {domain_id}")
+
+
 def main():
     args = _parse_args()
-    eval_path = args.path / "runs" / args.run_id
+    eval_path = Path(args.path) / "runs" / args.run_id
     eval_path.mkdir(exist_ok=True, parents=True)
 
+    train_file_path = args.path / "train-v2.0.json"
+
+    if not train_file_path.exists():
+        logger.error(
+            "Training file not found at {}! Please read the README.md in the eval directory!>",
+            train_file_path,
+        )
+        sys.exit(1)
+
     _init_logger(eval_path)
-    config = EvalConfig(eval_path=eval_path, run_id=args.run_id)
+    config = EvalConfig(
+        eval_path=eval_path,
+        train_data=json.loads(train_file_path.read_text(encoding="utf-8")),
+        run_id=args.run_id,
+    )
 
     logger.info(
-        "Starting evaluation %s under %s",
+        "Starting evaluation {} under {}",
         config.run_id,
         config.eval_path,
     )
@@ -79,7 +117,8 @@ def main():
         params = EvalParams(
             id=id,
             domain=domain,
-            logger=logger.bind(domain=id),
+            domain_train_data=_find_domain_train_data(config.train_data, id),
+            logger=logger.bind(domain_id=id),
             paths=paths,
             config=config,
         )
@@ -92,6 +131,7 @@ class EvalConfig:
     """Config across the whole valuation run"""
 
     eval_path: Path
+    train_data: dict
     run_id: str
 
 
@@ -113,6 +153,8 @@ class EvalParams:
     id: str
     domain: str
 
+    domain_train_data: dict
+
     logger: "loguru.Logger"
 
     paths: EvalPaths
@@ -127,7 +169,7 @@ def _read_comittee_if_cached(path: Path):
 
 
 def _generate_comittee(params: EvalParams):
-    params.logger.debug("Generating comittee for %s", params.domain)
+    params.logger.debug("Generating comittee for {}", params.domain)
 
     comittee = _read_comittee_if_cached(params.paths.comittee_path)
 
@@ -208,24 +250,24 @@ def _generate_all_cqs(groups: list[list[ComitteeMember]], params: EvalParams):
 
 
 def _generate_cqs(params: EvalParams):
-    params.logger.info("Generating CQs...", params.domain)
+    params.logger.debug("Generating CQs...", params.domain)
 
     comittee = _generate_comittee(params)
-    params.logger.debug("Generated comittee with %s members", len(comittee.members))
+    params.logger.debug("Generated comittee with {} members", len(comittee.members))
 
     groups = comittee.divide_into_groups(4)
 
     scope_documents = _generate_scope_documents(groups, params)
-    params.logger.debug("Generated %i scope documents", len(scope_documents))
+    params.logger.debug("Generated {} scope documents", len(scope_documents))
 
     merged_scope = _merge_scope_documents(scope_documents, params)
-    params.logger.debug("Merged scope document has %i characters", len(merged_scope))
+    params.logger.debug("Merged scope document has {} characters", len(merged_scope))
 
     return _generate_all_cqs(groups, params)
 
 
 def _generate_ontology(cqs: list[str], path: Path, params: EvalParams):
-    params.logger.info("Generating ontology...")
+    params.logger.debug("Generating ontology...")
 
     ontology_folder_path = path / "ontology"
     ontology_folder_path.mkdir(exist_ok=True, parents=True)
@@ -235,7 +277,7 @@ def _generate_ontology(cqs: list[str], path: Path, params: EvalParams):
     if ontology_file_path.exists():
         return Ontology.model_validate_json(
             ontology_file_path.read_text(encoding="utf-8")
-        )
+        ), ontology_file_path
 
     else:
         return generate_ontology(
@@ -243,6 +285,29 @@ def _generate_ontology(cqs: list[str], path: Path, params: EvalParams):
             params.domain,
             folder=ontology_folder_path,
             fname=ontology_file_path.name,
+        ), ontology_file_path
+
+
+def _generate_kg(
+    texts: list[str], path: Path, ontology_file_path: Path, params: EvalParams
+):
+    params.logger.debug("Generating KG...")
+
+    kg_folder_path = path / "kg"
+    kg_folder_path.mkdir(exist_ok=True, parents=True)
+
+    kg_file_path = kg_folder_path / "kg.json"
+
+    if kg_file_path.exists():
+        return KG.model_validate_json(kg_file_path.read_text(encoding="utf-8"))
+
+    else:
+        return generate_kg(
+            texts,
+            params.domain,
+            ontology_file=ontology_file_path,
+            output_folder=kg_folder_path,
+            output_filename=kg_file_path.name,
         )
 
 
@@ -250,13 +315,39 @@ def eval(params: EvalParams):
     """Run evaluation for a single domain"""
 
     params.logger.info(
-        "Starting evaluation %s for domain %s",
-        params.id,
-        params.domain,
+        "Evaluating domain {domain} ({id})",
+        domain=params.domain,
+        id=params.id,
     )
 
     path = params.config.eval_path / params.id
     path.mkdir(exist_ok=True, parents=True)
 
     cqs = _generate_cqs(params)
-    params.logger.debug("Generated %i CQs", len(cqs))
+    params.logger.info("Generated {} CQs", len(cqs))
+
+    ontology, ontology_file_path = _generate_ontology(cqs, path, params)
+    params.logger.info(
+        "Generated ontology with {} subclass relations, {} object properties, and {} data properties",
+        len(ontology.subclass_relations),
+        len(ontology.object_properties),
+        len(ontology.data_properties),
+    )
+
+    # take contexts from the training data
+    texts = [p["context"] for p in params.domain_train_data["paragraphs"]]
+
+    params.logger.debug(
+        "Found {} contexts in training data with a total length of ~{} words",
+        len(texts),
+        sum(len(t.split(" ")) for t in texts),
+    )
+
+    kg = _generate_kg(
+        texts=texts,
+        path=path,
+        ontology_file_path=ontology_file_path,
+        params=params,
+    )
+
+    params.logger.info("Generated KG with {} triplets", len(kg.triplets))
