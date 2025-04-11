@@ -77,9 +77,9 @@ def _generate_cqs_with_cache(domain: str, merged_scope: str, comittee: Comittee,
             cqs.extend(group_cqs_cache_path.read_text().split("\n"))
             continue
 
-        cqs = generate_questions(domain, group, merged_scope)
-        cqs.extend(cqs)
-        group_cqs_cache_path.write_text("\n".join(cqs))
+        group_cqs = generate_questions(domain, group, merged_scope)
+        group_cqs_cache_path.write_text("\n".join(group_cqs))
+        cqs.extend(group_cqs)
 
     combined_cqs_path.write_text("\n".join(cqs))
 

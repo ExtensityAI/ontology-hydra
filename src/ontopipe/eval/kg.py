@@ -15,9 +15,7 @@ from ontopipe.prompts import prompt_registry
     pre_remedy=False,
     post_remedy=True,
     verbose=True,
-    remedy_retry_params=dict(
-        tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False
-    ),
+    remedy_retry_params=dict(tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False),
 )
 class TripletExtractor(Expression):
     def __init__(self, name: str, threshold: float = 0.7, *args, **kwargs):
@@ -39,9 +37,7 @@ class TripletExtractor(Expression):
             return True  # Nothing was extracted.
         for triplet in output.triplets:
             if triplet.confidence < self.threshold:
-                raise ValueError(
-                    f"Confidence score {triplet.confidence} is below threshold {self.threshold}!"
-                )
+                raise ValueError(f"Confidence score {triplet.confidence} is below threshold {self.threshold}!")
         return True
 
     @property
@@ -83,7 +79,7 @@ def generate_kg(
 
     try:
         ontology = TripletExtractor.load_ontology(ontology_file)
-        logger.info("Ontology successfully loaded from file.")
+        logger.debug("Ontology successfully loaded from file.")
     except Exception as e:
         logger.error(f"Error loading ontology: {str(e)}")
         raise
@@ -111,9 +107,9 @@ def generate_kg(
         usage = tracker.usage
         extractor.contract_perf_stats()
 
-    logger.info(f"\nAPI Usage:\n{usage}")
+    logger.debug(f"API Usage:\n{usage}")
     extractor.dump_kg(output_folder, output_filename)
-    logger.info(f"Knowledge graph saved to {output_folder / output_filename}")
+    logger.debug(f"Knowledge graph saved to {output_folder / output_filename}")
 
     return extractor.get_kg()
 

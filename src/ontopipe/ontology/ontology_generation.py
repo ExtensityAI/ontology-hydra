@@ -26,9 +26,7 @@ from ontopipe.prompts import prompt_registry
     pre_remedy=False,
     post_remedy=True,
     verbose=True,
-    remedy_retry_params=dict(
-        tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False
-    ),
+    remedy_retry_params=dict(tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False),
 )
 class OWLBuilder(Expression):
     def __init__(self, name: str, *args, **kwargs):
@@ -112,9 +110,7 @@ def generate_ontology(
     with MetadataTracker() as tracker:  # For gpt-* models
         for i in tqdm(range(0, len(cqs), batch_size)):
             batch_cqs = cqs[i : i + batch_size]
-            input_data = OWLBuilderInput(
-                competency_question=batch_cqs, ontology_state=state
-            )
+            input_data = OWLBuilderInput(competency_question=batch_cqs, ontology_state=state)
             try:
                 new_state = builder(input=input_data)
             except Exception as e:
@@ -126,9 +122,9 @@ def generate_ontology(
         builder.contract_perf_stats()
         usage = tracker.usage
 
-    logger.info(f"\nAPI Usage:\n{usage}")
+    logger.debug(f"API Usage:\n{usage}")
     builder.dump_ontology(folder, fname)
-    logger.info("Ontology creation completed!")
+    logger.debug("Ontology creation completed!")
 
     return builder.get_ontology()
 

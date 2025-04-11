@@ -47,9 +47,7 @@ def generate_visjs_from_triplets(json_file):
             }
         )
 
-    js_code = (
-        f"nodes = new vis.DataSet({json.dumps(list(nodes.values()), indent=2)});\n"
-    )
+    js_code = f"nodes = new vis.DataSet({json.dumps(list(nodes.values()), indent=2)});\n"
     js_code += f"edges = new vis.DataSet({json.dumps(edges, indent=2)});"
 
     return js_code
@@ -57,9 +55,7 @@ def generate_visjs_from_triplets(json_file):
 
 # Example usage
 if __name__ == "__main__":
-    input_path = (
-        "eval/runs/cmdZlV9O/To_Kill_A_Mockingbird/kg/kg.json"  # your JSON filename
-    )
+    input_path = r"eval\runs\20250411_rRCh8A#\fiction\topics\To_Kill_A_Mockingbird\kg.json"  # your JSON filename
     output_path = "mockingbird_vis.js"
 
     js_output = generate_visjs_from_triplets(input_path)

@@ -1,3 +1,4 @@
+import json
 import logging
 import secrets
 import sys
@@ -6,15 +7,38 @@ from datetime import date
 from pathlib import Path
 
 from loguru import logger
-from pydantic import BaseModel, ConfigDict
+from pydantic import BaseModel
 
 from ontopipe.eval.kg import generate_kg
 from ontopipe.eval.utils import InterceptHandler
 from ontopipe.models import KG
 from ontopipe.pipe import ontopipe
 
-DOMAINS = [
-    ("To_Kill_A_Mockingbird", "Fictional Works"),
+SQUAD_TRAIN_DATASET_PATH = Path("eval/train-v2.0.json")
+
+if not SQUAD_TRAIN_DATASET_PATH.exists():
+    raise FileNotFoundError(
+        f"Could not find SQuAD dataset at {SQUAD_TRAIN_DATASET_PATH}. "
+        "Please download the dataset from https://rajpurkar.github.io/SQuAD-explorer/dataset/train-v2.0.json "
+        "and place it in the eval directory."
+    )
+
+SQUAD_TRAIN_DATASET = json.loads(SQUAD_TRAIN_DATASET_PATH.read_text(encoding="utf-8"))
+
+
+class EvalScenario(BaseModel):
+    id: str
+
+    domain: str
+    """The domain used for ontology creation"""
+
+    squad_titles: list[str]
+    """Titles of topics in the SQuAD dataset to use for evaluation (title field)"""
+    # intuition: we create an ontology for the domain, create KGs for each SQuAD topic based on the associated texts and the ontology and then evaluate using SQuAD questions
+
+
+SCENARIOS = [
+    EvalScenario(id="fiction", domain="Fiction Books", squad_titles=["To_Kill_A_Mockingbird"]),
 ]
 
 
@@ -56,16 +80,6 @@ def _parse_args():
     return parser.parse_args()
 
 
-class EvalParams(BaseModel):
-    """Parameters for a single evaluation"""
-
-    model_config = ConfigDict(frozen=True)
-
-    id: str
-    domain: str
-    path: Path
-
-
 def _generate_kg(texts: list[str], domain: str, kg_path: Path, ontology_path: Path):
     """Generate a knowledge graph from a list of texts as well as the current ontology and domain"""
 
@@ -82,27 +96,52 @@ def _generate_kg(texts: list[str], domain: str, kg_path: Path, ontology_path: Pa
     )
 
 
-def eval(params: EvalParams):
-    """Run evaluation for a single domain"""
+def _load_squad_contexts(title: str):
+    topic = next((item for item in SQUAD_TRAIN_DATASET["data"] if item["title"].lower() == title.lower()), None)
+
+    if topic is None:
+        raise ValueError(f"Could not find topic with title '{title}' in SQuAD dataset")
+
+    return [p["context"] for p in topic["paragraphs"] if "context" in p]
+
+
+def _eval_squad_topic(title: str, scenario: EvalScenario, ontology_path: Path, path: Path):
+    logger.info("Generating kg for '{}'", title)
+
+    contexts = _load_squad_contexts(title)
+    logger.debug(
+        "Found {} contexts with {} words for topic '{}'", len(contexts), sum(len(c.split()) for c in contexts), title
+    )
+
+    kg = _generate_kg(
+        contexts,  # TODO add texts here!
+        title,
+        path / "kg.json",
+        ontology_path,
+    )
+
+
+def eval(scenario: EvalScenario, path: Path):
+    """Run evaluation for a single scenario"""
 
     logger.info(
-        "Evaluating ontopipe on domain {} ({})",
-        params.domain,
-        params.id,
+        "Evaluating ontopipe on scenario '{}'",
+        scenario.id,
     )
 
     logger.info("Generating ontology...")
-    ontology = ontopipe(params.domain, params.path)
+    ontology = ontopipe(scenario.domain, path)
 
-    logger.info("Generating kg...")
-    kg = _generate_kg(
-        [],  # TODO add texts here!
-        params.domain,
-        params.path / "kg.json",
-        params.path / "ontology.json",
-    )
+    topics_path = path / "topics"
+    topics_path.mkdir(exist_ok=True, parents=True)
 
-    # TODO now do evaluation with KG -> prompt model with question and kg and tell it to answer solely based on the KG (thus no answer if not in KG).
+    ontology_path = path / "ontology.json"
+
+    for title in scenario.squad_titles:
+        topic_path = topics_path / title
+        topic_path.mkdir(exist_ok=True, parents=True)
+
+        _eval_squad_topic(title, scenario, ontology_path, topic_path)
 
 
 def _generate_unique_run_id(path: Path) -> str:
@@ -111,6 +150,7 @@ def _generate_unique_run_id(path: Path) -> str:
 
     while run_id is None or (path / run_id).exists():
         run_id = _generate_run_id()
+
     return run_id
 
 
@@ -124,20 +164,19 @@ def main():
     _init_logging(eval_path)
 
     logger.info(
-        "Starting evaluation {} under {}",
+        "Starting evaluation '{}' under '{}'",
         run_id,
         eval_path,
     )
 
     # run eval for each domain
-    for id, domain in DOMAINS:
-        path = eval_path / id
+    for scenario in SCENARIOS:
+        path = eval_path / scenario.id
         path.mkdir(exist_ok=True, parents=True)
 
-        params = EvalParams(id=id, domain=domain, path=path)
-
-        # store params in JSON file
-        (path / "params.json").write_text(params.model_dump_json(indent=2))
+        # store scenario in JSON file
+        # TODO this is overwritten when rerunning the evaluation, should be fixed
+        (path / "scenario.json").write_text(scenario.model_dump_json(indent=2))
 
         with logger.contextualize(domain_id=id):
-            eval(params)
+            eval(scenario, path)

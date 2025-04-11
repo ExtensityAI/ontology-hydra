@@ -1,0 +1,69 @@
+# Scope Document for Fictional Works 
+
+## 1. Definition of Fictional Works Domain
+Fictional works refer to narratives created from the imagination rather than strictly based on real events. This domain encompasses a variety of genres and forms, and it serves to communicate ideas, themes, and experiences through invented characters and plots.
+
+### 1.1 Included Genres
+- **Science Fiction (Sci-Fi)**
+  - Hard Science Fiction
+  - Space Opera
+  - Dystopian Narratives
+  - Cyberpunk and Technological Futures
+  
+- **Fantasy**
+  - High Fantasy
+  - Urban Fantasy
+  - Magical Realism
+  
+- **Young Adult (YA)**
+  - Contemporary YA
+  - YA Dystopian and Fantasy
+  
+- **Speculative Fiction**
+  - Alternate Histories
+  - Future Societies
+
+### 1.2 Themes and Concepts
+- **Cultural Identity**
+  - Exploration of various cultural backgrounds
+  - Representation of hybrid narratives
+  
+- **Social Justice**
+  - Themes relating to equity
+  - Discussions surrounding personal and societal issues (e.g., mental health, race, gender)
+
+- **Environmental Concerns**
+  - Sustainability within narratives
+  - Speculative views on ecology and climate change
+
+- **Interpersonal Dynamics**
+  - Family relationships
+  - Friendships and community struggles
+  
+## 2. Exclusions from the Fictional Works Domain
+### 2.1 Non-Fiction
+- **Biographies and Memoirs**
+- **Historical Accounts**
+  
+### 2.2 Technical Writing
+- **Academic Papers**
+- **Instructional Manuals**
+
+### 2.3 Purely Literary Works
+- **Experimental Forms** that may not fit conventional narrative structures (e.g., abstract art in text)
+
+## 3. Gray Areas and Overlaps
+### 3.1 Cross-Genre Works
+- Blurred lines exist between genres, such as:
+  - Science Fiction elements in Fantasy
+  - Young Adult narratives addressing classic literary themes
+
+### 3.2 Narrative Techniques
+- **Interactive Narratives** influenced by gaming 
+- **Transmedia Storytelling** approaches that incorporate disparate formats (e.g., graphic novels, websites)
+
+### 3.3 Crossover with Non-Fiction
+- **Creative Non-Fiction** that incorporates narrative techniques to enhance real-life accounts 
+
+## 4. Conclusion
+The domain of Fictional Works is broad yet clearly defined by its focus on imaginative narratives across various genres and themes. While there are specific exclusions and gray areas that may lead to overlap with adjacent domains, establishing these boundaries will facilitate clear and productive discussions among industry professionals.
