@@ -3,13 +3,17 @@ import logging
 import secrets
 import sys
 from argparse import ArgumentParser
+from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
 
 from loguru import logger
 from pydantic import BaseModel
+from tqdm import tqdm
 
 from ontopipe.eval.kg import generate_kg
+from ontopipe.eval.squad_predictor import QAPrediction, Question, predict_squad
+from ontopipe.eval.squad_v2.squad_v2 import SquadV2
 from ontopipe.eval.utils import InterceptHandler
 from ontopipe.models import KG
 from ontopipe.pipe import ontopipe
@@ -96,29 +100,81 @@ def _generate_kg(texts: list[str], domain: str, kg_path: Path, ontology_path: Pa
     )
 
 
-def _load_squad_contexts(title: str):
+@dataclass(frozen=True, slots=True)
+class SquadTopic:
+    data: dict
+
+    @property
+    def contexts(self) -> list[str]:
+        """Return the contexts for this topic"""
+        return [p["context"] for p in self.data["paragraphs"] if "context" in p]
+
+    @property
+    def questions(self) -> list[Question]:
+        """Return the questions for this topic"""
+        return [
+            Question(id=qa["id"], text=qa["question"], answers=[a["text"] for a in qa["answers"]])
+            for p in self.data["paragraphs"]
+            for qa in p["qas"]
+        ]
+
+
+def _load_squad_topic(title: str):
     topic = next((item for item in SQUAD_TRAIN_DATASET["data"] if item["title"].lower() == title.lower()), None)
 
     if topic is None:
         raise ValueError(f"Could not find topic with title '{title}' in SQuAD dataset")
 
-    return [p["context"] for p in topic["paragraphs"] if "context" in p]
+    return SquadTopic(topic)
 
 
 def _eval_squad_topic(title: str, scenario: EvalScenario, ontology_path: Path, path: Path):
     logger.info("Generating kg for '{}'", title)
 
-    contexts = _load_squad_contexts(title)
+    topic = _load_squad_topic(title)
     logger.debug(
-        "Found {} contexts with {} words for topic '{}'", len(contexts), sum(len(c.split()) for c in contexts), title
+        "Found {} contexts with {} words for topic '{}'",
+        len(topic.contexts),
+        sum(len(c.split()) for c in topic.contexts),
+        title,
     )
 
     kg = _generate_kg(
-        contexts,  # TODO add texts here!
+        topic.contexts,
         title,
         path / "kg.json",
         ontology_path,
     )
+
+    logger.debug("KG generated with {} triplets", len(kg.triplets))
+
+    questions = topic.questions
+
+    logger.info("Predicting answers for topic '{}' with {} questions", title, len(questions))
+    predictions = list(tqdm(predict_squad(kg, questions), desc="Predicting answers", total=len(topic.questions)))
+
+    metrics = _calculate_squad_metrics(predictions, scenario)
+    logger.info("SQuAD v2 metrics: {}", metrics)
+
+
+def _calculate_squad_metrics(predictions: list[QAPrediction], scenario: EvalScenario):
+    """Calculate SQuAD v2 metrics for the given predictions and scenario"""
+    # Prepare predictions in SQuAD format
+    pred_dict = {pred.id: pred.prediction_text or "" for pred in predictions}
+
+    # Prepare dataset with ground truth answers
+    dataset = []
+    for title in scenario.squad_titles:
+        topic = _load_squad_topic(title)
+        for paragraph in topic.data["paragraphs"]:
+            for qa in paragraph["qas"]:
+                dataset.append({"paragraphs": [{"qas": [qa]}]})
+
+    # Get metrics using SquadV2 evaluation
+    metric = SquadV2()
+    results = metric.compute(predictions=pred_dict, references=dataset)
+
+    return results
 
 
 def eval(scenario: EvalScenario, path: Path):
