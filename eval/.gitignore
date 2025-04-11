@@ -1,5 +1,5 @@
 # ignore logs of evals
-./runs/*/logs/
+*.log
 
 # ignore training set
 train-v2.0.json

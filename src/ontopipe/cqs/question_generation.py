@@ -49,6 +49,6 @@ def generate_questions(domain: str, group: list[ComitteeMember], scope_document:
     if response.choices[0].message.content is None:
         raise ValueError("Failed to generate questions")
 
-    # split response into lines, filter out empty lines and lines that don't start with "-"
+    # split response into lines, filter out empty lines and lines that don't start with "-", and strip the leading "-"
     questions = response.choices[0].message.content.strip().split("\n")
-    return [q.strip() for q in questions if q.strip().startswith("-")]
+    return [q[1:].strip() for q in questions if q.strip().startswith("-")]

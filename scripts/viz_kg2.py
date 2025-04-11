@@ -58,7 +58,7 @@ def generate_visjs_from_triplets(json_file):
 # Example usage
 if __name__ == "__main__":
     input_path = (
-        "eval/runs/nNZq1Fy6/To_Kill_A_Mockingbird/kg/kg.json"  # your JSON filename
+        "eval/runs/cmdZlV9O/To_Kill_A_Mockingbird/kg/kg.json"  # your JSON filename
     )
     output_path = "mockingbird_vis.js"
 

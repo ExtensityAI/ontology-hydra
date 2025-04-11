@@ -1,131 +1,74 @@
-from tqdm import tqdm
-from loguru import logger
-from pydantic import Field
-import pandas as pd
 import json
 
-from symai import Expression, Import, Symbol
+from loguru import logger
+from pydantic import Field
+from symai import Expression
 from symai.components import FileReader, MetadataTracker
 from symai.models import LLMDataModel
 from symai.strategy import contract
 
-from chonkie import (RecursiveChunker, SDPMChunker, SemanticChunker,
-                     SentenceChunker, TokenChunker)
-from chonkie.embeddings.base import BaseEmbeddings
-from tokenizers import Tokenizer
-
-CHUNKER_MAPPING = {
-    "TokenChunker": TokenChunker,
-    "SentenceChunker": SentenceChunker,
-    "RecursiveChunker": RecursiveChunker,
-    "SemanticChunker": SemanticChunker,
-    "SDPMChunker": SDPMChunker,
-}
-
-class ChonkieChunker(Expression):
-    def __init__(
-        self,
-        tokenizer_name: str = "gpt2",
-        embedding_model_name: str | BaseEmbeddings = "minishlab/potion-base-8M",
-        **symai_kwargs,
-    ):
-        super().__init__(**symai_kwargs)
-        self.tokenizer_name = tokenizer_name
-        self.embedding_model_name = embedding_model_name
-
-    def forward(self, data: Symbol[str | list[str]], chunker_name: str = "RecursiveChunker", **chunker_kwargs) -> Symbol[list[str]]:
-        chunker = self._resolve_chunker(chunker_name, **chunker_kwargs)
-        chunks = [self._clean_text(chunk.text) for chunk in chunker(data.value)]
-        return self._to_symbol(chunks)
-
-    def _resolve_chunker(self, chunker_name: str, **chunker_kwargs) -> TokenChunker | SentenceChunker | RecursiveChunker | SemanticChunker | SDPMChunker:
-        if chunker_name in ["TokenChunker", "SentenceChunker", "RecursiveChunker"]:
-            tokenizer = Tokenizer.from_pretrained(self.tokenizer_name)
-            return CHUNKER_MAPPING[chunker_name](tokenizer, **chunker_kwargs)
-        elif chunker_name in ["SemanticChunker", "SDPMChunker"]:
-            return CHUNKER_MAPPING[chunker_name](embedding_model=self.embedding_model_name, **chunker_kwargs)
-        else:
-            raise ValueError(f"Chunker {chunker_name} not found. Available chunkers: {CHUNKER_MAPPING.keys()}. See docs (https://docs.chonkie.ai/getting-started/introduction) for more info.")
-
-    def _clean_text(self, text: str) -> str:
-        """Cleans text by removing problematic characters."""
-        text = text.replace('\x00', '')                              # Remove null bytes (\x00)
-        text = text.encode('utf-8', errors='ignore').decode('utf-8') # Replace invalid UTF-8 sequences
-        return text
-
-# Data Models
-class Entity(LLMDataModel):
-    """Represents an entity in the ontology"""
-    name: str = Field(description="Name of the entity")
-    type: str = Field(description="Type/category of the entity")
-
-class Relationship(LLMDataModel):
-    """Represents a relationship type in the ontology"""
-    name: str = Field(description="Name of the relationship")
-
-class OntologySchema(LLMDataModel):
-    """Defines the ontology schema with allowed entities and relationships"""
-    entities: list[Entity] = Field(description="List of valid entity types")
-    relationships: list[Relationship] = Field(description="List of valid relationship types")
-
-class TripletInput(LLMDataModel):
-    """Input for triplet extraction"""
-    text: str = Field(description="Text to extract triplets from")
-    ontology: OntologySchema = Field(description="Ontology schema to use for extraction")
-
-class Triplet(LLMDataModel):
-    """A semantic triplet with typed entities and relationship"""
-    subject: Entity
-    predicate: Relationship
-    object: Entity
-    confidence: float = Field(default=1.0, ge=0.0, le=1.0, description="Confidence score for the extracted triplet [0, 1]")
-
-class TripletOutput(LLMDataModel):
-    """Collection of extracted triplets forming a knowledge graph"""
-    triplets: list[Triplet] | None = Field(default=None, description="List of extracted triplets")
 
 class QAPrediction(LLMDataModel):
     """Represents a prediction for a question-answer pair"""
+
     id: str = Field(description="Identification field of the question-answer pair")
     prediction_text: str = Field(description="The text of the answer")
-    no_answer_probability: float = Field(default=0.0, ge=0.0, le=1.0, description="Probability that the question has no answer")
+    no_answer_probability: float = Field(
+        default=0.0,
+        ge=0.0,
+        le=1.0,
+        description="Probability that the question has no answer",
+    )
+
 
 class QAReference(LLMDataModel):
     """Represents a reference for a question-answer pair"""
+
     id: str = Field(description="Identification field of the question-answer pair")
-    answers: list[dict] = Field(description="List of answer dictionaries with text field")
-    no_answer_threshold: float = Field(default=0.5, ge=0.0, le=1.0, description="Probability threshold to decide a question has no answer")
+    answers: list[dict] = Field(
+        description="List of answer dictionaries with text field"
+    )
+    no_answer_threshold: float = Field(
+        default=0.5,
+        ge=0.0,
+        le=1.0,
+        description="Probability threshold to decide a question has no answer",
+    )
+
 
 class QAInput(LLMDataModel):
     """Input for question answering"""
+
     context: str = Field(description="Context text to extract answers from")
     questions: list[str] = Field(description="List of questions to answer")
     question_ids: list[str] = Field(description="List of question IDs")
 
+
 class QAOutput(LLMDataModel):
     """Collection of predictions and references for question-answer pairs"""
-    predictions: list[QAPrediction] = Field(description="List of predictions for question-answer pairs")
-    references: list[QAReference] = Field(default=None, description="List of reference question-answers")
+
+    predictions: list[QAPrediction] = Field(
+        description="List of predictions for question-answer pairs"
+    )
+    references: list[QAReference] | None = Field(
+        default=None, description="List of reference question-answers"
+    )
+
 
 @contract(
     pre_remedy=False,
     post_remedy=True,
     verbose=True,
     remedy_retry_params=dict(
-        tries=5,
-        delay=0.5,
-        max_delay=15,
-        jitter=0.1,
-        backoff=2,
-        graceful=False
-    )
+        tries=5, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False
+    ),
 )
 class QuestionAnswerPredictor(Expression):
     """Predicts answers to questions based on context"""
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.threshold = kwargs.get('threshold', 0.5)
+        self.threshold = kwargs.get("threshold", 0.5)
 
     def forward(self, input: QAInput, **kwargs) -> QAOutput:
         if self.contract_result is None:
@@ -155,7 +98,9 @@ class QuestionAnswerPredictor(Expression):
         # Validate probability values
         for pred in output.predictions:
             if not (0 <= pred.no_answer_probability <= 1):
-                raise ValueError(f"Invalid no_answer_probability: {pred.no_answer_probability}")
+                raise ValueError(
+                    f"Invalid no_answer_probability: {pred.no_answer_probability}"
+                )
 
         return True
 
@@ -174,24 +119,31 @@ class QuestionAnswerPredictor(Expression):
             '{"qa_pairs": [{"question": "string", "answer": "string"}]}'
         )
 
+
 if __name__ == "__main__":
     reader = FileReader()
     chunker = ChonkieChunker()
     predictor = QuestionAnswerPredictor(tokenizer_name="Xenova/gpt-4o")
 
-    DATA_PATH = f"data/squad_2.0_Normans"
+    DATA_PATH = "data/squad_2.0_Normans"
 
     # Control the number of questions to process (set to None to process all)
     MAX_QUESTIONS = None
 
     # Toggle between using full context or only relevant context per question
-    USE_RELEVANT_CONTEXT_ONLY = True  # Set to False to use full context for all questions
+    USE_RELEVANT_CONTEXT_ONLY = (
+        True  # Set to False to use full context for all questions
+    )
 
     # Title of the dataset to process
     DATASET = "Normans"
 
     # Load questions and context from JSON file
-    with open("/Users/ryang/Work/ExtensityAI/Ontology/Evaluation/data/dev-v2.0.json", "r", encoding="utf-8") as f:
+    with open(
+        "/Users/ryang/Work/ExtensityAI/Ontology/Evaluation/data/dev-v2.0.json",
+        "r",
+        encoding="utf-8",
+    ) as f:
         squad_data = json.load(f)
 
     # Extract questions and context
@@ -217,8 +169,11 @@ if __name__ == "__main__":
                     # Create reference object for evaluation
                     reference = QAReference(
                         id=qa["id"],
-                        answers=[{"text": ans["text"], "answer_start": ans["answer_start"]} for ans in qa["answers"]],
-                        no_answer_threshold=0.5  # Default threshold
+                        answers=[
+                            {"text": ans["text"], "answer_start": ans["answer_start"]}
+                            for ans in qa["answers"]
+                        ],
+                        no_answer_threshold=0.5,  # Default threshold
                     )
                     references.append(reference)
 
@@ -234,27 +189,31 @@ if __name__ == "__main__":
         logger.info(f"Processing a subset of {MAX_QUESTIONS} questions")
 
     logger.info(f"Loaded {len(questions)} questions from the {DATASET} dataset")
-    logger.info(f"Using {'relevant context only' if USE_RELEVANT_CONTEXT_ONLY else 'full context'} for each question")
+    logger.info(
+        f"Using {'relevant context only' if USE_RELEVANT_CONTEXT_ONLY else 'full context'} for each question"
+    )
 
     # Process each question individually
     all_predictions = []
 
     for i, (question, question_id) in enumerate(zip(questions, question_ids)):
-        logger.info(f"Processing question {i+1}/{len(questions)}: {question}")
+        logger.info(f"Processing question {i + 1}/{len(questions)}: {question}")
 
         # Determine which context to use
         if USE_RELEVANT_CONTEXT_ONLY:
             context_text = question_to_context[question_id]
-            logger.info(f"Using relevant context of length: {len(context_text)} characters")
+            logger.info(
+                f"Using relevant context of length: {len(context_text)} characters"
+            )
         else:
             context_text = full_context_text
-            logger.info(f"Using full context of length: {len(full_context_text)} characters")
+            logger.info(
+                f"Using full context of length: {len(full_context_text)} characters"
+            )
 
         # Create input data for a single question
         input_data = QAInput(
-            context=context_text,
-            questions=[question],
-            question_ids=[question_id]
+            context=context_text, questions=[question], question_ids=[question_id]
         )
 
         # Track usage and get prediction for this question
@@ -268,20 +227,21 @@ if __name__ == "__main__":
                     # Display result for this question
                     logger.info(f"\n-------\nQuestion ID: {prediction.id}")
                     logger.info(f"Prediction: {prediction.prediction_text}")
-                    logger.info(f"No Answer Probability: {prediction.no_answer_probability}\n-------\n")
+                    logger.info(
+                        f"No Answer Probability: {prediction.no_answer_probability}\n-------\n"
+                    )
                 else:
                     logger.warning(f"No prediction returned for question: {question}")
             except Exception as e:
-                logger.error(f"Error generating prediction for question {question_id}: {str(e)}")
+                logger.error(
+                    f"Error generating prediction for question {question_id}: {str(e)}"
+                )
 
             usage = tracker.usage
             logger.info(f"API Usage for this question:\n{usage}")
 
     # Create final result with all predictions
-    final_result = QAOutput(
-        predictions=all_predictions,
-        references=references
-    )
+    final_result = QAOutput(predictions=all_predictions, references=references)
 
     # Display final stats
     predictor.contract_perf_stats()
@@ -293,9 +253,9 @@ if __name__ == "__main__":
         json.dump(
             {
                 "predictions": [pred.dict() for pred in all_predictions],
-                "references": [ref.dict() for ref in references]
+                "references": [ref.dict() for ref in references],
             },
             f,
-            indent=2
+            indent=2,
         )
     logger.info(f"\nPredictions saved to {output_file}")

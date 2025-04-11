@@ -1,0 +1,113 @@
+# Scope Document for the Domain of Fictional Works
+
+## 1. Introduction
+This document outlines the scope of topics related to Fictional Works, informed by the collaborative expertise of writers, librarians, cultural critics, and other stakeholders in storytelling. It aims to establish a comprehensive framework for discussions, analyses, and further exploration of this domain.
+
+## 2. Definition of Fictional Works
+Fictional works refer to narratives originating from an author's imagination, presented through various formats and genres. These narratives encompass character development, plot progression, and thematic exploration, conveying cultural, social, and personal insights.
+
+### 2.1 Included Formats
+- **Novels**
+  - Literary Fiction
+  - Genre Fiction (e.g., Science Fiction, Fantasy, Mystery, Romance)
+  - Young Adult Fiction
+- **Short Stories**
+- **Graphic Novels and Comics**
+- **Plays and Screenplays**
+- **Serialized Fiction (online formats)**
+- **Audiobooks and E-books**
+- **Poetry (with narrative elements)**
+
+### 2.2 Included Genres
+- **Fantasy**
+- **Science Fiction**
+- **Historical Fiction**
+- **Postmodern and Contemporary Fiction**
+- **Magical Realism**
+- **Mystery and Thriller**
+- **Horror**
+- **Contemporary Fiction**
+- **Children's Literature**
+
+## 3. Key Topics of Interest
+
+### 3.1 Narrative Structures
+- Types of narratives (linear, non-linear, fragmented)
+- Tropes and archetypes in storytelling
+- Use of unreliable narrators
+- Narrative techniques (point of view, voice, and time)
+
+### 3.2 Character Development
+- Representation of cultural identities
+- Archetypes and stereotypes in character design
+- Dynamics of character relationships and growth
+- Multi-dimensional characterization
+
+### 3.3 Themes and Motifs
+- Identity and diaspora narratives
+- Mental health and wellness in fiction
+- Social justice and representation of marginalized communities (gender, race, sexuality)
+- Environmental concerns and sustainability in narratives
+- Intersectionality within character arcs
+
+### 3.4 Genre Analysis
+- Overview of various genres and their characteristics
+  - Speculative Fiction (sci-fi, fantasy)
+  - Literary Fiction vs. Commercial Fiction
+  - Historical Fiction and its cultural implications
+- Hybrid genres and transmedia narratives
+
+### 3.5 Cultural Critique
+- Reflection of socio-political issues in fictional works
+- Media representation and its influence on public perception
+- Examination of power dynamics within stories
+- Intersections of cultural norms and societal issues within narratives
+
+### 3.6 Reader Engagement
+- Impact of digital media on reading practices and audience reception
+- Community engagement through book clubs, podcasts, and social media
+- Role of interactive storytelling platforms and digital literature
+
+### 3.7 Authorial Intention and Reception
+- The significance of author background and identity
+- Historical and cultural context of writing
+- Critiquing reader interpretations and responses
+
+### 3.8 Literary Criticism and Analysis
+- Methods of literary critique (e.g., feminist, post-colonial, psychoanalytic)
+- Relationship between fiction and criticism
+- Role of literary journals and reviews in shaping public discourse
+
+## 4. Exclusions from the Domain
+The following areas are explicitly excluded from the domain of Fictional Works:
+
+### 4.1 Non-Fictional Works
+- Biographies, autobiographies, memoirs
+- Documentaries and essays
+- Academic texts that do not engage with fictional narratives directly
+
+### 4.2 Purely Technical Aspects
+- Detailed specifications of publishing and distribution without relevance to fiction
+- Business models and marketing strategies specific to self-publishing
+
+### 4.3 Non-Literary Forms
+- Film and television, unless they directly adapt or relate to fictional works
+- Performance art without narrative structure akin to literature
+
+## 5. Gray Areas and Overlaps
+Certain themes and topics may exhibit gray areas with adjacent domains, necessitating further exploration:
+
+### 5.1 Interdisciplinary Studies
+- Discussions on works that blend fiction with non-traditional formats (e.g., hybrid forms, creative non-fiction)
+
+### 5.2 Adaptations
+- Examination of adaptations into film, television, or other forms and their implications on original narratives, including issues of fidelity and transformation.
+
+### 5.3 Children’s and Young Adult Fiction
+- Distinctions specific to children's literature and YA genres, including age-appropriateness and thematic maturity.
+
+### 5.4 Digital and Interactive Media
+- Exploring narrative strategies in immersive media and video games, emphasizing player agency and ethical decision-making.
+
+## 6. Conclusion
+This scope document establishes a foundational understanding of the field of Fictional Works, identifying key formats, genres, and topics of interest while delineating boundaries to avoid conflating fiction with other forms of literature or media. This framework will serve as a basis for future discussions, collaborations, and explorations within the domain of Fictional Works.

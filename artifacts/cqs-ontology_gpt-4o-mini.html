@@ -1,2899 +1,1966 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        
-            <script src="lib/bindings/utils.js"></script>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-            
-        
-<center>
-<h1></h1>
-</center>
+  <head>
+    <meta charset="utf-8" />
 
-<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+    <script src="lib/bindings/utils.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css"
+      integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js"
+      integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <center>
+      <h1></h1>
+    </center>
+
+    <!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
 <script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
-          crossorigin="anonymous"
-        />
-        <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-          crossorigin="anonymous"
-        ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
 
+    <center>
+      <h1></h1>
+    </center>
+    <style type="text/css">
+      #mynetwork {
+        width: 100%;
+        height: 100vh;
+        background-color: #ffffff;
+        border: 1px solid lightgray;
+        position: relative;
+        float: left;
+      }
 
-        <center>
-          <h1></h1>
-        </center>
-        <style type="text/css">
+      #loadingBar {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(200, 200, 200, 0.8);
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        opacity: 1;
+      }
 
-             #mynetwork {
-                 width: 100%;
-                 height: 100vh;
-                 background-color: #ffffff;
-                 border: 1px solid lightgray;
-                 position: relative;
-                 float: left;
-             }
+      #bar {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 20px;
+        height: 20px;
+        margin: auto auto auto auto;
+        border-radius: 11px;
+        border: 2px solid rgba(30, 30, 30, 0.05);
+        background: rgb(0, 173, 246); /* Old browsers */
+        box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.4);
+      }
 
-             
-             #loadingBar {
-                 position:absolute;
-                 top:0px;
-                 left:0px;
-                 width: 100%;
-                 height: 100vh;
-                 background-color:rgba(200,200,200,0.8);
-                 -webkit-transition: all 0.5s ease;
-                 -moz-transition: all 0.5s ease;
-                 -ms-transition: all 0.5s ease;
-                 -o-transition: all 0.5s ease;
-                 transition: all 0.5s ease;
-                 opacity:1;
-             }
+      #border {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 500px;
+        height: 23px;
+        margin: auto auto auto auto;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+      }
 
-             #bar {
-                 position:absolute;
-                 top:0px;
-                 left:0px;
-                 width:20px;
-                 height:20px;
-                 margin:auto auto auto auto;
-                 border-radius:11px;
-                 border:2px solid rgba(30,30,30,0.05);
-                 background: rgb(0, 173, 246); /* Old browsers */
-                 box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
-             }
+      #text {
+        position: absolute;
+        top: 8px;
+        left: 530px;
+        width: 30px;
+        height: 50px;
+        margin: auto auto auto auto;
+        font-size: 22px;
+        color: #000000;
+      }
 
-             #border {
-                 position:absolute;
-                 top:10px;
-                 left:10px;
-                 width:500px;
-                 height:23px;
-                 margin:auto auto auto auto;
-                 box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
-                 border-radius:10px;
-             }
+      div.outerBorder {
+        position: relative;
+        top: 400px;
+        width: 600px;
+        height: 44px;
+        margin: auto auto auto auto;
+        border: 8px solid rgba(0, 0, 0, 0.1);
+        background: rgb(252, 252, 252); /* Old browsers */
+        background: -moz-linear-gradient(
+          top,
+          rgba(252, 252, 252, 1) 0%,
+          rgba(237, 237, 237, 1) 100%
+        ); /* FF3.6+ */
+        background: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          color-stop(0%, rgba(252, 252, 252, 1)),
+          color-stop(100%, rgba(237, 237, 237, 1))
+        ); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(
+          top,
+          rgba(252, 252, 252, 1) 0%,
+          rgba(237, 237, 237, 1) 100%
+        ); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(
+          top,
+          rgba(252, 252, 252, 1) 0%,
+          rgba(237, 237, 237, 1) 100%
+        ); /* Opera 11.10+ */
+        background: -ms-linear-gradient(
+          top,
+          rgba(252, 252, 252, 1) 0%,
+          rgba(237, 237, 237, 1) 100%
+        ); /* IE10+ */
+        background: linear-gradient(
+          to bottom,
+          rgba(252, 252, 252, 1) 0%,
+          rgba(237, 237, 237, 1) 100%
+        ); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+        border-radius: 72px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
 
-             #text {
-                 position:absolute;
-                 top:8px;
-                 left:530px;
-                 width:30px;
-                 height:50px;
-                 margin:auto auto auto auto;
-                 font-size:22px;
-                 color: #000000;
-             }
+  <body>
+    <div class="card" style="width: 100%">
+      <div id="mynetwork" class="card-body"></div>
+    </div>
 
-             div.outerBorder {
-                 position:relative;
-                 top:400px;
-                 width:600px;
-                 height:44px;
-                 margin:auto auto auto auto;
-                 border:8px solid rgba(0,0,0,0.1);
-                 background: rgb(252,252,252); /* Old browsers */
-                 background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
-                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
-                 background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
-                 background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
-                 background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
-                 background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
-                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
-                 border-radius:72px;
-                 box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
-             }
-             
-
-             
-
-             
-        </style>
-    </head>
-
-
-    <body>
-        <div class="card" style="width: 100%">
-            
-            
-            <div id="mynetwork" class="card-body"></div>
+    <div id="loadingBar">
+      <div class="outerBorder">
+        <div id="text">0%</div>
+        <div id="border">
+          <div id="bar"></div>
         </div>
+      </div>
+    </div>
 
-        
-            <div id="loadingBar">
-              <div class="outerBorder">
-                <div id="text">0%</div>
-                <div id="border">
-                  <div id="bar"></div>
-                </div>
-              </div>
-            </div>
-        
-        
+    <script type="text/javascript">
+      // initialize global variables.
+      var edges;
+      var nodes;
+      var allNodes;
+      var allEdges;
+      var nodeColors;
+      var originalNodes;
+      var network;
+      var container;
+      var options, data;
+      var filter = {
+        item: "",
+        property: "",
+        value: [],
+      };
 
-        <script type="text/javascript">
+      // This method is responsible for drawing the graph, returns the drawn network
+      function drawGraph() {
+        var container = document.getElementById("mynetwork");
 
-              // initialize global variables.
-              var edges;
-              var nodes;
-              var allNodes;
-              var allEdges;
-              var nodeColors;
-              var originalNodes;
-              var network;
-              var container;
-              var options, data;
-              var filter = {
-                  item : '',
-                  property : '',
-                  value : []
-              };
-
-              
-
-              
-
-              // This method is responsible for drawing the graph, returns the drawn network
-              function drawGraph() {
-                  var container = document.getElementById('mynetwork');
-
-                  
-
-                  // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([
-  {
-    "id": "AcceptanceTheme",
-    "label": "AcceptanceTheme",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "Adaptation",
-    "label": "Adaptation",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "AdaptationAnalysis",
-    "label": "AdaptationAnalysis",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "AdaptationImpact",
-    "label": "AdaptationImpact",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "AdaptationTheme",
-    "label": "AdaptationTheme",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "AssessmentTechnique",
-    "label": "AssessmentTechnique",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "AtticusFinch",
-    "label": "AtticusFinch",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "BooRadleyCharacter",
-    "label": "BooRadleyCharacter",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "Character",
-    "label": "Character",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CharacterArc",
-    "label": "CharacterArc",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CharacterAttributes",
-    "label": "CharacterAttributes",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CharacterBackground",
-    "label": "CharacterBackground",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CharacterDevelopment",
-    "label": "CharacterDevelopment",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CharacterInteraction",
-    "label": "CharacterInteraction",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CharacterMotivation",
-    "label": "CharacterMotivation",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CharacterMotivationContext",
-    "label": "CharacterMotivationContext",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CharacterRole",
-    "label": "CharacterRole",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CharacterRoleDescription",
-    "label": "CharacterRoleDescription",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "Characteristic",
-    "label": "Characteristic",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "ChildhoodExperience",
-    "label": "ChildhoodExperience",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "ChildhoodInnocence",
-    "label": "ChildhoodInnocence",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "ChildhoodInnocenceDefinition",
-    "label": "ChildhoodInnocenceDefinition",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CivilRightsDiscussion",
-    "label": "CivilRightsDiscussion",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CommunityDialogue",
-    "label": "CommunityDialogue",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CommunityDiscussionInitiative",
-    "label": "CommunityDiscussionInitiative",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CommunityEngagement",
-    "label": "CommunityEngagement",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CommunityEngagementInitiative",
-    "label": "CommunityEngagementInitiative",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CommunityEngagementStrategy",
-    "label": "CommunityEngagementStrategy",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "Concept",
-    "label": "Concept",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "ConceptDefinition",
-    "label": "ConceptDefinition",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "ContemporarySocialJusticeDiscussion",
-    "label": "ContemporarySocialJusticeDiscussion",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CriticalAssessmentTechnique",
-    "label": "CriticalAssessmentTechnique",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CriticalDiscussion",
-    "label": "CriticalDiscussion",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CriticalStages",
-    "label": "CriticalStages",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CulturalAdaptation",
-    "label": "CulturalAdaptation",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CulturalContext",
-    "label": "CulturalContext",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CulturalDynamic",
-    "label": "CulturalDynamic",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CulturalImpact",
-    "label": "CulturalImpact",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "CulturalSignificance",
-    "label": "CulturalSignificance",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "DialogueInitiative",
-    "label": "DialogueInitiative",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "DiscussionStrategy",
-    "label": "DiscussionStrategy",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "DiscussionTechnique",
-    "label": "DiscussionTechnique",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "EducationalApplications",
-    "label": "EducationalApplications",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "EducationalLevel",
-    "label": "EducationalLevel",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "EducationalMaterial",
-    "label": "EducationalMaterial",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "EducationalStrategy",
-    "label": "EducationalStrategy",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "Empathy",
-    "label": "Empathy",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "EmpathyDefinition",
-    "label": "EmpathyDefinition",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "EmpathyTheme",
-    "label": "EmpathyTheme",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "EthicalDilemma",
-    "label": "EthicalDilemma",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "GenderInequality",
-    "label": "GenderInequality",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "HistoricalContext",
-    "label": "HistoricalContext",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "HistoricalEvent",
-    "label": "HistoricalEvent",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "HumanConnection",
-    "label": "HumanConnection",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "IndividualPrejudice",
-    "label": "IndividualPrejudice",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "InfluenceOfLiteratureOnSocialJustice",
-    "label": "InfluenceOfLiteratureOnSocialJustice",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "IsolationTheme",
-    "label": "IsolationTheme",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "LegalSystemFailure",
-    "label": "LegalSystemFailure",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "LiteraryDevice",
-    "label": "LiteraryDevice",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "LiteraryDeviceAnalysis",
-    "label": "LiteraryDeviceAnalysis",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "LiteraryDeviceDefinition",
-    "label": "LiteraryDeviceDefinition",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "LiteraryDeviceImpact",
-    "label": "LiteraryDeviceImpact",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "LiteraryWork",
-    "label": "LiteraryWork",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "MediaAdaptation",
-    "label": "MediaAdaptation",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "MoralDilemma",
-    "label": "MoralDilemma",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "MoralDilemmaAnalysis",
-    "label": "MoralDilemmaAnalysis",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "MoralIntegrity",
-    "label": "MoralIntegrity",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "MoralIntegrityDefinition",
-    "label": "MoralIntegrityDefinition",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "MoralIntegrityImpact",
-    "label": "MoralIntegrityImpact",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "MoralLesson",
-    "label": "MoralLesson",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "MoralSymbolism",
-    "label": "MoralSymbolism",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "MultimediaResource",
-    "label": "MultimediaResource",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "NarrativeDevice",
-    "label": "NarrativeDevice",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "NarrativePerspective",
-    "label": "NarrativePerspective",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "NarrativeStructure",
-    "label": "NarrativeStructure",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "NarrativeTechnique",
-    "label": "NarrativeTechnique",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "PedagogicalStrategy",
-    "label": "PedagogicalStrategy",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "PublicPerception",
-    "label": "PublicPerception",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "PublicPerceptionImpact",
-    "label": "PublicPerceptionImpact",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "RacialInjustice",
-    "label": "RacialInjustice",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "RacialInjusticeAttribute",
-    "label": "RacialInjusticeAttribute",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "RacialInjusticeDefinition",
-    "label": "RacialInjusticeDefinition",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "RacialInjusticeImpact",
-    "label": "RacialInjusticeImpact",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "ResponseType",
-    "label": "ResponseType",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "ScoutFinch",
-    "label": "ScoutFinch",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "ScoutFinchDevelopment",
-    "label": "ScoutFinchDevelopment",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "Setting",
-    "label": "Setting",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "SettingInfluence",
-    "label": "SettingInfluence",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "SocialDynamics",
-    "label": "SocialDynamics",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "SocialInfluence",
-    "label": "SocialInfluence",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "SocialJusticeIssue",
-    "label": "SocialJusticeIssue",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "SocialSetting",
-    "label": "SocialSetting",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "SocialSettingInfluence",
-    "label": "SocialSettingInfluence",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "SocialStructure",
-    "label": "SocialStructure",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "SocietalIssue",
-    "label": "SocietalIssue",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "SocietalLegalConstraints",
-    "label": "SocietalLegalConstraints",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "Symbol",
-    "label": "Symbol",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "SymbolicElement",
-    "label": "SymbolicElement",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "SymbolicLesson",
-    "label": "SymbolicLesson",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "SymbolicMeaning",
-    "label": "SymbolicMeaning",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "SymbolicRepresentation",
-    "label": "SymbolicRepresentation",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "SymbolicTheme",
-    "label": "SymbolicTheme",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "SystemicRacism",
-    "label": "SystemicRacism",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "SystemicRacismManifestation",
-    "label": "SystemicRacismManifestation",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "Theme",
-    "label": "Theme",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "ThemeAdaptation",
-    "label": "ThemeAdaptation",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  },
-  {
-    "id": "TomRobinson",
-    "label": "TomRobinson",
-    "title": "CLASS",
-    "shape": "dot",
-    "color": "#F1C40F",
-    "font": {
-      "color": "black"
-    }
-  }
-]);
-edges = new vis.DataSet([
-  {
-    "from": "HumanConnection",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "SymbolicMeaning",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "EthicalDilemma",
-    "to": "MoralDilemma",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "MultimediaResource",
-    "to": "EducationalMaterial",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "SocialSetting",
-    "to": "Setting",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "SystemicRacismManifestation",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "MoralIntegrityImpact",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CharacterBackground",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "SocialDynamics",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "LiteraryDeviceImpact",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "PublicPerceptionImpact",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "ContemporarySocialJusticeDiscussion",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "MoralDilemmaAnalysis",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "MoralLesson",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "MoralIntegrity",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CommunityDialogue",
-    "to": "CommunityEngagementInitiative",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CommunityEngagement",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "SymbolicLesson",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "SymbolicRepresentation",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "NarrativeStructure",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "IsolationTheme",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CommunityDialogue",
-    "to": "CommunityEngagement",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "Setting",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "AcceptanceTheme",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "NarrativePerspective",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "AdaptationTheme",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CriticalStages",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "SystemicRacism",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CharacterDevelopment",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "ScoutFinch",
-    "to": "Character",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "ChildhoodExperience",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "ChildhoodInnocence",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CharacterMotivation",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "AtticusFinch",
-    "to": "Character",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "Empathy",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "NarrativeDevice",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "SocialStructure",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "EducationalStrategy",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "DiscussionTechnique",
-    "to": "EducationalStrategy",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CulturalDynamic",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "IndividualPrejudice",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "MoralDilemma",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CivilRightsDiscussion",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "RacialInjustice",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "BooRadleyCharacter",
-    "to": "Character",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CharacterRoleDescription",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "Symbol",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "RacialInjusticeImpact",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "LiteraryDeviceAnalysis",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "MoralSymbolism",
-    "to": "SymbolicRepresentation",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CriticalAssessmentTechnique",
-    "to": "EducationalStrategy",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "EducationalLevel",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "TomRobinson",
-    "to": "Character",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "AdaptationImpact",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "HistoricalContext",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "LiteraryDevice",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CommunityDiscussionInitiative",
-    "to": "CommunityEngagementInitiative",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "ChildhoodInnocenceDefinition",
-    "to": "ConceptDefinition",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "LiteraryDeviceImpact",
-    "to": "NarrativeTechnique",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "SocietalLegalConstraints",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "GenderInequality",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "PublicPerception",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "RacialInjusticeDefinition",
-    "to": "ConceptDefinition",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "EmpathyTheme",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CharacterMotivationContext",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "SocialInfluence",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CharacterArc",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "LegalSystemFailure",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "DiscussionStrategy",
-    "to": "EducationalStrategy",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "InfluenceOfLiteratureOnSocialJustice",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "ScoutFinchDevelopment",
-    "to": "CharacterDevelopment",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CulturalImpact",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "NarrativeTechnique",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "SocietalIssue",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "AdaptationAnalysis",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "ThemeAdaptation",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "MediaAdaptation",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "EducationalApplications",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "SymbolicElement",
-    "to": "SymbolicRepresentation",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "SocialSettingInfluence",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "SettingInfluence",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "Theme",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CulturalContext",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "MoralIntegrityDefinition",
-    "to": "ConceptDefinition",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "SymbolicTheme",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CulturalAdaptation",
-    "to": "AdaptationImpact",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CharacterInteraction",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "EmpathyDefinition",
-    "to": "ConceptDefinition",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "LiteraryDeviceDefinition",
-    "to": "ConceptDefinition",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "SocialJusticeIssue",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CriticalDiscussion",
-    "to": "EducationalStrategy",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CharacterRole",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "PedagogicalStrategy",
-    "to": "EducationalStrategy",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "AssessmentTechnique",
-    "to": "EducationalStrategy",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "DialogueInitiative",
-    "to": "CommunityEngagementInitiative",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CommunityEngagementStrategy",
-    "to": "CommunityEngagementInitiative",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CommunityEngagementInitiative",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "HistoricalEvent",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "RacialInjusticeAttribute",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "CharacterAttributes",
-    "to": "Concept",
-    "label": "subClassOf",
-    "arrows": "to",
-    "color": "#34495E"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "LiteraryDeviceImpact",
-    "label": "analyzesDeviceImpact",
-    "arrows": "to",
-    "color": "#E67E22"
-  },
-  {
-    "from": "Character",
-    "to": "MoralLesson",
-    "label": "comparesMoralLessons",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "Concept",
-    "label": "discussesTheme",
-    "arrows": "to",
-    "color": "#E67E22"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "Concept",
-    "label": "socialJusticeTheme",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "Character",
-    "to": "ChildhoodInnocence",
-    "label": "hasCriticalAttribute",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "InfluenceOfLiteratureOnSocialJustice",
-    "label": "analyzesSocialJusticeInfluence",
-    "arrows": "to",
-    "color": "#E67E22"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "SymbolicTheme",
-    "label": "representsSymbolicTheme",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "EducationalApplications",
-    "label": "hasApplicationType",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "AssessmentTechnique",
-    "to": "LiteraryWork",
-    "label": "gaugesUnderstandingThroughResponses",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "AssessmentTechnique",
-    "to": "ResponseType",
-    "label": "gaugesUnderstandingThroughResponses",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "CommunityEngagement",
-    "to": "LiteraryWork",
-    "label": "facilitatesDialogue",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "CommunityEngagement",
-    "to": "SocialJusticeIssue",
-    "label": "facilitatesDialogue",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "NarrativeDevice",
-    "label": "usesNarrativeDevice",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "ThemeAdaptation",
-    "label": "reinterpretsTheme",
-    "arrows": "to",
-    "color": "#E67E22"
-  },
-  {
-    "from": "Adaptation",
-    "to": "Concept",
-    "label": "themeImpactComparison",
-    "arrows": "to",
-    "color": "#E67E22"
-  },
-  {
-    "from": "CommunityEngagementStrategy",
-    "to": "LiteraryWork",
-    "label": "outlinesStrategy",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "RacialInjustice",
-    "label": "illustrates",
-    "arrows": "to",
-    "color": "#E67E22"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "MoralIntegrity",
-    "label": "illustrates",
-    "arrows": "to",
-    "color": "#E67E22"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "SymbolicRepresentation",
-    "label": "symbolicallyRepresents",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "Adaptation",
-    "to": "LiteraryWork",
-    "label": "comparesTo",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "CharacterRoleDescription",
-    "label": "reflectsCharacterRole",
-    "arrows": "to",
-    "color": "#E67E22"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "Concept",
-    "label": "moralIntegrityTheme",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "Concept",
-    "to": "Concept",
-    "label": "differentiatesBetween",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "LiteraryDevice",
-    "label": "employsDevice",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "PedagogicalStrategy",
-    "label": "recommendedStrategies",
-    "arrows": "to",
-    "color": "#E67E22"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "CharacterDevelopment",
-    "label": "analyzesCharacterDevelopment",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "EthicalDilemma",
-    "label": "discussesEthicalDilemma",
-    "arrows": "to",
-    "color": "#E67E22"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "MoralIntegrity",
-    "label": "highlightsMoralIntegrity",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "MoralIntegrityImpact",
-    "label": "reflectsMoralIntegrity",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "CharacterBackground",
-    "label": "enhancesCharacterBackground",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "AssessmentTechnique",
-    "to": "LiteraryWork",
-    "label": "assessesUnderstandingThroughResponses",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "AssessmentTechnique",
-    "to": "ResponseType",
-    "label": "assessesUnderstandingThroughResponses",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "DiscussionTechnique",
-    "to": "LiteraryWork",
-    "label": "promotesEngagement",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "HistoricalContext",
-    "to": "Character",
-    "label": "informsCharacterMotivation",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "Setting",
-    "to": "SettingInfluence",
-    "label": "hasInfluenceOn",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "SystemicRacismManifestation",
-    "label": "illustratesSystemicRacism",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "Concept",
-    "label": "moralCourageTheme",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "Character",
-    "to": "CharacterAttributes",
-    "label": "characterAttributes",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "Concept",
-    "to": "ConceptDefinition",
-    "label": "defines",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "Character",
-    "to": "GenderInequality",
-    "label": "experiencesOfFailure",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "SocialStructure",
-    "label": "highlightsSocialStructures",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "HistoricalContext",
-    "label": "integratesHistoricalContext",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "Character",
-    "to": "MoralDilemma",
-    "label": "facesDilemma",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "RacialInjustice",
-    "to": "RacialInjusticeImpact",
-    "label": "hasImpactOn",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "CulturalImpact",
-    "to": "CivilRightsDiscussion",
-    "label": "informsCivilRightsDiscussion",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "ChildhoodExperience",
-    "to": "Concept",
-    "label": "contributesToUnderstanding",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "Character",
-    "to": "Characteristic",
-    "label": "embodiesCharacteristics",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "Character",
-    "label": "portraysTheme",
-    "arrows": "to",
-    "color": "#E67E22"
-  },
-  {
-    "from": "EducationalStrategy",
-    "to": "CriticalDiscussion",
-    "label": "tailorsPedagogicalStrategies",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "CharacterBackground",
-    "label": "buildingTension",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "CommunityDialogue",
-    "to": "LiteraryWork",
-    "label": "fostersDialogue",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "CommunityDialogue",
-    "to": "SocialJusticeIssue",
-    "label": "fostersDialogue",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "EducationalStrategy",
-    "to": "LiteraryWork",
-    "label": "engagesInDiscussion",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "SocialSetting",
-    "to": "HistoricalContext",
-    "label": "hasHistoricalContext",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "NarrativeStructure",
-    "label": "analyzesNarrativeImpact",
-    "arrows": "to",
-    "color": "#E67E22"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "Character",
-    "label": "analyzesNarrativeImpact",
-    "arrows": "to",
-    "color": "#E67E22"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "Concept",
-    "label": "describes",
-    "arrows": "to",
-    "color": "#E67E22"
-  },
-  {
-    "from": "Character",
-    "to": "CharacterRole",
-    "label": "hasCharacterRole",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "CommunityEngagement",
-    "to": "LiteraryWork",
-    "label": "involvesCommunityDialogue",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "CommunityEngagement",
-    "to": "SocialJusticeIssue",
-    "label": "involvesCommunityDialogue",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "IsolationTheme",
-    "label": "reflectsTheme",
-    "arrows": "to",
-    "color": "#E67E22"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "AcceptanceTheme",
-    "label": "reflectsTheme",
-    "arrows": "to",
-    "color": "#E67E22"
-  },
-  {
-    "from": "Character",
-    "to": "CharacterRole",
-    "label": "hasRole",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "CommunityEngagementInitiative",
-    "to": "Concept",
-    "label": "derivedFromThemes",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "Character",
-    "to": "MoralDilemmaAnalysis",
-    "label": "analyzesMoralDilemma",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "Concept",
-    "to": "ConceptDefinition",
-    "label": "hasDefinition",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "SocialSetting",
-    "to": "SocialDynamics",
-    "label": "characterizesSocialDynamics",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "NarrativeTechnique",
-    "label": "usesTechnique",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "CulturalContext",
-    "to": "Character",
-    "label": "influencesCharacterMotivation",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "CivilRightsDiscussion",
-    "to": "LiteraryWork",
-    "label": "sparksDialogue",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "Adaptation",
-    "to": "LiteraryWork",
-    "label": "comparesWith",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "NarrativeStructure",
-    "label": "hasNarrativeStructure",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "Character",
-    "to": "Theme",
-    "label": "discussesThemes",
-    "arrows": "to",
-    "color": "#E67E22"
-  },
-  {
-    "from": "DiscussionTechnique",
-    "to": "LiteraryWork",
-    "label": "engagesInDiscussionAboutThemes",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "CriticalStages",
-    "to": "LiteraryWork",
-    "label": "quantitativelyAssesses",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "AdaptationImpact",
-    "to": "LiteraryWork",
-    "label": "adaptationImpact",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "AdaptationImpact",
-    "to": "Concept",
-    "label": "adaptationImpact",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "EducationalStrategy",
-    "to": "AssessmentTechnique",
-    "label": "utilizesAssessmentTechnique",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "AdaptationAnalysis",
-    "label": "analyzesAdaptation",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "BooRadleyCharacter",
-    "to": "Theme",
-    "label": "embodiesThemes",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "EducationalStrategy",
-    "to": "MultimediaResource",
-    "label": "engagesWithMultimedia",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "EducationalStrategy",
-    "label": "deepensLiteraryEngagement",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "SymbolicMeaning",
-    "label": "analyzesSymbolicMeaning",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "NarrativePerspective",
-    "label": "providesNarrativePerspective",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "RacialInjustice",
-    "to": "RacialInjusticeAttribute",
-    "label": "hasAttribute",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "Adaptation",
-    "to": "Concept",
-    "label": "themeComparison",
-    "arrows": "to",
-    "color": "#E67E22"
-  },
-  {
-    "from": "AssessmentTechnique",
-    "to": "LiteraryWork",
-    "label": "gaugesUnderstanding",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "AssessmentTechnique",
-    "to": "Concept",
-    "label": "gaugesUnderstanding",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "Character",
-    "to": "LegalSystemFailure",
-    "label": "characterizesFailure",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "SymbolicElement",
-    "label": "representsSymbolically",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "Setting",
-    "to": "SocialDynamics",
-    "label": "influences",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "EducationalStrategy",
-    "to": "EmpathyTheme",
-    "label": "engagesWithTheme",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "CommunityDiscussionInitiative",
-    "to": "LiteraryWork",
-    "label": "fostersEngagement",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "Character",
-    "to": "CharacterInteraction",
-    "label": "interactsWith",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "Character",
-    "to": "CharacterInteraction",
-    "label": "illustratesInteraction",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "CulturalContext",
-    "to": "CharacterMotivation",
-    "label": "influencesCharacterMotivation",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "MediaAdaptation",
-    "to": "Concept",
-    "label": "influencesThemeReinterpretation",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "ContemporarySocialJusticeDiscussion",
-    "label": "linkToDiscussion",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "DiscussionStrategy",
-    "to": "LiteraryWork",
-    "label": "participantEngagement",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "DiscussionTechnique",
-    "to": "Concept",
-    "label": "themeAnalysis",
-    "arrows": "to",
-    "color": "#E67E22"
-  },
-  {
-    "from": "Character",
-    "to": "EthicalDilemma",
-    "label": "facesEthicalDilemma",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "PublicPerceptionImpact",
-    "label": "analyzesAdaptationImpact",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "SocialSetting",
-    "to": "CulturalDynamic",
-    "label": "hasCulturalDynamic",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryDevice",
-    "to": "Concept",
-    "label": "enhancesThemeUnderstanding",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "SocietalLegalConstraints",
-    "to": "Character",
-    "label": "influencesCharacterActions",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "DialogueInitiative",
-    "to": "Concept",
-    "label": "fostersDialogue",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "PedagogicalStrategy",
-    "to": "EducationalLevel",
-    "label": "categorizesForAudience",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "Setting",
-    "label": "hasSetting",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "MoralSymbolism",
-    "label": "representsMoralValue",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "Concept",
-    "to": "LiteraryDeviceDefinition",
-    "label": "definesLiteraryDevice",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "CharacterInteraction",
-    "label": "demonstratesCharacterInteraction",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "Character",
-    "to": "CharacterArc",
-    "label": "hasCharacterArc",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "HistoricalContext",
-    "to": "CharacterMotivationContext",
-    "label": "historicalInfluence",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "CulturalAdaptation",
-    "to": "CulturalSignificance",
-    "label": "capturesCulturalSignificance",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "HumanConnection",
-    "to": "LiteraryWork",
-    "label": "enhancesUnderstanding",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "HumanConnection",
-    "to": "Concept",
-    "label": "enhancesUnderstanding",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "PublicPerception",
-    "label": "documentsImpactOn",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "SocialSetting",
-    "to": "SocialInfluence",
-    "label": "affectsSocialDynamics",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "BooRadleyCharacter",
-    "to": "SocietalIssue",
-    "label": "relatesToSocietalIssues",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "LiteraryDeviceImpact",
-    "label": "analyzesLiteraryDeviceImpact",
-    "arrows": "to",
-    "color": "#E67E22"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "Symbol",
-    "label": "representsSymbol",
-    "arrows": "to",
-    "color": "#E67E22"
-  },
-  {
-    "from": "CriticalAssessmentTechnique",
-    "to": "LiteraryWork",
-    "label": "assessesUnderstanding",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "CriticalAssessmentTechnique",
-    "to": "Concept",
-    "label": "assessesUnderstanding",
-    "arrows": "to",
-    "color": "#3498DB"
-  },
-  {
-    "from": "LiteraryWork",
-    "to": "SocietalIssue",
-    "label": "capturesBroaderSocietalIssues",
-    "arrows": "to",
-    "color": "#3498DB"
-  }
-]);
-
-                  nodeColors = {};
-                  allNodes = nodes.get({ returnType: "Object" });
-                  for (nodeId in allNodes) {
-                    nodeColors[nodeId] = allNodes[nodeId].color;
-                  }
-                  allEdges = edges.get({ returnType: "Object" });
-                  // adding nodes and edges to the graph
-                  data = {nodes: nodes, edges: edges};
-
-                  var options = {
-    "configure": {
-        "enabled": false
-    },
-    "edges": {
-        "color": {
-            "inherit": true
-        },
-        "smooth": {
-            "enabled": true,
-            "type": "dynamic"
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([
+          {
+            id: "AcademicTheory",
+            label: "AcademicTheory",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "Adaptation",
+            label: "Adaptation",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "AdaptationCriterion",
+            label: "AdaptationCriterion",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "AgeCategory",
+            label: "AgeCategory",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "AgeGroup",
+            label: "AgeGroup",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "ArtStyle",
+            label: "ArtStyle",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "Attribute",
+            label: "Attribute",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "AuthorshipConcept",
+            label: "AuthorshipConcept",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "Autofiction",
+            label: "Autofiction",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "BelongingTheme",
+            label: "BelongingTheme",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "CharacterDevelopment",
+            label: "CharacterDevelopment",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "Children",
+            label: "Children",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "ChildrenLiterature",
+            label: "ChildrenLiterature",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "ChildrensAgeGroup",
+            label: "ChildrensAgeGroup",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "ClassificationRule",
+            label: "ClassificationRule",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "ColorScheme",
+            label: "ColorScheme",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "CommunityEngagedFiction",
+            label: "CommunityEngagedFiction",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "CulturalContext",
+            label: "CulturalContext",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "CulturalHeritage",
+            label: "CulturalHeritage",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "CulturalSignificance",
+            label: "CulturalSignificance",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "CulturalStudy",
+            label: "CulturalStudy",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "CulturalTheme",
+            label: "CulturalTheme",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "CurriculumRelevantFiction",
+            label: "CurriculumRelevantFiction",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "DigitalNarrative",
+            label: "DigitalNarrative",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "DiversityTheme",
+            label: "DiversityTheme",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "DystopianFiction",
+            label: "DystopianFiction",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "EducationalImpactCriterion",
+            label: "EducationalImpactCriterion",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "EmergingTechnology",
+            label: "EmergingTechnology",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "EthicalQuestion",
+            label: "EthicalQuestion",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "EthicalTheme",
+            label: "EthicalTheme",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "EvaluationCriterion",
+            label: "EvaluationCriterion",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "ExperimentalNarrative",
+            label: "ExperimentalNarrative",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "FictionalWork",
+            label: "FictionalWork",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "FormatType",
+            label: "FormatType",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "Genre",
+            label: "Genre",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "GenreBlending",
+            label: "GenreBlending",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "GenreFiction",
+            label: "GenreFiction",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "GraphicNovel",
+            label: "GraphicNovel",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "IdentityTheme",
+            label: "IdentityTheme",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "IllustratedWork",
+            label: "IllustratedWork",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "ImpactCriterion",
+            label: "ImpactCriterion",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "ImpactOfMagicalRealism",
+            label: "ImpactOfMagicalRealism",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "InclusionTheme",
+            label: "InclusionTheme",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "InteractionRule",
+            label: "InteractionRule",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "InteractiveMedia",
+            label: "InteractiveMedia",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "InteractiveNarrative",
+            label: "InteractiveNarrative",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "InterdisciplinaryStudy",
+            label: "InterdisciplinaryStudy",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "LinearPlot",
+            label: "LinearPlot",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "LiteraryCategory",
+            label: "LiteraryCategory",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "LiteraryCriticism",
+            label: "LiteraryCriticism",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "LiteraryFiction",
+            label: "LiteraryFiction",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "MagicRealism",
+            label: "MagicRealism",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "MagicalRealism",
+            label: "MagicalRealism",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "Medium",
+            label: "Medium",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "Memoir",
+            label: "Memoir",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "MoralDilemma",
+            label: "MoralDilemma",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "NarrativeComplexity",
+            label: "NarrativeComplexity",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "NarrativeMechanics",
+            label: "NarrativeMechanics",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "NarrativePoetry",
+            label: "NarrativePoetry",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "NarrativeStructure",
+            label: "NarrativeStructure",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "NarrativeTechnique",
+            label: "NarrativeTechnique",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "NarrativeVoice",
+            label: "NarrativeVoice",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "NonFictionalWork",
+            label: "NonFictionalWork",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "NonLinearPlot",
+            label: "NonLinearPlot",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "PlotStructure",
+            label: "PlotStructure",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "ReaderEngagementMetric",
+            label: "ReaderEngagementMetric",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "ReaderGeneratedContent",
+            label: "ReaderGeneratedContent",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "SocialTheme",
+            label: "SocialTheme",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "StoryType",
+            label: "StoryType",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "SubGenre",
+            label: "SubGenre",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "TargetAudience",
+            label: "TargetAudience",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "Theme",
+            label: "Theme",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "ThemeCategory",
+            label: "ThemeCategory",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "TraditionalNarrative",
+            label: "TraditionalNarrative",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "TransmediaStorytelling",
+            label: "TransmediaStorytelling",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "VisualElement",
+            label: "VisualElement",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "WorldBuilding",
+            label: "WorldBuilding",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "YoungAdult",
+            label: "YoungAdult",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "YoungAdultLiterature",
+            label: "YoungAdultLiterature",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+          {
+            id: "YoungAdultsAgeGroup",
+            label: "YoungAdultsAgeGroup",
+            title: "CLASS",
+            shape: "dot",
+            color: "#F1C40F",
+            font: {
+              color: "black",
+            },
+          },
+        ]);
+        edges = new vis.DataSet([
+          {
+            from: "PlotStructure",
+            to: "NarrativeTechnique",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "SocialTheme",
+            to: "CulturalTheme",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "CharacterDevelopment",
+            to: "NarrativeTechnique",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "TransmediaStorytelling",
+            to: "Adaptation",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "ChildrenLiterature",
+            to: "LiteraryCategory",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "YoungAdultsAgeGroup",
+            to: "AgeCategory",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "CurriculumRelevantFiction",
+            to: "FictionalWork",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "InteractiveMedia",
+            to: "FictionalWork",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "IllustratedWork",
+            to: "FictionalWork",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "ImpactOfMagicalRealism",
+            to: "LiteraryCategory",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "Genre",
+            to: "LiteraryCategory",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "MagicRealism",
+            to: "Genre",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "CulturalTheme",
+            to: "ThemeCategory",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "LiteraryFiction",
+            to: "Genre",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "ClassificationRule",
+            to: "Attribute",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "EthicalTheme",
+            to: "ThemeCategory",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "InterdisciplinaryStudy",
+            to: "FictionalWork",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "BelongingTheme",
+            to: "CulturalTheme",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "Children",
+            to: "AgeGroup",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "NarrativePoetry",
+            to: "Genre",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "TargetAudience",
+            to: "Attribute",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "YoungAdultLiterature",
+            to: "LiteraryCategory",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "CulturalTheme",
+            to: "Attribute",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "Autofiction",
+            to: "Genre",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "ReaderGeneratedContent",
+            to: "FictionalWork",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "FormatType",
+            to: "Attribute",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "CulturalContext",
+            to: "Attribute",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "StoryType",
+            to: "Genre",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "DiversityTheme",
+            to: "CulturalTheme",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "WorldBuilding",
+            to: "Attribute",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "NarrativeStructure",
+            to: "Attribute",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "GenreBlending",
+            to: "Genre",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "Memoir",
+            to: "Genre",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "NarrativeVoice",
+            to: "Attribute",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "CulturalHeritage",
+            to: "Attribute",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "DigitalNarrative",
+            to: "FormatType",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "AcademicTheory",
+            to: "NonFictionalWork",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "NonLinearPlot",
+            to: "NarrativeStructure",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "EmergingTechnology",
+            to: "Attribute",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "Theme",
+            to: "Attribute",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "NonFictionalWork",
+            to: "FictionalWork",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "IdentityTheme",
+            to: "Attribute",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "EthicalQuestion",
+            to: "LiteraryCategory",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "ChildrensAgeGroup",
+            to: "AgeCategory",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "CommunityEngagedFiction",
+            to: "FictionalWork",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "NarrativeMechanics",
+            to: "Attribute",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "TransmediaStorytelling",
+            to: "FictionalWork",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "Adaptation",
+            to: "FictionalWork",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "NarrativeTechnique",
+            to: "Attribute",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "InteractiveNarrative",
+            to: "FormatType",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "EducationalImpactCriterion",
+            to: "EvaluationCriterion",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "GraphicNovel",
+            to: "FictionalWork",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "MagicalRealism",
+            to: "Genre",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "FictionalWork",
+            to: "LiteraryCategory",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "InclusionTheme",
+            to: "CulturalTheme",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "TraditionalNarrative",
+            to: "FormatType",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "YoungAdult",
+            to: "AgeGroup",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "ReaderEngagementMetric",
+            to: "Attribute",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "GenreFiction",
+            to: "Genre",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "EvaluationCriterion",
+            to: "Attribute",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "AdaptationCriterion",
+            to: "EvaluationCriterion",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "DystopianFiction",
+            to: "Genre",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "MoralDilemma",
+            to: "LiteraryCategory",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "CulturalSignificance",
+            to: "Attribute",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "ExperimentalNarrative",
+            to: "FormatType",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "LinearPlot",
+            to: "NarrativeStructure",
+            label: "subClassOf",
+            arrows: "to",
+            color: "#34495E",
+          },
+          {
+            from: "FictionalWork",
+            to: "SocialTheme",
+            label: "hasSocialTheme",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "NarrativeComplexity",
+            label: "hasNarrativeComplexity",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "ReaderGeneratedContent",
+            to: "FictionalWork",
+            label: "hasFictionalSource",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "TargetAudience",
+            label: "hasTargetAudience",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "NarrativeTechnique",
+            label: "essentialNarrativeTechniques",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "GraphicNovel",
+            to: "ColorScheme",
+            label: "hasColorScheme",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "MagicalRealism",
+            label: "ImpactOfMagicalRealism",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "NonFictionalWork",
+            to: "InteractionRule",
+            label: "hasInteractionRule",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "EthicalQuestion",
+            label: "hasEthicalQuestion",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "InteractiveNarrative",
+            to: "NarrativeStructure",
+            label: "hasNarrativeStructure",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "Genre",
+            to: "Genre",
+            label: "hasOverlapWith",
+            arrows: "to",
+            color: "#2ECC71",
+          },
+          {
+            from: "FictionalWork",
+            to: "NarrativeStructure",
+            label: "hasNarrativeStructure",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "NarrativeTechnique",
+            label: "PlotStructure",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "Attribute",
+            label: "hasAttribute",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "CulturalContext",
+            label: "hasCulturalContext",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "NarrativeTechnique",
+            label: "hasNarrativeTechnique",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "StoryType",
+            label: "hasStoryType",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "NarrativeTechnique",
+            label: "CharacterDevelopment",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "Genre",
+            to: "ClassificationRule",
+            label: "hasClassificationRule",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "NarrativeVoice",
+            label: "hasNarrativeVoice",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "EmergingTechnology",
+            label: "hasEmergingTechnology",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "BelongingTheme",
+            label: "hasBelongingTheme",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "Theme",
+            label: "hasTheme",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "ImpactOfMagicalRealism",
+            label: "hasImpactOfMagicalRealism",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "Genre",
+            to: "SubGenre",
+            label: "hasSubGenre",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "Adaptation",
+            to: "FictionalWork",
+            label: "hasTransformedFrom",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "InclusionTheme",
+            label: "hasInclusionTheme",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "FormatType",
+            label: "hasFormat",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "IdentityTheme",
+            label: "hasIdentityTheme",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "EducationalImpactCriterion",
+            label: "relevanceCriterion",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "ReaderGeneratedContent",
+            to: "AuthorshipConcept",
+            label: "hasRelationToAuthorship",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "ImpactCriterion",
+            label: "hasRelevanceCriterion",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "Adaptation",
+            label: "hasAdaptation",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "MoralDilemma",
+            label: "hasMoralDilemma",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "ReaderEngagementMetric",
+            label: "hasReaderEngagement",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "DiversityTheme",
+            label: "hasDiversityTheme",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "Attribute",
+            label: "hasUniqueAttribute",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "NarrativeTechnique",
+            label: "WorldBuilding",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "TargetAudience",
+            to: "AgeCategory",
+            label: "hasAgeCategory",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "TargetAudience",
+            to: "AgeGroup",
+            label: "hasAgeGroup",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "Adaptation",
+            to: "Medium",
+            label: "hasAdaptationType",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "InteractiveNarrative",
+            label: "hasInteractiveNarrative",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "TransmediaStorytelling",
+            label: "hasTransmediaStorytelling",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "IllustratedWork",
+            to: "ArtStyle",
+            label: "hasArtStyle",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "CulturalTheme",
+            label: "DiversityTheme",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "VisualElement",
+            label: "hasVisualElement",
+            arrows: "to",
+            color: "#7F8C8D",
+          },
+          {
+            from: "FictionalWork",
+            to: "AdaptationCriterion",
+            label: "hasAdaptationCriterion",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "InterdisciplinaryStudy",
+            to: "CulturalStudy",
+            label: "integratedWith",
+            arrows: "to",
+            color: "#7F8C8D",
+          },
+          {
+            from: "InterdisciplinaryStudy",
+            to: "LiteraryCriticism",
+            label: "integratedWith",
+            arrows: "to",
+            color: "#7F8C8D",
+          },
+          {
+            from: "FictionalWork",
+            to: "ThemeCategory",
+            label: "hasThemeCategory",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "CulturalHeritage",
+            label: "hasCulturalHeritage",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "GenreBlending",
+            to: "ClassificationRule",
+            label: "hasClassificationRule",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "Adaptation",
+            to: "FictionalWork",
+            label: "hasTransformedTo",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "EvaluationCriterion",
+            label: "ImpactCriterion",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "ReaderEngagementMetric",
+            label: "affectsReaderImmersion",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "Genre",
+            label: "ExampleOfGenre",
+            arrows: "to",
+            color: "#7F8C8D",
+          },
+          {
+            from: "FictionalWork",
+            to: "CulturalSignificance",
+            label: "hasCulturalSignificance",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "FictionalWork",
+            label: "hasAdaptation",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "CulturalTheme",
+            label: "hasCulturalTheme",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "Adaptation",
+            to: "FictionalWork",
+            label: "hasInterpretationInfluence",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "ReaderEngagementMetric",
+            label: "ReaderEngagement",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "FictionalWork",
+            to: "CulturalTheme",
+            label: "InclusionTheme",
+            arrows: "to",
+            color: "#3498DB",
+          },
+          {
+            from: "GenreBlending",
+            to: "ClassificationRule",
+            label: "hasBlendingCriteria",
+            arrows: "to",
+            color: "#3498DB",
+          },
+        ]);
+        nodeColors = {};
+        allNodes = nodes.get({ returnType: "Object" });
+        for (nodeId in allNodes) {
+          nodeColors[nodeId] = allNodes[nodeId].color;
         }
-    },
-    "interaction": {
-        "dragNodes": true,
-        "hideEdgesOnDrag": false,
-        "hideNodesOnDrag": false
-    },
-    "physics": {
-        "enabled": true,
-        "forceAtlas2Based": {
-            "avoidOverlap": 0,
-            "centralGravity": 0.01,
-            "damping": 0.4,
-            "gravitationalConstant": -50,
-            "springConstant": 0.08,
-            "springLength": 100
-        },
-        "solver": "forceAtlas2Based",
-        "stabilization": {
-            "enabled": true,
-            "fit": true,
-            "iterations": 1000,
-            "onlyDynamicEdges": false,
-            "updateInterval": 50
-        }
-    }
-};
+        allEdges = edges.get({ returnType: "Object" });
+        // adding nodes and edges to the graph
+        data = { nodes: nodes, edges: edges };
 
-                  
+        var options = {
+          configure: {
+            enabled: false,
+          },
+          edges: {
+            color: {
+              inherit: true,
+            },
+            smooth: {
+              enabled: true,
+              type: "dynamic",
+            },
+          },
+          interaction: {
+            dragNodes: true,
+            hideEdgesOnDrag: false,
+            hideNodesOnDrag: false,
+          },
+          physics: {
+            enabled: true,
+            forceAtlas2Based: {
+              avoidOverlap: 0,
+              centralGravity: 0.01,
+              damping: 0.4,
+              gravitationalConstant: -50,
+              springConstant: 0.08,
+              springLength: 100,
+            },
+            solver: "forceAtlas2Based",
+            stabilization: {
+              enabled: true,
+              fit: true,
+              iterations: 1000,
+              onlyDynamicEdges: false,
+              updateInterval: 50,
+            },
+          },
+        };
 
+        network = new vis.Network(container, data, options);
 
-                  
+        network.on("stabilizationProgress", function (params) {
+          document.getElementById("loadingBar").removeAttribute("style");
+          var maxWidth = 496;
+          var minWidth = 20;
+          var widthFactor = params.iterations / params.total;
+          var width = Math.max(minWidth, maxWidth * widthFactor);
+          document.getElementById("bar").style.width = width + "px";
+          document.getElementById("text").innerHTML =
+            Math.round(widthFactor * 100) + "%";
+        });
+        network.once("stabilizationIterationsDone", function () {
+          document.getElementById("text").innerHTML = "100%";
+          document.getElementById("bar").style.width = "496px";
+          document.getElementById("loadingBar").style.opacity = 0;
+          // really clean the dom element
+          setTimeout(function () {
+            document.getElementById("loadingBar").style.display = "none";
+          }, 500);
+        });
 
-                  network = new vis.Network(container, data, options);
-
-                  
-
-                  
-
-                  
-
-
-                  
-                      network.on("stabilizationProgress", function(params) {
-                          document.getElementById('loadingBar').removeAttribute("style");
-                          var maxWidth = 496;
-                          var minWidth = 20;
-                          var widthFactor = params.iterations/params.total;
-                          var width = Math.max(minWidth,maxWidth * widthFactor);
-                          document.getElementById('bar').style.width = width + 'px';
-                          document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
-                      });
-                      network.once("stabilizationIterationsDone", function() {
-                          document.getElementById('text').innerHTML = '100%';
-                          document.getElementById('bar').style.width = '496px';
-                          document.getElementById('loadingBar').style.opacity = 0;
-                          // really clean the dom element
-                          setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
-                      });
-                  
-
-                  return network;
-
-              }
-              drawGraph();
-        </script>
-    </body>
+        return network;
+      }
+      drawGraph();
+    </script>
+  </body>
 </html>

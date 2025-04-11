@@ -1,0 +1,84 @@
+# Scope Document: Fictional Works
+
+## 1. Introduction
+This document outlines the key topics and boundaries within the domain of Fictional Works as defined by the expertise of a collaborative team comprising individuals from diverse backgrounds in publishing, literature, screenwriting, and cultural criticism.
+
+## 2. Inclusions
+The following topics and concepts are explicitly included in the domain of Fictional Works:
+
+### 2.1 Literary Fiction
+- Characteristics and definitions of literary fiction
+- Notable authors and works within the genre
+- Themes and styles prevalent in literary fiction
+
+### 2.2 Historical Fiction
+- Sub-genres and trends in historical fiction
+- Representation of historical events and figures
+- Authorial responsibility in historical narratives
+
+### 2.3 Postmodern and Contemporary Fiction
+- Key features of postmodern narratives
+- Exploration of unreliable narrators
+- Metafiction and self-referential works
+
+### 2.4 Genres and Subgenres
+- Overview of various genres (e.g., fantasy, science fiction, romance, thriller)
+- Hybrid genres and transmedia narratives
+- Role of genre conventions in fiction
+
+### 2.5 Cultural Narratives and Identity
+- Examination of how identity is portrayed in fiction (e.g., race, gender, class)
+- Intersections of cultural norms and societal issues within narratives
+- Representation of diverse voices in contemporary literature
+
+### 2.6 Narrative Theory
+- Analysis of narrative structure and techniques
+- Discussion of point of view, voice, and time in narratives
+- The role of reader interpretation in meaning-making
+
+### 2.7 Interactive and Digital Storytelling
+- Exploration of emergent platforms for fiction (e.g., interactive literature, web series)
+- Impact of technology on traditional storytelling methods
+- Community engagement through digital platforms
+
+### 2.8 Literary Criticism and Analysis
+- Methods of literary critique (e.g., feminist, post-colonial, psychoanalytic)
+- Relationship between fiction and criticism
+- The role of critics in shaping public discourse around fiction
+
+## 3. Exclusions
+The following areas are explicitly excluded from the domain of Fictional Works:
+
+### 3.1 Non-Fiction
+- Memoirs, autobiographies, and essays
+- Purely academic research and documentation
+
+### 3.2 Poetry
+- Individual analysis of poetic works and structures
+- Distinctions between poetry and prose fiction
+
+### 3.3 Journalistic Writing
+- News articles, reports, and other forms of journalistic expression
+- Opinion pieces and editorials
+
+## 4. Gray Areas and Overlaps
+The following topics present gray areas or overlaps with adjacent domains that may require further discussion:
+
+### 4.1 Speculative Fiction
+- Distinctions between speculative fiction, fantasy, and science fiction
+- Influence of speculative fiction on socio-political dialogues
+
+### 4.2 Adaptations
+- Intersection of literary works with film and television adaptations
+- Analysis of fidelity and transformation in adaptations
+
+### 4.3 Children’s and Young Adult Fiction
+- Distinctions and characteristics specific to children's literature and YA genres
+- Considerations of age-appropriateness and thematic maturity
+
+### 4.4 Graphic Novels and Comics
+- Narrative techniques unique to graphic novels
+- Integration of visual storytelling with written fiction
+
+## 5. Conclusion
+This scope document serves as a foundational guide for engaging discussions and analyses within the domain of Fictional Works. By establishing clear inclusions and exclusions, the collective expertise represented within this collaborative team can effectively navigate the complexities of fiction across various media and cultural contexts.

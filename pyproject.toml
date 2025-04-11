@@ -4,10 +4,10 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = ["symbolicai"]
+dependencies = ["evaluate>=0.4.3", "symbolicai"]
 
 [project.scripts]
-eval = "ontopipe.eval.run:main"
+eval = "ontopipe.eval.main:main"
 
 [build-system]
 requires = ["hatchling"]
