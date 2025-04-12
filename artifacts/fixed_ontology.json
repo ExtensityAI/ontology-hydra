@@ -1,0 +1,2902 @@
+{
+    "name": "Reinforcement Learning",
+    "subclass_relations": [
+        {
+            "subclass": {
+                "name": "ApproximatorFunction"
+            },
+            "superclass": {
+                "name": "Function"
+            }
+        },
+        {
+            "subclass": {
+                "name": "Reward"
+            },
+            "superclass": {
+                "name": "Function"
+            }
+        },
+        {
+            "subclass": {
+                "name": "StateTransition"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "Community"
+            },
+            "superclass": {
+                "name": "Group"
+            }
+        },
+        {
+            "subclass": {
+                "name": "DelayedEpisodicReward"
+            },
+            "superclass": {
+                "name": "DelayedReward"
+            }
+        },
+        {
+            "subclass": {
+                "name": "DiverseEnvironment"
+            },
+            "superclass": {
+                "name": "ReinforcementLearning"
+            }
+        },
+        {
+            "subclass": {
+                "name": "NeuralNetworkModelSelection"
+            },
+            "superclass": {
+                "name": "SelectionStrategy"
+            }
+        },
+        {
+            "subclass": {
+                "name": "CreditAssignment"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "StateInformationFlow"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "RingMDP"
+            },
+            "superclass": {
+                "name": "MarkovDecisionProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "RewardPredictionStrategy"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "UnderrepresentedGroup"
+            },
+            "superclass": {
+                "name": "Community"
+            }
+        },
+        {
+            "subclass": {
+                "name": "PolicyGradientMethod"
+            },
+            "superclass": {
+                "name": "LearningAlgorithm"
+            }
+        },
+        {
+            "subclass": {
+                "name": "ClassifierBasedLearning"
+            },
+            "superclass": {
+                "name": "IndirectLearning"
+            }
+        },
+        {
+            "subclass": {
+                "name": "ReturnEquivalentSDP"
+            },
+            "superclass": {
+                "name": "StochasticDecisionProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "GoalParameterization"
+            },
+            "superclass": {
+                "name": "LearningObjective"
+            }
+        },
+        {
+            "subclass": {
+                "name": "GoalGeneration"
+            },
+            "superclass": {
+                "name": "LearningObjective"
+            }
+        },
+        {
+            "subclass": {
+                "name": "DelayedReward"
+            },
+            "superclass": {
+                "name": "Reward"
+            }
+        },
+        {
+            "subclass": {
+                "name": "ConfidenceInterval"
+            },
+            "superclass": {
+                "name": "StatisticalMeasure"
+            }
+        },
+        {
+            "subclass": {
+                "name": "WassersteinDistance"
+            },
+            "superclass": {
+                "name": "DistanceMetric"
+            }
+        },
+        {
+            "subclass": {
+                "name": "FeatureAbstraction"
+            },
+            "superclass": {
+                "name": "LearningObjective"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SandboxedExecutionEnvironment"
+            },
+            "superclass": {
+                "name": "ExecutionEnvironment"
+            }
+        },
+        {
+            "subclass": {
+                "name": "BiasVarianceTradeOff"
+            },
+            "superclass": {
+                "name": "OptimizationCriterion"
+            }
+        },
+        {
+            "subclass": {
+                "name": "InfluenceOnRewardVariance"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "Demonstration"
+            },
+            "superclass": {
+                "name": "CorrelationDemonstration"
+            }
+        },
+        {
+            "subclass": {
+                "name": "VEOrder"
+            },
+            "superclass": {
+                "name": "LearningOrder"
+            }
+        },
+        {
+            "subclass": {
+                "name": "ExampleBasedControl"
+            },
+            "superclass": {
+                "name": "ControlIntegration"
+            }
+        },
+        {
+            "subclass": {
+                "name": "NonlinearFunctionApproximation"
+            },
+            "superclass": {
+                "name": "FunctionApproximation"
+            }
+        },
+        {
+            "subclass": {
+                "name": "LongTermCreditAssignment"
+            },
+            "superclass": {
+                "name": "CreditAssignment"
+            }
+        },
+        {
+            "subclass": {
+                "name": "OptimalRewardRedistribution"
+            },
+            "superclass": {
+                "name": "RewardRedistribution"
+            }
+        },
+        {
+            "subclass": {
+                "name": "StaticRewardMitigation"
+            },
+            "superclass": {
+                "name": "SpuriousRewardMitigationStrategy"
+            }
+        },
+        {
+            "subclass": {
+                "name": "LatentStateRepresentation"
+            },
+            "superclass": {
+                "name": "Representation"
+            }
+        },
+        {
+            "subclass": {
+                "name": "ResidualBiasCorrectionTechnique"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "HierarchicalReinforcementLearning"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "LSTMNetwork"
+            },
+            "superclass": {
+                "name": "NetworkStructure"
+            }
+        },
+        {
+            "subclass": {
+                "name": "DownstreamReinforcementLearning"
+            },
+            "superclass": {
+                "name": "ReinforcementLearning"
+            }
+        },
+        {
+            "subclass": {
+                "name": "PolicyComparison"
+            },
+            "superclass": {
+                "name": "Policy"
+            }
+        },
+        {
+            "subclass": {
+                "name": "RewardPredictiveAssociation"
+            },
+            "superclass": {
+                "name": "Association"
+            }
+        },
+        {
+            "subclass": {
+                "name": "ValuePolytope"
+            },
+            "superclass": {
+                "name": "GeometricProperty"
+            }
+        },
+        {
+            "subclass": {
+                "name": "ActionRepeatConfiguration"
+            },
+            "superclass": {
+                "name": "Policy"
+            }
+        },
+        {
+            "subclass": {
+                "name": "RecursiveClassificationApproach"
+            },
+            "superclass": {
+                "name": "ClassificationApproach"
+            }
+        },
+        {
+            "subclass": {
+                "name": "GRUArchitecture"
+            },
+            "superclass": {
+                "name": "NeuralNetwork"
+            }
+        },
+        {
+            "subclass": {
+                "name": "PerformanceMetric"
+            },
+            "superclass": {
+                "name": "LearningObjective"
+            }
+        },
+        {
+            "subclass": {
+                "name": "UnsupervisedVisualRepresentation"
+            },
+            "superclass": {
+                "name": "VisualRepresentation"
+            }
+        },
+        {
+            "subclass": {
+                "name": "TemporalResolution"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "AcademicWorkshop"
+            },
+            "superclass": {
+                "name": "Workshop"
+            }
+        },
+        {
+            "subclass": {
+                "name": "EnhancedPredictionProbingPerformance"
+            },
+            "superclass": {
+                "name": "PredictionProbingPerformance"
+            }
+        },
+        {
+            "subclass": {
+                "name": "MultiTaskLearning"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "DivergenceBasedRegularization"
+            },
+            "superclass": {
+                "name": "RegularizationTechnique"
+            }
+        },
+        {
+            "subclass": {
+                "name": "ModelFidelity"
+            },
+            "superclass": {
+                "name": "QualityMetric"
+            }
+        },
+        {
+            "subclass": {
+                "name": "QValue"
+            },
+            "superclass": {
+                "name": "Estimation"
+            }
+        },
+        {
+            "subclass": {
+                "name": "LearningStability"
+            },
+            "superclass": {
+                "name": "LearningDynamic"
+            }
+        },
+        {
+            "subclass": {
+                "name": "Policy"
+            },
+            "superclass": {
+                "name": "LearningObjective"
+            }
+        },
+        {
+            "subclass": {
+                "name": "FeedforwardNetwork"
+            },
+            "superclass": {
+                "name": "NetworkStructure"
+            }
+        },
+        {
+            "subclass": {
+                "name": "FiniteStateMachineMemory"
+            },
+            "superclass": {
+                "name": "Memory"
+            }
+        },
+        {
+            "subclass": {
+                "name": "StateTransitionDynamics"
+            },
+            "superclass": {
+                "name": "RewardFunction"
+            }
+        },
+        {
+            "subclass": {
+                "name": "DenseSurrogateRewardFunction"
+            },
+            "superclass": {
+                "name": "Reward"
+            }
+        },
+        {
+            "subclass": {
+                "name": "RewardManagement"
+            },
+            "superclass": {
+                "name": "ReinforcementLearning"
+            }
+        },
+        {
+            "subclass": {
+                "name": "TransitionFunction"
+            },
+            "superclass": {
+                "name": "Function"
+            }
+        },
+        {
+            "subclass": {
+                "name": "AIResearch"
+            },
+            "superclass": {
+                "name": "ResearchField"
+            }
+        },
+        {
+            "subclass": {
+                "name": "RewardSignal"
+            },
+            "superclass": {
+                "name": "Reward"
+            }
+        },
+        {
+            "subclass": {
+                "name": "EnergyDistance"
+            },
+            "superclass": {
+                "name": "DistanceMetric"
+            }
+        },
+        {
+            "subclass": {
+                "name": "RecurrentNeuralNetwork"
+            },
+            "superclass": {
+                "name": "NeuralNetwork"
+            }
+        },
+        {
+            "subclass": {
+                "name": "AdaptiveRewardMitigation"
+            },
+            "superclass": {
+                "name": "SpuriousRewardMitigationStrategy"
+            }
+        },
+        {
+            "subclass": {
+                "name": "MemoryUtilizationStrategy"
+            },
+            "superclass": {
+                "name": "MemoryPreservationStrategy"
+            }
+        },
+        {
+            "subclass": {
+                "name": "ModelCapacity"
+            },
+            "superclass": {
+                "name": "Capacity"
+            }
+        },
+        {
+            "subclass": {
+                "name": "TemporalCreditAssignment"
+            },
+            "superclass": {
+                "name": "Reward"
+            }
+        },
+        {
+            "subclass": {
+                "name": "IterativeControlMethod"
+            },
+            "superclass": {
+                "name": "ControlMethod"
+            }
+        },
+        {
+            "subclass": {
+                "name": "ExampleBasedLearning"
+            },
+            "superclass": {
+                "name": "DirectLearning"
+            }
+        },
+        {
+            "subclass": {
+                "name": "PlanningPerformanceDifference"
+            },
+            "superclass": {
+                "name": "PerformanceComparison"
+            }
+        },
+        {
+            "subclass": {
+                "name": "ScalableReinforcementLearning"
+            },
+            "superclass": {
+                "name": "EnergyOptimization"
+            }
+        },
+        {
+            "subclass": {
+                "name": "DynamicGameEnvironment"
+            },
+            "superclass": {
+                "name": "GameEnvironment"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SubManager"
+            },
+            "superclass": {
+                "name": "Manager"
+            }
+        },
+        {
+            "subclass": {
+                "name": "MemoryPerformance"
+            },
+            "superclass": {
+                "name": "PerformanceMetric"
+            }
+        },
+        {
+            "subclass": {
+                "name": "HierarchicalReinforcementLearningArchitecture"
+            },
+            "superclass": {
+                "name": "HierarchicalReinforcementLearning"
+            }
+        },
+        {
+            "subclass": {
+                "name": "FalseRingMDP"
+            },
+            "superclass": {
+                "name": "MarkovDecisionProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "LongHorizonImitationLearning"
+            },
+            "superclass": {
+                "name": "ImitationLearning"
+            }
+        },
+        {
+            "subclass": {
+                "name": "ActionExecution"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "RecurrentNetwork"
+            },
+            "superclass": {
+                "name": "NetworkStructure"
+            }
+        },
+        {
+            "subclass": {
+                "name": "DelayedCreditAssignment"
+            },
+            "superclass": {
+                "name": "CreditAssignment"
+            }
+        },
+        {
+            "subclass": {
+                "name": "TemporalAttentionMechanism"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "HistoryCompressionFunction"
+            },
+            "superclass": {
+                "name": "Function"
+            }
+        },
+        {
+            "subclass": {
+                "name": "DomainAgnosticBenchmark"
+            },
+            "superclass": {
+                "name": "Benchmark"
+            }
+        },
+        {
+            "subclass": {
+                "name": "ModernControlMethod"
+            },
+            "superclass": {
+                "name": "ControlMethod"
+            }
+        },
+        {
+            "subclass": {
+                "name": "AgentTemporalAttentionMechanism"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "DecentralizedAgentPolicy"
+            },
+            "superclass": {
+                "name": "Policy"
+            }
+        },
+        {
+            "subclass": {
+                "name": "TaskDelegation"
+            },
+            "superclass": {
+                "name": "LearningObjective"
+            }
+        },
+        {
+            "subclass": {
+                "name": "OptimalPolicySelection"
+            },
+            "superclass": {
+                "name": "PolicySelection"
+            }
+        },
+        {
+            "subclass": {
+                "name": "EpisodicRewardDecomposition"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "TemporalAttentionPattern"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "FacilityUsage"
+            },
+            "superclass": {
+                "name": "ResourceAllocation"
+            }
+        },
+        {
+            "subclass": {
+                "name": "DomainSpecificBenchmark"
+            },
+            "superclass": {
+                "name": "Benchmark"
+            }
+        },
+        {
+            "subclass": {
+                "name": "HierarchicalLearningArchitecture"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SelfSupervisedLearning"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "Reward"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "RewardManagement"
+            },
+            "superclass": {
+                "name": "Reward"
+            }
+        },
+        {
+            "subclass": {
+                "name": "TaskDelegation"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "PolicyGradientMethod"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "RecurrentNeuralNetwork"
+            },
+            "superclass": {
+                "name": "NetworkStructure"
+            }
+        },
+        {
+            "subclass": {
+                "name": "RecurrentNeuralNetwork"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "IndirectLearning"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "MarkovDecisionProcess"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "EnergyOptimization"
+            },
+            "superclass": {
+                "name": "ReinforcementLearning"
+            }
+        },
+        {
+            "subclass": {
+                "name": "ExampleBasedLearning"
+            },
+            "superclass": {
+                "name": "ClassifierBasedLearning"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SelectionStrategy"
+            },
+            "superclass": {
+                "name": "LearningAlgorithm"
+            }
+        },
+        {
+            "subclass": {
+                "name": "ExampleBasedControl"
+            },
+            "superclass": {
+                "name": "ModernControlMethod"
+            }
+        },
+        {
+            "subclass": {
+                "name": "ModernControlMethod"
+            },
+            "superclass": {
+                "name": "LearningAlgorithm"
+            }
+        },
+        {
+            "subclass": {
+                "name": "NonlinearFunctionApproximation"
+            },
+            "superclass": {
+                "name": "ApproximatorFunction"
+            }
+        },
+        {
+            "subclass": {
+                "name": "RewardRedistribution"
+            },
+            "superclass": {
+                "name": "Reward"
+            }
+        },
+        {
+            "subclass": {
+                "name": "WassersteinDistance"
+            },
+            "superclass": {
+                "name": "Function"
+            }
+        },
+        {
+            "subclass": {
+                "name": "ReinforcementLearning"
+            },
+            "superclass": {
+                "name": "AIResearch"
+            }
+        },
+        {
+            "subclass": {
+                "name": "Community"
+            },
+            "superclass": {
+                "name": "AIResearch"
+            }
+        },
+        {
+            "subclass": {
+                "name": "AdaptiveRewardMitigation"
+            },
+            "superclass": {
+                "name": "Reward"
+            }
+        },
+        {
+            "subclass": {
+                "name": "OptimalPolicySelection"
+            },
+            "superclass": {
+                "name": "Policy"
+            }
+        },
+        {
+            "subclass": {
+                "name": "RewardPredictiveAssociation"
+            },
+            "superclass": {
+                "name": "Reward"
+            }
+        },
+        {
+            "subclass": {
+                "name": "DomainAgnosticBenchmark"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "LongHorizonImitationLearning"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "ConfidenceInterval"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "PerformanceMetric"
+            },
+            "superclass": {
+                "name": "QualityMetric"
+            }
+        },
+        {
+            "subclass": {
+                "name": "Capacity"
+            },
+            "superclass": {
+                "name": "QualityMetric"
+            }
+        },
+        {
+            "subclass": {
+                "name": "EnhancedPredictionProbingPerformance"
+            },
+            "superclass": {
+                "name": "PerformanceMetric"
+            }
+        },
+        {
+            "subclass": {
+                "name": "DynamicGameEnvironment"
+            },
+            "superclass": {
+                "name": "DiverseEnvironment"
+            }
+        },
+        {
+            "subclass": {
+                "name": "QValue"
+            },
+            "superclass": {
+                "name": "Reward"
+            }
+        },
+        {
+            "subclass": {
+                "name": "Demonstration"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "FacilityUsage"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "FiniteStateMachineMemory"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "Manager"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "StateTransitionDynamics"
+            },
+            "superclass": {
+                "name": "StateTransition"
+            }
+        },
+        {
+            "subclass": {
+                "name": "StochasticDecisionProcess"
+            },
+            "superclass": {
+                "name": "MarkovDecisionProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "MemoryUtilizationStrategy"
+            },
+            "superclass": {
+                "name": "Memory"
+            }
+        },
+        {
+            "subclass": {
+                "name": "LearningOrder"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "ValuePolytope"
+            },
+            "superclass": {
+                "name": "QualityMetric"
+            }
+        },
+        {
+            "subclass": {
+                "name": "PlanningPerformanceDifference"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "DivergenceBasedRegularization"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "RecursiveClassificationApproach"
+            },
+            "superclass": {
+                "name": "ClassifierBasedLearning"
+            }
+        },
+        {
+            "subclass": {
+                "name": "AcademicWorkshop"
+            },
+            "superclass": {
+                "name": "AIResearch"
+            }
+        },
+        {
+            "subclass": {
+                "name": "LearningDynamic"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "UnsupervisedVisualRepresentation"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "BiasVarianceTradeOff"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "ExecutionEnvironment"
+            },
+            "superclass": {
+                "name": "LearningProcess"
+            }
+        },
+        {
+            "subclass": {
+                "name": "LatentStateRepresentation"
+            },
+            "superclass": {
+                "name": "FeatureAbstraction"
+            }
+        }
+    ],
+    "object_properties": [
+        {
+            "name": "EnergyConsumptionAnalysis",
+            "domain": [
+                {
+                    "name": "EnergyOptimization"
+                }
+            ],
+            "range": [
+                {
+                    "name": "PerformanceMetric"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "ExtendedMemoryEffect",
+            "domain": [
+                {
+                    "name": "RecurrentNeuralNetwork"
+                }
+            ],
+            "range": [
+                {
+                    "name": "MemoryPerformance"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "FiniteStateMachineMemory",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Memory"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "RewardManagement",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Reward"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "LatentVariableIntroduction",
+            "domain": [
+                {
+                    "name": "RecurrentNeuralNetwork"
+                }
+            ],
+            "range": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "NeuralNetworkModelSelection",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "NeuralNetwork"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "TaskSpecification",
+            "domain": [
+                {
+                    "name": "MultiTaskLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningObjective"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "SparseFeedbackChallenge",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningObjective"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "ValueFunction",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Reward"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "RewardFunctionOptimization",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Reward"
+                },
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "TemporalCreditAssignment",
+            "domain": [
+                {
+                    "name": "DenseSurrogateRewardFunction"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "AuxiliarySelfSupervisedLearning",
+            "domain": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "range": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "ImpactAnalysis",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "PerformanceMetric"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "SequenceModelingArchitecture",
+            "domain": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "range": [
+                {
+                    "name": "StateTransition"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "DelayedRewardMechanism",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Reward"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "RewardProbingTechnique",
+            "domain": [
+                {
+                    "name": "DiverseEnvironment"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Reward"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "OptimalityGuaranteeAnalysis",
+            "domain": [
+                {
+                    "name": "RecursiveClassificationApproach"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Reward"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "RewardShaping",
+            "domain": [
+                {
+                    "name": "LearningObjective"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Reward"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "HistoricalReinforcementLearningAnalysis",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "StateDecompositionMethod",
+            "domain": [
+                {
+                    "name": "HierarchicalReinforcementLearningArchitecture"
+                }
+            ],
+            "range": [
+                {
+                    "name": "StateTransition"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "VisualRepresentationEvaluation",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "VisualRepresentation"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "AccessibilityInAIResearch",
+            "domain": [
+                {
+                    "name": "AIResearch"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Community"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "DecentralizedPolicyPerformance",
+            "domain": [
+                {
+                    "name": "DecentralizedAgentPolicy"
+                }
+            ],
+            "range": [
+                {
+                    "name": "PerformanceMetric"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "HierarchicalLearningArchitecture",
+            "domain": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Policy"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "DefaultRewardMechanism",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Reward"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "BufferStateRepresentation",
+            "domain": [
+                {
+                    "name": "HierarchicalReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CreditAssignment"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "PolicyImprovement",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Policy"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "IntrinsicRewardUtilization",
+            "domain": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LatentStateRepresentation"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "ExplorationStrategy",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Reward"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "EpisodicRewardRedistribution",
+            "domain": [
+                {
+                    "name": "TemporalCreditAssignment"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "SyntheticReturnGeneration",
+            "domain": [
+                {
+                    "name": "RewardPredictiveAssociation"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LongTermCreditAssignment"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "PolicySelection",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Policy"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "DistractionMitigationStrategy",
+            "domain": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Reward"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "MemoryPreservationStrategy",
+            "domain": [
+                {
+                    "name": "RecurrentNeuralNetwork"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Memory"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "TransitionPolicyGradient",
+            "domain": [
+                {
+                    "name": "Manager"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "RewardRedistributionAdaptation",
+            "domain": [
+                {
+                    "name": "RewardRedistribution"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "RelationalIntrinsicRewardMechanism",
+            "domain": [
+                {
+                    "name": "DiverseEnvironment"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Reward"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "ReinforcementLearningAlgorithm",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "IterativeControlMethod"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "SpuriousRewardMitigationStrategy",
+            "domain": [
+                {
+                    "name": "Reward"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "HierarchicalReinforcementLearning",
+            "domain": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CreditAssignment"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "RewardRedistributionStrategy",
+            "domain": [
+                {
+                    "name": "Policy"
+                }
+            ],
+            "range": [
+                {
+                    "name": "RewardRedistribution"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "HierarchicalUpdate",
+            "domain": [
+                {
+                    "name": "Manager"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "AutonomousLearningProcess",
+            "domain": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "range": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "TemporalAttentionMechanismEnhancement",
+            "domain": [
+                {
+                    "name": "AgentTemporalAttentionMechanism"
+                }
+            ],
+            "range": [
+                {
+                    "name": "PerformanceMetric"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "ContinuousControlTask",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningObjective"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "ConstantRewardSignal",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Reward"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "ValueEquivalentModelClass",
+            "domain": [
+                {
+                    "name": "PolicyComparison"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Policy"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "IncreasingModelOrder",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "VEOrder"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "KStepBellmanOperator",
+            "domain": [
+                {
+                    "name": "MarkovDecisionProcess"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Reward"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "IncreasingVEOrder",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "VEOrder"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "LearningDynamics",
+            "domain": [
+                {
+                    "name": "SubManager"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningDynamic"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "BehavioralPrimitiveTransfer",
+            "domain": [
+                {
+                    "name": "MultiTaskLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "MultiAgentLearning",
+            "domain": [
+                {
+                    "name": "DecentralizedAgentPolicy"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "LearningDynamics",
+            "domain": [
+                {
+                    "name": "Manager"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningDynamic"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "MemoryUtilizationStrategy",
+            "domain": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Memory"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "BiasCorrectionTechnique",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "StateTransitionDynamics",
+            "domain": [
+                {
+                    "name": "ImitationLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "RewardFunction"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "SecondOrderMarkovRewardRedistribution",
+            "domain": [
+                {
+                    "name": "Reward"
+                }
+            ],
+            "range": [
+                {
+                    "name": "ReturnEquivalentSDP"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "PenaltyTermIncorporation",
+            "domain": [
+                {
+                    "name": "RewardFunction"
+                }
+            ],
+            "range": [
+                {
+                    "name": "StateTransitionDynamics"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "TransitionPolicy",
+            "domain": [
+                {
+                    "name": "ActionRepeatConfiguration"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "StateInformationFlow",
+            "domain": [
+                {
+                    "name": "HierarchicalReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "TaskDelegation"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "RewardPredictionStrategy",
+            "domain": [
+                {
+                    "name": "EpisodicRewardDecomposition"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Reward"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "DilatedLSTMArchitecture",
+            "domain": [
+                {
+                    "name": "HierarchicalReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "AdaptiveLearningEnvironment",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningObjective"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "ActionRepeatConfiguration",
+            "domain": [
+                {
+                    "name": "Manager"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "AISApproximatorIntegration",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Policy"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "ModularInteraction",
+            "domain": [
+                {
+                    "name": "Manager"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningDynamic"
+                }
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "PartiallyObservableEnvironment",
+            "domain": [
+                {
+                    "name": "StateTransition"
+                }
+            ],
+            "range": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "LongTermMemoryPreservation",
+            "domain": [
+                {
+                    "name": "HierarchicalReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Memory"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "ImpactOnLearning",
+            "domain": [
+                {
+                    "name": "TemporalResolution"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningDynamic"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "HierarchicalLearningArchitecture",
+            "domain": [
+                {
+                    "name": "HierarchicalReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningObjective"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "MultiAgentSystemLearning",
+            "domain": [
+                {
+                    "name": "DecentralizedAgentPolicy"
+                }
+            ],
+            "range": [
+                {
+                    "name": "DelayedEpisodicReward"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "UnsupervisedObjectDetection",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningObjective"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "AdversarialTraining",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "PolicyGradientMethod"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "ConvergenceOptimization",
+            "domain": [
+                {
+                    "name": "RewardRedistribution"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Policy"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "StateTransition",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LatentStateRepresentation"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "PolicyOptimization",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Policy"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "NonMarkovianDynamics",
+            "domain": [
+                {
+                    "name": "HierarchicalReinforcementLearning"
+                }
+            ],
+            "range": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "IntrinsicMotivation",
+            "domain": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Reward"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "RewardPrediction",
+            "domain": [
+                {
+                    "name": "RecurrentNeuralNetwork"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Reward"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "ReturnDecomposition",
+            "domain": [
+                {
+                    "name": "Reward"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CreditAssignment"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "OptimizationStrategy",
+            "domain": [
+                {
+                    "name": "ResourceAllocation"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "InformationLeakPreventionStrategy",
+            "domain": [
+                {
+                    "name": "SandboxedExecutionEnvironment"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LearningProcess"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "RewardHidingStrategy",
+            "domain": [
+                {
+                    "name": "SubManager"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Reward"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "DemonstrationBasedIntrinsicRewardReshaping",
+            "domain": [
+                {
+                    "name": "Reward"
+                }
+            ],
+            "range": [
+                {
+                    "name": "PolicyGradientMethod"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        }
+    ],
+    "data_properties": [
+        {
+            "name": "TransitionQuality",
+            "domain": [
+                {
+                    "name": "StateTransition"
+                }
+            ],
+            "range": {
+                "value": "xsd:float"
+            },
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "ApproximationError",
+            "domain": [
+                {
+                    "name": "HistoryCompressionFunction"
+                }
+            ],
+            "range": {
+                "value": "xsd:float"
+            },
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "FutureSuccessProbability",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": {
+                "value": "xsd:float"
+            },
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "LearningRateSetting",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": {
+                "value": "xsd:float"
+            },
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "LossFunction",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": {
+                "value": "xsd:string"
+            },
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "AttentionDepth",
+            "domain": [
+                {
+                    "name": "AgentTemporalAttentionMechanism"
+                }
+            ],
+            "range": {
+                "value": "xsd:float"
+            },
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "OptimizationStrategy",
+            "domain": [
+                {
+                    "name": "GRUArchitecture"
+                }
+            ],
+            "range": {
+                "value": "xsd:string"
+            },
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "Interpretability",
+            "domain": [
+                {
+                    "name": "EpisodicRewardDecomposition"
+                }
+            ],
+            "range": {
+                "value": "xsd:string"
+            },
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "LearningPerformance",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": {
+                "value": "xsd:float"
+            },
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "LipschitzConstant",
+            "domain": [
+                {
+                    "name": "Function"
+                }
+            ],
+            "range": {
+                "value": "xsd:float"
+            },
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "Performance",
+            "domain": [
+                {
+                    "name": "ControlIntegration"
+                }
+            ],
+            "range": {
+                "value": "xsd:string"
+            },
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "Evaluation",
+            "domain": [
+                {
+                    "name": "SandboxedExecutionEnvironment"
+                }
+            ],
+            "range": {
+                "value": "xsd:string"
+            },
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "ReinforcementLearningPerformance",
+            "domain": [
+                {
+                    "name": "ReinforcementLearning"
+                }
+            ],
+            "range": {
+                "value": "xsd:float"
+            },
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "PolicyGradientEstimation",
+            "domain": [
+                {
+                    "name": "ResidualBiasCorrectionTechnique"
+                }
+            ],
+            "range": {
+                "value": "xsd:string"
+            },
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "MitigationEffectiveness",
+            "domain": [
+                {
+                    "name": "SpuriousRewardMitigationStrategy"
+                }
+            ],
+            "range": {
+                "value": "xsd:float"
+            },
+            "characteristics": []
+        }
+    ]
+}

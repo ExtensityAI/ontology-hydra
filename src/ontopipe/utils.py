@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from loguru import logger
 
 from pyvis.network import Network
 
@@ -19,7 +20,23 @@ def chunked(lst: list, n: int):
 
 def load_ontology(json_file: Path) -> dict:
     with open(json_file, "r") as f:
-        return json.load(f)
+        ontology = json.load(f)
+    logger.info(f"Ontology loaded from {json_file}")
+    return ontology
+
+
+def save_ontology(js: dict, json_file: Path):
+    with open(json_file, "w") as f:
+        json.dump(js, f, indent=4)
+    logger.success(f"Ontology saved to {json_file}")
+
+
+def save_graph(net: Network, fname: str | Path):
+    if isinstance(fname, str):
+        net.save_graph(fname)
+    else:
+        net.save_graph(fname.as_posix())
+    logger.success(f"Graph saved to {fname}")
 
 
 def build_ontology_graph(data: dict) -> Network:
@@ -112,8 +129,3 @@ def build_kg_graph(kg_data: dict) -> Network:
         )
 
     return net
-
-
-def save_graph(net: Network, fname: str):
-    net.save_graph(fname)
-    print(f"Graph saved to {fname}")

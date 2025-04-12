@@ -142,6 +142,61 @@ class Ontology(LLMDataModel):
     object_properties: list[ObjectProperty] = Field(description="List of object properties.")
     data_properties: list[DataProperty] = Field(description="List of data properties.")
 
+
+#==================================================#
+#----Ontology Fixing Data Models0000---------------#
+#==================================================#
+class Cluster(LLMDataModel):
+    index: int = Field(description="The cluster's index.")
+    relations: list[SubClassRelation] = Field(description="A list of discovered superclass-subclass relations that form a cluster.")
+
+
+class Merge(LLMDataModel):
+    indexes: list[int] = Field(description="The indices of the clusters that are being merged.")
+    relations: list[SubClassRelation] = Field(description="A list of superclass-subclass relations chosen from the existing two clusters in such a way that they merge.")
+
+    @field_validator('indexes')
+    @classmethod
+    def is_binary(cls, v):
+        if len(v) != 2:
+            raise ValueError(f"Binary op error: Invalid number of clusters: {len(v)}. The merge operation requires exactly two clusters.")
+        return v
+
+
+class Bridge(LLMDataModel):
+    indexes: list[int] = Field(description="The indices of the clusters that are being bridged.")
+    relations: list[SubClassRelation] = Field(description="A list of new superclass-subclass relations used to bridge the two clusters from the ontology.")
+
+    @field_validator('indexes')
+    @classmethod
+    def is_binary(cls, v):
+        if len(v) != 2:
+            raise ValueError(f"Binary op error: Invalid number of clusters: {len(v)}. The merge operation requires exactly two clusters.")
+        return v
+
+
+class Prune(LLMDataModel):
+    indexes: list[int] = Field(description="The indices of the clusters that are being pruned.")
+    classes: list[OwlClass] = Field(description="A list of classes that are being pruned from the ontology.")
+
+    @field_validator('indexes')
+    @classmethod
+    def is_unary(cls, v):
+        if len(v) > 1:
+            raise ValueError(f"Unary op error: Invalid number of clusters: {len(v)}. The prune operation requires exactly one cluster.")
+        return v
+
+
+class Operation(LLMDataModel):
+    type: Merge | Bridge | Prune = Field(description="The type of operation to perform.")
+
+
+class WeaverInput(LLMDataModel):
+    ontology: Ontology = Field(description="The current state of the ontology that's the result of the performed chain of operations from history. At the beginning of the process, it is initialized with a predefined ontology and the history will be None.")
+    clusters: list[Cluster] = Field(description="A list of clusters that are being managed by the weaver. The objective is to create only one cluster.")
+    history: list[Operation] | None = Field(description="The history of performed operations.")
+
+
 #==================================================#
 #----Triplet Extraction Data Models----------------#
 #==================================================#
