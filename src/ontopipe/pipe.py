@@ -1,6 +1,9 @@
+import os
 import tempfile
 from logging import getLogger
 from pathlib import Path
+
+from symai.components import DynamicEngine
 
 from ontopipe.cqs.comittee import Comittee, generate_comittee_for_domain
 from ontopipe.cqs.question_generation import generate_questions
@@ -96,6 +99,7 @@ def _generate_ontology_with_cache(domain: str, cqs: list[str], cache_path: Path,
         ontology = Ontology.model_validate_json(cache_path.read_text())
 
     else:
+        logger.debug("Generating ontology from %d CQs", len(cqs))
         ontology = generate_ontology(
             cqs,
             domain,
@@ -103,6 +107,7 @@ def _generate_ontology_with_cache(domain: str, cqs: list[str], cache_path: Path,
             cache_path.name,
         )
 
+    logger.debug("Fixing ontology")
     ontology = fix_ontology(ontology, fixed_cache_path.parent, fixed_cache_path.name)
     fixed_cache_path.write_text(ontology.model_dump_json(indent=2))
 
@@ -140,7 +145,11 @@ def ontopipe(domain: str, cache_path: Path = Path(tempfile.mkdtemp("ontopipe")))
     cqs = _generate_cqs_with_cache(domain, scope, comittee, cqs_path)
     logger.debug("Generated %d CQs for domain '%s'", len(cqs), domain)
 
-    ontology = _generate_ontology_with_cache(domain, cqs, ontology_path, fixed_ontology_path)
+    # use o3-mini for ontology generation
+    # TODO make this configurable
+    with DynamicEngine("o3-mini", os.getenv("NEUROSYMBOLIC_ENGINE_API_KEY")):
+        ontology = _generate_ontology_with_cache(domain, cqs, ontology_path, fixed_ontology_path)
+
     logger.debug(
         "Generated ontology for domain '%s' with %d subclass relations", domain, len(ontology.subclass_relations)
     )

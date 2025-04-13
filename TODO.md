@@ -1,0 +1,6 @@
+- [ ] ? make engines configurable per pipeline step
+- [ ] move eval scenarios to json file
+- [ ] track usage across whole scenario
+- [ ] implement symbolicai contracts instead of OpenAI calls
+- [ ] create graph visualizations for ontology and kgs
+- [ ] fix QA which fails from time to time because of generation not aligning with answers
