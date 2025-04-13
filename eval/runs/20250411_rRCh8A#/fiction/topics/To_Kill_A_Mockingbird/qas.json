@@ -1,0 +1,1372 @@
+{
+  "responses": [
+    {
+      "qid": "56ce30f5aab44d1400b88520",
+      "answer": "1960",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce30f5aab44d1400b88521",
+      "answer": "Presidential Medal of Freedom",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce30f5aab44d1400b88523",
+      "answer": "Harper Lee",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce31f5aab44d1400b8854a",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce31f5aab44d1400b8854b",
+      "answer": "Narrative",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce31f5aab44d1400b8854c",
+      "answer": "DestructionOfInnocence, Bildungsroman, Courage, Compassion, SocialJusticeTheme, RacialInjustice, ClassIssues, GenderRoles, ChristianEthic, SouthernGothic",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce330daab44d1400b88556",
+      "answer": "MaryMcDonaghMurphy",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce330daab44d1400b88557",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce330daab44d1400b88558",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce330daab44d1400b88559",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce330daab44d1400b8855a",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce3363aab44d1400b88565",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce3363aab44d1400b88566",
+      "answer": "Go Set A Watchman",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce349aaab44d1400b8858a",
+      "answer": "Truman Capote",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce349aaab44d1400b8858c",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce349aaab44d1400b8858d",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce349aaab44d1400b8858e",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce355eaab44d1400b8859e",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce355eaab44d1400b8859f",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce35b2aab44d1400b885b4",
+      "answer": "mentalIllness",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce35b2aab44d1400b885b5",
+      "answer": "lawyer",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce3631aab44d1400b885d1",
+      "answer": "1960",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce623aaab44d1400b88721",
+      "answer": "Monroeville",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce623aaab44d1400b88722",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce623aaab44d1400b88723",
+      "answer": "2",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce623aaab44d1400b88724",
+      "answer": "Dill",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce6318aab44d1400b8872d",
+      "answer": "Mayella Ewell",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce63f7aab44d1400b88735",
+      "answer": "Jem and Scout",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce63f7aab44d1400b88736",
+      "answer": null,
+      "no_answer_prob": 0.95,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce6488aab44d1400b8873e",
+      "answer": "Jem and Scout",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce6488aab44d1400b8873f",
+      "answer": "the trial",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce6488aab44d1400b88740",
+      "answer": "Boo Radley",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce6635aab44d1400b8874f",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce67f4aab44d1400b88761",
+      "answer": "not specified",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce67f4aab44d1400b88762",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce67f4aab44d1400b88764",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce68dcaab44d1400b8876c",
+      "answer": "next to",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce68dcaab44d1400b8876d",
+      "answer": "no_answer",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce68dcaab44d1400b8876e",
+      "answer": "no_answer",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce6aabaab44d1400b88775",
+      "answer": "no_answer",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce6aabaab44d1400b88776",
+      "answer": "Tom Robinson",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce6aabaab44d1400b88777",
+      "answer": "Emmett Till",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce6aabaab44d1400b88778",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce6d47aab44d1400b8877d",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce6dabaab44d1400b8877f",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce6dabaab44d1400b88780",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce6f81aab44d1400b8878b",
+      "answer": "LiteraryWork",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce70aaaab44d1400b8878f",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce98e7aab44d1400b888bf",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce996caab44d1400b888c1",
+      "answer": "poorWhiteFarmers",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce996caab44d1400b888c2",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce99a5aab44d1400b888c5",
+      "answer": "mad dog",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf477faab44d1400b88f14",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf477faab44d1400b88f15",
+      "answer": "Jem",
+      "no_answer_prob": 0.01,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf477faab44d1400b88f16",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf48feaab44d1400b88f36",
+      "answer": "poor",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf4943aab44d1400b88f42",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf4ad1aab44d1400b88f64",
+      "answer": "Charles Shields",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf4b12aab44d1400b88f68",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf4b72aab44d1400b88f75",
+      "answer": "Tom Robinson",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf4ba7aab44d1400b88f78",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf4ccdaab44d1400b88f7a",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf4ccdaab44d1400b88f7b",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf4ccdaab44d1400b88f7c",
+      "answer": "mockingbird",
+      "no_answer_prob": 0.2,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf4debaab44d1400b88f8c",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf52eeaab44d1400b88fd2",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf52eeaab44d1400b88fd3",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf52eeaab44d1400b88fd4",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf5398aab44d1400b88fe2",
+      "answer": "impressions",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf5398aab44d1400b88fe3",
+      "answer": "Jem",
+      "no_answer_prob": 0.85,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf542daab44d1400b88fec",
+      "answer": "lawyer",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf5472aab44d1400b88ff8",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf5472aab44d1400b88ff9",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf54baaab44d1400b89010",
+      "answer": "1960",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf54baaab44d1400b89011",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf550faab44d1400b8901e",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf550faab44d1400b8901f",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf55e2aab44d1400b89038",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf55e2aab44d1400b89039",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf5655aab44d1400b8903c",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf5655aab44d1400b8903d",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf5655aab44d1400b8903e",
+      "answer": "Alice Lee",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf572daab44d1400b89071",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf572daab44d1400b89072",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf572daab44d1400b89073",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf572daab44d1400b89074",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf586faab44d1400b890a5",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf586faab44d1400b890a6",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf586faab44d1400b890a7",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf593eaab44d1400b890bf",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf593eaab44d1400b890c0",
+      "answer": "GeorgeWBush",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf593eaab44d1400b890c1",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf59eaaab44d1400b890d1",
+      "answer": "null",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf59eaaab44d1400b890d2",
+      "answer": "RobertSeanLeonard",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf5a6aaab44d1400b890e3",
+      "answer": "null",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf5a6aaab44d1400b890e4",
+      "answer": "null",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf5ab3aab44d1400b890e9",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf5b0eaab44d1400b890f7",
+      "answer": "Christopher Sergel",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf5b0eaab44d1400b890f8",
+      "answer": "1990",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf5b8eaab44d1400b89107",
+      "answer": "UK",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf5b8eaab44d1400b89108",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf5c2caab44d1400b8911b",
+      "answer": "2015",
+      "no_answer_prob": 0.01,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf5c2caab44d1400b8911c",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf5c2caab44d1400b8911d",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf5c2caab44d1400b8911e",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d1073817492d1400aab786",
+      "answer": "Harper Lee",
+      "no_answer_prob": 0.6,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d1073817492d1400aab787",
+      "answer": "1960",
+      "no_answer_prob": 0.2,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d1073817492d1400aab788",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d1085d17492d1400aab7a8",
+      "answer": "Racial Injustice and Social Justice Theme",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d1085d17492d1400aab7a9",
+      "answer": "Scout Finch",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d10cda17492d1400aab823",
+      "answer": "Alabama",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d10cda17492d1400aab824",
+      "answer": null,
+      "no_answer_prob": 0.95,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d114b117492d1400aab8c4",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d114b117492d1400aab8c5",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d114b117492d1400aab8c6",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d114b117492d1400aab8c7",
+      "answer": "Monroeville",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d1161117492d1400aab8de",
+      "answer": "Go Set A Watchman",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d1161117492d1400aab8df",
+      "answer": "2015",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d1161117492d1400aab8e0",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d11a1217492d1400aab953",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d11a1217492d1400aab954",
+      "answer": "Capote",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d11a1217492d1400aab955",
+      "answer": null,
+      "no_answer_prob": 0.95,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d11a1217492d1400aab956",
+      "answer": null,
+      "no_answer_prob": 0.95,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d11a1217492d1400aab957",
+      "answer": null,
+      "no_answer_prob": 0.95,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d11b1c17492d1400aab991",
+      "answer": "Hohoff",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d11b8d17492d1400aab997",
+      "answer": "Atticus",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d11d0f17492d1400aab9bf",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d11d0f17492d1400aab9c0",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d11fcf17492d1400aab9f1",
+      "answer": "Maycomb",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d11fcf17492d1400aab9f2",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d11fcf17492d1400aab9f3",
+      "answer": "Scout",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d121d317492d1400aaba27",
+      "answer": "Tom Robinson",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d121d317492d1400aaba29",
+      "answer": "Scout",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d1232217492d1400aaba45",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d1232217492d1400aaba47",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d123c417492d1400aaba4b",
+      "answer": "Ewell",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d123c417492d1400aaba4c",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d1255017492d1400aaba75",
+      "answer": "Ewell died during the fight.",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d126c117492d1400aaba94",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d128d017492d1400aabace",
+      "answer": "Dill was inspired by Truman Capote.",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d128d017492d1400aabacf",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d128d017492d1400aabad0",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d12cb517492d1400aabb54",
+      "answer": "RacialInjustice",
+      "no_answer_prob": 0.5,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d12cb517492d1400aabb55",
+      "answer": "EmmettTill",
+      "no_answer_prob": 0.5,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d133a017492d1400aabc1c",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d133a017492d1400aabc1d",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d13b3ae7d4791d00902049",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d14361e7d4791d00902051",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d14361e7d4791d00902052",
+      "answer": "BooRadley",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d147d5e7d4791d00902057",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d147d5e7d4791d00902058",
+      "answer": "Atticus",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d18bcde7d4791d0090205e",
+      "answer": "RacialInjustice",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d1900ee7d4791d00902065",
+      "answer": "ChristianEthic",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d196b2e7d4791d00902067",
+      "answer": "SocialJusticeTheme",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d196b2e7d4791d00902068",
+      "answer": "Bildungsroman",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d196b2e7d4791d00902069",
+      "answer": "the best they could",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d196b2e7d4791d0090206a",
+      "answer": "RacialInjustice",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d198dce7d4791d0090206f",
+      "answer": "RacialInjustice",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d19bdee7d4791d00902073",
+      "answer": "no_answer",
+      "no_answer_prob": 1.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d19bdee7d4791d00902074",
+      "answer": "poorWhiteFarmers",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d19bdee7d4791d00902075",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d19cf4e7d4791d00902079",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d19e43e7d4791d0090207b",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d19e43e7d4791d0090207c",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d1a128e7d4791d0090207f",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d1a128e7d4791d00902081",
+      "answer": "BooRadley",
+      "no_answer_prob": 0.85,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d1a35fe7d4791d00902085",
+      "answer": "Atticus",
+      "no_answer_prob": 0.85,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d1a35fe7d4791d00902086",
+      "answer": "Compassion",
+      "no_answer_prob": 0.75,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d2021be7d4791d009025e2",
+      "answer": "Charles Shields",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d2021be7d4791d009025e3",
+      "answer": "no_answer",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d2021be7d4791d009025e4",
+      "answer": "no_answer",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d20469e7d4791d009025fc",
+      "answer": "no_answer",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d20469e7d4791d009025fd",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d20469e7d4791d009025fe",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d2581659d6e41400145edc",
+      "answer": "Atticus",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d25ca259d6e41400145ef0",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d25ca259d6e41400145ef2",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d25eb659d6e41400145f06",
+      "answer": "mockingbird",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d25eb659d6e41400145f07",
+      "answer": "mockingbird",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d25eb659d6e41400145f08",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d261f359d6e41400145f36",
+      "answer": "Tom Robinson",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d261f359d6e41400145f37",
+      "answer": "Boo Radley",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d261f359d6e41400145f38",
+      "answer": "good",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d2639159d6e41400145f48",
+      "answer": "To Kill a Mockingbird",
+      "no_answer_prob": 0.85,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d2675b59d6e41400145f76",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3949f59d6e414001467b8",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3958659d6e414001467c5",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3958659d6e414001467c6",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3965159d6e414001467c9",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3965159d6e414001467ca",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3977059d6e414001467d5",
+      "answer": "Lee",
+      "no_answer_prob": 0.85,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3977059d6e414001467d6",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3988759d6e414001467e1",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3988759d6e414001467e2",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3996b59d6e414001467eb",
+      "answer": "impressions",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d39a7759d6e414001467fb",
+      "answer": "Integrity",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d39b8159d6e41400146804",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d39d2359d6e41400146821",
+      "answer": "1960",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d39d2359d6e41400146822",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3a1c459d6e4140014683d",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3a1c459d6e4140014683e",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3d0c42ccc5a1400d82eac",
+      "answer": "Calpurnia",
+      "no_answer_prob": 0.85,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3d0c42ccc5a1400d82ead",
+      "answer": "African American students",
+      "no_answer_prob": 0.8,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3d0c42ccc5a1400d82eae",
+      "answer": "Tom Robinson",
+      "no_answer_prob": 0.8,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3df022ccc5a1400d82f02",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3e0852ccc5a1400d82f0f",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3e0852ccc5a1400d82f10",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3e2ac2ccc5a1400d82f13",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3e2ac2ccc5a1400d82f14",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3e4762ccc5a1400d82f21",
+      "answer": "Presidential Medal of Freedom",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3e4762ccc5a1400d82f22",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3e5de2ccc5a1400d82f2f",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3e5de2ccc5a1400d82f30",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3e7442ccc5a1400d82f3d",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3e7442ccc5a1400d82f3e",
+      "answer": "GeorgeWBush",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3e8402ccc5a1400d82f43",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3e9702ccc5a1400d82f51",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3e9702ccc5a1400d82f52",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3ead62ccc5a1400d82f55",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3ec6d2ccc5a1400d82f59",
+      "answer": "Monroeville",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3ec6d2ccc5a1400d82f5a",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3ec6d2ccc5a1400d82f5b",
+      "answer": "The audience is racially segregated.",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3ee6e2ccc5a1400d82f5f",
+      "answer": "Robert Sean Leonard and Duncan Preston played Atticus Finch in the UK theater productions.",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3f1872ccc5a1400d82f75",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3f1872ccc5a1400d82f77",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3f37f2ccc5a1400d82f83",
+      "answer": "Go Set A Watchman",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3f37f2ccc5a1400d82f84",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3f37f2ccc5a1400d82f85",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    }
+  ]
+}

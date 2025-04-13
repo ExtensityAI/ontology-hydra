@@ -6,6 +6,7 @@ from ontopipe.cqs.comittee import Comittee, generate_comittee_for_domain
 from ontopipe.cqs.question_generation import generate_questions
 from ontopipe.cqs.scoping import generate_scope_document, merge_scope_documents
 from ontopipe.models import Ontology
+from ontopipe.ontology.ontology_fixing import fix_ontology
 from ontopipe.ontology.ontology_generation import generate_ontology
 
 logger = getLogger("ontopipe.pipe")
@@ -86,16 +87,24 @@ def _generate_cqs_with_cache(domain: str, merged_scope: str, comittee: Comittee,
     return cqs
 
 
-def _generate_ontology_with_cache(domain: str, cqs: list[str], cache_path: Path):
-    if cache_path.exists():
-        return Ontology.model_validate_json(cache_path.read_text())
+def _generate_ontology_with_cache(domain: str, cqs: list[str], cache_path: Path, fixed_cache_path: Path):
+    if fixed_cache_path.exists():
+        # we have a cached fixed ontology, load it directly
+        return Ontology.model_validate_json(fixed_cache_path.read_text())
 
-    ontology = generate_ontology(
-        cqs,
-        domain,
-        cache_path.parent,
-        cache_path.name,
-    )
+    if cache_path.exists():
+        ontology = Ontology.model_validate_json(cache_path.read_text())
+
+    else:
+        ontology = generate_ontology(
+            cqs,
+            domain,
+            cache_path.parent,
+            cache_path.name,
+        )
+
+    ontology = fix_ontology(ontology, fixed_cache_path.parent, fixed_cache_path.name)
+    fixed_cache_path.write_text(ontology.model_dump_json(indent=2))
 
     return ontology
 
@@ -117,6 +126,7 @@ def ontopipe(domain: str, cache_path: Path = Path(tempfile.mkdtemp("ontopipe")))
     scopes_path: Path = cache_path / "scopes"
     cqs_path = cache_path / "cqs"
     ontology_path = cache_path / "ontology.json"
+    fixed_ontology_path = cache_path / "ontology_fixed.json"
 
     scopes_path.mkdir(exist_ok=True, parents=True)
     cqs_path.mkdir(exist_ok=True, parents=True)
@@ -130,7 +140,7 @@ def ontopipe(domain: str, cache_path: Path = Path(tempfile.mkdtemp("ontopipe")))
     cqs = _generate_cqs_with_cache(domain, scope, comittee, cqs_path)
     logger.debug("Generated %d CQs for domain '%s'", len(cqs), domain)
 
-    ontology = _generate_ontology_with_cache(domain, cqs, ontology_path)
+    ontology = _generate_ontology_with_cache(domain, cqs, ontology_path, fixed_ontology_path)
     logger.debug(
         "Generated ontology for domain '%s' with %d subclass relations", domain, len(ontology.subclass_relations)
     )

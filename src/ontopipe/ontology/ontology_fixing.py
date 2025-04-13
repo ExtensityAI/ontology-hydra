@@ -8,12 +8,20 @@ from symai import Expression
 from symai.components import MetadataTracker
 from symai.strategy import contract
 
-from src.ontopipe.models import (Bridge, Cluster, DataProperty, Merge,
-                                 ObjectProperty, Ontology, Operation, OwlClass,
-                                 Prune, WeaverInput)
-from src.ontopipe.prompts import prompt_registry
-from src.ontopipe.utils import (build_ontology_graph, load_ontology,
-                                save_graph, save_ontology)
+from ontopipe.models import (
+    Bridge,
+    Cluster,
+    DataProperty,
+    Merge,
+    ObjectProperty,
+    Ontology,
+    Operation,
+    OwlClass,
+    Prune,
+    WeaverInput,
+)
+from ontopipe.prompts import prompt_registry
+from ontopipe.utils import build_ontology_graph, load_ontology, save_graph, save_ontology
 
 
 # =========================================#
@@ -23,9 +31,7 @@ from src.ontopipe.utils import (build_ontology_graph, load_ontology,
     pre_remedy=False,
     post_remedy=True,
     verbose=True,
-    remedy_retry_params=dict(
-        tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False
-    ),
+    remedy_retry_params=dict(tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False),
 )
 class Weaver(Expression):
     def __init__(self, *args, **kwargs):
@@ -58,9 +64,7 @@ class Weaver(Expression):
                     )
             for idx in op.indexes:
                 if idx not in self._cluster_indexes:
-                    raise ValueError(
-                        f"Invalid cluster index: {idx}. Valid indices are: {self._cluster_indexes}"
-                    )
+                    raise ValueError(f"Invalid cluster index: {idx}. Valid indices are: {self._cluster_indexes}")
 
         if isinstance(op, Prune):
             for cls in op.classes:
@@ -69,16 +73,12 @@ class Weaver(Expression):
                         f"Prune operation contains non-existent class: {cls.name}. Please generate a relation that uses existing classes."
                     )
             if op.indexes[0] not in self._cluster_indexes:
-                raise ValueError(
-                    f"Invalid cluster index: {op.indexes[0]}. Valid indices are: {self._cluster_indexes}"
-                )
+                raise ValueError(f"Invalid cluster index: {op.indexes[0]}. Valid indices are: {self._cluster_indexes}")
 
         if isinstance(op, Bridge):
             for idx in op.indexes:
                 if idx not in self._cluster_indexes:
-                    raise ValueError(
-                        f"Invalid cluster index: {idx}. Valid indices are: {self._cluster_indexes}"
-                    )
+                    raise ValueError(f"Invalid cluster index: {idx}. Valid indices are: {self._cluster_indexes}")
 
         # Simulate applying the op to see if we decrease the number of clusters
         old_cluster_count = len(self._cluster_indexes)
@@ -120,11 +120,13 @@ class Weaver(Expression):
         return self._history
 
     @staticmethod
-    def dump_transformation_history(fname: Path, history: list[Operation], original_ontology: Ontology, original_clusters: list[Cluster]):
+    def dump_transformation_history(
+        fname: Path, history: list[Operation], original_ontology: Ontology, original_clusters: list[Cluster]
+    ):
         json_data = {
             "original_ontology": original_ontology.model_dump(),
             "original_clusters": [cluster.model_dump() for cluster in original_clusters],
-            "history": [(operation.type.__class__.__name__, operation.model_dump()) for operation in history]
+            "history": [(operation.type.__class__.__name__, operation.model_dump()) for operation in history],
         }
         with open(fname, "w") as f:
             json.dump(json_data, f, indent=4)
@@ -176,7 +178,8 @@ class Weaver(Expression):
         clusters = []
         for idx, component_classes in enumerate(components, start=1):
             component_relations = [
-                rel for rel in ontology.subclass_relations
+                rel
+                for rel in ontology.subclass_relations
                 if rel.subclass in component_classes and rel.superclass in component_classes
             ]
             clusters.append(Cluster(index=idx, relations=component_relations))
@@ -204,24 +207,22 @@ class Weaver(Expression):
                 new_domain = [cls for cls in prop.domain if cls.name in valid_classes]
                 new_range = [cls for cls in prop.range if cls.name in valid_classes]
                 if new_domain and new_range:
-                    filtered_object_properties.append(ObjectProperty(
-                        name=prop.name,
-                        domain=new_domain,
-                        range=new_range,
-                        characteristics=prop.characteristics
-                    ))
+                    filtered_object_properties.append(
+                        ObjectProperty(
+                            name=prop.name, domain=new_domain, range=new_range, characteristics=prop.characteristics
+                        )
+                    )
             new_ontology.object_properties = filtered_object_properties
 
             filtered_data_properties = []
             for prop in new_ontology.data_properties:
                 new_domain = [cls for cls in prop.domain if cls.name in valid_classes]
                 if new_domain:
-                    filtered_data_properties.append(DataProperty(
-                        name=prop.name,
-                        domain=new_domain,
-                        range=prop.range,
-                        characteristics=prop.characteristics
-                    ))
+                    filtered_data_properties.append(
+                        DataProperty(
+                            name=prop.name, domain=new_domain, range=prop.range, characteristics=prop.characteristics
+                        )
+                    )
             new_ontology.data_properties = filtered_data_properties
 
             return new_ontology
@@ -235,7 +236,8 @@ class Weaver(Expression):
 
             classes_to_prune = {cls.name for cls in op.classes}
             new_relations = [
-                rel for rel in new_ontology.subclass_relations
+                rel
+                for rel in new_ontology.subclass_relations
                 if rel.subclass.name not in classes_to_prune and rel.superclass.name not in classes_to_prune
             ]
             new_ontology.subclass_relations = new_relations
@@ -245,35 +247,30 @@ class Weaver(Expression):
                 new_domain = [cls for cls in prop.domain if cls.name not in classes_to_prune]
                 new_range = [cls for cls in prop.range if cls.name not in classes_to_prune]
                 if new_domain and new_range:
-                    new_object_properties.append(ObjectProperty(
-                        name=prop.name,
-                        domain=new_domain,
-                        range=new_range,
-                        characteristics=prop.characteristics
-                    ))
+                    new_object_properties.append(
+                        ObjectProperty(
+                            name=prop.name, domain=new_domain, range=new_range, characteristics=prop.characteristics
+                        )
+                    )
             new_ontology.object_properties = new_object_properties
 
             new_data_properties = []
             for prop in new_ontology.data_properties:
                 new_domain = [cls for cls in prop.domain if cls.name not in classes_to_prune]
                 if new_domain:
-                    new_data_properties.append(DataProperty(
-                        name=prop.name,
-                        domain=new_domain,
-                        range=prop.range,
-                        characteristics=prop.characteristics
-                    ))
+                    new_data_properties.append(
+                        DataProperty(
+                            name=prop.name, domain=new_domain, range=prop.range, characteristics=prop.characteristics
+                        )
+                    )
             new_ontology.data_properties = new_data_properties
 
             return new_ontology
 
-def fix_ontology(
-    ontology: Ontology | Path,
-    folder: Path,
-    fnames: str = "fixed_ontology",
-    dump: bool = True
-) -> Ontology:
 
+def fix_ontology(
+    ontology: Ontology | Path, folder: Path, fnames: str = "fixed_ontology", dump: bool = True
+) -> Ontology:
     if isinstance(ontology, Path):
         ontology = Ontology.model_validate(load_ontology(ontology))
 
@@ -282,11 +279,7 @@ def fix_ontology(
     clusters = weaver.find_isolated_clusters(ontology)
     weaver.set_dynamic_ontology(ontology)
     weaver.set_cluster_indexes(clusters)
-    weaver_input = WeaverInput(
-        ontology=ontology,
-        clusters=clusters,
-        history=None
-    )
+    weaver_input = WeaverInput(ontology=ontology, clusters=clusters, history=None)
     # Preserve original
     original_ontology = deepcopy(ontology)
     original_clusters = deepcopy(clusters)
@@ -304,11 +297,7 @@ def fix_ontology(
             clusters = updated_clusters
             ontology = updated_ontology
 
-            weaver_input = WeaverInput(
-                ontology=ontology,
-                clusters=clusters,
-                history=weaver.get_history()
-            )
+            weaver_input = WeaverInput(ontology=ontology, clusters=clusters, history=weaver.get_history())
 
     logger.info("Usage:")
     print(tracker.usage)
@@ -318,4 +307,6 @@ def fix_ontology(
     if dump:
         save_graph(build_ontology_graph(ontology.model_dump()), folder / f"{fnames}.html")
         save_ontology(ontology.model_dump(), folder / f"{fnames}.json")
-        weaver.dump_transformation_history(folder / f"{fnames}_transformation_history.json", weaver.get_history(), original_ontology, original_clusters)
+        weaver.dump_transformation_history(
+            folder / f"{fnames}_transformation_history.json", weaver.get_history(), original_ontology, original_clusters
+        )

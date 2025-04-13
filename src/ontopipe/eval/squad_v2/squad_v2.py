@@ -11,10 +11,9 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-""" SQuAD v2 metric. """
+"""SQuAD v2 metric."""
 
 import datasets
-
 import evaluate
 
 from .compute_score import (
@@ -25,7 +24,6 @@ from .compute_score import (
     make_qid_to_has_ans,
     merge_eval,
 )
-
 
 _CITATION = """\
 @inproceedings{Rajpurkar2016SQuAD10,
