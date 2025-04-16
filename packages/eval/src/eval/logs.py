@@ -15,7 +15,7 @@ def init_logging(log_dir_path: Path):
 
     def _only_ontopipe(record) -> bool:
         # filter log records to only show those from ontopipe (used only in stderr)
-        return "ontopipe" in record["name"]
+        return "ontopipe" in record["name"] or "eval" in record["name"]
 
     logger.remove()
 
