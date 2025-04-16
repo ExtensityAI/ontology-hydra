@@ -1,7 +1,5 @@
 """Defines data structures for the SQuAD v2 dataset (re: https://huggingface.co/datasets/rajpurkar/squad_v2)"""
 
-from pathlib import Path
-
 from pydantic import BaseModel
 
 
@@ -65,12 +63,3 @@ class SquadDataset(BaseModel):
     def find_topic(self, title: str):
         """Find a topic by its title"""
         return next((item for item in self.data if item.title == title), None)
-
-
-def load_squad_dataset(path: Path):
-    """Load the SQuAD dataset from a JSON file"""
-
-    if not path.exists():
-        raise FileNotFoundError(f"SQuAD dataset not found at {path}. Please read the README for instructions.")
-
-    return SquadDataset.model_validate_json(path.read_text(encoding="utf-8"))

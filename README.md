@@ -1,11 +1,29 @@
 # research-ontology
 
-## Evaluation
+## Setup
 
-To run, download the SQuAD v2 training dataset from [https://rajpurkar.github.io/SQuAD-explorer/](https://rajpurkar.github.io/SQuAD-explorer/) and save it as `./eval/train-v2.0.json`.
+To set up the environment, install the Python package manager [uv](https://github.com/astral-sh/uv).
 
-Then, simply run
+Then, create a virtual environment and install the dependencies by running:
 
 ```bash
-uv run eval
+$ uv sync
+```
+
+## Evaluation
+
+First, download the SQuAD v2.0 dataset from [https://rajpurkar.github.io/SQuAD-explorer/](https://rajpurkar.github.io/SQuAD-explorer/) and save it as `./eval/train-v2.0.json`.
+
+Then, run the evaluation script:
+
+```bash
+$ uv run eval
+```
+
+This will create a new evaluation run under `./eval/runs/<run-id>`, where logs, checkpoints and results will be saved.
+
+If you want to rerun the evaluation (in case you cancelled it while running), you can provide the ``--run-id` parameter to the script. This will allow you to rerun the evaluation from the last checkpoint.
+
+```bash
+$ uv run eval --run-id <run-id>
 ```

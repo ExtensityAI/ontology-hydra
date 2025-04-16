@@ -100,12 +100,7 @@ def _generate_ontology_with_cache(domain: str, cqs: list[str], cache_path: Path,
 
     else:
         logger.debug("Generating ontology from %d CQs", len(cqs))
-        ontology = generate_ontology(
-            cqs,
-            domain,
-            cache_path.parent,
-            cache_path.name,
-        )
+        ontology = generate_ontology(cqs, domain, cache_path.parent, cache_path.name, batch_size=4)
 
     logger.debug("Fixing ontology")
     ontology = fix_ontology(ontology, fixed_cache_path.parent, fixed_cache_path.name)

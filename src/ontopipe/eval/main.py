@@ -10,7 +10,7 @@ from loguru import logger
 from ontopipe.eval.eval import EvalScenario, eval_scenario
 from ontopipe.eval.utils import InterceptHandler
 
-SCENARIOS = (EvalScenario(id="fiction", domain="Fiction Books", squad_titles=["To_Kill_a_Mockingbird"]),)
+SCENARIOS = (EvalScenario(id="computer", domain="Computers", squad_titles=["Computer"]),)
 
 
 def _init_logging(log_dir_path: Path):

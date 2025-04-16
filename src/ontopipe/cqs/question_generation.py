@@ -19,12 +19,12 @@ Based on your expertise and the provided scope document, generate a list of ques
    * Domain-specific constraints or rules
 
 ## Output Format
-1. Organize your questions into a simple list format (e.g. - Question 1)
-2. Use bullet points for individual questions
-3. Ensure each question is specific and concrete
-4. Phrase questions to elicit detailed, precise answers
+1. Organize your questions into a simple list format (- ...)
+2. Ensure each question is specific and concrete
+3. Phrase questions to elicit detailed, precise answers
+4. ONLY provide the list of questions, nothing else!
 
-Generate only questions that you, as this specific expert persona, would consider relevant and important for understanding the domain. Do not include questions outside your area of expertise.
+Generate only questions that you, as these specific expert personas, would consider relevant and important for understanding the domain. Do not include questions outside your area of expertise.
 
 <group>{group}</group>
 <scope_document>{scope_document}</scope_document>

@@ -14,7 +14,7 @@ from ontopipe.eval.squad_v2.squad_v2 import SquadV2
 from ontopipe.eval.vis import visualize_kg, visualize_ontology
 from ontopipe.models import KG
 
-KG_BATCH_SIZE = 1
+KG_BATCH_SIZE = 4
 QA_BATCH_SIZE = 4
 NO_ANSWER_THRESHOLD = 0.5
 
