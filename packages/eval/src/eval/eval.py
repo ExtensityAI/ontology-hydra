@@ -6,12 +6,12 @@ from loguru import logger
 from pydantic import BaseModel, ConfigDict
 from tqdm import tqdm
 
+from eval.kg import generate_kg
+from eval.squad_v2.data import SquadDataset, SquadQAPair
+from eval.squad_v2.squad_v2 import SquadV2
+from eval.vis import visualize_kg, visualize_ontology
 from ontopipe import ontopipe
 from ontopipe.cqs.utils import MODEL
-from ontopipe.eval.kg import generate_kg
-from ontopipe.eval.squad_v2.data import SquadDataset, SquadQAPair
-from ontopipe.eval.squad_v2.squad_v2 import SquadV2
-from ontopipe.eval.vis import visualize_kg, visualize_ontology
 from ontopipe.models import KG
 
 KG_BATCH_SIZE = 4

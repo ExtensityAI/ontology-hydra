@@ -7,8 +7,10 @@ To set up the environment, install the Python package manager [uv](https://githu
 Then, create a virtual environment and install the dependencies by running:
 
 ```bash
-$ uv sync
+$ uv sync --all-packages
 ```
+
+_Note: It is important to use the `--all-packages` parameter as the evaluation framework is located in a separate package under `./packages/eval`._
 
 ## Evaluation
 

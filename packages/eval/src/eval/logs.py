@@ -4,7 +4,7 @@ from pathlib import Path
 
 from loguru import logger
 
-from ontopipe.eval.utils import InterceptHandler
+from eval.utils import InterceptHandler
 
 
 def init_logging(log_dir_path: Path):

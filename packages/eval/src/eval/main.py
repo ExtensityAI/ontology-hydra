@@ -6,8 +6,8 @@ from pathlib import Path
 from loguru import logger
 from pydantic import BaseModel, ConfigDict
 
-from ontopipe.eval.eval import EvalScenario, eval_scenario
-from ontopipe.eval.logs import init_logging
+from eval.eval import EvalScenario, eval_scenario
+from eval.logs import init_logging
 
 
 class EvalConfig(BaseModel):
