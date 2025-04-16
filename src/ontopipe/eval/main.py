@@ -10,12 +10,10 @@ from loguru import logger
 from ontopipe.eval.eval import EvalScenario, eval_scenario
 from ontopipe.eval.utils import InterceptHandler
 
-SCENARIOS = [
-    EvalScenario(id="fiction", domain="Fiction Books", squad_titles=["To_Kill_a_Mockingbird"]),
-]
+SCENARIOS = (EvalScenario(id="fiction", domain="Fiction Books", squad_titles=["To_Kill_a_Mockingbird"]),)
 
 
-def _init_logging(eval_path: Path):
+def _init_logging(log_dir_path: Path):
     logging.basicConfig(handlers=[InterceptHandler()], level=0, force=True)
     logging.getLogger("openai._base_client").setLevel(logging.WARN)  # ignore unnecessary OpenAI logs
 
@@ -25,12 +23,12 @@ def _init_logging(eval_path: Path):
     logger.remove()
 
     logger.add(sys.stderr, colorize=True, filter=_only_ontopipe)
-    logger.add(eval_path / "eval_{time}.log", rotation="300 MB")
+    logger.add(log_dir_path / "eval_{time}.log", rotation="300 MB")
 
 
 def _generate_run_id():
     """Generate a run ID based on the current date"""
-    return date.today().strftime("%Y%m%d") + "_" + secrets.token_urlsafe(4)
+    return date.today().strftime("%Y%m%d") + "_" + secrets.token_urlsafe(4).replace("_", "-")
 
 
 def _parse_args():
@@ -70,7 +68,9 @@ def main():
     eval_path = args.path / run_id
     eval_path.mkdir(exist_ok=True, parents=True)
 
-    _init_logging(eval_path)
+    log_dir_path = eval_path / "logs"
+    log_dir_path.mkdir(exist_ok=True, parents=True)
+    _init_logging(log_dir_path)
 
     logger.info(
         "Starting evaluation '{}' under '{}'",

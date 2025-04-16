@@ -1,0 +1,3014 @@
+{
+    "name": "People, Life Events, Social Relationships, and Contextual Information",
+    "subclass_relations": [
+        {
+            "subclass": {
+                "name": "CulturalVariation"
+            },
+            "superclass": {
+                "name": "CulturalConcept"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SocialContext"
+            },
+            "superclass": {
+                "name": "CulturalConcept"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SocialConnectionAttribute"
+            },
+            "superclass": {
+                "name": "SocialRelationshipAttribute"
+            }
+        },
+        {
+            "subclass": {
+                "name": "CulturalIntersectionality"
+            },
+            "superclass": {
+                "name": "Intersectionality"
+            }
+        },
+        {
+            "subclass": {
+                "name": "PsychologicalResilience"
+            },
+            "superclass": {
+                "name": "PsychologicalConcept"
+            }
+        },
+        {
+            "subclass": {
+                "name": "ConflictResolutionMechanism"
+            },
+            "superclass": {
+                "name": "SocialConcept"
+            }
+        },
+        {
+            "subclass": {
+                "name": "CrisisType"
+            },
+            "superclass": {
+                "name": "Event"
+            }
+        },
+        {
+            "subclass": {
+                "name": "IdentityIntersectionality"
+            },
+            "superclass": {
+                "name": "Intersectionality"
+            }
+        },
+        {
+            "subclass": {
+                "name": "InterpersonalDynamics"
+            },
+            "superclass": {
+                "name": "SocialConcept"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SocialDynamics"
+            },
+            "superclass": {
+                "name": "SocialConcept"
+            }
+        },
+        {
+            "subclass": {
+                "name": "VirtualCommunity"
+            },
+            "superclass": {
+                "name": "SocialEnvironment"
+            }
+        },
+        {
+            "subclass": {
+                "name": "MentalHealthImpact"
+            },
+            "superclass": {
+                "name": "SignificantLifeEvent"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SignificantLifeEventExperience"
+            },
+            "superclass": {
+                "name": "LifeEventExperience"
+            }
+        },
+        {
+            "subclass": {
+                "name": "CulturalInteraction"
+            },
+            "superclass": {
+                "name": "SocialConcept"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SocioEconomicStatus"
+            },
+            "superclass": {
+                "name": "DemographicCharacteristic"
+            }
+        },
+        {
+            "subclass": {
+                "name": "CriticalFactor"
+            },
+            "superclass": {
+                "name": "SocialInfluence"
+            }
+        },
+        {
+            "subclass": {
+                "name": "CrisisImpact"
+            },
+            "superclass": {
+                "name": "ImpactAssessment"
+            }
+        },
+        {
+            "subclass": {
+                "name": "LifeTransition"
+            },
+            "superclass": {
+                "name": "SignificantEvent"
+            }
+        },
+        {
+            "subclass": {
+                "name": "UrbanRuralLivingCondition"
+            },
+            "superclass": {
+                "name": "LivingCondition"
+            }
+        },
+        {
+            "subclass": {
+                "name": "LifeCrisis"
+            },
+            "superclass": {
+                "name": "SignificantEvent"
+            }
+        },
+        {
+            "subclass": {
+                "name": "EnvironmentalFactor"
+            },
+            "superclass": {
+                "name": "Influence"
+            }
+        },
+        {
+            "subclass": {
+                "name": "DemographicFactor"
+            },
+            "superclass": {
+                "name": "PopulationCharacteristic"
+            }
+        },
+        {
+            "subclass": {
+                "name": "InstitutionalFactor"
+            },
+            "superclass": {
+                "name": "EnvironmentalFactor"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SelfPerception"
+            },
+            "superclass": {
+                "name": "DemographicCharacteristic"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SupportSystemRole"
+            },
+            "superclass": {
+                "name": "SupportSystem"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SocialNetworkResilience"
+            },
+            "superclass": {
+                "name": "LifeTransition"
+            }
+        },
+        {
+            "subclass": {
+                "name": "InterpersonalCommunicationImpact"
+            },
+            "superclass": {
+                "name": "SocialInfluence"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SocialNetworkImpact"
+            },
+            "superclass": {
+                "name": "LifeTransition"
+            }
+        },
+        {
+            "subclass": {
+                "name": "PersonalLossCrisis"
+            },
+            "superclass": {
+                "name": "CrisisType"
+            }
+        },
+        {
+            "subclass": {
+                "name": "Perspective"
+            },
+            "superclass": {
+                "name": "DemographicCharacteristic"
+            }
+        },
+        {
+            "subclass": {
+                "name": "RelationshipType"
+            },
+            "superclass": {
+                "name": "SocialConcept"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SocialIdentity"
+            },
+            "superclass": {
+                "name": "DemographicCharacteristic"
+            }
+        },
+        {
+            "subclass": {
+                "name": "CulturalDefinition"
+            },
+            "superclass": {
+                "name": "CulturalConcept"
+            }
+        },
+        {
+            "subclass": {
+                "name": "CulturalEvent"
+            },
+            "superclass": {
+                "name": "Event"
+            }
+        },
+        {
+            "subclass": {
+                "name": "CulturalNuance"
+            },
+            "superclass": {
+                "name": "DemographicCharacteristic"
+            }
+        },
+        {
+            "subclass": {
+                "name": "LivingCondition"
+            },
+            "superclass": {
+                "name": "EnvironmentalFactor"
+            }
+        },
+        {
+            "subclass": {
+                "name": "CulturalRiteOfPassage"
+            },
+            "superclass": {
+                "name": "CulturalEvent"
+            }
+        },
+        {
+            "subclass": {
+                "name": "TechnologicalImpact"
+            },
+            "superclass": {
+                "name": "SocialInfluence"
+            }
+        },
+        {
+            "subclass": {
+                "name": "PowerDynamics"
+            },
+            "superclass": {
+                "name": "SocialConcept"
+            }
+        },
+        {
+            "subclass": {
+                "name": "CommunityCelebration"
+            },
+            "superclass": {
+                "name": "CulturalEvent"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SignificantTransition"
+            },
+            "superclass": {
+                "name": "LifeTransition"
+            }
+        },
+        {
+            "subclass": {
+                "name": "UrbanRuralSocialInteraction"
+            },
+            "superclass": {
+                "name": "SocialConcept"
+            }
+        },
+        {
+            "subclass": {
+                "name": "MentalHealthCrisis"
+            },
+            "superclass": {
+                "name": "CrisisType"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SocialRelationshipAttribute"
+            },
+            "superclass": {
+                "name": "DemographicCharacteristic"
+            }
+        },
+        {
+            "subclass": {
+                "name": "CategorizationCriteria"
+            },
+            "superclass": {
+                "name": "Concept"
+            }
+        },
+        {
+            "subclass": {
+                "name": "DigitalInfluence"
+            },
+            "superclass": {
+                "name": "SocialInfluence"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SocialRole"
+            },
+            "superclass": {
+                "name": "SocialConcept"
+            }
+        },
+        {
+            "subclass": {
+                "name": "Intersectionality"
+            },
+            "superclass": {
+                "name": "SocialConcept"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SocialImpact"
+            },
+            "superclass": {
+                "name": "SignificantEvent"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SocialImplication"
+            },
+            "superclass": {
+                "name": "Implication"
+            }
+        },
+        {
+            "subclass": {
+                "name": "DysfunctionalSocialRelationship"
+            },
+            "superclass": {
+                "name": "SocialRelationship"
+            }
+        },
+        {
+            "subclass": {
+                "name": "GenderRaceEthnicityIntersectionality"
+            },
+            "superclass": {
+                "name": "Intersectionality"
+            }
+        },
+        {
+            "subclass": {
+                "name": "MarginalizationFactor"
+            },
+            "superclass": {
+                "name": "SocialConcept"
+            }
+        },
+        {
+            "subclass": {
+                "name": "PsychologicalImplication"
+            },
+            "superclass": {
+                "name": "Implication"
+            }
+        },
+        {
+            "subclass": {
+                "name": "MentalHealthConsideration"
+            },
+            "superclass": {
+                "name": "Concept"
+            }
+        },
+        {
+            "subclass": {
+                "name": "LifeEventCategory"
+            },
+            "superclass": {
+                "name": "SignificantEvent"
+            }
+        },
+        {
+            "subclass": {
+                "name": "HealthySocialRelationship"
+            },
+            "superclass": {
+                "name": "SocialRelationship"
+            }
+        },
+        {
+            "subclass": {
+                "name": "PriorityWeighting"
+            },
+            "superclass": {
+                "name": "Concept"
+            }
+        },
+        {
+            "subclass": {
+                "name": "CulturalIdentity"
+            },
+            "superclass": {
+                "name": "DemographicCharacteristic"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SocialRelationshipInfluence"
+            },
+            "superclass": {
+                "name": "DemographicCharacteristic"
+            }
+        },
+        {
+            "subclass": {
+                "name": "LifeTransitionType"
+            },
+            "superclass": {
+                "name": "LifeTransition"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SupportSystem"
+            },
+            "superclass": {
+                "name": "SocialStructure"
+            }
+        },
+        {
+            "subclass": {
+                "name": "InterpersonalCommunicationStyleImpact"
+            },
+            "superclass": {
+                "name": "SocialInfluence"
+            }
+        },
+        {
+            "subclass": {
+                "name": "RelationshipClassification"
+            },
+            "superclass": {
+                "name": "SocialConcept"
+            }
+        },
+        {
+            "subclass": {
+                "name": "EnvironmentalSocialInfluence"
+            },
+            "superclass": {
+                "name": "SocialInfluence"
+            }
+        },
+        {
+            "subclass": {
+                "name": "LifeEventExperience"
+            },
+            "superclass": {
+                "name": "SignificantLifeEvent"
+            }
+        },
+        {
+            "subclass": {
+                "name": "MentalHealthCrisis"
+            },
+            "superclass": {
+                "name": "HealthCrisis"
+            }
+        },
+        {
+            "subclass": {
+                "name": "EmotionalResilience"
+            },
+            "superclass": {
+                "name": "PsychologicalConcept"
+            }
+        },
+        {
+            "subclass": {
+                "name": "CulturalImpact"
+            },
+            "superclass": {
+                "name": "SocialImpact"
+            }
+        },
+        {
+            "subclass": {
+                "name": "HealthCrisis"
+            },
+            "superclass": {
+                "name": "CrisisType"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SignificantLifeEvent"
+            },
+            "superclass": {
+                "name": "LifeTransition"
+            }
+        },
+        {
+            "subclass": {
+                "name": "DemographicVariation"
+            },
+            "superclass": {
+                "name": "DemographicCharacteristic"
+            }
+        },
+        {
+            "subclass": {
+                "name": "RelationshipType"
+            },
+            "superclass": {
+                "name": "SocialRelationship"
+            }
+        },
+        {
+            "subclass": {
+                "name": "UrbanRuralSocialInfluence"
+            },
+            "superclass": {
+                "name": "SocialInfluence"
+            }
+        },
+        {
+            "subclass": {
+                "name": "IdentityInfluence"
+            },
+            "superclass": {
+                "name": "DemographicCharacteristic"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SocietalNorm"
+            },
+            "superclass": {
+                "name": "CulturalConcept"
+            }
+        },
+        {
+            "subclass": {
+                "name": "DemographicCharacteristic"
+            },
+            "superclass": {
+                "name": "PopulationCharacteristic"
+            }
+        },
+        {
+            "subclass": {
+                "name": "ComplexityOfRelationships"
+            },
+            "superclass": {
+                "name": "SocialConcept"
+            }
+        },
+        {
+            "subclass": {
+                "name": "InterpersonalCommunicationStyle"
+            },
+            "superclass": {
+                "name": "SocialConcept"
+            }
+        },
+        {
+            "subclass": {
+                "name": "LifeEventAttribute"
+            },
+            "superclass": {
+                "name": "SignificantEvent"
+            }
+        },
+        {
+            "subclass": {
+                "name": "SocialRelationshipType"
+            },
+            "superclass": {
+                "name": "SocialConcept"
+            }
+        }
+    ],
+    "object_properties": [
+        {
+            "name": "hasRelationshipClassification",
+            "domain": [
+                {
+                    "name": "RelationshipType"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Classification"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasAccessToSupportSystem",
+            "domain": [
+                {
+                    "name": "UrbanRuralLivingCondition"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SupportSystem"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCrisisImpactOnMentalHealth",
+            "domain": [
+                {
+                    "name": "CrisisImpact"
+                }
+            ],
+            "range": [
+                {
+                    "name": "MentalHealthImpact"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasImpactOnIndividual",
+            "domain": [
+                {
+                    "name": "SignificantLifeEvent"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Individual"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCulturalBackgroundInfluence",
+            "domain": [
+                {
+                    "name": "CulturalBackground"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SelfPerception"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasEmotionalImpact",
+            "domain": [
+                {
+                    "name": "IdentityInfluence"
+                }
+            ],
+            "range": [
+                {
+                    "name": "EmotionalImpact"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasEmotionalImpactOnWellBeing",
+            "domain": [
+                {
+                    "name": "MentalHealthImpact"
+                }
+            ],
+            "range": [
+                {
+                    "name": "WellBeing"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasAlterationInCommunicationStyle",
+            "domain": [
+                {
+                    "name": "InterpersonalCommunicationImpact"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasNuanceImpactOnSocialRelationships",
+            "domain": [
+                {
+                    "name": "CulturalNuance"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCulturalRiteImpact",
+            "domain": [
+                {
+                    "name": "CulturalRiteOfPassage"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CulturalImpact"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasInfluenceOnCommunicationStyle",
+            "domain": [
+                {
+                    "name": "DigitalInfluence"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CommunicationStyle"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCategorizationCriteria",
+            "domain": [
+                {
+                    "name": "SignificantTransition"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CategorizationCriteria"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasVariationInSupport",
+            "domain": [
+                {
+                    "name": "SocialStructure"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SupportSystem"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasIndividualExperience",
+            "domain": [
+                {
+                    "name": "CulturalEvent"
+                }
+            ],
+            "range": [
+                {
+                    "name": "IndividualExperience"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasEnvironmentalFactorsInfluence",
+            "domain": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "range": [
+                {
+                    "name": "EnvironmentalFactor"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasEthnicity",
+            "domain": [
+                {
+                    "name": "DemographicCharacteristic"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Ethnicity"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCriticalAttributes",
+            "domain": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRelationshipAttribute"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCulturalBackground",
+            "domain": [
+                {
+                    "name": "CulturalIdentity"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CulturalBackground"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasImpactOnSocialNetwork",
+            "domain": [
+                {
+                    "name": "SignificantLifeEvent"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialNetwork"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCommunicationStyle",
+            "domain": [
+                {
+                    "name": "InterpersonalCommunicationStyle"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasImpactOnSocialDynamics",
+            "domain": [
+                {
+                    "name": "SignificantLifeEvent"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialDynamics"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasImpactOnWellBeing",
+            "domain": [
+                {
+                    "name": "MentalHealthImpact"
+                }
+            ],
+            "range": [
+                {
+                    "name": "WellBeing"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasIdentityIntersectionality",
+            "domain": [
+                {
+                    "name": "DemographicCharacteristic"
+                }
+            ],
+            "range": [
+                {
+                    "name": "IdentityIntersectionality"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasMarginalizationFactor",
+            "domain": [
+                {
+                    "name": "DemographicCharacteristic"
+                }
+            ],
+            "range": [
+                {
+                    "name": "MarginalizationFactor"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasIndicator",
+            "domain": [
+                {
+                    "name": "ResilienceMeasure"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Indicator"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasSocialNetworkImpact",
+            "domain": [
+                {
+                    "name": "SignificantLifeEvent"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialNetworkImpact"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasImpactOnVirtualCommunity",
+            "domain": [
+                {
+                    "name": "TechnologicalImpact"
+                }
+            ],
+            "range": [
+                {
+                    "name": "VirtualCommunity"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasEmotionalImpactOnSocialRelationship",
+            "domain": [
+                {
+                    "name": "RelationshipType"
+                }
+            ],
+            "range": [
+                {
+                    "name": "EmotionalImpact"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasAttributeDefiningStyle",
+            "domain": [
+                {
+                    "name": "InterpersonalCommunicationStyle"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CriticalFactor"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCulturalContextInfluence",
+            "domain": [
+                {
+                    "name": "CulturalIntersectionality"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialContext"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasUrbanRuralSocialInteraction",
+            "domain": [
+                {
+                    "name": "UrbanRuralLivingCondition"
+                }
+            ],
+            "range": [
+                {
+                    "name": "UrbanRuralSocialInteraction"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasSocialConnection",
+            "domain": [
+                {
+                    "name": "CulturalRiteOfPassage"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialConnection"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCriticalFactor",
+            "domain": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CriticalFactor"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasSocialRelationshipInfluence",
+            "domain": [
+                {
+                    "name": "SocialRelationshipInfluence"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasLivingCondition",
+            "domain": [
+                {
+                    "name": "DemographicCharacteristic"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LivingCondition"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasConflictResolutionMethod",
+            "domain": [
+                {
+                    "name": "InterpersonalDynamics"
+                }
+            ],
+            "range": [
+                {
+                    "name": "ConflictResolutionMechanism"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasConflictResolutionChange",
+            "domain": [
+                {
+                    "name": "InterpersonalCommunicationImpact"
+                }
+            ],
+            "range": [
+                {
+                    "name": "ConflictResolutionMechanism"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasAttribute",
+            "domain": [
+                {
+                    "name": "SignificantLifeEvent"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Attribute"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasMentalHealthImpact",
+            "domain": [
+                {
+                    "name": "LifeEventAttribute"
+                }
+            ],
+            "range": [
+                {
+                    "name": "MentalHealthImpact"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasPsychologicalImplication",
+            "domain": [
+                {
+                    "name": "LifeTransition"
+                }
+            ],
+            "range": [
+                {
+                    "name": "PsychologicalImplication"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCulturalInteraction",
+            "domain": [
+                {
+                    "name": "CulturalNuance"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CulturalInteraction"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasEffectOfSocioEconomicStatusOnHealth",
+            "domain": [
+                {
+                    "name": "SocioEconomicStatus"
+                }
+            ],
+            "range": [
+                {
+                    "name": "MentalHealthImpact"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasUtilityEffectiveness",
+            "domain": [
+                {
+                    "name": "SignificantLifeEvent"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Effectiveness"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasMentalHealthConsideration",
+            "domain": [
+                {
+                    "name": "LifeCrisis"
+                }
+            ],
+            "range": [
+                {
+                    "name": "MentalHealthConsideration"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasHealthcareAccess",
+            "domain": [
+                {
+                    "name": "InstitutionalFactor"
+                }
+            ],
+            "range": [
+                {
+                    "name": "HealthcareAccess"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasIntersectionality",
+            "domain": [
+                {
+                    "name": "DemographicCharacteristic"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Intersectionality"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasAgeGroup",
+            "domain": [
+                {
+                    "name": "DemographicCharacteristic"
+                }
+            ],
+            "range": [
+                {
+                    "name": "AgeGroup"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasInfluenceOnRelationship",
+            "domain": [
+                {
+                    "name": "CulturalIdentity"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasRoleInSocialConnections",
+            "domain": [
+                {
+                    "name": "TechnologicalImpact"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialConnectionAttribute"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCulturalImpact",
+            "domain": [
+                {
+                    "name": "IdentityInfluence"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CulturalImpact"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasDemographicVariation",
+            "domain": [
+                {
+                    "name": "DemographicCharacteristic"
+                }
+            ],
+            "range": [
+                {
+                    "name": "DemographicVariation"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasEducationSystem",
+            "domain": [
+                {
+                    "name": "InstitutionalFactor"
+                }
+            ],
+            "range": [
+                {
+                    "name": "EducationSystem"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasSocialNormInfluence",
+            "domain": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocietalNorm"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasImplicationForSocialRelationships",
+            "domain": [
+                {
+                    "name": "LifeTransition"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasTransitionImpactOnResilience",
+            "domain": [
+                {
+                    "name": "LifeTransition"
+                }
+            ],
+            "range": [
+                {
+                    "name": "EmotionalResilience"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasSocialRelationshipDifferences",
+            "domain": [
+                {
+                    "name": "UrbanRuralLivingCondition"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCrisisCategory",
+            "domain": [
+                {
+                    "name": "CrisisType"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CrisisCategory"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCrisisImplication",
+            "domain": [
+                {
+                    "name": "CrisisType"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CrisisImpact"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCommunicationStyle",
+            "domain": [
+                {
+                    "name": "InterpersonalDynamics"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CommunicationStyle"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasUrbanRuralSocialInfluence",
+            "domain": [
+                {
+                    "name": "UrbanRuralLivingCondition"
+                }
+            ],
+            "range": [
+                {
+                    "name": "UrbanRuralSocialInfluence"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasSocietalNormInfluence",
+            "domain": [
+                {
+                    "name": "LifeEventExperience"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocietalNorm"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasEffectOnInterpersonalCommunication",
+            "domain": [
+                {
+                    "name": "InterpersonalCommunicationStyleImpact"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasEmotionalInfluenceOnSocialIdentity",
+            "domain": [
+                {
+                    "name": "SocialIdentity"
+                }
+            ],
+            "range": [
+                {
+                    "name": "EmotionalImpact"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasType",
+            "domain": [
+                {
+                    "name": "LifeTransition"
+                }
+            ],
+            "range": [
+                {
+                    "name": "TransitionType"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasSpecificImpact",
+            "domain": [
+                {
+                    "name": "SignificantLifeEvent"
+                }
+            ],
+            "range": [
+                {
+                    "name": "ImpactAssessment"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasLifeEventIntersection",
+            "domain": [
+                {
+                    "name": "EmotionalResilience"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LifeEvent"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCulturalVariation",
+            "domain": [
+                {
+                    "name": "SocialRelationshipType"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CulturalVariation"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCrisisImpact",
+            "domain": [
+                {
+                    "name": "CrisisType"
+                }
+            ],
+            "range": [
+                {
+                    "name": "ImpactAssessment"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCulturalImpactOnSocialRelationships",
+            "domain": [
+                {
+                    "name": "CulturalIdentity"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasLifeEventExperience",
+            "domain": [
+                {
+                    "name": "Individual"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LifeEventExperience"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasTechnologyImpact",
+            "domain": [
+                {
+                    "name": "VirtualCommunity"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasSocialRelationshipExperience",
+            "domain": [
+                {
+                    "name": "CulturalNuance"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasSupportSystem",
+            "domain": [
+                {
+                    "name": "SocialStructure"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SupportSystem"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasRelationshipType",
+            "domain": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "range": [
+                {
+                    "name": "RelationshipType"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasLifeEventImpact",
+            "domain": [
+                {
+                    "name": "LifeEventAttribute"
+                }
+            ],
+            "range": [
+                {
+                    "name": "ImpactAssessment"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasLifeTransitionImpact",
+            "domain": [
+                {
+                    "name": "ResilienceMeasure"
+                }
+            ],
+            "range": [
+                {
+                    "name": "ImpactAssessment"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCommunityNorms",
+            "domain": [
+                {
+                    "name": "VirtualCommunity"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CommunityNorm"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCulturalNuance",
+            "domain": [
+                {
+                    "name": "CulturalIdentity"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CulturalNuance"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasSocialMediaInfluence",
+            "domain": [
+                {
+                    "name": "VirtualCommunity"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialInfluence"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasPowerDynamics",
+            "domain": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "range": [
+                {
+                    "name": "PowerDynamics"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasPsychosocialImpact",
+            "domain": [
+                {
+                    "name": "DemographicCharacteristic"
+                }
+            ],
+            "range": [
+                {
+                    "name": "PsychologicalImpact"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCriticalAttributesDistinction",
+            "domain": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRelationshipAttribute"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasEnvironmentalSocialImpact",
+            "domain": [
+                {
+                    "name": "EnvironmentalFactor"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialImpact"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasSocialRole",
+            "domain": [
+                {
+                    "name": "SelfPerception"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRole"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasImpactOnCulturalInteraction",
+            "domain": [
+                {
+                    "name": "CulturalIntersectionality"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CulturalInteraction"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasRoleInSupportSystem",
+            "domain": [
+                {
+                    "name": "SupportSystem"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SupportSystemRole"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasEmotionalResilienceImpact",
+            "domain": [
+                {
+                    "name": "SignificantLifeEvent"
+                }
+            ],
+            "range": [
+                {
+                    "name": "EmotionalResilience"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasExperienceRelatedToLifeEvent",
+            "domain": [
+                {
+                    "name": "CulturalNuance"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SignificantLifeEvent"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasConflictResolutionMechanism",
+            "domain": [
+                {
+                    "name": "InterpersonalCommunicationStyleImpact"
+                }
+            ],
+            "range": [
+                {
+                    "name": "ConflictResolutionMechanism"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCulturalDefinition",
+            "domain": [
+                {
+                    "name": "SocialRelationshipType"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CulturalDefinition"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasContextualInformation",
+            "domain": [
+                {
+                    "name": "MentalHealthImpact"
+                }
+            ],
+            "range": [
+                {
+                    "name": "ContextualInformation"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasPsychologicalImpact",
+            "domain": [
+                {
+                    "name": "RelationshipType"
+                }
+            ],
+            "range": [
+                {
+                    "name": "PsychologicalImpact"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasUrbanRuralImpactOnSocialRelationships",
+            "domain": [
+                {
+                    "name": "UrbanRuralLivingCondition"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasDemographicImpactOnSocialRelationships",
+            "domain": [
+                {
+                    "name": "DemographicCharacteristic"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasSocialImplication",
+            "domain": [
+                {
+                    "name": "LifeTransition"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialImplication"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCulturalInfluenceOnSelfPerception",
+            "domain": [
+                {
+                    "name": "CulturalIdentity"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SelfPerception"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasTechnologyImpact",
+            "domain": [
+                {
+                    "name": "TechnologicalImpact"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasInfluenceOnLifeEvent",
+            "domain": [
+                {
+                    "name": "DemographicFactor"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SignificantLifeEvent"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasSocialInfluence",
+            "domain": [
+                {
+                    "name": "CulturalIdentity"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialInfluence"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasExperience",
+            "domain": [
+                {
+                    "name": "CulturalIdentity"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Experience"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasSocioEconomicStatus",
+            "domain": [
+                {
+                    "name": "DemographicCharacteristic"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocioEconomicStatus"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasPriorityWeighting",
+            "domain": [
+                {
+                    "name": "SignificantTransition"
+                }
+            ],
+            "range": [
+                {
+                    "name": "PriorityWeighting"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasRelationshipClassification",
+            "domain": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "range": [
+                {
+                    "name": "RelationshipClassification"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCulturalSignificance",
+            "domain": [
+                {
+                    "name": "CulturalEvent"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CulturalSignificance"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasRegion",
+            "domain": [
+                {
+                    "name": "DemographicCharacteristic"
+                }
+            ],
+            "range": [
+                {
+                    "name": "GeographicRegion"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasMentalHealthCrisisImpact",
+            "domain": [
+                {
+                    "name": "CrisisImpact"
+                }
+            ],
+            "range": [
+                {
+                    "name": "MentalHealthImpact"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasEnvironmentalImpact",
+            "domain": [
+                {
+                    "name": "LifeTransition"
+                }
+            ],
+            "range": [
+                {
+                    "name": "EnvironmentalFactor"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "identityImpactOnSocialRelationships",
+            "domain": [
+                {
+                    "name": "IdentityIntersectionality"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasImpactOnSocialRelationships",
+            "domain": [
+                {
+                    "name": "DigitalInfluence"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCulturalBackgroundImpact",
+            "domain": [
+                {
+                    "name": "CulturalIdentity"
+                }
+            ],
+            "range": [
+                {
+                    "name": "MentalHealthImpact"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasPerspective",
+            "domain": [
+                {
+                    "name": "DemographicCharacteristic"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Perspective"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCulturalInfluenceOnSocialIdentity",
+            "domain": [
+                {
+                    "name": "SocialIdentity"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CulturalImpact"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasResilienceMeasure",
+            "domain": [
+                {
+                    "name": "SocialNetworkResilience"
+                }
+            ],
+            "range": [
+                {
+                    "name": "ResilienceMeasure"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasImpactOnCommunicationStyle",
+            "domain": [
+                {
+                    "name": "InterpersonalCommunicationStyle"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasGenderRaceEthnicityIntersectionality",
+            "domain": [
+                {
+                    "name": "DemographicCharacteristic"
+                }
+            ],
+            "range": [
+                {
+                    "name": "GenderRaceEthnicityIntersectionality"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasInfluenceOnSocialConnection",
+            "domain": [
+                {
+                    "name": "SocialConnectionAttribute"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasEffectOnSocialBehavior",
+            "domain": [
+                {
+                    "name": "SocialImpact"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialBehavior"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasGender",
+            "domain": [
+                {
+                    "name": "DemographicCharacteristic"
+                }
+            ],
+            "range": [
+                {
+                    "name": "Gender"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCommunityImpact",
+            "domain": [
+                {
+                    "name": "CulturalEvent"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CommunityImpact"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasConflictResolutionMechanism",
+            "domain": [
+                {
+                    "name": "InterpersonalCommunicationStyle"
+                }
+            ],
+            "range": [
+                {
+                    "name": "ConflictResolutionMechanism"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasTechnologyRole",
+            "domain": [
+                {
+                    "name": "TechnologicalImpact"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCrisisImpactOnWellBeing",
+            "domain": [
+                {
+                    "name": "MentalHealthImpact"
+                }
+            ],
+            "range": [
+                {
+                    "name": "WellBeing"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasSocialContextInfluence",
+            "domain": [
+                {
+                    "name": "CulturalIntersectionality"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialContext"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasCulturalImpact",
+            "domain": [
+                {
+                    "name": "CulturalRiteOfPassage"
+                }
+            ],
+            "range": [
+                {
+                    "name": "CulturalImpact"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasDistinctionBetweenCategories",
+            "domain": [
+                {
+                    "name": "LifeEventCategory"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SignificantEvent"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasEmotionalResponse",
+            "domain": [
+                {
+                    "name": "CulturalRiteOfPassage"
+                }
+            ],
+            "range": [
+                {
+                    "name": "EmotionalResponse"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasSocialRelationshipQuality",
+            "domain": [
+                {
+                    "name": "UrbanRuralLivingCondition"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocialRelationship"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasDemographicImpact",
+            "domain": [
+                {
+                    "name": "DemographicFactor"
+                }
+            ],
+            "range": [
+                {
+                    "name": "LifeTransition"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasInfluenceOnPsychologicalResilience",
+            "domain": [
+                {
+                    "name": "SignificantLifeEvent"
+                }
+            ],
+            "range": [
+                {
+                    "name": "PsychologicalResilience"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasInfluenceOfSocietalNorms",
+            "domain": [
+                {
+                    "name": "LifeEventExperience"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SocietalNorm"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasRoleInLifeEvent",
+            "domain": [
+                {
+                    "name": "CommunityCelebration"
+                }
+            ],
+            "range": [
+                {
+                    "name": "SignificantLifeEvent"
+                }
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        }
+    ],
+    "data_properties": []
+}

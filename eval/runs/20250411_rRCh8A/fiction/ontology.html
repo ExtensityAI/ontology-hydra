@@ -1,0 +1,259 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 100vh;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+             #loadingBar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width: 100%;
+                 height: 100vh;
+                 background-color:rgba(200,200,200,0.8);
+                 -webkit-transition: all 0.5s ease;
+                 -moz-transition: all 0.5s ease;
+                 -ms-transition: all 0.5s ease;
+                 -o-transition: all 0.5s ease;
+                 transition: all 0.5s ease;
+                 opacity:1;
+             }
+
+             #bar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width:20px;
+                 height:20px;
+                 margin:auto auto auto auto;
+                 border-radius:11px;
+                 border:2px solid rgba(30,30,30,0.05);
+                 background: rgb(0, 173, 246); /* Old browsers */
+                 box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+             }
+
+             #border {
+                 position:absolute;
+                 top:10px;
+                 left:10px;
+                 width:500px;
+                 height:23px;
+                 margin:auto auto auto auto;
+                 box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+                 border-radius:10px;
+             }
+
+             #text {
+                 position:absolute;
+                 top:8px;
+                 left:530px;
+                 width:30px;
+                 height:50px;
+                 margin:auto auto auto auto;
+                 font-size:22px;
+                 color: #000000;
+             }
+
+             div.outerBorder {
+                 position:relative;
+                 top:400px;
+                 width:600px;
+                 height:44px;
+                 margin:auto auto auto auto;
+                 border:8px solid rgba(0,0,0,0.1);
+                 background: rgb(252,252,252); /* Old browsers */
+                 background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+                 background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+                 background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+                 background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+                 background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+                 border-radius:72px;
+                 box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+             }
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+            <div id="loadingBar">
+              <div class="outerBorder">
+                <div id="text">0%</div>
+                <div id="border">
+                  <div id="bar"></div>
+                </div>
+              </div>
+            </div>
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#ADD8E6", "id": "InteractiveNarrative", "label": "InteractiveNarrative", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "NarrativeTechnique", "label": "NarrativeTechnique", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "MultimediaStorytelling", "label": "MultimediaStorytelling", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Fiction", "label": "Fiction", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Symbolism", "label": "Symbolism", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ThematicExploration", "label": "ThematicExploration", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "FictionTheme", "label": "FictionTheme", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "MultimediaStorytellingImpact", "label": "MultimediaStorytellingImpact", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "LiteraryCharacteristic", "label": "LiteraryCharacteristic", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ImpactAnalysis", "label": "ImpactAnalysis", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CharacterDevelopment", "label": "CharacterDevelopment", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CrossMediaIntegration", "label": "CrossMediaIntegration", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "TransmediaNarrative", "label": "TransmediaNarrative", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "TransmediaIntegrationStrategy", "label": "TransmediaIntegrationStrategy", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CreativeNonFiction", "label": "CreativeNonFiction", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "LiteraryWork", "label": "LiteraryWork", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "HardScienceFiction", "label": "HardScienceFiction", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "GenreFiction", "label": "GenreFiction", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ThematicCategory", "label": "ThematicCategory", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "NarrativeStructure", "label": "NarrativeStructure", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CrossoverThemes", "label": "CrossoverThemes", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "LiteraryFiction", "label": "LiteraryFiction", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CharacterDevelopmentArc", "label": "CharacterDevelopmentArc", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "AudienceEngagementStrategy", "label": "AudienceEngagementStrategy", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "MultimediaProject", "label": "MultimediaProject", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ThematicDepth", "label": "ThematicDepth", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CulturalIdentity", "label": "CulturalIdentity", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ReaderEngagement", "label": "ReaderEngagement", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "MultimediaNarrativeComponent", "label": "MultimediaNarrativeComponent", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "NarrativeComponent", "label": "NarrativeComponent", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CulturalNarrative", "label": "CulturalNarrative", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CulturalTheme", "label": "CulturalTheme", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Methodology", "label": "Methodology", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "EssentialAttributes", "label": "EssentialAttributes", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Prose", "label": "Prose", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "NarrativeForm", "label": "NarrativeForm", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Pacing", "label": "Pacing", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "GraphicNarrative", "label": "GraphicNarrative", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "PointOfView", "label": "PointOfView", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "NarrativeEngagement", "label": "NarrativeEngagement", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Humor", "label": "Humor", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "SymbolismDefinition", "label": "SymbolismDefinition", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "UserAgency", "label": "UserAgency", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CharacterArc", "label": "CharacterArc", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Fantasy", "label": "Fantasy", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "InteractiveElement", "label": "InteractiveElement", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "UrbanFantasy", "label": "UrbanFantasy", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "TheatricalPerformance", "label": "TheatricalPerformance", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "PerformanceArt", "label": "PerformanceArt", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "PointOfViewVariation", "label": "PointOfViewVariation", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "AnalyticalFramework", "label": "AnalyticalFramework", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ConceptualBoundary", "label": "ConceptualBoundary", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CharacterDrivenNarrative", "label": "CharacterDrivenNarrative", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "SubGenre", "label": "SubGenre", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "TransmediaIntegration", "label": "TransmediaIntegration", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ArtForm", "label": "ArtForm", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "TheatricalFiction", "label": "TheatricalFiction", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "YoungAdultFiction", "label": "YoungAdultFiction", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "MotifDefinition", "label": "MotifDefinition", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Motif", "label": "Motif", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "YoungAdultLiterature", "label": "YoungAdultLiterature", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "GenreCharacteristic", "label": "GenreCharacteristic", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "NarrativeTheme", "label": "NarrativeTheme", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "DigitalNarrative", "label": "DigitalNarrative", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "LiteraryNonFiction", "label": "LiteraryNonFiction", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "NarrativeStructureVariation", "label": "NarrativeStructureVariation", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "SocialJusticeTheme", "label": "SocialJusticeTheme", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "SocialCommentary", "label": "SocialCommentary", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "NarrativeCategory", "label": "NarrativeCategory", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "PlotDevelopment", "label": "PlotDevelopment", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "InteractiveFiction", "label": "InteractiveFiction", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "MultimediaNarrative", "label": "MultimediaNarrative", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "DigitalPlatform", "label": "DigitalPlatform", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "TheatricalNarrative", "label": "TheatricalNarrative", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "NarrativeFiction", "label": "NarrativeFiction", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "SymbolicAnalysis", "label": "SymbolicAnalysis", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CulturalIdentityTheme", "label": "CulturalIdentityTheme", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "NarrativePerspective", "label": "NarrativePerspective", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "InteractiveDigitalFiction", "label": "InteractiveDigitalFiction", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CategoricalFiction", "label": "CategoricalFiction", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "NarrativeTechniqueImpact", "label": "NarrativeTechniqueImpact", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CharacterDynamics", "label": "CharacterDynamics", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "EnvironmentalTheme", "label": "EnvironmentalTheme", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "AudienceInteractivity", "label": "AudienceInteractivity", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "TraditionalStorytelling", "label": "TraditionalStorytelling", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Rules", "label": "Rules", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "DefiningCharacteristic", "label": "DefiningCharacteristic", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "NarrativeGenre", "label": "NarrativeGenre", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Screenplay", "label": "Screenplay", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CharacterArcVariation", "label": "CharacterArcVariation", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "TransmediaStorytelling", "label": "TransmediaStorytelling", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ReaderEngagementStrategy", "label": "ReaderEngagementStrategy", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "InteractiveNarrativeTechnique", "label": "InteractiveNarrativeTechnique", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "HighFantasy", "label": "HighFantasy", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "NarrativeTechniqueVariation", "label": "NarrativeTechniqueVariation", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CharacterArcDependence", "label": "CharacterArcDependence", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "FictionalWork", "label": "FictionalWork", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CharacterTransformation", "label": "CharacterTransformation", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "VariationInSignificance", "label": "VariationInSignificance", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "NarrativeElement", "label": "NarrativeElement", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "NarrativeStyle", "label": "NarrativeStyle", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "NonFictionElement", "label": "NonFictionElement", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "StorytellingCapability", "label": "StorytellingCapability", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "TransmediaElement", "label": "TransmediaElement", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Classification", "label": "Classification", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Theme", "label": "Theme", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "EngagementVariation", "label": "EngagementVariation", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "BoundaryFeature", "label": "BoundaryFeature", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Significance", "label": "Significance", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "NarrativeExperience", "label": "NarrativeExperience", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "GenreElement", "label": "GenreElement", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Feature", "label": "Feature", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "FormatVariation", "label": "FormatVariation", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "DevelopmentRule", "label": "DevelopmentRule", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "FormatType", "label": "FormatType", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ReaderInteraction", "label": "ReaderInteraction", "shape": "ellipse"}, {"color": "#D3D3D3", "id": "xsd:string", "label": "xsd:string", "shape": "database"}, {"color": "#D3D3D3", "id": "xsd:boolean", "label": "xsd:boolean", "shape": "database"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "InteractiveNarrative", "label": "isA", "to": "NarrativeTechnique"}, {"arrows": "to", "from": "MultimediaStorytelling", "label": "isA", "to": "Fiction"}, {"arrows": "to", "from": "Symbolism", "label": "isA", "to": "NarrativeTechnique"}, {"arrows": "to", "from": "ThematicExploration", "label": "isA", "to": "FictionTheme"}, {"arrows": "to", "from": "MultimediaStorytellingImpact", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "ImpactAnalysis", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "CharacterDevelopment", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "CrossMediaIntegration", "label": "isA", "to": "TransmediaNarrative"}, {"arrows": "to", "from": "TransmediaIntegrationStrategy", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "CreativeNonFiction", "label": "isA", "to": "LiteraryWork"}, {"arrows": "to", "from": "HardScienceFiction", "label": "isA", "to": "GenreFiction"}, {"arrows": "to", "from": "ThematicCategory", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "NarrativeStructure", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "CrossoverThemes", "label": "isA", "to": "ThematicCategory"}, {"arrows": "to", "from": "LiteraryFiction", "label": "isA", "to": "Fiction"}, {"arrows": "to", "from": "CharacterDevelopmentArc", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "AudienceEngagementStrategy", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "MultimediaProject", "label": "isA", "to": "Fiction"}, {"arrows": "to", "from": "ThematicDepth", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "CulturalIdentity", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "ReaderEngagement", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "MultimediaNarrativeComponent", "label": "isA", "to": "NarrativeComponent"}, {"arrows": "to", "from": "CulturalNarrative", "label": "isA", "to": "Fiction"}, {"arrows": "to", "from": "CulturalTheme", "label": "isA", "to": "FictionTheme"}, {"arrows": "to", "from": "Methodology", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "NarrativeComponent", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "EssentialAttributes", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "Prose", "label": "isA", "to": "NarrativeForm"}, {"arrows": "to", "from": "Pacing", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "GraphicNarrative", "label": "isA", "to": "NarrativeForm"}, {"arrows": "to", "from": "PointOfView", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "NarrativeEngagement", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "Humor", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "GraphicNarrative", "label": "isA", "to": "Fiction"}, {"arrows": "to", "from": "SymbolismDefinition", "label": "isA", "to": "Symbolism"}, {"arrows": "to", "from": "UserAgency", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "GenreFiction", "label": "isA", "to": "Fiction"}, {"arrows": "to", "from": "CharacterArc", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "Fantasy", "label": "isA", "to": "Fiction"}, {"arrows": "to", "from": "InteractiveElement", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "UrbanFantasy", "label": "isA", "to": "Fantasy"}, {"arrows": "to", "from": "TheatricalPerformance", "label": "isA", "to": "PerformanceArt"}, {"arrows": "to", "from": "PointOfViewVariation", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "AnalyticalFramework", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "ConceptualBoundary", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "CharacterDrivenNarrative", "label": "isA", "to": "Fiction"}, {"arrows": "to", "from": "SubGenre", "label": "isA", "to": "Fiction"}, {"arrows": "to", "from": "TransmediaIntegration", "label": "isA", "to": "TransmediaNarrative"}, {"arrows": "to", "from": "PerformanceArt", "label": "isA", "to": "ArtForm"}, {"arrows": "to", "from": "TheatricalFiction", "label": "isA", "to": "Fiction"}, {"arrows": "to", "from": "YoungAdultFiction", "label": "isA", "to": "GenreFiction"}, {"arrows": "to", "from": "MotifDefinition", "label": "isA", "to": "Motif"}, {"arrows": "to", "from": "NarrativeForm", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "TransmediaNarrative", "label": "isA", "to": "NarrativeComponent"}, {"arrows": "to", "from": "SubGenre", "label": "isA", "to": "GenreFiction"}, {"arrows": "to", "from": "YoungAdultLiterature", "label": "isA", "to": "GenreFiction"}, {"arrows": "to", "from": "GenreCharacteristic", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "NarrativeTheme", "label": "isA", "to": "FictionTheme"}, {"arrows": "to", "from": "DigitalNarrative", "label": "isA", "to": "Fiction"}, {"arrows": "to", "from": "LiteraryNonFiction", "label": "isA", "to": "LiteraryWork"}, {"arrows": "to", "from": "NarrativeStructureVariation", "label": "isA", "to": "NarrativeStructure"}, {"arrows": "to", "from": "SocialJusticeTheme", "label": "isA", "to": "FictionTheme"}, {"arrows": "to", "from": "SocialCommentary", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "NarrativeCategory", "label": "isA", "to": "Fiction"}, {"arrows": "to", "from": "SocialJusticeTheme", "label": "isA", "to": "ThematicCategory"}, {"arrows": "to", "from": "PlotDevelopment", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "InteractiveFiction", "label": "isA", "to": "Fiction"}, {"arrows": "to", "from": "MultimediaNarrative", "label": "isA", "to": "MultimediaStorytelling"}, {"arrows": "to", "from": "FictionTheme", "label": "isA", "to": "Fiction"}, {"arrows": "to", "from": "DigitalPlatform", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "NarrativeTechnique", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "TheatricalNarrative", "label": "isA", "to": "NarrativeFiction"}, {"arrows": "to", "from": "SymbolicAnalysis", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "CulturalIdentityTheme", "label": "isA", "to": "FictionTheme"}, {"arrows": "to", "from": "InteractiveFiction", "label": "isA", "to": "DigitalNarrative"}, {"arrows": "to", "from": "NarrativePerspective", "label": "isA", "to": "PointOfView"}, {"arrows": "to", "from": "InteractiveNarrative", "label": "isA", "to": "InteractiveDigitalFiction"}, {"arrows": "to", "from": "CategoricalFiction", "label": "isA", "to": "Fiction"}, {"arrows": "to", "from": "NarrativeTechniqueImpact", "label": "isA", "to": "NarrativeTechnique"}, {"arrows": "to", "from": "PointOfViewVariation", "label": "isA", "to": "PointOfView"}, {"arrows": "to", "from": "CharacterDynamics", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "EnvironmentalTheme", "label": "isA", "to": "FictionTheme"}, {"arrows": "to", "from": "AudienceInteractivity", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "TraditionalStorytelling", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "Rules", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "DefiningCharacteristic", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "NarrativeGenre", "label": "isA", "to": "Fiction"}, {"arrows": "to", "from": "Screenplay", "label": "isA", "to": "NarrativeForm"}, {"arrows": "to", "from": "SocialJusticeTheme", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "CharacterArcVariation", "label": "isA", "to": "CharacterArc"}, {"arrows": "to", "from": "TransmediaStorytelling", "label": "isA", "to": "Fiction"}, {"arrows": "to", "from": "Motif", "label": "isA", "to": "NarrativeTechnique"}, {"arrows": "to", "from": "ReaderEngagementStrategy", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "InteractiveDigitalFiction", "label": "isA", "to": "Fiction"}, {"arrows": "to", "from": "InteractiveNarrativeTechnique", "label": "isA", "to": "NarrativeTechnique"}, {"arrows": "to", "from": "HighFantasy", "label": "isA", "to": "Fantasy"}, {"arrows": "to", "from": "NarrativeTechniqueVariation", "label": "isA", "to": "NarrativeTechnique"}, {"arrows": "to", "from": "CharacterArcDependence", "label": "isA", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "FictionalWork", "label": "isA", "to": "LiteraryWork"}, {"arrows": "to", "from": "Fiction", "label": "hasNarrativeForm", "to": "NarrativeForm"}, {"arrows": "to", "from": "InteractiveFiction", "label": "hasNarrativeInteractivity", "to": "InteractiveElement"}, {"arrows": "to", "from": "CharacterArc", "label": "hasCharacterTransformation", "to": "CharacterTransformation"}, {"arrows": "to", "from": "Fiction", "label": "hasCharacterArc", "to": "CharacterArc"}, {"arrows": "to", "from": "Fiction", "label": "hasHumor", "to": "Humor"}, {"arrows": "to", "from": "Fiction", "label": "hasCulturalNarrative", "to": "CulturalNarrative"}, {"arrows": "to", "from": "Fiction", "label": "hasNarrativeForm", "to": "NarrativeForm"}, {"arrows": "to", "from": "Fiction", "label": "hasAudienceEngagementStrategy", "to": "AudienceEngagementStrategy"}, {"arrows": "to", "from": "MultimediaStorytelling", "label": "hasNarrativeComponent", "to": "NarrativeComponent"}, {"arrows": "to", "from": "NarrativeTechniqueVariation", "label": "analyzesNarrativeTechniqueVariation", "to": "NarrativeTechnique"}, {"arrows": "to", "from": "Fiction", "label": "establishesBoundaryWith", "to": "LiteraryNonFiction"}, {"arrows": "to", "from": "Fiction", "label": "establishesBoundaryWith", "to": "MultimediaProject"}, {"arrows": "to", "from": "CreativeNonFiction", "label": "analyzesCulturalIdentityRepresentation", "to": "CulturalIdentity"}, {"arrows": "to", "from": "FictionTheme", "label": "hasThemeVariation", "to": "VariationInSignificance"}, {"arrows": "to", "from": "Fiction", "label": "hasNarrativeElement", "to": "NarrativeElement"}, {"arrows": "to", "from": "MultimediaStorytelling", "label": "encompassesInteractiveElements", "to": "InteractiveElement"}, {"arrows": "to", "from": "GenreFiction", "label": "hasGenreVariation", "to": "VariationInSignificance"}, {"arrows": "to", "from": "InteractiveNarrative", "label": "hasNarrativeStyleVariation", "to": "NarrativeStyle"}, {"arrows": "to", "from": "LiteraryFiction", "label": "hasNarrativeStructure", "to": "NarrativeStructure"}, {"arrows": "to", "from": "Fiction", "label": "hasNarrativeStructure", "to": "NarrativeStructure"}, {"arrows": "to", "from": "TheatricalFiction", "label": "hasNonFictionElement", "to": "NonFictionElement"}, {"arrows": "to", "from": "GraphicNarrative", "label": "hasStorytellingCapability", "to": "StorytellingCapability"}, {"arrows": "to", "from": "CharacterDrivenNarrative", "label": "hasCharacterDrivenTraits", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "Fiction", "label": "hasSocialJusticeTheme", "to": "SocialJusticeTheme"}, {"arrows": "to", "from": "NarrativeTechnique", "label": "hasMotif", "to": "Motif"}, {"arrows": "to", "from": "PointOfView", "label": "addressesCharacterDevelopment", "to": "CharacterDevelopment"}, {"arrows": "to", "from": "Fiction", "label": "exploresGenreNarrativeRelation", "to": "GenreCharacteristic"}, {"arrows": "to", "from": "TransmediaStorytelling", "label": "hasIntegrationStrategy", "to": "TransmediaIntegrationStrategy"}, {"arrows": "to", "from": "GenreFiction", "label": "hasGenreRules", "to": "Rules"}, {"arrows": "to", "from": "InteractiveFiction", "label": "transmediaElementUsage", "to": "TransmediaElement"}, {"arrows": "to", "from": "Fiction", "label": "hasCharacterDevelopmentDifference", "to": "CharacterDevelopment"}, {"arrows": "to", "from": "Fiction", "label": "hasSocialCommentary", "to": "SocialCommentary"}, {"arrows": "to", "from": "Fiction", "label": "hasCulturalTheme", "to": "CulturalTheme"}, {"arrows": "to", "from": "PointOfView", "label": "affectsReaderEngagement", "to": "Fiction"}, {"arrows": "to", "from": "DigitalNarrative", "label": "hasDifferenceFromTradition", "to": "TraditionalStorytelling"}, {"arrows": "to", "from": "SymbolicAnalysis", "label": "hasMotifExploration", "to": "Motif"}, {"arrows": "to", "from": "InteractiveFiction", "label": "hasClassification", "to": "Classification"}, {"arrows": "to", "from": "FictionalWork", "label": "hasNarrativeElements", "to": "NarrativeElement"}, {"arrows": "to", "from": "Fiction", "label": "hasThematicCategory", "to": "ThematicCategory"}, {"arrows": "to", "from": "Fiction", "label": "analyzesCharacterDevelopmentArc", "to": "CharacterDevelopmentArc"}, {"arrows": "to", "from": "AudienceEngagementStrategy", "label": "hasSocialMediaImpact", "to": "ImpactAnalysis"}, {"arrows": "to", "from": "Fiction", "label": "hasNarrativeTechnique", "to": "NarrativeTechnique"}, {"arrows": "to", "from": "InteractiveFiction", "label": "incorporatesTransmediaElements", "to": "TransmediaElement"}, {"arrows": "to", "from": "Fiction", "label": "hasEnvironmentalTheme", "to": "EnvironmentalTheme"}, {"arrows": "to", "from": "PointOfView", "label": "affectsCharacterDevelopment", "to": "Fiction"}, {"arrows": "to", "from": "Fiction", "label": "analyzesSymbolismAndMotifs", "to": "SymbolicAnalysis"}, {"arrows": "to", "from": "InteractiveFiction", "label": "hasCrossoverThemes", "to": "Theme"}, {"arrows": "to", "from": "Fantasy", "label": "differentiates", "to": "Fantasy"}, {"arrows": "to", "from": "Fiction", "label": "hasCharacterDynamics", "to": "CharacterDynamics"}, {"arrows": "to", "from": "YoungAdultLiterature", "label": "hasNarrativeStructureVariation", "to": "NarrativeStructureVariation"}, {"arrows": "to", "from": "AudienceEngagementStrategy", "label": "hasPlatform", "to": "DigitalPlatform"}, {"arrows": "to", "from": "Fiction", "label": "hasCulturalIdentity", "to": "CulturalIdentity"}, {"arrows": "to", "from": "PointOfView", "label": "hasNarrativeEngagement", "to": "NarrativeEngagement"}, {"arrows": "to", "from": "Fiction", "label": "analyzesCulturalIdentityRepresentation", "to": "CulturalIdentity"}, {"arrows": "to", "from": "ThematicExploration", "label": "hasMethodology", "to": "Methodology"}, {"arrows": "to", "from": "ReaderEngagement", "label": "hasEngagementVariation", "to": "EngagementVariation"}, {"arrows": "to", "from": "Fiction", "label": "analyzesCharacterDynamics", "to": "CharacterDynamics"}, {"arrows": "to", "from": "CreativeNonFiction", "label": "utilizesNarrativeTechnique", "to": "NarrativeTechnique"}, {"arrows": "to", "from": "Fiction", "label": "hasGenreClassification", "to": "GenreFiction"}, {"arrows": "to", "from": "Fiction", "label": "hasGenre", "to": "GenreFiction"}, {"arrows": "to", "from": "Fiction", "label": "definesBoundariesBetween", "to": "PerformanceArt"}, {"arrows": "to", "from": "Fiction", "label": "definesBoundariesBetween", "to": "TheatricalNarrative"}, {"arrows": "to", "from": "GenreFiction", "label": "hasDefiningCharacteristic", "to": "DefiningCharacteristic"}, {"arrows": "to", "from": "InteractiveNarrative", "label": "hasNarrativePerspective", "to": "PointOfView"}, {"arrows": "to", "from": "Fiction", "label": "hasAudienceInteractivity", "to": "AudienceInteractivity"}, {"arrows": "to", "from": "Fiction", "label": "categorizesSubGenres", "to": "SubGenre"}, {"arrows": "to", "from": "Fiction", "label": "categorizesCharacterDynamics", "to": "CharacterDynamics"}, {"arrows": "to", "from": "NarrativeTechnique", "label": "hasNarrativeTechniqueImpact", "to": "ReaderEngagement"}, {"arrows": "to", "from": "PointOfView", "label": "hasNarrativePerspectiveImpact", "to": "ReaderEngagement"}, {"arrows": "to", "from": "Fiction", "label": "hasThematicExploration", "to": "ThematicExploration"}, {"arrows": "to", "from": "Fiction", "label": "hasTheme", "to": "FictionTheme"}, {"arrows": "to", "from": "Fiction", "label": "analyzesCharacterArcVariation", "to": "CharacterArcVariation"}, {"arrows": "to", "from": "TransmediaStorytelling", "label": "hasTransmediaElement", "to": "TransmediaIntegration"}, {"arrows": "to", "from": "NarrativeTechnique", "label": "hasSymbolismDefinition", "to": "Symbolism"}, {"arrows": "to", "from": "HardScienceFiction", "label": "hasDistinctCharacteristics", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "YoungAdultLiterature", "label": "hasCommonThemes", "to": "ThematicExploration"}, {"arrows": "to", "from": "GenreFiction", "label": "hasDistinctNarrativeCharacteristics", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "PointOfView", "label": "addressesReaderEngagement", "to": "ReaderEngagement"}, {"arrows": "to", "from": "Fantasy", "label": "hasFantasyBoundary", "to": "BoundaryFeature"}, {"arrows": "to", "from": "Fiction", "label": "hasPacingDifference", "to": "Pacing"}, {"arrows": "to", "from": "TransmediaStorytelling", "label": "exploresConceptualBoundaries", "to": "ConceptualBoundary"}, {"arrows": "to", "from": "FictionTheme", "label": "hasVariationInSignificance", "to": "Significance"}, {"arrows": "to", "from": "InteractiveNarrative", "label": "hasNarrativeTechniqueVariation", "to": "NarrativeTechnique"}, {"arrows": "to", "from": "Fiction", "label": "hasCulturalIdentityTheme", "to": "CulturalIdentityTheme"}, {"arrows": "to", "from": "PointOfView", "label": "analyzesPointOfViewImpact", "to": "ReaderEngagement"}, {"arrows": "to", "from": "PointOfView", "label": "analyzesPointOfViewImpact", "to": "NarrativeStructure"}, {"arrows": "to", "from": "InteractiveNarrative", "label": "hasPointOfViewVariation", "to": "PointOfView"}, {"arrows": "to", "from": "NarrativeTechnique", "label": "hasSymbolism", "to": "Symbolism"}, {"arrows": "to", "from": "YoungAdultFiction", "label": "hasDefiningCharacteristic", "to": "DefiningCharacteristic"}, {"arrows": "to", "from": "MultimediaStorytelling", "label": "hasMultimediaStorytellingImpact", "to": "NarrativeExperience"}, {"arrows": "to", "from": "ReaderEngagementStrategy", "label": "hasReaderEngagementImpact", "to": "ImpactAnalysis"}, {"arrows": "to", "from": "YoungAdultLiterature", "label": "analyzesCharacterDevelopmentArc", "to": "CharacterDevelopmentArc"}, {"arrows": "to", "from": "Fiction", "label": "hasCulturalThemes", "to": "CulturalTheme"}, {"arrows": "to", "from": "Fiction", "label": "hasNarrativeTheme", "to": "NarrativeTheme"}, {"arrows": "to", "from": "NarrativeStructure", "label": "hasNarrativeVariation", "to": "NarrativeStructureVariation"}, {"arrows": "to", "from": "TransmediaStorytelling", "label": "hasTransmediaElement", "to": "TransmediaNarrative"}, {"arrows": "to", "from": "MultimediaNarrative", "label": "categorizesInFictionalWorks", "to": "Fiction"}, {"arrows": "to", "from": "MultimediaStorytelling", "label": "hasMultimediaStorytellingImpact", "to": "MultimediaStorytellingImpact"}, {"arrows": "to", "from": "Fiction", "label": "hasSubGenre", "to": "SubGenre"}, {"arrows": "to", "from": "GenreCharacteristic", "label": "hasNarrativeStructureVariation", "to": "NarrativeStructure"}, {"arrows": "to", "from": "MultimediaProject", "label": "presentsChallengesInClassification", "to": "Classification"}, {"arrows": "to", "from": "Fiction", "label": "analyzesReaderEngagement", "to": "ReaderEngagement"}, {"arrows": "to", "from": "Fiction", "label": "hasPointOfViewVariation", "to": "PointOfViewVariation"}, {"arrows": "to", "from": "Fiction", "label": "analyzesPointOfViewEffect", "to": "PointOfView"}, {"arrows": "to", "from": "CreativeNonFiction", "label": "challengesClassification", "to": "Classification"}, {"arrows": "to", "from": "FictionalWork", "label": "establishesBoundaryWith", "to": "LiteraryNonFiction"}, {"arrows": "to", "from": "FictionalWork", "label": "establishesBoundaryWith", "to": "MultimediaProject"}, {"arrows": "to", "from": "Fiction", "label": "analyzesCharacterDevelopment", "to": "CharacterDevelopment"}, {"arrows": "to", "from": "InteractiveFiction", "label": "hasCrossoverThemes", "to": "CrossoverThemes"}, {"arrows": "to", "from": "Fiction", "label": "hasAnalyticalFramework", "to": "AnalyticalFramework"}, {"arrows": "to", "from": "NarrativeGenre", "label": "hasNarrativeStructureVariation", "to": "NarrativeStructureVariation"}, {"arrows": "to", "from": "CharacterArc", "label": "hasCharacterDevelopment", "to": "CharacterDevelopment"}, {"arrows": "to", "from": "NarrativeGenre", "label": "hasGenreElement", "to": "GenreElement"}, {"arrows": "to", "from": "Fiction", "label": "definesBoundariesBetween", "to": "PerformanceArt"}, {"arrows": "to", "from": "Fiction", "label": "definesBoundariesBetween", "to": "NarrativeFiction"}, {"arrows": "to", "from": "InteractiveFiction", "label": "categorizesAsFictionalWork", "to": "Fiction"}, {"arrows": "to", "from": "Fiction", "label": "analyzesNarrativeStructureVariation", "to": "NarrativeStructureVariation"}, {"arrows": "to", "from": "Fantasy", "label": "hasFeature", "to": "Feature"}, {"arrows": "to", "from": "InteractiveNarrative", "label": "hasUserAgency", "to": "UserAgency"}, {"arrows": "to", "from": "MultimediaStorytelling", "label": "hasFormatVariation", "to": "FormatVariation"}, {"arrows": "to", "from": "TransmediaStorytelling", "label": "challengesClassification", "to": "Classification"}, {"arrows": "to", "from": "PointOfView", "label": "hasReaderEngagementImpact", "to": "ImpactAnalysis"}, {"arrows": "to", "from": "Fiction", "label": "hasNarrativeTheme", "to": "ThematicCategory"}, {"arrows": "to", "from": "Fiction", "label": "hasCommonThemes", "to": "ThematicExploration"}, {"arrows": "to", "from": "Fiction", "label": "isCharacterizedBy", "to": "LiteraryCharacteristic"}, {"arrows": "to", "from": "NarrativeGenre", "label": "analyzesGenreImpactOnNarrative", "to": "NarrativeStructure"}, {"arrows": "to", "from": "InteractiveFiction", "label": "hasDevelopmentRule", "to": "DevelopmentRule"}, {"arrows": "to", "from": "Fiction", "label": "hasFormatType", "to": "FormatType"}, {"arrows": "to", "from": "DigitalNarrative", "label": "hasEssentialAttributes", "to": "EssentialAttributes"}, {"arrows": "to", "from": "YoungAdultLiterature", "label": "hasEssentialAttributes", "to": "EssentialAttributes"}, {"arrows": "to", "from": "GraphicNarrative", "label": "hasReaderInteraction", "to": "ReaderInteraction"}, {"arrows": "to", "from": "PointOfView", "label": "impactsNarrativeStructure", "to": "NarrativeStructure"}, {"arrows": "to", "from": "Fiction", "label": "analyzesThematicExploration", "to": "ThematicExploration"}, {"arrows": "to", "from": "PointOfView", "label": "hasNarrativePerspectiveVariation", "to": "NarrativePerspective"}, {"arrows": "to", "from": "AudienceEngagementStrategy", "label": "incorporatesAudienceInteraction", "to": "InteractiveElement"}, {"arrows": "to", "from": "LiteraryFiction", "label": "hasThematicDepth", "to": "ThematicDepth"}, {"arrows": "to", "from": "Fiction", "label": "hasThematicDepth", "to": "ThematicDepth"}, {"arrows": "to", "from": "InteractiveFiction", "label": "utilizesNarrativeTechniqueDifferently", "to": "NarrativeTechnique"}, {"arrows": "to", "from": "TransmediaStorytelling", "label": "analyzesTransmediaBoundaries", "to": "ConceptualBoundary"}, {"arrows": "to", "from": "NarrativeTechnique", "label": "hasMotifVariation", "to": "Motif"}, {"arrows": "to", "from": "Fiction", "label": "analyzesCharacterArcVariation", "to": "CharacterArcDependence"}, {"arrows": "to", "from": "MultimediaNarrativeComponent", "label": "categorizesInFictionalWorks", "to": "Fiction"}, {"arrows": "to", "from": "YoungAdultFiction", "label": "hasNarrativeStructure", "to": "NarrativeStructure"}, {"arrows": "to", "from": "GenreFiction", "label": "hasGenreForm", "to": "NarrativeForm"}, {"arrows": "to", "from": "InteractiveNarrative", "label": "hasSymbolismUsage", "to": "Symbolism"}, {"arrows": "to", "from": "NarrativeTechnique", "label": "hasSymbolismVariation", "to": "Symbolism"}, {"arrows": "to", "from": "Fiction", "label": "hasAudienceInfluence", "to": "ImpactAnalysis"}, {"arrows": "to", "from": "NarrativeComponent", "label": "hasNarrativeStyle", "to": "NarrativeStyle"}, {"arrows": "to", "from": "Fiction", "label": "analyzesCrossoverThemes", "to": "CrossoverThemes"}, {"arrows": "to", "from": "GenreFiction", "label": "hasRules", "to": "Rules"}, {"arrows": "to", "from": "CharacterArc", "label": "exploresCharacterArcImplication", "to": "NarrativeEngagement"}, {"arrows": "to", "from": "InteractiveFiction", "label": "hasInteractiveElement", "to": "InteractiveElement"}, {"arrows": "to", "from": "NarrativeTechnique", "label": "hasMotifDefinition", "to": "Motif"}, {"arrows": "to", "from": "Fiction", "label": "hasPlotDevelopment", "to": "PlotDevelopment"}, {"arrows": "to", "from": "CharacterDrivenNarrative", "label": "hasEssentialAttributes", "to": "xsd:string"}, {"arrows": "to", "from": "YoungAdultLiterature", "label": "hasCommonThemes", "to": "xsd:string"}, {"arrows": "to", "from": "InteractiveFiction", "label": "interactiveElementType", "to": "xsd:string"}, {"arrows": "to", "from": "CreativeNonFiction", "label": "hasFactualRepresentation", "to": "xsd:boolean"}, {"arrows": "to", "from": "YoungAdultLiterature", "label": "hasNarrativeStructureVariation", "to": "xsd:string"}, {"arrows": "to", "from": "YoungAdultLiterature", "label": "hasEssentialAttributes", "to": "xsd:string"}, {"arrows": "to", "from": "CrossMediaIntegration", "label": "hasIntegrationStrategy", "to": "xsd:string"}, {"arrows": "to", "from": "TransmediaStorytelling", "label": "hasClassificationCriteria", "to": "xsd:string"}, {"arrows": "to", "from": "YoungAdultLiterature", "label": "analyzesCharacterDevelopmentArc", "to": "xsd:string"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "forceAtlas2Based": {
+            "avoidOverlap": 0,
+            "centralGravity": 0.01,
+            "damping": 0.4,
+            "gravitationalConstant": -50,
+            "springConstant": 0.08,
+            "springLength": 100
+        },
+        "solver": "forceAtlas2Based",
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+                      network.on("stabilizationProgress", function(params) {
+                          document.getElementById('loadingBar').removeAttribute("style");
+                          var maxWidth = 496;
+                          var minWidth = 20;
+                          var widthFactor = params.iterations/params.total;
+                          var width = Math.max(minWidth,maxWidth * widthFactor);
+                          document.getElementById('bar').style.width = width + 'px';
+                          document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+                      });
+                      network.once("stabilizationIterationsDone", function() {
+                          document.getElementById('text').innerHTML = '100%';
+                          document.getElementById('bar').style.width = '496px';
+                          document.getElementById('loadingBar').style.opacity = 0;
+                          // really clean the dom element
+                          setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+                      });
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

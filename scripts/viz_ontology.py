@@ -1,11 +1,13 @@
 import json
 
+from ontopipe.models import Characteristic, Ontology
 
-def characteristic_color(characteristics):
+
+def characteristic_color(characteristics: list[Characteristic]):
     """Assign colors based on property characteristics."""
     if not characteristics:
         return "#7F8C8D"  # default gray
-    char_set = {c["value"] for c in characteristics}
+    char_set = {c.value for c in characteristics}
     if "functional" in char_set:
         return "#3498DB"  # blue
     if "transitive" in char_set:
@@ -15,18 +17,15 @@ def characteristic_color(characteristics):
     return "#9B59B6"  # fallback purple
 
 
-def generate_visjs_code(file_path):
-    with open(file_path, "r") as f:
-        data = json.load(f)
-
+def generate_visjs_code(ontology: Ontology):
     node_set = set()
     datatype_nodes = set()
     edges = []
 
     # === Subclass Relations ===
-    for rel in data.get("subclass_relations", []):
-        subclass = rel["subclass"]["name"]
-        superclass = rel["superclass"]["name"]
+    for rel in ontology.subclass_relations:
+        subclass = rel.subclass.name
+        superclass = rel.superclass.name
 
         node_set.update([subclass, superclass])
         edges.append(
@@ -40,21 +39,17 @@ def generate_visjs_code(file_path):
         )
 
     # === Object Properties ===
-    for prop in data.get("object_properties", []):
-        prop_name = prop["name"]
-        color = characteristic_color(prop.get("characteristics", []))
+    for prop in ontology.object_properties:
+        color = characteristic_color(prop.characteristics)
 
-        for domain in prop["domain"]:
-            for rng in prop["range"]:
-                domain_name = domain["name"]
-                range_name = rng["name"]
-
-                node_set.update([domain_name, range_name])
+        for domain in prop.domain:
+            for rng in prop.range:
+                node_set.update([domain.name, rng.name])
                 edges.append(
                     {
-                        "from": domain_name,
-                        "to": range_name,
-                        "label": prop_name,
+                        "from": domain.name,
+                        "to": rng.name,
+                        "label": prop.name,
                         "arrows": "to",
                         "color": color,
                     }
@@ -92,14 +87,3 @@ def generate_visjs_code(file_path):
     js_code += f"edges = new vis.DataSet({json.dumps(edges, indent=2)});"
 
     return js_code
-
-
-# Example usage
-if __name__ == "__main__":
-    input_file = "eval/runs/cmdZlV9O/To_Kill_A_Mockingbird/ontology/ontology.json"  # <-- your JSON file
-    visjs_output = generate_visjs_code(input_file)
-
-    with open("output_vis.js", "w") as out_file:
-        out_file.write(visjs_output)
-
-    print("vis.js network data written to output_vis.js ✅")

@@ -11,8 +11,10 @@ from ontopipe.cqs.utils import MODEL
 from ontopipe.eval.kg import generate_kg
 from ontopipe.eval.squad_v2.data import SquadDataset, SquadQAPair
 from ontopipe.eval.squad_v2.squad_v2 import SquadV2
+from ontopipe.eval.vis import visualize_kg, visualize_ontology
 from ontopipe.models import KG
 
+KG_BATCH_SIZE = 1
 QA_BATCH_SIZE = 4
 NO_ANSWER_THRESHOLD = 0.5
 
@@ -54,6 +56,7 @@ def _generate_kg(texts: list[str], domain: str, kg_path: Path, ontology_path: Pa
         ontology_file=ontology_path,
         output_folder=kg_path.parent,
         output_filename=kg_path.name,
+        batch_size=KG_BATCH_SIZE,  # TODO hyperparam
     )
 
 
@@ -93,7 +96,7 @@ def _answer_questions(kg: KG, qas: list[SquadQAPair]):
             },
             {
                 "role": "user",
-                "content": f"Answer these questions precisely using only the knowledge graph data:\n{questions_str}",
+                "content": f"Answer these questions precisely using only the knowledge graph data:\n\n{questions_str}",
             },
         ],
         response_format=ResponseDetails,
@@ -167,6 +170,8 @@ def _eval_squad_topic(title: str, ontology_path: Path, path: Path):
         ontology_path,
     )
 
+    visualize_kg(kg, path / "kg.html")
+
     logger.debug("KG generated with {} triplets", len(kg.triplets))
 
     qas = topic.qas
@@ -232,7 +237,8 @@ def eval_scenario(scenario: EvalScenario, path: Path):
     )
 
     logger.info("Generating ontology...")
-    _ = ontopipe(scenario.domain, path)
+    ontology = ontopipe(scenario.domain, path)
+    visualize_ontology(ontology, path / "ontology.html")
 
     topics_path = path / "topics"
     topics_path.mkdir(exist_ok=True, parents=True)

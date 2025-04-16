@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
-from loguru import logger
 
+from loguru import logger
 from pyvis.network import Network
 
 COLOR_MAP = {
@@ -42,9 +42,7 @@ def save_graph(net: Network, fname: str | Path):
 def build_ontology_graph(data: dict) -> Network:
     net = Network(height="100vh", width="100%", bgcolor="#ffffff", font_color="black")
     net.toggle_physics(True)
-    net.force_atlas_2based(
-        gravity=-50, central_gravity=0.01, spring_length=100, spring_strength=0.08
-    )
+    net.force_atlas_2based(gravity=-50, central_gravity=0.01, spring_length=100, spring_strength=0.08)
 
     # Visualize subclass relations as edges between classes
     for relation in data.get("subclass_relations", []):
@@ -52,12 +50,8 @@ def build_ontology_graph(data: dict) -> Network:
         superclass = relation["superclass"]["name"]
         # Both subclass and superclass are ontology classes.
         net.add_node(subclass, label=subclass, title="CLASS", color=COLOR_MAP["CLASS"])
-        net.add_node(
-            superclass, label=superclass, title="CLASS", color=COLOR_MAP["CLASS"]
-        )
-        net.add_edge(
-            subclass, superclass, label="subClassOf", color="#34495E", arrows="to"
-        )
+        net.add_node(superclass, label=superclass, title="CLASS", color=COLOR_MAP["CLASS"])
+        net.add_edge(subclass, superclass, label="subClassOf", color="#34495E", arrows="to")
 
     # Visualize object properties: create edges from each domain to each range using the property name.
     for prop in data.get("object_properties", []):
@@ -84,9 +78,7 @@ def build_ontology_graph(data: dict) -> Network:
         domains = [d["name"] for d in prop.get("domain", [])]
         datatype = prop["range"]["value"]
         dt_node = f"datatype: {datatype}"
-        net.add_node(
-            dt_node, label=datatype, title="Datatype", color=COLOR_MAP["DATA_PROPERTY"]
-        )
+        net.add_node(dt_node, label=datatype, title="Datatype", color=COLOR_MAP["DATA_PROPERTY"])
         for d in domains:
             net.add_node(d, label=d, title="CLASS", color=COLOR_MAP["CLASS"])
             net.add_edge(
@@ -103,9 +95,7 @@ def build_ontology_graph(data: dict) -> Network:
 def build_kg_graph(kg_data: dict) -> Network:
     net = Network(height="100vh", width="100%", bgcolor="#ffffff", font_color="black")
     net.toggle_physics(True)
-    net.force_atlas_2based(
-        gravity=-50, central_gravity=0.01, spring_length=100, spring_strength=0.08
-    )
+    net.force_atlas_2based(gravity=-50, central_gravity=0.01, spring_length=100, spring_strength=0.08)
 
     entity_color = "#3498DB"  # Blue for entities
 
