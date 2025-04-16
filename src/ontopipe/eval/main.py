@@ -1,3 +1,4 @@
+import json
 import logging
 import secrets
 import sys
@@ -9,8 +10,6 @@ from loguru import logger
 
 from ontopipe.eval.eval import EvalScenario, eval_scenario
 from ontopipe.eval.utils import InterceptHandler
-
-SCENARIOS = (EvalScenario(id="computer", domain="Computers", squad_titles=["Computer"]),)
 
 
 def _init_logging(log_dir_path: Path):
@@ -48,6 +47,10 @@ def _parse_args():
         default=None,
     )
 
+    parser.add_argument(
+        "--scenarios", type=Path, help="Path to a .json file containing the eval scenario", required=True
+    )
+
     return parser.parse_args()
 
 
@@ -61,8 +64,16 @@ def _generate_unique_run_id(path: Path) -> str:
     return run_id
 
 
+def _load_scenarios(scenarios_json_path: Path):
+    """Loads scenarios from a JSON file"""
+
+    return tuple(EvalScenario.model_validate(x) for x in json.loads(scenarios_json_path.read_text()))
+
+
 def main():
     args = _parse_args()
+
+    scenarios = _load_scenarios(args.scenarios)
 
     run_id = args.run_id or _generate_unique_run_id(args.path)
     eval_path = args.path / run_id
@@ -79,7 +90,7 @@ def main():
     )
 
     # run eval for each domain
-    for scenario in SCENARIOS:
+    for scenario in scenarios:
         path = eval_path / scenario.id
         path.mkdir(exist_ok=True, parents=True)
 

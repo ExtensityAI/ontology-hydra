@@ -17,10 +17,10 @@ First, download the SQuAD v2.0 dataset from [https://rajpurkar.github.io/SQuAD-e
 Then, run the evaluation script:
 
 ```bash
-$ uv run eval
+$ uv run eval --scenarios sample.json
 ```
 
-This will create a new evaluation run under `./eval/runs/<run-id>`, where logs, checkpoints and results will be saved.
+This will create a new evaluation run under `./eval/runs/<run-id>`, where logs, checkpoints and results will be saved. The `--scenarios` parameter denotes the path to a JSON file that contains the evaluation scenarios.
 
 If you want to rerun the evaluation (in case you cancelled it while running), you can provide the ``--run-id` parameter to the script. This will allow you to rerun the evaluation from the last checkpoint.
 
