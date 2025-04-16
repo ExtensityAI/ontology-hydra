@@ -1,5 +1,5 @@
 - [ ] ? make engines configurable per pipeline step
-- [ ] move eval scenarios to json file
+- [x] move eval scenarios to json file
 - [ ] track usage across whole scenario
 - [ ] implement symbolicai contracts instead of OpenAI calls
 - [x] create graph visualizations for ontology and kgs
@@ -9,3 +9,6 @@
 - [ ] try increasing batch size
 - [ ] add debug info for QA
 - [ ] some time: find more benchmarks?
+
+- [ ] make checkpoints immutable (do not overwrite files)
+- [ ] move evaluation to separate uv workspace

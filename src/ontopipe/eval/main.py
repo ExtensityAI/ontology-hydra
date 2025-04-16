@@ -1,28 +1,19 @@
-import json
-import logging
 import secrets
-import sys
 from argparse import ArgumentParser
 from datetime import date
 from pathlib import Path
 
 from loguru import logger
+from pydantic import BaseModel, ConfigDict
 
 from ontopipe.eval.eval import EvalScenario, eval_scenario
-from ontopipe.eval.utils import InterceptHandler
+from ontopipe.eval.logs import init_logging
 
 
-def _init_logging(log_dir_path: Path):
-    logging.basicConfig(handlers=[InterceptHandler()], level=0, force=True)
-    logging.getLogger("openai._base_client").setLevel(logging.WARN)  # ignore unnecessary OpenAI logs
+class EvalConfig(BaseModel):
+    model_config = ConfigDict(frozen=True)
 
-    def _only_ontopipe(record) -> bool:
-        return "ontopipe" in record["name"]
-
-    logger.remove()
-
-    logger.add(sys.stderr, colorize=True, filter=_only_ontopipe)
-    logger.add(log_dir_path / "eval_{time}.log", rotation="300 MB")
+    scenarios: tuple[EvalScenario, ...]
 
 
 def _generate_run_id():
@@ -30,73 +21,99 @@ def _generate_run_id():
     return date.today().strftime("%Y%m%d") + "_" + secrets.token_urlsafe(4).replace("_", "-")
 
 
-def _parse_args():
-    parser = ArgumentParser(description="Run evaluation")
-
-    parser.add_argument(
-        "--path",
-        type=Path,
-        help="Base path for evaluation runs",
-        default=Path("eval/runs"),
-    )
-
-    parser.add_argument(
-        "--run-id",
-        type=str,
-        help="Run ID for evaluation",
-        default=None,
-    )
-
-    parser.add_argument(
-        "--scenarios", type=Path, help="Path to a .json file containing the eval scenario", required=True
-    )
-
-    return parser.parse_args()
-
-
-def _generate_unique_run_id(path: Path) -> str:
-    """Generate a new run ID for which no directory exists in the given path"""
+def _generate_unique_run_path(path: Path):
+    """Generate a new run path for which no directory exists in the given path"""
     run_id = None
 
     while run_id is None or (path / run_id).exists():
         run_id = _generate_run_id()
 
-    return run_id
+    return path / run_id
 
 
-def _load_scenarios(scenarios_json_path: Path):
-    """Loads scenarios from a JSON file"""
+def _parse_args():
+    parser = ArgumentParser(description="ontopipe evaluation script")
+    subparsers = parser.add_subparsers(dest="command", required=True)
 
-    return tuple(EvalScenario.model_validate(x) for x in json.loads(scenarios_json_path.read_text()))
+    new_cmd = subparsers.add_parser("new", help="Start a new evaluation run")
+    new_cmd.add_argument("--config", type=Path, help="Path to the JSON config file", default=Path("eval/config.json"))
+    new_cmd.add_argument(
+        "--output",
+        "-o",
+        type=Path,
+        help="Output path for the evaluation run",
+        default=_generate_unique_run_path(Path("eval/runs")),
+    )
+
+    resume_cmd = subparsers.add_parser("resume", help="Resume an existing evaluation run")
+    resume_cmd.add_argument("--path", type=Path, help="Path to the evaluation run", required=True)
+
+    return parser.parse_args()
+
+
+def _run(path: Path, config: EvalConfig):
+    """Run the evaluation for the given config"""
+
+    for scenario in config.scenarios:
+        scenario_path = path / scenario.id
+        scenario_path.mkdir(exist_ok=True, parents=True)
+
+        with logger.contextualize(domain_id=scenario.id):
+            eval_scenario(scenario, scenario_path)
+
+
+def _start_new_evaluation(args):
+    """Start a new evaluation run"""
+
+    if args.output.exists():
+        raise FileExistsError(
+            f"Output path '{args.output}' already exists. Please choose a different path to start a new evaluation run."
+        )
+
+    config = EvalConfig.model_validate_json(args.config.read_text(encoding="utf-8"))
+    path = args.output
+
+    # prepare output path
+    path.mkdir(exist_ok=True, parents=True)
+    (path / "config.json").write_text(config.model_dump_json(indent=2))
+
+    log_dir_path = path / "logs"
+    log_dir_path.mkdir(exist_ok=True, parents=True)
+    init_logging(log_dir_path)
+
+    logger.info(
+        "Starting new evaluation under '{}'",
+        path,
+    )
+
+    _run(path, config)
+
+
+def _resume_evaluation(args):
+    """Resume an existing evaluation run"""
+    config_path = args.path / "config.json"
+
+    if not config_path.exists():
+        raise FileNotFoundError(
+            f"Could not find config file under '{config_path}'. Are you sure this is a valid run path?"
+        )
+
+    config = EvalConfig.model_validate_json(config_path.read_text(encoding="utf-8"))
+
+    init_logging(args.path / "logs")
+
+    logger.info(
+        "Resuming evaluation under '{}'",
+        args.path,
+    )
+
+    _run(args.path, config)
 
 
 def main():
     args = _parse_args()
 
-    scenarios = _load_scenarios(args.scenarios)
-
-    run_id = args.run_id or _generate_unique_run_id(args.path)
-    eval_path = args.path / run_id
-    eval_path.mkdir(exist_ok=True, parents=True)
-
-    log_dir_path = eval_path / "logs"
-    log_dir_path.mkdir(exist_ok=True, parents=True)
-    _init_logging(log_dir_path)
-
-    logger.info(
-        "Starting evaluation '{}' under '{}'",
-        run_id,
-        eval_path,
-    )
-
-    # run eval for each domain
-    for scenario in scenarios:
-        path = eval_path / scenario.id
-        path.mkdir(exist_ok=True, parents=True)
-
-        # store scenario in JSON file
-        # TODO this is overwritten when rerunning the evaluation, should this be changed?
-        (path / "scenario.json").write_text(scenario.model_dump_json(indent=2))
-
-        with logger.contextualize(domain_id=id):
-            eval_scenario(scenario, path)
+    if args.command == "new":
+        _start_new_evaluation(args)
+    elif args.command == "resume":
+        _resume_evaluation(args)

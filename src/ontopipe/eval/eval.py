@@ -3,7 +3,7 @@ from pathlib import Path
 
 import openai
 from loguru import logger
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 from tqdm import tqdm
 
 from ontopipe import ontopipe
@@ -33,12 +33,14 @@ SQUAD_TRAIN_DATASET = SquadDataset.model_validate_json(SQUAD_TRAIN_DATASET_PATH.
 
 
 class EvalScenario(BaseModel):
+    model_config = ConfigDict(frozen=True)
+
     id: str
 
     domain: str
     """The domain used for ontology creation"""
 
-    squad_titles: list[str]
+    squad_titles: tuple[str, ...]
     """Titles of topics in the SQuAD dataset to use for evaluation (title field)"""
     # intuition: we create an ontology for the domain, create KGs for each SQuAD topic based on the associated texts and the ontology and then evaluate using SQuAD questions
 
