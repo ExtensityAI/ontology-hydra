@@ -3,7 +3,7 @@ name = "ontopipe"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = "==3.12.9"
+requires-python = "==3.12.8"
 dependencies = ["symbolicai"]
 
 
