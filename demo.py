@@ -8,8 +8,9 @@ import re
 from pathlib import Path
 from typing import Union, Optional, List
 
+from symai import Symbol
+from symai import Import
 from symai.components import FileReader
-from symai.extended.file_merger import FileMerger
 
 from ontopipe.models import Ontology
 from ontopipe.pipe import ontopipe
@@ -122,6 +123,22 @@ def dump_ontology(ontology: Ontology, folder: Path, fname: str = "ontology.json"
         json.dump(ontology.model_dump(), f, indent=4)
     return folder / fname
 
+def chunk_text(text: str, chunk_size: int = 2048) -> List[str]:
+    """
+    Chunks a large text into smaller pieces of specified size.
+
+    Args:
+        text: The text to chunk
+        chunk_size: Maximum size of each chunk in tokens
+
+    Returns:
+        List of text chunks
+    """
+    chunker = Import.load_expression("ExtensityAI/chonkie-symai", "ChonkieChunker")(tokenizer_name="Xenova/gpt-4o")
+    sym = Symbol(text)
+    chunker(sym, chunk_size=chunk_size)
+    return sym.value
+
 def create_default_ontology(domain: str, folder: Path) -> Path:
     """
     Creates a default ontology for a domain and saves it to the specified file.
@@ -153,7 +170,8 @@ def compute_ontology_and_kg(
     kg_name: str = "DefaultKG",
     output_path: Union[str, Path] = "output",
     threshold: float = 0.7,
-    batch_size: int = 1
+    batch_size: int = 1,
+    chunk_size: int = 2048
 ) -> nx.DiGraph:
     """
     Computes the ontology and knowledge graph from input files and returns a NetworkX DiGraph.
@@ -166,6 +184,7 @@ def compute_ontology_and_kg(
         output_path: Directory to save output files
         threshold: Threshold value for knowledge graph generation
         batch_size: Batch size for processing texts
+        chunk_size: Maximum size of each text chunk in tokens
 
     Returns:
         NetworkX DiGraph representing the knowledge graph
@@ -185,7 +204,7 @@ def compute_ontology_and_kg(
     print(f"Processing input: {input_path}")
 
     # Determine if input is a file or directory and extract texts accordingly
-    texts = []
+    texts: List[str] = []
     if input_path.is_file():
         print(f"Reading single file: {input_path}")
         text = extract_text_from_file(input_path)
@@ -204,6 +223,19 @@ def compute_ontology_and_kg(
 
     print(f"Total number of text documents: {len(texts)}")
 
+    # Preprocess texts by chunking them into smaller parts
+    print(f"Preprocessing texts by chunking into smaller segments (chunk size: {chunk_size} tokens)...")
+    chunked_texts = []
+    for text in texts:
+        if len(text) > chunk_size:  # Only chunk texts that are large enough to need it
+            chunks = chunk_text(text, chunk_size=chunk_size)
+            chunked_texts.extend(chunks)
+            print(f"Chunked text of length {len(text)} into {len(chunks)} parts")
+        else:
+            chunked_texts.append(text)
+
+    print(f"After chunking: {len(chunked_texts)} text segments")
+
     # Ensure output directory exists
     output_path.mkdir(parents=True, exist_ok=True)
 
@@ -212,7 +244,7 @@ def compute_ontology_and_kg(
         try:
             with open(ontology_file, "r", encoding="utf-8") as f:
                 ontology_data = json.load(f)
-            ontology = Ontology.model_validate(ontology_data)
+            Ontology.model_validate(ontology_data)
             print(f"Loaded ontology from {ontology_file}")
         except Exception as e:
             raise ValueError(f"Error loading ontology file: {e}")
@@ -223,7 +255,7 @@ def compute_ontology_and_kg(
         # Ensure we load the newly created ontology file
         with open(ontology_file, "r", encoding="utf-8") as f:
             ontology_data = json.load(f)
-        ontology = Ontology.model_validate(ontology_data)
+        Ontology.model_validate(ontology_data)
         print(f"Created and loaded ontology for domain '{domain}' from {ontology_file}")
     else:
         # This shouldn't happen due to validation above
@@ -233,10 +265,10 @@ def compute_ontology_and_kg(
     output_file = "kg.json"
 
     try:
-        print(f"Generating knowledge graph with {len(texts)} documents...")
+        print(f"Generating knowledge graph with {len(chunked_texts)} text segments...")
         print("Ontology file:", ontology_file)
         kg = generate_kg(
-            texts=texts,
+            texts=chunked_texts,
             kg_name=kg_name,
             ontology_file=ontology_file,
             output_folder=output_path,
@@ -273,6 +305,7 @@ def main():
     parser.add_argument("--output", default="output", help="Output directory for the knowledge graph")
     parser.add_argument("--threshold", "-t", type=float, default=0.7, help="Threshold for knowledge graph generation (default: 0.7)")
     parser.add_argument("--batch-size", "-b", type=int, default=1, help="Batch size for knowledge graph generation (default: 1)")
+    parser.add_argument("--chunk-size", "-c", type=int, default=2048, help="Maximum size of each text chunk in tokens (default: 2048)")
 
     args = parser.parse_args()
 
@@ -286,7 +319,8 @@ def main():
             kg_name=args.name,
             output_path=args.output,
             threshold=args.threshold,
-            batch_size=args.batch_size
+            batch_size=args.batch_size,
+            chunk_size=args.chunk_size
         )
 
         # Output basic statistics
@@ -306,4 +340,3 @@ def main():
 # Example usage
 if __name__ == "__main__":
     main()
-
