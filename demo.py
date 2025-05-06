@@ -151,7 +151,9 @@ def compute_ontology_and_kg(
     ontology_file: Optional[Path] = None,
     domain: Optional[str] = None,
     kg_name: str = "DefaultKG",
-    output_path: Union[str, Path] = "output"
+    output_path: Union[str, Path] = "output",
+    threshold: float = 0.7,
+    batch_size: int = 1
 ) -> nx.DiGraph:
     """
     Computes the ontology and knowledge graph from input files and returns a NetworkX DiGraph.
@@ -162,6 +164,8 @@ def compute_ontology_and_kg(
         domain: Domain to create ontology for if ontology_file not provided (optional)
         kg_name: Name for the generated knowledge graph
         output_path: Directory to save output files
+        threshold: Threshold value for knowledge graph generation
+        batch_size: Batch size for processing texts
 
     Returns:
         NetworkX DiGraph representing the knowledge graph
@@ -237,8 +241,8 @@ def compute_ontology_and_kg(
             ontology_file=ontology_file,
             output_folder=output_path,
             output_filename=output_file,
-            threshold=0.7,
-            batch_size=8  # Could potentially increase based on available memory
+            threshold=threshold,
+            batch_size=batch_size
         )
         visualize_kg(kg, output_path / 'kg.html')
     except Exception as e:
@@ -267,6 +271,8 @@ def main():
     parser.add_argument("--domain", "-d", help="Domain to create ontology for if --ontology not provided")
     parser.add_argument("--name", "-n", default="EnhancedKG", help="Name for the knowledge graph")
     parser.add_argument("--output", default="output", help="Output directory for the knowledge graph")
+    parser.add_argument("--threshold", "-t", type=float, default=0.7, help="Threshold for knowledge graph generation (default: 0.7)")
+    parser.add_argument("--batch-size", "-b", type=int, default=1, help="Batch size for knowledge graph generation (default: 1)")
 
     args = parser.parse_args()
 
@@ -278,7 +284,9 @@ def main():
             ontology_file=ontology_file,
             domain=args.domain,
             kg_name=args.name,
-            output_path=args.output
+            output_path=args.output,
+            threshold=args.threshold,
+            batch_size=args.batch_size
         )
 
         # Output basic statistics
