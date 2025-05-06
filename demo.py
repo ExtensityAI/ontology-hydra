@@ -139,7 +139,7 @@ def chunk_text(text: str, chunk_size: int = 512) -> List[str]:
     chunks = chunker(sym, chunk_size=chunk_size)
 
     # Debug the chunking result
-    chunks = sym.value
+    chunks = chunks.value
     if isinstance(chunks, str):
         # If it returns a single string instead of chunks, wrap it in a list
         return [chunks]
