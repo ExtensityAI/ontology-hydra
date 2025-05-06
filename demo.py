@@ -6,6 +6,7 @@ from eval.vis import visualize_kg
 import networkx as nx
 import re
 from pathlib import Path
+import shutil
 from typing import Union, Optional, List
 
 from symai import Symbol
@@ -15,6 +16,7 @@ from symai.components import FileReader
 from ontopipe.models import Ontology
 from ontopipe.pipe import ontopipe
 from eval.kg import TripletExtractor, generate_kg
+from eval.vis import visualize_ontology
 
 def is_supported_file(file_path: Path) -> bool:
     """
@@ -169,10 +171,46 @@ def create_default_ontology(domain: str, folder: Path) -> Path:
     safe_domain = sanitize_filename(domain)
     fname = f"{safe_domain}_ontology.json"
 
-    # Save the ontology to the specified file
-    file_path = dump_ontology(ontology, folder=folder, fname=fname)
-    print(f"Ontology saved to {file_path}")
-    return file_path
+    # Ensure output folder exists
+    folder.mkdir(parents=True, exist_ok=True)
+
+    # Path to the final ontology file
+    target_ontology_path = folder / fname
+    ontology_file_found = False
+
+    # Copy files from cache_path to the specified folder
+    for item in cache_path.iterdir():
+        if item.is_file():
+            if item.name == 'ontology_fixed.json.json':
+                # This is the main ontology file that needs to be renamed
+                print(f"Found main ontology file: {item.name}")
+                shutil.copy2(item, target_ontology_path)
+                ontology_file_found = True
+                print(f"Copied ontology file to {target_ontology_path}")
+            elif '.json.html' in item.name:
+                # Copy HTML visualization
+                html_target = folder / f"{safe_domain}_ontology.html"
+                shutil.copy2(item, html_target)
+                print(f"Copied HTML visualization to {html_target}")
+            elif '_transformation_history.json' in item.name:
+                # Copy transformation history
+                history_target = folder / f"{safe_domain}_ontology_transformation_history.json"
+                shutil.copy2(item, history_target)
+                print(f"Copied transformation history to {history_target}")
+            elif '.json' in item.name and not ontology_file_found:
+                # Fallback for other JSON files if we haven't found the main ontology
+                print(f"Found potential ontology file: {item.name}")
+                shutil.copy2(item, target_ontology_path)
+                ontology_file_found = True
+                print(f"Copied ontology file to {target_ontology_path}")
+
+    if not ontology_file_found:
+        # If no ontology file was found, save the ontology object directly
+        print("No ontology file found in cache, saving ontology object directly")
+        dump_ontology(ontology, folder=folder, fname=fname)
+
+    print(f"Ontology saved to {target_ontology_path}")
+    return target_ontology_path
 
 def compute_ontology_and_kg(
     input_path: Union[str, Path],
@@ -284,6 +322,8 @@ def compute_ontology_and_kg(
     try:
         print(f"Generating knowledge graph with {len(chunked_texts)} text segments...")
         print("Ontology file:", ontology_file)
+        ontology = TripletExtractor.load_ontology(ontology_file)
+        visualize_ontology(ontology, output_path / 'ontology_kg.html')
         kg = generate_kg(
             texts=chunked_texts,
             kg_name=kg_name,
