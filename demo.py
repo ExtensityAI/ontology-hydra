@@ -123,7 +123,7 @@ def dump_ontology(ontology: Ontology, folder: Path, fname: str = "ontology.json"
         json.dump(ontology.model_dump(), f, indent=4)
     return folder / fname
 
-def chunk_text(text: str, chunk_size: int = 2048) -> List[str]:
+def chunk_text(text: str, chunk_size: int = 512) -> List[str]:
     """
     Chunks a large text into smaller pieces of specified size.
 
@@ -136,8 +136,19 @@ def chunk_text(text: str, chunk_size: int = 2048) -> List[str]:
     """
     chunker = Import.load_expression("ExtensityAI/chonkie-symai", "ChonkieChunker")(tokenizer_name="Xenova/gpt-4o")
     sym = Symbol(text)
-    chunker(sym, chunk_size=chunk_size)
-    return sym.value
+    chunks = chunker(sym, chunk_size=chunk_size)
+
+    # Debug the chunking result
+    chunks = sym.value
+    if isinstance(chunks, str):
+        # If it returns a single string instead of chunks, wrap it in a list
+        return [chunks]
+
+    # Filter out empty chunks
+    chunks = [chunk for chunk in chunks if chunk.strip()]
+
+    print(f"Created {len(chunks)} chunks from text of length {len(text)}")
+    return chunks
 
 def create_default_ontology(domain: str, folder: Path) -> Path:
     """
@@ -171,7 +182,7 @@ def compute_ontology_and_kg(
     output_path: Union[str, Path] = "output",
     threshold: float = 0.7,
     batch_size: int = 1,
-    chunk_size: int = 2048
+    chunk_size: int = 512
 ) -> nx.DiGraph:
     """
     Computes the ontology and knowledge graph from input files and returns a NetworkX DiGraph.
@@ -226,8 +237,14 @@ def compute_ontology_and_kg(
     # Preprocess texts by chunking them into smaller parts
     print(f"Preprocessing texts by chunking into smaller segments (chunk size: {chunk_size} tokens)...")
     chunked_texts = []
-    for text in texts:
-        if len(text) > chunk_size:  # Only chunk texts that are large enough to need it
+
+    # Use a threshold for chunking based on approximate character count
+    # Typically about 4-5 characters per token, so multiply token size by 4
+    char_threshold = chunk_size * 4
+
+    for i, text in enumerate(texts):
+        print(f"Processing document {i+1}/{len(texts)}")
+        if len(text) > char_threshold:  # Only chunk texts that are large enough to need it
             chunks = chunk_text(text, chunk_size=chunk_size)
             chunked_texts.extend(chunks)
             print(f"Chunked text of length {len(text)} into {len(chunks)} parts")
@@ -305,7 +322,7 @@ def main():
     parser.add_argument("--output", default="output", help="Output directory for the knowledge graph")
     parser.add_argument("--threshold", "-t", type=float, default=0.7, help="Threshold for knowledge graph generation (default: 0.7)")
     parser.add_argument("--batch-size", "-b", type=int, default=1, help="Batch size for knowledge graph generation (default: 1)")
-    parser.add_argument("--chunk-size", "-c", type=int, default=2048, help="Maximum size of each text chunk in tokens (default: 2048)")
+    parser.add_argument("--chunk-size", "-c", type=int, default=512, help="Maximum size of each text chunk in tokens (default: 512)")
 
     args = parser.parse_args()
 
