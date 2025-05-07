@@ -1,19 +1,26 @@
+from pathlib import Path
+
 from pydantic import Field, field_validator
 from symai.models import LLMDataModel
 
 
-#==================================================#
-#----Ontology Generation Data Models---------------#
-#==================================================#
+# ==================================================#
+# ----Ontology Generation Data Models---------------#
+# ==================================================#
 class Characteristic(LLMDataModel):
     value: str = Field(description="Property characteristic value.")
 
-    @field_validator('value')
+    @field_validator("value")
     @classmethod
     def validate_characteristic(cls, v):
         valid_characteristics = {
-            "functional", "inverseFunctional", "transitive",
-            "symmetric", "asymmetric", "reflexive", "irreflexive"
+            "functional",
+            "inverseFunctional",
+            "transitive",
+            "symmetric",
+            "asymmetric",
+            "reflexive",
+            "irreflexive",
         }
         if v not in valid_characteristics:
             raise ValueError(f"Invalid characteristic: {v}. Must be one of {valid_characteristics}")
@@ -26,13 +33,20 @@ class Characteristic(LLMDataModel):
 class Datatype(LLMDataModel):
     value: str = Field(description="Datatype value (e.g., xsd:string).")
 
-    @field_validator('value')
+    @field_validator("value")
     @classmethod
     def validate_datatype(cls, v):
         valid_datatypes = {
-            "xsd:string", "xsd:integer", "xsd:float", "xsd:boolean",
-            "xsd:dateTime", "xsd:date", "xsd:time", "xsd:anyURI",
-            "xsd:language", "xsd:decimal"
+            "xsd:string",
+            "xsd:integer",
+            "xsd:float",
+            "xsd:boolean",
+            "xsd:dateTime",
+            "xsd:date",
+            "xsd:time",
+            "xsd:anyURI",
+            "xsd:language",
+            "xsd:decimal",
         }
         if v not in valid_datatypes:
             raise ValueError(f"Invalid datatype: {v}. Must be one of {valid_datatypes}")
@@ -76,25 +90,15 @@ class ObjectProperty(LLMDataModel):
     def __eq__(self, other):
         if not isinstance(other, ObjectProperty):
             return False
-        return (
-            self.name,
-            tuple(self.domain),
-            tuple(self.range),
-            tuple(self.characteristics)
-        ) == (
+        return (self.name, tuple(self.domain), tuple(self.range), tuple(self.characteristics)) == (
             other.name,
             tuple(other.domain),
             tuple(other.range),
-            tuple(other.characteristics)
+            tuple(other.characteristics),
         )
 
     def __hash__(self):
-        return hash((
-            self.name,
-            tuple(self.domain),
-            tuple(self.range),
-            tuple(self.characteristics)
-        ))
+        return hash((self.name, tuple(self.domain), tuple(self.range), tuple(self.characteristics)))
 
 
 class DataProperty(LLMDataModel):
@@ -106,34 +110,30 @@ class DataProperty(LLMDataModel):
     def __eq__(self, other):
         if not isinstance(other, DataProperty):
             return False
-        return (
-            self.name,
-            tuple(self.domain),
-            self.range,
-            tuple(self.characteristics)
-        ) == (
+        return (self.name, tuple(self.domain), self.range, tuple(self.characteristics)) == (
             other.name,
             tuple(other.domain),
             other.range,
-            tuple(other.characteristics)
+            tuple(other.characteristics),
         )
 
     def __hash__(self):
-        return hash((
-            self.name,
-            tuple(self.domain),
-            self.range,
-            tuple(self.characteristics)
-        ))
+        return hash((self.name, tuple(self.domain), self.range, tuple(self.characteristics)))
 
 
 class OntologyState(LLMDataModel):
-    concepts: list[SubClassRelation | ObjectProperty | DataProperty] | None = Field(description="List of the newly extracted concepts in the ontology. Only return new and unique concepts.")
+    concepts: list[SubClassRelation | ObjectProperty | DataProperty] | None = Field(
+        description="List of the newly extracted concepts in the ontology. Only return new and unique concepts."
+    )
 
 
 class OWLBuilderInput(LLMDataModel):
-    competency_question: list[str] = Field(description="A list of competency questions discovered during an interview process by the ontology engineer. Extract a list of relevant concepts.")
-    ontology_state: OntologyState = Field(description="A dynamic state of the ontology that evolves with each iteration. Use this state to expand the ontology with new concepts.")
+    competency_question: list[str] = Field(
+        description="A list of competency questions discovered during an interview process by the ontology engineer. Extract a list of relevant concepts."
+    )
+    ontology_state: OntologyState = Field(
+        description="A dynamic state of the ontology that evolves with each iteration. Use this state to expand the ontology with new concepts."
+    )
 
 
 class Ontology(LLMDataModel):
@@ -142,36 +142,50 @@ class Ontology(LLMDataModel):
     object_properties: list[ObjectProperty] = Field(description="List of object properties.")
     data_properties: list[DataProperty] = Field(description="List of data properties.")
 
+    @classmethod
+    def from_json_file(cls, path: Path | str):
+        return cls.model_validate_json(Path(path).read_text(encoding="utf-8"))
 
-#==================================================#
-#----Ontology Fixing Data Models0000---------------#
-#==================================================#
+
+# ==================================================#
+# ----Ontology Fixing Data Models0000---------------#
+# ==================================================#
 class Cluster(LLMDataModel):
     index: int = Field(description="The cluster's index.")
-    relations: list[SubClassRelation] = Field(description="A list of discovered superclass-subclass relations that form a cluster.")
+    relations: list[SubClassRelation] = Field(
+        description="A list of discovered superclass-subclass relations that form a cluster."
+    )
 
 
 class Merge(LLMDataModel):
     indexes: list[int] = Field(description="The indices of the clusters that are being merged.")
-    relations: list[SubClassRelation] = Field(description="A list of superclass-subclass relations chosen from the existing two clusters in such a way that they merge.")
+    relations: list[SubClassRelation] = Field(
+        description="A list of superclass-subclass relations chosen from the existing two clusters in such a way that they merge."
+    )
 
-    @field_validator('indexes')
+    @field_validator("indexes")
     @classmethod
     def is_binary(cls, v):
         if len(v) != 2:
-            raise ValueError(f"Binary op error: Invalid number of clusters: {len(v)}. The merge operation requires exactly two clusters.")
+            raise ValueError(
+                f"Binary op error: Invalid number of clusters: {len(v)}. The merge operation requires exactly two clusters."
+            )
         return v
 
 
 class Bridge(LLMDataModel):
     indexes: list[int] = Field(description="The indices of the clusters that are being bridged.")
-    relations: list[SubClassRelation] = Field(description="A list of new superclass-subclass relations used to bridge the two clusters from the ontology.")
+    relations: list[SubClassRelation] = Field(
+        description="A list of new superclass-subclass relations used to bridge the two clusters from the ontology."
+    )
 
-    @field_validator('indexes')
+    @field_validator("indexes")
     @classmethod
     def is_binary(cls, v):
         if len(v) != 2:
-            raise ValueError(f"Binary op error: Invalid number of clusters: {len(v)}. The merge operation requires exactly two clusters.")
+            raise ValueError(
+                f"Binary op error: Invalid number of clusters: {len(v)}. The merge operation requires exactly two clusters."
+            )
         return v
 
 
@@ -179,11 +193,13 @@ class Prune(LLMDataModel):
     indexes: list[int] = Field(description="The indices of the clusters that are being pruned.")
     classes: list[OwlClass] = Field(description="A list of classes that are being pruned from the ontology.")
 
-    @field_validator('indexes')
+    @field_validator("indexes")
     @classmethod
     def is_unary(cls, v):
         if len(v) > 1:
-            raise ValueError(f"Unary op error: Invalid number of clusters: {len(v)}. The prune operation requires exactly one cluster.")
+            raise ValueError(
+                f"Unary op error: Invalid number of clusters: {len(v)}. The prune operation requires exactly one cluster."
+            )
         return v
 
 
@@ -192,14 +208,18 @@ class Operation(LLMDataModel):
 
 
 class WeaverInput(LLMDataModel):
-    ontology: Ontology = Field(description="The current state of the ontology that's the result of the performed chain of operations from history. At the beginning of the process, it is initialized with a predefined ontology and the history will be None.")
-    clusters: list[Cluster] = Field(description="A list of clusters that are being managed by the weaver. The objective is to create only one cluster.")
+    ontology: Ontology = Field(
+        description="The current state of the ontology that's the result of the performed chain of operations from history. At the beginning of the process, it is initialized with a predefined ontology and the history will be None."
+    )
+    clusters: list[Cluster] = Field(
+        description="A list of clusters that are being managed by the weaver. The objective is to create only one cluster."
+    )
     history: list[Operation] | None = Field(description="The history of performed operations.")
 
 
-#==================================================#
-#----Triplet Extraction Data Models----------------#
-#==================================================#
+# ==================================================#
+# ----Triplet Extraction Data Models----------------#
+# ==================================================#
 class Entity(LLMDataModel):
     name: str = Field(description="Name of the entity.")
 
@@ -238,11 +258,7 @@ class Triplet(LLMDataModel):
     def __eq__(self, other):
         if not isinstance(other, Triplet):
             return False
-        return (
-            self.subject == other.subject and
-            self.predicate == other.predicate and
-            self.object == other.object
-        )
+        return self.subject == other.subject and self.predicate == other.predicate and self.object == other.object
 
     def __hash__(self):
         return hash((hash(self.subject), hash(self.predicate), hash(self.object)))

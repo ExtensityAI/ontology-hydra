@@ -10,5 +10,5 @@
 - [ ] add debug info for QA
 - [ ] some time: find more benchmarks?
 
-- [ ] make checkpoints immutable (do not overwrite files)
-- [ ] move evaluation to separate uv workspace
+- [x] make checkpoints immutable (do not overwrite files)
+- [x] move evaluation to separate uv workspace

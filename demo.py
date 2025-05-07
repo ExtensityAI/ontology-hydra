@@ -1,22 +1,20 @@
-import os
-import json
 import argparse
-import tempfile
-from eval.vis import visualize_kg
-import networkx as nx
+import json
 import re
-from pathlib import Path
 import shutil
-from typing import Union, Optional, List
+import tempfile
+from pathlib import Path
+from typing import List, Optional, Union
 
-from symai import Symbol
-from symai import Import
+import networkx as nx
+from symai import Import, Symbol
 from symai.components import FileReader
 
+from eval.vis import visualize_kg, visualize_ontology
+from ontopipe.kg import generate_kg
 from ontopipe.models import Ontology
 from ontopipe.pipe import ontopipe
-from eval.kg import TripletExtractor, generate_kg
-from eval.vis import visualize_ontology
+
 
 def is_supported_file(file_path: Path) -> bool:
     """
@@ -31,17 +29,41 @@ def is_supported_file(file_path: Path) -> bool:
     # List of supported file extensions
     supported_extensions = {
         # Text formats
-        '.txt', '.md', '.rst',
+        ".txt",
+        ".md",
+        ".rst",
         # Document formats
-        '.pdf', '.docx', '.doc', '.rtf', '.odt',
+        ".pdf",
+        ".docx",
+        ".doc",
+        ".rtf",
+        ".odt",
         # Code formats
-        '.py', '.java', '.js', '.ts', '.c', '.cpp', '.h', '.cs', '.go', '.rb',
-        '.php', '.html', '.css', '.json', '.xml', '.yml', '.yaml', '.toml',
+        ".py",
+        ".java",
+        ".js",
+        ".ts",
+        ".c",
+        ".cpp",
+        ".h",
+        ".cs",
+        ".go",
+        ".rb",
+        ".php",
+        ".html",
+        ".css",
+        ".json",
+        ".xml",
+        ".yml",
+        ".yaml",
+        ".toml",
         # Other common text formats
-        '.csv', '.tsv'
+        ".csv",
+        ".tsv",
     }
 
     return file_path.suffix.lower() in supported_extensions
+
 
 def get_all_supported_files(dir_path: Path) -> List[Path]:
     """
@@ -55,11 +77,12 @@ def get_all_supported_files(dir_path: Path) -> List[Path]:
     """
     supported_files = []
 
-    for item in dir_path.rglob('*'):
+    for item in dir_path.rglob("*"):
         if item.is_file() and is_supported_file(item):
             supported_files.append(item)
 
     return supported_files
+
 
 def extract_text_from_file(file_path: Union[str, Path]) -> str:
     """
@@ -76,6 +99,7 @@ def extract_text_from_file(file_path: Union[str, Path]) -> str:
     except Exception as e:
         print(f"Error reading file {file_path}: {e}")
         return ""
+
 
 def extract_texts_from_folder(folder_path: Union[str, Path]) -> List[str]:
     """
@@ -101,6 +125,7 @@ def extract_texts_from_folder(folder_path: Union[str, Path]) -> List[str]:
 
     return texts
 
+
 def sanitize_filename(name: str) -> str:
     """
     Sanitize a string to be used as a filename by removing/replacing invalid characters.
@@ -112,11 +137,12 @@ def sanitize_filename(name: str) -> str:
         A sanitized string that can be safely used as part of a filename
     """
     # Replace spaces and invalid characters with underscore
-    sanitized = re.sub(r'[\\/*?:"<>|]', '_', name)
-    sanitized = re.sub(r'\s+', '_', sanitized)
+    sanitized = re.sub(r'[\\/*?:"<>|]', "_", name)
+    sanitized = re.sub(r"\s+", "_", sanitized)
     # Remove leading/trailing underscores and ensure it's not too long
-    sanitized = sanitized.strip('_')[:100]
+    sanitized = sanitized.strip("_")[:100]
     return sanitized.lower()
+
 
 def dump_ontology(ontology: Ontology, folder: Path, fname: str = "ontology.json"):
     if not folder.exists():
@@ -124,6 +150,7 @@ def dump_ontology(ontology: Ontology, folder: Path, fname: str = "ontology.json"
     with open(folder / fname, "w") as f:
         json.dump(ontology.model_dump(), f, indent=4)
     return folder / fname
+
 
 def chunk_text(text: str, chunk_size: int = 512) -> List[str]:
     """
@@ -151,6 +178,7 @@ def chunk_text(text: str, chunk_size: int = 512) -> List[str]:
 
     print(f"Created {len(chunks)} chunks from text of length {len(text)}")
     return chunks
+
 
 def create_default_ontology(domain: str, folder: Path) -> Path:
     """
@@ -181,23 +209,23 @@ def create_default_ontology(domain: str, folder: Path) -> Path:
     # Copy files from cache_path to the specified folder
     for item in cache_path.iterdir():
         if item.is_file():
-            if item.name == 'ontology_fixed.json.json':
+            if item.name == "ontology_fixed.json.json":
                 # This is the main ontology file that needs to be renamed
                 print(f"Found main ontology file: {item.name}")
                 shutil.copy2(item, target_ontology_path)
                 ontology_file_found = True
                 print(f"Copied ontology file to {target_ontology_path}")
-            elif '.json.html' in item.name:
+            elif ".json.html" in item.name:
                 # Copy HTML visualization
                 html_target = folder / f"{safe_domain}_ontology.html"
                 shutil.copy2(item, html_target)
                 print(f"Copied HTML visualization to {html_target}")
-            elif '_transformation_history.json' in item.name:
+            elif "_transformation_history.json" in item.name:
                 # Copy transformation history
                 history_target = folder / f"{safe_domain}_ontology_transformation_history.json"
                 shutil.copy2(item, history_target)
                 print(f"Copied transformation history to {history_target}")
-            elif '.json' in item.name and not ontology_file_found:
+            elif ".json" in item.name and not ontology_file_found:
                 # Fallback for other JSON files if we haven't found the main ontology
                 print(f"Found potential ontology file: {item.name}")
                 shutil.copy2(item, target_ontology_path)
@@ -212,6 +240,7 @@ def create_default_ontology(domain: str, folder: Path) -> Path:
     print(f"Ontology saved to {target_ontology_path}")
     return target_ontology_path
 
+
 def compute_ontology_and_kg(
     input_path: Union[str, Path],
     ontology_file: Optional[Path] = None,
@@ -220,7 +249,7 @@ def compute_ontology_and_kg(
     output_path: Union[str, Path] = "output",
     threshold: float = 0.7,
     batch_size: int = 1,
-    chunk_size: int = 512
+    chunk_size: int = 512,
 ) -> nx.DiGraph:
     """
     Computes the ontology and knowledge graph from input files and returns a NetworkX DiGraph.
@@ -281,7 +310,7 @@ def compute_ontology_and_kg(
     char_threshold = chunk_size * 4
 
     for i, text in enumerate(texts):
-        print(f"Processing document {i+1}/{len(texts)}")
+        print(f"Processing document {i + 1}/{len(texts)}")
         if len(text) > char_threshold:  # Only chunk texts that are large enough to need it
             chunks = chunk_text(text, chunk_size=chunk_size)
             chunked_texts.extend(chunks)
@@ -317,27 +346,27 @@ def compute_ontology_and_kg(
         raise ValueError("Either ontology_file or domain must be provided")
 
     # Generate KG
-    output_file = "kg.json"
+    output_file = Path("kg.json")
 
     try:
         print(f"Generating knowledge graph with {len(chunked_texts)} text segments...")
         print("Ontology file:", ontology_file)
-        ontology = TripletExtractor.load_ontology(ontology_file)
-        visualize_ontology(ontology, output_path / 'ontology_kg.html')
+        ontology = Ontology.from_json_file(ontology_file)
+        visualize_ontology(ontology, output_path / "ontology_kg.html")
         kg = generate_kg(
             texts=chunked_texts,
             kg_name=kg_name,
-            ontology_file=ontology_file,
-            output_folder=output_path,
-            output_filename=output_file,
+            ontology=ontology,
             threshold=threshold,
-            batch_size=batch_size
+            batch_size=batch_size,
         )
-        visualize_kg(kg, output_path / 'kg.html')
+        output_file.write_text(kg.model_dump_json(indent=2), encoding="utf-8")
+        visualize_kg(kg, output_path / "kg.html")
     except Exception as e:
         print(f"Error generating knowledge graph: {e}")
         # print stack trace for debugging
         import traceback
+
         traceback.print_exc()
         raise
 
@@ -352,6 +381,7 @@ def compute_ontology_and_kg(
 
     return G
 
+
 def main():
     """Parse arguments and run the knowledge graph generation"""
     parser = argparse.ArgumentParser(description="Generate knowledge graph from text documents")
@@ -360,9 +390,15 @@ def main():
     parser.add_argument("--domain", "-d", help="Domain to create ontology for if --ontology not provided")
     parser.add_argument("--name", "-n", default="EnhancedKG", help="Name for the knowledge graph")
     parser.add_argument("--output", default="output", help="Output directory for the knowledge graph")
-    parser.add_argument("--threshold", "-t", type=float, default=0.7, help="Threshold for knowledge graph generation (default: 0.7)")
-    parser.add_argument("--batch-size", "-b", type=int, default=1, help="Batch size for knowledge graph generation (default: 1)")
-    parser.add_argument("--chunk-size", "-c", type=int, default=512, help="Maximum size of each text chunk in tokens (default: 512)")
+    parser.add_argument(
+        "--threshold", "-t", type=float, default=0.7, help="Threshold for knowledge graph generation (default: 0.7)"
+    )
+    parser.add_argument(
+        "--batch-size", "-b", type=int, default=1, help="Batch size for knowledge graph generation (default: 1)"
+    )
+    parser.add_argument(
+        "--chunk-size", "-c", type=int, default=512, help="Maximum size of each text chunk in tokens (default: 512)"
+    )
 
     args = parser.parse_args()
 
@@ -377,11 +413,11 @@ def main():
             output_path=args.output,
             threshold=args.threshold,
             batch_size=args.batch_size,
-            chunk_size=args.chunk_size
+            chunk_size=args.chunk_size,
         )
 
         # Output basic statistics
-        print(f"\nKnowledge Graph Statistics:")
+        print("\nKnowledge Graph Statistics:")
         print(f"Nodes: {len(graph.nodes())}")
         print(f"Edges: {len(graph.edges())}")
         print(f"Graph Nodes: {list(graph.nodes())}")
@@ -393,6 +429,7 @@ def main():
     except Exception as e:
         print(f"Error generating knowledge graph: {e}")
         return None
+
 
 # Example usage
 if __name__ == "__main__":

@@ -6,13 +6,13 @@ from loguru import logger
 from pydantic import BaseModel, ConfigDict
 from tqdm import tqdm
 
-from eval.kg import generate_kg
 from eval.squad_v2.data import SquadDataset, SquadQAPair
 from eval.squad_v2.squad_v2 import SquadV2
 from eval.vis import visualize_kg, visualize_ontology
 from ontopipe import ontopipe
 from ontopipe.cqs.utils import MODEL
-from ontopipe.models import KG
+from ontopipe.kg import generate_kg
+from ontopipe.models import KG, Ontology
 
 KG_BATCH_SIZE = 4
 QA_BATCH_SIZE = 4
@@ -45,21 +45,23 @@ class EvalScenario(BaseModel):
     # intuition: we create an ontology for the domain, create KGs for each SQuAD topic based on the associated texts and the ontology and then evaluate using SQuAD questions
 
 
-def _generate_kg(texts: list[str], domain: str, kg_path: Path, ontology_path: Path):
+def _generate_kg(texts: list[str], domain: str, kg_path: Path, ontology: Ontology):
     """Generate a knowledge graph from a list of texts as well as the current ontology and domain"""
 
     if kg_path.exists():
         # load cached KG
         return KG.model_validate_json(kg_path.read_text(encoding="utf-8"))
 
-    return generate_kg(
+    kg = generate_kg(
         texts,
         domain,
-        ontology_file=ontology_path,
-        output_folder=kg_path.parent,
-        output_filename=kg_path.name,
+        ontology=ontology,
         batch_size=KG_BATCH_SIZE,  # TODO hyperparam
     )
+
+    kg_path.write_text(kg.model_dump_json(indent=2), encoding="utf-8")
+
+    return kg
 
 
 class ResponseDetail(BaseModel):
@@ -147,7 +149,7 @@ def _answer_all_questions(kg: KG, qas: list[SquadQAPair], cache_path: Path):
     return details
 
 
-def _eval_squad_topic(title: str, ontology_path: Path, path: Path):
+def _eval_squad_topic(title: str, ontology: Ontology, path: Path):
     """Evaluate QA performance on a specific scenario consisting of multiple SQuAD topics using the generated ontology."""
 
     logger.info("Generating kg for '{}'", title)
@@ -165,12 +167,7 @@ def _eval_squad_topic(title: str, ontology_path: Path, path: Path):
         title,
     )
 
-    kg = _generate_kg(
-        contexts,
-        title,
-        path / "kg.json",
-        ontology_path,
-    )
+    kg = _generate_kg(contexts, title, path / "kg.json", ontology)
 
     visualize_kg(kg, path / "kg.html")
 
@@ -239,16 +236,16 @@ def eval_scenario(scenario: EvalScenario, path: Path):
     )
 
     logger.info("Generating ontology...")
+
     ontology = ontopipe(scenario.domain, path)
+
     visualize_ontology(ontology, path / "ontology.html")
 
     topics_path = path / "topics"
     topics_path.mkdir(exist_ok=True, parents=True)
 
-    ontology_path = path / "ontology.json"
-
     for title in scenario.squad_titles:
         topic_path = topics_path / title
         topic_path.mkdir(exist_ok=True, parents=True)
 
-        _eval_squad_topic(title, ontology_path, topic_path)
+        _eval_squad_topic(title, ontology, topic_path)
