@@ -3,9 +3,9 @@ from symai.prompts import PromptLanguage, PromptRegistry
 prompt_registry = PromptRegistry()
 
 
-#==================================================#
-#----Ontology Generation---------------------------#
-#==================================================#
+# ==================================================#
+# ----Ontology Generation---------------------------#
+# ==================================================#
 # Tags
 prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_class", "OWL CLASS")
 prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_subclass_relation", "OWL SUBCLASS RELATION")
@@ -36,14 +36,14 @@ Remember that OWL 2 distinguishes between:
 • Object properties (owl:ObjectProperty) - relationships between individuals
 • Datatype properties (owl:DatatypeProperty) - relationships between individuals and data values
 • Subclass relationships (rdfs:subClassOf) that establish class hierarchies
-    """
+    """,
 )
 
 prompt_registry.register_instruction(
     PromptLanguage.ENGLISH,
     "ontology_guidelines",
     f"""
-{prompt_registry.tag('ontology_guidelines')}
+{prompt_registry.tag("ontology_guidelines")}
 When designing an ontology, adhere to these principles:
 
 • Create abstractions that reflect general concepts rather than specific instances
@@ -56,14 +56,14 @@ When designing an ontology, adhere to these principles:
 • Be precise with property restrictions
 • Focus on creating a coherent knowledge model that answers domain questions
 • Ensure logical consistency throughout the ontology
-    """
+    """,
 )
 
 prompt_registry.register_instruction(
     PromptLanguage.ENGLISH,
     "competency_question_analysis",
     f"""
-{prompt_registry.tag('competency_question')}
+{prompt_registry.tag("competency_question")}
 Analyze the batch of competency questions to identify the implicit and explicit ontological requirements.
 
 For each batch of competency questions:
@@ -75,28 +75,28 @@ For each batch of competency questions:
 
 Extract only new concepts that are not already present in the ontology state.
 Focus on general concepts rather than specific instances.
-    """
+    """,
 )
 
 prompt_registry.register_instruction(
     PromptLanguage.ENGLISH,
     "owl_class_extraction",
     f"""
-{prompt_registry.tag('owl_class')}
+{prompt_registry.tag("owl_class")}
 For each identified class concept:
 
 1. Provide a name using CamelCase convention
 2. Write a clear, concise description that defines the class
 
 Focus on creating a taxonomic structure that accurately represents domain knowledge.
-    """
+    """,
 )
 
 prompt_registry.register_instruction(
     PromptLanguage.ENGLISH,
     "owl_object_property_extraction",
     f"""
-{prompt_registry.tag('owl_object_property')}
+{prompt_registry.tag("owl_object_property")}
 For each identified object property:
 
 1. Provide a name using camelCase convention
@@ -105,14 +105,14 @@ For each identified object property:
 4. Determine appropriate characteristics (functional, inverse functional, transitive, symmetric, asymmetric, reflexive, irreflexive)
 
 Object properties connect individuals to other individuals and form the relationships in your ontology.
-    """
+    """,
 )
 
 prompt_registry.register_instruction(
     PromptLanguage.ENGLISH,
     "owl_data_property_extraction",
     f"""
-{prompt_registry.tag('owl_data_property')}
+{prompt_registry.tag("owl_data_property")}
 For each identified data property:
 
 1. Provide a name using camelCase convention
@@ -121,14 +121,14 @@ For each identified data property:
 4. Determine appropriate characteristics (functional, inverse functional, transitive, symmetric, asymmetric, reflexive, irreflexive)
 
 Data properties connect individuals to literal values and provide the attributes in your ontology.
-    """
+    """,
 )
 
 prompt_registry.register_instruction(
     PromptLanguage.ENGLISH,
     "owl_subclass_relation_extraction",
     f"""
-{prompt_registry.tag('owl_subclass_relation')}
+{prompt_registry.tag("owl_subclass_relation")}
 For each identified subclass relationship:
 
 1. Specify the subclass (more specific concept)
@@ -139,7 +139,7 @@ Ensure that the subclass relationship follows logical principles:
 • The subclass should add specific constraints or properties to the superclass
 • The relationship should align with domain understanding and common sense
 • You can only use a superclass if it was previously defined in the ontology (as a owl:Class); if you need it, you can define a new class then use it as a superclass
-    """
+    """,
 )
 
 prompt_registry.register_instruction(
@@ -172,17 +172,17 @@ Remember:
     3. Provide complete specifications for each extracted concept
     4. Ensure logical consistency with the existing ontology
     5. Focus on general, abstract concepts rather than specific instances
-    """
+    """,
 )
 
 
-#==================================================#
-#----Ontology Fixing-------------------------------#
-#==================================================#
+# ==================================================#
+# ----Ontology Fixing-------------------------------#
+# ==================================================#
 prompt_registry.register_instruction(
     PromptLanguage.ENGLISH,
     "weaver",
-    f"""
+    """
 You are an experienced ontology engineer tasked with stitching together isolated clusters within an ontology. Your goal is to examine the current ontology, identify clusters of classes that are disconnected (i.e., isolated clusters formed by subclass relationships), and design a series of operations to ultimately yield one coherent, unified cluster representing the stitched ontology.
 
 It is essential that every operation you propose causes a reduction in the number of isolated clusters. To achieve this, follow these guidelines:
@@ -193,13 +193,13 @@ It is essential that every operation you propose causes a reduction in the numbe
 5. Maintain logical consistency throughout all operations. Every operation (merge, bridge, or prune) must use only existing classes and valid subclass relationships, ensuring that the final ontology is coherent and that the number of isolated clusters always decreases.
 
 Return your output as a structured set of operations with explicit details (including cluster indices and the subclass relations involved in each operation) such that, when applied, the ontology transitions toward a single, unified cluster.
-    """
+    """,
 )
 
 
-#==================================================#
-#----Triplet Extraction----------------------------#
-#==================================================#
+# ==================================================#
+# ----Triplet Extraction----------------------------#
+# ==================================================#
 # Tags
 prompt_registry.register_tag(PromptLanguage.ENGLISH, "triplet_extraction", "TRIPLET EXTRACTION")
 
@@ -208,18 +208,32 @@ prompt_registry.register_instruction(
     PromptLanguage.ENGLISH,
     "triplet_extraction",
     f"""
-{prompt_registry.tag('triplet_extraction')}
-You are an expert at extracting semantic triplets from text based on a predefined ontology schema.
-Given a passage of text and an ontology that defines valid entities (classes) and relationships, perform the following tasks:
+{prompt_registry.tag("triplet_extraction")}
+You are an expert in knowledge graph construction and semantic triplet extraction. Your task is to extract semantic triplets from text and format them as a consistent, ontology-compliant knowledge graph.
 
-1. Identify all relevant entities in the text that match the ontology’s defined classes.
-2. Determine the semantic relationships (predicates) that connect these entities according to the ontology.
-3. Assemble these into triplets of the form (subject, predicate, object) and assign each a confidence score between 0 and 1 that reflects how certain you are about each extraction.
-4. Ensure that no duplicate triplets are generated.
-5. If no valid triplets can be extracted, return None.
-6. Use CamelCase naming for entities (e.g., Person, ResearchPaper)
-7. Use camelCase naming for relationships (e.g., publishedIn)
+### Output Format
+- subject: Subject entity (PascalCase)
+- predicate: Relationship or action (camelCase) 
+- object: Object entity (PascalCase)
 
-Return the output as a list of structured triplets where each triplet includes a subject, predicate, object, and confidence score.
-    """
+### Entity and Relationship Rules
+1. Entity Consistency: If an entity exists in the current knowledge graph, ALWAYS use the exact same name
+2. Entity Naming: For new entities, choose concise, descriptive PascalCase names
+3. Predicate Naming: All predicates must be in camelCase and MUST exist in the provided ontology
+4. Entity Typing: EVERY entity requires a type declaration using the "isA" predicate
+5. Type Validity: Entity types MUST be defined in the ontology
+
+### Quality Standards
+1. Extract only factual relationships explicitly stated or directly inferable from the text
+2. Resolve coreferences (pronouns, repeated mentions) to maintain consistent entity references
+3. Prefer specificity over generality when appropriate
+4. For ambiguous cases, choose the interpretation that maintains graph consistency
+5. Never invent relationships not supported by the text or ontology
+
+### Triple Extraction Process
+1. First identify all entities in the text
+2. Determine the appropriate type for each entity based on the ontology
+3. Create "isA" triplets for all entities
+4. Extract all relationships between entities that conform to the ontology
+5. Verify all triplets are consistent with the existing knowledge graph""",
 )

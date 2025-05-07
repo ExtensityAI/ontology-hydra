@@ -256,6 +256,9 @@ class Triplet(LLMDataModel):
     def __hash__(self):
         return hash((hash(self.subject), hash(self.predicate), hash(self.object)))
 
+    def as_triplet_str(self) -> str:
+        return f"({self.subject}, {self.predicate}, {self.object})"
+
 
 class KGState(LLMDataModel):
     triplets: list[Triplet] | None = Field(description="List of triplets.")

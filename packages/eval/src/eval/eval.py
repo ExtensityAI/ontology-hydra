@@ -10,7 +10,7 @@ from eval.squad_v2.data import SquadDataset, SquadQAPair
 from eval.squad_v2.squad_v2 import SquadV2
 from ontopipe import ontopipe
 from ontopipe.cqs.utils import MODEL
-from ontopipe.kg2 import generate_kg as generate_kg2
+from ontopipe.kg import generate_kg
 from ontopipe.models import KG, Ontology
 from ontopipe.vis import visualize_kg, visualize_ontology
 
@@ -52,7 +52,7 @@ def _generate_kg(texts: list[str], domain: str, kg_path: Path, ontology: Ontolog
         # load cached KG
         return KG.model_validate_json(kg_path.read_text(encoding="utf-8"))
 
-    kg = generate_kg2(
+    kg = generate_kg(
         texts,
         domain,
         ontology=ontology,

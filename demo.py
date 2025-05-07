@@ -10,7 +10,7 @@ import networkx as nx
 from symai import Import, Symbol
 from symai.components import FileReader
 
-from ontopipe.kg2 import generate_kg
+from ontopipe.kg import generate_kg
 from ontopipe.models import Ontology
 from ontopipe.pipe import ontopipe
 from ontopipe.vis import visualize_kg, visualize_ontology
