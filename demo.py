@@ -246,7 +246,7 @@ def compute_ontology_and_kg(
     ontology_file: Optional[Path] = None,
     domain: Optional[str] = None,
     kg_name: str = "DefaultKG",
-    output_path: Union[str, Path] = "output",
+    output_path: Union[str, Path] = "artifacts",
     threshold: float = 0.7,
     batch_size: int = 1,
     chunk_size: int = 512,

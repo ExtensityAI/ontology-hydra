@@ -1,0 +1,2180 @@
+{
+  "name": "physics",
+  "triplets": [
+    {
+      "subject": "Table4_3",
+      "predicate": "hasComponent",
+      "object": "50x50GridPoints"
+    },
+    {
+      "subject": "100x100GridPoints",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "DeepNeuralNetworkWithDomainDecomposition",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "SteadyIncompressibleIsothermalFlow",
+      "predicate": "isA",
+      "object": "Application"
+    },
+    {
+      "subject": "Table4_4",
+      "predicate": "hasComponent",
+      "object": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_50x50GridPoints"
+    },
+    {
+      "subject": "FiniteDifferenceMethodology",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "StandardPhysicsInformedNeuralNetwork",
+      "predicate": "impactsResearchPrioritization",
+      "object": "100x100GridPoints"
+    },
+    {
+      "subject": "FDPINNWithSamplePoints",
+      "predicate": "appliesInDiscipline",
+      "object": "NavierStokesEquation"
+    },
+    {
+      "subject": "NeuralNetworkForLidDrivenCavity",
+      "predicate": "appliesInDiscipline",
+      "object": "LidDrivenCavityProblem"
+    },
+    {
+      "subject": "Table4_5",
+      "predicate": "hasComponent",
+      "object": "NineEquidistantHorizontalLines"
+    },
+    {
+      "subject": "LBFGSAlgorithm",
+      "predicate": "appliesInDiscipline",
+      "object": "NavierStokesEquation"
+    },
+    {
+      "subject": "HyperbolicTangentFunction",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "FluidStreamlinesInLidDrivenCavityRe1000",
+      "predicate": "documentsResultFor",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetwork",
+      "predicate": "appliesInDiscipline",
+      "object": "FluidMechanicsReview"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_50x50GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "MeanSquareErrorMSEv"
+    },
+    {
+      "subject": "VerticalVelocityComponent",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "LowVelocityNearBottomWall",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "MaxIteration2105",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "NonconformingFiniteElementMethodAppliedToDrivenCavityProblem",
+      "predicate": "appliesMethodology",
+      "object": "FiniteElementMethod"
+    },
+    {
+      "subject": "FourTypesOfGridPoints",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetwork",
+      "predicate": "appliesInDiscipline",
+      "object": "LidDrivenCavityFlow"
+    },
+    {
+      "subject": "VortexInLowerRightCorner",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "EfficientSchemeForSteadyIncompressibleNavierStokes",
+      "predicate": "appliesInDiscipline",
+      "object": "LidDrivenCavityProblem"
+    },
+    {
+      "subject": "Table4_1",
+      "predicate": "hasComponent",
+      "object": "CenterOfSecondaryVortexLowerRightCornerPresent"
+    },
+    {
+      "subject": "BruneauAndJouron",
+      "predicate": "impactsResearchPrioritization",
+      "object": "CenterOfSecondaryVortexLowerRightCornerPresent"
+    },
+    {
+      "subject": "FluidStreamlinesInLidDrivenCavityRe400",
+      "predicate": "documentsResultFor",
+      "object": "PresentFiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "ReferenceSolutionForLidDrivenCavityRe1000",
+      "predicate": "documentsResultFor",
+      "object": "SquareLidDrivenCavityDomain01x01"
+    },
+    {
+      "subject": "ReferenceSolutionForLidDrivenCavityRe1000",
+      "predicate": "pertainsToExperimentalResult",
+      "object": "GhiaEtAlBenchmark"
+    },
+    {
+      "subject": "LearningFromScratch",
+      "predicate": "appliesInDiscipline",
+      "object": "NavierStokesEquation"
+    },
+    {
+      "subject": "SecondaryVortexInLowerLeftCorner",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "ClassicalFiniteDifferenceMethods",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "150x150GridPoints",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "OverpredictionNearLowerCorners",
+      "predicate": "isA",
+      "object": "Constraint"
+    },
+    {
+      "subject": "Table4_7",
+      "predicate": "hasComponent",
+      "object": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_25x25GridPoints"
+    },
+    {
+      "subject": "ErrorInUpperRightCorner",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "ErrorInLowerRightCorner",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "ErrorInLowerRightCorner",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "LidDrivenCavityProblem",
+      "predicate": "isA",
+      "object": "Application"
+    },
+    {
+      "subject": "DomainDecompositionMethod",
+      "predicate": "appliesInDiscipline",
+      "object": "LidDrivenCavityProblem"
+    },
+    {
+      "subject": "LidDrivenCavityFlow",
+      "predicate": "appliesMethodology",
+      "object": "FiniteVolumeMethod"
+    },
+    {
+      "subject": "Turbulence",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "TwelfthGenIntelCoreI512500",
+      "predicate": "isA",
+      "object": "PhysicalEntity"
+    },
+    {
+      "subject": "SmallOscillationGeneratedByFiniteDifferenceDiscretizationForFineGrids",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "Figure11",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "NeuralNetworkForLidDrivenCavity",
+      "predicate": "hasMethodology",
+      "object": "FiniteDifferenceMethod"
+    },
+    {
+      "subject": "Simulation",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetworkWithDomainDecompositionForIncompressibleNavierStokes",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "ReferenceSolution",
+      "predicate": "impactsResearchPrioritization",
+      "object": "CenterOfSecondaryVortexLowerRightCornerPresent"
+    },
+    {
+      "subject": "DeepNeuralNetworkWithDomainDecomposition",
+      "predicate": "appliesInDiscipline",
+      "object": "PartialDifferentialEquationSolution"
+    },
+    {
+      "subject": "HighOrderUpwindCompactFiniteDifferenceLatticeBoltzmannMethodForViscousIncompressibleFlows",
+      "predicate": "appliesMethodology",
+      "object": "LatticeBoltzmannMethod"
+    },
+    {
+      "subject": "ReferenceSolutionForLidDrivenCavityRe1000",
+      "predicate": "hasComponent",
+      "object": "HorizontalVelocityComponent"
+    },
+    {
+      "subject": "MeanSquareErrorMSEu",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "CollocationPointNumber",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "EfficientSchemeForSteadyIncompressibleNavierStokes",
+      "predicate": "appliesMethodology",
+      "object": "FiniteDifferenceMethod"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetworkForReynoldsAveragedNavierStokes",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "ADPhysicsInformedNeuralNetwork",
+      "predicate": "appliesMethodology",
+      "object": "DomainDecompositionMethod"
+    },
+    {
+      "subject": "ADPhysicsInformedNeuralNetwork",
+      "predicate": "appliesInDiscipline",
+      "object": "LidDrivenCavityProblem"
+    },
+    {
+      "subject": "Table4_6",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "ANewParadigmForSolvingNavierStokesEquationsStreamfunctionVelocityFormulation",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "impactsResearchPrioritization",
+      "object": "25x25GridPoints"
+    },
+    {
+      "subject": "DeepNeuralNetworkWithDomainDecomposition",
+      "predicate": "appliesMethodology",
+      "object": "DomainDecompositionMethod"
+    },
+    {
+      "subject": "FiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "appliesMethodology",
+      "object": "DomainDecompositionMethod"
+    },
+    {
+      "subject": "ReynoldsAveragedNavierStokesEquation",
+      "predicate": "isA",
+      "object": "PhysicalTheory"
+    },
+    {
+      "subject": "NSFNets",
+      "predicate": "appliesMethodology",
+      "object": "PhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "HighReSolutionsForIncompressibleFlowUsingNavierStokesMultigrid",
+      "predicate": "documentsResultFor",
+      "object": "NavierStokesEquation"
+    },
+    {
+      "subject": "DataFreeMethod",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "HighStabilityNearBottomWall",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "Table4_7",
+      "predicate": "hasComponent",
+      "object": "MeanSquareErrorMSEv"
+    },
+    {
+      "subject": "Table4_4",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "FluidStreamlinesInLidDrivenCavityRe400",
+      "predicate": "hasComponent",
+      "object": "25x25GridPoints"
+    },
+    {
+      "subject": "Table4_6",
+      "predicate": "hasComponent",
+      "object": "StandardPhysicsInformedNeuralNetwork_100x100GridPoints"
+    },
+    {
+      "subject": "StandardPhysicsInformedNeuralNetwork",
+      "predicate": "impactsResearchPrioritization",
+      "object": "NineEquidistantHorizontalLines"
+    },
+    {
+      "subject": "NineEquidistantHorizontalLines",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "GridPointNumber",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "CollocationPointNumber",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "50x50GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "FiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "appliesMethodology",
+      "object": "ClassicalNumericalMethod"
+    },
+    {
+      "subject": "500x500GridPoints",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "100x100GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "PresentFiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "50x50GridPoints",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "Table4_5",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "LearningFromScratch",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "SolutionOfHighReynoldsIncompressibleFlowWithStabilizedFiniteElementAndAdaptiveAnisotropicMeshing",
+      "predicate": "appliesMethodology",
+      "object": "FiniteElementMethod"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetwork",
+      "predicate": "appliesInDiscipline",
+      "object": "ReynoldsAveragedNavierStokesEquation"
+    },
+    {
+      "subject": "LocalMinima",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "ChaoticMotion",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "LocalMinima",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "FiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "appliesInDiscipline",
+      "object": "ThermalFlow"
+    },
+    {
+      "subject": "CanPhysicsInformedNeuralNetwork",
+      "predicate": "appliesMethodology",
+      "object": "NumericalDifferentiation"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "impactsResearchPrioritization",
+      "object": "SecondaryVortexInLowerLeftCorner"
+    },
+    {
+      "subject": "HighOrderUpwindCompactFiniteDifferenceLatticeBoltzmannMethodForViscousIncompressibleFlows",
+      "predicate": "appliesMethodology",
+      "object": "FiniteDifferenceMethod"
+    },
+    {
+      "subject": "Table4_4",
+      "predicate": "hasComponent",
+      "object": "StandardPhysicsInformedNeuralNetwork_100x100GridPoints"
+    },
+    {
+      "subject": "LeastSquaresFiniteDifferenceMethod",
+      "predicate": "appliesInDiscipline",
+      "object": "SteadyIncompressibleFlow"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetwork",
+      "predicate": "appliesMethodology",
+      "object": "DeepLearningMethod"
+    },
+    {
+      "subject": "ReferenceSolutionForLidDrivenCavityRe1000",
+      "predicate": "hasComponent",
+      "object": "VerticalVelocityComponent"
+    },
+    {
+      "subject": "Table4_3",
+      "predicate": "hasComponent",
+      "object": "PresentFiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "StandardPhysicsInformedNeuralNetwork_100x100GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "MeanSquareErrorMSEv"
+    },
+    {
+      "subject": "FD_PINN_DDMTechnique",
+      "predicate": "appliesMethodology",
+      "object": "DomainDecompositionMethod"
+    },
+    {
+      "subject": "StandardPhysicsInformedNeuralNetwork_100x100GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "CenterOfSecondaryVortexLowerLeftCornerStandard"
+    },
+    {
+      "subject": "SORMethodForPressurePoisson",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "Table4_7",
+      "predicate": "hasComponent",
+      "object": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_100x100GridPoints"
+    },
+    {
+      "subject": "FluidStreamlinesInLidDrivenCavityRe1000",
+      "predicate": "hasComponent",
+      "object": "150x150GridPoints"
+    },
+    {
+      "subject": "ReferenceSolutionForLidDrivenCavityRe1000",
+      "predicate": "isA",
+      "object": "ExperimentalResult"
+    },
+    {
+      "subject": "Hompinns",
+      "predicate": "appliesInDiscipline",
+      "object": "NavierStokesEquation"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "impactsResearchPrioritization",
+      "object": "MeanSquareErrorMSEv"
+    },
+    {
+      "subject": "NonlinearFlowNearUpperWall",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "ReferenceSolutionForLidDrivenCavityRe1000",
+      "predicate": "appliesMethodology",
+      "object": "SORMethodForPressurePoisson"
+    },
+    {
+      "subject": "BenchmarkSpectralResultsOnLidDrivenCavityFlow",
+      "predicate": "documentsResultFor",
+      "object": "LidDrivenCavityFlow"
+    },
+    {
+      "subject": "ParallelPhysicsInformedNeuralNetwork",
+      "predicate": "appliesMethodology",
+      "object": "DomainDecompositionMethod"
+    },
+    {
+      "subject": "LBFGSAlgorithm",
+      "predicate": "appliesInDiscipline",
+      "object": "PartialDifferentialEquationSolution"
+    },
+    {
+      "subject": "Table4_3",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "FiniteDifferenceMethod",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetworkWithDomainDecompositionForIncompressibleNavierStokes",
+      "predicate": "appliesMethodology",
+      "object": "DeepLearningMethod"
+    },
+    {
+      "subject": "DelvingDeepIntoRectifiers",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "BruneauAndJouron",
+      "predicate": "isA",
+      "object": "ExperimentalResult"
+    },
+    {
+      "subject": "LidDrivenCavityFlow",
+      "predicate": "appliesMethodology",
+      "object": "FiniteElementMethod"
+    },
+    {
+      "subject": "StandardPhysicsInformedNeuralNetwork_100x100GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "MeanSquareErrorMSEu"
+    },
+    {
+      "subject": "NumericalSolutionsOf2DSteadyIncompressibleDrivenCavityFlowAtHighReynoldsNumbers",
+      "predicate": "isA",
+      "object": "ExperimentalResult"
+    },
+    {
+      "subject": "TianAndYu",
+      "predicate": "isA",
+      "object": "ExperimentalResult"
+    },
+    {
+      "subject": "FluidStreamlinesInLidDrivenCavityRe1000",
+      "predicate": "hasComponent",
+      "object": "25x25GridPoints"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_25x25GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "HighStabilityNearBottomWall"
+    },
+    {
+      "subject": "LidDrivenCavityFlow",
+      "predicate": "appliesMethodology",
+      "object": "Simulation"
+    },
+    {
+      "subject": "LeastSquaresFiniteDifferenceMethod",
+      "predicate": "appliesInDiscipline",
+      "object": "LidDrivenCavityProblem"
+    },
+    {
+      "subject": "CenterOfSecondaryVortexLowerRightCornerStandard",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "LidDrivenCavityFlowOfViscoelasticLiquids",
+      "predicate": "appliesInDiscipline",
+      "object": "LidDrivenCavityFlow"
+    },
+    {
+      "subject": "CenterOfSecondaryVortexLowerRightCornerStandard",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "NumericalDifferentiation",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "EfficientSchemeForSteadyIncompressibleNavierStokes",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "FD_PINN_DDMTechnique",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "TwelfthGenIntelCoreI512500",
+      "predicate": "appliesInDiscipline",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "DeepLearningMethod",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "CenterOfSecondaryVortexLowerLeftCornerStandard",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "Table4_1",
+      "predicate": "hasComponent",
+      "object": "CenterOfSecondaryVortexLowerLeftCornerPresent"
+    },
+    {
+      "subject": "NumericalSolutionsOf2DSteadyIncompressibleDrivenCavityFlowAtHighReynoldsNumbers",
+      "predicate": "documentsResultFor",
+      "object": "LidDrivenCavityFlow"
+    },
+    {
+      "subject": "BruneauAndJouron",
+      "predicate": "impactsResearchPrioritization",
+      "object": "CenterOfSecondaryVortexLowerLeftCornerPresent"
+    },
+    {
+      "subject": "TianAndYu",
+      "predicate": "impactsResearchPrioritization",
+      "object": "CenterOfSecondaryVortexLowerLeftCornerPresent"
+    },
+    {
+      "subject": "Overfitting",
+      "predicate": "hasConstraintInRecommendation",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_100x100GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "CenterOfSecondaryVortexLowerRightCornerPresent"
+    },
+    {
+      "subject": "NovelFullyImplicitFiniteVolumeMethodAppliedToLidDrivenCavityProblemPartIHighReynoldsNumberFlowCalculations",
+      "predicate": "appliesInDiscipline",
+      "object": "LidDrivenCavityProblem"
+    },
+    {
+      "subject": "LidDrivenCavityFlow",
+      "predicate": "isA",
+      "object": "Application"
+    },
+    {
+      "subject": "HeatTransferProblem",
+      "predicate": "isA",
+      "object": "Application"
+    },
+    {
+      "subject": "GuptaAndKalita",
+      "predicate": "impactsResearchPrioritization",
+      "object": "CenterOfSecondaryVortexLowerRightCornerPresent"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetwork",
+      "predicate": "appliesInDiscipline",
+      "object": "NavierStokesEquation"
+    },
+    {
+      "subject": "HorizontalVelocityComponent",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "LidDrivenCavityFlowOfViscoelasticLiquids",
+      "predicate": "isA",
+      "object": "Application"
+    },
+    {
+      "subject": "NonOrthogonalMultipleRelaxationTimeLatticeBoltzmannMethodForVorticityStreamfunctionFormulation",
+      "predicate": "appliesMethodology",
+      "object": "LatticeBoltzmannMethod"
+    },
+    {
+      "subject": "SpectralMethod",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "ReferenceSolution",
+      "predicate": "isA",
+      "object": "ExperimentalResult"
+    },
+    {
+      "subject": "DomainDecompositionMethod",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "LiEtAl",
+      "predicate": "impactsResearchPrioritization",
+      "object": "CenterOfSecondaryVortexLowerRightCornerPresent"
+    },
+    {
+      "subject": "ANewParadigmForSolvingNavierStokesEquationsStreamfunctionVelocityFormulation",
+      "predicate": "appliesInDiscipline",
+      "object": "NavierStokesEquation"
+    },
+    {
+      "subject": "CenterOfSecondaryVortexLowerLeftCornerStandard",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "ReynoldsNumber400",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "LowerRightCornerSolution",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "NineEquidistantVerticalLines",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "EulerEquation",
+      "predicate": "isA",
+      "object": "PhysicalTheory"
+    },
+    {
+      "subject": "LowerRightCornerSolution",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "ReferenceSolution",
+      "predicate": "impactsResearchPrioritization",
+      "object": "CenterOfSecondaryVortexLowerLeftCornerPresent"
+    },
+    {
+      "subject": "Figure7",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "FluidStreamlinesInLidDrivenCavityRe400",
+      "predicate": "hasComponent",
+      "object": "VortexInLowerRightCorner"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_50x50GridPoints",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "FiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "FDPINNWithSamplePoints",
+      "predicate": "appliesMethodology",
+      "object": "DomainDecompositionMethod"
+    },
+    {
+      "subject": "LidDrivenCavityFlowOfViscoelasticLiquids",
+      "predicate": "appliesMethodology",
+      "object": "Simulation"
+    },
+    {
+      "subject": "NumericalSimulationInFluidDynamics",
+      "predicate": "appliesInDiscipline",
+      "object": "LidDrivenCavityFlow"
+    },
+    {
+      "subject": "LidDrivenCavityFlow",
+      "predicate": "appliesMethodology",
+      "object": "DeepLearningMethod"
+    },
+    {
+      "subject": "120x120GridPoints",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "AdaptiveMeshFiniteVolumeCalculationOf2DLidCavityCornerVortices",
+      "predicate": "appliesMethodology",
+      "object": "FiniteVolumeMethod"
+    },
+    {
+      "subject": "TransferLearning",
+      "predicate": "appliesInDiscipline",
+      "object": "NavierStokesEquation"
+    },
+    {
+      "subject": "ErrorInUpperRightCorner",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "ExtendedPhysicsInformedNeuralNetwork",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "AdaptiveMeshFiniteVolumeCalculationOf2DLidCavityCornerVortices",
+      "predicate": "appliesInDiscipline",
+      "object": "LidDrivenCavityProblem"
+    },
+    {
+      "subject": "50x50GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "PresentFiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "HighReSolutionsForIncompressibleFlowUsingNavierStokesMultigrid",
+      "predicate": "appliesMethodology",
+      "object": "MultigridMethod"
+    },
+    {
+      "subject": "LidDrivenCavityFlow",
+      "predicate": "appliesMethodology",
+      "object": "FiniteDifferenceMethod"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_25x25GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "CenterOfSecondaryVortexLowerRightCornerPresent"
+    },
+    {
+      "subject": "FDPINNWithSamplePoints",
+      "predicate": "appliesMethodology",
+      "object": "ClassicalNumericalMethod"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetworkForReynoldsAveragedNavierStokes",
+      "predicate": "appliesMethodology",
+      "object": "PhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "ParallelLatticeBoltzmannMethodWithMultiRelaxationTimeScheme",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "Table4_2",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "impactsResearchPrioritization",
+      "object": "NineEquidistantVerticalLines"
+    },
+    {
+      "subject": "UpperLeftCornerSolution",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "StabilizedFiniteElementMethodForIncompressibleFlowsWithHighReynoldsNumber",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "UpperLeftCornerSolution",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "StabilizedFiniteElementMethodForIncompressibleFlowsWithHighReynoldsNumber",
+      "predicate": "appliesMethodology",
+      "object": "FiniteElementMethod"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "appliesMethodology",
+      "object": "DomainDecompositionMethod"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetwork",
+      "predicate": "appliesInDiscipline",
+      "object": "EulerEquation"
+    },
+    {
+      "subject": "DeepLearningMethod",
+      "predicate": "appliesMethodology",
+      "object": "DataDrivenMethod"
+    },
+    {
+      "subject": "LearningFromScratch",
+      "predicate": "appliesInDiscipline",
+      "object": "LidDrivenCavityProblem"
+    },
+    {
+      "subject": "LowerLeftCornerSolution",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_50x50GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "MeanSquareErrorMSEu"
+    },
+    {
+      "subject": "DataDrivenMethod",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "LowerLeftCornerSolution",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "StandardPhysicsInformedNeuralNetwork",
+      "predicate": "hasMethodology",
+      "object": "FiniteDifferenceMethod"
+    },
+    {
+      "subject": "NumericalSimulationInFluidDynamics",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "FiniteDifferenceMethod",
+      "predicate": "appliesInDiscipline",
+      "object": "NavierStokesEquation"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_100x100GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "MeanSquareErrorMSEv"
+    },
+    {
+      "subject": "Optimization",
+      "predicate": "isA",
+      "object": "Application"
+    },
+    {
+      "subject": "CanPhysicsInformedNeuralNetwork",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "ParallelPhysicsInformedNeuralNetwork",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "50x50SubdomainGridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "PresentFiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "ReferenceSolutionForLidDrivenCavityRe1000",
+      "predicate": "documentsResultFor",
+      "object": "LidDrivenCavityProblem"
+    },
+    {
+      "subject": "ClassicalNumericalMethod",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "impactsResearchPrioritization",
+      "object": "100x100GridPoints"
+    },
+    {
+      "subject": "NonconformingFiniteElementMethodAppliedToDrivenCavityProblem",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "25x25GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_50x50GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "CenterOfSecondaryVortexLowerLeftCornerPresent"
+    },
+    {
+      "subject": "EfficientSchemeForSteadyIncompressibleNavierStokes",
+      "predicate": "appliesInDiscipline",
+      "object": "NavierStokesEquation"
+    },
+    {
+      "subject": "NumericalSolutionsOf2DSteadyIncompressibleDrivenCavityFlowAtHighReynoldsNumbers",
+      "predicate": "appliesMethodology",
+      "object": "FiniteDifferenceMethod"
+    },
+    {
+      "subject": "FDPINNWithSamplePoints",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_100x100GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "MeanSquareErrorMSEu"
+    },
+    {
+      "subject": "StabilizedFiniteElementMethodForIncompressibleFlowsWithHighReynoldsNumber",
+      "predicate": "appliesInDiscipline",
+      "object": "HighReynoldsNumberFlow"
+    },
+    {
+      "subject": "DeepNeuralNetworkWithDomainDecomposition",
+      "predicate": "appliesMethodology",
+      "object": "DeepLearningMethod"
+    },
+    {
+      "subject": "LidDrivenCavityFlow",
+      "predicate": "appliesMethodology",
+      "object": "ParallelLatticeBoltzmannMethodWithMultiRelaxationTimeScheme"
+    },
+    {
+      "subject": "NumberOfNeuronsPerLayer",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "MATLABR2023a",
+      "predicate": "isA",
+      "object": "Technology"
+    },
+    {
+      "subject": "FiniteElementMethod",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "GuptaAndKalita",
+      "predicate": "isA",
+      "object": "ExperimentalResult"
+    },
+    {
+      "subject": "CenterOfSecondaryVortexLowerLeftCornerPresent",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "ExtendedPhysicsInformedNeuralNetwork",
+      "predicate": "appliesInDiscipline",
+      "object": "PartialDifferentialEquationSolution"
+    },
+    {
+      "subject": "LeastSquaresFiniteDifferenceMethod",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "CenterOfSecondaryVortexLowerLeftCornerPresent",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "DomainDecompositionMethod",
+      "predicate": "appliesInDiscipline",
+      "object": "NavierStokesEquation"
+    },
+    {
+      "subject": "FD_PINN_DDMTechnique",
+      "predicate": "appliesInDiscipline",
+      "object": "LidDrivenCavityProblem"
+    },
+    {
+      "subject": "StandardPhysicsInformedNeuralNetwork",
+      "predicate": "impactsResearchPrioritization",
+      "object": "SecondaryVortexInLowerLeftCorner"
+    },
+    {
+      "subject": "FiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "appliesMethodology",
+      "object": "FiniteDifferenceMethod"
+    },
+    {
+      "subject": "StreamFunctionPressureFormulation",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_100x100GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "CenterOfSecondaryVortexLowerLeftCornerPresent"
+    },
+    {
+      "subject": "NovelFullyImplicitFiniteVolumeMethodAppliedToLidDrivenCavityProblemPartIHighReynoldsNumberFlowCalculations",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "ExtendedPhysicsInformedNeuralNetwork",
+      "predicate": "appliesMethodology",
+      "object": "DomainDecompositionMethod"
+    },
+    {
+      "subject": "GuptaAndKalita",
+      "predicate": "impactsResearchPrioritization",
+      "object": "CenterOfSecondaryVortexLowerLeftCornerPresent"
+    },
+    {
+      "subject": "LocallyAdaptiveActivationFunctionsWithSlopeRecovery",
+      "predicate": "impactsResearchPrioritization",
+      "object": "PhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "MultigridMethod",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "StandardPhysicsInformedNeuralNetwork_100x100GridPoints",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_25x25GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "MeanSquareErrorMSEv"
+    },
+    {
+      "subject": "StaggeredGrid",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "ErrorInUpperLeftCorner",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "ADPhysicsInformedNeuralNetwork",
+      "predicate": "appliesInDiscipline",
+      "object": "NavierStokesEquation"
+    },
+    {
+      "subject": "ErrorInUpperLeftCorner",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetwork",
+      "predicate": "appliesInDiscipline",
+      "object": "HighReynoldsNumberFlow"
+    },
+    {
+      "subject": "MultiphyicsFlowProblem",
+      "predicate": "isA",
+      "object": "Application"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_25x25GridPoints",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "FluidStreamlinesInLidDrivenCavityRe1000",
+      "predicate": "hasComponent",
+      "object": "300x300GridPoints"
+    },
+    {
+      "subject": "FluidMechanicsReview",
+      "predicate": "isA",
+      "object": "Application"
+    },
+    {
+      "subject": "ParallelPhysicsInformedNeuralNetwork",
+      "predicate": "appliesInDiscipline",
+      "object": "PartialDifferentialEquationSolution"
+    },
+    {
+      "subject": "ReferenceSolutionForLidDrivenCavityRe1000",
+      "predicate": "appliesMethodology",
+      "object": "500x500GridPoints"
+    },
+    {
+      "subject": "HighReynoldsNumberFlow",
+      "predicate": "isA",
+      "object": "Application"
+    },
+    {
+      "subject": "FluidStreamlinesInLidDrivenCavityRe1000",
+      "predicate": "hasComponent",
+      "object": "100x100GridPoints"
+    },
+    {
+      "subject": "Table4_7",
+      "predicate": "hasComponent",
+      "object": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_50x50GridPoints"
+    },
+    {
+      "subject": "VelocityPressureFormulation",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "SteadyIncompressibleFlow",
+      "predicate": "isA",
+      "object": "Application"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_25x25GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "MeanSquareErrorMSEu"
+    },
+    {
+      "subject": "FiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "appliesInDiscipline",
+      "object": "LidDrivenCavityProblem"
+    },
+    {
+      "subject": "FD_PINN_DDMTechnique",
+      "predicate": "appliesMethodology",
+      "object": "FiniteDifferenceMethod"
+    },
+    {
+      "subject": "Table4_6",
+      "predicate": "hasComponent",
+      "object": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_25x25GridPoints"
+    },
+    {
+      "subject": "SecondaryVortex",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "Windows10",
+      "predicate": "appliesInDiscipline",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "300x300GridPoints",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "NSFNets",
+      "predicate": "appliesInDiscipline",
+      "object": "NavierStokesEquation"
+    },
+    {
+      "subject": "ReferenceSolutionForLidDrivenCavityRe1000",
+      "predicate": "documentsResultFor",
+      "object": "LidDrivenCavityFlow"
+    },
+    {
+      "subject": "StableFlowNearLowerCorners",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "NovelFullyImplicitFiniteVolumeMethodAppliedToLidDrivenCavityProblemPartIHighReynoldsNumberFlowCalculations",
+      "predicate": "appliesInDiscipline",
+      "object": "HighReynoldsNumberFlow"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetworkForHighSpeedFlows",
+      "predicate": "appliesInDiscipline",
+      "object": "HighReynoldsNumberFlow"
+    },
+    {
+      "subject": "StableFlowNearLowerCorners",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "Table4_3",
+      "predicate": "hasComponent",
+      "object": "25x25GridPoints"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_25x25GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "CenterOfSecondaryVortexLowerLeftCornerPresent"
+    },
+    {
+      "subject": "Table4_4",
+      "predicate": "hasComponent",
+      "object": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_25x25GridPoints"
+    },
+    {
+      "subject": "SolutionOfHighReynoldsIncompressibleFlowWithStabilizedFiniteElementAndAdaptiveAnisotropicMeshing",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "LBFGSAlgorithm",
+      "predicate": "appliesInDiscipline",
+      "object": "Optimization"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "impactsResearchPrioritization",
+      "object": "NineEquidistantHorizontalLines"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "impactsResearchPrioritization",
+      "object": "MeanSquareErrorMSEu"
+    },
+    {
+      "subject": "SecondaryVortexInLowerRightCorner",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "HighReSolutionsForIncompressibleFlowUsingNavierStokesMultigrid",
+      "predicate": "isA",
+      "object": "ExperimentalResult"
+    },
+    {
+      "subject": "SecondaryVortexInLowerRightCorner",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetwork",
+      "predicate": "appliesMethodology",
+      "object": "AutomaticDifferentiation"
+    },
+    {
+      "subject": "LBFGSAlgorithm",
+      "predicate": "appliesInDiscipline",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "FiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "appliesInDiscipline",
+      "object": "SteadyIncompressibleIsothermalFlow"
+    },
+    {
+      "subject": "SecondaryVortexInLowerLeftCorner",
+      "predicate": "impactsResearchPrioritization",
+      "object": "ClassicalNumericalMethod"
+    },
+    {
+      "subject": "Figure10",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "ErrorInLowerLeftCorner",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetworkForReynoldsAveragedNavierStokes",
+      "predicate": "appliesInDiscipline",
+      "object": "ReynoldsAveragedNavierStokesEquation"
+    },
+    {
+      "subject": "Table4_2",
+      "predicate": "hasComponent",
+      "object": "NineEquidistantVerticalLines"
+    },
+    {
+      "subject": "ReferenceSolutionForLidDrivenCavityRe1000",
+      "predicate": "hasComponent",
+      "object": "SecondaryVortex"
+    },
+    {
+      "subject": "Table4_6",
+      "predicate": "hasComponent",
+      "object": "MeanSquareErrorMSEv"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "impactsResearchPrioritization",
+      "object": "VortexInLowerRightCorner"
+    },
+    {
+      "subject": "ThermalFlow",
+      "predicate": "isA",
+      "object": "Application"
+    },
+    {
+      "subject": "FiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "hasMethodology",
+      "object": "FiniteDifferenceMethod"
+    },
+    {
+      "subject": "ErrorIncreasesForFDPINNsWithFinerGridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "ErrorIncreasesForFDPINNsWithFinerGridPoints",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "ActivationFunctionInNeuralNetwork",
+      "predicate": "appliesMethodology",
+      "object": "DeepLearningMethod"
+    },
+    {
+      "subject": "StreamFunctionPressureFormulation",
+      "predicate": "appliesInDiscipline",
+      "object": "NavierStokesEquation"
+    },
+    {
+      "subject": "BotellaAndPeyret",
+      "predicate": "impactsResearchPrioritization",
+      "object": "CenterOfSecondaryVortexLowerRightCornerPresent"
+    },
+    {
+      "subject": "Hompinns",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "LocallyAdaptiveActivationFunctionsWithSlopeRecovery",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "BenchmarkSpectralResultsOnLidDrivenCavityFlow",
+      "predicate": "appliesMethodology",
+      "object": "SpectralMethod"
+    },
+    {
+      "subject": "SolutionOfHighReynoldsIncompressibleFlowWithStabilizedFiniteElementAndAdaptiveAnisotropicMeshing",
+      "predicate": "appliesInDiscipline",
+      "object": "HighReynoldsNumberFlow"
+    },
+    {
+      "subject": "FDPINNWithSamplePoints",
+      "predicate": "appliesInDiscipline",
+      "object": "LidDrivenCavityProblem"
+    },
+    {
+      "subject": "ErrorInLowerLeftCorner",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "FinerGridPoints",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetwork",
+      "predicate": "appliesInDiscipline",
+      "object": "MultiphyicsFlowProblem"
+    },
+    {
+      "subject": "FDPINNWithSamplePoints",
+      "predicate": "appliesMethodology",
+      "object": "FiniteDifferenceMethod"
+    },
+    {
+      "subject": "Table4_6",
+      "predicate": "hasComponent",
+      "object": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_100x100GridPoints"
+    },
+    {
+      "subject": "Table4_5",
+      "predicate": "hasComponent",
+      "object": "MeanSquareErrorMSEv"
+    },
+    {
+      "subject": "NeuralNetworkModel",
+      "predicate": "appliesMethodology",
+      "object": "ClassicalNumericalMethod"
+    },
+    {
+      "subject": "GhiaEtAl",
+      "predicate": "impactsResearchPrioritization",
+      "object": "CenterOfSecondaryVortexLowerRightCornerPresent"
+    },
+    {
+      "subject": "NeuralNetworkArchitecture",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "Table4_7",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "FluidStreamlinesInLidDrivenCavityRe1000",
+      "predicate": "hasComponent",
+      "object": "50x50GridPoints"
+    },
+    {
+      "subject": "NeuralNetworkArchitecture",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetwork",
+      "predicate": "appliesMethodology",
+      "object": "DataFreeMethod"
+    },
+    {
+      "subject": "Table4_4",
+      "predicate": "hasComponent",
+      "object": "MeanSquareErrorMSEu"
+    },
+    {
+      "subject": "Table4_3",
+      "predicate": "hasComponent",
+      "object": "MeanSquareErrorMSEu"
+    },
+    {
+      "subject": "100x100GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "ErrorIncreasesForFDPINNsWithFinerGridPoints",
+      "predicate": "hasConstraintInRecommendation",
+      "object": "Overfitting"
+    },
+    {
+      "subject": "FiniteVolumeMethod",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetworkWithDomainDecompositionForIncompressibleNavierStokes",
+      "predicate": "appliesInDiscipline",
+      "object": "NavierStokesEquation"
+    },
+    {
+      "subject": "OverpredictingBehaviorOfNeuralNetworks",
+      "predicate": "hasConstraintInRecommendation",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "Table4_4",
+      "predicate": "hasComponent",
+      "object": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_100x100GridPoints"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_100x100GridPoints",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "VelocityPressureFormulation",
+      "predicate": "appliesInDiscipline",
+      "object": "NavierStokesEquation"
+    },
+    {
+      "subject": "ComplexFlowPattern",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "HighOrderUpwindCompactFiniteDifferenceLatticeBoltzmannMethodForViscousIncompressibleFlows",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetwork",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "Table4_1",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetwork",
+      "predicate": "appliesInDiscipline",
+      "object": "MultiscaleFlowProblem"
+    },
+    {
+      "subject": "Table4_7",
+      "predicate": "hasComponent",
+      "object": "StandardPhysicsInformedNeuralNetwork_100x100GridPoints"
+    },
+    {
+      "subject": "FluidStreamlinesInLidDrivenCavityRe400",
+      "predicate": "hasComponent",
+      "object": "ReynoldsNumber400"
+    },
+    {
+      "subject": "ReferenceSolutionForLidDrivenCavityRe1000",
+      "predicate": "appliesMethodology",
+      "object": "FiniteDifferenceMethod"
+    },
+    {
+      "subject": "FluidStreamlinesInLidDrivenCavityRe1000",
+      "predicate": "hasComponent",
+      "object": "120x120GridPoints"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetwork",
+      "predicate": "appliesInDiscipline",
+      "object": "HeatTransferProblem"
+    },
+    {
+      "subject": "OverpredictionNearLowerCorners",
+      "predicate": "hasConstraintInRecommendation",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "UpperRightCornerSolution",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "impactsResearchPrioritization",
+      "object": "VortexInLowerLeftCorner"
+    },
+    {
+      "subject": "UpperRightCornerSolution",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "OptimalityTolerance10E_8",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "25x25GridPoints",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "TianAndYu",
+      "predicate": "impactsResearchPrioritization",
+      "object": "CenterOfSecondaryVortexLowerRightCornerPresent"
+    },
+    {
+      "subject": "FluidStreamlinesInLidDrivenCavityRe400",
+      "predicate": "isA",
+      "object": "ExperimentalResult"
+    },
+    {
+      "subject": "Windows10",
+      "predicate": "isA",
+      "object": "Technology"
+    },
+    {
+      "subject": "LocallyAdaptiveActivationFunctionsWithSlopeRecovery",
+      "predicate": "impactsResearchPrioritization",
+      "object": "DeepLearningMethod"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetworkForHighSpeedFlows",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "SecondaryVortexInLowerLeftCorner",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "FluidStreamlinesInLidDrivenCavityRe400",
+      "predicate": "hasComponent",
+      "object": "VortexInLowerLeftCorner"
+    },
+    {
+      "subject": "ErrorInVelocityMagnitudeStandardFDPINN",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "appliesInDiscipline",
+      "object": "LidDrivenCavityProblem"
+    },
+    {
+      "subject": "ReynoldsNumber",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "GhiaEtAlBenchmark",
+      "predicate": "isA",
+      "object": "ExperimentalResult"
+    },
+    {
+      "subject": "TransferLearning",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "DeepLearningMethod",
+      "predicate": "appliesMethodology",
+      "object": "DataFreeMethod"
+    },
+    {
+      "subject": "Figure9",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "HighOrderUpwindCompactFiniteDifferenceLatticeBoltzmannMethodForViscousIncompressibleFlows",
+      "predicate": "appliesInDiscipline",
+      "object": "HighReynoldsNumberFlow"
+    },
+    {
+      "subject": "ReferenceSolutionForLidDrivenCavityRe1000",
+      "predicate": "documentsResultFor",
+      "object": "NavierStokesEquation"
+    },
+    {
+      "subject": "LatticeBoltzmannMethod",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "ExtendedPhysicsInformedNeuralNetwork",
+      "predicate": "appliesMethodology",
+      "object": "DeepLearningMethod"
+    },
+    {
+      "subject": "ReferenceSolution",
+      "predicate": "hasComponent",
+      "object": "MeanSquareErrorMSEv"
+    },
+    {
+      "subject": "LiEtAl",
+      "predicate": "isA",
+      "object": "ExperimentalResult"
+    },
+    {
+      "subject": "CenterOfSecondaryVortexLowerRightCornerPresent",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "CenterOfSecondaryVortexLowerRightCornerPresent",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "StandardPhysicsInformedNeuralNetwork",
+      "predicate": "impactsResearchPrioritization",
+      "object": "MeanSquareErrorMSEv"
+    },
+    {
+      "subject": "NeuralNetworkModel",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "ErrorInVelocityMagnitudeStandardFDPINN",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "NeuralNetworkForLidDrivenCavity",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "ClassicalFiniteDifferenceMethods",
+      "predicate": "appliesMethodology",
+      "object": "FiniteDifferenceMethod"
+    },
+    {
+      "subject": "Table4_2",
+      "predicate": "hasComponent",
+      "object": "MeanSquareErrorMSEu"
+    },
+    {
+      "subject": "NumberOfHiddenLayers",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "LiEtAl",
+      "predicate": "impactsResearchPrioritization",
+      "object": "CenterOfSecondaryVortexLowerLeftCornerPresent"
+    },
+    {
+      "subject": "BotellaAndPeyret",
+      "predicate": "isA",
+      "object": "ExperimentalResult"
+    },
+    {
+      "subject": "100x100GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "NonlinearFlowNearUpperWall"
+    },
+    {
+      "subject": "ADPhysicsInformedNeuralNetwork",
+      "predicate": "appliesMethodology",
+      "object": "AutomaticDifferentiation"
+    },
+    {
+      "subject": "FluidStreamlinesInLidDrivenCavityRe1000",
+      "predicate": "isA",
+      "object": "ExperimentalResult"
+    },
+    {
+      "subject": "ReferenceSolution",
+      "predicate": "hasComponent",
+      "object": "MeanSquareErrorMSEu"
+    },
+    {
+      "subject": "FD_PINN_DDMTechnique",
+      "predicate": "appliesInDiscipline",
+      "object": "NavierStokesEquation"
+    },
+    {
+      "subject": "StandardPhysicsInformedNeuralNetwork",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "FinerGridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "ClassicalFiniteDifferenceMethods"
+    },
+    {
+      "subject": "RectangularGriddingMethod",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "BotellaAndPeyret",
+      "predicate": "impactsResearchPrioritization",
+      "object": "CenterOfSecondaryVortexLowerLeftCornerPresent"
+    },
+    {
+      "subject": "Table4_3",
+      "predicate": "hasComponent",
+      "object": "100x100GridPoints"
+    },
+    {
+      "subject": "GridPointNumber",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "GhiaEtAl",
+      "predicate": "isA",
+      "object": "ExperimentalResult"
+    },
+    {
+      "subject": "ParallelPhysicsInformedNeuralNetwork",
+      "predicate": "appliesMethodology",
+      "object": "DeepLearningMethod"
+    },
+    {
+      "subject": "StandardPhysicsInformedNeuralNetwork",
+      "predicate": "impactsResearchPrioritization",
+      "object": "MeanSquareErrorMSEu"
+    },
+    {
+      "subject": "LBFGSAlgorithm",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "VortexInLowerLeftCorner",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "hasMethodology",
+      "object": "FiniteDifferenceMethod"
+    },
+    {
+      "subject": "StandardPhysicsInformedNeuralNetwork",
+      "predicate": "impactsResearchPrioritization",
+      "object": "SecondaryVortexInLowerRightCorner"
+    },
+    {
+      "subject": "SquareLidDrivenCavityDomain01x01",
+      "predicate": "appliesMethodology",
+      "object": "RectangularGriddingMethod"
+    },
+    {
+      "subject": "MeanSquareErrorMSEv",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "AdaptiveMeshFiniteVolumeCalculationOf2DLidCavityCornerVortices",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "GhiaEtAl",
+      "predicate": "impactsResearchPrioritization",
+      "object": "CenterOfSecondaryVortexLowerLeftCornerPresent"
+    },
+    {
+      "subject": "Overfitting",
+      "predicate": "isA",
+      "object": "Constraint"
+    },
+    {
+      "subject": "Table4_3",
+      "predicate": "hasComponent",
+      "object": "StandardPhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "Hompinns",
+      "predicate": "appliesMethodology",
+      "object": "PhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "BenchmarkSpectralResultsOnLidDrivenCavityFlow",
+      "predicate": "isA",
+      "object": "ExperimentalResult"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "impactsResearchPrioritization",
+      "object": "50x50GridPoints"
+    },
+    {
+      "subject": "FiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "appliesInDiscipline",
+      "object": "NavierStokesEquation"
+    },
+    {
+      "subject": "NonconformingFiniteElementMethodAppliedToDrivenCavityProblem",
+      "predicate": "appliesInDiscipline",
+      "object": "LidDrivenCavityProblem"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_50x50GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "CenterOfSecondaryVortexLowerRightCornerPresent"
+    },
+    {
+      "subject": "ThreeHiddenLayersWithFiftyNeurons",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_25x25GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "LowVelocityNearBottomWall"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetwork",
+      "predicate": "appliesInDiscipline",
+      "object": "LidDrivenCavityProblem"
+    },
+    {
+      "subject": "ActivationFunctionInNeuralNetwork",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "CanPhysicsInformedNeuralNetwork",
+      "predicate": "appliesMethodology",
+      "object": "AutomaticDifferentiation"
+    },
+    {
+      "subject": "FluidStreamlinesInLidDrivenCavityRe1000",
+      "predicate": "documentsResultFor",
+      "object": "LidDrivenCavityFlow"
+    },
+    {
+      "subject": "NeuralNetworkModel",
+      "predicate": "hasConstraintInRecommendation",
+      "object": "OverpredictingBehaviorOfNeuralNetworks"
+    },
+    {
+      "subject": "StandardPhysicsInformedNeuralNetwork_100x100GridPoints",
+      "predicate": "impactsResearchPrioritization",
+      "object": "CenterOfSecondaryVortexLowerRightCornerStandard"
+    },
+    {
+      "subject": "ADPhysicsInformedNeuralNetwork",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "50x50SubdomainGridPoints",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetworkWithDomainDecompositionForIncompressibleNavierStokes",
+      "predicate": "appliesMethodology",
+      "object": "DomainDecompositionMethod"
+    },
+    {
+      "subject": "MaxFunctionEvaluations2105",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "NavierStokesEquation",
+      "predicate": "isA",
+      "object": "PhysicalTheory"
+    },
+    {
+      "subject": "PartialDifferentialEquationSolution",
+      "predicate": "isA",
+      "object": "Application"
+    },
+    {
+      "subject": "NonOrthogonalMultipleRelaxationTimeLatticeBoltzmannMethodForVorticityStreamfunctionFormulation",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "PresentFiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "impactsResearchPrioritization",
+      "object": "50x50SubdomainGridPoints"
+    },
+    {
+      "subject": "SquareLidDrivenCavityDomain01x01",
+      "predicate": "isA",
+      "object": "Application"
+    },
+    {
+      "subject": "DelvingDeepIntoRectifiers",
+      "predicate": "appliesMethodology",
+      "object": "DeepLearningMethod"
+    },
+    {
+      "subject": "NovelFullyImplicitFiniteVolumeMethodAppliedToLidDrivenCavityProblemPartIHighReynoldsNumberFlowCalculations",
+      "predicate": "appliesMethodology",
+      "object": "FiniteVolumeMethod"
+    },
+    {
+      "subject": "ThreeHiddenLayersWithFiftyNeurons",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "NeuralNetworkModel",
+      "predicate": "appliesMethodology",
+      "object": "FiniteDifferenceMethod"
+    },
+    {
+      "subject": "StandardPhysicsInformedNeuralNetwork",
+      "predicate": "impactsResearchPrioritization",
+      "object": "NineEquidistantVerticalLines"
+    },
+    {
+      "subject": "LidDrivenCavityFlow",
+      "predicate": "appliesMethodology",
+      "object": "LatticeBoltzmannMethod"
+    },
+    {
+      "subject": "AutomaticDifferentiation",
+      "predicate": "isA",
+      "object": "Methodology"
+    },
+    {
+      "subject": "FluidStreamlinesInLidDrivenCavityRe400",
+      "predicate": "hasComponent",
+      "object": "50x50SubdomainGridPoints"
+    },
+    {
+      "subject": "TransferLearning",
+      "predicate": "appliesInDiscipline",
+      "object": "LidDrivenCavityProblem"
+    },
+    {
+      "subject": "Table4_6",
+      "predicate": "hasComponent",
+      "object": "PresentFiniteDifferencePhysicsInformedNeuralNetwork_50x50GridPoints"
+    },
+    {
+      "subject": "NSFNets",
+      "predicate": "isA",
+      "object": "MachineLearningApplication"
+    },
+    {
+      "subject": "OverpredictingBehaviorOfNeuralNetworks",
+      "predicate": "isA",
+      "object": "Constraint"
+    },
+    {
+      "subject": "SubDomain",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "FiniteDifferencePhysicsInformedNeuralNetwork",
+      "predicate": "hasMethodology",
+      "object": "FiniteDifferenceMethodology"
+    },
+    {
+      "subject": "MATLABR2023a",
+      "predicate": "appliesInDiscipline",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "AspectRatio",
+      "predicate": "isA",
+      "object": "PhysicalAttribute"
+    },
+    {
+      "subject": "DomainDecompositionMethod",
+      "predicate": "impactsResearchPrioritization",
+      "object": "FiniteDifferencePhysicsInformedNeuralNetwork"
+    },
+    {
+      "subject": "DomainDecompositionMethod",
+      "predicate": "appliesInDiscipline",
+      "object": "PartialDifferentialEquationSolution"
+    },
+    {
+      "subject": "MultiscaleFlowProblem",
+      "predicate": "isA",
+      "object": "Application"
+    },
+    {
+      "subject": "PhysicsInformedNeuralNetworkForHighSpeedFlows",
+      "predicate": "appliesMethodology",
+      "object": "PhysicsInformedNeuralNetwork"
+    }
+  ]
+}

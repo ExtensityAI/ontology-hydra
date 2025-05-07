@@ -138,21 +138,22 @@ def generate_kg(
     triplets = []
     with MetadataTracker() as tracker:
         for i in tqdm(range(0, len(texts), batch_size)):
-            batch_texts = texts[i : i + batch_size]
-            for text in batch_texts:
-                input_data = TripletExtractorInput(
-                    text=text,
-                    ontology=ontology,
-                    state=KGState(triplets=triplets) if triplets else None,
-                )
-                try:
-                    result = extractor(input=input_data)
-                    if result.triplets is not None:
-                        new_triplets = result.triplets
-                        triplets.extend(new_triplets)
-                        extractor.extend_triplets(new_triplets)
-                except Exception as e:
-                    logger.error("Error extracting triplets from text", exc_info=e)
+            text = "\n".join(texts[i : i + batch_size])
+
+            input_data = TripletExtractorInput(
+                text=text,
+                ontology=ontology,
+                state=KGState(triplets=triplets) if triplets else None,
+            )
+
+            try:
+                result = extractor(input=input_data)
+                if result.triplets is not None:
+                    new_triplets = result.triplets
+                    triplets.extend(new_triplets)
+                    extractor.extend_triplets(new_triplets)
+            except Exception as e:
+                logger.error("Error extracting triplets from text", exc_info=e)
 
         usage = tracker.usage
         extractor.contract_perf_stats()

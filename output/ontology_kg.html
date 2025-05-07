@@ -1,0 +1,259 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 100vh;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+             #loadingBar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width: 100%;
+                 height: 100vh;
+                 background-color:rgba(200,200,200,0.8);
+                 -webkit-transition: all 0.5s ease;
+                 -moz-transition: all 0.5s ease;
+                 -ms-transition: all 0.5s ease;
+                 -o-transition: all 0.5s ease;
+                 transition: all 0.5s ease;
+                 opacity:1;
+             }
+
+             #bar {
+                 position:absolute;
+                 top:0px;
+                 left:0px;
+                 width:20px;
+                 height:20px;
+                 margin:auto auto auto auto;
+                 border-radius:11px;
+                 border:2px solid rgba(30,30,30,0.05);
+                 background: rgb(0, 173, 246); /* Old browsers */
+                 box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+             }
+
+             #border {
+                 position:absolute;
+                 top:10px;
+                 left:10px;
+                 width:500px;
+                 height:23px;
+                 margin:auto auto auto auto;
+                 box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+                 border-radius:10px;
+             }
+
+             #text {
+                 position:absolute;
+                 top:8px;
+                 left:530px;
+                 width:30px;
+                 height:50px;
+                 margin:auto auto auto auto;
+                 font-size:22px;
+                 color: #000000;
+             }
+
+             div.outerBorder {
+                 position:relative;
+                 top:400px;
+                 width:600px;
+                 height:44px;
+                 margin:auto auto auto auto;
+                 border:8px solid rgba(0,0,0,0.1);
+                 background: rgb(252,252,252); /* Old browsers */
+                 background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+                 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+                 background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+                 background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+                 background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+                 background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+                 border-radius:72px;
+                 box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+             }
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+            <div id="loadingBar">
+              <div class="outerBorder">
+                <div id="text">0%</div>
+                <div id="border">
+                  <div id="bar"></div>
+                </div>
+              </div>
+            </div>
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#ADD8E6", "id": "MachineLearningApplication", "label": "MachineLearningApplication", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Application", "label": "Application", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "StatisticalMechanics", "label": "StatisticalMechanics", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "PhysicalTheory", "label": "PhysicalTheory", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "PhysicsResearch", "label": "PhysicsResearch", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ResearchFocus", "label": "ResearchFocus", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CriticalProperty", "label": "CriticalProperty", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "PhysicalAttribute", "label": "PhysicalAttribute", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Audience", "label": "Audience", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "PhysicalEntity", "label": "PhysicalEntity", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "LargeScaleExperiment", "label": "LargeScaleExperiment", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "LaboratoryExperiment", "label": "LaboratoryExperiment", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Material", "label": "Material", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ParticlePhysicsExperiment", "label": "ParticlePhysicsExperiment", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "NanoscaleMaterialProperty", "label": "NanoscaleMaterialProperty", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "MaterialProperty", "label": "MaterialProperty", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Biophysics", "label": "Biophysics", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "PhysicsDiscipline", "label": "PhysicsDiscipline", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "EthicalConsideration", "label": "EthicalConsideration", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "TheoreticalPhysics", "label": "TheoreticalPhysics", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ParticleClassification", "label": "ParticleClassification", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "DarkMatter", "label": "DarkMatter", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "AstrophysicalConcept", "label": "AstrophysicalConcept", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "MachineLearning", "label": "MachineLearning", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "AstrophysicsResearch", "label": "AstrophysicsResearch", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "PhysicsBranch", "label": "PhysicsBranch", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "PublicEngagementProgram", "label": "PublicEngagementProgram", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "OutreachProgram", "label": "OutreachProgram", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Thermodynamics", "label": "Thermodynamics", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "NanotechnologyResearch", "label": "NanotechnologyResearch", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Engineering", "label": "Engineering", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "EnvironmentalPhysics", "label": "EnvironmentalPhysics", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "QuantumMechanics", "label": "QuantumMechanics", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "BlackHole", "label": "BlackHole", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "BranchOfAstrophysics", "label": "BranchOfAstrophysics", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ArtificialIntelligenceIntegration", "label": "ArtificialIntelligenceIntegration", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CondensedMatterData", "label": "CondensedMatterData", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "UnderrepresentedGroup", "label": "UnderrepresentedGroup", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "DataCollectionChallenge", "label": "DataCollectionChallenge", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Constraint", "label": "Constraint", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "BestPractice", "label": "BestPractice", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "FundamentalForce", "label": "FundamentalForce", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "AdvancedMaterial", "label": "AdvancedMaterial", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "QuantumCryptography", "label": "QuantumCryptography", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "MaterialCategory", "label": "MaterialCategory", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "AdvocacyStrategy", "label": "AdvocacyStrategy", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "SciencePolicy", "label": "SciencePolicy", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "FundamentalParticle", "label": "FundamentalParticle", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ExperimentalResult", "label": "ExperimentalResult", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ExperimentalPhysics", "label": "ExperimentalPhysics", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "TeachingMethod", "label": "TeachingMethod", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Methodology", "label": "Methodology", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "EngagementApproach", "label": "EngagementApproach", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CommunityEngagement", "label": "CommunityEngagement", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "NanotechnologyClassification", "label": "NanotechnologyClassification", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CondensedMatterClassification", "label": "CondensedMatterClassification", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "InterdisciplinaryApplication", "label": "InterdisciplinaryApplication", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "FundingMechanism", "label": "FundingMechanism", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "QuantumAlgorithmCategory", "label": "QuantumAlgorithmCategory", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ExperimentalTechnique", "label": "ExperimentalTechnique", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Technique", "label": "Technique", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "EmergingTrend", "label": "EmergingTrend", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "InterdisciplinaryCollaboration", "label": "InterdisciplinaryCollaboration", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Collaboration", "label": "Collaboration", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "MacroscopicQuantumPhenomenon", "label": "MacroscopicQuantumPhenomenon", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "QuantumComputing", "label": "QuantumComputing", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "SuccessMetric", "label": "SuccessMetric", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ParticlePhysics", "label": "ParticlePhysics", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "GravitationalWaveTechnique", "label": "GravitationalWaveTechnique", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "RenewableEnergyTechnology", "label": "RenewableEnergyTechnology", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Technology", "label": "Technology", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "HighEnergyPhysicsExperiment", "label": "HighEnergyPhysicsExperiment", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "PhysicsDataAnalysis", "label": "PhysicsDataAnalysis", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "DataAnalysisTechnique", "label": "DataAnalysisTechnique", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Superconductivity", "label": "Superconductivity", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ProfessionalDevelopmentPathway", "label": "ProfessionalDevelopmentPathway", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ProfessionalDevelopmentOpportunity", "label": "ProfessionalDevelopmentOpportunity", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CommunityEducationProgram", "label": "CommunityEducationProgram", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "DataCollectionSolution", "label": "DataCollectionSolution", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "SuperconductivityClassification", "label": "SuperconductivityClassification", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "RenewableEnergyApplication", "label": "RenewableEnergyApplication", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "MachineLearningTrend", "label": "MachineLearningTrend", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "TechniqueCategory", "label": "TechniqueCategory", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "SuperconductivityApplication", "label": "SuperconductivityApplication", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "PolicyInfluenceStrategy", "label": "PolicyInfluenceStrategy", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ExperimentalSetup", "label": "ExperimentalSetup", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "AppliedPhysics", "label": "AppliedPhysics", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ElectronicsApplication", "label": "ElectronicsApplication", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "GravitationalWaveDetection", "label": "GravitationalWaveDetection", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "BlackHoleDynamicsTechnique", "label": "BlackHoleDynamicsTechnique", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ReportingStandard", "label": "ReportingStandard", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CollaborationPartnership", "label": "CollaborationPartnership", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "DarkEnergy", "label": "DarkEnergy", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "FundingType", "label": "FundingType", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "QuantumInformationScience", "label": "QuantumInformationScience", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "StellarDynamics", "label": "StellarDynamics", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "EthicalGuideline", "label": "EthicalGuideline", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "SimulationIntegration", "label": "SimulationIntegration", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "PhysicsEducator", "label": "PhysicsEducator", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ExperimentalMethodology", "label": "ExperimentalMethodology", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Nanotechnology", "label": "Nanotechnology", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Relativity", "label": "Relativity", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ClassicalPhenomenon", "label": "ClassicalPhenomenon", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "InterdisciplinaryIntegration", "label": "InterdisciplinaryIntegration", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Organization", "label": "Organization", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Astrophysics", "label": "Astrophysics", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Indicator", "label": "Indicator", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "SuperconductivityType", "label": "SuperconductivityType", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ClassicalAlgorithm", "label": "ClassicalAlgorithm", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "NuclearPhysics", "label": "NuclearPhysics", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ParticleAcceleratorExperiment", "label": "ParticleAcceleratorExperiment", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "MaterialsScience", "label": "MaterialsScience", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ClassicalMechanics", "label": "ClassicalMechanics", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "AIApplication", "label": "AIApplication", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CondensedMatterExperiment", "label": "CondensedMatterExperiment", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "EthicalPolicyConsideration", "label": "EthicalPolicyConsideration", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "EthicsPolicyOverlap", "label": "EthicsPolicyOverlap", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "RepresentationStrategy", "label": "RepresentationStrategy", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ScientificExperiment", "label": "ScientificExperiment", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "PhysicsEducation", "label": "PhysicsEducation", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "AITrend", "label": "AITrend", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "CondensedMatterPhysics", "label": "CondensedMatterPhysics", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "MaterialClassification", "label": "MaterialClassification", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "ScienceCommunication", "label": "ScienceCommunication", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "QuantumAlgorithm", "label": "QuantumAlgorithm", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "FederalFundingMechanism", "label": "FederalFundingMechanism", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "NanoscaleSystem", "label": "NanoscaleSystem", "shape": "ellipse"}, {"color": "#ADD8E6", "id": "Principle", "label": "Principle", "shape": "ellipse"}, {"color": "#D3D3D3", "id": "xsd:string", "label": "xsd:string", "shape": "database"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "MachineLearningApplication", "label": "isA", "to": "Application"}, {"arrows": "to", "from": "StatisticalMechanics", "label": "isA", "to": "PhysicalTheory"}, {"arrows": "to", "from": "PhysicsResearch", "label": "isA", "to": "ResearchFocus"}, {"arrows": "to", "from": "CriticalProperty", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "Audience", "label": "isA", "to": "PhysicalEntity"}, {"arrows": "to", "from": "LargeScaleExperiment", "label": "isA", "to": "LaboratoryExperiment"}, {"arrows": "to", "from": "Material", "label": "isA", "to": "PhysicalEntity"}, {"arrows": "to", "from": "ParticlePhysicsExperiment", "label": "isA", "to": "LaboratoryExperiment"}, {"arrows": "to", "from": "NanoscaleMaterialProperty", "label": "isA", "to": "MaterialProperty"}, {"arrows": "to", "from": "Biophysics", "label": "isA", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "EthicalConsideration", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "TheoreticalPhysics", "label": "isA", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "ParticleClassification", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "DarkMatter", "label": "isA", "to": "AstrophysicalConcept"}, {"arrows": "to", "from": "MachineLearning", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "AstrophysicsResearch", "label": "isA", "to": "PhysicsResearch"}, {"arrows": "to", "from": "PhysicsBranch", "label": "isA", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "ResearchFocus", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "PublicEngagementProgram", "label": "isA", "to": "OutreachProgram"}, {"arrows": "to", "from": "Thermodynamics", "label": "isA", "to": "PhysicalTheory"}, {"arrows": "to", "from": "NanotechnologyResearch", "label": "isA", "to": "PhysicsResearch"}, {"arrows": "to", "from": "Engineering", "label": "isA", "to": "PhysicalEntity"}, {"arrows": "to", "from": "EnvironmentalPhysics", "label": "isA", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "QuantumMechanics", "label": "isA", "to": "PhysicalTheory"}, {"arrows": "to", "from": "BlackHole", "label": "isA", "to": "AstrophysicalConcept"}, {"arrows": "to", "from": "BranchOfAstrophysics", "label": "isA", "to": "AstrophysicalConcept"}, {"arrows": "to", "from": "ArtificialIntelligenceIntegration", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "CondensedMatterData", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "UnderrepresentedGroup", "label": "isA", "to": "PhysicalEntity"}, {"arrows": "to", "from": "DataCollectionChallenge", "label": "isA", "to": "Constraint"}, {"arrows": "to", "from": "BestPractice", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "FundamentalForce", "label": "isA", "to": "PhysicalEntity"}, {"arrows": "to", "from": "AdvancedMaterial", "label": "isA", "to": "PhysicalEntity"}, {"arrows": "to", "from": "QuantumCryptography", "label": "isA", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "MaterialCategory", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "AdvocacyStrategy", "label": "isA", "to": "SciencePolicy"}, {"arrows": "to", "from": "FundamentalParticle", "label": "isA", "to": "PhysicalEntity"}, {"arrows": "to", "from": "ExperimentalResult", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "ExperimentalPhysics", "label": "isA", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "TeachingMethod", "label": "isA", "to": "Methodology"}, {"arrows": "to", "from": "EngagementApproach", "label": "isA", "to": "TeachingMethod"}, {"arrows": "to", "from": "CommunityEngagement", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "NanotechnologyClassification", "label": "isA", "to": "CondensedMatterClassification"}, {"arrows": "to", "from": "InterdisciplinaryApplication", "label": "isA", "to": "Application"}, {"arrows": "to", "from": "Application", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "FundingMechanism", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "QuantumAlgorithmCategory", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "ExperimentalTechnique", "label": "isA", "to": "Technique"}, {"arrows": "to", "from": "EmergingTrend", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "InterdisciplinaryCollaboration", "label": "isA", "to": "Collaboration"}, {"arrows": "to", "from": "MacroscopicQuantumPhenomenon", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "QuantumComputing", "label": "isA", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "SuccessMetric", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "ParticlePhysics", "label": "isA", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "GravitationalWaveTechnique", "label": "isA", "to": "ExperimentalTechnique"}, {"arrows": "to", "from": "RenewableEnergyTechnology", "label": "isA", "to": "Technology"}, {"arrows": "to", "from": "HighEnergyPhysicsExperiment", "label": "isA", "to": "LaboratoryExperiment"}, {"arrows": "to", "from": "Collaboration", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "PhysicsDataAnalysis", "label": "isA", "to": "DataAnalysisTechnique"}, {"arrows": "to", "from": "Superconductivity", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "ProfessionalDevelopmentPathway", "label": "isA", "to": "ProfessionalDevelopmentOpportunity"}, {"arrows": "to", "from": "CommunityEducationProgram", "label": "isA", "to": "PublicEngagementProgram"}, {"arrows": "to", "from": "DataCollectionSolution", "label": "isA", "to": "Methodology"}, {"arrows": "to", "from": "SuperconductivityClassification", "label": "isA", "to": "CondensedMatterClassification"}, {"arrows": "to", "from": "RenewableEnergyApplication", "label": "isA", "to": "Application"}, {"arrows": "to", "from": "MachineLearningTrend", "label": "isA", "to": "EmergingTrend"}, {"arrows": "to", "from": "TechniqueCategory", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "SuperconductivityApplication", "label": "isA", "to": "Application"}, {"arrows": "to", "from": "PolicyInfluenceStrategy", "label": "isA", "to": "AdvocacyStrategy"}, {"arrows": "to", "from": "SciencePolicy", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "ExperimentalSetup", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "AppliedPhysics", "label": "isA", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "ElectronicsApplication", "label": "isA", "to": "Application"}, {"arrows": "to", "from": "OutreachProgram", "label": "isA", "to": "CommunityEngagement"}, {"arrows": "to", "from": "GravitationalWaveDetection", "label": "isA", "to": "LargeScaleExperiment"}, {"arrows": "to", "from": "BlackHoleDynamicsTechnique", "label": "isA", "to": "ExperimentalTechnique"}, {"arrows": "to", "from": "ReportingStandard", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "CollaborationPartnership", "label": "isA", "to": "Collaboration"}, {"arrows": "to", "from": "DarkEnergy", "label": "isA", "to": "AstrophysicalConcept"}, {"arrows": "to", "from": "FundingType", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "QuantumInformationScience", "label": "isA", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "StellarDynamics", "label": "isA", "to": "AstrophysicalConcept"}, {"arrows": "to", "from": "DataAnalysisTechnique", "label": "isA", "to": "Methodology"}, {"arrows": "to", "from": "EthicalGuideline", "label": "isA", "to": "EthicalConsideration"}, {"arrows": "to", "from": "Constraint", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "SimulationIntegration", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "PhysicsEducator", "label": "isA", "to": "PhysicalEntity"}, {"arrows": "to", "from": "ExperimentalMethodology", "label": "isA", "to": "Methodology"}, {"arrows": "to", "from": "Nanotechnology", "label": "isA", "to": "Technology"}, {"arrows": "to", "from": "CondensedMatterClassification", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "Relativity", "label": "isA", "to": "PhysicalTheory"}, {"arrows": "to", "from": "ClassicalPhenomenon", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "InterdisciplinaryIntegration", "label": "isA", "to": "Application"}, {"arrows": "to", "from": "Organization", "label": "isA", "to": "PhysicalEntity"}, {"arrows": "to", "from": "Astrophysics", "label": "isA", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "Indicator", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "SuperconductivityType", "label": "isA", "to": "SuperconductivityClassification"}, {"arrows": "to", "from": "ClassicalAlgorithm", "label": "isA", "to": "Methodology"}, {"arrows": "to", "from": "NuclearPhysics", "label": "isA", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "ParticleAcceleratorExperiment", "label": "isA", "to": "HighEnergyPhysicsExperiment"}, {"arrows": "to", "from": "MaterialsScience", "label": "isA", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "ClassicalMechanics", "label": "isA", "to": "PhysicalTheory"}, {"arrows": "to", "from": "AIApplication", "label": "isA", "to": "Application"}, {"arrows": "to", "from": "MaterialProperty", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "ProfessionalDevelopmentOpportunity", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "CondensedMatterExperiment", "label": "isA", "to": "LaboratoryExperiment"}, {"arrows": "to", "from": "EthicalPolicyConsideration", "label": "isA", "to": "EthicalConsideration"}, {"arrows": "to", "from": "EthicsPolicyOverlap", "label": "isA", "to": "EthicalPolicyConsideration"}, {"arrows": "to", "from": "RepresentationStrategy", "label": "isA", "to": "SciencePolicy"}, {"arrows": "to", "from": "LaboratoryExperiment", "label": "isA", "to": "ScientificExperiment"}, {"arrows": "to", "from": "PhysicsEducation", "label": "isA", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "AITrend", "label": "isA", "to": "EmergingTrend"}, {"arrows": "to", "from": "CondensedMatterPhysics", "label": "isA", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "MaterialClassification", "label": "isA", "to": "CondensedMatterClassification"}, {"arrows": "to", "from": "ScienceCommunication", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "QuantumAlgorithm", "label": "isA", "to": "Methodology"}, {"arrows": "to", "from": "FederalFundingMechanism", "label": "isA", "to": "FundingMechanism"}, {"arrows": "to", "from": "NanoscaleSystem", "label": "isA", "to": "PhysicalEntity"}, {"arrows": "to", "from": "Principle", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "PhysicsDiscipline", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "Methodology", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "AstrophysicalConcept", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "ExperimentalTechnique", "label": "isA", "to": "Methodology"}, {"arrows": "to", "from": "LaboratoryExperiment", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "Technology", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "PhysicalTheory", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "Material", "label": "isA", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "InterdisciplinaryApplication", "label": "impactsResearchClassification", "to": "PhysicsResearch"}, {"arrows": "to", "from": "SciencePolicy", "label": "employsAdvocacyStrategy", "to": "AdvocacyStrategy"}, {"arrows": "to", "from": "CondensedMatterPhysics", "label": "definesPropertyAtScale", "to": "NanoscaleMaterialProperty"}, {"arrows": "to", "from": "OutreachProgram", "label": "tailorsForAudience", "to": "Audience"}, {"arrows": "to", "from": "TeachingMethod", "label": "improvesScienceCommunication", "to": "ScienceCommunication"}, {"arrows": "to", "from": "ExperimentalTechnique", "label": "categorizedByTechniqueCategory", "to": "TechniqueCategory"}, {"arrows": "to", "from": "EthicalGuideline", "label": "pertainsToEnvironmentalImpact", "to": "Nanotechnology"}, {"arrows": "to", "from": "QuantumInformationScience", "label": "hasKeyAttribute", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "BlackHoleDynamicsTechnique", "label": "usedInDynamicsStudy", "to": "BlackHole"}, {"arrows": "to", "from": "InterdisciplinaryApplication", "label": "appliedInField", "to": "PhysicalEntity"}, {"arrows": "to", "from": "PhysicsDiscipline", "label": "hasSubclass", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "TeachingMethod", "label": "implementedBy", "to": "EngagementApproach"}, {"arrows": "to", "from": "LargeScaleExperiment", "label": "playsRoleIn", "to": "PhysicsResearch"}, {"arrows": "to", "from": "Organization", "label": "providesPathway", "to": "ProfessionalDevelopmentPathway"}, {"arrows": "to", "from": "PhysicsResearch", "label": "involvesInterdisciplinaryApplication", "to": "InterdisciplinaryApplication"}, {"arrows": "to", "from": "AdvancedMaterial", "label": "hasSuperconductingProperty", "to": "Superconductivity"}, {"arrows": "to", "from": "InterdisciplinaryCollaboration", "label": "collaborationEnhancesAdvancement", "to": "MaterialsScience"}, {"arrows": "to", "from": "EmergingTrend", "label": "trendImpactsPolicy", "to": "SciencePolicy"}, {"arrows": "to", "from": "PublicEngagementProgram", "label": "measuredBy", "to": "SuccessMetric"}, {"arrows": "to", "from": "Material", "label": "usedInNanoscaleSystem", "to": "NanoscaleSystem"}, {"arrows": "to", "from": "LargeScaleExperiment", "label": "associatedWithFundingChallenge", "to": "FundingMechanism"}, {"arrows": "to", "from": "AppliedPhysics", "label": "interdisciplinaryConnectionWith", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "NanotechnologyResearch", "label": "hasMaterial", "to": "Material"}, {"arrows": "to", "from": "ExperimentalTechnique", "label": "hasCriticalAttribute", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "SuccessMetric", "label": "assessesProgram", "to": "PublicEngagementProgram"}, {"arrows": "to", "from": "Indicator", "label": "assessesProgram", "to": "PublicEngagementProgram"}, {"arrows": "to", "from": "PhysicsDiscipline", "label": "engagesWithCommunity", "to": "CommunityEngagement"}, {"arrows": "to", "from": "PhysicsDiscipline", "label": "structuredByCollaboration", "to": "Collaboration"}, {"arrows": "to", "from": "Material", "label": "hasMaterialCategory", "to": "MaterialCategory"}, {"arrows": "to", "from": "NanotechnologyResearch", "label": "appliesMethodology", "to": "Methodology"}, {"arrows": "to", "from": "CommunityEducationProgram", "label": "appliesStrategy", "to": "RepresentationStrategy"}, {"arrows": "to", "from": "FederalFundingMechanism", "label": "classifiedByFundingType", "to": "FundingType"}, {"arrows": "to", "from": "ExperimentalSetup", "label": "hasComponent", "to": "PhysicalEntity"}, {"arrows": "to", "from": "Material", "label": "hasEssentialProperty", "to": "MaterialProperty"}, {"arrows": "to", "from": "SuperconductivityType", "label": "hasCriticalProperty", "to": "CriticalProperty"}, {"arrows": "to", "from": "QuantumAlgorithm", "label": "hasAlgorithmCategory", "to": "QuantumAlgorithmCategory"}, {"arrows": "to", "from": "CondensedMatterClassification", "label": "classificationRelatesTo", "to": "CondensedMatterClassification"}, {"arrows": "to", "from": "CondensedMatterPhysics", "label": "containsClassification", "to": "CondensedMatterClassification"}, {"arrows": "to", "from": "PhysicsEducator", "label": "innovatesTeachingMethod", "to": "TeachingMethod"}, {"arrows": "to", "from": "SciencePolicy", "label": "hasConstraintInRecommendation", "to": "Constraint"}, {"arrows": "to", "from": "RenewableEnergyTechnology", "label": "hasEmergingAttribute", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "Superconductivity", "label": "appliesInElectronics", "to": "ElectronicsApplication"}, {"arrows": "to", "from": "Organization", "label": "offersProfessionalDevelopmentOpportunity", "to": "ProfessionalDevelopmentOpportunity"}, {"arrows": "to", "from": "Application", "label": "appliesInDiscipline", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "CondensedMatterExperiment", "label": "analyzesDataFrom", "to": "CondensedMatterData"}, {"arrows": "to", "from": "CollaborationPartnership", "label": "fostersCollaboration", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "PhysicsResearch", "label": "discussesEthicsPolicyOverlap", "to": "EthicsPolicyOverlap"}, {"arrows": "to", "from": "QuantumInformationScience", "label": "informsDevelopmentOf", "to": "QuantumAlgorithm"}, {"arrows": "to", "from": "AppliedPhysics", "label": "encompassesApplication", "to": "RenewableEnergyApplication"}, {"arrows": "to", "from": "RenewableEnergyTechnology", "label": "categorizedForEngagement", "to": "CommunityEngagement"}, {"arrows": "to", "from": "ProfessionalDevelopmentOpportunity", "label": "standardizedByOrganization", "to": "Organization"}, {"arrows": "to", "from": "PhysicsDiscipline", "label": "hasMachineLearningApplication", "to": "MachineLearningApplication"}, {"arrows": "to", "from": "PhysicsDiscipline", "label": "isCategoryOf", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "LaboratoryExperiment", "label": "maintainsPrinciple", "to": "Principle"}, {"arrows": "to", "from": "FundamentalParticle", "label": "isClassifiedBy", "to": "ParticleClassification"}, {"arrows": "to", "from": "LaboratoryExperiment", "label": "hasExperimentalSetup", "to": "ExperimentalSetup"}, {"arrows": "to", "from": "RepresentationStrategy", "label": "targetsRepresentationOf", "to": "UnderrepresentedGroup"}, {"arrows": "to", "from": "PhysicsDiscipline", "label": "collaboratesWithDiscipline", "to": "Engineering"}, {"arrows": "to", "from": "EmergingTrend", "label": "trendImpactsFunding", "to": "FundingMechanism"}, {"arrows": "to", "from": "ExperimentalTechnique", "label": "followsBestPractice", "to": "BestPractice"}, {"arrows": "to", "from": "Superconductivity", "label": "hasSuperconductivityType", "to": "SuperconductivityType"}, {"arrows": "to", "from": "LaboratoryExperiment", "label": "hasTechnique", "to": "Technique"}, {"arrows": "to", "from": "GravitationalWaveTechnique", "label": "usedInDetection", "to": "GravitationalWaveDetection"}, {"arrows": "to", "from": "AstrophysicsResearch", "label": "studiesBlackHoleDynamics", "to": "BlackHole"}, {"arrows": "to", "from": "SciencePolicy", "label": "hasComponent", "to": "FundingMechanism"}, {"arrows": "to", "from": "NanoscaleSystem", "label": "studiedByMechanicsPrinciple", "to": "PhysicalTheory"}, {"arrows": "to", "from": "LaboratoryExperiment", "label": "integratesAI", "to": "ArtificialIntelligenceIntegration"}, {"arrows": "to", "from": "CondensedMatterExperiment", "label": "involvesAIApplicationTrend", "to": "AITrend"}, {"arrows": "to", "from": "Superconductivity", "label": "applicationOfSuperconductivity", "to": "SuperconductivityApplication"}, {"arrows": "to", "from": "Material", "label": "categorizedByMaterialClassification", "to": "MaterialClassification"}, {"arrows": "to", "from": "PhysicsResearch", "label": "enablesInterdisciplinaryCollaboration", "to": "InterdisciplinaryCollaboration"}, {"arrows": "to", "from": "Collaboration", "label": "facilitatesIntegration", "to": "InterdisciplinaryIntegration"}, {"arrows": "to", "from": "EthicalConsideration", "label": "hasPolicyPerspective", "to": "SciencePolicy"}, {"arrows": "to", "from": "SciencePolicy", "label": "policyPertainsToTheory", "to": "PhysicalTheory"}, {"arrows": "to", "from": "ClassicalAlgorithm", "label": "appliedInClassicalComputing", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "ArtificialIntelligenceIntegration", "label": "integratesWithPhysicsDataAnalysis", "to": "PhysicsDataAnalysis"}, {"arrows": "to", "from": "MachineLearning", "label": "integratesWithPhysicsDataAnalysis", "to": "PhysicsDataAnalysis"}, {"arrows": "to", "from": "TeachingMethod", "label": "integratesSimulation", "to": "SimulationIntegration"}, {"arrows": "to", "from": "FundingMechanism", "label": "relevantToResearch", "to": "PhysicsResearch"}, {"arrows": "to", "from": "InterdisciplinaryApplication", "label": "impactsResearchPrioritization", "to": "PhysicsResearch"}, {"arrows": "to", "from": "CondensedMatterPhysics", "label": "relatedToNanotechnology", "to": "Nanotechnology"}, {"arrows": "to", "from": "ExperimentalResult", "label": "documentsResultFor", "to": "CondensedMatterPhysics"}, {"arrows": "to", "from": "InterdisciplinaryApplication", "label": "appliedInDiscipline", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "PhysicalTheory", "label": "interrelatesWith", "to": "PhysicalTheory"}, {"arrows": "to", "from": "MacroscopicQuantumPhenomenon", "label": "distinguishedFrom", "to": "ClassicalPhenomenon"}, {"arrows": "to", "from": "DataCollectionChallenge", "label": "hasDataCollectionSolution", "to": "DataCollectionSolution"}, {"arrows": "to", "from": "RenewableEnergyTechnology", "label": "hasConstraint", "to": "Constraint"}, {"arrows": "to", "from": "PhysicsDiscipline", "label": "hasCollaborativeImplication", "to": "ResearchFocus"}, {"arrows": "to", "from": "QuantumAlgorithm", "label": "appliedInQuantumComputing", "to": "QuantumComputing"}, {"arrows": "to", "from": "FundamentalParticle", "label": "categorizedByAttribute", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "FundamentalForce", "label": "categorizedByAttribute", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "PhysicsDiscipline", "label": "methodologicalDifferenceWith", "to": "PhysicsDiscipline"}, {"arrows": "to", "from": "OutreachProgram", "label": "targetsGroup", "to": "UnderrepresentedGroup"}, {"arrows": "to", "from": "TeachingMethod", "label": "engagesStudentGroup", "to": "UnderrepresentedGroup"}, {"arrows": "to", "from": "AppliedPhysics", "label": "basedOnPrinciple", "to": "Principle"}, {"arrows": "to", "from": "PhysicalTheory", "label": "hasResearchFocus", "to": "ResearchFocus"}, {"arrows": "to", "from": "Technique", "label": "standardTechniqueIn", "to": "NanotechnologyResearch"}, {"arrows": "to", "from": "Astrophysics", "label": "hasAstrophysicalBranch", "to": "BranchOfAstrophysics"}, {"arrows": "to", "from": "OutreachProgram", "label": "communicatesConcept", "to": "PhysicalTheory"}, {"arrows": "to", "from": "AstrophysicalConcept", "label": "hasKeyDifferenceWith", "to": "AstrophysicalConcept"}, {"arrows": "to", "from": "PhysicalTheory", "label": "hasApplication", "to": "Application"}, {"arrows": "to", "from": "PhysicsDiscipline", "label": "hasEmergingTrend", "to": "EmergingTrend"}, {"arrows": "to", "from": "EthicalGuideline", "label": "pertainsToSafety", "to": "Nanotechnology"}, {"arrows": "to", "from": "DataAnalysisTechnique", "label": "standardizedBy", "to": "ReportingStandard"}, {"arrows": "to", "from": "ParticlePhysicsExperiment", "label": "utilizesExperimentalMethodology", "to": "ExperimentalMethodology"}, {"arrows": "to", "from": "LaboratoryExperiment", "label": "hasEthicalConsideration", "to": "EthicalConsideration"}, {"arrows": "to", "from": "RenewableEnergyTechnology", "label": "hasEthicalConsideration", "to": "EthicalConsideration"}, {"arrows": "to", "from": "FundingMechanism", "label": "influencesResearchBranch", "to": "PhysicsBranch"}, {"arrows": "to", "from": "ExperimentalMethodology", "label": "adaptedForExperimentType", "to": "LaboratoryExperiment"}, {"arrows": "to", "from": "LaboratoryExperiment", "label": "appliesTechnique", "to": "DataAnalysisTechnique"}, {"arrows": "to", "from": "LaboratoryExperiment", "label": "integratesMachineLearning", "to": "MachineLearning"}, {"arrows": "to", "from": "LargeScaleExperiment", "label": "facesDataCollectionChallenge", "to": "DataCollectionChallenge"}, {"arrows": "to", "from": "Application", "label": "influencesEvolutionOf", "to": "PhysicalTheory"}, {"arrows": "to", "from": "PhysicsDiscipline", "label": "hasAIApplication", "to": "AIApplication"}, {"arrows": "to", "from": "ProfessionalDevelopmentOpportunity", "label": "aimsForInclusivity", "to": "CommunityEngagement"}, {"arrows": "to", "from": "CondensedMatterPhysics", "label": "includesKeyConcept", "to": "PhysicalAttribute"}, {"arrows": "to", "from": "LaboratoryExperiment", "label": "hasMethodology", "to": "Methodology"}, {"arrows": "to", "from": "PublicEngagementProgram", "label": "indicatedBy", "to": "Indicator"}, {"arrows": "to", "from": "PhysicalTheory", "label": "hasDistinctionWith", "to": "PhysicalTheory"}, {"arrows": "to", "from": "CondensedMatterExperiment", "label": "involvesMachineLearningTrend", "to": "MachineLearningTrend"}, {"arrows": "to", "from": "ExperimentalResult", "label": "transparencyStandard", "to": "xsd:string"}, {"arrows": "to", "from": "DataCollectionChallenge", "label": "challengeDescription", "to": "xsd:string"}, {"arrows": "to", "from": "ReportingStandard", "label": "standardDescription", "to": "xsd:string"}, {"arrows": "to", "from": "NanoscaleSystem", "label": "systemDescription", "to": "xsd:string"}, {"arrows": "to", "from": "LaboratoryExperiment", "label": "experimentContext", "to": "xsd:string"}, {"arrows": "to", "from": "EngagementApproach", "label": "approachDescription", "to": "xsd:string"}, {"arrows": "to", "from": "CondensedMatterClassification", "label": "classificationDescription", "to": "xsd:string"}, {"arrows": "to", "from": "InterdisciplinaryIntegration", "label": "integrationDescription", "to": "xsd:string"}, {"arrows": "to", "from": "SimulationIntegration", "label": "simulationIntegrationDescription", "to": "xsd:string"}, {"arrows": "to", "from": "LargeScaleExperiment", "label": "experimentScale", "to": "xsd:string"}, {"arrows": "to", "from": "PhysicsDiscipline", "label": "mainCriterion", "to": "xsd:string"}, {"arrows": "to", "from": "Indicator", "label": "indicatorDescription", "to": "xsd:string"}, {"arrows": "to", "from": "PhysicalTheory", "label": "name", "to": "xsd:string"}, {"arrows": "to", "from": "AstrophysicalConcept", "label": "name", "to": "xsd:string"}, {"arrows": "to", "from": "FundamentalParticle", "label": "name", "to": "xsd:string"}, {"arrows": "to", "from": "FundamentalForce", "label": "name", "to": "xsd:string"}, {"arrows": "to", "from": "ProfessionalDevelopmentOpportunity", "label": "professionalDevelopmentDescription", "to": "xsd:string"}, {"arrows": "to", "from": "CriticalProperty", "label": "criticalPropertyValue", "to": "xsd:string"}, {"arrows": "to", "from": "CollaborationPartnership", "label": "partnershipDescription", "to": "xsd:string"}, {"arrows": "to", "from": "ParticleClassification", "label": "classificationType", "to": "xsd:string"}, {"arrows": "to", "from": "ArtificialIntelligenceIntegration", "label": "aiIntegrationDescription", "to": "xsd:string"}, {"arrows": "to", "from": "PhysicalTheory", "label": "theoryDefinitionImportance", "to": "xsd:string"}, {"arrows": "to", "from": "DataAnalysisTechnique", "label": "techniqueDescription", "to": "xsd:string"}, {"arrows": "to", "from": "PolicyInfluenceStrategy", "label": "strategyCategory", "to": "xsd:string"}, {"arrows": "to", "from": "InterdisciplinaryApplication", "label": "interdisciplinaryApplicationDescription", "to": "xsd:string"}, {"arrows": "to", "from": "CommunityEngagement", "label": "communityEngagementDescription", "to": "xsd:string"}, {"arrows": "to", "from": "SuccessMetric", "label": "metricDescription", "to": "xsd:string"}, {"arrows": "to", "from": "ExperimentalSetup", "label": "setupDescription", "to": "xsd:string"}, {"arrows": "to", "from": "DataCollectionSolution", "label": "solutionDescription", "to": "xsd:string"}, {"arrows": "to", "from": "EthicalGuideline", "label": "guidelineText", "to": "xsd:string"}, {"arrows": "to", "from": "PhysicalAttribute", "label": "attributeValue", "to": "xsd:string"}, {"arrows": "to", "from": "Constraint", "label": "constraintDescription", "to": "xsd:string"}, {"arrows": "to", "from": "AdvocacyStrategy", "label": "strategyDescription", "to": "xsd:string"}, {"arrows": "to", "from": "EmergingTrend", "label": "trendDescription", "to": "xsd:string"}, {"arrows": "to", "from": "ProfessionalDevelopmentPathway", "label": "pathwayDescription", "to": "xsd:string"}, {"arrows": "to", "from": "Material", "label": "materialName", "to": "xsd:string"}, {"arrows": "to", "from": "PhysicsDiscipline", "label": "physicsSubfield", "to": "xsd:string"}, {"arrows": "to", "from": "AstrophysicalConcept", "label": "implicationDescription", "to": "xsd:string"}, {"arrows": "to", "from": "AITrend", "label": "trendDescription", "to": "xsd:string"}, {"arrows": "to", "from": "MachineLearningTrend", "label": "trendDescription", "to": "xsd:string"}, {"arrows": "to", "from": "InterdisciplinaryCollaboration", "label": "collaborationDescription", "to": "xsd:string"}, {"arrows": "to", "from": "Methodology", "label": "efficiencyDescription", "to": "xsd:string"}, {"arrows": "to", "from": "BestPractice", "label": "bestPracticeDescription", "to": "xsd:string"}, {"arrows": "to", "from": "QuantumInformationScience", "label": "keyDistinction", "to": "xsd:string"}, {"arrows": "to", "from": "EthicalConsideration", "label": "ethicalConstraintDescription", "to": "xsd:string"}, {"arrows": "to", "from": "ExperimentalResult", "label": "reproducibilityStandard", "to": "xsd:string"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "forceAtlas2Based": {
+            "avoidOverlap": 0,
+            "centralGravity": 0.01,
+            "damping": 0.4,
+            "gravitationalConstant": -50,
+            "springConstant": 0.08,
+            "springLength": 100
+        },
+        "solver": "forceAtlas2Based",
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+                      network.on("stabilizationProgress", function(params) {
+                          document.getElementById('loadingBar').removeAttribute("style");
+                          var maxWidth = 496;
+                          var minWidth = 20;
+                          var widthFactor = params.iterations/params.total;
+                          var width = Math.max(minWidth,maxWidth * widthFactor);
+                          document.getElementById('bar').style.width = width + 'px';
+                          document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+                      });
+                      network.once("stabilizationIterationsDone", function() {
+                          document.getElementById('text').innerHTML = '100%';
+                          document.getElementById('bar').style.width = '496px';
+                          document.getElementById('loadingBar').style.opacity = 0;
+                          // really clean the dom element
+                          setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+                      });
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>
