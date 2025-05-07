@@ -146,6 +146,20 @@ class Ontology(LLMDataModel):
     def from_json_file(cls, path: Path | str):
         return cls.model_validate_json(Path(path).read_text(encoding="utf-8"))
 
+    def has_class(self, class_name: str) -> bool:
+        """Check if the ontology contains a class with the given name."""
+        return (
+            any(class_name == rel.superclass.name or class_name == rel.subclass.name for rel in self.subclass_relations)
+            or any(class_name == prop.name for prop in self.object_properties)
+            or any(class_name == prop.name for prop in self.data_properties)
+        )
+
+    def has_property(self, property_name: str) -> bool:
+        """Check if the ontology contains a property with the given name."""
+        return any(property_name == prop.name for prop in self.object_properties) or any(
+            property_name == prop.name for prop in self.data_properties
+        )
+
 
 # ==================================================#
 # ----Ontology Fixing Data Models0000---------------#
@@ -220,40 +234,19 @@ class WeaverInput(LLMDataModel):
 # ==================================================#
 # ----Triplet Extraction Data Models----------------#
 # ==================================================#
-class Entity(LLMDataModel):
-    name: str = Field(description="Name of the entity.")
-
-    def __eq__(self, other):
-        if not isinstance(other, Entity):
-            return False
-        return self.name == other.name
-
-    def __hash__(self):
-        return hash(self.name)
-
-
-class Relationship(LLMDataModel):
-    name: str = Field(description="Name of the relationship.")
-
-    def __eq__(self, other):
-        if not isinstance(other, Relationship):
-            return False
-        return self.name == other.name
-
-    def __hash__(self):
-        return hash(self.name)
 
 
 class Triplet(LLMDataModel):
-    subject: Entity
-    predicate: Relationship
-    object: Entity
-    confidence: float = Field(
+    subject: str = Field(description="Subject entity name")
+    predicate: str = Field(description="Name of the relationship")
+    object: str = Field(description="Object entity name")
+
+    """confidence: float = Field(
         default=1.0,
         ge=0.0,
         le=1.0,
         description="Confidence score for the extracted triplet [0, 1]",
-    )
+    )"""
 
     def __eq__(self, other):
         if not isinstance(other, Triplet):

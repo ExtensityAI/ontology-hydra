@@ -1,0 +1,9 @@
+{
+  "scenarios": [{
+    "id": "fiction",
+    "domain": "Fiction Books",
+    "squad_titles": [
+      "To_Kill_a_Mockingbird"
+    ]
+  }]
+}

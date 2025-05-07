@@ -10,10 +10,10 @@ import networkx as nx
 from symai import Import, Symbol
 from symai.components import FileReader
 
-from eval.vis import visualize_kg, visualize_ontology
-from ontopipe.kg import generate_kg
+from ontopipe.kg2 import generate_kg
 from ontopipe.models import Ontology
 from ontopipe.pipe import ontopipe
+from ontopipe.vis import visualize_kg, visualize_ontology
 
 
 def is_supported_file(file_path: Path) -> bool:
@@ -357,13 +357,13 @@ def compute_ontology_and_kg(
             texts=chunked_texts,
             kg_name=kg_name,
             ontology=ontology,
-            threshold=threshold,
             batch_size=batch_size,
         )
         output_file.write_text(kg.model_dump_json(indent=2), encoding="utf-8")
         visualize_kg(kg, output_path / "kg.html")
     except Exception as e:
-        print(f"Error generating knowledge graph: {e}")
+        print("Error generating knowledge graph")
+        print(e)
         # print stack trace for debugging
         import traceback
 
@@ -374,7 +374,7 @@ def compute_ontology_and_kg(
     G = nx.DiGraph()
     if kg.triplets:
         for triplet in kg.triplets:
-            G.add_edge(triplet.subject.name, triplet.object.name, label=triplet.predicate.name)
+            G.add_edge(triplet.subject, triplet.object, label=triplet.predicate)
         print(f"Created graph with {len(G.nodes())} nodes and {len(G.edges())} edges")
     else:
         print("Warning: No triplets were generated.")

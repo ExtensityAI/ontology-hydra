@@ -1,11 +1,8 @@
-import random
 from pathlib import Path
 
 from pyvis.network import Network
 
 from ontopipe.models import KG, Ontology
-
-rng = random.Random(42)
 
 
 def visualize_ontology(ontology: Ontology, output_html_path: Path):
@@ -126,9 +123,9 @@ def visualize_kg(kg: KG, output_html_path: Path):
     recognized_types = set()  # e.g., {"Person", "City", "Organization", ...}
 
     for triplet in kg.triplets or []:
-        if triplet.predicate.name.lower() == "isa":
-            subj_name = triplet.subject.name
-            obj_name = triplet.object.name
+        if triplet.predicate.lower() == "isa":
+            subj_name = triplet.subject
+            obj_name = triplet.object
             recognized_types.add(obj_name)
             entity_to_types.setdefault(subj_name, set()).add(obj_name)
 
@@ -145,8 +142,8 @@ def visualize_kg(kg: KG, output_html_path: Path):
     # Step 3. Collect all entities (subjects + objects)
     all_entities = set()
     for triplet in kg.triplets or []:
-        all_entities.add(triplet.subject.name)
-        all_entities.add(triplet.object.name)
+        all_entities.add(triplet.subject)
+        all_entities.add(triplet.object)
 
     # Step 4. Add nodes (with colors) to the PyVis network
     added_nodes = set()
@@ -180,6 +177,6 @@ def visualize_kg(kg: KG, output_html_path: Path):
 
     # Step 5. Add edges for each triplet. The arrow is from subject -> object, labeled by predicate
     for triplet in kg.triplets or []:
-        net.add_edge(triplet.subject.name, triplet.object.name, label=triplet.predicate.name)
+        net.add_edge(triplet.subject, triplet.object, label=triplet.predicate)
     # 6. Output the interactive graph to an HTML file
     net.save_graph(str(output_html_path))

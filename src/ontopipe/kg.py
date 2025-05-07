@@ -35,9 +35,9 @@ class TripletExtractor(Expression):
     def post(self, output: KGState) -> bool:
         if output.triplets is None:
             return True  # Nothing was extracted.
-        for triplet in output.triplets:
+        """for triplet in output.triplets:
             if triplet.confidence < self.threshold:
-                raise ValueError(f"Confidence score {triplet.confidence} is below threshold {self.threshold}!")
+                raise ValueError(f"Confidence score {triplet.confidence} is below threshold {self.threshold}!")"""
         return True
 
     @property
