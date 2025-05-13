@@ -1,48 +1,68 @@
-from enum import StrEnum
+from logging import getLogger
+from typing import Literal
 
-import openai
-from pydantic import BaseModel, Field
+from pydantic import Field
+from symai import Expression
+from symai.components import MetadataTracker
+from symai.strategy import LLMDataModel, contract
 
-from ontopipe.cqs.utils import MODEL
+from ontopipe.prompts import prompt_registry
 
-# todo: hierarchies
-
-generate_groups_prompt = """You are an ontology engineer tasked with creating an ontology on <domain>{domain}</domain>. As a first step, you are tasked with finding appropriate individuals to interview. What kind of people would you like to interview? Provide an exhaustive JSON list and nothing else."""
+logger = getLogger("ontopipe.cqs")
 
 
-class Priority(BaseModel):
-    class Value(StrEnum):
-        # todo: figure out if there is a better way to measure importance of groups
-        HIGH = "high"
-        MEDIUM = "medium"
-        LOW = "low"
-
+class Priority(LLMDataModel):
     reason: str = Field(..., description="Reason for the priority")
-    value: Value
+    value: Literal["high", "medium", "low"]
 
 
-class Group(BaseModel):
+class Group(LLMDataModel):
     name: str
     description: str
     priority: Priority
 
 
-class Groups(BaseModel):
+class Groups(LLMDataModel):
     items: list[Group]
 
 
+class DomainDefinition(LLMDataModel):
+    domain: str = Field(..., description="The domain of the ontology")
+
+
+@contract(
+    pre_remedy=False,
+    post_remedy=True,
+    accumulate_errors=False,
+    verbose=True,
+    remedy_retry_params=dict(
+        tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False
+    ),
+)
+class GroupsGenerator(Expression):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+    def forward(self, input: DomainDefinition, **kwargs) -> Groups:
+        if self.contract_result is None:
+            raise ValueError("Contract failed!")
+
+        return self.contract_result
+
+    def post(self, output: Groups) -> bool:
+        return True
+
+    @property
+    def prompt(self) -> str:
+        return prompt_registry.instruction("generate_groups")
+
+
 def generate_groups_for_domain(domain: str):
-    response = openai.beta.chat.completions.parse(
-        model=MODEL,
-        messages=[
-            {"role": "system", "content": generate_groups_prompt.format(domain=domain)},
-        ],
-        response_format=Groups,
-    )
+    generator = GroupsGenerator()
+    with MetadataTracker() as tracker:
+        x = generator(input=DomainDefinition(domain=domain))
 
-    obj = response.choices[0].message.parsed
+        generator.contract_perf_stats()
+        logger.debug("API Usage: %s", tracker.usage)
 
-    if obj is None:
-        raise ValueError("Failed to generate group definitions")
-
-    return obj
+        return x

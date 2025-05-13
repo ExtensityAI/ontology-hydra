@@ -1,7 +1,7 @@
 import openai
 from pydantic import BaseModel
 
-from ontopipe.cqs.groups import Group, Priority
+from ontopipe.cqs.groups import Group
 from ontopipe.cqs.utils import MODEL
 
 # note: if personas seem low-dimensional, or if they "overfit" to our goal, maybe prompt to modify them without stating our goal, just to make them more realistic
@@ -36,9 +36,9 @@ ZERO_OR_ONE = 0
 
 # consider changing these values
 _priority_to_n = {
-    Priority.Value.HIGH: 3,
-    Priority.Value.MEDIUM: 2,
-    Priority.Value.LOW: 1,
+    "high": 3,
+    "medium": 2,
+    "low": 1,
 }
 
 

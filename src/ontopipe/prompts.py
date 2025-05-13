@@ -8,11 +8,21 @@ prompt_registry = PromptRegistry()
 # ==================================================#
 # Tags
 prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_class", "OWL CLASS")
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_subclass_relation", "OWL SUBCLASS RELATION")
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_object_property", "OWL OBJECT PROPERTY")
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_data_property", "OWL DATA PROPERTY")
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "competency_question", "COMPETENCY QUESTION")
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "ontology_guidelines", "ONTOLOGY GUIDELINES")
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "owl_subclass_relation", "OWL SUBCLASS RELATION"
+)
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "owl_object_property", "OWL OBJECT PROPERTY"
+)
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "owl_data_property", "OWL DATA PROPERTY"
+)
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "competency_question", "COMPETENCY QUESTION"
+)
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "ontology_guidelines", "ONTOLOGY GUIDELINES"
+)
 
 # Instructions
 prompt_registry.register_instruction(
@@ -201,7 +211,9 @@ Return your output as a structured set of operations with explicit details (incl
 # ----Triplet Extraction----------------------------#
 # ==================================================#
 # Tags
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "triplet_extraction", "TRIPLET EXTRACTION")
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "triplet_extraction", "TRIPLET EXTRACTION"
+)
 
 # Instructions
 prompt_registry.register_instruction(
@@ -236,4 +248,36 @@ You are an expert in knowledge graph construction and semantic triplet extractio
 3. Create "isA" triplets for all entities
 4. Extract all relationships between entities that conform to the ontology
 5. Verify all triplets are consistent with the existing knowledge graph""",
+)
+
+# ==================================================#
+# ----CQS-------------------------------------------#
+# ==================================================#
+
+# Tags
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "groups", "GROUPS")
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "personas", "PERSONAS")
+
+# Instructions
+prompt_registry.register_instruction(
+    PromptLanguage.ENGLISH,
+    "generate_groups",
+    f"""{prompt_registry.tag("groups")}
+You are an ontology engineer tasked with creating a comprehensive ontology for the specified domain. 
+To ensure your ontology captures all relevant knowledge, perspectives, and use cases, you need to identify 
+key stakeholder groups to interview.
+
+Identify a diverse, exhaustive list of stakeholder groups who would provide valuable insights for this domain. 
+Consider:
+
+1. Direct domain practitioners with hands-on experience
+2. Domain experts with theoretical knowledge
+3. End users and beneficiaries of systems in this domain
+4. Adjacent domain specialists with overlapping expertise
+5. Newcomers who might have fresh perspectives
+6. Policy makers and regulators relevant to the domain
+7. Individuals with specialized knowledge of edge cases
+8. People with historical context about the domain's evolution)
+
+Output your response as a properly formatted JSON object with nothing else.""",
 )
