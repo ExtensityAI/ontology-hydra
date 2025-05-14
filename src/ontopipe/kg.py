@@ -39,6 +39,10 @@ class TripletExtractor(Expression):
         return True
 
     def post(self, output: KGState) -> bool:
+        # TODO if this is too difficult for the model to fix, maybe instead prompt it with the errors in batches and let it fix them then.
+
+        # TODO found problem: model often adds triplets that refer to multiple entities like (someone, invites, JemScoutAndDill) but that should probably be three separate triplets?
+
         if output.triplets is None:
             return True  # Nothing was extracted.
 
@@ -61,21 +65,21 @@ class TripletExtractor(Expression):
             ) is not None:
                 # Ensure that the subject entity does not have a type def already
                 errors.append(
-                    f"{triplet.as_triplet_str()}: Subject '{triplet.subject}' is already defined as type '{tds}' and cannot be redefined. To fix, omit this triplet."
+                    f"{triplet}: Subject '{triplet.subject}' is already defined as type '{tds}' and cannot be redefined. To fix, omit this triplet."
                 )
                 continue
 
             if not self.ontology.has_class(triplet.object):
                 # ensure ontology has class for object
                 errors.append(
-                    f"{triplet.as_triplet_str()}: '{triplet.object}' is not a valid ontology class! To fix this, either choose an appropriate class or consider not adding this entity."
+                    f"{triplet}: '{triplet.object}' is not a valid ontology class! To fix this, either choose an appropriate class or consider not adding this entity."
                 )
                 continue
 
             if self.ontology.has_class(triplet.subject):
                 # Ensure that the subject is not an ontology class
                 errors.append(
-                    f"{triplet.as_triplet_str()}: Subject '{triplet.subject}' can not be an ontology class! To fix this, choose a name for the subject that is not an ontology class."
+                    f"{triplet}: Subject '{triplet.subject}' can not be an ontology class! To fix this, choose a name for the subject that is not an ontology class."
                 )
                 continue
 
@@ -93,21 +97,21 @@ class TripletExtractor(Expression):
             if not tds:
                 # Ensure that the subject entity has a type definition
                 errors.append(
-                    f"{triplet.as_triplet_str()}: Subject '{triplet.subject}' does not have a type definition. To fix this, add a triplet ({triplet.subject}, isA, <class>) to define the ontology class of the subject."
+                    f"{triplet}: Subject '{triplet.subject}' does not have a type definition. To fix this, add a triplet ({triplet.subject}, isA, <class>) to define the ontology class of the subject."
                 )
                 continue
 
             if self.ontology.has_class(triplet.object):
                 # Ensure that the object entity is not an ontology class (this is only allowed for isA predicates!)
                 errors.append(
-                    f"{triplet.as_triplet_str()}: Object '{triplet.object}' can not be an ontology class! To fix this, you need to choose an object that is an entity and not an ontology class."
+                    f"{triplet}: Object '{triplet.object}' can not be an ontology class! To fix this, you need to choose an object that is an entity and not an ontology class."
                 )
                 continue
 
             if not tdo:
                 # Object entity does not have a type definition yet
                 errors.append(
-                    f"{triplet.as_triplet_str()}: Object '{triplet.object}' does not belong to a class yet! To fix this, add a triplet ({triplet.object}, isA, <class>) to define the ontology class of the object."
+                    f"{triplet}: Object '{triplet.object}' does not belong to a class yet! To fix this, add a triplet ({triplet.object}, isA, <class>) to define the ontology class of the object."
                 )
                 continue
 

@@ -1,0 +1,940 @@
+{
+  "responses": [
+    {
+      "qid": "56ce30f5aab44d1400b88520",
+      "answer": "1960-07-11",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce30f5aab44d1400b88521",
+      "answer": "Pulitzer Prize",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce30f5aab44d1400b88523",
+      "answer": "Harper Lee",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce31f5aab44d1400b8854a",
+      "answer": "the United States",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce31f5aab44d1400b8854b",
+      "answer": "SouthernGothic",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce31f5aab44d1400b8854c",
+      "answer": "DestructionOfInnocenceTheme,RacialInjusticeTheme,RacialSlursProfanityAndRapeDiscussion,PrejudiceInMaycomb,IssuesOfRaceClassSociety,JusticeInNovel,Mockingbird,Pedagogy,UnfunnySituationsWithIrony,ChildrenFascinationWithBooRadley,Mockingbird",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce330daab44d1400b88556",
+      "answer": "MaryMcDonaghMurphy",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce330daab44d1400b88557",
+      "answer": "2006",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce330daab44d1400b88558",
+      "answer": "1962",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce330daab44d1400b88559",
+      "answer": "1990",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce330daab44d1400b8855a",
+      "answer": "Robert Mulligan",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce3363aab44d1400b88565",
+      "answer": "no_data_found",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce3363aab44d1400b88566",
+      "answer": "In Cold Blood",
+      "no_answer_prob": 0.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce349aaab44d1400b8858a",
+      "answer": "Truman Capote",
+      "no_answer_prob": 0.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce349aaab44d1400b8858c",
+      "answer": "Year1926",
+      "no_answer_prob": 0.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce349aaab44d1400b8858d",
+      "answer": "workedAsReservationClerk",
+      "no_answer_prob": 0.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce349aaab44d1400b8858e",
+      "answer": "Alabama",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce355eaab44d1400b8859e",
+      "answer": "Mockingbird",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce355eaab44d1400b8859f",
+      "answer": "JBLippincott",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce35b2aab44d1400b885b4",
+      "answer": "Tuberculosis",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce35b2aab44d1400b885b5",
+      "answer": "Lawyer",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce3631aab44d1400b885d1",
+      "answer": "19600711",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce623aaab44d1400b88721",
+      "answer": "MonroevilleAlabama",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce623aaab44d1400b88722",
+      "answer": "The data does not contain this information.",
+      "no_answer_prob": 1.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce623aaab44d1400b88723",
+      "answer": "Two children",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce623aaab44d1400b88724",
+      "answer": "Jem and Scout",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce6318aab44d1400b8872d",
+      "answer": "Mayella Ewell",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce63f7aab44d1400b88735",
+      "answer": "Jem and Scout",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce63f7aab44d1400b88736",
+      "answer": "MonroeCountyCourthouse",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce6488aab44d1400b8873e",
+      "answer": "Jem and Scout",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce6488aab44d1400b8873f",
+      "answer": "Intermission",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce6488aab44d1400b88740",
+      "answer": "Boo Radley",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce6635aab44d1400b8874f",
+      "answer": "no_data_found",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce67f4aab44d1400b88761",
+      "answer": "FictionGenre",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce67f4aab44d1400b88762",
+      "answer": "Year1926",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce67f4aab44d1400b88764",
+      "answer": "no_data_found",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce68dcaab44d1400b8876c",
+      "answer": "Next door to Lee",
+      "no_answer_prob": 0.2,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce68dcaab44d1400b8876d",
+      "answer": "The knowledge graph does not contain this information.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce68dcaab44d1400b8876e",
+      "answer": "InColdBlood",
+      "no_answer_prob": 0.2,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce6aabaab44d1400b88775",
+      "answer": "The knowledge graph does not contain this information.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce6aabaab44d1400b88776",
+      "answer": "WalterLett",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce6aabaab44d1400b88777",
+      "answer": "ScottsboroBoys",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce6aabaab44d1400b88778",
+      "answer": "CivilRightsMovement1960s",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce6d47aab44d1400b8877d",
+      "answer": "WarmthAndHumorDespiteSeriousIssues",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce6dabaab44d1400b8877f",
+      "answer": "This information is not in the knowledge graph.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce6dabaab44d1400b88780",
+      "answer": "This information is not in the knowledge graph.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce6f81aab44d1400b8878b",
+      "answer": "SouthernGothic",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce70aaaab44d1400b8878f",
+      "answer": "MissMaudie",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce98e7aab44d1400b888bf",
+      "answer": "MontgomeryBusBoycott1955",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce996caab44d1400b888c1",
+      "answer": "Jury",
+      "no_answer_prob": 0.2,
+      "no_data_found": true
+    },
+    {
+      "qid": "56ce996caab44d1400b888c2",
+      "answer": "TomRobinsonDeathEvent",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56ce99a5aab44d1400b888c5",
+      "answer": "RabidDog",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf477faab44d1400b88f14",
+      "answer": "Calpurnia",
+      "no_answer_prob": 0.8,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf477faab44d1400b88f15",
+      "answer": "HarperLeesFather",
+      "no_answer_prob": 0.8,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf477faab44d1400b88f16",
+      "answer": "Dill",
+      "no_answer_prob": 0.8,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf48feaab44d1400b88f36",
+      "answer": "PoorWhiteFarmersJury",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf4943aab44d1400b88f42",
+      "answer": "Rape",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf4ad1aab44d1400b88f64",
+      "answer": "CharlesShields",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf4b12aab44d1400b88f68",
+      "answer": "MissMaudie and Calpurnia are implied as main female role models for Scout.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf4b72aab44d1400b88f75",
+      "answer": "BobEwell",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf4ba7aab44d1400b88f78",
+      "answer": "Mayella Ewell",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf4ccdaab44d1400b88f7a",
+      "answer": "Mockingbird",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf4ccdaab44d1400b88f7b",
+      "answer": "Finch",
+      "no_answer_prob": 0.1,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf4ccdaab44d1400b88f7c",
+      "answer": "Mockingbird",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf4debaab44d1400b88f8c",
+      "answer": "InColdBlood",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf52eeaab44d1400b88fd2",
+      "answer": "TenLanguagesFirstYear",
+      "no_answer_prob": 0.8,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf52eeaab44d1400b88fd3",
+      "answer": "MoreThan40Languages",
+      "no_answer_prob": 0.8,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf52eeaab44d1400b88fd4",
+      "answer": "MoreThan30Million",
+      "no_answer_prob": 0.8,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf5398aab44d1400b88fe2",
+      "answer": "ScoutAtticusAndBooBook",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf5398aab44d1400b88fe3",
+      "answer": "MayellaEwell",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf542daab44d1400b88fec",
+      "answer": "IntegrityForLegalProfession",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf5472aab44d1400b88ff8",
+      "answer": "2001",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf5472aab44d1400b88ff9",
+      "answer": "AlabamaStateBar",
+      "no_answer_prob": 0.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf54baaab44d1400b89010",
+      "answer": "Since1964",
+      "no_answer_prob": 0.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf54baaab44d1400b89011",
+      "answer": "Not specified in the data",
+      "no_answer_prob": 0.7,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf550faab44d1400b8901e",
+      "answer": "Not specified in the data",
+      "no_answer_prob": 0.8,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf550faab44d1400b8901f",
+      "answer": "UseOfRapePlotDeviceInToKillAMockingbird",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf55e2aab44d1400b89038",
+      "answer": "CivilRightsMovement1960s",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf55e2aab44d1400b89039",
+      "answer": "AlabamaEditorial1992",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf5655aab44d1400b8903c",
+      "answer": "HarperLeesFather",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf5655aab44d1400b8903d",
+      "answer": "Lee's authorship was speculated to be by Truman Capote.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf5655aab44d1400b8903e",
+      "answer": "Her sister is not mentioned in the knowledge graph.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf572daab44d1400b89071",
+      "answer": "Harper Lee received the Pulitzer Prize in 1961.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf572daab44d1400b89072",
+      "answer": "The knowledge graph does not provide information on how many weeks the book remained on the bestseller list.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf572daab44d1400b89073",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf572daab44d1400b89074",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf586faab44d1400b890a5",
+      "answer": "2008",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf586faab44d1400b890a6",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf586faab44d1400b890a7",
+      "answer": "This information is not available in the knowledge graph.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf593eaab44d1400b890bf",
+      "answer": "University of Alabama",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf593eaab44d1400b890c0",
+      "answer": "President George W. Bush",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf593eaab44d1400b890c1",
+      "answer": "2007",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf59eaaab44d1400b890d1",
+      "answer": "1962",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf59eaaab44d1400b890d2",
+      "answer": "Gregory Peck",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf5a6aaab44d1400b890e3",
+      "answer": "a pocket watch",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf5a6aaab44d1400b890e4",
+      "answer": "Harper",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf5ab3aab44d1400b890e9",
+      "answer": "The knowledge graph does not contain information about Lee showing up at the Los Angeles Public Library.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf5b0eaab44d1400b890f7",
+      "answer": "Christopher Sergel turned the novel into a play.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf5b0eaab44d1400b890f8",
+      "answer": "SergelsPlay1990 was performed at Monroeville1990.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf5b8eaab44d1400b89107",
+      "answer": "The knowledge graph does not contain information about Sergel's play touring around in a country in 2006.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf5b8eaab44d1400b89108",
+      "answer": "West Yorkshire Playhouse",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf5c2caab44d1400b8911b",
+      "answer": "PublicationDate20150714",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf5c2caab44d1400b8911c",
+      "answer": "PublicationDate20150714",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56cf5c2caab44d1400b8911d",
+      "answer": "The knowledge graph does not specify the setting year of Go Set a Watchman or the year To Kill a Mockingbird is set in.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56cf5c2caab44d1400b8911e",
+      "answer": "Harper Lee's lawyer was HarperLeesFather.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d1073817492d1400aab786",
+      "answer": "Harper Lee.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d1073817492d1400aab787",
+      "answer": "1960.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d1073817492d1400aab788",
+      "answer": "Emmett Till.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d1085d17492d1400aab7a8",
+      "answer": "The novel deals with the themes of DestructionOfInnocence and RacialInjustice.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d1085d17492d1400aab7a9",
+      "answer": "Scout is the protagonist of the novel.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d10cda17492d1400aab823",
+      "answer": "The novel is set in the American Deep South.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d10cda17492d1400aab824",
+      "answer": "It has been challenged for racial slurs, profanity, and rape discussion.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d114b117492d1400aab8c4",
+      "answer": "the Bible",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d114b117492d1400aab8c5",
+      "answer": "Horton Foote",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d114b117492d1400aab8c6",
+      "answer": "Robert Mulligan",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d114b117492d1400aab8c7",
+      "answer": "Monroeville Alabama",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d1161117492d1400aab8de",
+      "answer": "Go Set A Watchman",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d1161117492d1400aab8df",
+      "answer": "PublicationDate20150714",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d1161117492d1400aab8e0",
+      "answer": "Year1926",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d11a1217492d1400aab953",
+      "answer": "Year1926",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d11a1217492d1400aab954",
+      "answer": "Truman Capote",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d11a1217492d1400aab955",
+      "answer": "Huntingdon College",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d11a1217492d1400aab956",
+      "answer": "no_data_found",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d11a1217492d1400aab957",
+      "answer": "J.B. Lippincott",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d11b1c17492d1400aab991",
+      "answer": "JBLippincott",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d11b8d17492d1400aab997",
+      "answer": "HarperLeesFather",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d11d0f17492d1400aab9bf",
+      "answer": "HarperLeeToWriteUninterrupted",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d11d0f17492d1400aab9c0",
+      "answer": "TheRichmondNewsLeader",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d11fcf17492d1400aab9f1",
+      "answer": "Maycomb",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d11fcf17492d1400aab9f2",
+      "answer": "SocialChangeInSouth1950s",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d11fcf17492d1400aab9f3",
+      "answer": "Scout",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d121d317492d1400aaba27",
+      "answer": "Tom Robinson",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d121d317492d1400aaba29",
+      "answer": "This information is not provided in the knowledge graph.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d1232217492d1400aaba45",
+      "answer": "This information is not provided in the knowledge graph.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d1232217492d1400aaba47",
+      "answer": "Tom Robinson was killed during his escape.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d123c417492d1400aaba4b",
+      "answer": "Bob Ewell attacked Scout and Jem.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d123c417492d1400aaba4c",
+      "answer": "Boo Radley",
+      "no_answer_prob": 0.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d1255017492d1400aaba75",
+      "answer": "Sheriff Tate discovered the death of Bob Ewell",
+      "no_answer_prob": 0.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d126c117492d1400aaba94",
+      "answer": "Lee's father was a lawyer",
+      "no_answer_prob": 0.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d128d017492d1400aabace",
+      "answer": "Emmett Till",
+      "no_answer_prob": 0.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d128d017492d1400aabacf",
+      "answer": "OldUnderwoodTypewriter",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d128d017492d1400aabad0",
+      "answer": "ImaginativeStoryteller",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d12cb517492d1400aabb54",
+      "answer": "Content",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d12cb517492d1400aabb55",
+      "answer": "EmmettTill",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d133a017492d1400aabc1c",
+      "answer": "TactileBrilliance",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d133a017492d1400aabc1d",
+      "answer": "ChildAndAdultVoiceAmbiguity",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d13b3ae7d4791d00902049",
+      "answer": "UseOfIrony",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d14361e7d4791d00902051",
+      "answer": "Scout withbye at Door To BooRadley",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d14361e7d4791d00902052",
+      "answer": "Boo Radley",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d147d5e7d4791d00902057",
+      "answer": "MonroevilleCountyCourthouse",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d147d5e7d4791d00902058",
+      "answer": "Atticus Finch",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d18bcde7d4791d0090205e",
+      "answer": "How the town embraces racism while trying to remain decent",
+      "no_answer_prob": 0.2,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d1900ee7d4791d00902065",
+      "answer": "Her father",
+      "no_answer_prob": 0.2,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d196b2e7d4791d00902067",
+      "answer": "Boo Radley's Confinement",
+      "no_answer_prob": 0.2,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d196b2e7d4791d00902068",
+      "answer": "Southern Romantic Regionalism",
+      "no_answer_prob": 0.2,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d196b2e7d4791d00902069",
+      "answer": "Fine Folks As People With Good Sense Doing Best With What They Have",
+      "no_answer_prob": 0.2,
+      "no_data_found": false
+    }
+  ]
+}
