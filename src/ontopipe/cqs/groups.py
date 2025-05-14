@@ -31,7 +31,7 @@ class DomainDefinition(LLMDataModel):
 
 
 @contract(
-    pre_remedy=False,
+    pre_remedy=True,
     post_remedy=True,
     accumulate_errors=False,
     verbose=True,
@@ -49,6 +49,9 @@ class GroupsGenerator(Expression):
 
         return self.contract_result
 
+    def pre(self, input: DomainDefinition) -> bool:
+        return True
+
     def post(self, output: Groups) -> bool:
         return True
 
@@ -64,5 +67,7 @@ def generate_groups_for_domain(domain: str):
 
         generator.contract_perf_stats()
         logger.debug("API Usage: %s", tracker.usage)
+
+        print(x)
 
         return x

@@ -267,17 +267,5 @@ You are an ontology engineer tasked with creating a comprehensive ontology for t
 To ensure your ontology captures all relevant knowledge, perspectives, and use cases, you need to identify 
 key stakeholder groups to interview.
 
-Identify a diverse, exhaustive list of stakeholder groups who would provide valuable insights for this domain. 
-Consider:
-
-1. Direct domain practitioners with hands-on experience
-2. Domain experts with theoretical knowledge
-3. End users and beneficiaries of systems in this domain
-4. Adjacent domain specialists with overlapping expertise
-5. Newcomers who might have fresh perspectives
-6. Policy makers and regulators relevant to the domain
-7. Individuals with specialized knowledge of edge cases
-8. People with historical context about the domain's evolution)
-
-Output your response as a properly formatted JSON object with nothing else.""",
+Identify a diverse, exhaustive list of stakeholder groups who would provide valuable insights for this domain. Output your response as a properly formatted JSON object with nothing else.""",
 )
