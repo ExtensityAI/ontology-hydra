@@ -1,0 +1,106 @@
+**Scope Document: Domain of Fiction Books and Their Content**
+
+---
+
+### 1. Overview
+
+This scope document delineates the key topics, boundaries, and exclusions pertinent to the domain of **Fiction Books and Their Content**, as understood through multidisciplinary perspectives encompassing literary analysis, cultural heritage, genre specialization, and retail considerations.
+
+---
+
+### 2. Included Topics
+
+**2.1 Literary Genres and Subgenres**  
+- Classic and contemporary fiction across genres such as:
+  - Literary fiction
+  - Science fiction
+  - Fantasy
+  - Historical fiction
+  - Mystery and detective fiction
+  - Romance
+  - Horror
+  - Speculative fiction
+- Subgenre classifications (e.g., cyberpunk, dystopian, slapstick comedy)
+
+**2.2 Narrative Structures and Forms**  
+- Storytelling techniques (linear, nonlinear, fragmented narratives)
+- Structural elements (chapters, parts, framing devices)
+- Experimental and avant-garde forms
+
+**2.3 Content Themes and Motifs**  
+- Human experiences and psychological themes (identity, love, conflict)
+- Cultural, political, and social issues reflected in fiction
+- Mythology, folklore, and allegorical elements
+
+**2.4 Cultural and Regional Contexts**  
+- Literature from specific cultural, national, and linguistic backgrounds (e.g., Arabic, Latin American, European, African)
+- Preservation and representation of regional storytelling traditions
+- Multilingual editions and translations
+
+**2.5 Literary Style and Language**  
+- Language nuances, diction, and narrative voice
+- Stylistic devices and literary devices (metaphor, symbolism, irony)
+
+**2.6 Publishing Formats and Media**  
+- Print (hardcover, paperback)
+- Digital/e-books
+- Audiobooks
+- Serialized publications and online platforms
+
+**2.7 Audience and Reception**  
+- Target demographics (children, young adult, mature readers)
+- Critical reception and literary awards
+- Reader reviews and community engagement
+
+**2.8 Genre-Blending and Hybrid Works**  
+- Works that cross genre boundaries (e.g., science fiction romance, historical fantasy)
+- Labeling and classification challenges
+
+---
+
+### 3. Explicit Exclusions
+
+**3.1 Non-Fiction Content**  
+- Biographies, memoirs, essays, political treatises, and journalistic works
+
+**3.2 Academic and Textbook Materials**  
+- Literary theory reference works, scholarly analyses, and textbooks
+
+**3.3 Technical and Instructional Guides**  
+- Writing manuals, how-to guides on fiction writing, and pedagogical materials
+
+**3.4 Visual and Multimedia Content**  
+- Graphic novels (unless explicitly classified as fiction), comics, manga (unless regarded as a narrative form of fiction)
+- Films, plays, or dramatic scripts outside of literary publication
+
+**3.5 Commercial Literature Outside Fiction**  
+- Genre fiction labels like self-help, spiritual guides, or spiritual allegories unless distinctly fictionalized
+
+---
+
+### 4. Gray Areas and Overlaps
+
+**4.1 Fiction and Adjacent Domains**  
+- Works that blur boundaries, such as:
+  - Historical documents or epistolary novels that include real historical figures or events
+  - Narrative nonfiction with fictionalized elements
+  - Experimental formats (e.g., multimedia fiction)
+
+**4.2 Cultural and Literary Heritage**  
+- Folk tales and oral storytelling transcribed into written form, sometimes classified as folklore rather than fiction
+
+**4.3 Digital and Interactive Fiction**  
+- Hypertext, visual novels, and game narratives that incorporate interactive elements, straddling fiction and game design
+
+**4.4 Retail and Commercial Aspects**  
+- Book marketing, sales, and distribution strategies are recognized as external to content scope but relevant to the domain's application.
+
+---
+
+### 5. Purpose and Usage
+
+This scope aims to establish a comprehensive shared vocabulary, facilitate interdisciplinary collaboration, and delineate boundaries for scholarly, archival, classification, and commercial activities surrounding fiction books and their content.
+
+---
+
+**End of Document**

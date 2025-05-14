@@ -56,7 +56,9 @@ class TripletExtractor(Expression):
 
         # first iteration: check for new isA triplets, ensure that they are valid
         for triplet in (t for t in triplets if t.predicate == "isA"):
-            if (tds := existing_type_defs.get(triplet.subject, None)) is not None:
+            if (tds := existing_type_defs.get(triplet.subject, None)) is not None or (
+                tds := new_type_defs.get(triplet.subject, None)
+            ) is not None:
                 # Ensure that the subject entity does not have a type def already
                 errors.append(
                     f"{triplet.as_triplet_str()}: Subject '{triplet.subject}' is already defined as type '{tds}' and cannot be redefined. To fix, omit this triplet."
@@ -66,7 +68,7 @@ class TripletExtractor(Expression):
             if not self.ontology.has_class(triplet.object):
                 # ensure ontology has class for object
                 errors.append(
-                    f"{triplet.as_triplet_str()}: '{triplet.object}' is not a valid ontology class! To fix this, you need to add the class '{triplet.object}' to the ontology."
+                    f"{triplet.as_triplet_str()}: '{triplet.object}' is not a valid ontology class! To fix this, either choose an appropriate class or consider not adding this entity."
                 )
                 continue
 
@@ -150,6 +152,7 @@ def generate_kg(
             )
 
             try:
+                # TODO we can drastically reduce input size by sending triplets in a form of (subject, predicate, object) instead of escaped JSON
                 result = extractor(input=input_data)
                 if result.triplets is not None:
                     new_triplets = result.triplets

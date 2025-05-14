@@ -25,7 +25,9 @@ def _generate_comittee_with_cache(domain: str, cache_path: Path):
     return comittee
 
 
-def _generate_scope_documents_with_cache(domain: str, comittee: Comittee, cache_path: Path):
+def _generate_scope_documents_with_cache(
+    domain: str, comittee: Comittee, cache_path: Path
+):
     groups = comittee.divide_into_groups(4)  # TODO n is hyperparam
     documents = []
 
@@ -44,7 +46,9 @@ def _generate_scope_documents_with_cache(domain: str, comittee: Comittee, cache_
     return documents
 
 
-def _merge_scope_documents_with_cache(domain: str, documents: list[str], cache_path: Path):
+def _merge_scope_documents_with_cache(
+    domain: str, documents: list[str], cache_path: Path
+):
     if cache_path.exists():
         return cache_path.read_text()
 
@@ -65,7 +69,9 @@ def _generate_scope_with_cache(domain: str, comittee: Comittee, cache_path: Path
     return _merge_scope_documents_with_cache(domain, documents, merged_scope_path)
 
 
-def _generate_cqs_with_cache(domain: str, merged_scope: str, comittee: Comittee, cache_path: Path):
+def _generate_cqs_with_cache(
+    domain: str, merged_scope: str, comittee: Comittee, cache_path: Path
+):
     combined_cqs_path = cache_path / "cqs_combined.txt"
 
     # in case all cqs were generated and combined, we can load them directly and skip everything else
@@ -90,7 +96,9 @@ def _generate_cqs_with_cache(domain: str, merged_scope: str, comittee: Comittee,
     return cqs
 
 
-def _generate_ontology_with_cache(domain: str, cqs: list[str], cache_path: Path, fixed_cache_path: Path):
+def _generate_ontology_with_cache(
+    domain: str, cqs: list[str], cache_path: Path, fixed_cache_path: Path
+):
     if fixed_cache_path.exists():
         # we have a cached fixed ontology, load it directly
         return Ontology.model_validate_json(fixed_cache_path.read_text())
@@ -100,7 +108,9 @@ def _generate_ontology_with_cache(domain: str, cqs: list[str], cache_path: Path,
 
     else:
         logger.debug("Generating ontology from %d CQs", len(cqs))
-        ontology = generate_ontology(cqs, domain, cache_path.parent, cache_path.name, batch_size=4)
+        ontology = generate_ontology(
+            cqs, domain, cache_path.parent, cache_path.name, batch_size=4
+        )
 
     logger.debug("Fixing ontology")
     ontology = fix_ontology(ontology, fixed_cache_path.parent, fixed_cache_path.name)
@@ -117,7 +127,9 @@ def ontopipe(domain: str, cache_path: Path = Path(tempfile.mkdtemp("ontopipe")))
         cache_path (Path): The path to the cache directory. If it does not exist, a temp directory will be created."""
 
     if not cache_path.exists() or not cache_path.is_dir():
-        raise ValueError(f"Cache path '{cache_path}' is not a directory or does not exist")
+        raise ValueError(
+            f"Cache path '{cache_path}' is not a directory or does not exist"
+        )
 
     logger.debug("Generating ontology for domain: '%s'", domain)
     logger.debug("Using cache path: %s", cache_path)
@@ -132,20 +144,30 @@ def ontopipe(domain: str, cache_path: Path = Path(tempfile.mkdtemp("ontopipe")))
     cqs_path.mkdir(exist_ok=True, parents=True)
 
     comittee = _generate_comittee_with_cache(domain, comittee_path)
-    logger.debug("Generated comittee for domain '%s' with %d members", domain, len(comittee.members))
+    logger.debug(
+        "Generated comittee for domain '%s' with %d members",
+        domain,
+        len(comittee.members),
+    )
 
     scope = _generate_scope_with_cache(domain, comittee, scopes_path)
-    logger.debug("Generated scope for domain '%s' with %d words", domain, len(scope.split(" ")))
+    logger.debug(
+        "Generated scope for domain '%s' with %d words", domain, len(scope.split(" "))
+    )
 
     cqs = _generate_cqs_with_cache(domain, scope, comittee, cqs_path)
     logger.debug("Generated %d CQs for domain '%s'", len(cqs), domain)
 
     # use o3-mini for ontology generation
     # TODO make this configurable
-    with DynamicEngine("o3-mini", os.getenv("NEUROSYMBOLIC_ENGINE_API_KEY")):
-        ontology = _generate_ontology_with_cache(domain, cqs, ontology_path, fixed_ontology_path)
+    with DynamicEngine("o4-mini", os.getenv("NEUROSYMBOLIC_ENGINE_API_KEY")):
+        ontology = _generate_ontology_with_cache(
+            domain, cqs, ontology_path, fixed_ontology_path
+        )
 
     logger.debug(
-        "Generated ontology for domain '%s' with %d subclass relations", domain, len(ontology.subclass_relations)
+        "Generated ontology for domain '%s' with %d subclass relations",
+        domain,
+        len(ontology.subclass_relations),
     )
     return ontology
