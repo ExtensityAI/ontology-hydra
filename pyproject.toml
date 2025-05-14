@@ -16,8 +16,3 @@ symbolicai = { git = "https://github.com/ExtensityAI/symbolicai.git", rev = "81b
 
 [tool.uv.workspace]
 members = ["packages/eval"]
-
-[dependency-groups]
-dev = [
-    "debugpy>=1.8.14",
-]

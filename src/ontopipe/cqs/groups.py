@@ -31,7 +31,7 @@ class DomainDefinition(LLMDataModel):
 
 
 @contract(
-    pre_remedy=True,
+    pre_remedy=False,
     post_remedy=True,
     accumulate_errors=False,
     verbose=True,
@@ -48,9 +48,6 @@ class GroupsGenerator(Expression):
             raise ValueError("Contract failed!")
 
         return self.contract_result
-
-    def pre(self, input: DomainDefinition) -> bool:
-        return True
 
     def post(self, output: Groups) -> bool:
         return True
