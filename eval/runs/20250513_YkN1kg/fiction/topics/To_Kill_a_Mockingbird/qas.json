@@ -935,6 +935,438 @@
       "answer": "Fine Folks As People With Good Sense Doing Best With What They Have",
       "no_answer_prob": 0.2,
       "no_data_found": false
+    },
+    {
+      "qid": "56d196b2e7d4791d0090206a",
+      "answer": "South",
+      "no_answer_prob": 0.8,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d198dce7d4791d0090206f",
+      "answer": "Characters",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d19bdee7d4791d00902073",
+      "answer": "Rape",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d19bdee7d4791d00902074",
+      "answer": "PoorWhiteFarmersJury",
+      "no_answer_prob": 0.8,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d19bdee7d4791d00902075",
+      "answer": "The knowledge graph does not contain information about how many times Tom was shot.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d19cf4e7d4791d00902079",
+      "answer": "The knowledge graph does not specify what Atticus shooting the rabid dog is symbolic of.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d19e43e7d4791d0090207b",
+      "answer": "The knowledge graph does not contain information about which author Lee aspired to be like.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d19e43e7d4791d0090207c",
+      "answer": "The knowledge graph does not specify which values both authors prioritized over social standing.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d1a128e7d4791d0090207f",
+      "answer": "PressureOfConformityAndPrejudiceAmongTownspeople",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d1a128e7d4791d00902081",
+      "answer": "LifeInPrisonAndChildrenFeelingsOfSafetyAndComfortInNeighborhood",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d1a35fe7d4791d00902085",
+      "answer": "Atticus",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d1a35fe7d4791d00902086",
+      "answer": "Prejudice",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d2021be7d4791d009025e2",
+      "answer": "CharlesShields",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d2021be7d4791d009025e3",
+      "answer": "JaneAusten",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d2021be7d4791d009025e4",
+      "answer": "MissMaudie",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d20469e7d4791d009025fc",
+      "answer": "MissMaudie and JaneAusten",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d20469e7d4791d009025fd",
+      "answer": "MrsDubose",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d20469e7d4791d009025fe",
+      "answer": "Harper Lee",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d2581659d6e41400145edc",
+      "answer": "HarperLeesFather",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d25ca259d6e41400145ef0",
+      "answer": "Atticus",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d25ca259d6e41400145ef2",
+      "answer": "Mockingbird",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d25eb659d6e41400145f06",
+      "answer": "a Mockingbird",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d25eb659d6e41400145f07",
+      "answer": "Mockingbird",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d25eb659d6e41400145f08",
+      "answer": "Mockingbird",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d261f359d6e41400145f36",
+      "answer": "Tom Robinson",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d261f359d6e41400145f37",
+      "answer": "Mockingbird",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d261f359d6e41400145f38",
+      "answer": "Fine FolksAsPeopleWithGoodSenseDoingBestWithWhatTheyHave",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d2639159d6e41400145f48",
+      "answer": "Reviewed as a sensation despite editors warnings",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d2675b59d6e41400145f76",
+      "answer": "FirstPartOfNovel",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3949f59d6e414001467b8",
+      "answer": "TimeMagazine1960Review",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3958659d6e414001467c5",
+      "answer": "GranvilleHicks",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3958659d6e414001467c6",
+      "answer": "FlanneryOConnor",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3965159d6e414001467c9",
+      "answer": "MoreThan30Million",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3965159d6e414001467ca",
+      "answer": "MoreThan40Languages",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3977059d6e414001467d5",
+      "answer": "WilliamFaulkner",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3977059d6e414001467d6",
+      "answer": "JaneAusten",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3988759d6e414001467e1",
+      "answer": "Granville Hicks",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3988759d6e414001467e2",
+      "answer": "Granville Hicks",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3996b59d6e414001467eb",
+      "answer": "ScoutAtticusAndBooBook",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d39a7759d6e414001467fb",
+      "answer": "IntegrityForLegalProfession",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d39b8159d6e41400146804",
+      "answer": "HonoraryMembershipInAlabamaStateBar2008",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d39d2359d6e41400146821",
+      "answer": "1960",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d39d2359d6e41400146822",
+      "answer": "Second to the Bible",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3a1c459d6e4140014683d",
+      "answer": "UseOfRapePlotDeviceInToKillAMockingbird",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3a1c459d6e4140014683e",
+      "answer": "ToKillAMockingbird",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3d0c42ccc5a1400d82eac",
+      "answer": "AuntAlexandra",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3d0c42ccc5a1400d82ead",
+      "answer": "BlackStudentsDemoralizedResponse",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3d0c42ccc5a1400d82eae",
+      "answer": "BlackHousekeeper",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3df022ccc5a1400d82f02",
+      "answer": "Uncle Toms Cabin",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3e0852ccc5a1400d82f0f",
+      "answer": "Racism",
+      "no_answer_prob": 0.8,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3e0852ccc5a1400d82f10",
+      "answer": "Cocky and honest",
+      "no_answer_prob": 0.8,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3e2ac2ccc5a1400d82f13",
+      "answer": "HarperLee",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3e2ac2ccc5a1400d82f14",
+      "answer": "AliceLee",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3e4762ccc5a1400d82f21",
+      "answer": "Pulitzer Prize",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3e4762ccc5a1400d82f22",
+      "answer": "Since1964",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3e5de2ccc5a1400d82f2f",
+      "answer": "Not specified in the data",
+      "no_answer_prob": 0.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3e5de2ccc5a1400d82f30",
+      "answer": "This information is not in the data.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3e7442ccc5a1400d82f3d",
+      "answer": "University Of Alabama.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3e7442ccc5a1400d82f3e",
+      "answer": "President George W. Bush.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3e8402ccc5a1400d82f43",
+      "answer": "Gregory Peck.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3e9702ccc5a1400d82f51",
+      "answer": "PocketwatchToPeck",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3e9702ccc5a1400d82f52",
+      "answer": "PecksGrandson",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3ead62ccc5a1400d82f55",
+      "answer": "Veronique",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3ec6d2ccc5a1400d82f59",
+      "answer": "Monroeville",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3ec6d2ccc5a1400d82f5a",
+      "answer": "The cast is made up of townspeople.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3ec6d2ccc5a1400d82f5b",
+      "answer": "The audience is racially segregated during the courtroom scene.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3ee6e2ccc5a1400d82f5f",
+      "answer": "RobertSeanLeonard played Atticus Finch in the SergelsPlayDuncanPreston (2011) and (2006).",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3f1872ccc5a1400d82f75",
+      "answer": "The knowledge graph does not contain information on how citizens quote lines of the book.",
+      "no_answer_prob": 1.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3f1872ccc5a1400d82f77",
+      "answer": "The knowledge graph does not contain this information.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3f37f2ccc5a1400d82f83",
+      "answer": "Watchman",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "56d3f37f2ccc5a1400d82f84",
+      "answer": "The knowledge graph does not contain this information.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "56d3f37f2ccc5a1400d82f85",
+      "answer": "The knowledge graph does not contain this information.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
     }
   ]
 }

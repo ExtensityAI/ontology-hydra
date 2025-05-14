@@ -1,0 +1,22 @@
+What are the precise definitions and distinguishing features of key literary and narrative forms such as novels, novellas, short stories, episodic narratives, flash fiction, and serialized fiction?
+How should genres and subgenres within fiction be classified, and what are their defining characteristics and typical thematic or stylistic features?
+What criteria differentiate blended or interdisciplinary narrative forms, such as graphic novels, interactive fiction, transmedia storytelling, augmented, and virtual reality narratives?
+Which narrative elements and techniques—such as plot structures, character archetypes, setting, point of view, and narrative voice—are essential for categorizing and analyzing fiction?
+How do literary devices like symbolism, allegory, imagery, diction, and stylistic styles function within different genres and genres’ subcategories?
+What attributes and metadata are necessary to effectively classify and retrieve fiction works based on bibliographic information, thematic tags, genre labels, and cultural annotations?
+How can narrative content, stylistic choices, and thematic elements be formally represented and distinguished within an ontology (e.g., thematic classifications like social justice, gender, racial themes)?
+What are the specific attributes and properties of different formats and mediums—such as print editions, digital formats, audio formats, serialized and web-based formats—and how should these be represented?
+How should accessibility considerations (e.g., multilingual editions, inclusive representation, format adaptations) be incorporated into the ontology to support diverse audiences?
+What classification criteria and attributes are essential for capturing audience demographics, engagement activities, and social interactions related to fiction (e.g., book clubs, online reviews)?
+How should market and publishing practices—such as traditional, independent, or hybrid publishing, as well as rights management and emerging digital distribution trends—be modeled?
+What are the thematic, cultural, and societal contexts that influence fiction works, including regional settings, ethnoliterary diversity, postcolonial themes, and social justice issues?
+How can the ontology model technological aspects relevant to digital distribution, DRM, metadata standards, and tools for digital creation and publication?
+In delineating boundaries, what criteria justify inclusion or exclusion of formats such as poetry, drama, visual arts, and non-narrative media?
+How should borderline cases—like graphic novels, interactive and experimental narratives, hybrid genres, and folklore adaptations—be represented and classified?
+To what extent should the ontology distinguish between fiction and adjacent domains such as literary criticism, scholarly theory, children's/YA fiction, and reference works?
+How are overlapping media formats (e.g., comics vs. graphic novels), and hybrid or multigenre works best represented to respect their multifaceted nature?
+What rules or properties define the boundary between fictionalized cultural/historical narratives and factual or ethnographic content?
+How can the ontology accommodate highly experimental or nontraditional narrative structures that challenge conventional definitions of fiction?
+What classification schemas are most effective to differentiate between narrative-driven fiction and media dominated by non-prose storytelling forms?
+How should the scope clarify the exclusion of non-fiction, poetry, drama (unless narrative), and media adaptations from the core domain?
+What role do narrative techniques, media formats, and cultural context play in enabling precise categorization and retrieval within the ontology?

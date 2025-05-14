@@ -1,0 +1,56 @@
+# Scope Document: Domain of Fiction Books
+
+## 1. Introduction
+This document delineates the scope of the domain **Fiction Books** by synthesizing insights from cultural, literary, technological, and library management perspectives. It aims to establish common understanding, boundaries, and key topics relevant to practitioners, scholars, technologists, and librarians engaging with fiction literature.
+
+## 2. Inclusions within the Domain of Fiction Books
+The domain encompasses the broad spectrum of fictional narratives, storytelling formats, and related literary expressions, with attention to cultural and technological contexts.
+
+### 2.1 Literary and Narrative Genres
+- **Traditional literary fiction** (novels, novellas, short stories)
+- **Genre fiction** (mystery, romance, science fiction, fantasy, horror, etc.)
+- **Speculative fiction** (including emerging subgenres like urban fantasy, cyberpunk, dystopian)
+- **Indigenous and folklore-based fiction** (e.g., African folklore, mythologically inspired stories)
+- **Historical fiction** (fiction set in specific historical periods, blending factual and invented elements)
+- **Literary experimental fiction** (nonlinear narratives, metafictional works)
+
+### 2.2 Format and Mediums
+- **Print books** (hardcover, paperback)
+- **Digital books** (e-books, PDFs, ePub, proprietary formats)
+- **Audiobooks** (narration-based storytelling)
+- **Serialized fiction** (magazine stories, web serials)
+
+### 2.3 Metadata and Classification
+- Descriptive metadata (author, title, publication date, genre)
+- Ontologies and taxonomies relevant to fiction (e.g., genre classifications, regional tags)
+- Cultural, linguistic, and folklore annotations
+
+### 2.4 Audience and Accessibility
+- General readership (adults, young adults, children)
+- Community engagement and reading programs
+- Accessibility considerations (format adaptations for disabilities)
+
+## 3. Explicit Exclusions
+The domain explicitly excludes:
+- **Non-fiction works** (biographies, essays, journalism, academic publications)
+- **Poetry and dramatic scripts** (unless explicitly classified as fiction)
+- **Technical manuals and textbooks** (educational materials)
+- **Visual arts and multimedia content** (unless integrated within fictional storytelling mediums)
+
+## 4. Gray Areas and Overlaps
+- **Graphic Novels and Comics**: While visually driven, they often contain fictional narratives; inclusion depends on context.
+- **Interactive Fiction and Video Games**: Considered part of storytelling media but primarily interactive digital experiences, sometimes overlapping with digital fiction.
+- **Cultural and Folklore Collections**: Archival or academic collections may contain folklore-influenced stories that blur boundaries with non-fiction ethnography.
+- **Speculative and Science Fiction**: Borders with science and technology domains where scientific accuracy varies.
+
+## 5. Governance and Boundary Considerations
+- The scope centers on **the literary work and its metadata** rather than publishing industry specifics, sales, or copyright issues.
+- Emphasis on **cultural diversity** and **indigenous narratives**, reflecting the importance of African folklore, myths, and underrepresented voices in fiction.
+- Technical scope includes **metadata standards, ontologies, and discoverability tools** relevant to facilitating access and categorization.
+
+## 6. Summary
+This scope establishes the core topics linked to fiction books, emphasizing narrative diversity, formats, metadata, and cultural richness, while clearly delineating boundaries to exclude non-fiction, non-narrative arts, and certain digital media types unless they directly serve as storytelling vehicles within the fiction domain.
+
+---
+
+**End of Scope Document**

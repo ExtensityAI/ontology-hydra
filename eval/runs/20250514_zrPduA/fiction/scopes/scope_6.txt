@@ -1,0 +1,69 @@
+Scope Document: Domain of <domain>Fiction Books</domain>
+
+1. Introduction
+   1.1 Purpose
+       - To delineate the key topics, boundaries, and boundaries of the domain of Fiction Books, facilitating consistent understanding and communication among stakeholders.
+   1.2 Audience
+       - Editors, literary scholars, digital humanities researchers, publishers, and writers working within the field of fiction literature.
+
+2. Included Topics in Fiction Books
+   2.1 Literary Genres and Subgenres
+       - Literary fiction
+       - Genre fiction (e.g., mystery, romance, science fiction, fantasy, horror, historical fiction)
+       - Hybrid genres
+   2.2 Narrative Elements
+       - Plot structure and devices
+       - Characters and characterization
+       - Setting and world-building
+       - Point of view and narrative voice
+       - Themes and motifs
+   2.3 Literary Devices and Techniques
+       - Language style and diction
+       - Symbolism, allegory, and imagery
+       - Dialogue and monologue
+       - Tone and mood
+   2.4 Historical and Cultural Contexts
+       - Time periods depicted
+       - Cultural influences and authenticity
+       - Author backgrounds and intentions
+   2.5 Publishing Aspects
+       - Manuscript development
+       - Editing and revision processes
+       - Literary awards and recognition
+   2.6 Literary Trends and Movements
+       - Modernism, Postmodernism, Romanticism, Realism, etc.
+       - Emerging voices and innovative practices
+   2.7 Audience and Reception
+       - Reader demographics
+       - Critical reception and literary criticism
+       - Market trends and readership analytics
+   2.8 Digital and Technological Influences
+       - E-books and audiobooks
+       - Digital publishing platforms
+       - Interactive and collaborative storytelling tools
+
+3. Exclusions from the Domain
+   3.1 Non-Fiction Works
+       - Biographies, memoirs, essays, journalistic writing
+   3.2 Poetic and Dramatic Literature
+       - Poetry and plays (though related, distinguished from prose fiction)
+   3.3 Ancillary Literary Media
+       - Screenplays, graphic novels (unless explicitly categorized as fiction)
+   3.4 Technical, Academic, or Educational Texts
+       - Manuals, textbooks, scholarly monographs unless they are fiction-focused
+  
+4. Gray Areas and Overlaps
+   4.1 Cross-Genre and Borderline Works
+       - Fiction with substantial non-fiction elements or hybrid formats
+   4.2 Digital Fiction and Interactive Media
+       - Evolving forms such as interactive fiction or narrative-driven video games, which may blur lines
+   4.3 Adaptations and Derivative Works
+       - Films, television series, and stage adaptations based on fictional works
+   4.4 Translations and Cultural Adaptations
+       - Considerations around translation affecting literary style and authenticity
+
+5. Summary
+   - The scope of Fiction Books encompasses written narrative works primarily dedicated to fictional storytelling across various genres, narrative styles, and cultural contexts, with recognition of emerging digital forms and hybrid practices.  
+   - It explicitly excludes non-fiction, poetry, dramatic literature, and media formats primarily serving as adaptations or non-prose storytelling.
+
+End of Document

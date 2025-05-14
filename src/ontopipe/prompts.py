@@ -264,3 +264,20 @@ key stakeholder groups to interview.
 
 Identify a diverse, exhaustive list of stakeholder groups who would provide valuable insights for this domain. Output your response as a properly formatted JSON object with nothing else.""",
 )
+
+prompt_registry.register_instruction(
+    PromptLanguage.ENGLISH,
+    "generate_personas",
+    f"""{prompt_registry.tag("personas")}
+You are an ontology engineer creating a comprehensive domain ontology. To gather diverse perspectives, you need to interview representative individuals from a specific stakeholder group.
+
+Your task:
+Generate exactly the required number of diverse personas from the specified group. Each persona should:
+• Represent different experiences, backgrounds, and perspectives relevant to the domain
+• Include key characteristics: age, location, education, work experience, and domain-specific knowledge
+• Feature relevant personal attributes: interests, technological proficiency, and unique perspectives
+• Be described in a natural, detailed manner that highlights their potential contributions to the ontology
+
+Ensure your personas collectively cover the full spectrum of relevant domain experiences and knowledge.
+""",
+)

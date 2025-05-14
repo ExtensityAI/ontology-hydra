@@ -40,7 +40,7 @@ def generate_comittee_for_domain(domain: str):
     for group in groups.items:
         personas = generate_personas_for_group(domain, group)
 
-        for persona in personas.items:
+        for persona in personas:
             comittee.members.append(ComitteeMember(persona=persona, group=group))
 
     # shuffle once to randomize order, useful for sampling into groups
