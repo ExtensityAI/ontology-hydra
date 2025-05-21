@@ -12,7 +12,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.uv.sources]
-symbolicai = { git = "https://github.com/ExtensityAI/symbolicai.git", rev = "594d1894a8d3713533690baed864aaa7c179d6fe" } # fixed commit hash, update if needed
+symbolicai = { git = "https://github.com/ExtensityAI/symbolicai.git", rev = "842844d3af5e72e3b021259ae9f60f00132468f6" } # fixed commit hash, update if needed
 
 [tool.uv.workspace]
 members = ["packages/eval"]
