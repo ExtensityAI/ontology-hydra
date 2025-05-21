@@ -8,21 +8,11 @@ prompt_registry = PromptRegistry()
 # ==================================================#
 # Tags
 prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_class", "OWL CLASS")
-prompt_registry.register_tag(
-    PromptLanguage.ENGLISH, "owl_subclass_relation", "OWL SUBCLASS RELATION"
-)
-prompt_registry.register_tag(
-    PromptLanguage.ENGLISH, "owl_object_property", "OWL OBJECT PROPERTY"
-)
-prompt_registry.register_tag(
-    PromptLanguage.ENGLISH, "owl_data_property", "OWL DATA PROPERTY"
-)
-prompt_registry.register_tag(
-    PromptLanguage.ENGLISH, "competency_question", "COMPETENCY QUESTION"
-)
-prompt_registry.register_tag(
-    PromptLanguage.ENGLISH, "ontology_guidelines", "ONTOLOGY GUIDELINES"
-)
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_subclass_relation", "OWL SUBCLASS RELATION")
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_object_property", "OWL OBJECT PROPERTY")
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_data_property", "OWL DATA PROPERTY")
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "competency_question", "COMPETENCY QUESTION")
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "ontology_guidelines", "ONTOLOGY GUIDELINES")
 
 # Instructions
 prompt_registry.register_instruction(
@@ -211,9 +201,7 @@ Return your output as a structured set of operations with explicit details (incl
 # ----Triplet Extraction----------------------------#
 # ==================================================#
 # Tags
-prompt_registry.register_tag(
-    PromptLanguage.ENGLISH, "triplet_extraction", "TRIPLET EXTRACTION"
-)
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "triplet_extraction", "TRIPLET EXTRACTION")
 
 # Instructions
 prompt_registry.register_instruction(
@@ -252,6 +240,8 @@ You are extracting semantic triplets from text to populate a knowledge graph wit
 # Tags
 prompt_registry.register_tag(PromptLanguage.ENGLISH, "groups", "GROUPS")
 prompt_registry.register_tag(PromptLanguage.ENGLISH, "personas", "PERSONAS")
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "questions", "QUESTIONS")
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "scope_document", "SCOPE DOCUMENT")
 
 # Instructions
 prompt_registry.register_instruction(
@@ -280,4 +270,82 @@ Generate exactly the required number of diverse personas from the specified grou
 
 Ensure your personas collectively cover the full spectrum of relevant domain experiences and knowledge.
 """,
+)
+
+prompt_registry.register_instruction(
+    PromptLanguage.ENGLISH,
+    "generate_questions",
+    f"""{prompt_registry.tag("questions")}
+You represent a group of different experts as stated below in <group/> tags.. You have been presented with a scope document for an ontology in the given domain.
+
+## Your Task
+Based on your expertise and the provided scope document, generate a list of questions that you  would want answered by a comprehensive ontology in this domain.
+
+## Guidelines for Question Generation
+1. Focus on questions that are important to you as an expert in this field
+2. Consider questions about:
+   * Key concepts and their definitions
+   * Important distinctions between related terms
+   * Essential classifications or categorizations
+   * Critical attributes or properties
+   * Domain-specific constraints or rules
+
+## Output Format
+1. Organize your questions into a simple list format (- ...)
+2. Ensure each question is specific and concrete
+3. Phrase questions to elicit detailed, precise answers
+4. ONLY provide the list of questions, nothing else!
+
+Generate only questions that you, as these specific expert personas, would consider relevant and important for understanding the domain. Do not include questions outside your area of expertise.
+""",
+)
+
+prompt_registry.register_instruction(
+    PromptLanguage.ENGLISH,
+    "generate_scope_document",
+    f"""{prompt_registry.tag("scope_document")}
+You are a collaborative team of the given personas.
+
+Your task is to create a scope document that defines the key topics and boundaries within the given domain based on the collective expertise of these personas.
+
+## Output Requirements
+1. Structure your document with numbered sections and subsections (e.g., 1, 1.1, 1.2)
+2. Use bullet points for lists and enumerations
+3. Focus on identifying topics, not relationships or processes
+
+## Content Guidelines
+* Define what is included in this domain
+* Identify what is explicitly excluded
+* Note any gray areas or overlaps with adjacent domains
+
+Keep your document concise and focused on establishing a shared vocabulary and clear boundaries for future discussions.""",
+)
+
+prompt_registry.register_instruction(
+    PromptLanguage.ENGLISH,
+    "merge_scope_documents",
+    f"""{prompt_registry.tag("scope_document")}
+You are an expert ontology engineer creating an ontology on the given domain.
+
+Your task is to merge the provided scope documents into a single, comprehensive, well-structured document.
+
+## Output Requirements:
+1. Structure the document with numbered sections and subsections (e.g., 1, 1.1, 1.1.1)
+2. Use bullet points for lists and enumerations
+3. Organize content logically from general concepts to specific details
+
+## Content Guidelines:
+- Retain all essential information from each source document
+- Identify and harmonize key ontological elements (classes, properties, relationships, hierarchies)
+- Resolve conflicting information by selecting the most authoritative or comprehensive perspective
+- Maintain consistent terminology throughout
+- Eliminate redundancies while preserving nuanced differences
+- Ensure appropriate technical depth for domain specialists
+- Use formal, precise language suitable for technical documentation
+
+## Constraints:
+- Do not include information about document authors or personas
+- Do not add any external information not present in the source documents
+- Do not omit significant details from any source document
+- Preserve domain-specific terminology and definitions""",
 )

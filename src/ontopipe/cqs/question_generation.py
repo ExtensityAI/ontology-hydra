@@ -1,54 +1,61 @@
-import openai
+from logging import getLogger
+from typing import List
+
+from pydantic import Field
+from symai import Expression
+from symai.components import MetadataTracker
+from symai.strategy import LLMDataModel, contract
 
 from ontopipe.cqs.comittee import ComitteeMember
-from ontopipe.cqs.utils import MODEL
+from ontopipe.prompts import prompt_registry
 
-generate_questions_prompt = """
-You represent a group of different experts as stated below in <group/> tags.. You have been presented with a scope document for an ontology in the domain of <domain>{domain}</domain>.
-
-## Your Task
-Based on your expertise and the provided scope document, generate a list of questions that you  would want answered by a comprehensive ontology in this domain.
-
-## Guidelines for Question Generation
-1. Focus on questions that are important to you as an expert in this field
-2. Consider questions about:
-   * Key concepts and their definitions
-   * Important distinctions between related terms
-   * Essential classifications or categorizations
-   * Critical attributes or properties
-   * Domain-specific constraints or rules
-
-## Output Format
-1. Organize your questions into a simple list format (- ...)
-2. Ensure each question is specific and concrete
-3. Phrase questions to elicit detailed, precise answers
-4. ONLY provide the list of questions, nothing else!
-
-Generate only questions that you, as these specific expert personas, would consider relevant and important for understanding the domain. Do not include questions outside your area of expertise.
-
-<group>{group}</group>
-<scope_document>{scope_document}</scope_document>
-"""
+logger = getLogger("ontopipe.cqs")
 
 
-def generate_questions(domain: str, group: list[ComitteeMember], scope_document: str):
-    response = openai.chat.completions.create(
-        model=MODEL,
-        messages=[
-            {
-                "role": "system",
-                "content": generate_questions_prompt.format(
-                    domain=domain,
-                    group="\n".join([f"- {p.persona.description}" for p in group]),
-                    scope_document=scope_document,
-                ),
-            }
-        ],
-    )
+class QuestionGenerationInput(LLMDataModel):
+    domain: str = Field(..., description="The domain of the ontology")
+    group: list[ComitteeMember] = Field(..., description="The committee members generating questions")
+    scope_document: str = Field(..., description="The scope document containing domain information")
 
-    if response.choices[0].message.content is None:
-        raise ValueError("Failed to generate questions")
 
-    # split response into lines, filter out empty lines and lines that don't start with "-", and strip the leading "-"
-    questions = response.choices[0].message.content.strip().split("\n")
-    return [q[1:].strip() for q in questions if q.strip().startswith("-")]
+class Questions(LLMDataModel):
+    items: List[str] = Field(..., description="List of generated questions")
+
+
+@contract(
+    pre_remedy=False,
+    post_remedy=True,
+    accumulate_errors=False,
+    verbose=True,
+    remedy_retry_params=dict(tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False),
+)
+class QuestionGenerator(Expression):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+    def forward(self, input: QuestionGenerationInput, **kwargs) -> Questions:
+        if self.contract_result is None:
+            raise ValueError("Contract failed!")
+        return self.contract_result
+
+    def post(self, output: Questions) -> bool:
+        # Ensure we have at least one question (TODO in the future improve this massively, and maybe skip the scoping step as well!)
+        if not output.items or len(output.items) == 0:
+            return False
+        return True
+
+    @property
+    def prompt(self) -> str:
+        return prompt_registry.instruction("generate_questions")
+
+
+def generate_questions(domain: str, group: list[ComitteeMember], scope_document: str) -> List[str]:
+    generator = QuestionGenerator()
+
+    with MetadataTracker() as tracker:
+        result = generator(input=QuestionGenerationInput(domain=domain, group=group, scope_document=scope_document))
+
+        generator.contract_perf_stats()
+        logger.debug("API Usage: %s", tracker.usage)
+
+    return result.items

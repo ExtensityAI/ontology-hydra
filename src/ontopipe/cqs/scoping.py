@@ -1,83 +1,99 @@
-import openai
+from logging import getLogger
+
+from pydantic import Field
+from symai import Expression
+from symai.components import MetadataTracker
+from symai.strategy import LLMDataModel, contract
 
 from ontopipe.cqs.personas import Persona
-from ontopipe.cqs.utils import MODEL
+from ontopipe.prompts import prompt_registry
 
-expert_scope_document_system_prompt = """You are a collaborative team of the following personas:
-{personas}
-
-Your task is to create a scope document that defines the key topics and boundaries within the domain of <domain>{domain}</domain> based on the collective expertise of these personas.
-
-## Output Requirements
-1. Structure your document with numbered sections and subsections (e.g., 1, 1.1, 1.2)
-2. Use bullet points for lists and enumerations
-3. Focus on identifying topics, not relationships or processes
-
-## Content Guidelines
-* Define what is included in this domain
-* Identify what is explicitly excluded
-* Note any gray areas or overlaps with adjacent domains
+logger = getLogger("ontopipe.cqs")
 
 
-Keep your document concise and focused on establishing a shared vocabulary and clear boundaries for future discussions.
-"""
+class ScopeDocumentGenerationInput(LLMDataModel):
+    domain: str = Field(..., description="The domain of the ontology")
+    personas: list[Persona] = Field(..., description="The personas for which to generate a scope document")
 
 
-def generate_scope_document(domain: str, personas: list[Persona]):
-    """Generate a scope document for a given domain and group of personas. The generated document delineates the scope and boundaries of the ontology."""
-    response = openai.chat.completions.create(
-        model=MODEL,
-        messages=[
-            {
-                "role": "system",
-                "content": expert_scope_document_system_prompt.format(
-                    personas="\n".join([f"- {p.description}" for p in personas]),
-                    domain=domain,
-                ),
-            }
-        ],
-    )
-
-    if response.choices[0].message.content is None:
-        raise ValueError("Failed to generate scope document")
-
-    return response.choices[0].message.content
+class ScopeDocument(LLMDataModel):
+    content: str = Field(..., description="The generated scope document content")
 
 
-# TODO: maybe revise this by removing the fact that the ontology engineer is an expert in the domain?
+class ScopeDocumentMergeInput(LLMDataModel):
+    domain: str = Field(..., description="The domain of the ontology")
+    documents: list[str] = Field(..., description="The scope documents to merge")
 
-merge_documents_prompt = """You are an expert ontology engineer creating an ontology on <domain>{domain}</domain>.
 
-Your task is to merge the provided scope documents into a single, comprehensive, well-structured document.
+@contract(
+    pre_remedy=False,
+    post_remedy=True,
+    accumulate_errors=False,
+    verbose=True,
+    remedy_retry_params=dict(tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False),
+)
+class ScopeDocumentGenerator(Expression):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
 
-## Output Requirements:
-1. Structure the document with numbered sections and subsections (e.g., 1, 1.1, 1.1.1)
-2. Use bullet points for lists and enumerations
-3. Organize content logically from general concepts to specific details
+    def forward(self, input: ScopeDocumentGenerationInput, **kwargs) -> ScopeDocument:
+        if self.contract_result is None:
+            raise ValueError("Contract failed!")
+        return self.contract_result
 
-## Content Guidelines:
-- Retain all essential information from each source document
-- Identify and harmonize key ontological elements (classes, properties, relationships, hierarchies)
-- Resolve conflicting information by selecting the most authoritative or comprehensive perspective
-- Maintain consistent terminology throughout
-- Eliminate redundancies while preserving nuanced differences
-- Ensure appropriate technical depth for domain specialists
-- Use formal, precise language suitable for technical documentation
+    def post(self, output: ScopeDocument) -> bool:
+        if not output.content or len(output.content) < 100:
+            return False
+        return True
 
-## Constraints:
-- Do not include information about document authors or personas
-- Do not add any external information not present in the source documents
-- Do not omit significant details from any source document
-- Preserve domain-specific terminology and definitions
+    @property
+    def prompt(self) -> str:
+        return prompt_registry.instruction("generate_scope_document")
 
-The final document should represent a cohesive synthesis that accurately reflects all source materials while being clear, comprehensive, and professionally structured."""
+
+@contract(
+    pre_remedy=False,
+    post_remedy=True,
+    accumulate_errors=False,
+    verbose=True,
+    remedy_retry_params=dict(tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False),
+)
+class ScopeDocumentMerger(Expression):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+    def forward(self, input: ScopeDocumentMergeInput, **kwargs) -> ScopeDocument:
+        if self.contract_result is None:
+            raise ValueError("Contract failed!")
+        return self.contract_result
+
+    def post(self, output: ScopeDocument) -> bool:
+        if not output.content or len(output.content) < 100:
+            return False
+        return True
+
+    @property
+    def prompt(self) -> str:
+        return prompt_registry.instruction("merge_scope_documents")
+
+
+def generate_scope_document(domain: str, personas: list[Persona]) -> str:
+    """Generate a scope document for a given domain and group of personas."""
+    generator = ScopeDocumentGenerator()
+
+    with MetadataTracker() as tracker:
+        result = generator(input=ScopeDocumentGenerationInput(domain=domain, personas=personas))
+
+        generator.contract_perf_stats()
+        logger.debug("API Usage: %s", tracker.usage)
+
+    return result.content
+
 
 CHUNK_SIZE = 6
 
 
-def merge_scope_documents(
-    domain: str, documents: list[str], chunk_size=CHUNK_SIZE
-) -> str:
+def merge_scope_documents(domain: str, documents: list[str], chunk_size=CHUNK_SIZE) -> str:
     """Merge scope documents into a single document by splitting them into chunks and merging them recursively."""
 
     if len(documents) == 1:
@@ -86,35 +102,21 @@ def merge_scope_documents(
     if len(documents) <= chunk_size:
         return _do_merge(domain, documents)
 
-    # split into chunks of size chunk_size
-    chunks = [
-        documents[i : i + chunk_size] for i in range(0, len(documents), chunk_size)
-    ]
-
+    # Split into chunks of size chunk_size
+    chunks = [documents[i : i + chunk_size] for i in range(0, len(documents), chunk_size)]
     merged_chunks = [_do_merge(domain, chunk) for chunk in chunks]
 
     return merge_scope_documents(domain, merged_chunks)
 
 
-def _do_merge(domain: str, documents: list[str]):
-    document_strs = [f"<document>{doc}</document>" for doc in documents]
+def _do_merge(domain: str, documents: list[str]) -> str:
+    """Merge a small set of documents using the ScopeDocumentMerger contract."""
+    merger = ScopeDocumentMerger()
 
-    documents_message = "<documents>" + "\n\n".join(document_strs) + "</documents>"
+    with MetadataTracker() as tracker:
+        result = merger(input=ScopeDocumentMergeInput(domain=domain, documents=documents))
 
-    response = openai.chat.completions.create(
-        model=MODEL,
-        messages=[
-            {
-                "role": "system",
-                "content": merge_documents_prompt.format(
-                    domain=domain,
-                ),
-            },
-            {"role": "user", "content": documents_message},
-        ],
-    )
+        merger.contract_perf_stats()
+        logger.debug("API Usage: %s", tracker.usage)
 
-    if response.choices[0].message.content is None:
-        raise ValueError("Failed to merge scope documents")
-
-    return response.choices[0].message.content
+    return result.content

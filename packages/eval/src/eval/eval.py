@@ -9,7 +9,6 @@ from tqdm import tqdm
 from eval.squad_v2.data import SquadDataset, SquadQAPair
 from eval.squad_v2.squad_v2 import SquadV2
 from ontopipe import ontopipe
-from ontopipe.cqs.utils import MODEL
 from ontopipe.kg import generate_kg
 from ontopipe.models import KG, Ontology
 from ontopipe.vis import visualize_kg, visualize_ontology
@@ -88,7 +87,7 @@ def _answer_questions(kg: KG, qas: list[SquadQAPair]):
     questions_str = "\n".join([f"{i}: " + qa.question for i, qa in enumerate(qas)])
 
     response = openai.beta.chat.completions.parse(
-        model=MODEL,
+        model="gpt-4.1-mini",  # TODO use contracts for this as well
         messages=[
             {
                 "role": "system",

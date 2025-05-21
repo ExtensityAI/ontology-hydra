@@ -1,0 +1,23 @@
+1. Domain of Fiction Books
+   1.1. Topics Included:
+      - Narrative genres (e.g., mystery, romance, science fiction, fantasy, historical fiction, literary fiction)
+      - Literary devices and storytelling techniques
+      - Genre conventions and thematic elements
+      - Literary history and development of fiction
+      - Publishing and distribution channels for fiction
+      - Digital and print formats of fiction books
+      - Audience engagement and reader preferences
+      - Book reviews, criticism, and literary analysis
+      - Metadata related to fiction books (e.g., author, publication date, genres, themes)
+      - Emerging trends and innovative storytelling methods in fiction
+   1.2. Topics Explicitly Excluded:
+      - Non-fiction genres and topics (e.g., biography, memoir, essays, academic texts)
+      - Technical or scientific publications
+      - Visual arts and multimedia outside written fiction (e.g., graphic novels, illustrated books)
+      - Library and bookselling operational procedures not specific to fiction
+      - Copyright and legal issues unrelated to fiction content
+   1.3. Gray Areas and Overlaps:
+      - Transmedia storytelling and crossover formats (may involve fiction and other media)
+      - Digital publishing platforms and social media promotion (intersecting with marketing and distribution domains)
+      - Literary criticism that overlaps with historical and cultural studies
+      - Genre hybridization and emerging literary styles that blur traditional classifications

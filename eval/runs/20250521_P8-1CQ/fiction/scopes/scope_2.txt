@@ -1,0 +1,44 @@
+1. Key Topics in the Domain of Fiction Books
+  1.1 Genres and Subgenres
+    - Literary fiction
+    - Genre fiction (e.g., mystery, science fiction, fantasy, romance, horror)
+    - Historical fiction
+    - Experimental and innovative narrative forms
+  1.2 Narrative Structures and Techniques
+    - Plot development
+    - Characterization
+    - Use of narrative voice and point of view
+    - Literary devices and stylistic elements
+  1.3 Literary Analysis and Criticism
+    - Thematic exploration
+    - Genre evolution
+    - Narrative innovation
+    - Cultural and societal influences on storytelling
+  1.4 Publication and Publishing Processes
+    - Editing and reviewing
+    - Marketing strategies
+    - Distribution channels
+    - Digital publishing and e-books
+  1.5 Reader Engagement and Consumption
+    - Reading preferences across different demographics
+    - Digital media and social platforms influences
+    - Book reviews, recommendations, and fan communities
+  1.6 Literary Scholarship and Digital Archiving
+    - Metadata standards
+    - Classification systems
+    - Digital repositories for scholarly resources
+  1.7 Market Trends and Industry Insights
+    - Audience development
+    - Trends in sales and digital consumption
+    - Innovation in marketing and advertising
+2. Explicit Exclusions
+  - Non-fiction books and literary non-fiction
+  - Textbook and academic publications outside literary analysis
+  - Visual or multimedia storytelling formats not primarily categorized as books
+  - Book manufacturing processes (printing technology, paper production)
+  - Commercial aspects unrelated to the content, such as pricing mechanics
+3. Gray Areas and Overlaps with Adjacent Domains
+  - Relationship with media adaptations (films, series)
+  - Overlap with digital content creation and social media marketing
+  - Intersections with literary theory and academic research outside of narrative analysis
+  - The boundary between fiction genres and experimental forms, which may also influence non-fiction storytelling

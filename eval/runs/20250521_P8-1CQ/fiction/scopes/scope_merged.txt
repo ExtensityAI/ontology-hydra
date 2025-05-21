@@ -1,0 +1,32 @@
+1. Scope of the Domain: Fiction Books
+
+1.1 Included Topics:
+- Literary genres including contemporary, historical, speculative, mystery, romance, science fiction, fantasy, horror, dystopian, experimentative, and cultural fiction.
+- Storytelling techniques, narrative structures, plot development, characterization, thematic elements, motifs, and stylistic devices.
+- Literary elements such as narrative voice, point of view, stylistic innovations, and stylistic devices.
+- Formats and media, including print books, e-books, audiobooks, digital publications, and multimedia integrations.
+- Publishing processes covering manuscript development, editing, reviewing, marketing, distribution channels (both traditional and digital), and rights management.
+- Roles of stakeholders such as authors, publishers, literary agents, and readers.
+- Reader engagement, preferences, demographics, reviews, recommendations, community activities, and feedback.
+- Market and industry trends, including sales trends, audience development, innovation in marketing and advertising.
+- Literary community and scholarly discourse, such as literary criticism, thematic interpretation, academic publishing, digital repositories, and metadata standards.
+- Digital tools and technologies used for cataloging, library management, critique, reviews, data analytics, and discovery platforms.
+
+1.2 Boundaries and Exclusions:
+- Non-fiction works such as biographies, memoirs, essays, and academic publications.
+- Literary criticism, theory, or scholarly research not directly about specific books.
+- Book manufacturing processes, printing technologies, and distribution logistics outside content scope.
+- Licensing, copyright law, and legal aspects beyond specific literary content.
+- Media and content outside publishing, including films, television series, plays, comics, graphic novels (unless crossing into fiction categories), and multimedia storytelling formats.
+- Broader literary topics such as general literary theory or comparative literature not specific to fiction.
+- Textbook or academic publications outside literary analysis.
+- Book merchandising, sales mechanics unrelated to content, or broader commercial aspects.
+
+1.3 Gray Areas and Overlaps:
+- Transmedia storytelling, crossover formats, multimedia projects, and interactive fiction.
+- Digital publishing platforms, social media promotion, and online community engagement overlapping with marketing and distribution.
+- Literary genres blending or experimenting, challenging traditional classifications.
+- Overlap between reader engagement, community outreach, and cultural sectors.
+- Technologies influencing both storytelling and other digital media domains.
+
+This scope document provides a clear boundary and shared vocabulary to facilitate coherent discussion and development within the domain of Fiction Books, emphasizing core topics relevant to authors, publishers, booksellers, and readers, while establishing explicit exclusions to maintain focus.

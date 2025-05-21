@@ -26,11 +26,9 @@ class Personas(LLMDataModel):
 
 class PersonasGeneratorInput(LLMDataModel):
     domain: str = Field(..., description="The domain of the ontology")
-    group: Group = Field(..., description="The group to generate personas for")
-    existing_personas: list[Persona] = Field(
-        description="Personas that have already been found"
-    )
-    n: int = Field(..., description="Number of personas to generate")
+    group: Group = Field(..., description="The group for which you should generate personas")
+    existing_personas: list[Persona] = Field(description="Personas that have already been found")
+    n: int = Field(..., description="Number of personas that you should generate")
 
 
 PROPORTIONAL_TO_PRIORITY = -1
@@ -49,9 +47,7 @@ _priority_to_n = {
     post_remedy=True,
     accumulate_errors=False,
     verbose=True,
-    remedy_retry_params=dict(
-        tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False
-    ),
+    remedy_retry_params=dict(tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False),
 )
 class PersonasGenerator(Expression):
     def __init__(self, *args, **kwargs):
@@ -71,9 +67,7 @@ class PersonasGenerator(Expression):
         return prompt_registry.instruction("generate_personas")
 
 
-def generate_personas_for_group(
-    domain: str, group_def: Group, n: int = PROPORTIONAL_TO_PRIORITY
-):
+def generate_personas_for_group(domain: str, group_def: Group, n: int = PROPORTIONAL_TO_PRIORITY):
     if n == PROPORTIONAL_TO_PRIORITY:
         # set the number of personas to generate based on the priority of the group
         n = _priority_to_n[group_def.priority.value]
