@@ -80,6 +80,8 @@ def generate_personas_for_group(
 
     personas = list[Persona]()
 
+    # TODO maybe provide all personas here, so it can generate more diverse ones - right now we only provide the ones from the current group!
+
     generator = PersonasGenerator()
     with MetadataTracker() as tracker:
         while len(personas) < n:
