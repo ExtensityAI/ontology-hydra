@@ -825,7 +825,7 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "symbolicai", git = "https://github.com/ExtensityAI/symbolicai.git?rev=311cef029353d15073805e2516445586c634ff36" }]
+requires-dist = [{ name = "symbolicai", git = "https://github.com/ExtensityAI/symbolicai.git?rev=baa5200e290077f564f32d8cec19eef55e2d074e" }]
 
 [[package]]
 name = "openai"
@@ -1499,8 +1499,8 @@ wheels = [
 
 [[package]]
 name = "symbolicai"
-version = "0.10.0"
-source = { git = "https://github.com/ExtensityAI/symbolicai.git?rev=311cef029353d15073805e2516445586c634ff36#311cef029353d15073805e2516445586c634ff36" }
+version = "0.11.0"
+source = { git = "https://github.com/ExtensityAI/symbolicai.git?rev=baa5200e290077f564f32d8cec19eef55e2d074e#baa5200e290077f564f32d8cec19eef55e2d074e" }
 dependencies = [
     { name = "accelerate" },
     { name = "aiohttp" },
