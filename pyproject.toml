@@ -3,7 +3,7 @@ name = "ontopipe"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = "==3.12.8"
+requires-python = ">=3.12.0"
 dependencies = ["symbolicai"]
 
 
@@ -12,7 +12,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.uv.sources]
-symbolicai = { git = "https://github.com/ExtensityAI/symbolicai.git", rev = "842844d3af5e72e3b021259ae9f60f00132468f6" } # fixed commit hash, update if needed
+symbolicai = { git = "https://github.com/ExtensityAI/symbolicai.git", rev = "311cef029353d15073805e2516445586c634ff36" } # fixed commit hash, update if needed
 
 [tool.uv.workspace]
 members = ["packages/eval"]

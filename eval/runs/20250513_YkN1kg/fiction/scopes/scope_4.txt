@@ -1,0 +1,82 @@
+Scope Document: Key Topics and Boundaries of the Domain  
+**Fiction Books and Their Content**
+
+---
+
+### 1. Definition of the Domain  
+**Fiction Books and Their Content** encompasses the creation, publication, distribution, and consumption of narrative works primarily intended to entertain, provoke thought, and evoke emotional responses through invented or imaginative storytelling.
+
+### 2. Included Topics within the Domain
+
+#### 2.1 Genres and Subgenres  
+- Literary Fiction  
+- Genre Fiction (e.g., mystery, romance, science fiction, fantasy, horror, thriller)  
+- Subgenre classifications and hybrid genres  
+- Cross-genre works and experimental narratives
+
+#### 2.2 Content Elements and Literary Devices  
+- Plot structures and narrative arcs  
+- Character development and psychology  
+- Setting, world-building, and environment  
+- Themes, motifs, and symbolism  
+- Style, tone, and voice  
+- Literary devices (e.g., allegory, irony, metafiction)
+
+#### 2.3 Formats and Media  
+- Traditional print books  
+- E-books (digital formats such as EPUB, MOBI, PDF)  
+- Audiobooks and spoken-word recordings  
+- Serialized publications (e.g., online platforms, magazines)  
+- Interactive digital fiction (visual novels, hypertext fiction)
+
+#### 2.4 Publishing Processes and Industry Aspects  
+- Manuscript development and editing  
+- Cover design and aesthetics  
+- Publishing models (traditional, self-publishing, hybrid)  
+- Distribution channels (bookstores, online platforms, subscriptions)  
+- Copyright and licensing considerations
+
+#### 2.5 Audience and Engagement  
+- Readership demographics and preferences  
+- Reader communities and online forums  
+- Literary awards and recognition  
+- Marketing and promotional strategies
+
+#### 2.6 Literary Trends and Innovations  
+- Emerging themes in fiction (e.g., dystopia, post-apocalyptic, identity)  
+- Technological innovations influencing content (AR, VR storytelling)  
+- Diversity and representation in fiction  
+- Accessibility and adaptations for different audiences
+
+---
+
+### 3. Explicit Exclusions from the Domain
+
+- **Non-fictional works** such as essays, memoirs, biographies, and journalistic writing  
+- **Technical or educational texts** unless they are stylized as narrative fiction  
+- **Poetry, plays, and other dramatic writings** – unless explicitly categorized as fiction-based narratives  
+- **Content related to publishing logistics, marketing tactics, or industry analysis** that does not directly impact the fiction content itself
+
+---
+
+### 4. Gray Areas and Overlaps
+
+- **Graphic Novels and Comics**  
+  - Sometimes classified with fiction; inclusion depends on contextual focus  
+- **Evolving Formats**  
+  - Transmedia storytelling and interactive narratives that span multiple formats and platforms  
+- **Adjacent Literary Domains**  
+  - Literary criticism or academic analysis of fiction content (for research vs. consumption)  
+- **Adjacent Media**  
+  - Films, TV series, and adaptations — content but not part of the original fiction books
+
+---
+
+### 5. Boundaries and Clarifications  
+- The scope focuses primarily on the *content* of fiction books: narrative, thematic, stylistic elements.  
+- It does not encompass technical, production, or marketing processes unless they directly influence content.  
+- It excludes non-fiction genres unless they incorporate narrative fiction techniques.
+
+---
+
+*This scope aims to unify understanding across stakeholders involved in the creation, publication, and study of fiction books, ensuring clarity for future discussions and development within this domain.*

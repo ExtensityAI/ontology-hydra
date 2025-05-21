@@ -1,0 +1,3345 @@
+{
+  "name": "To_Kill_a_Mockingbird",
+  "triplets": [
+    {
+      "subject": "Capote",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "SouthernGothic",
+      "predicate": "isA",
+      "object": "FictionGenre"
+    },
+    {
+      "subject": "BlackCharactersInBook",
+      "predicate": "are",
+      "object": "Marginalized"
+    },
+    {
+      "subject": "MonroevilleTownRitual",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Peers",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Maycomb",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "AliceLee",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "MayellaEwell",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "AlicePetry",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "MichiganLawReviewArticle",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "TrumanCapote",
+      "predicate": "isA",
+      "object": "Author"
+    },
+    {
+      "subject": "LiteraryAgentRecommendedByCapote",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "AliceLee",
+      "predicate": "respondedToRumorOf",
+      "object": "CapoteAuthorship"
+    },
+    {
+      "subject": "ScoutAtticusAndBooBook",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Characters",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "WatchmanManuscript",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "RobertMulligan",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "Arthur \"Boo\" Radley",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "CapoteLetter1959",
+      "predicate": "mentioned",
+      "object": "LeeWritingBook"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "attended",
+      "object": "HuntingdonCollege"
+    },
+    {
+      "subject": "ChimamandaNgoziAdichie",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "Songbirds",
+      "predicate": "isA",
+      "object": "Motif"
+    },
+    {
+      "subject": "GregoryPeck",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "PaperbackOfTheYear1962",
+      "predicate": "isA",
+      "object": "ContentMetadata"
+    },
+    {
+      "subject": "ToKillAMockingbird",
+      "predicate": "hasThematicContent",
+      "object": "DestructionOfInnocenceTheme"
+    },
+    {
+      "subject": "LynchingMenGroup",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "BestActorGregoryPeck",
+      "predicate": "isA",
+      "object": "ContentMetadata"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "created",
+      "object": "Atticus"
+    },
+    {
+      "subject": "ToKillAMockingbird",
+      "predicate": "isConsidered",
+      "object": "GreatAmericanNovel"
+    },
+    {
+      "subject": "YorkTheatreRoyal",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "MarkChildress",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "AndrewYoung",
+      "predicate": "attributesEffectivenessTo",
+      "object": "Novel"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "approachesNeighbor",
+      "object": "MissMaudie"
+    },
+    {
+      "subject": "LegalProfession",
+      "predicate": "isA",
+      "object": "ContentCategory"
+    },
+    {
+      "subject": "RabidDog",
+      "predicate": "represents",
+      "object": "PrejudiceInMaycomb"
+    },
+    {
+      "subject": "CapoteLetter1959",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "MoreThan30Million",
+      "predicate": "isA",
+      "object": "ContentMetadata"
+    },
+    {
+      "subject": "SpiritCorrodingShame",
+      "predicate": "isA",
+      "object": "ContentAttribute"
+    },
+    {
+      "subject": "LittleBlackSambo",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "ToKillAMockingbird",
+      "predicate": "hasThematicContent",
+      "object": "RacialInjusticeTheme"
+    },
+    {
+      "subject": "Jem",
+      "predicate": "hasInjury",
+      "object": "BrokenArm"
+    },
+    {
+      "subject": "RosemaryGoring",
+      "predicate": "discussesThemeOf",
+      "object": "MoralityInBook"
+    },
+    {
+      "subject": "OneWriter",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "SergelsPlay",
+      "predicate": "hasContentRelatedEvent",
+      "object": "SergelsPlay2014SeasonClosing"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "gaveInsightInto",
+      "object": "ThemesInToKillAMockingbird"
+    },
+    {
+      "subject": "RoslynSiegel",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "uses",
+      "object": "ParodySatireAndIronyUsingChildsPerspective"
+    },
+    {
+      "subject": "JemAndScoutPerception",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "AuntAlexandra",
+      "predicate": "attributes",
+      "object": "MaycombInhabitantsFaultsAndAdvantagesToGenealogy"
+    },
+    {
+      "subject": "BestArtDirectionSetDecorationBW",
+      "predicate": "isA",
+      "object": "ContentMetadata"
+    },
+    {
+      "subject": "Survey2008",
+      "predicate": "findsMostWidelyReadBook",
+      "object": "ToKillAMockingbird"
+    },
+    {
+      "subject": "AllenBarra",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "fightsAgainst",
+      "object": "TownRacism"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "primaryIdentificationWith",
+      "object": "Jem"
+    },
+    {
+      "subject": "BestWritingScreenplayHortonFoote",
+      "predicate": "isA",
+      "object": "ContentMetadata"
+    },
+    {
+      "subject": "DestructionOfInnocenceTheme",
+      "predicate": "isA",
+      "object": "Theme"
+    },
+    {
+      "subject": "BrokenArm",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "HardingLeMay",
+      "predicate": "called",
+      "object": "SpiritCorrodingShame"
+    },
+    {
+      "subject": "GoSetAWatchman",
+      "predicate": "relatedContent",
+      "object": "ToKillAMockingbird"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "wroteFor",
+      "object": "HuntressMagazine"
+    },
+    {
+      "subject": "DonationsFromFriends",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "AtticusIsMorallyAmbiguous",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "HuntressMagazine",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Survey2008",
+      "predicate": "isA",
+      "object": "ContentRelatedEvent"
+    },
+    {
+      "subject": "ToKillAMockingbird",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Monroeville1990",
+      "predicate": "occurredIn",
+      "object": "MonroevilleAlabama"
+    },
+    {
+      "subject": "MarkChildress",
+      "predicate": "comparesImpactTo",
+      "object": "UncleTomsCabin"
+    },
+    {
+      "subject": "LeeFamily",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "EricZorn",
+      "predicate": "praisesUseOfLanguageBy",
+      "object": "Lee"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasRelationTo",
+      "object": "Arthur \"Boo\" Radley"
+    },
+    {
+      "subject": "OneInterpretationOfBookTitleIsMockingOfEducationJusticeSystemAndSociety",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "EditorAtJBLippincott",
+      "predicate": "advised",
+      "object": "HarperLee"
+    },
+    {
+      "subject": "Dill",
+      "predicate": "spendsTooMuchTimeWith",
+      "object": "Jem"
+    },
+    {
+      "subject": "RobertMulliganFilm",
+      "predicate": "isA",
+      "object": "DerivativeWork"
+    },
+    {
+      "subject": "HarperLeesFather",
+      "predicate": "defended",
+      "object": "TwoBlackMen1919"
+    },
+    {
+      "subject": "Novel",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "RammerJammerMagazine",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "ScoutNarration",
+      "predicate": "allows",
+      "object": "ReaderInnocenceAndDetachment"
+    },
+    {
+      "subject": "NationalEducationAssociation1968",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "GoSetAWatchman",
+      "predicate": "hasPublicationDate",
+      "object": "PublicationDate20150714"
+    },
+    {
+      "subject": "WhiteMaleAudienceMembers",
+      "predicate": "areChosenAt",
+      "object": "Intermission"
+    },
+    {
+      "subject": "ToKillAMockingbird",
+      "predicate": "hasCriticalReception",
+      "object": "BookBecameSensationDespiteEditorsWarnings"
+    },
+    {
+      "subject": "RosemaryGoring",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "PoorWhiteFarmersJury",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Harper Lee",
+      "predicate": "received",
+      "object": "Pulitzer Prize"
+    },
+    {
+      "subject": "BooRadley",
+      "predicate": "rescued",
+      "object": "JemAndScout"
+    },
+    {
+      "subject": "Monroeville",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "SergelsPlay",
+      "predicate": "isPerformedIn",
+      "object": "MonroevilleAlabama"
+    },
+    {
+      "subject": "FilmAdaptation1962",
+      "predicate": "wonOscarFor",
+      "object": "BestActorGregoryPeck"
+    },
+    {
+      "subject": "CourtroomScene",
+      "predicate": "takesPlaceAt",
+      "object": "MonroeCountyCourthouse"
+    },
+    {
+      "subject": "FaithInJusticeShaken",
+      "predicate": "isA",
+      "object": "PsychologicalProfile"
+    },
+    {
+      "subject": "Book",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "ToKillAMockingbird",
+      "predicate": "isPartOf",
+      "object": "StandardLiteratureCurriculum"
+    },
+    {
+      "subject": "MonroevilleAlabama",
+      "predicate": "labelsItselfAs",
+      "object": "TheLiteraryCapitalOfAlabama"
+    },
+    {
+      "subject": "BooRadleysConfinement",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "MaryMcDonaghMurphy",
+      "predicate": "collectedImpressionsOf",
+      "object": "ToKillAMockingbird"
+    },
+    {
+      "subject": "Calpurnia",
+      "predicate": "isModelFor",
+      "object": "Scout"
+    },
+    {
+      "subject": "TrumanCapote",
+      "predicate": "hasRelationTo",
+      "object": "TrumanPersons"
+    },
+    {
+      "subject": "PulitzerPrize1961",
+      "predicate": "isA",
+      "object": "ContentMetadata"
+    },
+    {
+      "subject": "FrancesCunninghamFinch",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "MonroevilleTownRitual",
+      "predicate": "isRelatedTo",
+      "object": "Novel"
+    },
+    {
+      "subject": "TimeMagazine1960Review",
+      "predicate": "reviewed",
+      "object": "Novel"
+    },
+    {
+      "subject": "LeesUseOfLaughterExposesGangreneAndDemeans",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "SergelsPlay",
+      "predicate": "hasContentRelatedEvent",
+      "object": "SergelsPlay2006"
+    },
+    {
+      "subject": "MoralHeroForReaders",
+      "predicate": "isA",
+      "object": "ContentCategory"
+    },
+    {
+      "subject": "BritishLibrarians2006",
+      "predicate": "ranked",
+      "object": "ToKillAMockingbird"
+    },
+    {
+      "subject": "UniversityOfNotreDame",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "NewYorkCity",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "received",
+      "object": "PaperbackOfTheYear1962"
+    },
+    {
+      "subject": "TimeMagazine1960Review",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "UseOfIronyByScoutAndJemTryingToUnderstandMaycombRacism",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Reviewers",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "TheAtlanticMonthly",
+      "predicate": "isA",
+      "object": "PublicationInfo"
+    },
+    {
+      "subject": "ScoutsFirstDayInSchool",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "AlabamaEditorial1992",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "ToKillAMockingbird",
+      "predicate": "hasAudienceReception",
+      "object": "Controversial"
+    },
+    {
+      "subject": "TenLanguagesFirstYear",
+      "predicate": "isA",
+      "object": "ContentMetadata"
+    },
+    {
+      "subject": "FirstDraft",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "RosaParksRefusal",
+      "predicate": "isA",
+      "object": "ContentRelatedEvent"
+    },
+    {
+      "subject": "LondonHeathrowAirport",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "EwellFamily",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "HortonFoote",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "JusticeInNovel",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "SergelsPlay",
+      "predicate": "hasContentRelatedEvent",
+      "object": "SergelsPlay2013SeasonOpening"
+    },
+    {
+      "subject": "RevSykes",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "TonjaCarter",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "GranvilleHicks",
+      "predicate": "reviewed",
+      "object": "ToKillAMockingbird"
+    },
+    {
+      "subject": "TomRobinsonDeathEvent",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "ChimamandaNgoziAdichie",
+      "predicate": "writesIn",
+      "object": "TheGuardian"
+    },
+    {
+      "subject": "ScoutAndJem",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "JudgeTaylor",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "ScoutJemDill",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Calpurnia",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "EmmettTill",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "Watchman",
+      "predicate": "isA",
+      "object": "DerivativeWork"
+    },
+    {
+      "subject": "BrotherhoodAward1961",
+      "predicate": "isA",
+      "object": "ContentMetadata"
+    },
+    {
+      "subject": "MrDolphusRaymond",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "JamesMcBride",
+      "predicate": "commentsOn",
+      "object": "BookSentimentalityAndHonesty"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "saysGoodbyeAtDoorTo",
+      "object": "BooRadley"
+    },
+    {
+      "subject": "ScoutNarration",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "BritishOverseasAirwaysCorporation",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "NovelHonor",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "LeesMotherMaidenName",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "ApartPeople",
+      "predicate": "isA",
+      "object": "CharacterRelation"
+    },
+    {
+      "subject": "Pulitzer Prize",
+      "predicate": "isA",
+      "object": "ContentMetadata"
+    },
+    {
+      "subject": "TwoBlackMen1919",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "To Kill a Mockingbird",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "JonathanMahler",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "PecksGrandson",
+      "predicate": "wasNamed",
+      "object": "Harper"
+    },
+    {
+      "subject": "AndrewNurnberg",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "OneCityOneBookProgram2001",
+      "predicate": "isA",
+      "object": "ContentRelatedEvent"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "sentDonationTo",
+      "object": "TheRichmondNewsLeader"
+    },
+    {
+      "subject": "AtticusFinch",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "To Kill a Mockingbird",
+      "predicate": "hasThematicContent",
+      "object": "DestructionOfInnocenceTheme"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "wasHonoredWith",
+      "object": "StandingOvation"
+    },
+    {
+      "subject": "SouthernWriterFlanneryOConnor",
+      "predicate": "isA",
+      "object": "Author"
+    },
+    {
+      "subject": "LeesRepresentationOfSouthernCasteSystem",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "MaryMcDonaghMurphy",
+      "predicate": "interviewed",
+      "object": "OprahWinfrey"
+    },
+    {
+      "subject": "SergelsPlay",
+      "predicate": "performedAt",
+      "object": "WestYorkshirePlayhouse"
+    },
+    {
+      "subject": "ChimamandaNgoziAdichie",
+      "predicate": "compares",
+      "object": "LeeToWilliamFaulkner"
+    },
+    {
+      "subject": "Reviewers",
+      "predicate": "wereCharmedBy",
+      "object": "ScoutAndJemObservationsOfQuirkyNeighbors"
+    },
+    {
+      "subject": "WhiteStudentsPositiveResponse",
+      "predicate": "isA",
+      "object": "AudienceReception"
+    },
+    {
+      "subject": "ThomasMallon",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "LeesFather",
+      "predicate": "wasModelFor",
+      "object": "Atticus"
+    },
+    {
+      "subject": "Survey1991BookOfMonthClubLibraryOfCongress",
+      "predicate": "ranksSecondTo",
+      "object": "Bible"
+    },
+    {
+      "subject": "Tuberculosis",
+      "predicate": "isA",
+      "object": "ContentCategory"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "hadFriend",
+      "object": "TrumanCapote"
+    },
+    {
+      "subject": "May2005Appearance",
+      "predicate": "isA",
+      "object": "ContentRelatedEvent"
+    },
+    {
+      "subject": "SouthernWriterFlanneryOConnor",
+      "predicate": "commentedOn",
+      "object": "ToKillAMockingbird"
+    },
+    {
+      "subject": "SocialChangeInSouth1950s",
+      "predicate": "isA",
+      "object": "CulturalBackground"
+    },
+    {
+      "subject": "JamesMcBride",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "Peck",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "Jem",
+      "predicate": "hasRelationTo",
+      "object": "Arthur \"Boo\" Radley"
+    },
+    {
+      "subject": "Dill",
+      "predicate": "hasPsychologicalProfile",
+      "object": "ImaginativeStoryteller"
+    },
+    {
+      "subject": "BlackStudentsDemoralizedResponse",
+      "predicate": "isA",
+      "object": "AudienceReception"
+    },
+    {
+      "subject": "WhiteMaleAudienceMembers",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Rape",
+      "predicate": "isA",
+      "object": "ContentCategory"
+    },
+    {
+      "subject": "BritishLibrarians2006",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "treatsUnfunnySituationsWith",
+      "object": "UseOfIronyByScoutAndJemTryingToUnderstandMaycombRacism"
+    },
+    {
+      "subject": "TeachingGuideEnglishJournal",
+      "predicate": "warns",
+      "object": "DifferingStudentPerceptions"
+    },
+    {
+      "subject": "Dill",
+      "predicate": "promisesToMarry",
+      "object": "Scout"
+    },
+    {
+      "subject": "CarsonMcCullers",
+      "predicate": "isA",
+      "object": "Author"
+    },
+    {
+      "subject": "MarkChildress",
+      "predicate": "comparesImpactOf",
+      "object": "Novel"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "respondedTo",
+      "object": "PassionateReactionToToKillAMockingbird"
+    },
+    {
+      "subject": "EricZorn",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "SydneyMorningHerald",
+      "predicate": "isA",
+      "object": "PublicationInfo"
+    },
+    {
+      "subject": "ToKillAMockingbird",
+      "predicate": "hasCulturalBackground",
+      "object": "AmericanDeepSouth"
+    },
+    {
+      "subject": "NationalEducationAssociation1968",
+      "predicate": "placedBookOnComplaintList",
+      "object": "ToKillAMockingbird"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "wasPleasedWith",
+      "object": "ToKillAMockingbirdMovie"
+    },
+    {
+      "subject": "RegionalistTheme",
+      "predicate": "isA",
+      "object": "Theme"
+    },
+    {
+      "subject": "ToKillAMockingbird",
+      "predicate": "hasNeverBeenOutOfPrint",
+      "object": "HardcoverPaperback"
+    },
+    {
+      "subject": "ChicagoSundayTribune",
+      "predicate": "reviewed",
+      "object": "Novel"
+    },
+    {
+      "subject": "ClaudiaDurstJohnson",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "MoralityInBook",
+      "predicate": "isA",
+      "object": "Theme"
+    },
+    {
+      "subject": "AtticusFinch",
+      "predicate": "servesAs",
+      "object": "MoralHeroForReaders"
+    },
+    {
+      "subject": "TomBrokaw",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "EdwinLee",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "MonroeCountyCourthouse",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "refusedToWriteIntroduction",
+      "object": "Mockingbird"
+    },
+    {
+      "subject": "Survey1991BookOfMonthClubLibraryOfCongress",
+      "predicate": "findsBook",
+      "object": "ToKillAMockingbird"
+    },
+    {
+      "subject": "DifferingStudentPerceptions",
+      "predicate": "isA",
+      "object": "ContentAttribute"
+    },
+    {
+      "subject": "SheriffTate",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "ReservationClerk",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Audience",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "discussesLawWith",
+      "object": "Scout"
+    },
+    {
+      "subject": "FilmAdaptation1962",
+      "predicate": "wonOscarFor",
+      "object": "BestWritingScreenplayHortonFoote"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "wroteStoriesWith",
+      "object": "TrumanCapote"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "hasRelationTo",
+      "object": "CivilRightsMovement1960s"
+    },
+    {
+      "subject": "Book Became Sensation Despite Editors Warnings",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "South",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "sharedFriendshipWith",
+      "object": "Peck"
+    },
+    {
+      "subject": "DavidKipen",
+      "predicate": "states",
+      "object": "PublicConnectionToToKillAMockingbird"
+    },
+    {
+      "subject": "ScottsboroBoys",
+      "predicate": "wereConvictedOf",
+      "object": "Rape"
+    },
+    {
+      "subject": "FrillyClothes",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "GregoryPeck",
+      "predicate": "plays",
+      "object": "AtticusFinch"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "defines",
+      "object": "FineFolksAsPeopleWithGoodSenseDoingBestWithWhatTheyHave"
+    },
+    {
+      "subject": "MaryMcDonaghMurphy",
+      "predicate": "interviewed",
+      "object": "AliceLee"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "doesNotWantPresentAtTrial",
+      "object": "Jem"
+    },
+    {
+      "subject": "AlabamaEditorial1992",
+      "predicate": "calledForDeathOf",
+      "object": "Atticus"
+    },
+    {
+      "subject": "SergelsPlay",
+      "predicate": "performedAt",
+      "object": "RegentsParkOpenAirTheatre"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasRelationTo",
+      "object": "BooRadley"
+    },
+    {
+      "subject": "ChristopherSergel",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "ParodySatireAndIronyUsingChildsPerspective",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "ToKillAMockingbird",
+      "predicate": "hasGenreClassification",
+      "object": "Bildungsroman"
+    },
+    {
+      "subject": "LeeAndJaneAusten",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "SatireAndIronyInBook",
+      "predicate": "isA",
+      "object": "ContentAttribute"
+    },
+    {
+      "subject": "Tom Robinson",
+      "predicate": "isVictimOf",
+      "object": "TownRacism"
+    },
+    {
+      "subject": "ToKillAMockingbirdAstonishingPhenomenon",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "AkinAjayi",
+      "predicate": "commentedOn",
+      "object": "JusticeInNovel"
+    },
+    {
+      "subject": "ImaginativeStoryteller",
+      "predicate": "isA",
+      "object": "PsychologicalProfile"
+    },
+    {
+      "subject": "HardingLeMay",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "Year1926",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "PocketwatchToPeck",
+      "predicate": "wasHeldWhen",
+      "object": "PeckReceivedOscar"
+    },
+    {
+      "subject": "Monroeville1990",
+      "predicate": "isA",
+      "object": "ContentRelatedEvent"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "received",
+      "object": "BrotherhoodAward1961"
+    },
+    {
+      "subject": "TeachingGuideEnglishJournal",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Townspeople",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "Narrator",
+      "predicate": "setsActionAndCharactersAmid",
+      "object": "FinchFamilyHistoryAndMaycombHistory"
+    },
+    {
+      "subject": "Calpurnia",
+      "predicate": "chastises",
+      "object": "Scout"
+    },
+    {
+      "subject": "Since1964",
+      "predicate": "isA",
+      "object": "ContentMetadata"
+    },
+    {
+      "subject": "UncleJack",
+      "predicate": "teachesToShoot",
+      "object": "Children"
+    },
+    {
+      "subject": "Audience",
+      "predicate": "isRaciallySegregatedDuring",
+      "object": "CourtroomScene"
+    },
+    {
+      "subject": "AbusiveFathersTheme",
+      "predicate": "isA",
+      "object": "Theme"
+    },
+    {
+      "subject": "CarolynJones",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "WarmthAndHumorDespiteSeriousIssues",
+      "predicate": "isA",
+      "object": "ContentAttribute"
+    },
+    {
+      "subject": "GranvilleHicks",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "WhiteMaleAudienceMembers",
+      "predicate": "makeUp",
+      "object": "Jury"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "usesNarrativeVoice",
+      "object": "ChildAndAdultVoiceAmbiguity"
+    },
+    {
+      "subject": "BookAsSouthernRomanticRegionalism",
+      "predicate": "isA",
+      "object": "ContentGenre"
+    },
+    {
+      "subject": "RidiculedForVocabularyAndLisp",
+      "predicate": "isA",
+      "object": "PsychologicalProfile"
+    },
+    {
+      "subject": "FirstPartOfNovel",
+      "predicate": "concerns",
+      "object": "ChildrensFascinationWithBooRadley"
+    },
+    {
+      "subject": "Teacher",
+      "predicate": "forbidsAtticusFromTeaching",
+      "object": "Scout"
+    },
+    {
+      "subject": "AlanJPakula",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "RichardMDaley",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "EmmettTill",
+      "predicate": "deathBecameCatalystFor",
+      "object": "CivilRightsMovement1960s"
+    },
+    {
+      "subject": "Capote",
+      "predicate": "called",
+      "object": "ApartPeople"
+    },
+    {
+      "subject": "Monroeville1990Play",
+      "predicate": "isA",
+      "object": "DerivativeWork"
+    },
+    {
+      "subject": "TheRichmondNewsLeader",
+      "predicate": "isA",
+      "object": "PublicationInfo"
+    },
+    {
+      "subject": "OneWriter",
+      "predicate": "categorized",
+      "object": "BookAsSouthernRomanticRegionalism"
+    },
+    {
+      "subject": "JacquelineTavernierCourbin",
+      "predicate": "states",
+      "object": "LeesUseOfLaughterExposesGangreneAndDemeans"
+    },
+    {
+      "subject": "OldUnderwoodTypewriter",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "EdwinLee",
+      "predicate": "isBrotherOf",
+      "object": "HarperLee"
+    },
+    {
+      "subject": "Children",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "SergelsPlay2006",
+      "predicate": "isA",
+      "object": "ContentRelatedEvent"
+    },
+    {
+      "subject": "RegionalistTheme",
+      "predicate": "reflectedIn",
+      "object": "MayellaEwellsPowerlessnessToAdmitAdvancesTowardTomRobinson"
+    },
+    {
+      "subject": "Marginalized",
+      "predicate": "isA",
+      "object": "ContentCategory"
+    },
+    {
+      "subject": "StandardLiteratureCurriculum",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "SheriffTate",
+      "predicate": "hasArgumentWith",
+      "object": "Atticus"
+    },
+    {
+      "subject": "FirstPartOfNovel",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "IntegrityForLegalProfession",
+      "predicate": "isA",
+      "object": "ContentCategory"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "usesNarrativeVoice",
+      "object": "MiddleClassNarrativeVoice"
+    },
+    {
+      "subject": "ScoutFinchAdult",
+      "predicate": "hasRelationTo",
+      "object": "AtticusFinch"
+    },
+    {
+      "subject": "ChildrensFascinationWithBooRadley",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Capote",
+      "predicate": "hasPsychologicalProfile",
+      "object": "ImaginativeStoryteller"
+    },
+    {
+      "subject": "UseOfRapePlotDeviceInToKillAMockingbird",
+      "predicate": "isA",
+      "object": "ContentCategory"
+    },
+    {
+      "subject": "NationalGeographicArticle",
+      "predicate": "isA",
+      "object": "PublicationInfo"
+    },
+    {
+      "subject": "PocketwatchToPeck",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "ScoutFinchAdult",
+      "predicate": "travelsFromTo",
+      "object": "Maycomb"
+    },
+    {
+      "subject": "Survey1991BookOfMonthClubLibraryOfCongress",
+      "predicate": "isA",
+      "object": "ContentRelatedEvent"
+    },
+    {
+      "subject": "MaryBadham",
+      "predicate": "played",
+      "object": "Scout"
+    },
+    {
+      "subject": "TheLiteraryCapitalOfAlabama",
+      "predicate": "isA",
+      "object": "ContentCategory"
+    },
+    {
+      "subject": "NationalEndowmentOfTheArtsDirectorDavidKipenCharacterizingHerAsHystericallyFunny",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "hasPsychologicalProfile",
+      "object": "FaithInJusticeShaken"
+    },
+    {
+      "subject": "EditorAtJBLippincott",
+      "predicate": "boughtManuscriptFrom",
+      "object": "HarperLee"
+    },
+    {
+      "subject": "May2005Appearance",
+      "predicate": "occurredAt",
+      "object": "LosAngelesPublicLibrary"
+    },
+    {
+      "subject": "CivilRightsMovementFactor",
+      "predicate": "relatesTo",
+      "object": "CivilRightsMovement1960s"
+    },
+    {
+      "subject": "Narrator",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "SatireAndIronyInBook",
+      "predicate": "areUsedToSuchAnExtentThat",
+      "object": "OneInterpretationOfBookTitleIsMockingOfEducationJusticeSystemAndSociety"
+    },
+    {
+      "subject": "FilmAdaptation1962",
+      "predicate": "stars",
+      "object": "GregoryPeck"
+    },
+    {
+      "subject": "ToKillAMockingbirdTomRobinson",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "RichardMatsch",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "CivilRightsMovementFactor",
+      "predicate": "isA",
+      "object": "CulturalNarrativeContent"
+    },
+    {
+      "subject": "ToKillAMockingbirdMovieRelease",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "IssuesOfRaceClassSociety",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "BobEwell",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "SheriffTate",
+      "predicate": "discoversDeathOf",
+      "object": "BobEwell"
+    },
+    {
+      "subject": "ScoutAndJemsMother",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "AmericanLibraryAssociation",
+      "predicate": "reportedChallengeRankOf",
+      "object": "ToKillAMockingbird"
+    },
+    {
+      "subject": "JemScoutDill",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "discussesLawWith",
+      "object": "Jem"
+    },
+    {
+      "subject": "Intermission",
+      "predicate": "isA",
+      "object": "ContentRelatedEvent"
+    },
+    {
+      "subject": "GoSetAWatchmanPages",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "FinchFamilyHistoryAndMaycombHistory",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "givesAirRiflesTo",
+      "object": "Children"
+    },
+    {
+      "subject": "PlayPerformanceMay",
+      "predicate": "occursAt",
+      "object": "CountyCourthouseGrounds"
+    },
+    {
+      "subject": "Capote",
+      "predicate": "investigatedMurdersWith",
+      "object": "Lee"
+    },
+    {
+      "subject": "TomRobinson",
+      "predicate": "wasModeledAfter",
+      "object": "EmmettTill"
+    },
+    {
+      "subject": "DianeMcWhorter",
+      "predicate": "asserts",
+      "object": "ToKillAMockingbirdCondemnsRacism"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "hasPsychologicalProfile",
+      "object": "ScrappyTomboy"
+    },
+    {
+      "subject": "AllenBarra",
+      "predicate": "criticized",
+      "object": "ToKillAMockingbird"
+    },
+    {
+      "subject": "JamesSJaffe",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "MoreThan40Languages",
+      "predicate": "isA",
+      "object": "ContentMetadata"
+    },
+    {
+      "subject": "GraduatingClass",
+      "predicate": "heldUpCopiesOf",
+      "object": "ToKillAMockingbird"
+    },
+    {
+      "subject": "AttorneysInspiredByAtticus",
+      "predicate": "respondedTo",
+      "object": "AlabamaEditorial1992"
+    },
+    {
+      "subject": "RobertMulligan",
+      "predicate": "directed",
+      "object": "FilmAdaptation1962"
+    },
+    {
+      "subject": "Jean Louise Finch",
+      "predicate": "hasRelationTo",
+      "object": "Scout"
+    },
+    {
+      "subject": "TomRobinson",
+      "predicate": "isConvictedBy",
+      "object": "JuryPanel"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "gave",
+      "object": "PocketwatchToPeck"
+    },
+    {
+      "subject": "AlabamaAcademyOfHonor2001",
+      "predicate": "isA",
+      "object": "ContentRelatedEvent"
+    },
+    {
+      "subject": "ChildrenFeelingsOfSafetyAndComfortInNeighborhood",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Teacher",
+      "predicate": "saysMustUndoDamageAtticusWroughtTeachingHerToReadAndWrite",
+      "object": "Scout"
+    },
+    {
+      "subject": "JB_Lippincott",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "ScrappyTomboy",
+      "predicate": "isA",
+      "object": "PsychologicalProfile"
+    },
+    {
+      "subject": "WalterLett",
+      "predicate": "diedInPrisonOf",
+      "object": "Tuberculosis"
+    },
+    {
+      "subject": "SentimentalismInBook",
+      "predicate": "isA",
+      "object": "ContentAttribute"
+    },
+    {
+      "subject": "MaryMcDonaghMurphy",
+      "predicate": "calls",
+      "object": "ToKillAMockingbirdAstonishingPhenomenon"
+    },
+    {
+      "subject": "Harper Lee",
+      "predicate": "isA",
+      "object": "Author"
+    },
+    {
+      "subject": "MaryMcDonaghMurphy",
+      "predicate": "interviewed",
+      "object": "TomBrokaw"
+    },
+    {
+      "subject": "WalterLett",
+      "predicate": "sentenceChangedTo",
+      "object": "LifeInPrison"
+    },
+    {
+      "subject": "PatrickChura",
+      "predicate": "suggestsModelForCharacter",
+      "object": "ToKillAMockingbirdTomRobinson"
+    },
+    {
+      "subject": "Capote",
+      "predicate": "livedNextDoorTo",
+      "object": "Lee"
+    },
+    {
+      "subject": "AtticusFinch_SergelsPlayDuncanPreston",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Harper Lee",
+      "predicate": "hasCulturalBackground",
+      "object": "AmericanDeepSouth"
+    },
+    {
+      "subject": "TwoParts",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "isFatherOf",
+      "object": "Scout"
+    },
+    {
+      "subject": "ScoutAndJemObservationsOfQuirkyNeighbors",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "SatiricalTreatmentOfEducation",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "comparedTo",
+      "object": "JaneAusten"
+    },
+    {
+      "subject": "PassionateReactionToToKillAMockingbird",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "TheNewYorker",
+      "predicate": "reviewed",
+      "object": "Novel"
+    },
+    {
+      "subject": "Novel",
+      "predicate": "studies",
+      "object": "JemAndScoutPerception"
+    },
+    {
+      "subject": "Veronique",
+      "predicate": "isWidowOf",
+      "object": "Peck"
+    },
+    {
+      "subject": "ToKillAMockingbird",
+      "predicate": "wasChallengedFor",
+      "object": "RacialSlursProfanityAndRapeDiscussion"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "warns",
+      "object": "Children"
+    },
+    {
+      "subject": "LosAngelesPublicLibrary",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "UniversityOfAlabamaRiots1956",
+      "predicate": "isA",
+      "object": "ContentRelatedEvent"
+    },
+    {
+      "subject": "SergelsPlay",
+      "predicate": "hasAuthor",
+      "object": "ChristopherSergel"
+    },
+    {
+      "subject": "ToKillAMockingbirdMovie",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "CanadianLanguageArtsConsultant",
+      "predicate": "reports",
+      "object": "BlackStudentsDemoralizedResponse"
+    },
+    {
+      "subject": "Dill",
+      "predicate": "hasRelationTo",
+      "object": "Scout"
+    },
+    {
+      "subject": "BlackHousekeeper",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "To Kill a Mockingbird",
+      "predicate": "hasPublicationDate",
+      "object": "PublicationDate19600711"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "hasCulturalBackground",
+      "object": "Alabama"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "receivedHonoraryMembershipInAlabamaStateBar2008",
+      "object": "AlabamaStateBar"
+    },
+    {
+      "subject": "Children",
+      "predicate": "areTerrifiedOf",
+      "object": "Arthur \"Boo\" Radley"
+    },
+    {
+      "subject": "ToKillAMockingbird",
+      "predicate": "hasBeenTranslatedIntoLanguages",
+      "object": "MoreThan40Languages"
+    },
+    {
+      "subject": "TomRobinsonTrial",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "DuncanPreston",
+      "predicate": "plays",
+      "object": "AtticusFinch_SergelsPlayDuncanPreston"
+    },
+    {
+      "subject": "WestYorkshirePlayhouse",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "DavidKipen",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "Cunninghams",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "ClassistStereotypingInBook",
+      "predicate": "isA",
+      "object": "ContentCategory"
+    },
+    {
+      "subject": "SergelsPlay",
+      "predicate": "debutedAt",
+      "object": "Monroeville1990"
+    },
+    {
+      "subject": "AndrewYoung",
+      "predicate": "commentsOn",
+      "object": "Novel"
+    },
+    {
+      "subject": "SergelsPlay2014SeasonClosing",
+      "predicate": "isA",
+      "object": "ContentRelatedEvent"
+    },
+    {
+      "subject": "ToKillAMockingbird",
+      "predicate": "hasCulturalBackground",
+      "object": "SocialChangeInSouth1950s"
+    },
+    {
+      "subject": "TayHohoff",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "AttorneysInspiredByAtticus",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "imaginesLifeFromPerspective",
+      "object": "BooRadley"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "To Kill a Mockingbird",
+      "predicate": "hasThematicContent",
+      "object": "RacialInjusticeTheme"
+    },
+    {
+      "subject": "PublicationDate20150714",
+      "predicate": "isA",
+      "object": "FictionBookMetadata"
+    },
+    {
+      "subject": "Calpurnia",
+      "predicate": "escortedToChurch",
+      "object": "Jem"
+    },
+    {
+      "subject": "TrumanCapote",
+      "predicate": "feltAlienatedFrom",
+      "object": "Peers"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "usesNarrativeTechnique",
+      "object": "Flashback"
+    },
+    {
+      "subject": "AtticusFinch_SergelsPlayRobertSeanLeonard",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "madeAppearanceAt",
+      "object": "May2005Appearance"
+    },
+    {
+      "subject": "Dill",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "TownRacism",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "PeckReceivedOscar",
+      "predicate": "isA",
+      "object": "ContentRelatedEvent"
+    },
+    {
+      "subject": "MaycombEmbracesRacismWhileTryingToRemainDecent",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "PrejudiceInMaycomb",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "HortonFoote",
+      "predicate": "wroteScreenplayFor",
+      "object": "FilmAdaptation1962"
+    },
+    {
+      "subject": "DavidLister",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "isA",
+      "object": "Author"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "movedTo",
+      "object": "NewYorkCity"
+    },
+    {
+      "subject": "RacialTensionsAcceleration",
+      "predicate": "isA",
+      "object": "CulturalNarrativeContent"
+    },
+    {
+      "subject": "TomRobinson",
+      "predicate": "wasModeledAfter",
+      "object": "ScottsboroBoys"
+    },
+    {
+      "subject": "To Kill a Mockingbird",
+      "predicate": "hasCriticalReception",
+      "object": "Book Became Sensation Despite Editors Warnings"
+    },
+    {
+      "subject": "FineFolksAsPeopleWithGoodSenseDoingBestWithWhatTheyHave",
+      "predicate": "isA",
+      "object": "ContentAttribute"
+    },
+    {
+      "subject": "Cast",
+      "predicate": "isMadeUpOf",
+      "object": "Townspeople"
+    },
+    {
+      "subject": "BobEwell",
+      "predicate": "attacked",
+      "object": "Scout"
+    },
+    {
+      "subject": "Jean Louise Finch",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "isTemptedToStandUpFor",
+      "object": "Atticus"
+    },
+    {
+      "subject": "FinchFamily",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "JamesMcBride",
+      "predicate": "evaluates",
+      "object": "HarperLeeAsBrilliant"
+    },
+    {
+      "subject": "FrancesCunninghamFinch",
+      "predicate": "isMotherOf",
+      "object": "HarperLee"
+    },
+    {
+      "subject": "PresidentialMedalOfFreedom2007",
+      "predicate": "isA",
+      "object": "ContentMetadata"
+    },
+    {
+      "subject": "ReaderInnocenceAndDetachment",
+      "predicate": "isA",
+      "object": "PsychologicalProfile"
+    },
+    {
+      "subject": "MaycombCitizens",
+      "predicate": "disapproveOf",
+      "object": "Atticus"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "faces",
+      "object": "LynchingMenGroup"
+    },
+    {
+      "subject": "EdwinBruell",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "hadFriend",
+      "object": "TrumanCapote"
+    },
+    {
+      "subject": "South",
+      "predicate": "drivesPlotMoreThan",
+      "object": "Characters"
+    },
+    {
+      "subject": "JacquelineTavernierCourbin",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "ScoutsFirstDayInSchool",
+      "predicate": "is",
+      "object": "SatiricalTreatmentOfEducation"
+    },
+    {
+      "subject": "GreatAmericanNovel",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "WalterLett",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "RevSykes",
+      "predicate": "invited",
+      "object": "JemScoutDill"
+    },
+    {
+      "subject": "AlicePetry",
+      "predicate": "explainsAbout",
+      "object": "AtticusFinch"
+    },
+    {
+      "subject": "MonroevilleTownRitual",
+      "predicate": "isRelatedTo",
+      "object": "AnnualPerformance"
+    },
+    {
+      "subject": "PatrickChura",
+      "predicate": "enumeratesInjusticesOf",
+      "object": "ToKillAMockingbirdTomRobinson"
+    },
+    {
+      "subject": "ScoutFinchAdult",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Controversial",
+      "predicate": "isA",
+      "object": "AudienceReception"
+    },
+    {
+      "subject": "GoSetAWatchman",
+      "predicate": "isA",
+      "object": "DerivativeWork"
+    },
+    {
+      "subject": "ToKillAMockingbird",
+      "predicate": "isPartOfTrilogyWith",
+      "object": "GoSetAWatchman"
+    },
+    {
+      "subject": "PresidentialMedalOfFreedom2007",
+      "predicate": "awardedBy",
+      "object": "PresidentGeorgeWBush"
+    },
+    {
+      "subject": "HuntingdonCollege",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "DavidKipen",
+      "predicate": "supervised",
+      "object": "TheBigRead"
+    },
+    {
+      "subject": "ToKillAMockingbird",
+      "predicate": "isInfluentialTextbookFor",
+      "object": "LawProfessorUniversityOfNotreDame"
+    },
+    {
+      "subject": "MonroevilleAlabama",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "CapoteAuthorship",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "JuryPanel",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "MaycombCitizens",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "ScottsboroBoys",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Jem",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "PublicationDate19600711",
+      "predicate": "isA",
+      "object": "FictionBookMetadata"
+    },
+    {
+      "subject": "CanadianLanguageArtsConsultant",
+      "predicate": "reports",
+      "object": "WhiteStudentsPositiveResponse"
+    },
+    {
+      "subject": "Cast",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Bildungsroman",
+      "predicate": "isA",
+      "object": "FictionGenre"
+    },
+    {
+      "subject": "SergelsPlay2013SeasonOpening",
+      "predicate": "isA",
+      "object": "ContentRelatedEvent"
+    },
+    {
+      "subject": "SentimentalismInBook",
+      "predicate": "seenIn",
+      "object": "LeesRepresentationOfSouthernCasteSystem"
+    },
+    {
+      "subject": "Novel",
+      "predicate": "hasContentAttribute",
+      "object": "WarmthAndHumorDespiteSeriousIssues"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "received",
+      "object": "HonoraryDoctorate2006"
+    },
+    {
+      "subject": "JemAndScout",
+      "predicate": "tryToUnderstandHow",
+      "object": "MaycombEmbracesRacismWhileTryingToRemainDecent"
+    },
+    {
+      "subject": "TonjaCarter",
+      "predicate": "discovered",
+      "object": "WatchmanManuscript"
+    },
+    {
+      "subject": "HarperLeesHometownMonroeville",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "TheHerald",
+      "predicate": "isA",
+      "object": "PublicationInfo"
+    },
+    {
+      "subject": "UniversityOfAlabama",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "HarperLeeToWriteUninterrupted",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Children",
+      "predicate": "taunt",
+      "object": "Scout"
+    },
+    {
+      "subject": "JaneSullivan",
+      "predicate": "writesIn",
+      "object": "SydneyMorningHerald"
+    },
+    {
+      "subject": "JamesSJaffe",
+      "predicate": "reviewed",
+      "object": "GoSetAWatchmanPages"
+    },
+    {
+      "subject": "FilmAdaptation1962",
+      "predicate": "grossed",
+      "object": "MoreThan20Million"
+    },
+    {
+      "subject": "BlackHousekeeper",
+      "predicate": "caresFor",
+      "object": "LeeFamily"
+    },
+    {
+      "subject": "ChildAndAdultVoiceAmbiguity",
+      "predicate": "isA",
+      "object": "NarrativeTechnique"
+    },
+    {
+      "subject": "HarperLeesFather",
+      "predicate": "wasLawyer",
+      "object": "LegalProfession"
+    },
+    {
+      "subject": "Go Set a Watchman",
+      "predicate": "hasPublicationDate",
+      "object": "PublicationDate20150714"
+    },
+    {
+      "subject": "PatrickChura",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "SergelsPlay",
+      "predicate": "isA",
+      "object": "DerivativeWork"
+    },
+    {
+      "subject": "ChicagoSundayTribune",
+      "predicate": "isA",
+      "object": "PublicationInfo"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "grewUpIn",
+      "object": "MonroevilleAlabama"
+    },
+    {
+      "subject": "PecksGrandson",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "MrsDubose",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "BookSentimentalityAndHonesty",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "ToKillAMockingbird",
+      "predicate": "hasSoldCopies",
+      "object": "MoreThan30Million"
+    },
+    {
+      "subject": "BooRadley",
+      "predicate": "asksToWalkHome",
+      "object": "Scout"
+    },
+    {
+      "subject": "Veronique",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "MaryMcDonaghMurphy",
+      "predicate": "interviewed",
+      "object": "RosanneCash"
+    },
+    {
+      "subject": "ScoutJemDill",
+      "predicate": "shame",
+      "object": "LynchingMenGroup"
+    },
+    {
+      "subject": "FlirtingWithWhiteWoman",
+      "predicate": "isA",
+      "object": "ContentCategory"
+    },
+    {
+      "subject": "CalpurniasCookbook",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "TheGuardian",
+      "predicate": "isA",
+      "object": "PublicationInfo"
+    },
+    {
+      "subject": "TomRobinson",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "RichardMDaley",
+      "predicate": "initiated",
+      "object": "OneCityOneBookProgram2001"
+    },
+    {
+      "subject": "Calpurnia",
+      "predicate": "escortedToChurch",
+      "object": "ScoutAndJem"
+    },
+    {
+      "subject": "UncleJack",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "SergelsPlay",
+      "predicate": "performedAt",
+      "object": "YorkTheatreRoyal"
+    },
+    {
+      "subject": "ThemesInToKillAMockingbird",
+      "predicate": "isA",
+      "object": "Theme"
+    },
+    {
+      "subject": "MorrisDees",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "AkinAjayi",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "JaneSullivan",
+      "predicate": "agreesOnMoralImpactOf",
+      "object": "Book"
+    },
+    {
+      "subject": "MorrisDees",
+      "predicate": "citesAsInspiration",
+      "object": "AtticusFinch"
+    },
+    {
+      "subject": "MoreEducatedWhiteTownspeople",
+      "predicate": "supported",
+      "object": "PoorWhiteFarmersJury"
+    },
+    {
+      "subject": "FinchFamily",
+      "predicate": "sharesNameWith",
+      "object": "LeesMotherMaidenName"
+    },
+    {
+      "subject": "LeeWritingBook",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "MayellaEwell",
+      "predicate": "influences",
+      "object": "Scout"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "inspires",
+      "object": "NationalEndowmentOfTheArtsDirectorDavidKipenCharacterizingHerAsHystericallyFunny"
+    },
+    {
+      "subject": "Veronique",
+      "predicate": "requested",
+      "object": "May2005Appearance"
+    },
+    {
+      "subject": "ToKillAMockingbirdReaction",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Capote",
+      "predicate": "hasPsychologicalProfile",
+      "object": "RidiculedForVocabularyAndLisp"
+    },
+    {
+      "subject": "AkinAjayi",
+      "predicate": "defended",
+      "object": "ToKillAMockingbird"
+    },
+    {
+      "subject": "RosemaryGoring",
+      "predicate": "writesIn",
+      "object": "TheHerald"
+    },
+    {
+      "subject": "MissMaudie",
+      "predicate": "isModelFor",
+      "object": "Scout"
+    },
+    {
+      "subject": "BobEwell",
+      "predicate": "attacked",
+      "object": "Jem"
+    },
+    {
+      "subject": "WilliamFaulkner",
+      "predicate": "isA",
+      "object": "Author"
+    },
+    {
+      "subject": "AmericanDeepSouth",
+      "predicate": "isA",
+      "object": "CulturalBackground"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "hasCulturalBackground",
+      "object": "Monroeville"
+    },
+    {
+      "subject": "GranvilleHicks",
+      "predicate": "criticized",
+      "object": "ToKillAMockingbird"
+    },
+    {
+      "subject": "CharlesShields",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "MayellasMother",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "MaycombInhabitantsFaultsAndAdvantagesToGenealogy",
+      "predicate": "isA",
+      "object": "ContentAttribute"
+    },
+    {
+      "subject": "MrRadley",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "UncleTomsCabin",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "CarsonMcCullers",
+      "predicate": "agreedWith",
+      "object": "TimeMagazine1960Review"
+    },
+    {
+      "subject": "MichaelLind",
+      "predicate": "criticizes",
+      "object": "ClassistStereotypingInBook"
+    },
+    {
+      "subject": "HardcoverPaperback",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Novel",
+      "predicate": "isDividedInto",
+      "object": "TwoParts"
+    },
+    {
+      "subject": "AlanJPakula",
+      "predicate": "produced",
+      "object": "FilmAdaptation1962"
+    },
+    {
+      "subject": "DonationsFromFriends",
+      "predicate": "allowed",
+      "object": "HarperLeeToWriteUninterrupted"
+    },
+    {
+      "subject": "ToKillAMockingbirdCondemnsRacism",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "attended",
+      "object": "UniversityOfAlabama"
+    },
+    {
+      "subject": "PeopleInMonroeville",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "personifies",
+      "object": "ExemplaryLawyer"
+    },
+    {
+      "subject": "NewYork",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "Watchman",
+      "predicate": "isDraftOf",
+      "object": "ToKillAMockingbird"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "primaryIdentificationWith",
+      "object": "Atticus"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "received",
+      "object": "PresidentialMedalOfFreedom2007"
+    },
+    {
+      "subject": "AlabamaStateBar",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "wroteAbout",
+      "object": "PeopleInMonroeville"
+    },
+    {
+      "subject": "CharlesShields",
+      "predicate": "wroteBiographyOf",
+      "object": "HarperLee"
+    },
+    {
+      "subject": "TheAtlanticMonthly",
+      "predicate": "reviewed",
+      "object": "Novel"
+    },
+    {
+      "subject": "Arthur \"Boo\" Radley",
+      "predicate": "makesGesturesOfAffectionTo",
+      "object": "Children"
+    },
+    {
+      "subject": "AkinAjayi",
+      "predicate": "commentedOn",
+      "object": "IssuesOfRaceClassSociety"
+    },
+    {
+      "subject": "TactileBrilliance",
+      "predicate": "isA",
+      "object": "StylisticFeature"
+    },
+    {
+      "subject": "FinalBook",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "CivilRightsMovement1960s",
+      "predicate": "isA",
+      "object": "CulturalBackground"
+    },
+    {
+      "subject": "MaryBadham",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "JemAndScout",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "CanadianLanguageArtsConsultant",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "Monroeville1990Play",
+      "predicate": "isPerformedIn",
+      "object": "MonroevilleAlabama"
+    },
+    {
+      "subject": "ParentHanoverVirginia1966",
+      "predicate": "protestedAgainst",
+      "object": "UseOfRapePlotDeviceInToKillAMockingbird"
+    },
+    {
+      "subject": "TomRobinson",
+      "predicate": "isKilledWhileEscapingPrison",
+      "object": "KillingEvent"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "wasInductedInto",
+      "object": "AlabamaAcademyOfHonor2001"
+    },
+    {
+      "subject": "PresidentGeorgeWBush",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "FirstPartOfNovel",
+      "predicate": "concerns",
+      "object": "ChildrenFeelingsOfSafetyAndComfortInNeighborhood"
+    },
+    {
+      "subject": "MissMaudie",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Capote",
+      "predicate": "wrote",
+      "object": "InColdBlood"
+    },
+    {
+      "subject": "LeesFather",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "HarperLeesFather",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "ThomasMallon",
+      "predicate": "notedNarrativeVoiceOf",
+      "object": "Novel"
+    },
+    {
+      "subject": "TomRobinson",
+      "predicate": "isKilledDuringEscape",
+      "object": "TomRobinsonDeathEvent"
+    },
+    {
+      "subject": "Novel",
+      "predicate": "hasCulturalNarrativeContent",
+      "object": "CivilRightsMovementFactor"
+    },
+    {
+      "subject": "TheBigRead",
+      "predicate": "isA",
+      "object": "ContentRelatedEvent"
+    },
+    {
+      "subject": "KillingEvent",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Jury",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "AlbertMurray",
+      "predicate": "commentsOn",
+      "object": "MonroevilleTownRitual"
+    },
+    {
+      "subject": "HonoraryDoctorate2006",
+      "predicate": "isA",
+      "object": "ContentMetadata"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "workedAs",
+      "object": "ReservationClerk"
+    },
+    {
+      "subject": "SergelsPlay2011",
+      "predicate": "isA",
+      "object": "ContentRelatedEvent"
+    },
+    {
+      "subject": "AndrewYoung",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "AuntAlexandra",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "JaneAusten",
+      "predicate": "isA",
+      "object": "Author"
+    },
+    {
+      "subject": "AlbertMurray",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "Tom Robinson",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "wroteFor",
+      "object": "RammerJammerMagazine"
+    },
+    {
+      "subject": "CriticsOfAtticus",
+      "predicate": "maintain",
+      "object": "AtticusIsMorallyAmbiguous"
+    },
+    {
+      "subject": "Children",
+      "predicate": "taunt",
+      "object": "Jem"
+    },
+    {
+      "subject": "MichiganLawReviewArticle",
+      "predicate": "commentsOn",
+      "object": "AtticusFinch"
+    },
+    {
+      "subject": "WalterLett",
+      "predicate": "wasConvictedOf",
+      "object": "Rape"
+    },
+    {
+      "subject": "Alabama",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "feltAlienatedFrom",
+      "object": "Peers"
+    },
+    {
+      "subject": "To Kill a Mockingbird",
+      "predicate": "hasAuthor",
+      "object": "Harper Lee"
+    },
+    {
+      "subject": "Jem",
+      "predicate": "hasPsychologicalProfile",
+      "object": "FaithInJusticeShaken"
+    },
+    {
+      "subject": "MrsDubose",
+      "predicate": "chastises",
+      "object": "Scout"
+    },
+    {
+      "subject": "CourtroomScene",
+      "predicate": "isA",
+      "object": "ContentRelatedEvent"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "refusedInterviews",
+      "object": "Since1964"
+    },
+    {
+      "subject": "BlackCharactersInBook",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "JaneSullivan",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "ThomasMallon",
+      "predicate": "criticized",
+      "object": "Scout"
+    },
+    {
+      "subject": "MaryMcDonaghMurphy",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "HarperLeeAsBrilliant",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "TrumanPersons",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "MayellaEwellsPowerlessnessToAdmitAdvancesTowardTomRobinson",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "OprahWinfrey",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "Bible",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "FilmAdaptation1962",
+      "predicate": "wasNominatedFor",
+      "object": "BestSupportingActressMaryBadham"
+    },
+    {
+      "subject": "Dill",
+      "predicate": "livedNextDoorTo",
+      "object": "Scout"
+    },
+    {
+      "subject": "PlayPerformanceMay",
+      "predicate": "isA",
+      "object": "ContentRelatedEvent"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "declared",
+      "object": "NovelHonor"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "doesNotWantPresentAtTrial",
+      "object": "Scout"
+    },
+    {
+      "subject": "DianeMcWhorter",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "CarolynJones",
+      "predicate": "arguesSymbolismOf",
+      "object": "RabidDog"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "presentedWritingTo",
+      "object": "LiteraryAgentRecommendedByCapote"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "defends",
+      "object": "TomRobinson"
+    },
+    {
+      "subject": "RosaParksRefusal",
+      "predicate": "sparked",
+      "object": "MontgomeryBusBoycott1955"
+    },
+    {
+      "subject": "Children",
+      "predicate": "findSmallGiftsFrom",
+      "object": "Arthur \"Boo\" Radley"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "modeledAfter",
+      "object": "HarperLeesFather"
+    },
+    {
+      "subject": "LawProfessorUniversityOfNotreDame",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "MoreEducatedWhiteTownspeople",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "EditorAtJBLippincott",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "RobertSeanLeonard",
+      "predicate": "plays",
+      "object": "AtticusFinch_SergelsPlayRobertSeanLeonard"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "beatsUp",
+      "object": "Dill"
+    },
+    {
+      "subject": "Harper",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "RosanneCash",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "MoreThan20Million",
+      "predicate": "isA",
+      "object": "ContentMetadata"
+    },
+    {
+      "subject": "BestSupportingActressMaryBadham",
+      "predicate": "isA",
+      "object": "ContentMetadata"
+    },
+    {
+      "subject": "StudentsAndAudience",
+      "predicate": "gaveStandingOvationTo",
+      "object": "Lee"
+    },
+    {
+      "subject": "PoorWhiteFarmersJury",
+      "predicate": "convicted",
+      "object": "TomRobinson"
+    },
+    {
+      "subject": "AlabamaStateBarMonument1997",
+      "predicate": "commemorates",
+      "object": "Atticus"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "standsUpTo",
+      "object": "AuntAlexandra"
+    },
+    {
+      "subject": "BooRadley",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "RosemaryGoring",
+      "predicate": "notesConnectionBetween",
+      "object": "LeeAndJaneAusten"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "shoots",
+      "object": "RabidDog"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "bornIn",
+      "object": "Year1926"
+    },
+    {
+      "subject": "CriticsOfAtticus",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "WalterCunningham",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "RegentsParkOpenAirTheatre",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "ParentHanoverVirginia1966",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "AmericanLibraryAssociation",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "AbsentMothersTheme",
+      "predicate": "isA",
+      "object": "Theme"
+    },
+    {
+      "subject": "LifeInPrison",
+      "predicate": "isA",
+      "object": "ContentCategory"
+    },
+    {
+      "subject": "CountyCourthouseGrounds",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "ExemplaryLawyer",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Dill",
+      "predicate": "visits",
+      "object": "Maycomb"
+    },
+    {
+      "subject": "StudentsAndAudience",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "TomRobinson",
+      "predicate": "isVictimOf",
+      "object": "TownRacism"
+    },
+    {
+      "subject": "MissMaudie",
+      "predicate": "explainsAbout",
+      "object": "Mockingbird"
+    },
+    {
+      "subject": "RacialInjusticeTheme",
+      "predicate": "isA",
+      "object": "Theme"
+    },
+    {
+      "subject": "MrsRadley",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "TheNewYorker",
+      "predicate": "isA",
+      "object": "PublicationInfo"
+    },
+    {
+      "subject": "ToKillAMockingbird",
+      "predicate": "hasGenreClassification",
+      "object": "SouthernGothic"
+    },
+    {
+      "subject": "InColdBlood",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "PocketwatchToPeck",
+      "predicate": "wasStolenAt",
+      "object": "LondonHeathrowAirport"
+    },
+    {
+      "subject": "AlabamaStateBarMonument1997",
+      "predicate": "isA",
+      "object": "ContentRelatedEvent"
+    },
+    {
+      "subject": "HarperLeesMother",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "RabidDog",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "Go Set a Watchman",
+      "predicate": "isA",
+      "object": "DerivativeWork"
+    },
+    {
+      "subject": "SergelsPlay",
+      "predicate": "hasContentRelatedEvent",
+      "object": "PlayPerformanceMay"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "hasTalentForNarration",
+      "object": "TactileBrilliance"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "usedTypewriterOf",
+      "object": "OldUnderwoodTypewriter"
+    },
+    {
+      "subject": "DuncanPreston",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "EricZorn",
+      "predicate": "writesIn",
+      "object": "ChicagoTribune"
+    },
+    {
+      "subject": "GraduatingClass",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "Mayella",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "StandingOvation",
+      "predicate": "isA",
+      "object": "ContentRelatedEvent"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "respects",
+      "object": "Calpurnia"
+    },
+    {
+      "subject": "RacialSlursProfanityAndRapeDiscussion",
+      "predicate": "isA",
+      "object": "ContentCategory"
+    },
+    {
+      "subject": "Peck",
+      "predicate": "met",
+      "object": "LeesFather"
+    },
+    {
+      "subject": "RoslynSiegel",
+      "predicate": "includesAsExample",
+      "object": "ToKillAMockingbirdTomRobinson"
+    },
+    {
+      "subject": "FilmAdaptation1962",
+      "predicate": "wonOscarFor",
+      "object": "BestArtDirectionSetDecorationBW"
+    },
+    {
+      "subject": "Mockingbird",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "AllenBarra",
+      "predicate": "criticized",
+      "object": "Lee"
+    },
+    {
+      "subject": "Novel",
+      "predicate": "hasCulturalNarrativeContent",
+      "object": "RacialTensionsAcceleration"
+    },
+    {
+      "subject": "MichaelLind",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "HarperLee",
+      "predicate": "received",
+      "object": "PulitzerPrize1961"
+    },
+    {
+      "subject": "Go Set a Watchman",
+      "predicate": "relatedContent",
+      "object": "To Kill a Mockingbird"
+    },
+    {
+      "subject": "LeesFather",
+      "predicate": "diedBefore",
+      "object": "ToKillAMockingbirdMovieRelease"
+    },
+    {
+      "subject": "ChicagoTribune",
+      "predicate": "isA",
+      "object": "PublicationInfo"
+    },
+    {
+      "subject": "LeeToWilliamFaulkner",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "OneCityOneBookProgram2001",
+      "predicate": "featuredBook",
+      "object": "ToKillAMockingbird"
+    },
+    {
+      "subject": "AnnualPerformance",
+      "predicate": "isA",
+      "object": "ContentRelatedEvent"
+    },
+    {
+      "subject": "MonroeCountyHeritageMuseum",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "EdwinBruell",
+      "predicate": "summarizedSymbolismOf",
+      "object": "Mockingbird"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "isA",
+      "object": "Author"
+    },
+    {
+      "subject": "AtticusFinch",
+      "predicate": "servesAsModelOf",
+      "object": "IntegrityForLegalProfession"
+    },
+    {
+      "subject": "ToKillAMockingbird",
+      "predicate": "wasTranslatedIntoLanguages",
+      "object": "TenLanguagesFirstYear"
+    },
+    {
+      "subject": "RobertSeanLeonard",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "isFatherOf",
+      "object": "Jem"
+    },
+    {
+      "subject": "ThemeMockingbird",
+      "predicate": "isA",
+      "object": "Theme"
+    },
+    {
+      "subject": "WalterLett",
+      "predicate": "wasAccusedOf",
+      "object": "Rape"
+    },
+    {
+      "subject": "Children",
+      "predicate": "areFascinatedBy",
+      "object": "Arthur \"Boo\" Radley"
+    },
+    {
+      "subject": "SergelsPlay",
+      "predicate": "hasContentRelatedEvent",
+      "object": "SergelsPlay2011"
+    },
+    {
+      "subject": "MaryMcDonaghMurphy",
+      "predicate": "compiled",
+      "object": "ScoutAtticusAndBooBook"
+    },
+    {
+      "subject": "FilmAdaptation1962",
+      "predicate": "isA",
+      "object": "DerivativeWork"
+    },
+    {
+      "subject": "MiddleClassNarrativeVoice",
+      "predicate": "isA",
+      "object": "NarrativeTechnique"
+    },
+    {
+      "subject": "ThomasMallon",
+      "predicate": "criticized",
+      "object": "Atticus"
+    },
+    {
+      "subject": "Teacher",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "ThereseVonHohoffTorrey",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "RichardMatsch",
+      "predicate": "countsAsInfluence",
+      "object": "AtticusFinch"
+    },
+    {
+      "subject": "BookBecameSensationDespiteEditorsWarnings",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "JudgeTaylor",
+      "predicate": "appoints",
+      "object": "Atticus"
+    },
+    {
+      "subject": "Dill",
+      "predicate": "hasRelationTo",
+      "object": "Jem"
+    },
+    {
+      "subject": "EmmettTill",
+      "predicate": "wasMurderedFor",
+      "object": "FlirtingWithWhiteWoman"
+    },
+    {
+      "subject": "Flashback",
+      "predicate": "isA",
+      "object": "NarrativeTechnique"
+    },
+    {
+      "subject": "PublicConnectionToToKillAMockingbird",
+      "predicate": "isA",
+      "object": "Content"
+    },
+    {
+      "subject": "MontgomeryBusBoycott1955",
+      "predicate": "isA",
+      "object": "ContentRelatedEvent"
+    }
+  ]
+}

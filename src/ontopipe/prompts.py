@@ -221,33 +221,28 @@ prompt_registry.register_instruction(
     "triplet_extraction",
     f"""
 {prompt_registry.tag("triplet_extraction")}
-You are an expert in knowledge graph construction and semantic triplet extraction. Your task is to extract semantic triplets from text and format them as a consistent, ontology-compliant knowledge graph.
+You are extracting semantic triplets from text to populate a knowledge graph with INSTANCES, not to build the ontology structure itself.
 
-### Output Format
-- subject: Subject entity (PascalCase)
-- predicate: Relationship or action (camelCase) 
-- object: Object entity (PascalCase)
+### Task Clarification
+- You are NOT defining ontology classes or properties
+- You ARE identifying specific instances/entities in the text and their relationships
+- The ontology structure (classes and predicates) already exists - use only existing predicates from the ontology
 
-### Entity and Relationship Rules
-1. Entity Consistency: If an entity exists in the current knowledge graph, ALWAYS use the exact same name
-2. Entity Naming: For new entities, choose concise, descriptive PascalCase names
-3. Predicate Naming: All predicates must be in camelCase and MUST exist in the provided ontology
-4. Entity Typing: EVERY entity requires a type declaration using the "isA" predicate
-5. Type Validity: Entity types MUST be defined in the ontology
+### Key Rules
+1. Entity Consistency: Use exact same names for existing entity instances
+2. New Entities: Create specific instances with concise, descriptive names (not classes)
+3. Predicates: Must be camelCase and exist in the provided ontology (do not create new predicates)
+4. Class Assignment: Every entity needs exactly one "isA" triplet ({{"subject": "EntityName", "predicate": "isA", "object": "ExistingClass"}})
+5. Classes must already be defined in the ontology - do not create new classes
+6. Each entity belongs to exactly one class only - do not assign multiple classes to a single entity
 
-### Quality Standards
-1. Extract only factual relationships explicitly stated or directly inferable from the text
-2. Resolve coreferences (pronouns, repeated mentions) to maintain consistent entity references
-3. Prefer specificity over generality when appropriate
-4. For ambiguous cases, choose the interpretation that maintains graph consistency
-5. Never invent relationships not supported by the text or ontology
-
-### Triple Extraction Process
-1. First identify all entities in the text
-2. Determine the appropriate type for each entity based on the ontology
-3. Create "isA" triplets for all entities
-4. Extract all relationships between entities that conform to the ontology
-5. Verify all triplets are consistent with the existing knowledge graph""",
+### Extraction Process
+1. Identify specific entities/instances in the text (like "John Smith" or "Project Alpha")
+2. Determine which existing ontology class each entity belongs to
+3. Create exactly one "isA" triplet for each entity to assign its class
+4. Extract relationships between the entities using existing predicates
+5. Only extract factual relationships explicitly stated or clearly inferable in the text
+6. Output should be knowledge graph triplets, not ontology structure definitions""",
 )
 
 # ==================================================#
@@ -267,17 +262,22 @@ You are an ontology engineer tasked with creating a comprehensive ontology for t
 To ensure your ontology captures all relevant knowledge, perspectives, and use cases, you need to identify 
 key stakeholder groups to interview.
 
-Identify a diverse, exhaustive list of stakeholder groups who would provide valuable insights for this domain. 
-Consider:
+Identify a diverse, exhaustive list of stakeholder groups who would provide valuable insights for this domain. Output your response as a properly formatted JSON object with nothing else.""",
+)
 
-1. Direct domain practitioners with hands-on experience
-2. Domain experts with theoretical knowledge
-3. End users and beneficiaries of systems in this domain
-4. Adjacent domain specialists with overlapping expertise
-5. Newcomers who might have fresh perspectives
-6. Policy makers and regulators relevant to the domain
-7. Individuals with specialized knowledge of edge cases
-8. People with historical context about the domain's evolution)
+prompt_registry.register_instruction(
+    PromptLanguage.ENGLISH,
+    "generate_personas",
+    f"""{prompt_registry.tag("personas")}
+You are an ontology engineer creating a comprehensive domain ontology. To gather diverse perspectives, you need to interview representative individuals from a specific stakeholder group.
 
-Output your response as a properly formatted JSON object with nothing else.""",
+Your task:
+Generate exactly the required number of diverse personas from the specified group. Each persona should:
+• Represent different experiences, backgrounds, and perspectives relevant to the domain
+• Include key characteristics: age, location, education, work experience, and domain-specific knowledge
+• Feature relevant personal attributes: interests, technological proficiency, and unique perspectives
+• Be described in a natural, detailed manner that highlights their potential contributions to the ontology
+
+Ensure your personas collectively cover the full spectrum of relevant domain experiences and knowledge.
+""",
 )

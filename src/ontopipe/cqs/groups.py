@@ -65,4 +65,6 @@ def generate_groups_for_domain(domain: str):
         generator.contract_perf_stats()
         logger.debug("API Usage: %s", tracker.usage)
 
+        print(x)
+
         return x

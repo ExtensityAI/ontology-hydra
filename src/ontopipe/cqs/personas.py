@@ -1,34 +1,36 @@
-import openai
-from pydantic import BaseModel
+from logging import getLogger
+
+from pydantic import Field
+from symai import Expression
+from symai.components import MetadataTracker
+from symai.strategy import LLMDataModel, contract
 
 from ontopipe.cqs.groups import Group
-from ontopipe.cqs.utils import MODEL
+from ontopipe.prompts import prompt_registry
+
+logger = getLogger("ontopipe.cqs")
 
 # note: if personas seem low-dimensional, or if they "overfit" to our goal, maybe prompt to modify them without stating our goal, just to make them more realistic
 
 # idea: if we want even more diverse personas, prompt the generated personas from the groups to "find colleagues" who know more? or to "find people who have different perspectives"?
 
-generate_personas_prompt = """You are an ontology engineer tasked with creating a comprehensive ontology on <domain>{domain}</domain>. You have decided to conduct interviews with individuals from <group>{group_name} ({group_description})</group> to deeply understand their varied perspectives and insights into this domain.
 
-Your task:
-Identify exactly {n} individuals belonging to this group whom you will interview. Ensure the selected individuals collectively represent a broad range of experiences, backgrounds, and characteristics. Provide a natural language description of each individual, being mindful to cover relevant demographic and experiential details. Include information such as their interests, personal traits, age, geographic location, education, work experience, relevant lived experiences, technological proficiency, and especially any additional distinctive attributes or contexts that provide valuable insights into the domain.
-
-Your descriptions should be comprehensive yet flexible enough to allow the inclusion of extra information where beneficial, ensuring an authentic and nuanced portrayal of each individual without adhering strictly to predefined categories or examples."""
-
-#! idea: add a "quirk it up" prompt to make personas more interesting, re: https://arxiv.org/pdf/1801.07243
-
-# ? maybe prompt the model with the generated personas to "find colleagues" who know more? or to "find people who have different perspectives"?
-# ? prompt the model with a "expand on the persona" prompt to make them more specific
-# trade off: diversity vs realism, focus more on realism
-
-
-class Persona(BaseModel):
+class Persona(LLMDataModel):
     name: str
     description: str
 
 
-class Personas(BaseModel):
+class Personas(LLMDataModel):
     items: list[Persona]
+
+
+class PersonasGeneratorInput(LLMDataModel):
+    domain: str = Field(..., description="The domain of the ontology")
+    group: Group = Field(..., description="The group to generate personas for")
+    existing_personas: list[Persona] = Field(
+        description="Personas that have already been found"
+    )
+    n: int = Field(..., description="Number of personas to generate")
 
 
 PROPORTIONAL_TO_PRIORITY = -1
@@ -42,6 +44,33 @@ _priority_to_n = {
 }
 
 
+@contract(
+    pre_remedy=False,
+    post_remedy=True,
+    accumulate_errors=False,
+    verbose=True,
+    remedy_retry_params=dict(
+        tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False
+    ),
+)
+class PersonasGenerator(Expression):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+    def forward(self, input: PersonasGeneratorInput, **kwargs) -> Personas:
+        if self.contract_result is None:
+            raise ValueError("Contract failed!")
+
+        return self.contract_result
+
+    def post(self, output: Personas) -> bool:
+        return True
+
+    @property
+    def prompt(self) -> str:
+        return prompt_registry.instruction("generate_personas")
+
+
 def generate_personas_for_group(
     domain: str, group_def: Group, n: int = PROPORTIONAL_TO_PRIORITY
 ):
@@ -49,25 +78,27 @@ def generate_personas_for_group(
         # set the number of personas to generate based on the priority of the group
         n = _priority_to_n[group_def.priority.value]
 
-    response = openai.beta.chat.completions.parse(
-        model=MODEL,
-        messages=[
-            {
-                "role": "system",
-                "content": generate_personas_prompt.format(
+    personas = list[Persona]()
+
+    # TODO maybe provide all personas here, so it can generate more diverse ones - right now we only provide the ones from the current group!
+
+    generator = PersonasGenerator()
+    with MetadataTracker() as tracker:
+        while len(personas) < n:
+            n_remaining = n - len(personas)
+            new_personas = generator(
+                input=PersonasGeneratorInput(
                     domain=domain,
-                    group_name=group_def.name,
-                    group_description=group_def.description,
-                    n=n,
-                ),
-            },
-        ],
-        response_format=Personas,
-    )
+                    group=group_def,
+                    n=n_remaining,
+                    existing_personas=personas,
+                )
+            )
 
-    obj = response.choices[0].message.parsed
+            # add at most n_remaining personas
+            personas.extend(new_personas.items[:n_remaining])
 
-    if obj is None:
-        raise ValueError("Failed to generate personas")
+            generator.contract_perf_stats()
+            logger.debug("API Usage: %s", tracker.usage)
 
-    return obj
+    return personas

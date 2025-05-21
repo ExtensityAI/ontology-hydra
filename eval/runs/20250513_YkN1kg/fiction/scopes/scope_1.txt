@@ -1,0 +1,64 @@
+Scope Document: Key Topics and Boundaries of <domain>Fiction Books and Their Content</domain>
+
+1. Introduction
+   - Purpose: Establish a shared understanding of the scope of the domain related to fiction books and their content, informed by the expertise of diverse stakeholders.
+   - Audience: Writers, publishers, literary agents, content analysts, digital tool developers, and researchers.
+
+2. Included Topics
+   2.1 Genres and Subgenres
+       - Fantasy (including subgenres like high fantasy, urban fantasy, mythic fantasy, etc.)
+       - Science Fiction
+       - Historical Fiction
+       - Literary Fiction
+       - Mystery and Thriller
+       - Romance
+       - Horror
+       - Young Adult (YA) and Children's Fiction
+       - Romance and speculative hybrid genres
+   2.2 Narrative Elements
+       - Plot structures and archetypes
+       - Character development and dynamics
+       - Worldbuilding and setting creation
+       - Themes and motifs
+       - Stylistic and linguistic features
+   2.3 Cultural and Mythological Influences
+       - Folklore, mythology, and traditional narratives from diverse cultures
+       - Cultural identity and heritage themes
+       - Representation and diversity in characters and settings
+   2.4 Publishing and Market Aspects
+       - Literary trends and reader preferences
+       - Market segmentation and genre demand
+       - Rights and licensing considerations
+   2.5 Digital and Multimedia Content
+       - Interactive e-books and multimedia storytelling formats
+       - Use of digital platforms for distribution and promotion
+   2.6 Literary Analysis and Metadata
+       - Thematic categorization
+       - Narrative structure analysis
+       - Metadata standards (e.g., genre tags, keywords)
+   2.7 Authorship and Creative Process
+       - Inspiration sources
+       - Writing techniques and stylistic choices
+       - Cultural and personal identity influences
+
+3. Explicitly Excluded Topics
+   - Non-fiction genres (biography, memoir, essays)
+   - Academic literary criticism (beyond thematic categorization)
+   - Publishing logistics unrelated to content (e.g., printing details, distribution channels)
+   - Literary history and theory beyond content analysis
+   - Technical aspects of book production not directly related to narrative content
+
+4. Gray Areas and Overlaps
+   - Adjacent Domains
+       - Graphic novels and illustrated stories (integrated content, visual storytelling)
+       - Serialized content and episodic storytelling formats
+       - Transmedia storytelling (content spread across different media platforms)
+   - Content Boundaries
+       - Stories with hybrid genres or experimental formats
+       - Cultural themes embedded in non-fictional contexts (e.g., historical accounts with fictionalized elements)
+       - Technologically enhanced storytelling that blurs line between traditional fiction and digital media
+
+5. Summary
+   - This scope aims to comprehensively define the content domain of fiction books, focusing on narrative, cultural, thematic, digital, and market aspects, while clarifying boundaries with related fields.
+
+End of Document

@@ -1,0 +1,73 @@
+# Scope Document: Domain of Fiction Books and Their Content
+
+## 1. Introduction
+This document delineates the key topics, boundaries, and scope within the domain of *Fiction Books and Their Content* based on the collective expertise of our personas. It aims to establish a shared vocabulary for research, collection management, digital analysis, and educational use.
+
+## 2. Inclusion Criteria
+The domain encompasses all types of fiction literature, both physical and digital, and considers their content, categorization, and related metadata. Specific inclusions are:
+
+### 2.1 Literary Content
+- **Narrative fiction**:
+  - Novels, novellas, short stories, and series
+  - Short-form fiction (e.g., flash fiction)
+  - Flashbacks, frame narratives, and experimental formats
+- **Genres**:
+  - Literary fiction, mystery, thriller, science fiction, fantasy, horror, historical fiction, romance, adventure, dystopian, speculative fiction
+  - Subgenres and hybrid genres (e.g., science fantasy, historical mystery)
+- **Themes and motifs**:
+  - Identity, morality, conflict, societal issues, technological futures, cultural representations
+
+### 2.2 Content Metadata & Classification
+- Standard bibliographic information (author, title, publication date)
+- Genre and subgenre labels
+- Thematic tags and descriptive metadata
+- Language and linguistic features
+- Literary awards and recognition data
+
+### 2.3 Digital and Multimedia Aspects
+- Digital text formats (ePub, Kindle, PDFs)
+- Audio-books and narrated versions
+- Supplemental digital content (illustrations, maps, interactive elements)
+- Semantic features extracted via NLP (e.g., themes, sentiment)
+
+### 2.4 Cataloging & Preservation
+- Digital and physical catalog records
+- Digital preservation and accessibility standards
+- Linkages to historical texts and adaptations
+
+### 2.5 Reader & User Data (when applicable)
+- Reader preferences, ratings, reviews
+- Behavioral data for recommendation systems
+
+## 3. Explicit Exclusions
+The scope explicitly excludes:
+
+### 3.1 Non-fiction Content
+- Biographies, memoirs, essays, journalism
+- Academic, technical, or instructional texts
+
+### 3.2 Other Creative Works
+- Poetry, drama, theatrical scripts
+- Comic books, graphic novels (unless classified strictly as fiction narrative with literary content)
+- Non-narrative art and multimedia works
+
+### 3.3 Historical or Archaeological Artifacts
+- Ancient manuscripts (unless serving as a basis for modern fiction)
+- Cultural artifacts outside the realm of literary fiction
+
+### 3.4 Personal Correspondence, Diaries, and Manuscripts (unless adapted into fiction)
+
+## 4. Gray Areas & Overlaps
+Certain topics may overlap or require careful contextualization:
+
+- **Genre boundaries**: Fiction subgenres with overlapping themes (e.g., speculative historical novels)
+- **Digital content vs. traditional**: Interactive or multimedia fiction that blends narrative with technology
+- **Adaptations**: Films, series, and games based on fiction books (distinct from the original textual content but related)
+- **Fiction with hybrid content**: Books combining fiction with non-fiction elements (e.g., historical fiction with documentary segments)
+
+## 5. Summary
+This domain primarily covers narrative fiction texts, their metadata, digital formats, and classification systems, with an emphasis on content analysis, preservation, and user engagement. It explicitly excludes non-fiction, non-narrative media, and artifacts outside the literary scope, while recognizing potential overlaps with adjacent media and genre boundaries.
+
+---
+
+*End of Scope Document*
