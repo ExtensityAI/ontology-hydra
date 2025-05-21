@@ -16,12 +16,11 @@ from ontopipe.models import (
     ObjectProperty,
     Ontology,
     Operation,
-    OwlClass,
     Prune,
     WeaverInput,
 )
 from ontopipe.prompts import prompt_registry
-from ontopipe.utils import build_ontology_graph, load_ontology, save_graph, save_ontology
+from ontopipe.utils import load_ontology
 
 
 # =========================================#
@@ -59,8 +58,8 @@ class Weaver(Expression):
             for relation in op.relations:
                 if not self._class_exists(relation.subclass) or not self._class_exists(relation.superclass):
                     raise ValueError(
-                        f"Merge operation contains non-existent class: subclass={relation.subclass.name}, "
-                        f"superclass={relation.superclass.name}. Please generate a relation that uses existing classes."
+                        f"Merge operation contains non-existent class: subclass={relation.subclass}, "
+                        f"superclass={relation.superclass}. Please generate a relation that uses existing classes."
                     )
             for idx in op.indexes:
                 if idx not in self._cluster_indexes:
@@ -70,7 +69,7 @@ class Weaver(Expression):
             for cls in op.classes:
                 if not self._class_exists(cls):
                     raise ValueError(
-                        f"Prune operation contains non-existent class: {cls.name}. Please generate a relation that uses existing classes."
+                        f"Prune operation contains non-existent class: {cls}. Please generate a relation that uses existing classes."
                     )
             if op.indexes[0] not in self._cluster_indexes:
                 raise ValueError(f"Invalid cluster index: {op.indexes[0]}. Valid indices are: {self._cluster_indexes}")
@@ -96,11 +95,11 @@ class Weaver(Expression):
 
         return True
 
-    def _class_exists(self, cls: OwlClass) -> bool:
+    def _class_exists(self, cls: str) -> bool:
         if self._dynamic_ontology is None:
             raise ValueError("The dynamic ontology was not set!")
         for relation in self._dynamic_ontology.subclass_relations:
-            if cls.name == relation.subclass.name or cls.name == relation.superclass.name:
+            if cls == relation.subclass or cls == relation.superclass:
                 return True
         return False
 
@@ -199,13 +198,13 @@ class Weaver(Expression):
 
             valid_classes = set()
             for rel in new_ontology.subclass_relations:
-                valid_classes.add(rel.subclass.name)
-                valid_classes.add(rel.superclass.name)
+                valid_classes.add(rel.subclass)
+                valid_classes.add(rel.superclass)
 
             filtered_object_properties = []
             for prop in new_ontology.object_properties:
-                new_domain = [cls for cls in prop.domain if cls.name in valid_classes]
-                new_range = [cls for cls in prop.range if cls.name in valid_classes]
+                new_domain = [cls for cls in prop.domain if cls in valid_classes]
+                new_range = [cls for cls in prop.range if cls in valid_classes]
                 if new_domain and new_range:
                     filtered_object_properties.append(
                         ObjectProperty(
@@ -216,7 +215,7 @@ class Weaver(Expression):
 
             filtered_data_properties = []
             for prop in new_ontology.data_properties:
-                new_domain = [cls for cls in prop.domain if cls.name in valid_classes]
+                new_domain = [cls for cls in prop.domain if cls in valid_classes]
                 if new_domain:
                     filtered_data_properties.append(
                         DataProperty(
@@ -231,21 +230,21 @@ class Weaver(Expression):
             cluster = next(c for c in clusters if c.index == op.indexes[0])
             cluster_classes = set()
             for rel in cluster.relations:
-                cluster_classes.add(rel.subclass.name)
-                cluster_classes.add(rel.superclass.name)
+                cluster_classes.add(rel.subclass)
+                cluster_classes.add(rel.superclass)
 
-            classes_to_prune = {cls.name for cls in op.classes}
+            classes_to_prune = {cls for cls in op.classes}
             new_relations = [
                 rel
                 for rel in new_ontology.subclass_relations
-                if rel.subclass.name not in classes_to_prune and rel.superclass.name not in classes_to_prune
+                if rel.subclass not in classes_to_prune and rel.superclass not in classes_to_prune
             ]
             new_ontology.subclass_relations = new_relations
 
             new_object_properties = []
             for prop in new_ontology.object_properties:
-                new_domain = [cls for cls in prop.domain if cls.name not in classes_to_prune]
-                new_range = [cls for cls in prop.range if cls.name not in classes_to_prune]
+                new_domain = [cls for cls in prop.domain if cls not in classes_to_prune]
+                new_range = [cls for cls in prop.range if cls not in classes_to_prune]
                 if new_domain and new_range:
                     new_object_properties.append(
                         ObjectProperty(
@@ -256,7 +255,7 @@ class Weaver(Expression):
 
             new_data_properties = []
             for prop in new_ontology.data_properties:
-                new_domain = [cls for cls in prop.domain if cls.name not in classes_to_prune]
+                new_domain = [cls for cls in prop.domain if cls not in classes_to_prune]
                 if new_domain:
                     new_data_properties.append(
                         DataProperty(
@@ -305,8 +304,8 @@ def fix_ontology(
 
     # Dump stuff
     if dump:
-        save_graph(build_ontology_graph(ontology.model_dump()), folder / f"{fnames}.html")
-        save_ontology(ontology.model_dump(), folder / f"{fnames}.json")
         weaver.dump_transformation_history(
             folder / f"{fnames}_transformation_history.json", weaver.get_history(), original_ontology, original_clusters
         )
+
+    return ontology

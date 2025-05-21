@@ -1,15 +1,12 @@
-from pathlib import Path
-import json
-import os
-import colorsys
-import random
-import webbrowser
-import re
 import datetime
-from typing import List, Dict, Any, Optional, Union, Set, Tuple
+import json
+import webbrowser
+from pathlib import Path
+from typing import Any, Dict
 
 # Import models from your existing code
 from ontopipe.models import KG, Ontology
+
 
 # Global backward compatibility functions to match the original API
 def visualize_ontology(ontology: Ontology, output_html_path: Path):
@@ -24,10 +21,9 @@ def visualize_ontology(ontology: Ontology, output_html_path: Path):
     output_html_path : Path
         Path to save the HTML visualization
     """
-    viz = KnowledgeGraphViz(
-        output_dir=str(output_html_path.parent)
-    )
+    viz = KnowledgeGraphViz(output_dir=str(output_html_path.parent))
     return viz.visualize_ontology(ontology, filename=output_html_path.name)
+
 
 def visualize_kg(kg: KG, output_html_path: Path):
     """
@@ -41,10 +37,9 @@ def visualize_kg(kg: KG, output_html_path: Path):
     output_html_path : Path
         Path to save the HTML visualization
     """
-    viz = KnowledgeGraphViz(
-        output_dir=str(output_html_path.parent)
-    )
+    viz = KnowledgeGraphViz(output_dir=str(output_html_path.parent))
     return viz.visualize_kg(kg, filename=output_html_path.name)
+
 
 class AdvancedGraphVisualizer:
     """
@@ -137,7 +132,7 @@ class AdvancedGraphVisualizer:
             "datatype": "diamond",
             "property": "triangleDown",
             "individual": "dot",
-            "default": "dot"
+            "default": "dot",
         }
 
         # Store additional parameters
@@ -152,78 +147,66 @@ class AdvancedGraphVisualizer:
                 "enabled": self.physics_enabled,
                 "barnesHut": {  # More optimized for large graphs
                     "gravitationalConstant": -2000,  # Reduced from -30000
-                    "centralGravity": 0.1,          # Reduced from 0.3
-                    "springLength": 150,            # Increased from 95
-                    "springConstant": 0.02,         # Reduced from 0.04
+                    "centralGravity": 0.1,  # Reduced from 0.3
+                    "springLength": 150,  # Increased from 95
+                    "springConstant": 0.02,  # Reduced from 0.04
                     "damping": 0.09,
-                    "avoidOverlap": 0.2            # Increased from 0.1
+                    "avoidOverlap": 0.2,  # Increased from 0.1
                 },
                 "forceAtlas2Based": {
                     "gravitationalConstant": -50,
                     "centralGravity": 0.01,
-                    "springConstant": 0.04,        # Reduced from 0.08
-                    "springLength": 150,           # Increased from 100
-                    "damping": 0.3,                # Reduced from 0.4
-                    "avoidOverlap": 0.5
+                    "springConstant": 0.04,  # Reduced from 0.08
+                    "springLength": 150,  # Increased from 100
+                    "damping": 0.3,  # Reduced from 0.4
+                    "avoidOverlap": 0.5,
                 },
                 "hierarchicalRepulsion": {
-                    "nodeDistance": 150,           # Increased from 120
+                    "nodeDistance": 150,  # Increased from 120
                     "centralGravity": 0.0,
-                    "springLength": 150,           # Increased from 100
+                    "springLength": 150,  # Increased from 100
                     "springConstant": 0.01,
-                    "damping": 0.09
+                    "damping": 0.09,
                 },
-                "maxVelocity": 30,                 # Reduced from 50
-                "minVelocity": 0.75,               # Increased from 0.1
+                "maxVelocity": 30,  # Reduced from 50
+                "minVelocity": 0.75,  # Increased from 0.1
                 "solver": self.layout_algorithm,
                 "stabilization": {
                     "enabled": self.initial_stabilization,
-                    "iterations": 300,             # Reduced from 1000
-                    "updateInterval": 50,          # Increased from 25
-                    "fit": True
-                }
+                    "iterations": 300,  # Reduced from 1000
+                    "updateInterval": 50,  # Increased from 25
+                    "fit": True,
+                },
             },
             "edges": {
-                "smooth": {
-                    "type": "dynamic",
-                    "forceDirection": "none",
-                    "roundness": 0.5
-                },
-                "color": {
-                    "inherit": "from",
-                    "opacity": 0.7
-                },
-                "arrows": {
-                    "to": {
-                        "enabled": True,
-                        "scaleFactor": 0.5
-                    }
-                },
+                "smooth": {"type": "dynamic", "forceDirection": "none", "roundness": 0.5},
+                "color": {"inherit": "from", "opacity": 0.7},
+                "arrows": {"to": {"enabled": True, "scaleFactor": 0.5}},
                 "shadow": {
                     "enabled": False,  # Disabled for performance
                 },
-                "width": 1.5  # Slightly thicker for better visibility
+                "width": 1.5,  # Slightly thicker for better visibility
             },
             "nodes": {
                 "shadow": {
                     "enabled": False,  # Disabled for performance
                 },
                 "scaling": {
-                    "min": 8,         # Reduced from 10
-                    "max": 20,        # Reduced from 30
+                    "min": 8,  # Reduced from 10
+                    "max": 20,  # Reduced from 30
                     "label": {
                         "enabled": True,
-                        "min": 12,    # Reduced from 14
-                        "max": 18,    # Reduced from 30
+                        "min": 12,  # Reduced from 14
+                        "max": 18,  # Reduced from 30
                         "maxVisible": 18,  # Reduced from 30
-                        "drawThreshold": 5
-                    }
+                        "drawThreshold": 5,
+                    },
                 },
                 "font": {
-                    "size": 14,       # Reduced from 16
+                    "size": 14,  # Reduced from 16
                     "face": "Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
-                    "color": "#FFFFFF" if self.dark_mode else "#000000"
-                }
+                    "color": "#FFFFFF" if self.dark_mode else "#000000",
+                },
             },
             "interaction": {
                 "hover": True,
@@ -234,29 +217,15 @@ class AdvancedGraphVisualizer:
                 "dragView": True,
                 "zoomView": True,
                 "navigationButtons": True,
-                "keyboard": {
-                    "enabled": True,
-                    "speed": {
-                        "x": 10,
-                        "y": 10,
-                        "zoom": 0.02
-                    },
-                    "bindToWindow": True
-                }
+                "keyboard": {"enabled": True, "speed": {"x": 10, "y": 10, "zoom": 0.02}, "bindToWindow": True},
             },
-            "layout": {
-                "randomSeed": 42,
-                "improvedLayout": True,
-                "hierarchical": {
-                    "enabled": False
-                }
-            },
+            "layout": {"randomSeed": 42, "improvedLayout": True, "hierarchical": {"enabled": False}},
             "configure": {
                 "enabled": False,  # Disable configure button for cleaner UI
             },
             "renderer": {
                 "renderingMode": self.render_mode,  # Ensure WebGL is used
-            }
+            },
         }
 
     def generate_graph_data(self, nodes, edges):
@@ -289,23 +258,19 @@ class AdvancedGraphVisualizer:
             # Reduce visual complexity
             for node in nodes:
                 # Simplify node appearance
-                if 'shadow' in node:
-                    node['shadow'] = False
-                if 'size' in node and node['size'] > 15:
-                    node['size'] = 15
+                if "shadow" in node:
+                    node["shadow"] = False
+                if "size" in node and node["size"] > 15:
+                    node["size"] = 15
 
             for edge in edges:
                 # Simplify edge appearance
-                if 'shadow' in edge:
-                    edge['shadow'] = False
-                if 'smooth' in edge:
-                    edge['smooth'] = False
+                if "shadow" in edge:
+                    edge["shadow"] = False
+                if "smooth" in edge:
+                    edge["smooth"] = False
 
-        return {
-            "nodes": nodes,
-            "edges": edges,
-            "options": settings
-        }
+        return {"nodes": nodes, "edges": edges, "options": settings}
 
     def visualize_ontology(self, ontology: Ontology, output_path: Path):
         """
@@ -374,11 +339,8 @@ class AdvancedGraphVisualizer:
                 "color": color,
                 "shape": shape,
                 "size": size,
-                "font": {
-                    "size": font_size,
-                    "color": "#FFFFFF" if self.dark_mode else "#000000"
-                },
-                "title": f"<div style='max-width: 250px;'><h3>{name}</h3><p>Type: {node_type.capitalize()}</p></div>"
+                "font": {"size": font_size, "color": "#FFFFFF" if self.dark_mode else "#000000"},
+                "title": f"<div style='max-width: 250px;'><h3>{name}</h3><p>Type: {node_type.capitalize()}</p></div>",
             }
 
             # Add group if provided (for clustering)
@@ -392,8 +354,8 @@ class AdvancedGraphVisualizer:
         # Process ontology components
         # 1. Add nodes for all classes discovered in the ontology
         for sub_rel in ontology.subclass_relations:
-            add_node(sub_rel.subclass.name, "class")
-            add_node(sub_rel.superclass.name, "class")
+            add_node(sub_rel.subclass, "class")
+            add_node(sub_rel.superclass, "class")
 
         # From object properties (domain + range)
         for obj_prop in ontology.object_properties:
@@ -401,10 +363,10 @@ class AdvancedGraphVisualizer:
             prop_id = add_node(obj_prop.name, "property")
 
             for dom in obj_prop.domain:
-                dom_id = add_node(dom.name, "class")
+                dom_id = add_node(dom, "class")
 
             for rng in obj_prop.range:
-                rng_id = add_node(rng.name, "class")
+                rng_id = add_node(rng, "class")
 
         # From data properties
         for data_prop in ontology.data_properties:
@@ -412,7 +374,7 @@ class AdvancedGraphVisualizer:
             prop_id = add_node(data_prop.name, "property")
 
             for dom in data_prop.domain:
-                dom_id = add_node(dom.name, "class")
+                dom_id = add_node(dom, "class")
 
             # Add datatype node
             datatype_name = data_prop.range.value
@@ -420,91 +382,81 @@ class AdvancedGraphVisualizer:
 
         # 2. Add edges for subclass relationships
         for sub_rel in ontology.subclass_relations:
-            source_id = get_node_id(sub_rel.subclass.name)
-            target_id = get_node_id(sub_rel.superclass.name)
+            source_id = get_node_id(sub_rel.subclass)
+            target_id = get_node_id(sub_rel.superclass)
 
-            edges.append({
-                "from": source_id,
-                "to": target_id,
-                "label": "isA",
-                "font": {
-                    "size": 9,  # Reduced from 10
-                    "align": "middle",
-                    "background": "#2E2E2E" if self.dark_mode else "#FFFFFF"
-                },
-                "arrows": {
-                    "to": {
-                        "enabled": True,
-                        "type": "arrow"
-                    }
-                },
-                "dashes": [5, 5],  # Dashed line for isA relationships
-                "color": {
-                    "color": "#AAAAAA",
-                    "opacity": 0.7
+            edges.append(
+                {
+                    "from": source_id,
+                    "to": target_id,
+                    "label": "isA",
+                    "font": {
+                        "size": 9,  # Reduced from 10
+                        "align": "middle",
+                        "background": "#2E2E2E" if self.dark_mode else "#FFFFFF",
+                    },
+                    "arrows": {"to": {"enabled": True, "type": "arrow"}},
+                    "dashes": [5, 5],  # Dashed line for isA relationships
+                    "color": {"color": "#AAAAAA", "opacity": 0.7},
                 }
-            })
+            )
 
         # 3. Add edges for object properties - with optimized styling
         for obj_prop in ontology.object_properties:
             for dom in obj_prop.domain:
                 for rng in obj_prop.range:
-                    source_id = get_node_id(dom.name)
-                    target_id = get_node_id(rng.name)
+                    source_id = get_node_id(dom)
+                    target_id = get_node_id(rng)
 
-                    edges.append({
-                        "from": source_id,
-                        "to": target_id,
-                        "label": obj_prop.name,
-                        "font": {
-                            "size": 9,  # Reduced from 10
-                            "align": "middle",
-                            "background": "#2E2E2E" if self.dark_mode else "#FFFFFF"
-                        },
-                        "arrows": {
-                            "to": {
-                                "enabled": True,
-                                "type": "arrow"
-                            }
-                        },
-                        "color": {
-                            "color": "#FF9800",  # Orange for object properties
-                            "opacity": 0.8
+                    edges.append(
+                        {
+                            "from": source_id,
+                            "to": target_id,
+                            "label": obj_prop.name,
+                            "font": {
+                                "size": 9,  # Reduced from 10
+                                "align": "middle",
+                                "background": "#2E2E2E" if self.dark_mode else "#FFFFFF",
+                            },
+                            "arrows": {"to": {"enabled": True, "type": "arrow"}},
+                            "color": {
+                                "color": "#FF9800",  # Orange for object properties
+                                "opacity": 0.8,
+                            },
                         }
-                    })
+                    )
 
         # 4. Add edges for data properties - with optimized styling
         for data_prop in ontology.data_properties:
             for dom in data_prop.domain:
-                source_id = get_node_id(dom.name)
+                source_id = get_node_id(dom)
                 target_id = get_node_id(data_prop.range.value)
 
-                edges.append({
-                    "from": source_id,
-                    "to": target_id,
-                    "label": data_prop.name,
-                    "font": {
-                        "size": 9,  # Reduced from 10
-                        "align": "middle",
-                        "background": "#2E2E2E" if self.dark_mode else "#FFFFFF"
-                    },
-                    "arrows": {
-                        "to": {
-                            "enabled": True,
-                            "type": "arrow"
-                        }
-                    },
-                    "color": {
-                        "color": "#4CAF50",  # Green for data properties
-                        "opacity": 0.8
+                edges.append(
+                    {
+                        "from": source_id,
+                        "to": target_id,
+                        "label": data_prop.name,
+                        "font": {
+                            "size": 9,  # Reduced from 10
+                            "align": "middle",
+                            "background": "#2E2E2E" if self.dark_mode else "#FFFFFF",
+                        },
+                        "arrows": {"to": {"enabled": True, "type": "arrow"}},
+                        "color": {
+                            "color": "#4CAF50",  # Green for data properties
+                            "opacity": 0.8,
+                        },
                     }
-                })
+                )
 
         # Generate graph data - with performance optimizations
         graph_data = self.generate_graph_data(nodes, edges)
 
         # Create the visualization
-        self._create_visualization(graph_data, output_path, title=f"Ontology Visualization: {len(nodes)} classes & properties")
+        self._create_visualization(
+            graph_data, output_path, title=f"Ontology Visualization: {len(nodes)} classes & properties"
+        )
 
     def visualize_kg(self, kg: KG, output_path: Path):
         """
@@ -620,9 +572,9 @@ class AdvancedGraphVisualizer:
                 "group": group,
                 "font": {
                     "size": 12,  # Reduced from 14
-                    "color": "#FFFFFF" if self.dark_mode else "#000000"
+                    "color": "#FFFFFF" if self.dark_mode else "#000000",
                 },
-                "title": title
+                "title": title,
             }
 
             nodes.append(node)
@@ -657,21 +609,17 @@ class AdvancedGraphVisualizer:
                 "font": {
                     "size": 9,  # Reduced from 10
                     "align": "middle",
-                    "background": "#2E2E2E" if self.dark_mode else "#FFFFFF"
+                    "background": "#2E2E2E" if self.dark_mode else "#FFFFFF",
                 },
                 "arrows": {
                     "to": {
                         "enabled": True,
                         "type": "arrow",
-                        "scaleFactor": 0.4  # Reduced from 0.5
+                        "scaleFactor": 0.4,  # Reduced from 0.5
                     }
                 },
-                "color": {
-                    "color": predicate_color_map[predicate],
-                    "opacity": 0.8,
-                    "highlight": "#FFFFFF"
-                },
-                "title": f"<div>{triplet.subject} - <b>{predicate}</b> → {triplet.object}</div>"
+                "color": {"color": predicate_color_map[predicate], "opacity": 0.8, "highlight": "#FFFFFF"},
+                "title": f"<div>{triplet.subject} - <b>{predicate}</b> → {triplet.object}</div>",
             }
 
             # Special styling for isA relationships
@@ -686,9 +634,7 @@ class AdvancedGraphVisualizer:
 
         # Create the visualization
         self._create_visualization(
-            graph_data,
-            output_path,
-            title=f"Knowledge Graph: {len(nodes)} entities, {len(edges)} relationships"
+            graph_data, output_path, title=f"Knowledge Graph: {len(nodes)} entities, {len(edges)} relationships"
         )
 
     def _create_visualization(self, graph_data, output_path, title="Graph Visualization"):
@@ -1322,11 +1268,11 @@ class AdvancedGraphVisualizer:
                     <div class="stats-container">
                         <div class="stat">
                             <span>Nodes:</span>
-                            <span id="stat-nodes">{len(graph_data['nodes'])}</span>
+                            <span id="stat-nodes">{len(graph_data["nodes"])}</span>
                         </div>
                         <div class="stat">
                             <span>Edges:</span>
-                            <span id="stat-edges">{len(graph_data['edges'])}</span>
+                            <span id="stat-edges">{len(graph_data["edges"])}</span>
                         </div>
                         <div class="stat">
                             <span>Average Degree:</span>
@@ -2791,7 +2737,7 @@ class AdvancedGraphVisualizer:
 
         # Open the visualization in a browser
         if self.auto_open:
-            webbrowser.open('file://' + str(output_path.absolute()))
+            webbrowser.open("file://" + str(output_path.absolute()))
 
         return str(output_path)
 
@@ -2879,11 +2825,8 @@ class AdvancedGraphVisualizer:
                 "shape": shape,
                 "size": size,
                 "group": group,
-                "font": {
-                    "size": font_size,
-                    "color": "#FFFFFF" if self.dark_mode else "#000000"
-                },
-                "title": f"<div style='max-width: 250px;'><h3>{name}</h3><p>Type: {node_type.capitalize()}</p></div>"
+                "font": {"size": font_size, "color": "#FFFFFF" if self.dark_mode else "#000000"},
+                "title": f"<div style='max-width: 250px;'><h3>{name}</h3><p>Type: {node_type.capitalize()}</p></div>",
             }
 
             nodes.append(node)
@@ -2900,27 +2843,21 @@ class AdvancedGraphVisualizer:
             source_id = get_node_id(sub_rel.subclass.name)
             target_id = get_node_id(sub_rel.superclass.name)
 
-            edges.append({
-                "from": source_id,
-                "to": target_id,
-                "label": "isA",
-                "font": {
-                    "size": 8,  # Reduced from 10
-                    "align": "middle",
-                    "background": "#2E2E2E" if self.dark_mode else "#FFFFFF"
-                },
-                "arrows": {
-                    "to": {
-                        "enabled": True,
-                        "type": "arrow"
-                    }
-                },
-                "dashes": [5, 5],  # Dashed line for isA relationships
-                "color": {
-                    "color": "#AAAAAA",
-                    "opacity": 0.7
+            edges.append(
+                {
+                    "from": source_id,
+                    "to": target_id,
+                    "label": "isA",
+                    "font": {
+                        "size": 8,  # Reduced from 10
+                        "align": "middle",
+                        "background": "#2E2E2E" if self.dark_mode else "#FFFFFF",
+                    },
+                    "arrows": {"to": {"enabled": True, "type": "arrow"}},
+                    "dashes": [5, 5],  # Dashed line for isA relationships
+                    "color": {"color": "#AAAAAA", "opacity": 0.7},
                 }
-            })
+            )
 
         # 3. Add object properties - with optimized edge generation
         for obj_prop in ontology.object_properties:
@@ -2928,56 +2865,44 @@ class AdvancedGraphVisualizer:
             prop_id = add_node(obj_prop.name, "property")
 
             for dom in obj_prop.domain:
-                dom_id = add_node(dom.name, "class")
+                dom_id = add_node(dom, "class")
 
                 # Connect domain to property
-                edges.append({
-                    "from": dom_id,
-                    "to": prop_id,
-                    "label": "hasDomain",
-                    "font": {
-                        "size": 7,  # Reduced from 8
-                        "align": "middle",
-                        "background": "#2E2E2E" if self.dark_mode else "#FFFFFF"
-                    },
-                    "arrows": {
-                        "to": {
-                            "enabled": True,
-                            "type": "arrow"
-                        }
-                    },
-                    "dashes": [2, 2],
-                    "color": {
-                        "color": "#BBBBBB",
-                        "opacity": 0.5
+                edges.append(
+                    {
+                        "from": dom_id,
+                        "to": prop_id,
+                        "label": "hasDomain",
+                        "font": {
+                            "size": 7,  # Reduced from 8
+                            "align": "middle",
+                            "background": "#2E2E2E" if self.dark_mode else "#FFFFFF",
+                        },
+                        "arrows": {"to": {"enabled": True, "type": "arrow"}},
+                        "dashes": [2, 2],
+                        "color": {"color": "#BBBBBB", "opacity": 0.5},
                     }
-                })
+                )
 
             for rng in obj_prop.range:
-                rng_id = add_node(rng.name, "class")
+                rng_id = add_node(rng, "class")
 
                 # Connect property to range
-                edges.append({
-                    "from": prop_id,
-                    "to": rng_id,
-                    "label": "hasRange",
-                    "font": {
-                        "size": 7,  # Reduced from 8
-                        "align": "middle",
-                        "background": "#2E2E2E" if self.dark_mode else "#FFFFFF"
-                    },
-                    "arrows": {
-                        "to": {
-                            "enabled": True,
-                            "type": "arrow"
-                        }
-                    },
-                    "dashes": [2, 2],
-                    "color": {
-                        "color": "#BBBBBB",
-                        "opacity": 0.5
+                edges.append(
+                    {
+                        "from": prop_id,
+                        "to": rng_id,
+                        "label": "hasRange",
+                        "font": {
+                            "size": 7,  # Reduced from 8
+                            "align": "middle",
+                            "background": "#2E2E2E" if self.dark_mode else "#FFFFFF",
+                        },
+                        "arrows": {"to": {"enabled": True, "type": "arrow"}},
+                        "dashes": [2, 2],
+                        "color": {"color": "#BBBBBB", "opacity": 0.5},
                     }
-                })
+                )
 
         # 4. Add data properties - with optimized edge generation
         for data_prop in ontology.data_properties:
@@ -2985,57 +2910,45 @@ class AdvancedGraphVisualizer:
             prop_id = add_node(data_prop.name, "property")
 
             for dom in data_prop.domain:
-                dom_id = add_node(dom.name, "class")
+                dom_id = add_node(dom, "class")
 
                 # Connect domain to property
-                edges.append({
-                    "from": dom_id,
-                    "to": prop_id,
-                    "label": "hasDomain",
-                    "font": {
-                        "size": 7,  # Reduced from 8
-                        "align": "middle",
-                        "background": "#2E2E2E" if self.dark_mode else "#FFFFFF"
-                    },
-                    "arrows": {
-                        "to": {
-                            "enabled": True,
-                            "type": "arrow"
-                        }
-                    },
-                    "dashes": [2, 2],
-                    "color": {
-                        "color": "#BBBBBB",
-                        "opacity": 0.5
+                edges.append(
+                    {
+                        "from": dom_id,
+                        "to": prop_id,
+                        "label": "hasDomain",
+                        "font": {
+                            "size": 7,  # Reduced from 8
+                            "align": "middle",
+                            "background": "#2E2E2E" if self.dark_mode else "#FFFFFF",
+                        },
+                        "arrows": {"to": {"enabled": True, "type": "arrow"}},
+                        "dashes": [2, 2],
+                        "color": {"color": "#BBBBBB", "opacity": 0.5},
                     }
-                })
+                )
 
             # Add datatype node
             datatype_name = data_prop.range.value
             datatype_id = add_node(datatype_name, "datatype")
 
             # Connect property to datatype
-            edges.append({
-                "from": prop_id,
-                "to": datatype_id,
-                "label": "hasRange",
-                "font": {
-                    "size": 7,  # Reduced from 8
-                    "align": "middle",
-                    "background": "#2E2E2E" if self.dark_mode else "#FFFFFF"
-                },
-                "arrows": {
-                    "to": {
-                        "enabled": True,
-                        "type": "arrow"
-                    }
-                },
-                "dashes": [2, 2],
-                "color": {
-                    "color": "#BBBBBB",
-                    "opacity": 0.5
+            edges.append(
+                {
+                    "from": prop_id,
+                    "to": datatype_id,
+                    "label": "hasRange",
+                    "font": {
+                        "size": 7,  # Reduced from 8
+                        "align": "middle",
+                        "background": "#2E2E2E" if self.dark_mode else "#FFFFFF",
+                    },
+                    "arrows": {"to": {"enabled": True, "type": "arrow"}},
+                    "dashes": [2, 2],
+                    "color": {"color": "#BBBBBB", "opacity": 0.5},
                 }
-            })
+            )
 
         # 5. Add KG instances and their relationships - optimized
         entity_to_types = {}  # e.g., "Harold" -> {"Person", ...}
@@ -3081,26 +2994,23 @@ class AdvancedGraphVisualizer:
                 source_id = get_node_id(subject)
                 target_id = get_node_id(obj_name)
 
-                edges.append({
-                    "from": source_id,
-                    "to": target_id,
-                    "label": triplet.predicate,
-                    "font": {
-                        "size": 8,  # Reduced from 10
-                        "align": "middle",
-                        "background": "#2E2E2E" if self.dark_mode else "#FFFFFF"
-                    },
-                    "arrows": {
-                        "to": {
-                            "enabled": True,
-                            "type": "arrow"
-                        }
-                    },
-                    "color": {
-                        "color": "#E91E63",  # Pink for instance relationships
-                        "opacity": 0.8
+                edges.append(
+                    {
+                        "from": source_id,
+                        "to": target_id,
+                        "label": triplet.predicate,
+                        "font": {
+                            "size": 8,  # Reduced from 10
+                            "align": "middle",
+                            "background": "#2E2E2E" if self.dark_mode else "#FFFFFF",
+                        },
+                        "arrows": {"to": {"enabled": True, "type": "arrow"}},
+                        "color": {
+                            "color": "#E91E63",  # Pink for instance relationships
+                            "opacity": 0.8,
+                        },
                     }
-                })
+                )
 
         # 6. Connect instances to their classes - batch process for efficiency
         for entity, types in entity_to_types.items():
@@ -3111,27 +3021,24 @@ class AdvancedGraphVisualizer:
                     if type_name in added_nodes:
                         target_id = get_node_id(type_name)
 
-                        edges.append({
-                            "from": source_id,
-                            "to": target_id,
-                            "label": "isA",
-                            "font": {
-                                "size": 7,  # Reduced from 8
-                                "align": "middle",
-                                "background": "#2E2E2E" if self.dark_mode else "#FFFFFF"
-                            },
-                            "arrows": {
-                                "to": {
-                                    "enabled": True,
-                                    "type": "arrow"
-                                }
-                            },
-                            "dashes": [3, 3],
-                            "color": {
-                                "color": "#9C27B0",  # Purple for isA instance to class
-                                "opacity": 0.6
+                        edges.append(
+                            {
+                                "from": source_id,
+                                "to": target_id,
+                                "label": "isA",
+                                "font": {
+                                    "size": 7,  # Reduced from 8
+                                    "align": "middle",
+                                    "background": "#2E2E2E" if self.dark_mode else "#FFFFFF",
+                                },
+                                "arrows": {"to": {"enabled": True, "type": "arrow"}},
+                                "dashes": [3, 3],
+                                "color": {
+                                    "color": "#9C27B0",  # Purple for isA instance to class
+                                    "opacity": 0.6,
+                                },
                             }
-                        })
+                        )
 
         # Generate graph data with performance optimizations
         graph_data = self.generate_graph_data(nodes, edges)
@@ -3147,7 +3054,7 @@ class AdvancedGraphVisualizer:
         self._create_visualization(
             graph_data,
             output_path,
-            title=title or f"Combined Ontology & KG: {len(nodes)} nodes, {len(edges)} relationships"
+            title=title or f"Combined Ontology & KG: {len(nodes)} nodes, {len(edges)} relationships",
         )
 
 
@@ -3174,7 +3081,7 @@ class KnowledgeGraphViz:
             auto_open=auto_open,
             render_mode="webgl",  # Force WebGL for performance
             initial_stabilization=True,  # Enable initial stabilization
-            max_nodes_full_render=500  # Threshold for simplified rendering
+            max_nodes_full_render=500,  # Threshold for simplified rendering
         )
 
     def visualize_ontology(self, ontology: Ontology, filename: str = "ontology_viz.html"):
@@ -3220,7 +3127,7 @@ class KnowledgeGraphViz:
         ontology: Ontology,
         kg: KG,
         filename: str = "combined_viz.html",
-        title: str = "Combined Ontology & Knowledge Graph"
+        title: str = "Combined Ontology & Knowledge Graph",
     ):
         """
         Visualize both ontology and knowledge graph in a single view,
@@ -3246,10 +3153,7 @@ class KnowledgeGraphViz:
         return self.visualizer.visualize_combined(ontology, kg, output_path, title)
 
     def filter_and_visualize(
-        self,
-        kg: KG,
-        filter_criteria: Dict[str, Any] = None,
-        filename: str = "filtered_kg_viz.html"
+        self, kg: KG, filter_criteria: Dict[str, Any] = None, filename: str = "filtered_kg_viz.html"
     ):
         """
         Filter a knowledge graph based on criteria and visualize the result.
@@ -3300,16 +3204,15 @@ class KnowledgeGraphViz:
 
             # Check if entities should be excluded
             if "exclude_entities" in filter_criteria and (
-                triplet.subject in filter_criteria["exclude_entities"] or
-                triplet.object in filter_criteria["exclude_entities"]
+                triplet.subject in filter_criteria["exclude_entities"]
+                or triplet.object in filter_criteria["exclude_entities"]
             ):
                 continue
 
             # For non-isA relationships, check if entities are in the inclusion list
             if triplet.predicate.lower() != "isa":
                 if "entity_types" in filter_criteria:
-                    if (triplet.subject not in entities_to_include and
-                        triplet.object not in entities_to_include):
+                    if triplet.subject not in entities_to_include and triplet.object not in entities_to_include:
                         continue
 
             # Add the triplet to the filtered KG
@@ -3372,9 +3275,7 @@ class KnowledgeGraphViz:
 
         # Find central entities (by degree centrality)
         centrality = sorted(
-            [(entity, degree) for entity, degree in entity_connections.items()],
-            key=lambda x: x[1],
-            reverse=True
+            [(entity, degree) for entity, degree in entity_connections.items()], key=lambda x: x[1], reverse=True
         )[:10]  # Top 10
 
         return {
@@ -3383,7 +3284,7 @@ class KnowledgeGraphViz:
             "density": density,
             "degree_distribution": degree_distribution,
             "predicate_distribution": predicates,
-            "centrality": centrality
+            "centrality": centrality,
         }
 
     def generate_report(self, ontology: Ontology = None, kg: KG = None, filename: str = "graph_analysis_report.html"):
@@ -3508,11 +3409,9 @@ class KnowledgeGraphViz:
             # Predicate distribution chart - optimized for performance
             if kg_metrics["predicate_distribution"]:
                 # Limit to top 10 predicates for readability
-                top_predicates = sorted(
-                    kg_metrics["predicate_distribution"].items(),
-                    key=lambda x: x[1],
-                    reverse=True
-                )[:10]
+                top_predicates = sorted(kg_metrics["predicate_distribution"].items(), key=lambda x: x[1], reverse=True)[
+                    :10
+                ]
 
                 pred_labels = [p[0] for p in top_predicates]
                 pred_counts = [p[1] for p in top_predicates]
@@ -3761,7 +3660,8 @@ class KnowledgeGraphViz:
         <div class="section">
             <h2 class="section-title">Summary</h2>
             <div class="metrics-container">
-                {f'''
+                {
+            f'''
                 <div class="metric-card">
                     <div class="metric-title">Total Entities</div>
                     <div class="metric-value">{kg_metrics["node_count"]}</div>
@@ -3778,14 +3678,18 @@ class KnowledgeGraphViz:
                     <div class="metric-title">Predicate Types</div>
                     <div class="metric-value">{len(kg_metrics["predicate_distribution"])}</div>
                 </div>
-                ''' if kg_metrics else '''
+                '''
+            if kg_metrics
+            else '''
                 <div class="metric-card">
                     <div class="metric-title">No Knowledge Graph Data</div>
                     <div class="metric-value">-</div>
                 </div>
-                '''}
+                '''
+        }
 
-                {f'''
+                {
+            f'''
                 <div class="metric-card">
                     <div class="metric-title">Ontology Classes</div>
                     <div class="metric-value">{len({sub_rel.subclass.name for sub_rel in ontology.subclass_relations} | {sub_rel.superclass.name for sub_rel in ontology.subclass_relations})}</div>
@@ -3798,16 +3702,20 @@ class KnowledgeGraphViz:
                     <div class="metric-title">Data Properties</div>
                     <div class="metric-value">{len(ontology.data_properties)}</div>
                 </div>
-                ''' if ontology else '''
+                '''
+            if ontology
+            else '''
                 <div class="metric-card">
                     <div class="metric-title">No Ontology Data</div>
                     <div class="metric-value">-</div>
                 </div>
-                '''}
+                '''
+        }
             </div>
         </div>
 
-        {f'''
+        {
+            f'''
         <div class="section">
             <h2 class="section-title">Knowledge Graph Analysis</h2>
             <div class="charts-container">
@@ -3845,45 +3753,62 @@ class KnowledgeGraphViz:
                         </tr>
                     </thead>
                     <tbody>
-                        {"".join(f"<tr><td>{pred}</td><td>{count}</td><td>{count/kg_metrics['edge_count']*100:.1f}%</td></tr>" for pred, count in sorted(kg_metrics["predicate_distribution"].items(), key=lambda x: x[1], reverse=True))}
+                        {"".join(f"<tr><td>{pred}</td><td>{count}</td><td>{count / kg_metrics['edge_count'] * 100:.1f}%</td></tr>" for pred, count in sorted(kg_metrics["predicate_distribution"].items(), key=lambda x: x[1], reverse=True))}
                     </tbody>
                 </table>
             </div>
         </div>
-        ''' if kg_metrics else ''}
+        '''
+            if kg_metrics
+            else ""
+        }
 
         <div class="section">
             <h2 class="section-title">Visualizations</h2>
             <div class="tab-container">
                 <div class="tabs">
-                    {f'<div class="tab active" data-tab="ontology-tab">Ontology</div>' if ontology else ''}
-                    {f'<div class="tab{" active" if not ontology else ""}" data-tab="kg-tab">Knowledge Graph</div>' if kg else ''}
-                    {f'<div class="tab" data-tab="combined-tab">Combined View</div>' if ontology and kg else ''}
+                    {'<div class="tab active" data-tab="ontology-tab">Ontology</div>' if ontology else ""}
+                    {
+            f'<div class="tab{" active" if not ontology else ""}" data-tab="kg-tab">Knowledge Graph</div>' if kg else ""
+        }
+                    {'<div class="tab" data-tab="combined-tab">Combined View</div>' if ontology and kg else ""}
                 </div>
 
-                {f'''
+                {
+            f'''
                 <div class="tab-content active" id="ontology-tab">
                     <div class="viz-container">
                         <iframe src="{ontology_viz}" class="viz-iframe" title="Ontology Visualization"></iframe>
                     </div>
                 </div>
-                ''' if ontology else ''}
+                '''
+            if ontology
+            else ""
+        }
 
-                {f'''
+                {
+            f'''
                 <div class="tab-content{" active" if not ontology else ""}" id="kg-tab">
                     <div class="viz-container">
                         <iframe src="{kg_viz}" class="viz-iframe" title="Knowledge Graph Visualization"></iframe>
                     </div>
                 </div>
-                ''' if kg else ''}
+                '''
+            if kg
+            else ""
+        }
 
-                {f'''
+                {
+            f'''
                 <div class="tab-content" id="combined-tab">
                     <div class="viz-container">
                         <iframe src="{combined_viz}" class="viz-iframe" title="Combined Visualization"></iframe>
                     </div>
                 </div>
-                ''' if ontology and kg else ''}
+                '''
+            if ontology and kg
+            else ""
+        }
             </div>
         </div>
     </div>
@@ -3927,7 +3852,7 @@ class KnowledgeGraphViz:
 
         # Open the report in a browser
         if self.auto_open:
-            webbrowser.open('file://' + str(report_path.absolute()))
+            webbrowser.open("file://" + str(report_path.absolute()))
 
         return str(report_path)
 
@@ -3935,48 +3860,23 @@ class KnowledgeGraphViz:
 # Example usage
 if __name__ == "__main__":
     # Example usage of the visualization library
-    from ontopipe.models import KG, Ontology, Class, ObjectProperty, DataProperty, DataType, SubclassRelation
+    from ontopipe.models import KG, Class, DataProperty, DataType, ObjectProperty, Ontology, SubclassRelation
 
     # Create a sample ontology
     ontology = Ontology(
         subclass_relations=[
-            SubclassRelation(
-                subclass=Class(name="Person"),
-                superclass=Class(name="Agent")
-            ),
-            SubclassRelation(
-                subclass=Class(name="Employee"),
-                superclass=Class(name="Person")
-            ),
-            SubclassRelation(
-                subclass=Class(name="Company"),
-                superclass=Class(name="Organization")
-            )
+            SubclassRelation(subclass=Class(name="Person"), superclass=Class(name="Agent")),
+            SubclassRelation(subclass=Class(name="Employee"), superclass=Class(name="Person")),
+            SubclassRelation(subclass=Class(name="Company"), superclass=Class(name="Organization")),
         ],
         object_properties=[
-            ObjectProperty(
-                name="worksFor",
-                domain=[Class(name="Person")],
-                range=[Class(name="Organization")]
-            ),
-            ObjectProperty(
-                name="hasManager",
-                domain=[Class(name="Person")],
-                range=[Class(name="Person")]
-            )
+            ObjectProperty(name="worksFor", domain=[Class(name="Person")], range=[Class(name="Organization")]),
+            ObjectProperty(name="hasManager", domain=[Class(name="Person")], range=[Class(name="Person")]),
         ],
         data_properties=[
-            DataProperty(
-                name="hasName",
-                domain=[Class(name="Person")],
-                range=DataType(value="string")
-            ),
-            DataProperty(
-                name="hasAge",
-                domain=[Class(name="Person")],
-                range=DataType(value="integer")
-            )
-        ]
+            DataProperty(name="hasName", domain=[Class(name="Person")], range=DataType(value="string")),
+            DataProperty(name="hasAge", domain=[Class(name="Person")], range=DataType(value="integer")),
+        ],
     )
 
     # Create a sample knowledge graph
@@ -3986,18 +3886,20 @@ if __name__ == "__main__":
             self.predicate = predicate
             self.object = object
 
-    kg = KG(triplets=[
-        Triplet("John", "isA", "Person"),
-        Triplet("Jane", "isA", "Employee"),
-        Triplet("Acme", "isA", "Company"),
-        Triplet("John", "worksFor", "Acme"),
-        Triplet("Jane", "worksFor", "Acme"),
-        Triplet("Jane", "hasManager", "John"),
-        Triplet("John", "hasName", "John Smith"),
-        Triplet("Jane", "hasName", "Jane Doe"),
-        Triplet("John", "hasAge", "35"),
-        Triplet("Jane", "hasAge", "28")
-    ])
+    kg = KG(
+        triplets=[
+            Triplet("John", "isA", "Person"),
+            Triplet("Jane", "isA", "Employee"),
+            Triplet("Acme", "isA", "Company"),
+            Triplet("John", "worksFor", "Acme"),
+            Triplet("Jane", "worksFor", "Acme"),
+            Triplet("Jane", "hasManager", "John"),
+            Triplet("John", "hasName", "John Smith"),
+            Triplet("Jane", "hasName", "Jane Doe"),
+            Triplet("John", "hasAge", "35"),
+            Triplet("Jane", "hasAge", "28"),
+        ]
+    )
 
     # Initialize the visualizer
     viz = KnowledgeGraphViz(dark_mode=True)

@@ -46,8 +46,8 @@ def build_ontology_graph(data: dict) -> Network:
 
     # Visualize subclass relations as edges between classes
     for relation in data.get("subclass_relations", []):
-        subclass = relation["subclass"]["name"]
-        superclass = relation["superclass"]["name"]
+        subclass = relation["subclass"]
+        superclass = relation["superclass"]
         # Both subclass and superclass are ontology classes.
         net.add_node(subclass, label=subclass, title="CLASS", color=COLOR_MAP["CLASS"])
         net.add_node(superclass, label=superclass, title="CLASS", color=COLOR_MAP["CLASS"])
@@ -56,8 +56,8 @@ def build_ontology_graph(data: dict) -> Network:
     # Visualize object properties: create edges from each domain to each range using the property name.
     for prop in data.get("object_properties", []):
         prop_name = prop["name"]
-        domains = [d["name"] for d in prop.get("domain", [])]
-        ranges = [r["name"] for r in prop.get("range", [])]
+        domains = prop.get("domain", [])
+        ranges = prop.get("range", [])
         for d in domains:
             net.add_node(d, label=d, title="CLASS", color=COLOR_MAP["CLASS"])
         for r in ranges:
@@ -75,7 +75,7 @@ def build_ontology_graph(data: dict) -> Network:
     # Visualize data properties: edges from domain classes to a literal node representing the datatype.
     for prop in data.get("data_properties", []):
         prop_name = prop["name"]
-        domains = [d["name"] for d in prop.get("domain", [])]
+        domains = prop.get("domain", [])
         datatype = prop["range"]["value"]
         dt_node = f"datatype: {datatype}"
         net.add_node(dt_node, label=datatype, title="Datatype", color=COLOR_MAP["DATA_PROPERTY"])
@@ -100,9 +100,9 @@ def build_kg_graph(kg_data: dict) -> Network:
     entity_color = "#3498DB"  # Blue for entities
 
     for triplet in kg_data.get("triplets", []):
-        subject = triplet["subject"]["name"]
-        predicate = triplet["predicate"]["name"]
-        obj = triplet["object"]["name"]
+        subject = triplet["subject"]
+        predicate = triplet["predicate"]
+        obj = triplet["object"]
         confidence = triplet.get("confidence", 1.0)
 
         net.add_node(subject, label=subject, title="Entity", color=entity_color)

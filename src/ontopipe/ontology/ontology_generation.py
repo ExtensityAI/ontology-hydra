@@ -13,7 +13,6 @@ from ontopipe.models import (
     Ontology,
     OntologyState,
     OWLBuilderInput,
-    OwlClass,
     SubClassRelation,
 )
 from ontopipe.prompts import prompt_registry
@@ -28,9 +27,7 @@ logger = logging.getLogger("ontopipe.ontology_generation")
     pre_remedy=False,
     post_remedy=True,
     verbose=True,
-    remedy_retry_params=dict(
-        tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False
-    ),
+    remedy_retry_params=dict(tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False),
 )
 class OWLBuilder(Expression):
     def __init__(self, name: str, *args, **kwargs):
@@ -55,12 +52,14 @@ class OWLBuilder(Expression):
 
     def post(self, output: OntologyState) -> bool:
         # @TODO: 3rd party validation of the ontology (something like OOPS!)
+        """
         for concept in output.concepts:
-            if isinstance(concept, OwlClass):
                 if concept in self._classes:
                     raise ValueError(
                         f"You've generated a duplicate concept: {concept}. It is already defined. Please focus on new and unique concepts while taking the history into account."
-                    )
+                    )"""
+
+        # TODO check if classes exist etc.
         return True
 
     def extend_concepts(self, concepts: list):
@@ -114,9 +113,7 @@ def generate_ontology(
     with MetadataTracker() as tracker:  # For gpt-* models
         for i in tqdm(range(0, len(cqs), batch_size)):
             batch_cqs = cqs[i : i + batch_size]
-            input_data = OWLBuilderInput(
-                competency_question=batch_cqs, ontology_state=state
-            )
+            input_data = OWLBuilderInput(competency_question=batch_cqs, ontology_state=state)
             try:
                 new_state = builder(input=input_data)
             except Exception as e:

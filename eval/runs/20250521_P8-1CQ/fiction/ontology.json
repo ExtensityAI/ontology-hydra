@@ -1,0 +1,2860 @@
+{
+    "name": "Fiction Books",
+    "subclass_relations": [
+        {
+            "subclass": "StorytellingStyle",
+            "superclass": "LiteraryConcept"
+        },
+        {
+            "subclass": "AudiobookFormat",
+            "superclass": "FictionFormat"
+        },
+        {
+            "subclass": "AudienceClassification",
+            "superclass": "ClassificationScheme"
+        },
+        {
+            "subclass": "FictionMediaFormat",
+            "superclass": "FictionFormat"
+        },
+        {
+            "subclass": "GenreConvention",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "LiteraryCriticism",
+            "superclass": "CriticalDiscourse"
+        },
+        {
+            "subclass": "PublicationTrend",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "TransmediaStorytellingOverlap",
+            "superclass": "OverlapArea"
+        },
+        {
+            "subclass": "StandardNarrativeStructure",
+            "superclass": "NarrativeStructure"
+        },
+        {
+            "subclass": "Stakeholder",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "MetadataAttribute",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "NarrativeStructure",
+            "superclass": "StorytellingTechnique"
+        },
+        {
+            "subclass": "ClassificationScheme",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "MarketingProcess",
+            "superclass": "PublicationProcess"
+        },
+        {
+            "subclass": "RepresentationMethod",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "LicensingMechanism",
+            "superclass": "RightsManagementRule"
+        },
+        {
+            "subclass": "ReaderEngagementAttribute",
+            "superclass": "ReaderEngagement"
+        },
+        {
+            "subclass": "DistributionPlatform",
+            "superclass": "DistributionChannel"
+        },
+        {
+            "subclass": "AudienceBehavior",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "FictionFormat",
+            "superclass": "MediaFormat"
+        },
+        {
+            "subclass": "AdvancedSearchCriteria",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "ReaderReview",
+            "superclass": "Review"
+        },
+        {
+            "subclass": "Technology",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "StylisticInnovationTechnique",
+            "superclass": "StylisticDevice"
+        },
+        {
+            "subclass": "PreferenceAttribute",
+            "superclass": "ReaderPreference"
+        },
+        {
+            "subclass": "Fiction",
+            "superclass": "LiteraryGenre"
+        },
+        {
+            "subclass": "HistoricalFiction",
+            "superclass": "LiteraryGenre"
+        },
+        {
+            "subclass": "TraditionalDistributionPlatform",
+            "superclass": "DistributionPlatform"
+        },
+        {
+            "subclass": "Bookseller",
+            "superclass": "Stakeholder"
+        },
+        {
+            "subclass": "PublicationProcess",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "AuthorRole",
+            "superclass": "StakeholderRole"
+        },
+        {
+            "subclass": "CatalogingPlatform",
+            "superclass": "DigitalTool"
+        },
+        {
+            "subclass": "ReaderEngagementPattern",
+            "superclass": "ReaderEngagement"
+        },
+        {
+            "subclass": "InteractiveStorytellingFormat",
+            "superclass": "FictionFormat"
+        },
+        {
+            "subclass": "InfluenceMetric",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "HybridGenreConstraint",
+            "superclass": "CrossGenreConstraint"
+        },
+        {
+            "subclass": "RecommendationParameter",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "RightsManagement",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "PublishingProcessStage",
+            "superclass": "PublicationProcess"
+        },
+        {
+            "subclass": "RightsManagementRule",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "ReaderPreference",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "ExperimentalNarrativeStructure",
+            "superclass": "NarrativeStructure"
+        },
+        {
+            "subclass": "MarketTrend",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "PublisherType",
+            "superclass": "ClassificationScheme"
+        },
+        {
+            "subclass": "MultimediaProjectOverlap",
+            "superclass": "OverlapArea"
+        },
+        {
+            "subclass": "CrossPlatformProject",
+            "superclass": "MultimediaProject"
+        },
+        {
+            "subclass": "NarrativeVoiceVariation",
+            "superclass": "NarrativeVoice"
+        },
+        {
+            "subclass": "StakeholderResponsibility",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "InnovativeLiteraryStyle",
+            "superclass": "LiteraryConcept"
+        },
+        {
+            "subclass": "EditingProcess",
+            "superclass": "PublicationProcess"
+        },
+        {
+            "subclass": "CommunityActivityAttribute",
+            "superclass": "ReaderEngagementAttribute"
+        },
+        {
+            "subclass": "IndustryTrend",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "Taxonomy",
+            "superclass": "ClassificationScheme"
+        },
+        {
+            "subclass": "MysteryFiction",
+            "superclass": "LiteraryGenre"
+        },
+        {
+            "subclass": "SocialMediaPromotionAspect",
+            "superclass": "MultimediaAspect"
+        },
+        {
+            "subclass": "StylisticDeviceClassification",
+            "superclass": "ClassificationScheme"
+        },
+        {
+            "subclass": "RecommendationAttribute",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "PointOfView",
+            "superclass": "NarrativeElement"
+        },
+        {
+            "subclass": "TheoreticalAnalysis",
+            "superclass": "ScholarlyDiscourse"
+        },
+        {
+            "subclass": "HybridGenre",
+            "superclass": "LiteraryGenre"
+        },
+        {
+            "subclass": "MetadataStandard",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "DistributionStage",
+            "superclass": "LifecycleStage"
+        },
+        {
+            "subclass": "CulturalFiction",
+            "superclass": "LiteraryGenre"
+        },
+        {
+            "subclass": "DemographicAttribute",
+            "superclass": "ReaderDemographic"
+        },
+        {
+            "subclass": "SocialMediaPromotion",
+            "superclass": "MarketingAspect"
+        },
+        {
+            "subclass": "DigitalPublishingWorkflow",
+            "superclass": "PublishingWorkflow"
+        },
+        {
+            "subclass": "CulturalDistinction",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "HybridNarrativeForm",
+            "superclass": "StorytellingForm"
+        },
+        {
+            "subclass": "NarrativeVoiceClassification",
+            "superclass": "ClassificationScheme"
+        },
+        {
+            "subclass": "BooksellerRole",
+            "superclass": "StakeholderRole"
+        },
+        {
+            "subclass": "CriticalDiscourse",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "CrossGenreConstraint",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "StorytellingTechniqueClassification",
+            "superclass": "ClassificationScheme"
+        },
+        {
+            "subclass": "AudiobookMedia",
+            "superclass": "MediaFormat"
+        },
+        {
+            "subclass": "NarrativeElement",
+            "superclass": "LiteraryConcept"
+        },
+        {
+            "subclass": "PublishingRole",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "ReaderCommunityActivity",
+            "superclass": "CommunityActivity"
+        },
+        {
+            "subclass": "MarketingAspect",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "SalesData",
+            "superclass": "MarketTrend"
+        },
+        {
+            "subclass": "GenreAttribute",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "StakeholderResponsibilityClassification",
+            "superclass": "StakeholderResponsibility"
+        },
+        {
+            "subclass": "NonFictionExclusion",
+            "superclass": "ScopeExclusion"
+        },
+        {
+            "subclass": "TraditionalPublishingWorkflow",
+            "superclass": "PublishingWorkflow"
+        },
+        {
+            "subclass": "GenreClassification",
+            "superclass": "ClassificationScheme"
+        },
+        {
+            "subclass": "PrintingProcess",
+            "superclass": "PublicationProcess"
+        },
+        {
+            "subclass": "CopyrightConstraint",
+            "superclass": "RightsManagementRule"
+        },
+        {
+            "subclass": "CopyrightManagement",
+            "superclass": "RightsManagement"
+        },
+        {
+            "subclass": "PublicationStage",
+            "superclass": "LifecycleStage"
+        },
+        {
+            "subclass": "LicensingConstraint",
+            "superclass": "RightsManagementRule"
+        },
+        {
+            "subclass": "ThematicElement",
+            "superclass": "LiteraryConcept"
+        },
+        {
+            "subclass": "DigitalDistributionPlatform",
+            "superclass": "DistributionPlatform"
+        },
+        {
+            "subclass": "NarrativeDevice",
+            "superclass": "LiteraryConcept"
+        },
+        {
+            "subclass": "CritiquePlatform",
+            "superclass": "DigitalTool"
+        },
+        {
+            "subclass": "EmergingLiteraryTrend",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "DesignProcess",
+            "superclass": "PublicationProcess"
+        },
+        {
+            "subclass": "LifecycleStage",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "Motif",
+            "superclass": "LiteraryConcept"
+        },
+        {
+            "subclass": "RecommendationCategory",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "ExcludedTopic",
+            "superclass": "ContentTopic"
+        },
+        {
+            "subclass": "GenrePopularity",
+            "superclass": "MarketTrend"
+        },
+        {
+            "subclass": "MediaFormat",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "ScholarlyLiterature",
+            "superclass": "ScholarlyResearch"
+        },
+        {
+            "subclass": "StorytellingVoiceTechnique",
+            "superclass": "StorytellingTechnique"
+        },
+        {
+            "subclass": "CommunityOrganization",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "ReaderFeedback",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "MultimediaFormat",
+            "superclass": "FictionFormat"
+        },
+        {
+            "subclass": "ScholarlyPublication",
+            "superclass": "AcademicPublication"
+        },
+        {
+            "subclass": "ManuscriptDevelopmentStage",
+            "superclass": "LifecycleStage"
+        },
+        {
+            "subclass": "NonFiction",
+            "superclass": "ExcludedTopic"
+        },
+        {
+            "subclass": "NonFictionWork",
+            "superclass": "NonFiction"
+        },
+        {
+            "subclass": "DiscoveryPlatformClassification",
+            "superclass": "ClassificationScheme"
+        },
+        {
+            "subclass": "MotifClassification",
+            "superclass": "ClassificationScheme"
+        },
+        {
+            "subclass": "MetadataStandardUsage",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "PeriodClassification",
+            "superclass": "ClassificationScheme"
+        },
+        {
+            "subclass": "NarrativeStructureClassification",
+            "superclass": "ClassificationScheme"
+        },
+        {
+            "subclass": "Reader",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "DigitalToolClassification",
+            "superclass": "ClassificationScheme"
+        },
+        {
+            "subclass": "DigitalToolCategory",
+            "superclass": "ClassificationScheme"
+        },
+        {
+            "subclass": "CulturalInteraction",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "StorytellingTechnique",
+            "superclass": "LiteraryConcept"
+        },
+        {
+            "subclass": "MultimediaMedia",
+            "superclass": "MediaFormat"
+        },
+        {
+            "subclass": "AudienceSegment",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "MediaOutsidePublishingExclusion",
+            "superclass": "ScopeExclusion"
+        },
+        {
+            "subclass": "DigitalChannel",
+            "superclass": "DistributionChannel"
+        },
+        {
+            "subclass": "MarketTrendClassification",
+            "superclass": "ClassificationScheme"
+        },
+        {
+            "subclass": "PrintMediaFormat",
+            "superclass": "FictionMediaFormat"
+        },
+        {
+            "subclass": "MediaOutsidePublishing",
+            "superclass": "ExcludedTopic"
+        },
+        {
+            "subclass": "RegionalDistinction",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "PublishingWorkflow",
+            "superclass": "PublicationProcess"
+        },
+        {
+            "subclass": "TraditionalStorytelling",
+            "superclass": "StorytellingForm"
+        },
+        {
+            "subclass": "StakeholderRole",
+            "superclass": "PublishingRole"
+        },
+        {
+            "subclass": "DigitalToolUsage",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "InteractiveFictionForm",
+            "superclass": "HybridNarrativeForm"
+        },
+        {
+            "subclass": "ReviewAttribute",
+            "superclass": "ReaderEngagementAttribute"
+        },
+        {
+            "subclass": "ReaderEngagementMetric",
+            "superclass": "ReaderEngagementAttribute"
+        },
+        {
+            "subclass": "CrossFormatStorytellingAspect",
+            "superclass": "StorytellingTechnique"
+        },
+        {
+            "subclass": "ScholarlyDiscourse",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "AcademicPublication",
+            "superclass": "ScholarlyResearch"
+        },
+        {
+            "subclass": "MetadataStandardIncorporation",
+            "superclass": "MetadataStandardUsage"
+        },
+        {
+            "subclass": "TransmediaStorytelling",
+            "superclass": "StorytellingTechnique"
+        },
+        {
+            "subclass": "EmergentStorytelling",
+            "superclass": "StorytellingForm"
+        },
+        {
+            "subclass": "PrintMedia",
+            "superclass": "MediaFormat"
+        },
+        {
+            "subclass": "InteractiveFiction",
+            "superclass": "EmergentStorytelling"
+        },
+        {
+            "subclass": "AudiencePreference",
+            "superclass": "MarketTrend"
+        },
+        {
+            "subclass": "DystopianFiction",
+            "superclass": "SpeculativeFiction"
+        },
+        {
+            "subclass": "AudienceDevelopment",
+            "superclass": "MarketingAspect"
+        },
+        {
+            "subclass": "ScopeExclusion",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "TraditionalChannel",
+            "superclass": "DistributionChannel"
+        },
+        {
+            "subclass": "Characterization",
+            "superclass": "NarrativeElement"
+        },
+        {
+            "subclass": "PublisherClassification",
+            "superclass": "PublisherType"
+        },
+        {
+            "subclass": "OnlineCommunityEngagement",
+            "superclass": "ReaderEngagement"
+        },
+        {
+            "subclass": "FictionBookDevelopmentGuideline",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "BookManufacturingExclusion",
+            "superclass": "ScopeExclusion"
+        },
+        {
+            "subclass": "LiteraryAgent",
+            "superclass": "PublishingRole"
+        },
+        {
+            "subclass": "NarrativeGoal",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "MultimediaMediaFormat",
+            "superclass": "FictionMediaFormat"
+        },
+        {
+            "subclass": "AuthorProfile",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "ManuscriptDevelopment",
+            "superclass": "PublicationProcess"
+        },
+        {
+            "subclass": "Review",
+            "superclass": "ReaderFeedback"
+        },
+        {
+            "subclass": "ThematicMotif",
+            "superclass": "Motif"
+        },
+        {
+            "subclass": "SalesTrend",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "ThematicClassification",
+            "superclass": "ClassificationScheme"
+        },
+        {
+            "subclass": "StylisticFeature",
+            "superclass": "GenreAttribute"
+        },
+        {
+            "subclass": "HistoricalDevelopment",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "Forum",
+            "superclass": "CommunityOrganization"
+        },
+        {
+            "subclass": "StakeholderInteractionRule",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "ThematicElementClassification",
+            "superclass": "ClassificationScheme"
+        },
+        {
+            "subclass": "RecommendationAttribute",
+            "superclass": "ReaderEngagementAttribute"
+        },
+        {
+            "subclass": "NarrativeApproach",
+            "superclass": "GenreAttribute"
+        },
+        {
+            "subclass": "StylisticDevice",
+            "superclass": "LiteraryConcept"
+        },
+        {
+            "subclass": "EBookMedia",
+            "superclass": "MediaFormat"
+        },
+        {
+            "subclass": "ReviewAttribute",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "StylisticInnovation",
+            "superclass": "StylisticDevice"
+        },
+        {
+            "subclass": "ReaderSegment",
+            "superclass": "AudienceSegment"
+        },
+        {
+            "subclass": "ExperimentalFiction",
+            "superclass": "LiteraryGenre"
+        },
+        {
+            "subclass": "NarrativeVoice",
+            "superclass": "NarrativeElement"
+        },
+        {
+            "subclass": "PrintFormat",
+            "superclass": "FictionFormat"
+        },
+        {
+            "subclass": "RightsManagementStandard",
+            "superclass": "MetadataStandard"
+        },
+        {
+            "subclass": "ContentRights",
+            "superclass": "RightsManagement"
+        },
+        {
+            "subclass": "ScholarlyResearch",
+            "superclass": "ExcludedTopic"
+        },
+        {
+            "subclass": "FormatConversionProcess",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "ContentTopic",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "PublisherRole",
+            "superclass": "StakeholderRole"
+        },
+        {
+            "subclass": "StorytellingTerminology",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "AudiobookMediaFormat",
+            "superclass": "FictionMediaFormat"
+        },
+        {
+            "subclass": "MultimediaAspect",
+            "superclass": "MarketingAspect"
+        },
+        {
+            "subclass": "OverlapArea",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "CommunityFeedbackAttribute",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "LicensingInformation",
+            "superclass": "RightsManagement"
+        },
+        {
+            "subclass": "StorytellingForm",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "NarrativeTechnique",
+            "superclass": "StorytellingTechnique"
+        },
+        {
+            "subclass": "Publisher",
+            "superclass": "PublishingRole"
+        },
+        {
+            "subclass": "DigitalPlatform",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "DiscoveryPlatform",
+            "superclass": "DigitalTool"
+        },
+        {
+            "subclass": "EBookMediaFormat",
+            "superclass": "FictionMediaFormat"
+        },
+        {
+            "subclass": "SpeculativeFiction",
+            "superclass": "LiteraryGenre"
+        },
+        {
+            "subclass": "Author",
+            "superclass": "PublishingRole"
+        },
+        {
+            "subclass": "EditingStage",
+            "superclass": "LifecycleStage"
+        },
+        {
+            "subclass": "DataAnalyticsClassification",
+            "superclass": "ClassificationScheme"
+        },
+        {
+            "subclass": "DigitalPublicationMetadata",
+            "superclass": "MetadataAttribute"
+        },
+        {
+            "subclass": "ReaderEngagement",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "ReaderDemographic",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "TransmediaStorytellingFormat",
+            "superclass": "InteractiveStorytellingFormat"
+        },
+        {
+            "subclass": "Critic",
+            "superclass": "PublishingRole"
+        },
+        {
+            "subclass": "CommunityActivity",
+            "superclass": "ReaderEngagement"
+        },
+        {
+            "subclass": "SalesPattern",
+            "superclass": "SalesTrend"
+        },
+        {
+            "subclass": "EBookFormat",
+            "superclass": "FictionFormat"
+        },
+        {
+            "subclass": "DistributionChannel",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "MultimediaProject",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "CommunityActivityCategory",
+            "superclass": "CommunityActivityAttribute"
+        },
+        {
+            "subclass": "BehavioralAttribute",
+            "superclass": "AudienceBehavior"
+        },
+        {
+            "subclass": "LiteraryTheoryExclusion",
+            "superclass": "ScopeExclusion"
+        },
+        {
+            "subclass": "TechnologicalTool",
+            "superclass": "DigitalTool"
+        },
+        {
+            "subclass": "ReviewStage",
+            "superclass": "LifecycleStage"
+        },
+        {
+            "subclass": "MultimediaIntegrationMetadata",
+            "superclass": "MetadataAttribute"
+        },
+        {
+            "subclass": "DigitalFormatType",
+            "superclass": "FictionFormat"
+        },
+        {
+            "subclass": "ScholarlyResearchWork",
+            "superclass": "ScholarlyResearch"
+        },
+        {
+            "subclass": "PlotDevelopment",
+            "superclass": "NarrativeElement"
+        },
+        {
+            "subclass": "ExperimentalFiction",
+            "superclass": "EmergentStorytelling"
+        },
+        {
+            "subclass": "ClassificationSystem",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "ClassificationConstraint",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "LiteraryGenreDefinition",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "ReaderRole",
+            "superclass": "StakeholderRole"
+        },
+        {
+            "subclass": "DigitalTool",
+            "superclass": "owl:Class"
+        },
+        {
+            "subclass": "OverlappingGenre",
+            "superclass": "LiteraryGenre"
+        }
+    ],
+    "object_properties": [
+        {
+            "name": "usesMetadataStandard",
+            "domain": [
+                "Publication"
+            ],
+            "range": [
+                "MetadataStandard"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasStylisticDeviceAttribute",
+            "domain": [
+                "StylisticDevice"
+            ],
+            "range": [
+                "xsd:string"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasThematicMotif",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "ThematicMotif"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "appliesClassificationScheme",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "ClassificationScheme"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasReview",
+            "domain": [
+                "ReaderFeedback"
+            ],
+            "range": [
+                "Review"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasRecommendationAttribute",
+            "domain": [
+                "ReaderFeedback"
+            ],
+            "range": [
+                "RecommendationAttribute"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasRecommendationCategory",
+            "domain": [
+                "RecommendationAttribute"
+            ],
+            "range": [
+                "RecommendationCategory"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasCopyrightManagement",
+            "domain": [
+                "ContentRights"
+            ],
+            "range": [
+                "CopyrightManagement"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasMetadataStandard",
+            "domain": [
+                "FictionBook",
+                "PublicationProcess"
+            ],
+            "range": [
+                "MetadataStandard"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "definesLiteraryGenre",
+            "domain": [
+                "LiteraryGenre"
+            ],
+            "range": [
+                "LiteraryGenreDefinition"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasTaskAssignment",
+            "domain": [
+                "PublishingRole"
+            ],
+            "range": [
+                "PublicationProcess"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasMarketTrend",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "MarketTrend"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasOnlineCommunityEngagement",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "OnlineCommunityEngagement"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasOverlappingGenre",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "OverlappingGenre"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasSocialMediaPromotionAspect",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "SocialMediaPromotionAspect"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasAuthor",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "Author"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "incorporatesMetadataStandard",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "MetadataStandardIncorporation"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasReaderSegment",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "ReaderSegment"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasRoleInContentConsumption",
+            "domain": [
+                "StakeholderRole"
+            ],
+            "range": [
+                "Publication"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasRoleRelation",
+            "domain": [
+                "PublishingRole"
+            ],
+            "range": [
+                "PublishingRole"
+            ],
+            "characteristics": [
+                {
+                    "value": "symmetric"
+                }
+            ]
+        },
+        {
+            "name": "hasDemographicAttribute",
+            "domain": [
+                "Reader"
+            ],
+            "range": [
+                "DemographicAttribute"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "influencesClassificationScheme",
+            "domain": [
+                "AudienceDevelopment"
+            ],
+            "range": [
+                "ClassificationScheme"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasContentDeliveryMethod",
+            "domain": [
+                "DigitalFormatType"
+            ],
+            "range": [
+                "owl:Class"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasPublicationTrend",
+            "domain": [
+                "AuthorProfile"
+            ],
+            "range": [
+                "PublicationTrend"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasThematicElementClassification",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "ThematicElementClassification"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "distinguishesSubgenreFromGenre",
+            "domain": [
+                "LiteraryGenre"
+            ],
+            "range": [
+                "LiteraryGenre"
+            ],
+            "characteristics": [
+                {
+                    "value": "asymmetric"
+                },
+                {
+                    "value": "irreflexive"
+                }
+            ]
+        },
+        {
+            "name": "capturesScholarlyDiscourse",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "ScholarlyDiscourse"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "incorporatesTransmediaStorytelling",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "TransmediaStorytelling"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "categorizedByMetadataStandard",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "MetadataStandard"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "capturesLiteraryCriticism",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "LiteraryCriticism"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasCrossGenreConstraint",
+            "domain": [
+                "HybridGenre"
+            ],
+            "range": [
+                "CrossGenreConstraint"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "capturesTheoreticalAnalysis",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "TheoreticalAnalysis"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasSalesPattern",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "SalesPattern"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasDevelopmentGuideline",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "FictionBookDevelopmentGuideline"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasGenreAttribute",
+            "domain": [
+                "LiteraryGenre"
+            ],
+            "range": [
+                "GenreAttribute"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "promotesCommunityOrganization",
+            "domain": [
+                "ReaderEngagement"
+            ],
+            "range": [
+                "CommunityOrganization"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasRoleInContentCreationProcess",
+            "domain": [
+                "StakeholderRole"
+            ],
+            "range": [
+                "PublicationProcess"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasReaderEngagementMetric",
+            "domain": [
+                "Reader"
+            ],
+            "range": [
+                "ReaderEngagementMetric"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasAudienceClassification",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "AudienceClassification"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasReviewAttribute",
+            "domain": [
+                "ReaderEngagementAttribute"
+            ],
+            "range": [
+                "ReviewAttribute"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "managesPublicationProcess",
+            "domain": [
+                "Stakeholder"
+            ],
+            "range": [
+                "PublicationProcess"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasStakeholderRole",
+            "domain": [
+                "Person"
+            ],
+            "range": [
+                "Stakeholder"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasPublishingProcessStage",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "PublishingProcessStage"
+            ],
+            "characteristics": [
+                {
+                    "value": "transitive"
+                }
+            ]
+        },
+        {
+            "name": "representsInnovativeLiteraryStyle",
+            "domain": [
+                "LiteraryConcept"
+            ],
+            "range": [
+                "InnovativeLiteraryStyle"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasReaderPreference",
+            "domain": [
+                "Reader"
+            ],
+            "range": [
+                "ReaderPreference"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasStakeholderRoleRelation",
+            "domain": [
+                "StakeholderRole"
+            ],
+            "range": [
+                "StakeholderRole"
+            ],
+            "characteristics": [
+                {
+                    "value": "symmetric"
+                }
+            ]
+        },
+        {
+            "name": "relatesNarrativeVoiceToTechnique",
+            "domain": [
+                "NarrativeVoice"
+            ],
+            "range": [
+                "StorytellingTechnique"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "basedOnStylisticAttribute",
+            "domain": [
+                "AdvancedSearchCriteria",
+                "RecommendationParameter"
+            ],
+            "range": [
+                "StylisticDevice"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasNarrativeStructureClassification",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "NarrativeStructureClassification"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "tracksEmergingLiteraryTrend",
+            "domain": [
+                "LiteraryGenre"
+            ],
+            "range": [
+                "EmergingLiteraryTrend"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasGenreClassification",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "GenreClassification"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasThematicElementAttribute",
+            "domain": [
+                "ThematicElement"
+            ],
+            "range": [
+                "xsd:string"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "linkedToNarrativeGoal",
+            "domain": [
+                "NarrativeElement"
+            ],
+            "range": [
+                "NarrativeGoal"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasPublishingWorkflow",
+            "domain": [
+                "Publication"
+            ],
+            "range": [
+                "PublishingWorkflow"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "affectsAudienceDevelopment",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "AudienceDevelopment"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasReaderEngagementAttribute",
+            "domain": [
+                "Reader"
+            ],
+            "range": [
+                "ReaderEngagementAttribute"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasLifecycleStage",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "LifecycleStage"
+            ],
+            "characteristics": [
+                {
+                    "value": "transitive"
+                }
+            ]
+        },
+        {
+            "name": "involvesPublicationProcess",
+            "domain": [
+                "Publication"
+            ],
+            "range": [
+                "PublicationProcess"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "excludesScholarlyLiterature",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "ScholarlyLiterature"
+            ],
+            "characteristics": [
+                {
+                    "value": "irreflexive"
+                },
+                {
+                    "value": "asymmetric"
+                }
+            ]
+        },
+        {
+            "name": "hasRightsManagementStandard",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "RightsManagementStandard"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "influencesClassificationScheme",
+            "domain": [
+                "SalesPattern"
+            ],
+            "range": [
+                "ClassificationScheme"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasAudiencePreference",
+            "domain": [
+                "MarketTrend"
+            ],
+            "range": [
+                "AudienceSegment"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "exhibitsStylisticInnovation",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "StylisticInnovation"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasClassificationScheme",
+            "domain": [
+                "DigitalTool",
+                "DataAnalytics",
+                "DiscoveryPlatform"
+            ],
+            "range": [
+                "ClassificationScheme"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "belongsToGenre",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "LiteraryGenre"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "capturesCriticalDiscourse",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "CriticalDiscourse"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasPlotDevelopment",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "PlotDevelopment"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "classifiedBySystem",
+            "domain": [
+                "StorytellingTechnique"
+            ],
+            "range": [
+                "ClassificationSystem"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasStorytellingTechniqueClassification",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "StorytellingTechniqueClassification"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasScopeExclusion",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "ScopeExclusion"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasContentTopic",
+            "domain": [
+                "Content"
+            ],
+            "range": [
+                "ContentTopic"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasGenrePopularity",
+            "domain": [
+                "MarketTrend"
+            ],
+            "range": [
+                "GenreClassification"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "isSubjectToRule",
+            "domain": [
+                "Stakeholder"
+            ],
+            "range": [
+                "StakeholderInteractionRule"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasCulturalDistinction",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "CulturalDistinction"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasStylisticFeature",
+            "domain": [
+                "LiteraryGenre"
+            ],
+            "range": [
+                "StylisticFeature"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasGenreConvention",
+            "domain": [
+                "LiteraryGenre"
+            ],
+            "range": [
+                "GenreConvention"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasStylisticInnovationTechnique",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "StylisticInnovationTechnique"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasReaderEngagement",
+            "domain": [
+                "Reader"
+            ],
+            "range": [
+                "ReaderEngagement"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "precedesStage",
+            "domain": [
+                "LifecycleStage"
+            ],
+            "range": [
+                "LifecycleStage"
+            ],
+            "characteristics": [
+                {
+                    "value": "transitive"
+                },
+                {
+                    "value": "asymmetric"
+                },
+                {
+                    "value": "irreflexive"
+                }
+            ]
+        },
+        {
+            "name": "hasLiteraryGenreDefinition",
+            "domain": [
+                "LiteraryGenre"
+            ],
+            "range": [
+                "LiteraryGenreDefinition"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasCopyrightConstraint",
+            "domain": [
+                "RightsManagementRule"
+            ],
+            "range": [
+                "CopyrightConstraint"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasCommunityActivity",
+            "domain": [
+                "ReaderEngagement"
+            ],
+            "range": [
+                "CommunityActivity"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "usesTechnology",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "Technology"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasStorytellingTerminology",
+            "domain": [
+                "StorytellingTechnique"
+            ],
+            "range": [
+                "StorytellingTerminology"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasContentRights",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "ContentRights"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasHistoricalDevelopment",
+            "domain": [
+                "LiteraryGenre"
+            ],
+            "range": [
+                "HistoricalDevelopment"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "governsRightsManagementRule",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "RightsManagementRule"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "describesGenre",
+            "domain": [
+                "AuthorProfile"
+            ],
+            "range": [
+                "LiteraryGenre"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "usedForAnalysis",
+            "domain": [
+                "TechnologicalTool"
+            ],
+            "range": [
+                "FictionBook"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasReaderReview",
+            "domain": [
+                "Reader"
+            ],
+            "range": [
+                "ReaderReview"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "governsInteraction",
+            "domain": [
+                "Stakeholder"
+            ],
+            "range": [
+                "StakeholderInteractionRule"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasNarrativeStructure",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "NarrativeStructure"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "usedForDiscovery",
+            "domain": [
+                "DigitalPlatform"
+            ],
+            "range": [
+                "FictionBook"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasStorytellingStyle",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "StorytellingStyle"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasDigitalPlatform",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "DigitalPlatform"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasOverlapArea",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "OverlapArea"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasThematicElement",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "ThematicElement"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasThematicClassification",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "ThematicClassification"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasNarrativeVoiceVariation",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "NarrativeVoiceVariation"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasStylisticDeviceClassification",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "StylisticDeviceClassification"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasRoleInContentCreation",
+            "domain": [
+                "Stakeholder"
+            ],
+            "range": [
+                "PublicationProcess"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "preventsOverlapWith",
+            "domain": [
+                "ClassificationScheme"
+            ],
+            "range": [
+                "ClassificationScheme"
+            ],
+            "characteristics": [
+                {
+                    "value": "asymmetric"
+                },
+                {
+                    "value": "irreflexive"
+                }
+            ]
+        },
+        {
+            "name": "hasMediaFormat",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "MediaFormat"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "supportsConsistentClassification",
+            "domain": [
+                "MetadataStandard"
+            ],
+            "range": [
+                "owl:Class"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "basedOnThematicAttribute",
+            "domain": [
+                "AdvancedSearchCriteria",
+                "RecommendationParameter"
+            ],
+            "range": [
+                "ThematicElement"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasMetadataAttribute",
+            "domain": [
+                "Publication"
+            ],
+            "range": [
+                "MetadataAttribute"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "targetsAudienceSegment",
+            "domain": [
+                "Publication"
+            ],
+            "range": [
+                "AudienceSegment"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "ensuresClassificationConsistency",
+            "domain": [
+                "ClassificationScheme"
+            ],
+            "range": [
+                "ClassificationConstraint"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasStakeholderResponsibilityClassification",
+            "domain": [
+                "StakeholderResponsibility"
+            ],
+            "range": [
+                "StakeholderResponsibilityClassification"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasCommunityActivityAttribute",
+            "domain": [
+                "ReaderEngagementAttribute"
+            ],
+            "range": [
+                "CommunityActivityAttribute"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "usedForCataloging",
+            "domain": [
+                "TechnologicalTool"
+            ],
+            "range": [
+                "PublicationProcess"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "usesDigitalTool",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "DigitalTool"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "isAvailableInMediaFormat",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "FictionMediaFormat"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasStorytellingTechniqueAttribute",
+            "domain": [
+                "StorytellingTechnique"
+            ],
+            "range": [
+                "xsd:string"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasReaderSegmentAttribute",
+            "domain": [
+                "ReaderSegment"
+            ],
+            "range": [
+                "DemographicAttribute",
+                "BehavioralAttribute",
+                "PreferenceAttribute"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "isStorytellingForm",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "StorytellingForm"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "includesCrossFormatStorytellingAspect",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "CrossFormatStorytellingAspect"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasInteractiveStorytellingFormat",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "InteractiveStorytellingFormat"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "excludesAcademicPublications",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "AcademicPublication"
+            ],
+            "characteristics": [
+                {
+                    "value": "irreflexive"
+                },
+                {
+                    "value": "asymmetric"
+                }
+            ]
+        },
+        {
+            "name": "employsMetadataStandard",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "MetadataStandardUsage"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasLicensingMechanism",
+            "domain": [
+                "RightsManagement"
+            ],
+            "range": [
+                "LicensingMechanism"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasNarrativeVoiceCategory",
+            "domain": [
+                "NarrativeVoice"
+            ],
+            "range": [
+                "StorytellingVoiceTechnique"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasRegionalDistinction",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "RegionalDistinction"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasAudienceBehavior",
+            "domain": [
+                "Reader"
+            ],
+            "range": [
+                "AudienceBehavior"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasCommunityFeedbackAttribute",
+            "domain": [
+                "ReaderFeedback"
+            ],
+            "range": [
+                "CommunityFeedbackAttribute"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "excludesNonFictionWorks",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "NonFictionWork"
+            ],
+            "characteristics": [
+                {
+                    "value": "irreflexive"
+                },
+                {
+                    "value": "asymmetric"
+                }
+            ]
+        },
+        {
+            "name": "hasRole",
+            "domain": [
+                "Person"
+            ],
+            "range": [
+                "PublishingRole"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "capturesScholarlyResearchWork",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "ScholarlyResearchWork"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasPointOfView",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "PointOfView"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasPeriodClassification",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "PeriodClassification"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasAuthorProfile",
+            "domain": [
+                "Person"
+            ],
+            "range": [
+                "AuthorProfile"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "isExcludedTopic",
+            "domain": [
+                "ContentTopic"
+            ],
+            "range": [
+                "ExcludedTopic"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasRoleInContentDissemination",
+            "domain": [
+                "Stakeholder"
+            ],
+            "range": [
+                "PublicationProcess"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasLicensingConstraint",
+            "domain": [
+                "RightsManagementRule"
+            ],
+            "range": [
+                "LicensingConstraint"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasCrossPlatformProject",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "CrossPlatformProject"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "employsNarrativeTechnique",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "NarrativeTechnique"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasNarrativeApproach",
+            "domain": [
+                "LiteraryGenre"
+            ],
+            "range": [
+                "NarrativeApproach"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "usesDigitalTool",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "DigitalToolUsage"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasPublishingProcessStage",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "PublicationProcess"
+            ],
+            "characteristics": [
+                {
+                    "value": "transitive"
+                }
+            ]
+        },
+        {
+            "name": "hasResponsibility",
+            "domain": [
+                "Stakeholder"
+            ],
+            "range": [
+                "StakeholderResponsibility"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasInfluenceMetric",
+            "domain": [
+                "AuthorProfile"
+            ],
+            "range": [
+                "InfluenceMetric"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "representedByMethod",
+            "domain": [
+                "CrossGenreConstraint"
+            ],
+            "range": [
+                "RepresentationMethod"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "providesFeedback",
+            "domain": [
+                "Reader"
+            ],
+            "range": [
+                "ReaderFeedback"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "distinguishesStorytellingElementFromDevice",
+            "domain": [
+                "LiteraryConcept"
+            ],
+            "range": [
+                "LiteraryConcept"
+            ],
+            "characteristics": [
+                {
+                    "value": "asymmetric"
+                },
+                {
+                    "value": "irreflexive"
+                }
+            ]
+        },
+        {
+            "name": "hasMotif",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "Motif"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasHybridNarrativeForm",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "HybridNarrativeForm"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasPublisherClassification",
+            "domain": [
+                "Publisher"
+            ],
+            "range": [
+                "PublisherClassification"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasWork",
+            "domain": [
+                "Author"
+            ],
+            "range": [
+                "FictionBook"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasRoleInContentConsumption",
+            "domain": [
+                "Stakeholder"
+            ],
+            "range": [
+                "Publication"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "relatesStakeholderRoles",
+            "domain": [
+                "StakeholderRole"
+            ],
+            "range": [
+                "StakeholderRole"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasRoleInContentDisseminationProcess",
+            "domain": [
+                "StakeholderRole"
+            ],
+            "range": [
+                "PublicationProcess"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "representsIndustryTrend",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "IndustryTrend"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "participatesInForum",
+            "domain": [
+                "Reader"
+            ],
+            "range": [
+                "Forum"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasSalesTrend",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "SalesTrend"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "availableInFormat",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "FictionFormat"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "isMultimediaProject",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "MultimediaProject"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasNarrativeStructureAttribute",
+            "domain": [
+                "NarrativeStructure"
+            ],
+            "range": [
+                "xsd:string"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasStorytellingTechnique",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "StorytellingTechnique"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasReviewAttribute",
+            "domain": [
+                "Review"
+            ],
+            "range": [
+                "ReviewAttribute"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasNarrativeVoice",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "NarrativeVoice"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasLicensingConstraint",
+            "domain": [
+                "ContentRights"
+            ],
+            "range": [
+                "LicensingConstraint"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasLicensingInformation",
+            "domain": [
+                "RightsManagement"
+            ],
+            "range": [
+                "LicensingInformation"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasSalesData",
+            "domain": [
+                "MarketTrend"
+            ],
+            "range": [
+                "SalesTrend"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "usesStylisticDevice",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "StylisticDevice"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "engagesInCulturalInteraction",
+            "domain": [
+                "Reader"
+            ],
+            "range": [
+                "CulturalInteraction"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasReaderEngagementPattern",
+            "domain": [
+                "Reader"
+            ],
+            "range": [
+                "ReaderEngagementPattern"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasNarrativeVoiceClassification",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "NarrativeVoiceClassification"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasCommunityActivityCategory",
+            "domain": [
+                "CommunityActivityAttribute"
+            ],
+            "range": [
+                "CommunityActivityCategory"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasMotifAttribute",
+            "domain": [
+                "Motif"
+            ],
+            "range": [
+                "xsd:string"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "basedOnDemographicAttribute",
+            "domain": [
+                "AdvancedSearchCriteria",
+                "RecommendationParameter"
+            ],
+            "range": [
+                "ReaderDemographic"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "includesMultimediaAspect",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "MultimediaAspect"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "usesDistributionChannel",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "DistributionChannel"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasFormatConversionProcess",
+            "domain": [
+                "FictionFormat"
+            ],
+            "range": [
+                "FormatConversionProcess"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "usesDistributionPlatform",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "DistributionPlatform"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasMotifClassification",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "MotifClassification"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasSocialMediaPromotion",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "SocialMediaPromotion"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasReaderDemographic",
+            "domain": [
+                "Reader"
+            ],
+            "range": [
+                "ReaderDemographic"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "categorizedByDigitalToolCategory",
+            "domain": [
+                "DigitalTool"
+            ],
+            "range": [
+                "DigitalToolCategory"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasRightsManagement",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "RightsManagement"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasRecommendationAttribute",
+            "domain": [
+                "ReaderEngagementAttribute"
+            ],
+            "range": [
+                "RecommendationAttribute"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasHybridGenre",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "HybridGenre"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "involvesMarketingAspect",
+            "domain": [
+                "PublicationProcess"
+            ],
+            "range": [
+                "MarketingAspect"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasCharacterization",
+            "domain": [
+                "FictionBook"
+            ],
+            "range": [
+                "Characterization"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasReaderCommunityActivity",
+            "domain": [
+                "Reader"
+            ],
+            "range": [
+                "ReaderCommunityActivity"
+            ],
+            "characteristics": []
+        }
+    ],
+    "data_properties": []
+}
