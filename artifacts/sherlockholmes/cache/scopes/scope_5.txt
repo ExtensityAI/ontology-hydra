@@ -1,0 +1,39 @@
+1. Introduction
+1.1 Domain Definition
+- Representation of fiction books focusing on their characters, events, settings, and story arcs.
+- Emphasis on capturing narrative elements that define the structure and depth of fiction storytelling.
+
+2. Included Topics
+2.1 Characters
+- Character profiles including personality traits, backgrounds, development, and relationships.
+- Cultural and multicultural dimensions affecting character portrayal.
+- Adaptation of characters for different linguistic and cultural contexts.
+
+2.2 Events
+- Key plot points, turning points, and chronological sequences.
+- Narrative significance and thematic roles of events.
+
+2.3 Settings
+- Physical locations, time periods, and socio-cultural environments.
+- Descriptive elements influencing mood and tone.
+- Representation of historical and fantasy settings.
+
+2.4 Story Arcs
+- Overall narrative structure including exposition, conflict, climax, and resolution.
+- Multi-layered and complex story arcs common in fantasy and historical fiction.
+- Thematic analysis and narrative pacing.
+
+3. Excluded Topics
+- Non-fictional content and factual recounts.
+- Detailed linguistic analysis unrelated to narrative meaning (e.g., grammar, syntax).
+- Production aspects such as publishing, marketing, or distribution of fiction books.
+- Interactive or multimedia storytelling formats (e.g., games, films).
+
+4. Gray Areas and Overlaps
+- The boundary between character development and cultural adaptation may overlap with translation and localization domains.
+- Narrative structure analysis may intersect with computational text analysis and digital humanities.
+- Cultural context representation blending literary theory and translation studies.
+
+5. Summary
+- The scope focuses on defining and representing the literary and narrative elements of fiction books with particular attention to cultural diversity and adaptability.
+- It establishes clear boundaries excluding production processes and non-text narrative forms while acknowledging interdisciplinary intersections.

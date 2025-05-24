@@ -1,3 +1,5 @@
+from collections import defaultdict
+from collections.abc import Iterable
 from pathlib import Path
 
 from pydantic import Field, field_validator
@@ -23,7 +25,9 @@ class Characteristic(LLMDataModel):
             "irreflexive",
         }
         if v not in valid_characteristics:
-            raise ValueError(f"Invalid characteristic: {v}. Must be one of {valid_characteristics}")
+            raise ValueError(
+                f"Invalid characteristic: {v}. Must be one of {valid_characteristics}"
+            )
         return v
 
     def __hash__(self):
@@ -73,7 +77,17 @@ class ObjectProperty(LLMDataModel):
     name: str = Field(description="Name of the object property (without namespace).")
     domain: list[str] = Field(description="Domain classes.")
     range: list[str] = Field(description="Range classes.")
-    characteristics: list[Characteristic] = Field(description="Property characteristics.")
+    characteristics: list[Characteristic] = Field(
+        description="Property characteristics."
+    )
+
+    def is_valid_for(
+        self, subject_types: Iterable[str], object_types: Iterable[str]
+    ) -> bool:
+        # pass in lists for both as we have subclass relations
+        return any(st in self.domain for st in subject_types) and any(
+            ot in self.range for ot in object_types
+        )
 
     def __eq__(self, other):
         if not isinstance(other, ObjectProperty):
@@ -105,7 +119,9 @@ class DataProperty(LLMDataModel):
     name: str = Field(description="Name of the data property (without namespace).")
     domain: list[str] = Field(description="Names of domain classes.")
     range: Datatype = Field(description="Datatype (e.g., xsd:string).")
-    characteristics: list[Characteristic] = Field(description="Property characteristics.")
+    characteristics: list[Characteristic] = Field(
+        description="Property characteristics."
+    )
 
     def __eq__(self, other):
         if not isinstance(other, DataProperty):
@@ -123,7 +139,9 @@ class DataProperty(LLMDataModel):
         )
 
     def __hash__(self):
-        return hash((self.name, tuple(self.domain), self.range, tuple(self.characteristics)))
+        return hash(
+            (self.name, tuple(self.domain), self.range, tuple(self.characteristics))
+        )
 
 
 class OntologyState(LLMDataModel):
@@ -143,27 +161,56 @@ class OWLBuilderInput(LLMDataModel):
 
 class Ontology(LLMDataModel):
     name: str = Field(description="Name of the ontology (without namespace).")
-    subclass_relations: list[SubClassRelation] = Field(description="List of subclass relationships.")
-    object_properties: list[ObjectProperty] = Field(description="List of object properties.")
+    subclass_relations: list[SubClassRelation] = Field(
+        description="List of subclass relationships."
+    )
+    object_properties: list[ObjectProperty] = Field(
+        description="List of object properties."
+    )
     data_properties: list[DataProperty] = Field(description="List of data properties.")
 
     @classmethod
     def from_json_file(cls, path: Path | str):
-        return cls.model_validate_json(Path(path).read_text(encoding="utf-8"))
+        return cls.model_validate_json(Path(path).read_text())
 
-    def has_class(self, class_name: str) -> bool:
+    def has_class(self, class_name: str):
         """Check if the ontology contains a class with the given name."""
         return (
-            any(class_name == rel.superclass or class_name == rel.subclass for rel in self.subclass_relations)
+            any(
+                class_name == rel.superclass or class_name == rel.subclass
+                for rel in self.subclass_relations
+            )
             or any(class_name == prop.name for prop in self.object_properties)
             or any(class_name == prop.name for prop in self.data_properties)
         )
 
-    def has_property(self, property_name: str) -> bool:
+    def has_property(self, property_name: str):
         """Check if the ontology contains a property with the given name."""
-        return any(property_name == prop.name for prop in self.object_properties) or any(
-            property_name == prop.name for prop in self.data_properties
-        )
+        return any(
+            property_name == prop.name for prop in self.object_properties
+        ) or any(property_name == prop.name for prop in self.data_properties)
+
+    def get_property(self, property_name: str):
+        """Get a property by name."""
+        for prop in self.object_properties:
+            if prop.name == property_name:
+                return prop
+
+        for prop in self.data_properties:
+            if prop.name == property_name:
+                return prop
+        return None
+
+    @property
+    def superclasses(self):
+        """Returns a dict of class: superclasses/class itself for each class in the ontology"""
+
+        d = defaultdict(lambda: set())
+
+        for relation in self.subclass_relations:
+            d[relation.subclass].add(relation.superclass)
+            d[relation.subclass].add(relation.subclass)
+        return d
 
 
 # ==================================================#
@@ -177,7 +224,9 @@ class Cluster(LLMDataModel):
 
 
 class Merge(LLMDataModel):
-    indexes: list[int] = Field(description="The indices of the clusters that are being merged.")
+    indexes: list[int] = Field(
+        description="The indices of the clusters that are being merged."
+    )
     relations: list[SubClassRelation] = Field(
         description="A list of superclass-subclass relations chosen from the existing two clusters in such a way that they merge."
     )
@@ -193,7 +242,9 @@ class Merge(LLMDataModel):
 
 
 class Bridge(LLMDataModel):
-    indexes: list[int] = Field(description="The indices of the clusters that are being bridged.")
+    indexes: list[int] = Field(
+        description="The indices of the clusters that are being bridged."
+    )
     relations: list[SubClassRelation] = Field(
         description="A list of new superclass-subclass relations used to bridge the two clusters from the ontology."
     )
@@ -209,8 +260,12 @@ class Bridge(LLMDataModel):
 
 
 class Prune(LLMDataModel):
-    indexes: list[int] = Field(description="The indices of the clusters that are being pruned.")
-    classes: list[str] = Field(description="A list of classes that are being pruned from the ontology.")
+    indexes: list[int] = Field(
+        description="The indices of the clusters that are being pruned."
+    )
+    classes: list[str] = Field(
+        description="A list of classes that are being pruned from the ontology."
+    )
 
     @field_validator("indexes")
     @classmethod
@@ -223,7 +278,9 @@ class Prune(LLMDataModel):
 
 
 class Operation(LLMDataModel):
-    type: Merge | Bridge | Prune = Field(description="The type of operation to perform.")
+    type: Merge | Bridge | Prune = Field(
+        description="The type of operation to perform."
+    )
 
 
 class WeaverInput(LLMDataModel):
@@ -233,7 +290,9 @@ class WeaverInput(LLMDataModel):
     clusters: list[Cluster] = Field(
         description="A list of clusters that are being managed by the weaver. The objective is to create only one cluster."
     )
-    history: list[Operation] | None = Field(description="The history of performed operations.")
+    history: list[Operation] | None = Field(
+        description="The history of performed operations."
+    )
 
 
 # ==================================================#
@@ -256,12 +315,16 @@ class Triplet(LLMDataModel):
     def __eq__(self, other):
         if not isinstance(other, Triplet):
             return False
-        return self.subject == other.subject and self.predicate == other.predicate and self.object == other.object
+        return (
+            self.subject == other.subject
+            and self.predicate == other.predicate
+            and self.object == other.object
+        )
 
     def __hash__(self):
         return hash((hash(self.subject), hash(self.predicate), hash(self.object)))
 
-    def __str__(self) -> str:
+    def __str__(self, indent: int = 0) -> str:
         return f"({self.subject}, {self.predicate}, {self.object})"
 
 
@@ -277,4 +340,6 @@ class KG(LLMDataModel):
 class TripletExtractorInput(LLMDataModel):
     text: str = Field(description="Text to extract triplets from.")
     ontology: Ontology = Field(description="Ontology schema to use for discovery.")
-    state: KGState | None = Field(description="Existing knowledge graph state (triplets), if any.")
+    state: KGState | None = Field(
+        description="Existing knowledge graph state (triplets), if any."
+    )

@@ -1,0 +1,60 @@
+1. Introduction
+1.1 Domain Definition
+- Representation of fiction books focusing on characters, events, settings, and story arcs.
+- Emphasis on capturing narrative identity, cultural context, and diverse storytelling traditions.
+
+1.2 Purpose
+- Establish a shared vocabulary and clear boundaries to support ontology development, literary analysis tools, and archival representation.
+
+2. Included Topics
+2.1 Characters
+- Character profiles including identity, motivations, development, relationships, and psychological traits.
+- Representation of diverse and inclusive identities reflecting global literary variety.
+
+2.2 Events
+- Key plot points, turning points, and significant occurrences within the narrative.
+- Temporal and causal sequences related to story progression.
+
+2.3 Settings
+- Physical, cultural, and historical environments where the story takes place.
+- Detailed world-building elements including fantastical or speculative locations.
+
+2.4 Story Arcs
+- Narrative structures encompassing multiple events and character development over time.
+- Thematic and emotional progression within the story.
+
+2.5 Narrative Context
+- Cultural, socio-political, and historical backgrounds influencing the fiction.
+- Intersections with postcolonial and global storytelling traditions.
+
+2.6 Metadata for Archival Purposes
+- Preservation-related information ensuring historical and contextual integrity.
+- Semantic annotations supporting digital archives and research.
+
+3. Explicit Exclusions
+3.1 Non-fictional Content
+- Representation of non-fiction domains, such as historical facts unrelated to fictional narratives.
+
+3.2 Author Biographies
+- Personal information about authors unless directly impacting narrative context.
+
+3.3 Reader Reception
+- Analyses of reader responses, reviews, or fan activities outside interpretative content.
+
+3.4 Production Details
+- Publishing, printing, and distribution metadata beyond archival preservation scope.
+
+4. Gray Areas and Overlaps
+4.1 Fanfiction and Reader Interpretations
+- Extensions and reinterpretations of original stories by readers provide value but may exist outside canonical ontology.
+
+4.2 Adjacent Domains
+- Overlaps with literary criticism, computational linguistics, and digital humanities methods.
+- Potential intersections with AI and machine learning fields for narrative pattern extraction.
+
+4.3 Emotional and Psychological Motivations
+- The complexity of modeling internal character states may overlap with psychological and cognitive science domains.
+
+5. Summary
+- This scope document grounds the domain in a multidisciplinary framework blending literary theory, technology, and archival science.
+- It balances inclusivity and cultural diversity with technological feasibility and archival accuracy.

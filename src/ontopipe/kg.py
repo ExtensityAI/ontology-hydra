@@ -5,7 +5,14 @@ from symai.components import MetadataTracker
 from symai.strategy import contract
 from tqdm import tqdm
 
-from ontopipe.models import KG, KGState, Ontology, Triplet, TripletExtractorInput
+from ontopipe.models import (
+    KG,
+    KGState,
+    ObjectProperty,
+    Ontology,
+    Triplet,
+    TripletExtractorInput,
+)
 from ontopipe.prompts import prompt_registry
 
 logger = getLogger("ontopipe.kg")
@@ -57,6 +64,7 @@ class TripletExtractor(Expression):
         }
 
         # TODO: add information on how to fix for each of the errors
+        # TODO: consider adding context information to errors (i.e. for what types a property is valid, etc.)
 
         # first iteration: check for new isA triplets, ensure that they are valid
         for triplet in (t for t in triplets if t.predicate == "isA"):
@@ -87,12 +95,12 @@ class TripletExtractor(Expression):
 
         all_type_defs = {**new_type_defs, **existing_type_defs}
 
+        superclasses = self.ontology.superclasses
+
         # second iteration: make sure triplets have valid type definitions
         for triplet in (t for t in triplets if t.predicate != "isA"):
             tds = all_type_defs.get(triplet.subject, None)
             tdo = all_type_defs.get(triplet.object, None)
-
-            # TODO validate properties as well!
 
             if not tds:
                 # Ensure that the subject entity has a type definition
@@ -114,6 +122,23 @@ class TripletExtractor(Expression):
                     f"{triplet}: Object '{triplet.object}' does not belong to a class yet! To fix this, add a triplet ({triplet.object}, isA, <class>) to define the ontology class of the object."
                 )
                 continue
+
+            property = self.ontology.get_property(triplet.predicate)
+
+            if not property:
+                # Ensure that the predicate is a valid ontology property
+                errors.append(
+                    f"{triplet}: Predicate '{triplet.predicate}' is not a valid ontology property! To fix this, either choose an appropriate property or consider not adding this triplet."
+                )
+                continue
+
+            if isinstance(property, ObjectProperty):
+                if not property.is_valid_for(superclasses[tds], superclasses[tdo]):
+                    # Ensure that the property is valid for the subject and object types
+                    errors.append(
+                        f"{triplet}: Predicate '{triplet.predicate}' is not valid for subject type '{tds}' and object type '{tdo}'. To fix this, either choose an appropriate property or consider not adding this triplet."
+                    )
+                    continue
 
         if errors:
             raise ValueError(

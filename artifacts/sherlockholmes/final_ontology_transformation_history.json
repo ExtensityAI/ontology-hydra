@@ -1,0 +1,4563 @@
+{
+    "original_ontology": {
+        "name": "A domain for representing fiction books through their characters, events, settings, and story arcs.",
+        "subclass_relations": [
+            {
+                "subclass": "NarrativeTheoryDomain",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "NonFictionBoundary",
+                "superclass": "FictionBoundaryConstraint"
+            },
+            {
+                "subclass": "MultimediaAdaptationConstraint",
+                "superclass": "FictionBoundaryConstraint"
+            },
+            {
+                "subclass": "NarrativeSocietalTheme",
+                "superclass": "ThematicElement"
+            },
+            {
+                "subclass": "CharacterRoleType",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "NonLinearLayer",
+                "superclass": "StoryArc"
+            },
+            {
+                "subclass": "HistoricalContext",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "TechnicalLinguisticDetail",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "ActualHistoricalEvent",
+                "superclass": "NarrativeEvent"
+            },
+            {
+                "subclass": "LocalizationRequirement",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "SocietalAttribute",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "FantasticalElementDescription",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "SemanticAnnotationSchema",
+                "superclass": "MetadataSchema"
+            },
+            {
+                "subclass": "Narrator",
+                "superclass": "Character"
+            },
+            {
+                "subclass": "InteractiveStoryArc",
+                "superclass": "StoryArc"
+            },
+            {
+                "subclass": "ThematicElement",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "EventSetting",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "NarrativeStructure",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "ContextualMetadataElement",
+                "superclass": "MetadataElement"
+            },
+            {
+                "subclass": "InternalCharacterMotivation",
+                "superclass": "InternalPsychologicalState"
+            },
+            {
+                "subclass": "NarrativeMoodType",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "HybridStoryArc",
+                "superclass": "StoryArc"
+            },
+            {
+                "subclass": "CulturalNarrativeContext",
+                "superclass": "NarrativeContext"
+            },
+            {
+                "subclass": "CognitiveProcess",
+                "superclass": "PsychologicalTrait"
+            },
+            {
+                "subclass": "CharacterRelationshipType",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "PhysicalContext",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "DomainBoundary",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "PreservationAnnotation",
+                "superclass": "SemanticAnnotation"
+            },
+            {
+                "subclass": "MultilingualRepresentation",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "PsychologicalDevelopmentArc",
+                "superclass": "CharacterDevelopmentArc"
+            },
+            {
+                "subclass": "KeyPlotPoint",
+                "superclass": "NarrativeEventCategory"
+            },
+            {
+                "subclass": "SociopoliticalElement",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "FantasticalElement",
+                "superclass": "WorldBuildingElement"
+            },
+            {
+                "subclass": "FictionBook",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "MetadataElement",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "ArchivalIntegrityConstraint",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "NarrativeExclusionConstraint",
+                "superclass": "FictionBoundaryConstraint"
+            },
+            {
+                "subclass": "ScalabilityAspect",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "LinearStoryArc",
+                "superclass": "StoryArc"
+            },
+            {
+                "subclass": "ConflictEvent",
+                "superclass": "NarrativeEventCategory"
+            },
+            {
+                "subclass": "StorytellingTradition",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "FictionMetadataStandard",
+                "superclass": "MetadataSchema"
+            },
+            {
+                "subclass": "Motivation",
+                "superclass": "PsychologicalTrait"
+            },
+            {
+                "subclass": "CulturalAttribute",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "StoryArcClassification",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "NonWesternStorytellingPerspective",
+                "superclass": "StorytellingPerspective"
+            },
+            {
+                "subclass": "SettingComponent",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "SociopoliticalSetting",
+                "superclass": "EventSetting"
+            },
+            {
+                "subclass": "NarrativeSequencingCriterion",
+                "superclass": "EventClassificationCriterion"
+            },
+            {
+                "subclass": "PhysicalSetting",
+                "superclass": "EventSetting"
+            },
+            {
+                "subclass": "SociopoliticalInfluence",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "FictionalContext",
+                "superclass": "NarrativeContext"
+            },
+            {
+                "subclass": "OralNarrativeFormat",
+                "superclass": "NarrativeFormat"
+            },
+            {
+                "subclass": "NarrativeLocalizationRequirement",
+                "superclass": "LocalizationRequirement"
+            },
+            {
+                "subclass": "HistoricalElement",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "CulturalBackgroundDescription",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "ThematicProgression",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "NarrativeContextMetadata",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "InteractiveNarrativeElement",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "IdentityRepresentation",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "NarrativeAdaptation",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "SpeculativeSetting",
+                "superclass": "EventSetting"
+            },
+            {
+                "subclass": "InteroperabilityRequirement",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "NarrativeIdentity",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "InternalCharacterStateConstraint",
+                "superclass": "NarrativeConstraint"
+            },
+            {
+                "subclass": "AuthorCentricInformation",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "StoryArc",
+                "superclass": "NarrativeStructure"
+            },
+            {
+                "subclass": "CharacterProfile",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "NarrativeRoleClassification",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "CatalogingStandard",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "PostcolonialStorytellingMethod",
+                "superclass": "NarrativeFormat"
+            },
+            {
+                "subclass": "NarrativeComponent",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "NarrativeBoundary",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "NarrativeThemeAttribute",
+                "superclass": "ThematicElement"
+            },
+            {
+                "subclass": "FactualHistoricalContext",
+                "superclass": "HistoricalContext"
+            },
+            {
+                "subclass": "LocalizationMetadataElement",
+                "superclass": "MetadataElement"
+            },
+            {
+                "subclass": "EmotionalPacing",
+                "superclass": "NarrativePacing"
+            },
+            {
+                "subclass": "ResolutionComponent",
+                "superclass": "StructuralComponent"
+            },
+            {
+                "subclass": "ThematicPacing",
+                "superclass": "NarrativePacing"
+            },
+            {
+                "subclass": "ConceptualOverlap",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "DigitalHumanitiesTool",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "ExclusionRule",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "DigitalCatalogingSystem",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "SocialRelationship",
+                "superclass": "CharacterRelationshipType"
+            },
+            {
+                "subclass": "EmotionalConstraint",
+                "superclass": "NarrativeConstraint"
+            },
+            {
+                "subclass": "CharacterState",
+                "superclass": "InternalPsychologicalState"
+            },
+            {
+                "subclass": "CulturalContext",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "ContextProperty",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "PreservationMetadataElement",
+                "superclass": "MetadataElement"
+            },
+            {
+                "subclass": "FantasticalSetting",
+                "superclass": "EventSetting"
+            },
+            {
+                "subclass": "InclusivityAspect",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "EventCausality",
+                "superclass": "NarrativeEventCausality"
+            },
+            {
+                "subclass": "MultiThreadedStoryArc",
+                "superclass": "StoryArc"
+            },
+            {
+                "subclass": "EventSequence",
+                "superclass": "NarrativeEventSequence"
+            },
+            {
+                "subclass": "FictionalHistoricalEvent",
+                "superclass": "NarrativeEvent"
+            },
+            {
+                "subclass": "DisciplinaryOverlap",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "EventImportanceCriterion",
+                "superclass": "EventClassificationCriterion"
+            },
+            {
+                "subclass": "LiteraryTheoryConcept",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "HistoricalSetting",
+                "superclass": "EventSetting"
+            },
+            {
+                "subclass": "CulturalStudiesDomain",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "PacingProfile",
+                "superclass": "NarrativePacing"
+            },
+            {
+                "subclass": "CharacterMotivationType",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "PsychologicalProfile",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "GlobalDiversityAttribute",
+                "superclass": "CharacterAttribute"
+            },
+            {
+                "subclass": "EmotionalAttribute",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "ClimaxComponent",
+                "superclass": "StructuralComponent"
+            },
+            {
+                "subclass": "SemanticAnnotationRequirement",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "MoodAttribute",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "CulturalSensitivityAspect",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "TemporalOrderingConstraint",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "FamilialRelationship",
+                "superclass": "CharacterRelationshipType"
+            },
+            {
+                "subclass": "CharacterDevelopmentArc",
+                "superclass": "NarrativeStructure"
+            },
+            {
+                "subclass": "InteractiveNarrativeFormat",
+                "superclass": "NarrativeStructure"
+            },
+            {
+                "subclass": "GlobalLiteraryIdentity",
+                "superclass": "IdentityAspect"
+            },
+            {
+                "subclass": "NarrativeContext",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "NarrativeToneType",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "MetadataStandard",
+                "superclass": "MetadataSchema"
+            },
+            {
+                "subclass": "CharacterTrait",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "HistoricalInfluence",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "TemporalRelationType",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "ArchivalMetadataStandard",
+                "superclass": "MetadataSchema"
+            },
+            {
+                "subclass": "NarrativeExclusionType",
+                "superclass": "ExclusionRule"
+            },
+            {
+                "subclass": "SemanticAnnotation",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "CulturalAdaptation",
+                "superclass": "AdaptationFactor"
+            },
+            {
+                "subclass": "CharacterPsychologicalDimension",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "FactualHistoricalRecord",
+                "superclass": "ActualHistoricalEvent"
+            },
+            {
+                "subclass": "FictionalHistoricalContext",
+                "superclass": "HistoricalContext"
+            },
+            {
+                "subclass": "CharacterDefinition",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "NarrativeCulturalTheme",
+                "superclass": "ThematicElement"
+            },
+            {
+                "subclass": "EmotionalProgression",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "EventType",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "SequencingRule",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "ResolutionEvent",
+                "superclass": "NarrativeEventCategory"
+            },
+            {
+                "subclass": "ToneAttribute",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "AmbiguousArea",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "Climax",
+                "superclass": "NarrativeStage"
+            },
+            {
+                "subclass": "ComputationalModelingDomain",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "IndigenousStorytellingPerspective",
+                "superclass": "StorytellingPerspective"
+            },
+            {
+                "subclass": "AIDrivenStorytellingTool",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "AmbiguousDomainOverlap",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "Localization",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "GrayAreaResolutionStrategy",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "PsychologicalTrait",
+                "superclass": "CharacterTrait"
+            },
+            {
+                "subclass": "EnvironmentalElement",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "SociopoliticalBackground",
+                "superclass": "IdentityAspect"
+            },
+            {
+                "subclass": "FallingActionComponent",
+                "superclass": "StructuralComponent"
+            },
+            {
+                "subclass": "IdentityAspect",
+                "superclass": "CharacterTrait"
+            },
+            {
+                "subclass": "NarrativeEvent",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "AntagonisticRelationship",
+                "superclass": "CharacterRelationshipType"
+            },
+            {
+                "subclass": "TemporalContext",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "NarrativePacingElement",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "DiversityAspect",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "CulturalInfluence",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "PostcolonialPerspective",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "HistoricalIntegrityConstraint",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "TraditionalNarrativeFormat",
+                "superclass": "NarrativeFormat"
+            },
+            {
+                "subclass": "ConceptualDistinction",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "LayeredNarrativeArc",
+                "superclass": "StoryArc"
+            },
+            {
+                "subclass": "NarrativeEventCategory",
+                "superclass": "EventType"
+            },
+            {
+                "subclass": "Antagonist",
+                "superclass": "Character"
+            },
+            {
+                "subclass": "NarrativeArcStructure",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "Exposition",
+                "superclass": "NarrativeStage"
+            },
+            {
+                "subclass": "EventSequencePosition",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "NarrativeProgression",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "Resolution",
+                "superclass": "NarrativeStage"
+            },
+            {
+                "subclass": "RisingActionComponent",
+                "superclass": "StructuralComponent"
+            },
+            {
+                "subclass": "NarrativeFactualityConstraint",
+                "superclass": "FictionBoundaryConstraint"
+            },
+            {
+                "subclass": "PacingConstraint",
+                "superclass": "NarrativeConstraint"
+            },
+            {
+                "subclass": "NarrativeCatalogingRequirement",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "CulturalBackground",
+                "superclass": "IdentityAspect"
+            },
+            {
+                "subclass": "Character",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "AdaptationFactor",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "WorldBuildingElement",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "ReaderInterpretation",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "InterwovenStoryArc",
+                "superclass": "StoryArc"
+            },
+            {
+                "subclass": "EventClassificationCriterion",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "ComputationalModelingTechnique",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "NarrativeStage",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "CulturalSetting",
+                "superclass": "EventSetting"
+            },
+            {
+                "subclass": "SociopoliticalIdentity",
+                "superclass": "IdentityAspect"
+            },
+            {
+                "subclass": "CulturalDiversityAttribute",
+                "superclass": "CharacterAttribute"
+            },
+            {
+                "subclass": "CulturalHeritage",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "NarrativeEventSequence",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "ContextualIntegrityConstraint",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "LocalizationFactor",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "GeographicalSetting",
+                "superclass": "EventSetting"
+            },
+            {
+                "subclass": "ThematicConstraint",
+                "superclass": "NarrativeConstraint"
+            },
+            {
+                "subclass": "CharacterMotivationOverlap",
+                "superclass": "DisciplinaryOverlap"
+            },
+            {
+                "subclass": "MetadataSchema",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "InternalPsychologicalState",
+                "superclass": "PsychologicalTrait"
+            },
+            {
+                "subclass": "NarrativeMood",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "StorytellingPerspective",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "NarrativeEventCausality",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "DiversityConstraint",
+                "superclass": "DiversityAspect"
+            },
+            {
+                "subclass": "ExpositionComponent",
+                "superclass": "StructuralComponent"
+            },
+            {
+                "subclass": "RuleEnforcement",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "SociopoliticalDiversityAttribute",
+                "superclass": "CharacterAttribute"
+            },
+            {
+                "subclass": "InclusivityConstraint",
+                "superclass": "InclusivityAspect"
+            },
+            {
+                "subclass": "FictionalAdaptationType",
+                "superclass": "FictionalAdaptationConstraint"
+            },
+            {
+                "subclass": "CulturalPerspective",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "LinguisticAdaptation",
+                "superclass": "AdaptationFactor"
+            },
+            {
+                "subclass": "EnvironmentalDescription",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "EmotionalProgressionWithinArc",
+                "superclass": "EmotionalProgression"
+            },
+            {
+                "subclass": "NarrativeComplexity",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "CulturalElement",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "SettingClassification",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "MultiLayeredStoryArc",
+                "superclass": "StoryArc"
+            },
+            {
+                "subclass": "NarrativeComplexityAttribute",
+                "superclass": "PacingAttribute"
+            },
+            {
+                "subclass": "NarrativePacing",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "ReaderInterpretationConstraint",
+                "superclass": "FictionBoundaryConstraint"
+            },
+            {
+                "subclass": "SupportingCharacter",
+                "superclass": "Character"
+            },
+            {
+                "subclass": "NarrativeFormat",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "NarrativeMetadataElement",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "LocalizationAdaptation",
+                "superclass": "AdaptationFactor"
+            },
+            {
+                "subclass": "AnalyticalMetadataElement",
+                "superclass": "MetadataElement"
+            },
+            {
+                "subclass": "CharacterAttribute",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "CharacterRoleDistinction",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "FictionBoundaryConstraint",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "FictionalAdaptationConstraint",
+                "superclass": "FictionBoundaryConstraint"
+            },
+            {
+                "subclass": "NarrativeConstraint",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "MulticulturalIdentity",
+                "superclass": "IdentityAspect"
+            },
+            {
+                "subclass": "EventTemporalOrderCriterion",
+                "superclass": "EventClassificationCriterion"
+            },
+            {
+                "subclass": "HistoricalNarrativeContext",
+                "superclass": "NarrativeContext"
+            },
+            {
+                "subclass": "DevelopmentArcType",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "FallingAction",
+                "superclass": "NarrativeStage"
+            },
+            {
+                "subclass": "Protagonist",
+                "superclass": "Character"
+            },
+            {
+                "subclass": "MultimediaNarrativeElement",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "StructuralComponent",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "LocalizationAdaptationConstraint",
+                "superclass": "NarrativeConstraint"
+            },
+            {
+                "subclass": "CharacterDevelopmentStage",
+                "superclass": "CharacterDevelopmentArc"
+            },
+            {
+                "subclass": "RisingAction",
+                "superclass": "NarrativeStage"
+            },
+            {
+                "subclass": "DigitalArchivalSystem",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "EventImportance",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "MultimediaAdaptation",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "TurningPointEvent",
+                "superclass": "NarrativeEventCategory"
+            },
+            {
+                "subclass": "TemporalSetting",
+                "superclass": "EventSetting"
+            },
+            {
+                "subclass": "EnvironmentalAttribute",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "PostcolonialInfluence",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "InternalEmotionalState",
+                "superclass": "InternalPsychologicalState"
+            },
+            {
+                "subclass": "ArchivalPreservation",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "NonLinearStoryArc",
+                "superclass": "StoryArc"
+            },
+            {
+                "subclass": "InteroperabilityMechanism",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "PacingAttribute",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "CausalRelationType",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "NarrativeFormatLayer",
+                "superclass": "NarrativeFormat"
+            },
+            {
+                "subclass": "NarrativeTone",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "CharacterEmotionalDimension",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "HybridNarrativeFormat",
+                "superclass": "NarrativeStructure"
+            },
+            {
+                "subclass": "NarrativeGrayArea",
+                "superclass": "Thing"
+            },
+            {
+                "subclass": "AuthorInformationExclusionRule",
+                "superclass": "ExclusionRule"
+            }
+        ],
+        "object_properties": [
+            {
+                "name": "hasRelationshipTo",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "Character"
+                ],
+                "characteristics": [
+                    {
+                        "value": "asymmetric"
+                    }
+                ]
+            },
+            {
+                "name": "hasThematicElement",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "ThematicElement"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasEnvironmentalDescription",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "EnvironmentalDescription"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasEventSequence",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "NarrativeEventSequence"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "hasDevelopmentArc",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "CharacterDevelopmentArc"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "supportsMultilingualRepresentation",
+                "domain": [
+                    "NarrativeContextMetadata"
+                ],
+                "range": [
+                    "MultilingualRepresentation"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "excludesNarrativeElement",
+                "domain": [
+                    "ExclusionRule"
+                ],
+                "range": [
+                    "NarrativeExclusionType"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "relatedToDomain",
+                "domain": [
+                    "Thing"
+                ],
+                "range": [
+                    "NarrativeTheoryDomain",
+                    "CulturalStudiesDomain",
+                    "ComputationalModelingDomain"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "incorporatesStorytellingPerspective",
+                "domain": [
+                    "NarrativeContextMetadata"
+                ],
+                "range": [
+                    "StorytellingPerspective"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "conformsToArchivalStandard",
+                "domain": [
+                    "MetadataSchema"
+                ],
+                "range": [
+                    "ArchivalMetadataStandard"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasSocialRelationship",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "Character"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasTurningPointEvent",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "TurningPointEvent"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "hasPsychologicalDimension",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "CharacterPsychologicalDimension"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasHistoricalElement",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "HistoricalElement"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "excludesAuthorInformation",
+                "domain": [
+                    "AuthorCentricInformation"
+                ],
+                "range": [
+                    "AuthorInformationExclusionRule"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "hasLocalizationMetadataElement",
+                "domain": [
+                    "Localization"
+                ],
+                "range": [
+                    "LocalizationMetadataElement"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasCulturalBackground",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "CulturalBackground"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "hasWorldBuildingElement",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "WorldBuildingElement"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "ensuresDiversityConstraint",
+                "domain": [
+                    "NarrativeContextMetadata",
+                    "EventSetting"
+                ],
+                "range": [
+                    "DiversityConstraint"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "supportsInteroperabilityWith",
+                "domain": [
+                    "MetadataSchema",
+                    "InteroperabilityMechanism"
+                ],
+                "range": [
+                    "DigitalCatalogingSystem",
+                    "DigitalArchivalSystem"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "governsEventSequence",
+                "domain": [
+                    "SequencingRule"
+                ],
+                "range": [
+                    "NarrativeEvent"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasPacingConstraint",
+                "domain": [
+                    "NarrativePacing"
+                ],
+                "range": [
+                    "PacingConstraint"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasEventClassificationCriterion",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "EventClassificationCriterion"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "classifiedByRole",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "CharacterRoleType"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "incorporatesHistoricalContext",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "HistoricalNarrativeContext"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasSocietalTheme",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "NarrativeSocietalTheme"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasCausalRelationTo",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "NarrativeEvent"
+                ],
+                "characteristics": [
+                    {
+                        "value": "transitive"
+                    },
+                    {
+                        "value": "asymmetric"
+                    }
+                ]
+            },
+            {
+                "name": "occursInSequence",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "EventSequence"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasMotivation",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "Motivation"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "includesMetadataElement",
+                "domain": [
+                    "MetadataSchema"
+                ],
+                "range": [
+                    "MetadataElement"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "characterPsychologicalProfile",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "PsychologicalProfile"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "hasCharacterState",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "CharacterState"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasPhysicalContext",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "PhysicalContext"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasEventType",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "EventType"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "hasCognitiveProcess",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "CognitiveProcess"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasEventCausality",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "NarrativeEventCausality"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "hasNarrativeComponent",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "NarrativeComponent"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasContextualMetadataElement",
+                "domain": [
+                    "NarrativeContextMetadata"
+                ],
+                "range": [
+                    "ContextualMetadataElement"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasPsychologicalDevelopmentArc",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "PsychologicalDevelopmentArc"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "requiresLocalization",
+                "domain": [
+                    "NarrativeContextMetadata"
+                ],
+                "range": [
+                    "LocalizationRequirement"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasResolutionEvent",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "ResolutionEvent"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "isLocalizedFor",
+                "domain": [
+                    "Thing"
+                ],
+                "range": [
+                    "LocalizationFactor"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasDomainBoundary",
+                "domain": [
+                    "Thing"
+                ],
+                "range": [
+                    "DomainBoundary"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "preservesCulturalHeritage",
+                "domain": [
+                    "DigitalArchivalSystem"
+                ],
+                "range": [
+                    "CulturalHeritage"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "governedByFictionBoundaryConstraint",
+                "domain": [
+                    "Thing"
+                ],
+                "range": [
+                    "FictionBoundaryConstraint"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "appliesLocalizationAdaptation",
+                "domain": [
+                    "Character",
+                    "NarrativeEvent",
+                    "EventSetting",
+                    "StoryArc"
+                ],
+                "range": [
+                    "LocalizationAdaptation"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "addsNarrativeComplexity",
+                "domain": [
+                    "PsychologicalTrait"
+                ],
+                "range": [
+                    "NarrativeComplexity"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasCharacterAttribute",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "CharacterAttribute"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "requiresPreservationMetadataElement",
+                "domain": [
+                    "PreservationAnnotation"
+                ],
+                "range": [
+                    "PreservationMetadataElement"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasThemeAttribute",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "NarrativeThemeAttribute"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "ensuresInteroperability",
+                "domain": [
+                    "InteroperabilityMechanism"
+                ],
+                "range": [
+                    "Thing"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasFantasticalElement",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "FantasticalElement"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasSociopoliticalBackground",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "SociopoliticalBackground"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "hasEnvironmentalElement",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "EnvironmentalElement"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasNarrativeContext",
+                "domain": [
+                    "NarrativeEvent",
+                    "StoryArc",
+                    "EventSetting"
+                ],
+                "range": [
+                    "NarrativeContext"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasDevelopmentArcType",
+                "domain": [
+                    "CharacterDevelopmentArc"
+                ],
+                "range": [
+                    "DevelopmentArcType"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "hasCulturalSetting",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "CulturalSetting"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasLinguisticAdaptation",
+                "domain": [
+                    "NarrativeAdaptation"
+                ],
+                "range": [
+                    "LinguisticAdaptation"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "isDistinguishedByConstraint",
+                "domain": [
+                    "FictionalHistoricalEvent"
+                ],
+                "range": [
+                    "FictionalAdaptationConstraint"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "appliesToStoryArc",
+                "domain": [
+                    "SequencingRule",
+                    "TemporalOrderingConstraint"
+                ],
+                "range": [
+                    "StoryArc"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "ensuresInclusivityConstraint",
+                "domain": [
+                    "NarrativeContextMetadata",
+                    "EventSetting"
+                ],
+                "range": [
+                    "InclusivityConstraint"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "requiresSemanticAnnotation",
+                "domain": [
+                    "DigitalArchivalSystem"
+                ],
+                "range": [
+                    "SemanticAnnotationRequirement"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "overlapsWithDisciplinaryDomain",
+                "domain": [
+                    "DisciplinaryOverlap"
+                ],
+                "range": [
+                    "NarrativeTheoryDomain",
+                    "CulturalStudiesDomain",
+                    "DigitalHumanitiesTool",
+                    "ComputationalModelingDomain"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasKeyPlotPoint",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "KeyPlotPoint"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "excludesAuthorCentricInformation",
+                "domain": [
+                    "FictionBoundaryConstraint"
+                ],
+                "range": [
+                    "AuthorCentricInformation"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "hasFantasticalElementDescription",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "FantasticalElementDescription"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasCharacterTrait",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "CharacterTrait"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "isAdaptedFor",
+                "domain": [
+                    "Thing"
+                ],
+                "range": [
+                    "AdaptationFactor"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasSettingComponent",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "SettingComponent"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "moodOfNarrative",
+                "domain": [
+                    "Thing"
+                ],
+                "range": [
+                    "NarrativeMood"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "hasEmotionalPacing",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "EmotionalPacing"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "distinguishesCharacterRole",
+                "domain": [
+                    "CharacterRoleDistinction"
+                ],
+                "range": [
+                    "CharacterRoleType"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "containsTechnicalLinguisticDetail",
+                "domain": [
+                    "Thing"
+                ],
+                "range": [
+                    "TechnicalLinguisticDetail"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasPacingProfile",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "PacingProfile"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasHistoricalSetting",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "HistoricalSetting"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "supportsLocalization",
+                "domain": [
+                    "NarrativeContextMetadata"
+                ],
+                "range": [
+                    "Localization"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "supportsScalability",
+                "domain": [
+                    "ScalabilityAspect"
+                ],
+                "range": [
+                    "Thing"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasAnalyticalMetadataElement",
+                "domain": [
+                    "ArchivalPreservation"
+                ],
+                "range": [
+                    "AnalyticalMetadataElement"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "constrainsLocalizationAdaptation",
+                "domain": [
+                    "LocalizationAdaptationConstraint"
+                ],
+                "range": [
+                    "LocalizationAdaptation"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "transformsOverNarrative",
+                "domain": [
+                    "CharacterDevelopmentArc"
+                ],
+                "range": [
+                    "NarrativeStructure"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasPostcolonialInfluence",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "PostcolonialInfluence"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasCausalRelationType",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "CausalRelationType"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "hasEmotionalDimension",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "CharacterEmotionalDimension"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasSpeculativeSetting",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "SpeculativeSetting"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasHybridNarrativeFormat",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "HybridNarrativeFormat"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasIdentityAspect",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "IdentityAspect"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasBoundaryConstraint",
+                "domain": [
+                    "NarrativeStructure"
+                ],
+                "range": [
+                    "NarrativeBoundary"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "definesCharacter",
+                "domain": [
+                    "CharacterDefinition"
+                ],
+                "range": [
+                    "Character"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "incorporatesInteractiveElement",
+                "domain": [
+                    "HybridNarrativeFormat",
+                    "InteractiveNarrativeFormat"
+                ],
+                "range": [
+                    "InteractiveNarrativeElement"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasEmotionalProgressionWithinArc",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "EmotionalProgressionWithinArc"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "linkedToNarrativeMoodType",
+                "domain": [
+                    "EnvironmentalDescription",
+                    "CulturalBackgroundDescription"
+                ],
+                "range": [
+                    "NarrativeMoodType"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasEnvironmentalAttribute",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "EnvironmentalAttribute"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "governedByMultimediaAdaptationConstraint",
+                "domain": [
+                    "MultimediaAdaptation"
+                ],
+                "range": [
+                    "MultimediaAdaptationConstraint"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasStoryArcClassification",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "StoryArcClassification"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "governedByReaderInterpretationConstraint",
+                "domain": [
+                    "ReaderInterpretation"
+                ],
+                "range": [
+                    "ReaderInterpretationConstraint"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "imposesTemporalConstraint",
+                "domain": [
+                    "TemporalOrderingConstraint"
+                ],
+                "range": [
+                    "NarrativeEvent"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "followsSemanticAnnotationSchema",
+                "domain": [
+                    "NarrativeContextMetadata"
+                ],
+                "range": [
+                    "SemanticAnnotationSchema"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "isAdaptationOf",
+                "domain": [
+                    "FictionalHistoricalEvent"
+                ],
+                "range": [
+                    "ActualHistoricalEvent"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasInclusivityAspect",
+                "domain": [
+                    "Character",
+                    "EventSetting"
+                ],
+                "range": [
+                    "InclusivityAspect"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "isPartOfStoryArc",
+                "domain": [
+                    "NarrativeStage"
+                ],
+                "range": [
+                    "StoryArc"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasCulturalInfluence",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "CulturalInfluence"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "adaptedForLanguage",
+                "domain": [
+                    "NarrativeAdaptation"
+                ],
+                "range": [
+                    "MultilingualRepresentation"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasNarrativeCausality",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "NarrativeEventCausality"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "hasCulturalAdaptation",
+                "domain": [
+                    "NarrativeAdaptation"
+                ],
+                "range": [
+                    "CulturalAdaptation"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasAntagonisticRelationship",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "Character"
+                ],
+                "characteristics": [
+                    {
+                        "value": "asymmetric"
+                    }
+                ]
+            },
+            {
+                "name": "hasMoodAttribute",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "MoodAttribute"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasInternalPsychologicalState",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "InternalPsychologicalState"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasNarrativeRoleClassification",
+                "domain": [
+                    "NarrativeStructure"
+                ],
+                "range": [
+                    "NarrativeRoleClassification"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "preservesHistoricalContext",
+                "domain": [
+                    "SemanticAnnotation"
+                ],
+                "range": [
+                    "HistoricalContext"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "influencedByPerspective",
+                "domain": [
+                    "CharacterDefinition"
+                ],
+                "range": [
+                    "CulturalPerspective",
+                    "PostcolonialPerspective"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasNarrativeFormat",
+                "domain": [
+                    "NarrativeStructure",
+                    "StoryArc"
+                ],
+                "range": [
+                    "NarrativeFormat"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasNarrativeStage",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "NarrativeStage"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "enforcesConstraint",
+                "domain": [
+                    "RuleEnforcement"
+                ],
+                "range": [
+                    "NarrativeConstraint"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "delineatesGrayArea",
+                "domain": [
+                    "NarrativeGrayArea"
+                ],
+                "range": [
+                    "NarrativeTheoryDomain",
+                    "CulturalStudiesDomain",
+                    "ComputationalModelingDomain"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasTemporalRelationType",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "TemporalRelationType"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "hasDevelopmentStage",
+                "domain": [
+                    "CharacterDevelopmentArc"
+                ],
+                "range": [
+                    "CharacterDevelopmentStage"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasThematicPacing",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "ThematicPacing"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasCulturalElement",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "CulturalElement"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasInternalStateModelingRule",
+                "domain": [
+                    "InternalCharacterStateConstraint"
+                ],
+                "range": [
+                    "NarrativeConstraint"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "implementsCatalogingSystem",
+                "domain": [
+                    "ArchivalPreservation"
+                ],
+                "range": [
+                    "DigitalCatalogingSystem"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasThematicConstraint",
+                "domain": [
+                    "ThematicProgression"
+                ],
+                "range": [
+                    "ThematicConstraint"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "employsMetadataStandard",
+                "domain": [
+                    "FictionBook"
+                ],
+                "range": [
+                    "MetadataStandard"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasCulturalTheme",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "NarrativeCulturalTheme"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "distinguishesFictionalAdaptationType",
+                "domain": [
+                    "FictionalHistoricalEvent"
+                ],
+                "range": [
+                    "FictionalAdaptationType"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "hasSemanticAnnotation",
+                "domain": [
+                    "NarrativeStructure",
+                    "NarrativeEvent",
+                    "StoryArc"
+                ],
+                "range": [
+                    "SemanticAnnotation"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "preservesContextualIntegrity",
+                "domain": [
+                    "SemanticAnnotation"
+                ],
+                "range": [
+                    "ContextualIntegrityConstraint"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasNarrativeFactualityConstraint",
+                "domain": [
+                    "FactualHistoricalRecord"
+                ],
+                "range": [
+                    "NarrativeFactualityConstraint"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasCatalogingStandard",
+                "domain": [
+                    "MetadataSchema"
+                ],
+                "range": [
+                    "CatalogingStandard"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "originatesFromTradition",
+                "domain": [
+                    "CharacterRoleType"
+                ],
+                "range": [
+                    "StorytellingTradition"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "isStructuralComponentOf",
+                "domain": [
+                    "StructuralComponent"
+                ],
+                "range": [
+                    "StoryArc"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "adaptedForCulture",
+                "domain": [
+                    "NarrativeAdaptation"
+                ],
+                "range": [
+                    "CulturalContext"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasFamilialRelationship",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "Character"
+                ],
+                "characteristics": [
+                    {
+                        "value": "symmetric"
+                    }
+                ]
+            },
+            {
+                "name": "hasConflictEvent",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "ConflictEvent"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "isChronologicallyAfter",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "NarrativeEvent"
+                ],
+                "characteristics": [
+                    {
+                        "value": "transitive"
+                    },
+                    {
+                        "value": "asymmetric"
+                    }
+                ]
+            },
+            {
+                "name": "hasIdentityRepresentation",
+                "domain": [
+                    "Character",
+                    "EventSetting"
+                ],
+                "range": [
+                    "IdentityRepresentation"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasMotivationType",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "CharacterMotivationType"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasSequencePosition",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "EventSequencePosition"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "hasEventSetting",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "EventSetting"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasGlobalDiversityAttribute",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "GlobalDiversityAttribute"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "preservesHistoricalIntegrity",
+                "domain": [
+                    "SemanticAnnotation"
+                ],
+                "range": [
+                    "HistoricalIntegrityConstraint"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "overlapsWithPsychologyOrCognitiveScience",
+                "domain": [
+                    "InternalCharacterStateConstraint"
+                ],
+                "range": [
+                    "CharacterMotivationOverlap"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasNarrativeCatalogingRequirement",
+                "domain": [
+                    "MetadataSchema"
+                ],
+                "range": [
+                    "NarrativeCatalogingRequirement"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "integratesWithTool",
+                "domain": [
+                    "Thing"
+                ],
+                "range": [
+                    "DigitalHumanitiesTool",
+                    "AIDrivenStorytellingTool"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasPerspective",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "CulturalPerspective",
+                    "PostcolonialPerspective"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasCharacterRelationshipType",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "CharacterRelationshipType"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "relationshipSociopoliticalAspect",
+                "domain": [
+                    "CharacterRelationshipType"
+                ],
+                "range": [
+                    "SociopoliticalIdentity"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasFictionalContext",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "FictionalContext"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "integratesWithArchivalSystem",
+                "domain": [
+                    "ArchivalPreservation"
+                ],
+                "range": [
+                    "DigitalArchivalSystem"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "excludesContentType",
+                "domain": [
+                    "NarrativeExclusionConstraint"
+                ],
+                "range": [
+                    "NarrativeExclusionType"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "hasStoryArc",
+                "domain": [
+                    "Thing"
+                ],
+                "range": [
+                    "StoryArc"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasPacingAttribute",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "PacingAttribute"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasCulturalDiversityAttribute",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "CulturalDiversityAttribute"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "definedByProfile",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "CharacterProfile"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "requiresInteroperability",
+                "domain": [
+                    "NarrativeContextMetadata"
+                ],
+                "range": [
+                    "InteroperabilityRequirement"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasCulturalBackgroundDescription",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "CulturalBackgroundDescription"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "addressesGrayArea",
+                "domain": [
+                    "GrayAreaResolutionStrategy"
+                ],
+                "range": [
+                    "DisciplinaryOverlap"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "classifiedAsSettingType",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "SettingClassification"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "distinguishesConcept",
+                "domain": [
+                    "ConceptualDistinction"
+                ],
+                "range": [
+                    "LiteraryTheoryConcept",
+                    "ComputationalModelingTechnique"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasNarrativeMetadata",
+                "domain": [
+                    "FictionBook"
+                ],
+                "range": [
+                    "NarrativeMetadataElement"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "excludesReaderInterpretation",
+                "domain": [
+                    "FictionBoundaryConstraint"
+                ],
+                "range": [
+                    "ReaderInterpretation"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "incorporatesCulturalContext",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "CulturalNarrativeContext"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasEventCausalityRelation",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "EventCausality"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasCulturalAttribute",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "CulturalAttribute"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "categorizedAsEventType",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "NarrativeEventCategory"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "belongsToBookType",
+                "domain": [
+                    "NarrativeStructure"
+                ],
+                "range": [
+                    "FictionBook"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasContextualInfluence",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "CulturalContext",
+                    "HistoricalContext"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasCulturalSensitivityAspect",
+                "domain": [
+                    "Character",
+                    "NarrativeEvent",
+                    "EventSetting",
+                    "StoryArc"
+                ],
+                "range": [
+                    "CulturalSensitivityAspect"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasEventImportance",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "EventImportance"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "hasNarrativeFormatLayer",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "NarrativeFormatLayer"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasSociopoliticalElement",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "SociopoliticalElement"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasPsychologicalTrait",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "PsychologicalTrait"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "incorporatesMultimediaElement",
+                "domain": [
+                    "HybridNarrativeFormat",
+                    "InteractiveNarrativeFormat"
+                ],
+                "range": [
+                    "MultimediaNarrativeElement"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "overlapsConcept",
+                "domain": [
+                    "ConceptualOverlap"
+                ],
+                "range": [
+                    "LiteraryTheoryConcept",
+                    "ComputationalModelingTechnique"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "relationshipDiversityAspect",
+                "domain": [
+                    "CharacterRelationshipType"
+                ],
+                "range": [
+                    "DiversityAspect"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "excludesNonFictionContent",
+                "domain": [
+                    "FictionBoundaryConstraint"
+                ],
+                "range": [
+                    "NonFictionBoundary"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "hasTemporalRelationTo",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "NarrativeEvent"
+                ],
+                "characteristics": [
+                    {
+                        "value": "transitive"
+                    },
+                    {
+                        "value": "asymmetric"
+                    }
+                ]
+            },
+            {
+                "name": "isDistinguishedFromHistoricalContext",
+                "domain": [
+                    "FictionalContext"
+                ],
+                "range": [
+                    "HistoricalContext"
+                ],
+                "characteristics": [
+                    {
+                        "value": "asymmetric"
+                    }
+                ]
+            },
+            {
+                "name": "hasTemporalContext",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "TemporalContext"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasNarrativeAdaptation",
+                "domain": [
+                    "StoryArc",
+                    "NarrativeEvent",
+                    "Character"
+                ],
+                "range": [
+                    "NarrativeAdaptation"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasToneAttribute",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "ToneAttribute"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "classifiedByNarrativeArcStructure",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "NarrativeArcStructure"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "supportsArchivalPreservation",
+                "domain": [
+                    "NarrativeContextMetadata"
+                ],
+                "range": [
+                    "ArchivalPreservation"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasEmotionalProgression",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "EmotionalProgression"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "distinguishedByFactuality",
+                "domain": [
+                    "HistoricalContext"
+                ],
+                "range": [
+                    "FactualHistoricalContext",
+                    "FictionalHistoricalContext"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "preservesCulturalContext",
+                "domain": [
+                    "SemanticAnnotation"
+                ],
+                "range": [
+                    "CulturalContext"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "categorizedBySequencingCriterion",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "NarrativeSequencingCriterion"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "influencesNarrativeProgression",
+                "domain": [
+                    "HistoricalNarrativeContext",
+                    "CulturalNarrativeContext"
+                ],
+                "range": [
+                    "NarrativeProgression"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasEmotionalConstraint",
+                "domain": [
+                    "EmotionalProgression"
+                ],
+                "range": [
+                    "EmotionalConstraint"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasNarrativePacingElement",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "NarrativePacingElement"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasEmotionalAttribute",
+                "domain": [
+                    "StoryArc",
+                    "NarrativePacing",
+                    "NarrativeStage"
+                ],
+                "range": [
+                    "EmotionalAttribute"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasMultiThreadedComponent",
+                "domain": [
+                    "MultiLayeredStoryArc"
+                ],
+                "range": [
+                    "MultiThreadedStoryArc"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasFantasticalSetting",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "FantasticalSetting"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasSocietalAttribute",
+                "domain": [
+                    "StoryArc",
+                    "NarrativePacing",
+                    "EventSetting"
+                ],
+                "range": [
+                    "SocietalAttribute"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasAmbiguousDomainOverlap",
+                "domain": [
+                    "Thing"
+                ],
+                "range": [
+                    "AmbiguousDomainOverlap"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasNarrativeComplexityAttribute",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "NarrativeComplexityAttribute"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasSociopoliticalInfluence",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "SociopoliticalInfluence"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasNonLinearLayer",
+                "domain": [
+                    "MultiLayeredStoryArc"
+                ],
+                "range": [
+                    "NonLinearLayer"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasContextProperty",
+                "domain": [
+                    "Character",
+                    "NarrativeEvent",
+                    "EventSetting"
+                ],
+                "range": [
+                    "ContextProperty"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasExclusionRule",
+                "domain": [
+                    "FictionBoundaryConstraint"
+                ],
+                "range": [
+                    "ExclusionRule"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasThematicProgression",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "ThematicProgression"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasNarrativePacing",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "NarrativePacing"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasSociopoliticalDiversityAttribute",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "SociopoliticalDiversityAttribute"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasHistoricalInfluence",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": [
+                    "HistoricalInfluence"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "isInterwovenWith",
+                "domain": [
+                    "InterwovenStoryArc"
+                ],
+                "range": [
+                    "StoryArc"
+                ],
+                "characteristics": [
+                    {
+                        "value": "symmetric"
+                    }
+                ]
+            },
+            {
+                "name": "linkedToNarrativeToneType",
+                "domain": [
+                    "EnvironmentalDescription",
+                    "CulturalBackgroundDescription"
+                ],
+                "range": [
+                    "NarrativeToneType"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "usesMetadataSchema",
+                "domain": [
+                    "NarrativeContextMetadata"
+                ],
+                "range": [
+                    "MetadataSchema"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "isPartOfEvent",
+                "domain": [
+                    "Character"
+                ],
+                "range": [
+                    "NarrativeEvent"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "hasDiversityAspect",
+                "domain": [
+                    "Character",
+                    "EventSetting"
+                ],
+                "range": [
+                    "DiversityAspect"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "isNarratedBy",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": [
+                    "Narrator"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "preservesNarrativeIdentity",
+                "domain": [
+                    "DigitalArchivalSystem"
+                ],
+                "range": [
+                    "NarrativeIdentity"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "supportsPreservationIntegrity",
+                "domain": [
+                    "PreservationAnnotation"
+                ],
+                "range": [
+                    "ArchivalIntegrityConstraint"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "toneOfNarrative",
+                "domain": [
+                    "Thing"
+                ],
+                "range": [
+                    "NarrativeTone"
+                ],
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "hasInteractiveNarrativeFormat",
+                "domain": [
+                    "StoryArc"
+                ],
+                "range": [
+                    "InteractiveNarrativeFormat"
+                ],
+                "characteristics": []
+            },
+            {
+                "name": "incorporatesDisciplinaryContext",
+                "domain": [
+                    "NarrativeContext"
+                ],
+                "range": [
+                    "NarrativeTheoryDomain",
+                    "CulturalStudiesDomain",
+                    "DigitalHumanitiesTool",
+                    "ComputationalModelingDomain"
+                ],
+                "characteristics": []
+            }
+        ],
+        "data_properties": [
+            {
+                "name": "localizationLanguage",
+                "domain": [
+                    "LocalizationFactor"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "emotionalConstraintDescription",
+                "domain": [
+                    "EmotionalConstraint"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "pacingType",
+                "domain": [
+                    "NarrativePacing"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "internalEmotionalDescription",
+                "domain": [
+                    "InternalEmotionalState"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "eventTypeName",
+                "domain": [
+                    "EventType"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "sequenceOrder",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": {
+                    "value": "xsd:integer"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "motivationModelingRuleDescription",
+                "domain": [
+                    "InternalCharacterStateConstraint"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "characterProfileSummary",
+                "domain": [
+                    "CharacterProfile"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "constraintDescription",
+                "domain": [
+                    "FictionalAdaptationConstraint",
+                    "InclusivityConstraint",
+                    "DiversityConstraint"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "narrativeProgressionDescription",
+                "domain": [
+                    "NarrativeProgression"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "developmentArcDescription",
+                "domain": [
+                    "CharacterDevelopmentArc"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "perspectiveName",
+                "domain": [
+                    "CulturalPerspective",
+                    "PostcolonialPerspective"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "fictionMetadataName",
+                "domain": [
+                    "FictionMetadataStandard"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "localizationCulture",
+                "domain": [
+                    "LocalizationFactor"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "scalabilityMetric",
+                "domain": [
+                    "ScalabilityAspect"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "physicalContextDescription",
+                "domain": [
+                    "PhysicalContext"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "requiredMetadataElement",
+                "domain": [
+                    "PreservationAnnotation"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": []
+            },
+            {
+                "name": "temporalConstraintDescription",
+                "domain": [
+                    "TemporalOrderingConstraint"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "grayAreaDescription",
+                "domain": [
+                    "NarrativeGrayArea"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "eventTime",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": {
+                    "value": "xsd:dateTime"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "catalogingSystemName",
+                "domain": [
+                    "DigitalCatalogingSystem"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "interoperabilityStandardName",
+                "domain": [
+                    "InteroperabilityMechanism"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "representationType",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "culturalAttributeDescription",
+                "domain": [
+                    "CulturalAttribute"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "narrativeComplexityDescription",
+                "domain": [
+                    "NarrativeComplexity"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "progressionAttribute",
+                "domain": [
+                    "ThematicProgression",
+                    "EmotionalProgression"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "eventImportanceLevel",
+                "domain": [
+                    "NarrativeEvent"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "eventCategoryLabel",
+                "domain": [
+                    "NarrativeEventCategory"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "pacingDescription",
+                "domain": [
+                    "NarrativePacing"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "culturalBackground",
+                "domain": [
+                    "Character"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": []
+            },
+            {
+                "name": "excludedEntityType",
+                "domain": [
+                    "ExclusionRule"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "linguisticAdaptationDescription",
+                "domain": [
+                    "LinguisticAdaptation"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "narrativeBoundaryType",
+                "domain": [
+                    "NarrativeBoundary"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "historicalElementDescription",
+                "domain": [
+                    "HistoricalElement"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "historicalContextDescription",
+                "domain": [
+                    "HistoricalContext"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "themeAttributeName",
+                "domain": [
+                    "NarrativeThemeAttribute"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "adaptationType",
+                "domain": [
+                    "AdaptationFactor"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "sociopoliticalElementDescription",
+                "domain": [
+                    "SociopoliticalElement"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "ambiguityDescription",
+                "domain": [
+                    "AmbiguousArea"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "settingComponentType",
+                "domain": [
+                    "SettingComponent"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "thematicProgressionDescription",
+                "domain": [
+                    "ThematicProgression"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "culturalElementDescription",
+                "domain": [
+                    "CulturalElement"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "governsExclusionRule",
+                "domain": [
+                    "Thing"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "definition",
+                "domain": [
+                    "Character"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "emotionalAttributeDescription",
+                "domain": [
+                    "EmotionalAttribute"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "settingDescription",
+                "domain": [
+                    "EventSetting"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "metadataElementName",
+                "domain": [
+                    "NarrativeMetadataElement"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "culturalAdaptationDescription",
+                "domain": [
+                    "CulturalAdaptation"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "fantasticalElementDescription",
+                "domain": [
+                    "FantasticalElementDescription"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "contextType",
+                "domain": [
+                    "NarrativeContext"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "degreeOfDiversity",
+                "domain": [
+                    "DiversityAspect"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "culturalContextDescription",
+                "domain": [
+                    "CulturalContext"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "moodAttributeDescription",
+                "domain": [
+                    "MoodAttribute"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "themeDescription",
+                "domain": [
+                    "ThematicElement"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "appliesToLocalization",
+                "domain": [
+                    "CatalogingStandard"
+                ],
+                "range": {
+                    "value": "xsd:boolean"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "relationshipType",
+                "domain": [
+                    "Character"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "developmentArcType",
+                "domain": [
+                    "CharacterDevelopmentArc"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "psychologicalProfile",
+                "domain": [
+                    "Character"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "roleFunctionDescription",
+                "domain": [
+                    "CharacterRoleType"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "pacingConstraintDescription",
+                "domain": [
+                    "PacingConstraint"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "preservationAnnotationType",
+                "domain": [
+                    "PreservationAnnotation"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "roleDescription",
+                "domain": [
+                    "Character"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "narrativeStageName",
+                "domain": [
+                    "NarrativeStage"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "degreeOfInclusivity",
+                "domain": [
+                    "InclusivityAspect"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "characterRoleDistinctionDescription",
+                "domain": [
+                    "CharacterRoleDistinction"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "overlappingDomainName",
+                "domain": [
+                    "AmbiguousDomainOverlap"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "archivalSystemName",
+                "domain": [
+                    "DigitalArchivalSystem"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "catalogingStandardName",
+                "domain": [
+                    "CatalogingStandard"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "eventCriterionDescription",
+                "domain": [
+                    "EventClassificationCriterion"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "causalRelationDescription",
+                "domain": [
+                    "CausalRelationType"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "temporalRelationDescription",
+                "domain": [
+                    "TemporalRelationType"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "adaptedLocale",
+                "domain": [
+                    "LocalizationAdaptation"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "pacingValue",
+                "domain": [
+                    "PacingAttribute"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "keyAttribute",
+                "domain": [
+                    "Character"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "societalAttributeDescription",
+                "domain": [
+                    "SocietalAttribute"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "appliesToMultilingual",
+                "domain": [
+                    "CatalogingStandard"
+                ],
+                "range": {
+                    "value": "xsd:boolean"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "motivationDescription",
+                "domain": [
+                    "Motivation"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "environmentalAttributeDescription",
+                "domain": [
+                    "EnvironmentalAttribute"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "thematicConstraintDescription",
+                "domain": [
+                    "ThematicConstraint"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "narrativeFormatDescription",
+                "domain": [
+                    "NarrativeFormat"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "annotationType",
+                "domain": [
+                    "SemanticAnnotation"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "temporalContextDescription",
+                "domain": [
+                    "TemporalContext"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "toneAttributeDescription",
+                "domain": [
+                    "ToneAttribute"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            },
+            {
+                "name": "sequencingRuleDescription",
+                "domain": [
+                    "SequencingRule"
+                ],
+                "range": {
+                    "value": "xsd:string"
+                },
+                "characteristics": [
+                    {
+                        "value": "functional"
+                    }
+                ]
+            }
+        ]
+    },
+    "original_clusters": [],
+    "history": []
+}
