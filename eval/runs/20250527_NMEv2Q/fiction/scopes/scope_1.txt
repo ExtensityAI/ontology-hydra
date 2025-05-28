@@ -1,0 +1,35 @@
+1. Domain Definition
+1.1 Included Topics
+- Representation of fiction books focusing on core narrative elements.
+- Character entities including traits, roles, relationships, and development arcs.
+- Events capturing plot points, conflicts, resolutions, and sequence.
+- Settings encompassing locations, time periods, environments, and world-building details.
+- Story arcs addressing linear and non-linear narrative progressions, including hybrid and interactive story structures.
+
+1.2 Excluded Topics
+- Non-fiction literature and factual texts.
+- Author biographies and publishing metadata unrelated to narrative content.
+- Media formats beyond the scope of fiction books unless directly related to adaptation of narratives.
+- Detailed linguistic analysis such as stylistics or discourse analysis outside narrative structure.
+
+1.3 Gray Areas and Overlaps
+- Adaptations and transmedia narratives which intersect with film, video games, and interactive media; inclusion focuses on source fiction book narrative representation.
+- Interactive fiction and new media storytelling—overlaps with technological and multimedia domains; scope emphasizes narrative elements rather than user interaction mechanisms.
+- Cross-cultural narrative structures and folklore influences; overlaps with cultural studies and anthropology, focusing here on their impact on story arcs and character development.
+
+2. Boundary Clarifications
+2.1 Narrative Elements Scope
+- Detailed modeling of characters, events, settings, and story arcs as primary units.
+- Consideration of multimedia and interactive storytelling only as they relate to narrative content in fiction books.
+
+2.2 Technological Framework
+- Ontology designed for semantic web compatibility and interdisciplinary analysis.
+- Emphasis on interoperability and user requirements for literary and narrative research contexts.
+
+3. Terminology and Vocabulary
+- Character: includes protagonist, antagonist, supporting roles, and hybrid/complex identities.
+- Event: any occurrence that advances or influences the plot trajectory.
+- Setting: spatial and temporal context providing narrative background.
+- Story Arc: structured sequence of events constituting the narrative flow, including traditional, non-linear, and interactive forms.
+
+This scope document establishes a shared understanding and clear boundaries for modeling fiction book narratives, guided by expertise in literary analysis, narratology, ontology design, and multimedia storytelling.
