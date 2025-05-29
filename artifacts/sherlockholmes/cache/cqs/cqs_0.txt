@@ -1,0 +1,21 @@
+What are the precise definitions and key attributes of character roles such as protagonist, antagonist, supporting characters, and narrators in the ontology?
+How does the ontology distinguish between different types of character motivations and psychological traits across diverse cultural backgrounds?
+What classification scheme is used to categorize characters based on identity aspects including multicultural, sociopolitical, and global literary variety?
+How are character development arcs formally represented, and what properties capture growth or transformation over the narrative?
+What specific relationships between characters are modeled, and how are they semantically differentiated (e.g., familial, antagonistic, alliances)?
+How does the ontology represent significant narrative events, including their classifications by plot importance, causal relationships, and temporal sequencing?
+What domain constraints are applied for representing event chronology and causal linkages within complex story arcs?
+How are physical and temporal settings modeled, including environmental elements and sociopolitical, cultural, and historical influences on the narrative mood and tone?
+What properties and classifications support detailed world-building, especially for fantastical or speculative settings?
+In what ways does the ontology support multiple types of story arcs (linear, non-linear, multi-layered), and how are narrative progression stages like exposition, climax, and resolution represented?
+How are thematic, emotional progression, and narrative pacing encoded within the story arc constructs?
+What narrative context metadata schemas (e.g., MARC, Dublin Core) are integrated, and how do they support multilingual representation, localization, and archival preservation?
+Which cultural, socio-political, historical, and postcolonial factors are represented as context properties influencing characters, events, and settings?
+How does the ontology differentiate between fictional adaptations of history and actual historical records within event and setting representations?
+What domain-specific rules govern the exclusion of author information, reader interpretations, multimedia adaptations, and technical linguistic details?
+How are gray areas such as the intersection of narrative theory, cultural studies, and computational modeling addressed in the ontology structure?
+How are internal character psychological states and motivations modeled while acknowledging overlaps with cognitive sciences?
+What classifications or properties capture diversity and inclusivity in cultural and identity representation across characters and settings?
+How does the ontology model complex, interwoven story arcs, including hybrid and interactive narrative formats within the constraints of fiction book narratives?
+What mechanisms exist in the ontology to accommodate semantic annotations that preserve the historical and cultural context integrity of fiction narratives?
+How does the ontology structure accommodate scalability and extensibility for future integration with digital humanities and AI-driven storytelling tools?

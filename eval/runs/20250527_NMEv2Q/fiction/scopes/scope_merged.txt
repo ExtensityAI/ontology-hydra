@@ -1,0 +1,76 @@
+1. Introduction
+1.1 Domain Definition
+- The domain focuses on the representation of fiction books through their fundamental narrative elements: characters, events, settings, and story arcs.
+- Emphasis is placed on creating a structured, semantic model that captures narrative identity, cultural context, and diverse storytelling traditions including indigenous and postcolonial perspectives.
+- The ontology aims to facilitate knowledge sharing, retrieval, literary analysis, archival representation, and interdisciplinary research.
+
+2. Included Topics
+2.1 Characters
+- Character entities include profiles encompassing identities, roles (e.g., protagonist, antagonist, supporting characters, narrators), motivations, psychological traits, backgrounds, development arcs, and relationships.
+- Representation of diverse and inclusive identities reflecting multicultural, cultural, sociopolitical, and global literary variety.
+- Consideration of cultural identity and background influences, as well as adaptation and localization for different linguistic and cultural contexts.
+
+2.2 Events
+- Significant narrative events such as key plot points, actions, conflicts, turning points, resolutions, and chronology.
+- Event categorization by narrative importance, sequence, causal relationships, and temporal timeline.
+- Inclusion of historical and cultural contexts affecting events within the narrative.
+
+2.3 Settings
+- Representation of physical locations, geographical and temporal contexts, and environmental elements where stories unfold.
+- Detailed world-building aspects including sociopolitical, cultural, and historical influences as well as fantastical or speculative settings.
+- Consideration of environmental descriptions and cultural backgrounds integral to the narrative mood and tone.
+
+2.4 Story Arcs
+- Narrative progression structures including exposition, rising action, climax, falling action, and resolution.
+- Support for linear, non-linear, multi-layered, complex, and interwoven story arcs, including hybrid and interactive narrative formats.
+- Thematic and emotional progression, narrative pacing, and integration of societal issues, folklore, and cultural themes.
+
+2.5 Narrative Context and Metadata
+- Inclusion of cultural, socio-political, historical, postcolonial, and global storytelling contexts impacting narratives.
+- Use of digital cataloging standards and metadata schemas (e.g., MARC, Dublin Core) relevant to reader advisory, archival purposes, localization, multilingual representation, and scalability.
+- Preservation-related metadata ensuring historical and contextual integrity with semantic annotations to support digital archives and research.
+
+3. Explicit Exclusions
+3.1 Non-fiction Literature
+- Representation excludes non-fiction books, factual texts, and historical facts unrelated to fictional narratives.
+
+3.2 Author and Production Information
+- Personal information about authors, biographies, publishing, printing, distribution, marketing, and editions fall outside the scope unless directly impacting narrative context.
+
+3.3 Reader Interpretations and Reception
+- Subjective critiques, reader responses, fan activities, reviews, annotations, and analyses not part of canonical story data are excluded.
+
+3.4 Multimedia and Interactive Formats
+- Audio-visual adaptations such as films, television, video games, and other media formats.
+- Interactive storytelling mechanisms and multimedia beyond the narrative elements of fiction books.
+
+3.5 Linguistic and Technical Details
+- Detailed linguistic analyses unrelated to narrative structure (e.g., stylistics, grammar, syntax).
+- Technical documentation unrelated to story content.
+
+4. Gray Areas and Overlaps
+4.1 Narrative Theory and Computational Modeling
+- Intersection of literary theories, narratology, and semantic web technologies where scholarly interpretation meets technical representation.
+
+4.2 Cultural and Historical Contexts
+- Overlaps with cultural studies, anthropology, folklore, historical influences, and global storytelling traditions.
+- Differentiating fictional adaptations of history from factual historical records.
+
+4.3 Multimedia and Transmedia Storytelling
+- Boundaries involving cross-media and multimedia storytelling, where narrative extends beyond the book.
+- Inclusion focuses strictly on source fiction book narrative content.
+
+4.4 Technology and Creativity
+- Intersection with software tools for digital storytelling, ontology modeling, creative writing, computational linguistics, and digital humanities.
+
+4.5 Psychological and Emotional Dimensions
+- Modeling internal character states and motivations which may overlap with psychology and cognitive sciences.
+
+4.6 Accessibility and Reader Engagement
+- Overlaps with library science, educational domains, and accessibility considerations, particularly for diverse audiences.
+
+5. Summary
+- This comprehensive domain captures the semantic representation of fiction books centered on their core narrative components: characters, events, settings, and story arcs.
+- It integrates cultural diversity, historical context, and advanced metadata frameworks to support a wide range of applications from literary analysis to archival preservation.
+- Clear boundaries exclude non-fiction contents, author-centric information, reader interpretations, multimedia adaptations, and unrelated technical details.
+- Recognizes nuanced gray areas where narrative theory, technology, cultural studies, and interdisciplinary research converge, guiding careful scope management and ontology development.

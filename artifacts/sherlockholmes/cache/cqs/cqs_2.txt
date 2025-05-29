@@ -1,0 +1,20 @@
+What are the core definitions and distinguishing attributes of characters in fiction books according to cultural and postcolonial perspectives?
+How are different types of character roles (e.g., protagonist, antagonist, narrators) defined and categorized in diverse storytelling traditions?
+What essential psychological traits and motivation properties should be captured to represent character development arcs comprehensively?
+How should relationships between characters be modeled to reflect multicultural and sociopolitical diversity?
+What criteria determine the classification and importance of narrative events within a story's timeline?
+How can causal and temporal relationships between events be distinctly represented to support detailed plot analysis?
+How are historical and cultural contexts integrated into the representation of events without conflating fiction with factual history?
+What key components and properties define settings, including physical, geographical, temporal, sociopolitical, and fantastical aspects?
+How can environmental descriptions and cultural backgrounds be semantically linked to the narrative mood and tone within settings?
+What classifications of story arcs (e.g., linear, nonlinear, multi-layered) need to be explicitly modeled to capture complex narrative progressions?
+How should thematic, emotional progression, and pacing within story arcs be represented to support in-depth literary analysis?
+Which metadata standards and cataloging schemas (such as MARC and Dublin Core) are essential to include for fiction literature in digital archives?
+How can indigenous and non-Western storytelling perspectives be incorporated to ensure global diversity and inclusivity in the ontology?
+What constraints distinguish fictional adaptations of history from factual historical records within the ontology?
+How can the ontology represent internal character states and motivations while respecting overlaps with psychological domains?
+What properties and semantic annotations are necessary to preserve cultural heritage and narrative identity through digital archival representation?
+How should localization and multilingual representations be handled to reflect adaptations of characters, events, and settings across different cultures?
+What requirements should the ontology meet to support interoperability with existing digital cataloging and archival systems used by librarians and researchers?
+How can the ontology accommodate varied narrative formats, including traditional, oral, and postcolonial storytelling methods?
+What explicit exclusions should be defined to prevent non-narrative elements like author biographies, multimedia adaptations, or technical linguistic details from entering the ontology?

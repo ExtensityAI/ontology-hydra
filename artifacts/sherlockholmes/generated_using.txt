@@ -1,0 +1,2 @@
+# executed from within this directory
+uv run python ..\..\demo.py --input aosh.txt --domain "A domain for representing fiction books through their characters, events, settings, and story arcs." -b 4 -c 1024 --output .

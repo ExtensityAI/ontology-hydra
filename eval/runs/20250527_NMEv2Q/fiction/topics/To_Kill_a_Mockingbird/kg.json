@@ -1,0 +1,2125 @@
+{
+  "name": "To_Kill_a_Mockingbird",
+  "triplets": [
+    {
+      "subject": "Dill",
+      "predicate": "hasRelationshipTo",
+      "object": "Rev. Sykes"
+    },
+    {
+      "subject": "Truman Capote",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Archulus Persons",
+      "predicate": "hasFamilialRelationship",
+      "object": "Truman Capote"
+    },
+    {
+      "subject": "Civil Rights Movement",
+      "predicate": "isA",
+      "object": "ActualHistoricalEvent"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "hasRelationshipTo",
+      "object": "jury"
+    },
+    {
+      "subject": "AlabamaSetting",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Oscar for best actor (Gregory Peck)",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "National Geographic article",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Regent's Park Open Air Theatre 2013 production",
+      "predicate": "isA",
+      "object": "NarrativeEvent"
+    },
+    {
+      "subject": "Carolyn Jones",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Jem",
+      "predicate": "hasFamilialRelationship",
+      "object": "Scout"
+    },
+    {
+      "subject": "Jane Austen",
+      "predicate": "hasRelationshipTo",
+      "object": "Harper Lee"
+    },
+    {
+      "subject": "Library of Congress Center for the Book",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "David Kipen",
+      "predicate": "hasRelationshipTo",
+      "object": "Scout"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "hasFamilialRelationship",
+      "object": "Jem"
+    },
+    {
+      "subject": "Calpurnia",
+      "predicate": "hasRelationshipTo",
+      "object": "Mayella Ewell"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasFamilialRelationship",
+      "object": "Atticus"
+    },
+    {
+      "subject": "Chicago",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Huntingdon College",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Jem",
+      "predicate": "hasRelationshipTo",
+      "object": "Dill"
+    },
+    {
+      "subject": "attorney",
+      "predicate": "isA",
+      "object": "CharacterRoleType"
+    },
+    {
+      "subject": "Veronique Peck",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Regent's Park Open Air Theatre 2013 production",
+      "predicate": "hasEventSetting",
+      "object": "Regent's Park Open Air Theatre"
+    },
+    {
+      "subject": "Jean Blackall",
+      "predicate": "hasRelationshipTo",
+      "object": "Jane Austen"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "hasFamilialRelationship",
+      "object": "Aunt Alexandra"
+    },
+    {
+      "subject": "Duncan Preston",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Walter Lett",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Boo Radley",
+      "predicate": "hasRelationshipTo",
+      "object": "Mayella Ewell"
+    },
+    {
+      "subject": "Truman Capote",
+      "predicate": "hasFamilialRelationship",
+      "object": "Lee's aunts"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "hasRelationshipTo",
+      "object": "Truman Capote"
+    },
+    {
+      "subject": "MockingbirdStoryArc",
+      "predicate": "hasThematicElement",
+      "object": "ChildhoodObservation"
+    },
+    {
+      "subject": "Tom Robinson",
+      "predicate": "hasRelationshipTo",
+      "object": "Calpurnia"
+    },
+    {
+      "subject": "Diane McWhorter",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Jane Austen",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Tom Robinson",
+      "predicate": "hasAntagonisticRelationship",
+      "object": "jury"
+    },
+    {
+      "subject": "WatchmanStoryArc",
+      "predicate": "isA",
+      "object": "StoryArc"
+    },
+    {
+      "subject": "James McBride",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Jem",
+      "predicate": "hasRelationshipTo",
+      "object": "Mrs. Dubose"
+    },
+    {
+      "subject": "1956 University of Alabama riots",
+      "predicate": "isA",
+      "object": "ActualHistoricalEvent"
+    },
+    {
+      "subject": "Christopher Sergel",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Truman Persons",
+      "predicate": "hasRelationshipTo",
+      "object": "Truman Capote"
+    },
+    {
+      "subject": "MockingbirdStoryArc",
+      "predicate": "isA",
+      "object": "StoryArc"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "hasFamilialRelationship",
+      "object": "Alice Lee"
+    },
+    {
+      "subject": "Oscar for Best Actor (Gregory Peck)",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "hasRelationshipTo",
+      "object": "Mrs. Dubose"
+    },
+    {
+      "subject": "Carolyn Jones",
+      "predicate": "hasRelationshipTo",
+      "object": "Atticus"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "hasFamilialRelationship",
+      "object": "Frances Cunningham Finch"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "DestructionOfInnocence",
+      "predicate": "isA",
+      "object": "ThematicElement"
+    },
+    {
+      "subject": "Carson McCullers",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "National Education Association",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Jean Louise Finch",
+      "predicate": "hasFamilialRelationship",
+      "object": "Jem"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "hasRelationshipTo",
+      "object": "Jem"
+    },
+    {
+      "subject": "Tom Robinson",
+      "predicate": "hasRelationshipTo",
+      "object": "jury"
+    },
+    {
+      "subject": "Arthur \"Boo\" Radley",
+      "predicate": "hasRelationshipTo",
+      "object": "Dill"
+    },
+    {
+      "subject": "Boo Radley",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Maycomb, Alabama",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Time magazine",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasRelationshipTo",
+      "object": "Mayella Ewell"
+    },
+    {
+      "subject": "reviewers",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Alice Petry",
+      "predicate": "hasRelationshipTo",
+      "object": "Atticus Finch"
+    },
+    {
+      "subject": "Boo",
+      "predicate": "hasRelationshipTo",
+      "object": "Scout"
+    },
+    {
+      "subject": "Jem",
+      "predicate": "hasFamilialRelationship",
+      "object": "Lee"
+    },
+    {
+      "subject": "Granville Hicks",
+      "predicate": "hasRelationshipTo",
+      "object": "Jem"
+    },
+    {
+      "subject": "Aunt Alexandra",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Aunt Alexandra",
+      "predicate": "hasFamilialRelationship",
+      "object": "Scout"
+    },
+    {
+      "subject": "To Kill a Mockingbird 50th Anniversary",
+      "predicate": "isA",
+      "object": "NarrativeEvent"
+    },
+    {
+      "subject": "Jem",
+      "predicate": "hasRelationshipTo",
+      "object": "Miss Maudie"
+    },
+    {
+      "subject": "Amasa Coleman Lee",
+      "predicate": "hasRelationshipTo",
+      "object": "Tom Robinson"
+    },
+    {
+      "subject": "Jean Louise Finch",
+      "predicate": "hasFamilialRelationship",
+      "object": "Atticus"
+    },
+    {
+      "subject": "West Yorkshire Playhouse 2006 production",
+      "predicate": "hasEventSetting",
+      "object": "West Yorkshire Playhouse"
+    },
+    {
+      "subject": "Jean Blackall",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Flannery O'Connor",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Truman Capote",
+      "predicate": "hasFamilialRelationship",
+      "object": "Archulus Persons"
+    },
+    {
+      "subject": "Richard M. Daley",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "county courthouse grounds",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Maycomb, Alabama",
+      "predicate": "hasHistoricalElement",
+      "object": "Maycomb history"
+    },
+    {
+      "subject": "To Kill a Mockingbird",
+      "predicate": "hasStoryArc",
+      "object": "MockingbirdStoryArc"
+    },
+    {
+      "subject": "Brotherhood Award of the National Conference of Christians and Jews",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Andrew Young",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "MockingbirdStoryArc",
+      "predicate": "hasThematicElement",
+      "object": "Bildungsroman"
+    },
+    {
+      "subject": "Harper Lee",
+      "predicate": "hasRelationshipTo",
+      "object": "Truman Capote"
+    },
+    {
+      "subject": "MockingbirdStoryArc",
+      "predicate": "hasThematicElement",
+      "object": "DestructionOfInnocence"
+    },
+    {
+      "subject": "Gregory Peck",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Emmett Till",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "1936 Monroeville Event",
+      "predicate": "isA",
+      "object": "ActualHistoricalEvent"
+    },
+    {
+      "subject": "jury",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Allen Barra",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Mayella Ewell",
+      "predicate": "hasRelationshipTo",
+      "object": "Boo Radley"
+    },
+    {
+      "subject": "Jacqueline Tavernier-Courbin",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Truman Persons",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Calpurnia",
+      "predicate": "hasRelationshipTo",
+      "object": "Scout"
+    },
+    {
+      "subject": "MockingbirdStoryArc",
+      "predicate": "hasSocietalTheme",
+      "object": "NarrativeSocietalTheme_RacialInequality"
+    },
+    {
+      "subject": "Tom Robinson",
+      "predicate": "hasRelationshipTo",
+      "object": "Jem"
+    },
+    {
+      "subject": "Tom Robinson",
+      "predicate": "hasAntagonisticRelationship",
+      "object": "Bob Ewell"
+    },
+    {
+      "subject": "The Ewells",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Mary McDonagh Murphy",
+      "predicate": "hasRelationshipTo",
+      "object": "Rosanne Cash"
+    },
+    {
+      "subject": "Polly Myers",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "The Herald",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasRelationshipTo",
+      "object": "The Cunninghams"
+    },
+    {
+      "subject": "Monroeville, Alabama",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Robert Sean Leonard",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Jem",
+      "predicate": "hasRelationshipTo",
+      "object": "Tom Robinson"
+    },
+    {
+      "subject": "Boo Radley",
+      "predicate": "hasRelationshipTo",
+      "object": "Scout"
+    },
+    {
+      "subject": "David Lister",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "University of Notre Dame Honorary Doctorate 2006",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "R. A. Dave",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Jem",
+      "predicate": "hasRelationshipTo",
+      "object": "Arthur \"Boo\" Radley"
+    },
+    {
+      "subject": "University of Alabama",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Dill",
+      "predicate": "hasRelationshipTo",
+      "object": "Scout"
+    },
+    {
+      "subject": "Uncle Tom's Cabin",
+      "predicate": "isA",
+      "object": "FictionBook"
+    },
+    {
+      "subject": "Horton Foote",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "reviewers",
+      "predicate": "hasRelationshipTo",
+      "object": "Scout"
+    },
+    {
+      "subject": "Timothy McVeigh",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "black housekeeper",
+      "predicate": "hasRelationshipTo",
+      "object": "Lee"
+    },
+    {
+      "subject": "Great Depression",
+      "predicate": "isA",
+      "object": "HistoricalElement"
+    },
+    {
+      "subject": "Calpurnia",
+      "predicate": "hasRelationshipTo",
+      "object": "Tom Robinson"
+    },
+    {
+      "subject": "Frankie",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "justice",
+      "predicate": "isA",
+      "object": "ThematicElement"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasRelationshipTo",
+      "object": "Frances Cunningham Finch"
+    },
+    {
+      "subject": "Kansas murder investigation event",
+      "predicate": "isA",
+      "object": "ActualHistoricalEvent"
+    },
+    {
+      "subject": "University of Notre Dame",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Go Set a Watchman",
+      "predicate": "isA",
+      "object": "FictionBook"
+    },
+    {
+      "subject": "Sydney Morning Herald",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasRelationshipTo",
+      "object": "Boo Radley"
+    },
+    {
+      "subject": "Harper Lee",
+      "predicate": "hasRelationshipTo",
+      "object": "Atticus"
+    },
+    {
+      "subject": "Lee's mother",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Alice Lee",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "two black men accused of murder",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Mr. Radley",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "York Theatre Royal",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Church",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Canadian language arts consultant",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Alabama Academy of Honor",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Andrew Nurnberg",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Annual Monroeville play",
+      "predicate": "hasEventSetting",
+      "object": "Monroe County Courthouse"
+    },
+    {
+      "subject": "Dill",
+      "predicate": "hasRelationshipTo",
+      "object": "Arthur \"Boo\" Radley"
+    },
+    {
+      "subject": "Finch family history",
+      "predicate": "isA",
+      "object": "HistoricalElement"
+    },
+    {
+      "subject": "NarrativeSocietalTheme_AbsentMothersAbusiveFathers",
+      "predicate": "isA",
+      "object": "NarrativeSocietalTheme"
+    },
+    {
+      "subject": "the mob",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "hasFamilialRelationship",
+      "object": "Lee's mother"
+    },
+    {
+      "subject": "Southern romantic regionalism",
+      "predicate": "isA",
+      "object": "NarrativeSocietalTheme"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasRelationshipTo",
+      "object": "Rev. Sykes"
+    },
+    {
+      "subject": "1960 To Kill a Mockingbird Publication",
+      "predicate": "isA",
+      "object": "NarrativeEvent"
+    },
+    {
+      "subject": "Thomas Mallon",
+      "predicate": "hasRelationshipTo",
+      "object": "Scout"
+    },
+    {
+      "subject": "Harper Lee",
+      "predicate": "hasRelationshipTo",
+      "object": "Alice Lee"
+    },
+    {
+      "subject": "ClassIssues",
+      "predicate": "isA",
+      "object": "ThematicElement"
+    },
+    {
+      "subject": "Dill",
+      "predicate": "hasRelationshipTo",
+      "object": "Lee"
+    },
+    {
+      "subject": "Scout, Atticus, and Boo",
+      "predicate": "isA",
+      "object": "FictionBook"
+    },
+    {
+      "subject": "Mayella Ewell",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "legal profession",
+      "predicate": "isA",
+      "object": "Thing"
+    },
+    {
+      "subject": "Truman Capote",
+      "predicate": "hasRelationshipTo",
+      "object": "Truman Persons"
+    },
+    {
+      "subject": "Scottsboro Boys Case",
+      "predicate": "isA",
+      "object": "ActualHistoricalEvent"
+    },
+    {
+      "subject": "Montgomery Bus Boycott",
+      "predicate": "isA",
+      "object": "ActualHistoricalEvent"
+    },
+    {
+      "subject": "Morris Dees",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Mrs. Dubose",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Patrick Chura",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Regent's Park Open Air Theatre",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Sheriff Tate",
+      "predicate": "hasRelationshipTo",
+      "object": "Jem"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasRelationshipTo",
+      "object": "Calpurnia"
+    },
+    {
+      "subject": "Mrs. Dubose",
+      "predicate": "hasRelationshipTo",
+      "object": "Atticus"
+    },
+    {
+      "subject": "Monroe County Courthouse",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "ScoutNarrationDevice",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Gregory Peck",
+      "predicate": "hasFamilialRelationship",
+      "object": "Peck's grandson Harper"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasAntagonisticRelationship",
+      "object": "Aunt Alexandra"
+    },
+    {
+      "subject": "Chicago Sunday Tribune",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Richard Matsch",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Mayella Ewell",
+      "predicate": "hasFamilialRelationship",
+      "object": "Mrs. Ewell"
+    },
+    {
+      "subject": "Rammer Jammer",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Oscar for Best Writing Screenplay Based on Material from Another Medium",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Tom Robinson",
+      "predicate": "hasAntagonisticRelationship",
+      "object": "Mayella Ewell"
+    },
+    {
+      "subject": "Calpurnia's Cookbook",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "hasRelationshipTo",
+      "object": "Dill"
+    },
+    {
+      "subject": "Mrs. Radley",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Lee's father",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "rumor of Capote's authorship",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "FamilyNameFinch",
+      "predicate": "isA",
+      "object": "ThematicElement"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "hasRelationshipTo",
+      "object": "Amasa Coleman Lee"
+    },
+    {
+      "subject": "Granville Hicks",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Mrs. Radley",
+      "predicate": "hasFamilialRelationship",
+      "object": "Boo Radley"
+    },
+    {
+      "subject": "Monroe County Heritage Museum",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Jem",
+      "predicate": "hasRelationshipTo",
+      "object": "Bob Ewell"
+    },
+    {
+      "subject": "The Cunninghams",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Paperback of the Year award from Bestsellers magazine",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Calpurnia",
+      "predicate": "hasRelationshipTo",
+      "object": "Jem"
+    },
+    {
+      "subject": "The Independent",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Jacqueline Tavernier-Courbin",
+      "predicate": "hasRelationshipTo",
+      "object": "Lee"
+    },
+    {
+      "subject": "SongbirdsSymbolism",
+      "predicate": "isA",
+      "object": "ThematicElement"
+    },
+    {
+      "subject": "Jem",
+      "predicate": "hasRelationshipTo",
+      "object": "Atticus"
+    },
+    {
+      "subject": "Reader's Digest Condensed Books",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Bob Ewell",
+      "predicate": "hasAntagonisticRelationship",
+      "object": "Atticus"
+    },
+    {
+      "subject": "Maycomb, Alabama",
+      "predicate": "hasHistoricalElement",
+      "object": "Great Depression"
+    },
+    {
+      "subject": "Tolerance",
+      "predicate": "isA",
+      "object": "ThematicElement"
+    },
+    {
+      "subject": "1936 Monroeville Event",
+      "predicate": "hasEventSetting",
+      "object": "Monroeville, Alabama"
+    },
+    {
+      "subject": "Charles Shields",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Calpurnia",
+      "predicate": "hasRelationshipTo",
+      "object": "Aunt Alexandra"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasRelationshipTo",
+      "object": "Dill"
+    },
+    {
+      "subject": "Birmingham civil rights campaign",
+      "predicate": "isA",
+      "object": "ActualHistoricalEvent"
+    },
+    {
+      "subject": "Arthur \"Boo\" Radley",
+      "predicate": "hasRelationshipTo",
+      "object": "Jem"
+    },
+    {
+      "subject": "Tom Brokaw",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Edwin Bruell",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Chicago Tribune",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Dill",
+      "predicate": "hasRelationshipTo",
+      "object": "Jem"
+    },
+    {
+      "subject": "Chimamanda Ngozi Adichie",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "MockingbirdStoryArc",
+      "predicate": "hasThematicElement",
+      "object": "RacialInjustice"
+    },
+    {
+      "subject": "Atticus Finch",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Go Set a Watchman manuscript",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Rosanne Cash",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Harding LeMay",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "WatchmanAsDraft",
+      "predicate": "isA",
+      "object": "NarrativeAdaptation"
+    },
+    {
+      "subject": "Mayella Ewell",
+      "predicate": "hasRelationshipTo",
+      "object": "Scout"
+    },
+    {
+      "subject": "Mary McDonagh Murphy",
+      "predicate": "hasRelationshipTo",
+      "object": "Alice Lee"
+    },
+    {
+      "subject": "West Yorkshire Playhouse",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Miss Maudie",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Mark Childress",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "black spectators",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "West Yorkshire Playhouse 2006 production",
+      "predicate": "isA",
+      "object": "NarrativeEvent"
+    },
+    {
+      "subject": "Alan J. Pakula",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "SocietalExpectations_Femininity",
+      "predicate": "isA",
+      "object": "SocietalAttribute"
+    },
+    {
+      "subject": "Lippincott",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "One City, One Book program",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Richard Matsch",
+      "predicate": "hasRelationshipTo",
+      "object": "Timothy McVeigh"
+    },
+    {
+      "subject": "Southern Gothic",
+      "predicate": "isA",
+      "object": "ThematicElement"
+    },
+    {
+      "subject": "Jean Louise Finch",
+      "predicate": "hasRelationshipTo",
+      "object": "Dill"
+    },
+    {
+      "subject": "Richard Matsch",
+      "predicate": "hasRelationshipTo",
+      "object": "Atticus Finch"
+    },
+    {
+      "subject": "Jean Louise Finch",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Southern caste system",
+      "predicate": "isA",
+      "object": "SocietalAttribute"
+    },
+    {
+      "subject": "Tom Robinson",
+      "predicate": "hasRelationshipTo",
+      "object": "Bob Ewell"
+    },
+    {
+      "subject": "MockingbirdStoryArc",
+      "predicate": "hasThematicElement",
+      "object": "Prejudice"
+    },
+    {
+      "subject": "Harper Lee",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "RacialInjustice",
+      "predicate": "isA",
+      "object": "ThematicElement"
+    },
+    {
+      "subject": "The Big Read",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "The Richmond News Leader",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "U.S. Civil War",
+      "predicate": "isA",
+      "object": "ActualHistoricalEvent"
+    },
+    {
+      "subject": "Sheriff Tate",
+      "predicate": "hasRelationshipTo",
+      "object": "Boo"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "hasRelationshipTo",
+      "object": "Scout"
+    },
+    {
+      "subject": "Mayella Ewell",
+      "predicate": "hasRelationshipTo",
+      "object": "Mrs. Ewell"
+    },
+    {
+      "subject": "Amasa Coleman Lee",
+      "predicate": "classifiedByRole",
+      "object": "attorney"
+    },
+    {
+      "subject": "William Faulkner",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Granville Hicks",
+      "predicate": "hasRelationshipTo",
+      "object": "Scout"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasRelationshipTo",
+      "object": "The Ewells"
+    },
+    {
+      "subject": "Mayella Ewell",
+      "predicate": "hasRelationshipTo",
+      "object": "Tom Robinson"
+    },
+    {
+      "subject": "Lee's aunts",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Archulus Persons",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "The Cunninghams",
+      "predicate": "hasRelationshipTo",
+      "object": "Scout"
+    },
+    {
+      "subject": "MockingbirdStoryArc",
+      "predicate": "hasThematicElement",
+      "object": "FamilyNameFinch"
+    },
+    {
+      "subject": "Atticus Finch",
+      "predicate": "hasRelationshipTo",
+      "object": "Scout"
+    },
+    {
+      "subject": "Tonja Carter",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Tuscaloosa newspaper",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Patrick Chura",
+      "predicate": "hasRelationshipTo",
+      "object": "Emmett Till"
+    },
+    {
+      "subject": "Book of the Month Club",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Boo",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Peck's grandson Harper",
+      "predicate": "hasRelationshipTo",
+      "object": "Harper Lee"
+    },
+    {
+      "subject": "Mr. Dolphus Raymond",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasRelationshipTo",
+      "object": "Miss Maudie"
+    },
+    {
+      "subject": "Hanover County School Board",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Courage",
+      "predicate": "isA",
+      "object": "ThematicElement"
+    },
+    {
+      "subject": "Harper Lee",
+      "predicate": "hasRelationshipTo",
+      "object": "Gregory Peck"
+    },
+    {
+      "subject": "Maycomb's courthouse",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Amasa Coleman Lee",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "To Kill a Mockingbird",
+      "predicate": "isA",
+      "object": "FictionBook"
+    },
+    {
+      "subject": "the mob",
+      "predicate": "hasAntagonisticRelationship",
+      "object": "Atticus"
+    },
+    {
+      "subject": "Capote's letter 1959 Monroeville",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Mrs. Ewell",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Jem",
+      "predicate": "hasFamilialRelationship",
+      "object": "Atticus"
+    },
+    {
+      "subject": "Duncan Preston",
+      "predicate": "hasRelationshipTo",
+      "object": "Atticus Finch"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasRelationshipTo",
+      "object": "Mr. Dolphus Raymond"
+    },
+    {
+      "subject": "Truman Capote",
+      "predicate": "hasRelationshipTo",
+      "object": "Lee"
+    },
+    {
+      "subject": "Mayella Ewell",
+      "predicate": "hasFamilialRelationship",
+      "object": "Bob Ewell"
+    },
+    {
+      "subject": "Calpurnia",
+      "predicate": "hasRelationshipTo",
+      "object": "Lee"
+    },
+    {
+      "subject": "Annual Monroeville play",
+      "predicate": "isA",
+      "object": "NarrativeEvent"
+    },
+    {
+      "subject": "British Overseas Airways Corporation",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Walter Cunningham",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasFamilialRelationship",
+      "object": "Mrs. Finch"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasFamilialRelationship",
+      "object": "Jem"
+    },
+    {
+      "subject": "Atticus Finch",
+      "predicate": "hasRelationshipTo",
+      "object": "Tom Robinson"
+    },
+    {
+      "subject": "Tom Robinson",
+      "predicate": "hasRelationshipTo",
+      "object": "Boo Radley"
+    },
+    {
+      "subject": "Jem",
+      "predicate": "hasRelationshipTo",
+      "object": "Mayella Ewell"
+    },
+    {
+      "subject": "Judge Taylor",
+      "predicate": "hasRelationshipTo",
+      "object": "Atticus"
+    },
+    {
+      "subject": "Akin Ajayi",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasRelationshipTo",
+      "object": "Walter Cunningham"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "hasAntagonisticRelationship",
+      "object": "the mob"
+    },
+    {
+      "subject": "Bob Ewell",
+      "predicate": "hasAntagonisticRelationship",
+      "object": "Mayella Ewell"
+    },
+    {
+      "subject": "Universal Pictures",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Maycomb, Alabama",
+      "predicate": "hasHistoricalElement",
+      "object": "Finch family history"
+    },
+    {
+      "subject": "Alice Petry",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Rosa Parks refusing to yield bus seat",
+      "predicate": "isA",
+      "object": "ActualHistoricalEvent"
+    },
+    {
+      "subject": "Robert Mulligan",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "In Cold Blood",
+      "predicate": "isA",
+      "object": "FictionBook"
+    },
+    {
+      "subject": "Mr. Radley",
+      "predicate": "hasAntagonisticRelationship",
+      "object": "Boo Radley"
+    },
+    {
+      "subject": "Monroeville's literary heritage museum",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Harper Lee",
+      "predicate": "hasRelationshipTo",
+      "object": "Charles Shields"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasFamilialRelationship",
+      "object": "Aunt Alexandra"
+    },
+    {
+      "subject": "Capote's nonfiction novel",
+      "predicate": "isA",
+      "object": "FictionBook"
+    },
+    {
+      "subject": "Bible",
+      "predicate": "isA",
+      "object": "FictionBook"
+    },
+    {
+      "subject": "AdultSituations",
+      "predicate": "isA",
+      "object": "ThematicElement"
+    },
+    {
+      "subject": "Robert Sean Leonard",
+      "predicate": "hasRelationshipTo",
+      "object": "Atticus Finch"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasRelationshipTo",
+      "object": "Tom Robinson"
+    },
+    {
+      "subject": "rabid dog",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Prejudice",
+      "predicate": "isA",
+      "object": "ThematicElement"
+    },
+    {
+      "subject": "MockingbirdStoryArc",
+      "predicate": "hasThematicElement",
+      "object": "Southern Gothic"
+    },
+    {
+      "subject": "2015 Go Set a Watchman Publication",
+      "predicate": "isA",
+      "object": "NarrativeEvent"
+    },
+    {
+      "subject": "mocking of society",
+      "predicate": "isA",
+      "object": "ThematicElement"
+    },
+    {
+      "subject": "Bob Ewell",
+      "predicate": "hasRelationshipTo",
+      "object": "Mayella Ewell"
+    },
+    {
+      "subject": "Harper Lee",
+      "predicate": "hasRelationshipTo",
+      "object": "Lee's Family and Neighbors"
+    },
+    {
+      "subject": "Los Angeles Public Library Event 2005",
+      "predicate": "isA",
+      "object": "NarrativeEvent"
+    },
+    {
+      "subject": "Presidential Medal of Freedom 2007",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Bildungsroman",
+      "predicate": "isA",
+      "object": "ThematicElement"
+    },
+    {
+      "subject": "York Theatre Royal 2011 production",
+      "predicate": "isA",
+      "object": "NarrativeEvent"
+    },
+    {
+      "subject": "Jem",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "MockingbirdNovelManuscript",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "James S. Jaffe",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Veronique Peck",
+      "predicate": "hasRelationshipTo",
+      "object": "Harper Lee"
+    },
+    {
+      "subject": "Pulitzer Prize",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Dill",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "hasFamilialRelationship",
+      "object": "Lee's father"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasRelationshipTo",
+      "object": "Lee"
+    },
+    {
+      "subject": "NarrativeSocietalTheme_RacialInequality",
+      "predicate": "isA",
+      "object": "NarrativeSocietalTheme"
+    },
+    {
+      "subject": "Jonathan Mahler",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Calpurnia",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "GenderRoles",
+      "predicate": "isA",
+      "object": "ThematicElement"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "hasAntagonisticRelationship",
+      "object": "Mrs. Dubose"
+    },
+    {
+      "subject": "Michigan Law Review",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "MockingbirdStoryArc",
+      "predicate": "hasThematicElement",
+      "object": "AdultSituations"
+    },
+    {
+      "subject": "Alice Lee",
+      "predicate": "hasFamilialRelationship",
+      "object": "Lee"
+    },
+    {
+      "subject": "black housekeeper",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Arthur \"Boo\" Radley",
+      "predicate": "hasRelationshipTo",
+      "object": "Jean Louise Finch"
+    },
+    {
+      "subject": "Autherine Lucy",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Mary McDonagh Murphy",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Gregory Peck",
+      "predicate": "hasRelationshipTo",
+      "object": "Atticus Finch"
+    },
+    {
+      "subject": "Monroeville newspaper",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Sheriff Tate",
+      "predicate": "hasRelationshipTo",
+      "object": "Atticus"
+    },
+    {
+      "subject": "Compassion",
+      "predicate": "isA",
+      "object": "ThematicElement"
+    },
+    {
+      "subject": "The Guardian",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "The Wall Street Journal",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Claudia Durst Johnson",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "hasFamilialRelationship",
+      "object": "Scout"
+    },
+    {
+      "subject": "Tom Robinson",
+      "predicate": "hasRelationshipTo",
+      "object": "Mayella Ewell"
+    },
+    {
+      "subject": "Jean Louise Finch",
+      "predicate": "hasRelationshipTo",
+      "object": "Arthur \"Boo\" Radley"
+    },
+    {
+      "subject": "Mrs. Dubose",
+      "predicate": "hasRelationshipTo",
+      "object": "Scout"
+    },
+    {
+      "subject": "Jean Blackall",
+      "predicate": "hasRelationshipTo",
+      "object": "Harper Lee"
+    },
+    {
+      "subject": "Go Set a Watchman",
+      "predicate": "hasStoryArc",
+      "object": "WatchmanStoryArc"
+    },
+    {
+      "subject": "Boo Radley",
+      "predicate": "hasRelationshipTo",
+      "object": "Jem"
+    },
+    {
+      "subject": "Mary McDonagh Murphy",
+      "predicate": "hasRelationshipTo",
+      "object": "Oprah Winfrey"
+    },
+    {
+      "subject": "Bob Ewell",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "New York City",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Alabama State Bar",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Rev. Sykes",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Coming-of-age novel",
+      "predicate": "isA",
+      "object": "ThematicElement"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasRelationshipTo",
+      "object": "Frankie"
+    },
+    {
+      "subject": "Annual Monroeville play",
+      "predicate": "hasEventSetting",
+      "object": "Monroeville, Alabama"
+    },
+    {
+      "subject": "Southern Poverty Law Center",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "MockingbirdStoryArc",
+      "predicate": "hasThematicElement",
+      "object": "MockingbirdSymbolism"
+    },
+    {
+      "subject": "Atticus Finch",
+      "predicate": "hasRelationshipTo",
+      "object": "Jem"
+    },
+    {
+      "subject": "MockingbirdSymbolism",
+      "predicate": "isA",
+      "object": "ThematicElement"
+    },
+    {
+      "subject": "reviewers",
+      "predicate": "hasRelationshipTo",
+      "object": "Jem"
+    },
+    {
+      "subject": "The New Yorker",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Regent's Park Open Air Theatre 2014 return production",
+      "predicate": "isA",
+      "object": "NarrativeEvent"
+    },
+    {
+      "subject": "Rosemary Goring",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Tom Robinson",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Oprah Winfrey",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Thomas Mallon",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasFamilialRelationship",
+      "object": "Lee"
+    },
+    {
+      "subject": "Judge Taylor",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Arthur \"Boo\" Radley",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Missionary Society",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasRelationshipTo",
+      "object": "Mrs. Dubose"
+    },
+    {
+      "subject": "Boo Radley",
+      "predicate": "hasRelationshipTo",
+      "object": "Atticus"
+    },
+    {
+      "subject": "Great American Novel",
+      "predicate": "isA",
+      "object": "Thing"
+    },
+    {
+      "subject": "Jem",
+      "predicate": "hasRelationshipTo",
+      "object": "Boo Radley"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasRelationshipTo",
+      "object": "Jem"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "hasRelationshipTo",
+      "object": "Scout"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "hasRelationshipTo",
+      "object": "rabid dog"
+    },
+    {
+      "subject": "Regent's Park Open Air Theatre 2014 return production",
+      "predicate": "hasEventSetting",
+      "object": "Regent's Park Open Air Theatre"
+    },
+    {
+      "subject": "Mrs. Finch",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Frances Cunningham Finch",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Eric Zorn",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Mary Badham",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Amasa Coleman Lee",
+      "predicate": "hasRelationshipTo",
+      "object": "two black men accused of murder"
+    },
+    {
+      "subject": "Little Black Sambo",
+      "predicate": "isA",
+      "object": "FictionBook"
+    },
+    {
+      "subject": "York Theatre Royal 2011 production",
+      "predicate": "hasEventSetting",
+      "object": "York Theatre Royal"
+    },
+    {
+      "subject": "ChildhoodObservation",
+      "predicate": "isA",
+      "object": "ThematicElement"
+    },
+    {
+      "subject": "Therese von Hohoff Torrey",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Morris Dees",
+      "predicate": "hasRelationshipTo",
+      "object": "Atticus Finch"
+    },
+    {
+      "subject": "Annual Monroeville play",
+      "predicate": "hasEventSetting",
+      "object": "county courthouse grounds"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasRelationshipTo",
+      "object": "Aunt Alexandra"
+    },
+    {
+      "subject": "Peck's grandson Harper",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Michael Lind",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Jem",
+      "predicate": "hasRelationshipTo",
+      "object": "Rev. Sykes"
+    },
+    {
+      "subject": "Calpurnia",
+      "predicate": "hasRelationshipTo",
+      "object": "Boo Radley"
+    },
+    {
+      "subject": "Lee",
+      "predicate": "hasFamilialRelationship",
+      "object": "Edwin"
+    },
+    {
+      "subject": "National Endowment of the Arts",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "The English Journal",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Lee's Family and Neighbors",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Oscar-winning film adaptation 1962",
+      "predicate": "isA",
+      "object": "MultimediaAdaptation"
+    },
+    {
+      "subject": "Scout",
+      "predicate": "hasRelationshipTo",
+      "object": "Atticus"
+    },
+    {
+      "subject": "The Atlantic Monthly",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Bob Ewell",
+      "predicate": "hasAntagonisticRelationship",
+      "object": "Tom Robinson"
+    },
+    {
+      "subject": "Tay Hohoff",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "hasRelationshipTo",
+      "object": "Tom Robinson"
+    },
+    {
+      "subject": "Albert Murray",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Maycomb history",
+      "predicate": "isA",
+      "object": "HistoricalElement"
+    },
+    {
+      "subject": "David Kipen",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "J. B. Lippincott",
+      "predicate": "isA",
+      "object": "EventSetting"
+    },
+    {
+      "subject": "Jem",
+      "predicate": "hasFamilialRelationship",
+      "object": "Mrs. Finch"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "hasRelationshipTo",
+      "object": "black spectators"
+    },
+    {
+      "subject": "Granville Hicks",
+      "predicate": "hasRelationshipTo",
+      "object": "Harding LeMay"
+    },
+    {
+      "subject": "Huntress",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Oscar for Best Art Direction-Set Decoration Black-and-White",
+      "predicate": "isA",
+      "object": "NarrativeComponent"
+    },
+    {
+      "subject": "Edwin",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Jem",
+      "predicate": "hasRelationshipTo",
+      "object": "Calpurnia"
+    },
+    {
+      "subject": "Mr. Radley",
+      "predicate": "hasFamilialRelationship",
+      "object": "Boo Radley"
+    },
+    {
+      "subject": "Mary McDonagh Murphy",
+      "predicate": "hasRelationshipTo",
+      "object": "Tom Brokaw"
+    },
+    {
+      "subject": "Sheriff Tate",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Atticus",
+      "predicate": "hasRelationshipTo",
+      "object": "Calpurnia"
+    },
+    {
+      "subject": "reviewers",
+      "predicate": "hasRelationshipTo",
+      "object": "Boo Radley"
+    },
+    {
+      "subject": "Jane Sullivan",
+      "predicate": "isA",
+      "object": "Character"
+    },
+    {
+      "subject": "Tom Robinson",
+      "predicate": "hasRelationshipTo",
+      "object": "Scout"
+    },
+    {
+      "subject": "Thomas Mallon",
+      "predicate": "hasRelationshipTo",
+      "object": "Atticus"
+    },
+    {
+      "subject": "To Kill a Mockingbird 1962 film",
+      "predicate": "isA",
+      "object": "MultimediaAdaptation"
+    },
+    {
+      "subject": "Mrs. Dubose",
+      "predicate": "hasAntagonisticRelationship",
+      "object": "Atticus"
+    },
+    {
+      "subject": "Patrick Chura",
+      "predicate": "hasRelationshipTo",
+      "object": "Tom Robinson"
+    }
+  ]
+}

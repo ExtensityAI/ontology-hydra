@@ -1,0 +1,52 @@
+1. Introduction
+1.1 Domain Definition
+- Representation of fiction books focusing on their core narrative components such as characters, events, settings, and story arcs.
+- Emphasis on creating a structured, semantic model to facilitate knowledge sharing, retrieval, and analysis.
+
+2. Included Topics
+2.1 Characters
+- Character identities, roles, relationships, traits, and development arcs.
+- Types of characters: protagonists, antagonists, supporting characters, narrators.
+
+2.2 Events
+- Significant narrative events including actions, conflicts, resolutions, and turning points.
+- Event categorization by narrative importance, chronology, and causality.
+
+2.3 Settings
+- Physical locations, temporal contexts, and world-building elements.
+- Environmental descriptions and cultural backgrounds integral to the narrative.
+
+2.4 Story Arcs
+- Narrative progression structures including exposition, rising action, climax, falling action, and resolution.
+- Multiple and interwoven story arcs within a single work.
+
+2.5 Genres and Subgenres
+- Classification of fiction genres (e.g., fantasy, science fiction, cyberpunk) and their influence on narrative elements.
+
+3. Explicit Exclusions
+3.1 Non-Fiction Content
+- Representation does not cover non-fiction books or factual texts.
+
+3.2 Author Biographies and Publishing Metadata
+- Information about authors, publishers, and editions fall outside the scope.
+
+3.3 Reader Interpretations and Reviews
+- Subjective critiques, reader responses, and external analyses are excluded.
+
+3.4 Multimedia Adaptations
+- Film, television, or other media adaptations of fiction works are not considered.
+
+4. Gray Areas and Overlaps
+4.1 Oral vs. Written Narratives
+- Overlap in representing oral storytelling traditions alongside written fiction, especially regarding narrative dynamics and cultural context.
+
+4.2 Narrative Theory and Computational Modeling
+- Integration of literary theories with semantic web technologies creates a boundary where scholarly interpretation and technical representation meet.
+
+4.3 Technology and Creativity
+- Intersection of software tools for digital storytelling, ontology modeling, and creative writing practices.
+
+5. Summary
+- The domain captures the semantic representation of fiction books through their fundamental narrative elements.
+- Clear boundaries exclude non-fiction, authorial data, and adaptations.
+- Recognizes nuanced areas where narrative theory, cultural studies, and technology intersect.
