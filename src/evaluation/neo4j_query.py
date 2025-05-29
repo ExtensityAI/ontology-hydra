@@ -6,6 +6,7 @@ from symai import Expression
 from symai.strategy import contract
 from symai.models import LLMDataModel
 import json
+import re
 
 # === CONFIGURATION ===
 JSON_PATH = "./generated_questions.json"
@@ -140,15 +141,46 @@ class QuestionToCypherConverter(Expression):
         return True
 
     def post(self, output: Neo4jQueryOutput) -> bool:
-        # TODO: Verification - correctness of queries, semantic validation of cyphers, etc.
+        # Basic validation checks
         if not output.query.strip():
             raise ValueError("Generated Cypher query cannot be empty")
         if not output.query.upper().startswith("MATCH"):
             raise ValueError("Generated Cypher query must start with MATCH")
 
+        # Extract schema elements from the query
+        q_labels, q_rels, q_props = self._extract_cypher_elements(output.query)
 
+        # Get actual schema elements from Neo4j
+        with self.driver.session() as session:
+            labels, rels, props = session.read_transaction(self._get_schema)
+
+        # Validate against schema
+        invalid_labels = q_labels - labels
+        invalid_rels = q_rels - rels
+        invalid_props = q_props - props
+
+        if invalid_labels:
+            raise ValueError(f"Query uses non-existent labels: {invalid_labels}")
+        if invalid_rels:
+            raise ValueError(f"Query uses non-existent relationships: {invalid_rels}")
+        if invalid_props:
+            raise ValueError(f"Query uses non-existent properties: {invalid_props}")
 
         return True
+
+    def _get_schema(self, tx):
+        """Get schema elements from Neo4j."""
+        labels = {record["label"] for record in tx.run("CALL db.labels()")}
+        rels = {record["relationshipType"] for record in tx.run("CALL db.relationshipTypes()")}
+        props = {record["propertyKey"] for record in tx.run("CALL db.propertyKeys()")}
+        return labels, rels, props
+
+    def _extract_cypher_elements(self, query):
+        """Extract Cypher elements using regex."""
+        labels = set(re.findall(r":([A-Z][a-zA-Z0-9_]*)", query))
+        relationships = set(re.findall(r":([A-Z_]+)", query))
+        properties = set(re.findall(r"\.\s*([a-zA-Z0-9_]+)", query))
+        return labels, relationships, properties
 
     @property
     def prompt(self) -> str:
