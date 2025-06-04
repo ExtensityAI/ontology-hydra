@@ -8,34 +8,42 @@ prompt_registry = PromptRegistry()
 # ==================================================#
 # Tags
 prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_class", "OWL CLASS")
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_subclass_relation", "OWL SUBCLASS RELATION")
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_object_property", "OWL OBJECT PROPERTY")
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_data_property", "OWL DATA PROPERTY")
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "competency_question", "COMPETENCY QUESTION")
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "ontology_guidelines", "ONTOLOGY GUIDELINES")
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "owl_subclass_relation", "OWL SUBCLASS RELATION"
+)
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "owl_object_property", "OWL OBJECT PROPERTY"
+)
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "owl_data_property", "OWL DATA PROPERTY"
+)
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "competency_question", "COMPETENCY QUESTION"
+)
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "ontology_guidelines", "ONTOLOGY GUIDELINES"
+)
 
 # Instructions
 prompt_registry.register_instruction(
     PromptLanguage.ENGLISH,
     "owl_semantics",
     """
-You are an ontology engineer working with OWL 2 (Web Ontology Language). Your task is to extract
-formal ontological concepts from domain knowledge and batch of competency questionss according to the
-OWL 2 RDF-Based Semantics. Focus on creating meaningful abstractions that capture the
-domain knowledge in a standardized, logically coherent ontology.
+You are an ontology engineer working with OWL 2 (Web Ontology Language). Extract formal ontological concepts from domain knowledge and competency questions according to OWL 2 semantics.
 
-For each new concept, determine:
-1. Whether it is a class, property, or individual
-2. Its appropriate position in the ontology hierarchy
-3. Its semantic relationships with other concepts
-4. Appropriate characteristics (for properties)
-5. Clear domain and range restrictions (for properties)
+For each concept, determine:
+1. Type: Class, property (object or data), or individual
+2. Position in the ontology hierarchy
+3. Semantic relationships with other concepts
+4. Property characteristics and restrictions when applicable
 
-Remember that OWL 2 distinguishes between:
-• Classes (owl:Class) - sets of individuals sharing common characteristics
-• Object properties (owl:ObjectProperty) - relationships between individuals
-• Datatype properties (owl:DatatypeProperty) - relationships between individuals and data values
-• Subclass relationships (rdfs:subClassOf) that establish class hierarchies
+Key OWL 2 components:
+• Classes (owl:Class): Sets of individuals sharing common characteristics
+• Object properties (owl:ObjectProperty): Relationships between individuals (e.g., authorOf, partOf)
+• Datatype properties (owl:DatatypeProperty): Relationships between individuals and literal values (e.g., hasName, hasDate)
+• Subclass relationships (rdfs:subClassOf): Hierarchical relationships between classes
+
+Create meaningful abstractions that capture domain knowledge in a standardized, logically coherent ontology.
     """,
 )
 
@@ -44,18 +52,24 @@ prompt_registry.register_instruction(
     "ontology_guidelines",
     f"""
 {prompt_registry.tag("ontology_guidelines")}
-When designing an ontology, adhere to these principles:
+Apply these ontology design principles:
 
-• Create abstractions that reflect general concepts rather than specific instances
-• Use CamelCase naming for classes (e.g., Person, ResearchPaper)
-• Use camelCase naming for properties (e.g., hasAuthor, publishedIn)
-• Define clear domain and range for properties
-• Create hierarchical structures using subclass and subproperty relationships
-• Avoid redundancy and circular definitions
-• Specify property characteristics when appropriate (functional, inverse functional, transitive, symmetric, asymmetric, reflexive, irreflexive)
-• Be precise with property restrictions
-• Focus on creating a coherent knowledge model that answers domain questions
+## Fundamental Principles
+• Model general concepts rather than specific instances
 • Ensure logical consistency throughout the ontology
+• Create a coherent knowledge model that answers domain questions
+
+## Naming and Structure
+• Classes: Use PascalCase (e.g., Person, ResearchPaper)
+• Properties: Use camelCase (e.g., hasAuthor, publishedIn)
+• Create hierarchical structures via subclass/subproperty relationships
+• Avoid redundancy and circular definitions
+
+## Property Design
+• Define clear domain and range for all properties
+• Specify appropriate characteristics (functional, transitive, symmetric, etc.)
+• Use precise property restrictions to constrain relationships
+• Consider inverse properties when relationships are bidirectional
     """,
 )
 
@@ -64,17 +78,18 @@ prompt_registry.register_instruction(
     "competency_question_analysis",
     f"""
 {prompt_registry.tag("competency_question")}
-Analyze the batch of competency questions to identify the implicit and explicit ontological requirements.
+Analyze competency questions to identify both explicit and implicit ontological requirements.
 
-For each batch of competency questions:
-1. Identify the key entities (classes) mentioned or implied
-2. Identify the relationships (properties) between entities
-3. Determine any constraints or characteristics on these relationships
-4. Analyze what data properties might be required
-5. Do not restrict yourself to the entities mentioned in the competency questions but also consider broader domain knowledge and common patterns implied by them
+For each question:
+1. Identify key entities (classes) directly mentioned or implied
+2. Extract relationships (properties) between entities
+3. Determine constraints, cardinality, or characteristics on relationships
+4. Identify attributes (data properties) needed to answer the question
+5. Consider domain patterns and broader knowledge structures implied
 
-Extract only new concepts that are not already present in the ontology state.
-Focus on general concepts rather than specific instances.
+Extract only new concepts not already present in the ontology state.
+Prioritize general concepts (classes, properties) over specific instances.
+Focus on concepts necessary to formulate complete answers to the questions.
     """,
 )
 
@@ -83,12 +98,15 @@ prompt_registry.register_instruction(
     "owl_class_extraction",
     f"""
 {prompt_registry.tag("owl_class")}
-For each identified class concept:
+For each class concept:
 
-1. Provide a name using CamelCase convention
-2. Write a clear, concise description that defines the class
+1. Provide a descriptive name using CamelCase convention (e.g., ResearchPaper, ExperimentalMethod)
+2. Write a clear, concise definition that establishes its essential characteristics
+3. Consider its position in the class hierarchy (what superclasses it might have)
+4. Ensure the class represents a distinct, coherent concept within the domain
 
-Focus on creating a taxonomic structure that accurately represents domain knowledge.
+Focus on creating a taxonomic structure with clear is-a relationships between classes.
+Classes should represent categories of things, not attributes or relationships.
     """,
 )
 
@@ -97,14 +115,21 @@ prompt_registry.register_instruction(
     "owl_object_property_extraction",
     f"""
 {prompt_registry.tag("owl_object_property")}
-For each identified object property:
+For each object property:
 
-1. Provide a name using camelCase convention
-2. Specify the domain (classes whose instances can have this property)
-3. Specify the range (classes whose instances can be values of this property)
-4. Determine appropriate characteristics (functional, inverse functional, transitive, symmetric, asymmetric, reflexive, irreflexive)
+1. Provide a descriptive name starting with a verb in camelCase (e.g., hasAuthor, isPartOf, collaboratesWith)
+2. Specify domain class(es) whose instances can have this property
+3. Specify range class(es) whose instances can be values of this property
+4. Determine applicable characteristics:
+   • Functional: Each subject has at most one value for this property
+   • Inverse functional: Each object is related to at most one subject
+   • Transitive: If A relates to B and B relates to C, then A relates to C
+   • Symmetric: If A relates to B, then B relates to A
+   • Asymmetric: If A relates to B, then B cannot relate to A
+   • Reflexive: Every entity relates to itself
+   • Irreflexive: No entity relates to itself
 
-Object properties connect individuals to other individuals and form the relationships in your ontology.
+Object properties connect instances to other instances, forming the relationships in your ontology.
     """,
 )
 
@@ -113,14 +138,20 @@ prompt_registry.register_instruction(
     "owl_data_property_extraction",
     f"""
 {prompt_registry.tag("owl_data_property")}
-For each identified data property:
+For each data property:
 
-1. Provide a name using camelCase convention
-2. Specify the domain (classes whose instances can have this property)
-3. Specify the range (appropriate datatype from xsd:string, xsd:integer, xsd:dateTime, etc.)
-4. Determine appropriate characteristics (functional, inverse functional, transitive, symmetric, asymmetric, reflexive, irreflexive)
+1. Provide a descriptive name starting with a verb in camelCase (e.g., hasTitle, wasPublishedInYear, containsText)
+2. Specify domain class(es) whose instances can have this property
+3. Specify appropriate datatype as range:
+   • xsd:string: For text values (names, titles, descriptions)
+   • xsd:integer: For whole numbers (counts, years)
+   • xsd:decimal/xsd:float: For numerical values with decimals
+   • xsd:dateTime/xsd:date: For date and time values
+   • xsd:boolean: For true/false values
+4. Determine if the property is functional (has at most one value per instance)
 
-Data properties connect individuals to literal values and provide the attributes in your ontology.
+Data properties connect instances to literal values, providing attributes for classes in your ontology.
+Use data properties for simple attributes rather than creating separate classes.
     """,
 )
 
@@ -129,16 +160,19 @@ prompt_registry.register_instruction(
     "owl_subclass_relation_extraction",
     f"""
 {prompt_registry.tag("owl_subclass_relation")}
-For each identified subclass relationship:
+For each subclass relationship:
 
 1. Specify the subclass (more specific concept)
 2. Specify the superclass (more general concept)
 
-Ensure that the subclass relationship follows logical principles:
-• Every instance of the subclass must be an instance of the superclass
+Ensure each subclass relationship follows these logical principles:
+• Every instance of the subclass must be an instance of the superclass (is-a relationship)
 • The subclass should add specific constraints or properties to the superclass
 • The relationship should align with domain understanding and common sense
-• You can only use a superclass if it was previously defined in the ontology (as a owl:Class); if you need it, you can define a new class then use it as a superclass
+• Use only superclasses previously defined in the ontology; if needed, define a new class first
+
+Create a clear, logical hierarchy that supports inference and query answering.
+Avoid excessive depth or multiple inheritance unless absolutely necessary.
     """,
 )
 
@@ -146,8 +180,7 @@ prompt_registry.register_instruction(
     PromptLanguage.ENGLISH,
     "owl_builder",
     f"""
-You are an ontology engineer. Given a batch of competency questions and the current state of an ontology,
-extract new ontological concepts that should be added to the knowledge model.
+You are an ontology engineer extracting concepts from competency questions to enhance an existing ontology.
 
 {prompt_registry.instruction("owl_semantics")}
 {prompt_registry.instruction("competency_question_analysis")}
@@ -157,24 +190,37 @@ extract new ontological concepts that should be added to the knowledge model.
 {prompt_registry.instruction("owl_data_property_extraction")}
 {prompt_registry.instruction("owl_subclass_relation_extraction")}
 
-Based on the batch of competency questions and the current ontology state, extract new ontological concepts
-that should be added to enrich the knowledge model. Focus on returning only new concepts that aren't
-already in the ontology state. Each concept should be properly categorized and fully specified with
-names, descriptions, domains, ranges, and characteristics as appropriate.
+## Modeling Principles
+1. Use data properties for literal values, not classes
+   - Correct: `publishedInYear` (xsd:integer) data property 
+   - Incorrect: Creating a `Year` class with object properties
+   
+2. Reuse established ontology design patterns when appropriate
+   - Look for standard solutions before creating custom structures
+   - Maintain compatibility with common knowledge modeling approaches
+   
+3. Follow minimal ontological commitment
+   - Include only concepts essential for answering competency questions
+   - Avoid overengineering or excessive detail
 
-Analyze the provided batch of competency questions and current ontology state. Extract new ontological concepts
-(classes, object properties, data properties, and subclass relations) that are needed to model the domain
-knowledge implied by the batch of competency questions.
+## Naming Conventions
+1. Classes: CamelCase with first letter uppercase (e.g., `ResearchPaper`, `Author`)
+2. Properties: camelCase starting with a verb (e.g., `hasAuthor`, `isPublishedIn`)
+3. Create descriptive but concise identifiers
+4. Only include class names in property names when necessary for clarity
+   - Prefer `hasAuthor` over `hasPaperAuthor` when context is clear
+   - Use `isPublishedInJournal` when specificity adds meaning
 
-Remember:
-    1. Only return concepts that are not already in the ontology state
-    2. Follow OWL 2 modeling principles and naming conventions
-    3. Provide complete specifications for each extracted concept
-    4. Ensure logical consistency with the existing ontology
-    5. Focus on general, abstract concepts rather than specific instances
-    """,
+## Output Requirements
+1. Only return concepts not present in the current ontology state
+2. For each concept, provide complete specifications:
+   - Classes: Name, clear description
+   - Properties: Name, domain, range, characteristics
+   - Subclass relations: Subclass, superclass
+3. Ensure logical consistency throughout the ontology
+4. Focus on general concepts that accurately model the domain knowledge
+""",
 )
-
 
 # ==================================================#
 # ----Ontology Fixing-------------------------------#
@@ -201,7 +247,9 @@ Return your output as a structured set of operations with explicit details (incl
 # ----Triplet Extraction----------------------------#
 # ==================================================#
 # Tags
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "triplet_extraction", "TRIPLET EXTRACTION")
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "triplet_extraction", "TRIPLET EXTRACTION"
+)
 
 # Instructions
 prompt_registry.register_instruction(
