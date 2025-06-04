@@ -1,0 +1,38 @@
+What are the formal definitions for each type of scholarly output included (e.g., journal article, conference proceeding, preprint, thesis, book chapter, published poster)?
+How are relationships between different versions of the same research output (preprint, published, corrected, retracted) represented and differentiated?
+How does the ontology distinguish between the roles of contributors (e.g., author, editor, reviewer, corresponding author), and how is contribution metadata structured?
+What mechanisms support disambiguation and authority control for author and contributor names, especially in multilingual and cross-cultural contexts?
+How are institutional affiliations represented, including hierarchical relationships and changes over time for authors and organizations?
+What classes of institutions and organizations are modeled (e.g., universities, research centers, consortia), and what are the key distinguishing attributes?
+How are journals, publishers, book series, conferences, and their roles in the publication lifecycle classified and uniquely identified?
+How are grants, funding agencies, and their relationships to specific research outputs and institutions modeled and linked?
+What persistent identifiers are used for each core entity (authors, publications, institutions, funders, datasets, code), and how is their interoperability managed?
+How does the ontology support multilingual metadata, including titles, abstracts, keywords, and subject classifications?
+Which controlled vocabularies and subject taxonomies (e.g., ACM CCS, MeSH) are supported, and how are they integrated for classifying research outputs?
+How are author-assigned vs. system-assigned keywords and classifications differentiated and reconciled?
+What are the key fields of bibliographic metadata captured for each publication (e.g., title, authors, affiliations, publisher, publication date, identifiers, language, version, access status)?
+How are open access and licensing metadata structured, and what distinctions are made between open, embargoed, and restricted access outputs?
+How are links between publications and supplementary artefacts (datasets, code, figures) represented, with persistent identifiers and relation types?
+How are citation relationships captured within the ontology (e.g., citations, references, inbound/outbound links, co-citation, bibliographic coupling)?
+What attributes are provided for tracking citation counts, h-index values, journal impact factors, and other bibliometric indicators directly associated with outputs?
+How does the ontology model co-authorship and collaboration networks, including cross-institutional and cross-national relationships?
+In what ways are peer review and editorial board data included, and how are privacy and data minimization requirements met?
+How does the ontology support faceted search and user personalization features (tags, favorites, reading lists), and how are these modeled?
+What metadata and ontology structures facilitate cross-disciplinary and interdisciplinary linking between topics and research fields?
+How does the ontology handle the representation and mapping of outdated or historical nomenclature and classifications with contemporary standards?
+What are the domain-specific constraints for inclusion or exclusion of supplementary materials, datasets, and software within research output metadata?
+How are different language versions of the same publication or abstract connected and presented within the ontology?
+How are embargoes, permissions, and rights metadata recorded and linked to publications for compliance with open science and licensing requirements?
+Which metadata standards and schema mappings (e.g., Dublin Core, MARC, Crossref, DataCite, schema.org) are explicitly supported, and how is interoperability maintained?
+How are institutional and organizational partnerships or collaborative grants linked to relevant research outputs?
+What distinctions are made between formally published academic outputs and excluded non-academic, informal, or teaching materials?
+How are borderline cases (e.g., preprints, conference posters, formally published presentations) classified and managed for search and retrieval?
+What are the essential classification attributes for research domains, fields, subfields, and how are interdisciplinary and emerging domains accommodated?
+How are academic networking indicators (e.g., co-author clusters, citation networks) represented to support bibliometric and impact analyses?
+How does the ontology ensure persistent linkage of research outputs to their digital locations (URLs, repository entries, archives) across print and digital formats?
+How are changes in institutional or author naming conventions over time reconciled within the ontology's authority control systems?
+What metadata supports accessibility for non-English speakers and users with disabilities (e.g., alternative formats, multilingual tags)?
+How does the ontology address gaps in representation for underrepresented languages, regions, or research areas?
+What data quality and validation rules are in place to prevent duplicate records, name ambiguities, and inconsistent affiliations or identifiers?
+How are user-contributed or system-assigned annotations, tags, or corrections managed and integrated with authoritative metadata?
+How is the provenance and update history of metadata (e.g., corrections, retractions, status changes) tracked within the ontology?

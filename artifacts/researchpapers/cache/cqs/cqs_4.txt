@@ -1,0 +1,20 @@
+What are all the types of scholarly outputs represented in the ontology, and how are they distinguished (e.g., journal articles, conference proceedings, preprints, theses, book chapters, posters)?
+How does the ontology support multilingual metadata fields, including original titles and translations, abstracts, and keywords?
+What mechanisms are in place to ensure consistent categorization and classification of research papers across disciplines and languages?
+How are author roles (author, editor, reviewer, corresponding author, etc.) represented, and how does the ontology manage standardized naming and authority control for contributors?
+How does the ontology capture affiliation history and disambiguate between authors with similar names or multiple affiliations?
+What persistent identifiers are supported for papers, authors, organizations, grants, and other core entities (e.g., DOI, ORCID, ROR, Funder Registry, ISSN, ISBN)?
+How are different versions and statuses of research outputs (preprint, published, corrected, retracted) distinguished and linked?
+How does the ontology link research papers with supplementary artefacts like datasets, software, and code repositories, and what metadata describes these relationships?
+Which metadata fields are used for facilitating discoverability, advanced filtering, and personalization (e.g., subject classifications, user tags, reading lists, accessibility tags)?
+How are subject classifications, controlled vocabularies, and taxonomies (e.g., ACM CCS, MeSH) integrated, and how is interdisciplinary or cross-domain research represented?
+How are citation networks, referencing, bibliographic couplings, and topical similarity modeled between research papers?
+How does the ontology represent institutional structures, partnerships, and collaboration networks among authors and organizations?
+What information about funding bodies, grants, and their relationships to research outputs is included and how is this linked?
+How does the ontology account for open access status, licensing, embargo information, and rights management for publications?
+In what ways are accessibility and inclusivity (support for multiple languages, regionally diverse outputs, non-traditional research) handled in the ontology?
+How are peer review and editorial board metadata represented, especially regarding publication status and open peer review reports?
+How is bibliometric information (e.g., citation counts, journal metrics, altmetrics) associated with research outputs and limited to what is included in the scope?
+What are the rules and constraints for including or excluding supplementary materials, educational content, and non-academic outputs?
+How does the ontology ensure alignment with metadata standards and best practices (e.g., Dublin Core, Crossref, DataCite, MARC, schema.org, FAIR principles)?
+What provisions exist in the ontology to support the evolving nature of research outputs and emerging collaborative or publication forms?

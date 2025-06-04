@@ -1,0 +1,6468 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "id": "Operation"
+    },
+    {
+      "id": "SupplementaryArtefact"
+    },
+    {
+      "id": "Empirical explorations of the logic theory machine: a case study in heuristic (1957)"
+    },
+    {
+      "id": "JournalArticle"
+    },
+    {
+      "id": "K. Simonyan"
+    },
+    {
+      "id": "Author"
+    },
+    {
+      "id": "NeSy engines"
+    },
+    {
+      "id": "Software"
+    },
+    {
+      "id": "Retrieval-augmented generation for large language models: A survey (2023)"
+    },
+    {
+      "id": "Preprint"
+    },
+    {
+      "id": "Can generalist foundation models outcompete special-purpose tuning? case study in medicine (2023)"
+    },
+    {
+      "id": "L. E. Miller"
+    },
+    {
+      "id": "J. Wang"
+    },
+    {
+      "id": "Journal of Neuroscience"
+    },
+    {
+      "id": "Journal"
+    },
+    {
+      "id": "X. Yin"
+    },
+    {
+      "id": "logical AND"
+    },
+    {
+      "id": "J. Mao"
+    },
+    {
+      "id": "Wasserstein-2 distance"
+    },
+    {
+      "id": "BibliometricIndicator"
+    },
+    {
+      "id": "K. Segaert"
+    },
+    {
+      "id": "Learning representations by back-propagating errors (1986)"
+    },
+    {
+      "id": "M. Hofmarcher"
+    },
+    {
+      "id": "D. Chae"
+    },
+    {
+      "id": "deep-tech industry"
+    },
+    {
+      "id": "Organization"
+    },
+    {
+      "id": "R. F. Gamble"
+    },
+    {
+      "id": "10.1145/360018.360022"
+    },
+    {
+      "id": "ISBN"
+    },
+    {
+      "id": "J. Larson"
+    },
+    {
+      "id": "Tree of Thoughts"
+    },
+    {
+      "id": "search tree of reasoning paths"
+    },
+    {
+      "id": "Applying formal verification methods to rule-based programs (1994)"
+    },
+    {
+      "id": "Int. J. Expert Syst."
+    },
+    {
+      "id": "Driven by compression progress: A simple principle explains essential aspects of subjective beauty, novelty, surprise, interestingness, attention, curiosity, creativity, art, science, music, jokes (2009)"
+    },
+    {
+      "id": "Mastering the game of go without human knowledge (Silver et al. 2017b)"
+    },
+    {
+      "id": "Primitives"
+    },
+    {
+      "id": "Engine"
+    },
+    {
+      "id": "J. Shim"
+    },
+    {
+      "id": "H. Wang"
+    },
+    {
+      "id": "DeepProbLog: Neural Probabilistic Logic Programming (2018)"
+    },
+    {
+      "id": "A. Newell"
+    },
+    {
+      "id": "forward method"
+    },
+    {
+      "id": "Factorization"
+    },
+    {
+      "id": "advanced program synthesis"
+    },
+    {
+      "id": "M. Pechenizkiy"
+    },
+    {
+      "id": "The Next Decade in AI: Four Steps Towards Robust Artificial Intelligence (2020)"
+    },
+    {
+      "id": "I. Sutskever"
+    },
+    {
+      "id": "C. Finn"
+    },
+    {
+      "id": "B. Poole"
+    },
+    {
+      "id": "SymbolicAI (CoLLAs 2024)"
+    },
+    {
+      "id": "SymbolicAI framework codebase"
+    },
+    {
+      "id": "Expression"
+    },
+    {
+      "id": "Amazon Devices"
+    },
+    {
+      "id": "Maximum Mean Discrepancy (MMD)"
+    },
+    {
+      "id": "L. Ouyang"
+    },
+    {
+      "id": "custom Expression"
+    },
+    {
+      "id": "node"
+    },
+    {
+      "id": "Paper2vec: Combining graph and text information for scientific paper representation (2017)"
+    },
+    {
+      "id": "dynamic insertion"
+    },
+    {
+      "id": "Faiss"
+    },
+    {
+      "id": "T. Demeester"
+    },
+    {
+      "id": "N. Gimelshein"
+    },
+    {
+      "id": "A. H. Miller"
+    },
+    {
+      "id": "socio-economic landscape"
+    },
+    {
+      "id": "computational graph"
+    },
+    {
+      "id": "F. Petroni"
+    },
+    {
+      "id": "M. Leach"
+    },
+    {
+      "id": "0674920996"
+    },
+    {
+      "id": "problem space"
+    },
+    {
+      "id": "error handling"
+    },
+    {
+      "id": "Symbol base type"
+    },
+    {
+      "id": "Bing is your AI-powered copilot for the web (2023)"
+    },
+    {
+      "id": "A new fun and robust version of an fMRI localizer for the frontotemporal language system (Scott et al. 2016)"
+    },
+    {
+      "id": "E. Fedorenko"
+    },
+    {
+      "id": "Large language models encode clinical knowledge (Singhal et al. 2023)"
+    },
+    {
+      "id": "LaTeX table template"
+    },
+    {
+      "id": "A. v. d. Oord"
+    },
+    {
+      "id": "models"
+    },
+    {
+      "id": "broad AI systems"
+    },
+    {
+      "id": "U. Singer"
+    },
+    {
+      "id": "S. Deng"
+    },
+    {
+      "id": "X. Tan"
+    },
+    {
+      "id": "Linker class"
+    },
+    {
+      "id": "metaclass"
+    },
+    {
+      "id": "initial instruction x0"
+    },
+    {
+      "id": "J. McCarthy"
+    },
+    {
+      "id": "Kai Chen"
+    },
+    {
+      "id": "symbolic mathematics"
+    },
+    {
+      "id": "CustomLogicPrimitive"
+    },
+    {
+      "id": "R. J. Lowe"
+    },
+    {
+      "id": "ReplikaAI"
+    },
+    {
+      "id": "Software 1.0"
+    },
+    {
+      "id": "customExpression"
+    },
+    {
+      "id": "overloaded operator"
+    },
+    {
+      "id": "Advances in Information Retrieval, Lecture Notes in Computer Science"
+    },
+    {
+      "id": "BookSeries"
+    },
+    {
+      "id": "Hopfield networks is all you need (2020)"
+    },
+    {
+      "id": "B. G. Buchanan"
+    },
+    {
+      "id": "Cognitive Neuroscience"
+    },
+    {
+      "id": "class diagram (Symbol, Expression, Sequence)"
+    },
+    {
+      "id": "J. Brandstetter"
+    },
+    {
+      "id": "L. Zhang"
+    },
+    {
+      "id": "S. Agarwal"
+    },
+    {
+      "id": "Boosted prompt ensembles for large language models (2023)"
+    },
+    {
+      "id": "G. Chanan"
+    },
+    {
+      "id": "artificial general intelligent agents"
+    },
+    {
+      "id": "X. Gao"
+    },
+    {
+      "id": "program synthesis"
+    },
+    {
+      "id": "arXiv preprint arXiv:2309.16797"
+    },
+    {
+      "id": "debugging"
+    },
+    {
+      "id": "E.-S. Kim"
+    },
+    {
+      "id": "NeSy framework"
+    },
+    {
+      "id": "A proposal for the dartmouth summer research project on artificial intelligence (1955)"
+    },
+    {
+      "id": "R. Loftin"
+    },
+    {
+      "id": "H. Simon"
+    },
+    {
+      "id": "B. K. Ayan"
+    },
+    {
+      "id": "O\u2019Reilly Media"
+    },
+    {
+      "id": "Publisher"
+    },
+    {
+      "id": "M. Pavlovi\u0107"
+    },
+    {
+      "id": "M. R. Zhang"
+    },
+    {
+      "id": "T. Lillicrap"
+    },
+    {
+      "id": "Z3: an efficient smt solver (2008)"
+    },
+    {
+      "id": "N. Cancedda"
+    },
+    {
+      "id": "J. Gallee"
+    },
+    {
+      "id": "9780596554743"
+    },
+    {
+      "id": "JVM"
+    },
+    {
+      "id": "logical capability test"
+    },
+    {
+      "id": "D. Rumelhart"
+    },
+    {
+      "id": "J. Lehner"
+    },
+    {
+      "id": "reference"
+    },
+    {
+      "id": "Data Sources and Compute Engines"
+    },
+    {
+      "id": "S. Massaroli"
+    },
+    {
+      "id": "R. Williams"
+    },
+    {
+      "id": "Neural systems underlying british sign language and audio-visual english processing in native users (2002)"
+    },
+    {
+      "id": "Brain"
+    },
+    {
+      "id": "L. Zettlemoyer"
+    },
+    {
+      "id": "Expression objects"
+    },
+    {
+      "id": "self-referential sub-process evaluations"
+    },
+    {
+      "id": "embedding models"
+    },
+    {
+      "id": "Examples"
+    },
+    {
+      "id": "Carl Djerassi"
+    },
+    {
+      "id": "P. Kohli"
+    },
+    {
+      "id": "API"
+    },
+    {
+      "id": "Harvard University Press"
+    },
+    {
+      "id": "R. O. Ness"
+    },
+    {
+      "id": "Word2Vec"
+    },
+    {
+      "id": "SymPy"
+    },
+    {
+      "id": "linker object"
+    },
+    {
+      "id": "K. Slama"
+    },
+    {
+      "id": "Neuro-Symbolic computation"
+    },
+    {
+      "id": "Large language models are neurosymbolic reasoners (2024)"
+    },
+    {
+      "id": "R. Rafailov"
+    },
+    {
+      "id": "History compression via language models in reinforcement learning (2022)"
+    },
+    {
+      "id": "S. M. McKinney"
+    },
+    {
+      "id": "H. Michalewski"
+    },
+    {
+      "id": "Symbol objects"
+    },
+    {
+      "id": "cat"
+    },
+    {
+      "id": "SerpApi"
+    },
+    {
+      "id": "Rendering Engine"
+    },
+    {
+      "id": "A. Kimmig"
+    },
+    {
+      "id": "Nature"
+    },
+    {
+      "id": "Retrospective analysis of the 2019 minerl competition on sample efficient reinforcement learning (2020)"
+    },
+    {
+      "id": "Proceedings of the NeurIPS 2019 Competition and Demonstration Track"
+    },
+    {
+      "id": "A. Graves"
+    },
+    {
+      "id": "SymbolicAI evaluation benchmark"
+    },
+    {
+      "id": "L. Gao"
+    },
+    {
+      "id": "Speech Engine (Whisper)"
+    },
+    {
+      "id": "Reflexion: an autonomous agent with dynamic memory and self-reflection (Shinn et al. 2023)"
+    },
+    {
+      "id": "C. White"
+    },
+    {
+      "id": "The perceptron: A probabilistic model for information storage and organization in the brain (1958)"
+    },
+    {
+      "id": "Game playing"
+    },
+    {
+      "id": "Field"
+    },
+    {
+      "id": "RKHS"
+    },
+    {
+      "id": "word vector"
+    },
+    {
+      "id": "A. Guez"
+    },
+    {
+      "id": "SymbolicAI"
+    },
+    {
+      "id": "model consensus accuracy"
+    },
+    {
+      "id": "system-on-a-chip (SoC)"
+    },
+    {
+      "id": "P. Mishkin"
+    },
+    {
+      "id": "decorator"
+    },
+    {
+      "id": "Stream"
+    },
+    {
+      "id": "G. K. Sandve"
+    },
+    {
+      "id": "Z. DeVito"
+    },
+    {
+      "id": "E. Denton"
+    },
+    {
+      "id": "multi-modal binding"
+    },
+    {
+      "id": "J. Ba"
+    },
+    {
+      "id": "U. Alon"
+    },
+    {
+      "id": "W.-J. Zhu"
+    },
+    {
+      "id": "Efficient estimation of word representations in vector space (2013b)"
+    },
+    {
+      "id": "workflow-related scoring functionalities"
+    },
+    {
+      "id": "Proceedings of the 39th International Conference on Machine Learning"
+    },
+    {
+      "id": "Symbol class"
+    },
+    {
+      "id": "D. C. Dowson"
+    },
+    {
+      "id": "Y. Zhang"
+    },
+    {
+      "id": "A. Ravenscroft"
+    },
+    {
+      "id": "autonomously self-evolving cognitive architectures"
+    },
+    {
+      "id": "M. Simens"
+    },
+    {
+      "id": "Human-like few-shot learning via bayesian reasoning over natural language (2023)"
+    },
+    {
+      "id": "arXiv preprint arXiv:2306.02797"
+    },
+    {
+      "id": "A. Ramesh"
+    },
+    {
+      "id": "C++"
+    },
+    {
+      "id": "B. V. Landau"
+    },
+    {
+      "id": "Markus Holzleitner"
+    },
+    {
+      "id": "Self-refine: Iterative refinement with self-feedback (2023)"
+    },
+    {
+      "id": "C#"
+    },
+    {
+      "id": "G. Wang"
+    },
+    {
+      "id": "N. Dziri"
+    },
+    {
+      "id": "K. Chen"
+    },
+    {
+      "id": "A dataset perspective on offline reinforcement learning (Schweighofer et al. 2022)"
+    },
+    {
+      "id": "Conference on Lifelong Learning Agents"
+    },
+    {
+      "id": "Mpnet: Masked and permuted pre-training for language understanding (Song et al. 2020)"
+    },
+    {
+      "id": "IRE Transactions on information theory"
+    },
+    {
+      "id": "multi-modal Expression"
+    },
+    {
+      "id": "M. Apidianaki"
+    },
+    {
+      "id": "I. A. Blank"
+    },
+    {
+      "id": "Werner Zellinger"
+    },
+    {
+      "id": "Proceedings of the 33rd International Conference on Neural Information Processing Systems"
+    },
+    {
+      "id": "Conference"
+    },
+    {
+      "id": "S. Riedel"
+    },
+    {
+      "id": "Neuro-Symbolic Programming"
+    },
+    {
+      "id": "N. Kalchbrenner"
+    },
+    {
+      "id": "stream processing expression"
+    },
+    {
+      "id": "benchmark"
+    },
+    {
+      "id": "CodeRepository"
+    },
+    {
+      "id": "J. Lu"
+    },
+    {
+      "id": "Journal of neurophysiology"
+    },
+    {
+      "id": "S. P. Mohanty"
+    },
+    {
+      "id": "A. Khan"
+    },
+    {
+      "id": "M. Lanctot"
+    },
+    {
+      "id": "Tool Interface"
+    },
+    {
+      "id": "P.-J. Hsieh"
+    },
+    {
+      "id": "Toolformer: Language models can teach themselves to use tools (2023)"
+    },
+    {
+      "id": "IsBrotherOf"
+    },
+    {
+      "id": "Einstein\u2019s puzzle 'Who owns the fish?'"
+    },
+    {
+      "id": "solver"
+    },
+    {
+      "id": "H. Ramsauer"
+    },
+    {
+      "id": "Algorithm 1"
+    },
+    {
+      "id": "T. Scott"
+    },
+    {
+      "id": "S. Chilamkurthy"
+    },
+    {
+      "id": "J. Schmidhuber"
+    },
+    {
+      "id": "R. Luo"
+    },
+    {
+      "id": "Claude 2"
+    },
+    {
+      "id": "democratic and open-source initiative"
+    },
+    {
+      "id": "arXiv preprint arXiv:2312.10997"
+    },
+    {
+      "id": "The neuro-symbolic concept learner: Interpreting scenes, words, and sentences from natural supervision (2019)"
+    },
+    {
+      "id": "7th International Conference on Learning Representations, ICLR 2019"
+    },
+    {
+      "id": "International Conference on Machine Learning"
+    },
+    {
+      "id": "Symbol"
+    },
+    {
+      "id": "Y. Yang"
+    },
+    {
+      "id": "DSL snippet of the 'Who is Jay\u2019s brother?' puzzle"
+    },
+    {
+      "id": "J. Tang"
+    },
+    {
+      "id": "J. Lederberg"
+    },
+    {
+      "id": "3rd Conference on Lifelong Learning Agents (CoLLAs)"
+    },
+    {
+      "id": "hierarchical clustering structure"
+    },
+    {
+      "id": "chunk"
+    },
+    {
+      "id": "error"
+    },
+    {
+      "id": "B. Mildenhall"
+    },
+    {
+      "id": "Y. Wu"
+    },
+    {
+      "id": "template prompt"
+    },
+    {
+      "id": "A. Paszke"
+    },
+    {
+      "id": "online learning models"
+    },
+    {
+      "id": "Learning Python: Powerful Object-Oriented Programming (2013)"
+    },
+    {
+      "id": "9781449355715"
+    },
+    {
+      "id": "A. K \u00a8opf"
+    },
+    {
+      "id": "Symbolic Engine"
+    },
+    {
+      "id": "@core.combine"
+    },
+    {
+      "id": "M. Regev"
+    },
+    {
+      "id": "Tomas Mikolov"
+    },
+    {
+      "id": "N. Usuyama"
+    },
+    {
+      "id": "Ensemble techniques for LLMs"
+    },
+    {
+      "id": "Lisp: A programming system for symbolic manipulations (1959)"
+    },
+    {
+      "id": "root of computational graph"
+    },
+    {
+      "id": "V. Pudi"
+    },
+    {
+      "id": "prompt"
+    },
+    {
+      "id": "A. Sharma"
+    },
+    {
+      "id": "Psychological Review"
+    },
+    {
+      "id": "plan xP"
+    },
+    {
+      "id": "context size limitation"
+    },
+    {
+      "id": "OR"
+    },
+    {
+      "id": "S. Biderman"
+    },
+    {
+      "id": "J. C. Shaw"
+    },
+    {
+      "id": "Method expression"
+    },
+    {
+      "id": "context"
+    },
+    {
+      "id": "D. Y. Fu"
+    },
+    {
+      "id": "S. Baccus"
+    },
+    {
+      "id": "A. Martelli"
+    },
+    {
+      "id": "N. Fusi"
+    },
+    {
+      "id": "L. Ruis"
+    },
+    {
+      "id": "D. Banarse"
+    },
+    {
+      "id": "Generative Flow Networks"
+    },
+    {
+      "id": "LLM"
+    },
+    {
+      "id": "T. Qin"
+    },
+    {
+      "id": "H. C. Cunningham"
+    },
+    {
+      "id": "Human problem solving (1972)"
+    },
+    {
+      "id": "Book"
+    },
+    {
+      "id": "A. Desmaison"
+    },
+    {
+      "id": "Title expression"
+    },
+    {
+      "id": "covariance matrix C1"
+    },
+    {
+      "id": "Zero-shot text-to-image generation (2021)"
+    },
+    {
+      "id": "jay"
+    },
+    {
+      "id": "linear probing layers"
+    },
+    {
+      "id": "sentiment analysis"
+    },
+    {
+      "id": "formal language structures"
+    },
+    {
+      "id": "ResearchOutput"
+    },
+    {
+      "id": "Z. Lin"
+    },
+    {
+      "id": "B. Peng"
+    },
+    {
+      "id": "operator learning oriented functionalities"
+    },
+    {
+      "id": "Python Cookbook (2005)"
+    },
+    {
+      "id": "Hierarchical Computational Graph"
+    },
+    {
+      "id": "K. Schweighofer"
+    },
+    {
+      "id": "G. Hinton"
+    },
+    {
+      "id": "Mathematical discoveries from program search with large language models (2023)"
+    },
+    {
+      "id": "Sequence"
+    },
+    {
+      "id": "H. Nori"
+    },
+    {
+      "id": "N. King"
+    },
+    {
+      "id": "T. Adler"
+    },
+    {
+      "id": "P. F. Christiano"
+    },
+    {
+      "id": "multi-step workflow evaluation"
+    },
+    {
+      "id": "Bulletin of Mathematical Biophysics"
+    },
+    {
+      "id": "capabilities C"
+    },
+    {
+      "id": "J. Nham"
+    },
+    {
+      "id": "Direct preference optimization: Your language model is secretly a reward model (2023)"
+    },
+    {
+      "id": "closed-source practices"
+    },
+    {
+      "id": "dynamic type creation"
+    },
+    {
+      "id": "arXiv"
+    },
+    {
+      "id": "chain-of-thought prompting"
+    },
+    {
+      "id": "R. Dess\u00ec"
+    },
+    {
+      "id": "mathematical expression"
+    },
+    {
+      "id": "D. Hassabis"
+    },
+    {
+      "id": "M. Widrich"
+    },
+    {
+      "id": "@core.logic"
+    },
+    {
+      "id": "Introducing ChatGPT (2022)"
+    },
+    {
+      "id": "vector-valued property"
+    },
+    {
+      "id": "Output"
+    },
+    {
+      "id": "R. Raileanu"
+    },
+    {
+      "id": "Cognitive Technologies"
+    },
+    {
+      "id": "Database Engine"
+    },
+    {
+      "id": "D. Raposo"
+    },
+    {
+      "id": "A. Radler"
+    },
+    {
+      "id": "T. Mikolov"
+    },
+    {
+      "id": "D. Grewe"
+    },
+    {
+      "id": "L. Chen"
+    },
+    {
+      "id": "Try"
+    },
+    {
+      "id": "probabilistic methods"
+    },
+    {
+      "id": "Prompt Design"
+    },
+    {
+      "id": "Local Neuro-Symbolic Engine"
+    },
+    {
+      "id": "M. Raison"
+    },
+    {
+      "id": "Virtualization Apps Frameworks"
+    },
+    {
+      "id": "R. Manhaeve"
+    },
+    {
+      "id": "M. Summerfield"
+    },
+    {
+      "id": "generative design"
+    },
+    {
+      "id": "J. Whang"
+    },
+    {
+      "id": "Python"
+    },
+    {
+      "id": "B. Steiner"
+    },
+    {
+      "id": "Language Models as Knowledge Bases? (2019)"
+    },
+    {
+      "id": "Static Context"
+    },
+    {
+      "id": "operational prompt"
+    },
+    {
+      "id": "M.-C. Dinu"
+    },
+    {
+      "id": "T. Dao"
+    },
+    {
+      "id": "Prompt"
+    },
+    {
+      "id": "M. Lai"
+    },
+    {
+      "id": "'Who is Jay\u2019s brother?' puzzle"
+    },
+    {
+      "id": "puzzle statement"
+    },
+    {
+      "id": "WolframAlpha"
+    },
+    {
+      "id": "Python function with Z3 syntax"
+    },
+    {
+      "id": "K. Papineni"
+    },
+    {
+      "id": "C. Gan"
+    },
+    {
+      "id": "Human Interface"
+    },
+    {
+      "id": "Proceedings of the 34th International Conference on Machine Learning"
+    },
+    {
+      "id": "A. Tejani"
+    },
+    {
+      "id": "W. H. Guss"
+    },
+    {
+      "id": "code execution"
+    },
+    {
+      "id": "S. Roukos"
+    },
+    {
+      "id": "APILayer"
+    },
+    {
+      "id": "context-based prompt"
+    },
+    {
+      "id": "C. E. Shannon"
+    },
+    {
+      "id": "L. Gruber"
+    },
+    {
+      "id": "edges"
+    },
+    {
+      "id": "M. Dorfer"
+    },
+    {
+      "id": "assembled Z3 logical clauses"
+    },
+    {
+      "id": "Interactive Learning from Policy-Dependent Human Feedback (2017)"
+    },
+    {
+      "id": "S. Pitis"
+    },
+    {
+      "id": "J. Pan"
+    },
+    {
+      "id": "Large language models are not zero-shot communicators (2022)"
+    },
+    {
+      "id": "P. Seidl"
+    },
+    {
+      "id": "memory buffer M"
+    },
+    {
+      "id": "B. Romera-Paredes"
+    },
+    {
+      "id": "S. K. S. Ghasemipour"
+    },
+    {
+      "id": "A. Bakhtin"
+    },
+    {
+      "id": "S. Osindero"
+    },
+    {
+      "id": "W. Chan"
+    },
+    {
+      "id": "Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing, EMNLP-IJCNLP 2019"
+    },
+    {
+      "id": "Mastering the game of Go with deep neural networks and tree search (Silver et al. 2016)"
+    },
+    {
+      "id": "Dissociating language and thought in large language models: a cognitive perspective (2023)"
+    },
+    {
+      "id": "C. J. Maddison"
+    },
+    {
+      "id": "E. Wong"
+    },
+    {
+      "id": "S. Hooker"
+    },
+    {
+      "id": "S. Gray"
+    },
+    {
+      "id": "M. Holzleitner"
+    },
+    {
+      "id": "Transformer"
+    },
+    {
+      "id": "Symbol Evaluation Pipeline"
+    },
+    {
+      "id": "Greg Corrado"
+    },
+    {
+      "id": "fallback statement"
+    },
+    {
+      "id": "M. L. Littman"
+    },
+    {
+      "id": "J. A. Arjona-Medina"
+    },
+    {
+      "id": "K. Kavukcuoglu"
+    },
+    {
+      "id": "Unified Theories of Cognition (1990)"
+    },
+    {
+      "id": "explainable NeSy AI systems"
+    },
+    {
+      "id": "T. Graepel"
+    },
+    {
+      "id": "Gaussian kernel"
+    },
+    {
+      "id": "QueryExpression"
+    },
+    {
+      "id": "F. Paischer"
+    },
+    {
+      "id": "L. Li"
+    },
+    {
+      "id": "A. Polyak"
+    },
+    {
+      "id": "A. Ray"
+    },
+    {
+      "id": "Custom Method"
+    },
+    {
+      "id": "FatherOf"
+    },
+    {
+      "id": "reference to Einstein\u2019s puzzle solution"
+    },
+    {
+      "id": "bob"
+    },
+    {
+      "id": "Translate"
+    },
+    {
+      "id": "polymorphic context"
+    },
+    {
+      "id": "A. Gopinath"
+    },
+    {
+      "id": "Pytorch: An imperative style, high-performance deep learning library (2019)"
+    },
+    {
+      "id": "S. Lehner"
+    },
+    {
+      "id": "Bleu: a method for automatic evaluation of machine translation (2002)"
+    },
+    {
+      "id": "A. Huang"
+    },
+    {
+      "id": "mean vector \u00b52"
+    },
+    {
+      "id": "I. Antonoglou"
+    },
+    {
+      "id": "User Input"
+    },
+    {
+      "id": "text classification"
+    },
+    {
+      "id": "B. Labash"
+    },
+    {
+      "id": "ResNet"
+    },
+    {
+      "id": "L. Menenti"
+    },
+    {
+      "id": "J. Schulman"
+    },
+    {
+      "id": "AND"
+    },
+    {
+      "id": "Compose"
+    },
+    {
+      "id": "Neuro-Symbolic System"
+    },
+    {
+      "id": "advanced learning agent"
+    },
+    {
+      "id": "S. Chintala"
+    },
+    {
+      "id": "Bridging the domain gap by clustering-based image-text graph matching (2023)"
+    },
+    {
+      "id": "code generation"
+    },
+    {
+      "id": "quality measure"
+    },
+    {
+      "id": "Y. Gao"
+    },
+    {
+      "id": "S. Havaldar"
+    },
+    {
+      "id": "H. Zen"
+    },
+    {
+      "id": "M. Macsweeney"
+    },
+    {
+      "id": "E. Grefenstette"
+    },
+    {
+      "id": "sym return type property"
+    },
+    {
+      "id": "operator overloading in SymbolicAI"
+    },
+    {
+      "id": "A. Nieto-Castanon"
+    },
+    {
+      "id": "Commun. ACM"
+    },
+    {
+      "id": "Journal of Multivariate Analysis"
+    },
+    {
+      "id": "A. Yazdanbakhsh"
+    },
+    {
+      "id": "concept space"
+    },
+    {
+      "id": "Structure prediction"
+    },
+    {
+      "id": "Speech Engine"
+    },
+    {
+      "id": "F. Massa"
+    },
+    {
+      "id": "multivariate Gaussian distribution X2"
+    },
+    {
+      "id": "A. Santoro"
+    },
+    {
+      "id": "Photorealistic text-to-image diffusion models with deep language understanding (2022)"
+    },
+    {
+      "id": "D. L. Roberts"
+    },
+    {
+      "id": "Annoy"
+    },
+    {
+      "id": "Springer-Verlag"
+    },
+    {
+      "id": "A. Senior"
+    },
+    {
+      "id": "P. S. H. Lewis"
+    },
+    {
+      "id": "J. Bai"
+    },
+    {
+      "id": "14th National Meeting of the Association for Computing Machinery, ACM '59"
+    },
+    {
+      "id": "A. A. Ivanova"
+    },
+    {
+      "id": "J. Dean"
+    },
+    {
+      "id": "C. D. Manning"
+    },
+    {
+      "id": "K. Nakata"
+    },
+    {
+      "id": "generative node"
+    },
+    {
+      "id": "P. Clark"
+    },
+    {
+      "id": "Advances in Neural Information Processing Systems"
+    },
+    {
+      "id": "G. Marcus"
+    },
+    {
+      "id": "N. S. Kuno"
+    },
+    {
+      "id": "OpenAI"
+    },
+    {
+      "id": "Semantic helm: An interpretable memory for reinforcement learning (2023)"
+    },
+    {
+      "id": "Source expression"
+    },
+    {
+      "id": "AI-related concentration of data and resources"
+    },
+    {
+      "id": "S. Zhang"
+    },
+    {
+      "id": "M. L. Minsky"
+    },
+    {
+      "id": "G.-C. Roman"
+    },
+    {
+      "id": "pre-trained models"
+    },
+    {
+      "id": "Q. Lyu"
+    },
+    {
+      "id": "Microsoft"
+    },
+    {
+      "id": "Shared language: Overlap and segregation of the neuronal infrastructure for speaking and listening revealed by functional mri (2011)"
+    },
+    {
+      "id": "Clean"
+    },
+    {
+      "id": "probability distribution P"
+    },
+    {
+      "id": "Claudiu Leoveanu\u2013Condrei"
+    },
+    {
+      "id": "call method"
+    },
+    {
+      "id": "kernel evaluation K(X1, X2)"
+    },
+    {
+      "id": "J. Wei"
+    },
+    {
+      "id": "Wavenet: A generative model for raw audio (2016)"
+    },
+    {
+      "id": "B. P. Majumder"
+    },
+    {
+      "id": "Y. T. Lee"
+    },
+    {
+      "id": "L. De Raedt"
+    },
+    {
+      "id": "W. Liu"
+    },
+    {
+      "id": "Language processing"
+    },
+    {
+      "id": "New method for fMRI investigations of language: Defining rois functionally in individual subjects (2010)"
+    },
+    {
+      "id": "arXiv preprint arXiv:2401.09334"
+    },
+    {
+      "id": "Make-a-video: Text-to-video generation without text-video data (Singer et al. 2022)"
+    },
+    {
+      "id": "E. Horvitz"
+    },
+    {
+      "id": "search problem"
+    },
+    {
+      "id": "LLM sub-symbolic model"
+    },
+    {
+      "id": "AlphaFold"
+    },
+    {
+      "id": "PostProcessor"
+    },
+    {
+      "id": "Abstract expression"
+    },
+    {
+      "id": "DSL syntax and semantic structure"
+    },
+    {
+      "id": "Computer science as empirical inquiry: symbols and search (1976)"
+    },
+    {
+      "id": "test constructs template Z3"
+    },
+    {
+      "id": "Programming in Python 3: A Complete Introduction to the Python Language (Summerfield 2010)"
+    },
+    {
+      "id": "S. Welleck"
+    },
+    {
+      "id": "Milvus"
+    },
+    {
+      "id": "S. Dumancic"
+    },
+    {
+      "id": "A Logical Calculus of Ideas Immanent in Nervous Activity (1943)"
+    },
+    {
+      "id": "M. Poli"
+    },
+    {
+      "id": "User instance"
+    },
+    {
+      "id": "User"
+    },
+    {
+      "id": "S. Gross"
+    },
+    {
+      "id": "T. P. Lillicrap"
+    },
+    {
+      "id": "IRE-AIEE-ACM \u201957 (Western): Papers presented at the February 26-28, 1957, western joint computer conference: Techniques for reliability"
+    },
+    {
+      "id": "Faithful chain-of-thought reasoning (2023)"
+    },
+    {
+      "id": "Y. Bi"
+    },
+    {
+      "id": "Training language models to follow instructions with human feedback (2022)"
+    },
+    {
+      "id": "N. Shinn"
+    },
+    {
+      "id": "M. Lomeli"
+    },
+    {
+      "id": "M. Chen"
+    },
+    {
+      "id": "O. Vinyals"
+    },
+    {
+      "id": "D. Almeida"
+    },
+    {
+      "id": "B. Sch\u00e4fl"
+    },
+    {
+      "id": "M. K. Ho"
+    },
+    {
+      "id": "R. Edgar"
+    },
+    {
+      "id": "Dynamic Context"
+    },
+    {
+      "id": "task instructions"
+    },
+    {
+      "id": "autonomous agents"
+    },
+    {
+      "id": "T. Killeen"
+    },
+    {
+      "id": "S. Gupta"
+    },
+    {
+      "id": "J. T. Barron"
+    },
+    {
+      "id": "Knowledge Base"
+    },
+    {
+      "id": "E. Z. Yang"
+    },
+    {
+      "id": "K. Jia"
+    },
+    {
+      "id": "Pushing the Boundaries of AI to Talk to the Dead (2016)"
+    },
+    {
+      "id": "expected plan yP"
+    },
+    {
+      "id": "M. Fang"
+    },
+    {
+      "id": "R. G. Lopes"
+    },
+    {
+      "id": "S. Dieleman"
+    },
+    {
+      "id": "S. Azizi"
+    },
+    {
+      "id": "Y. Dai"
+    },
+    {
+      "id": "Z. Shi"
+    },
+    {
+      "id": "9781450373647"
+    },
+    {
+      "id": "Search Engine (Google)"
+    },
+    {
+      "id": "john"
+    },
+    {
+      "id": "Constraints"
+    },
+    {
+      "id": "array of solvers"
+    },
+    {
+      "id": "The fr\u0000e9chet distance between multivariate normal distributions (1982)"
+    },
+    {
+      "id": "Align-RUDDER: Learning from few demonstrations by reward redistribution (2020)"
+    },
+    {
+      "id": "S. Kim"
+    },
+    {
+      "id": "Method section"
+    },
+    {
+      "id": "C. J. Honey"
+    },
+    {
+      "id": "J. Hilton"
+    },
+    {
+      "id": "Z3 solver"
+    },
+    {
+      "id": "N. Bj\u00f8rner"
+    },
+    {
+      "id": "out-of-sequence task execution"
+    },
+    {
+      "id": "Marius\u2013Constantin Dinu"
+    },
+    {
+      "id": "E. Nguyen"
+    },
+    {
+      "id": "G\u00f6del machines: Fully self-referential optimal universal self-improvers (2007)"
+    },
+    {
+      "id": "X. Jiang"
+    },
+    {
+      "id": "feature mapping \u03d5(\u00b7)"
+    },
+    {
+      "id": "S. Hallinan"
+    },
+    {
+      "id": "S. M. E. Gierhan"
+    },
+    {
+      "id": "non-sequential task execution model"
+    },
+    {
+      "id": "Conditions & Constraints"
+    },
+    {
+      "id": "J. Kim"
+    },
+    {
+      "id": "compositionality"
+    },
+    {
+      "id": "J. Leike"
+    },
+    {
+      "id": "Differentiable Programming"
+    },
+    {
+      "id": "Dreamfusion: Text-to-3d using 2d diffusion (2022)"
+    },
+    {
+      "id": "Payload"
+    },
+    {
+      "id": "self-referential systems"
+    },
+    {
+      "id": "explainability"
+    },
+    {
+      "id": "S. S. Mahdavi"
+    },
+    {
+      "id": "Johannes Kepler University"
+    },
+    {
+      "id": "Mastering chess and shogi by self-play with a general reinforcement learning algorithm (Silver et al. 2017a)"
+    },
+    {
+      "id": "evaluation measure in existing benchmarks"
+    },
+    {
+      "id": "Promptbreeder: Self-referential self-improvement via prompt evolution (2023)"
+    },
+    {
+      "id": "Software 2.0"
+    },
+    {
+      "id": "Association for Computing Machinery"
+    },
+    {
+      "id": "E. Feigenbaum"
+    },
+    {
+      "id": "Psychological Science"
+    },
+    {
+      "id": "A. Bitto-Nemling"
+    },
+    {
+      "id": "K. Mahowald"
+    },
+    {
+      "id": "logical XOR"
+    },
+    {
+      "id": "A. Madaan"
+    },
+    {
+      "id": "Paper expression"
+    },
+    {
+      "id": "A. Jain"
+    },
+    {
+      "id": "Proceedings of the Theory and Practice of Software, 14th International Conference on Tools and Algorithms for the Construction and Analysis of Systems, TACAS\u201908/ETAPS\u201908"
+    },
+    {
+      "id": "P. Gupta"
+    },
+    {
+      "id": "vector-based similarity search"
+    },
+    {
+      "id": "Outline"
+    },
+    {
+      "id": "J. Schrittwieser"
+    },
+    {
+      "id": "base set of capabilities"
+    },
+    {
+      "id": "reward signals"
+    },
+    {
+      "id": "Curran Associates, Inc."
+    },
+    {
+      "id": "vector-valued mappings"
+    },
+    {
+      "id": "H. Eghbal-zadeh"
+    },
+    {
+      "id": "J. B. Tenenbaum"
+    },
+    {
+      "id": "credit assignment"
+    },
+    {
+      "id": "Symbolic Engine (WolframAlpha)"
+    },
+    {
+      "id": "logic-based methodologies"
+    },
+    {
+      "id": "weight exchange of task-specific projections and executions"
+    },
+    {
+      "id": "SymbolicAI framework"
+    },
+    {
+      "id": "The logic theory machine\u2013a complex information processing system (1956)"
+    },
+    {
+      "id": "ParentOf"
+    },
+    {
+      "id": "final aggregated score s"
+    },
+    {
+      "id": "S. Wiegreffe"
+    },
+    {
+      "id": "generative models"
+    },
+    {
+      "id": "dynamically generated code"
+    },
+    {
+      "id": "P. Welinder"
+    },
+    {
+      "id": "L. Fang"
+    },
+    {
+      "id": "C. R\u00e9"
+    },
+    {
+      "id": "probabilistic programming languages"
+    },
+    {
+      "id": "C. Callison-Burch"
+    },
+    {
+      "id": "G. van den Driessche"
+    },
+    {
+      "id": "function composition in SymbolicAI"
+    },
+    {
+      "id": "auxiliary fields"
+    },
+    {
+      "id": "The cat has tail."
+    },
+    {
+      "id": "Prentice-Hall"
+    },
+    {
+      "id": "V. Patil"
+    },
+    {
+      "id": "BrotherOf"
+    },
+    {
+      "id": "RelatedWork section"
+    },
+    {
+      "id": "A. Askell"
+    },
+    {
+      "id": "T. Hayes"
+    },
+    {
+      "id": "AI magazine"
+    },
+    {
+      "id": "Selenium"
+    },
+    {
+      "id": "K. Song"
+    },
+    {
+      "id": "Offline reinforcement learning"
+    },
+    {
+      "id": "higher-order logic expressions"
+    },
+    {
+      "id": "Java"
+    },
+    {
+      "id": "multivariate Gaussian distribution X1"
+    },
+    {
+      "id": "clustering"
+    },
+    {
+      "id": "D. Silver"
+    },
+    {
+      "id": "L. De Moura"
+    },
+    {
+      "id": "aspect-oriented programming"
+    },
+    {
+      "id": "HAS"
+    },
+    {
+      "id": "static context properties"
+    },
+    {
+      "id": "M. E. Taylor"
+    },
+    {
+      "id": "Symbolic behaviour in artificial intelligence (2022)"
+    },
+    {
+      "id": "A. Lampinen"
+    },
+    {
+      "id": "test environment"
+    },
+    {
+      "id": "Proceedings of the 40th annual meeting of the Association for Computational Linguistics"
+    },
+    {
+      "id": "C. Saharia"
+    },
+    {
+      "id": "S. Prabhumoye"
+    },
+    {
+      "id": "K. Mathewson"
+    },
+    {
+      "id": "fuzzy comparison"
+    },
+    {
+      "id": "step-by-step reasoning"
+    },
+    {
+      "id": "E. Simony"
+    },
+    {
+      "id": "Input"
+    },
+    {
+      "id": "model-generated reasoning chains"
+    },
+    {
+      "id": "L. Sifre"
+    },
+    {
+      "id": "NeSy engine"
+    },
+    {
+      "id": "Reproducing Kernel Hilbert Space (RKHS)"
+    },
+    {
+      "id": "T. Tu"
+    },
+    {
+      "id": "VERTEX Protocol"
+    },
+    {
+      "id": "M. Lutz"
+    },
+    {
+      "id": "J. Dwivedi-Yu"
+    },
+    {
+      "id": "summary node"
+    },
+    {
+      "id": "Dendral (1965)"
+    },
+    {
+      "id": "Neuro-Symbolic Computation Engine"
+    },
+    {
+      "id": "IS"
+    },
+    {
+      "id": "T. Hubert"
+    },
+    {
+      "id": "G. Goh"
+    },
+    {
+      "id": "P. Hagoort"
+    },
+    {
+      "id": "CLR"
+    },
+    {
+      "id": "PreProcessor"
+    },
+    {
+      "id": "Cluster"
+    },
+    {
+      "id": "W. E. Ball"
+    },
+    {
+      "id": "RelatedWork expression"
+    },
+    {
+      "id": "Y. Xiong"
+    },
+    {
+      "id": "D. Ascher"
+    },
+    {
+      "id": "A. Wang"
+    },
+    {
+      "id": "Sepp Hochreiter"
+    },
+    {
+      "id": "V. Panneershelvam"
+    },
+    {
+      "id": "Reinforcement learning"
+    },
+    {
+      "id": "dynamic casting"
+    },
+    {
+      "id": "Probabilistic logic neural networks for reasoning (2019)"
+    },
+    {
+      "id": "Instructions"
+    },
+    {
+      "id": "C. Voss"
+    },
+    {
+      "id": "M. Qu"
+    },
+    {
+      "id": "Animal Guide"
+    },
+    {
+      "id": "models (LLMs)"
+    },
+    {
+      "id": "Fr\u00e9chet distance"
+    },
+    {
+      "id": "Sibling"
+    },
+    {
+      "id": "PMLR"
+    },
+    {
+      "id": "W. S. McCulloch"
+    },
+    {
+      "id": "W. Pitts"
+    },
+    {
+      "id": "A. Lerer"
+    },
+    {
+      "id": "N. Tandon"
+    },
+    {
+      "id": "Template"
+    },
+    {
+      "id": "domain-invariant association"
+    },
+    {
+      "id": "J. Bradbury"
+    },
+    {
+      "id": "L. Antiga"
+    },
+    {
+      "id": "S. Saxena"
+    },
+    {
+      "id": "G. Corrado"
+    },
+    {
+      "id": "J. MacGlashan"
+    },
+    {
+      "id": "ExtensityAI"
+    },
+    {
+      "id": "K. Singhal"
+    },
+    {
+      "id": "10.1145/1455567.1455605"
+    },
+    {
+      "id": "Image classification"
+    },
+    {
+      "id": "C. Fernando"
+    },
+    {
+      "id": "nodes"
+    },
+    {
+      "id": "hierarchical computational graphs"
+    },
+    {
+      "id": "kernel mean embeddings"
+    },
+    {
+      "id": "reinforcement learning methodologies"
+    },
+    {
+      "id": "scheduler Q"
+    },
+    {
+      "id": "N. Rochester"
+    },
+    {
+      "id": "D. Kumaran"
+    },
+    {
+      "id": "node summary"
+    },
+    {
+      "id": "self-instruction"
+    },
+    {
+      "id": "Self-generated CoT"
+    },
+    {
+      "id": "N. Topin"
+    },
+    {
+      "id": "C. Zhang"
+    },
+    {
+      "id": "sentence subtraction"
+    },
+    {
+      "id": "N. Kanwisher"
+    },
+    {
+      "id": "S. Whitfield-Gabrieli"
+    },
+    {
+      "id": "Kevin Ellis"
+    },
+    {
+      "id": "Z3 theorem prover"
+    },
+    {
+      "id": "H. Poon"
+    },
+    {
+      "id": "M. Pavlov"
+    },
+    {
+      "id": "P. M. Blies"
+    },
+    {
+      "id": "Efficient estimation of word representations in vector space (2013a)"
+    },
+    {
+      "id": "H. Eghbal-Zadeh"
+    },
+    {
+      "id": "OpenAI Five"
+    },
+    {
+      "id": "The cat has whiskers."
+    },
+    {
+      "id": "associative prediction"
+    },
+    {
+      "id": "B. Houghton"
+    },
+    {
+      "id": "Search Engine"
+    },
+    {
+      "id": "T. Scialom"
+    },
+    {
+      "id": "A. Stein"
+    },
+    {
+      "id": "C. L. Wainwright"
+    },
+    {
+      "id": "T. Rocktaschel"
+    },
+    {
+      "id": "S. Hochreiter"
+    },
+    {
+      "id": "data stream"
+    },
+    {
+      "id": "Cite expression"
+    },
+    {
+      "id": "Y. Bengio"
+    },
+    {
+      "id": "covariance matrix C2"
+    },
+    {
+      "id": "coherent and stable 'thought' computational graphs"
+    },
+    {
+      "id": "F. Kelton"
+    },
+    {
+      "id": "template"
+    },
+    {
+      "id": "F. Rosenblatt"
+    },
+    {
+      "id": "Selective and invariant neural responses to spoken and written narratives (2013)"
+    },
+    {
+      "id": "T. Ward"
+    },
+    {
+      "id": "N. Park"
+    },
+    {
+      "id": "In-context learning methodologies (CoLLAs 2024)"
+    },
+    {
+      "id": "U. Hasson"
+    },
+    {
+      "id": "T. Schick"
+    },
+    {
+      "id": "J. Sun"
+    },
+    {
+      "id": "S. Milani"
+    },
+    {
+      "id": "E. Mitchell"
+    },
+    {
+      "id": "Execute"
+    },
+    {
+      "id": "logical OR"
+    },
+    {
+      "id": "Meta-Learner"
+    },
+    {
+      "id": "Software 3.0"
+    },
+    {
+      "id": "Expression subtype"
+    },
+    {
+      "id": "Hyena hierarchy: Towards larger convolutional language models (2023)"
+    },
+    {
+      "id": "Neuro-Symbolic Interface"
+    },
+    {
+      "id": "J. Wu"
+    },
+    {
+      "id": "Jeffrey Dean"
+    },
+    {
+      "id": "contextualized NeSy AI systems"
+    },
+    {
+      "id": "D. Carignan"
+    },
+    {
+      "id": "Y. Li"
+    },
+    {
+      "id": "A. Radford"
+    },
+    {
+      "id": "M. Barekatain"
+    },
+    {
+      "id": "multi-modal data training"
+    },
+    {
+      "id": "probability distribution Q"
+    },
+    {
+      "id": "solve puzzle function"
+    },
+    {
+      "id": "mean vector \u00b51"
+    },
+    {
+      "id": "VERTEX score"
+    },
+    {
+      "id": "S. Ganguly"
+    },
+    {
+      "id": "GPT-4 Technical Report (2023)"
+    },
+    {
+      "id": "V. P. Patil"
+    },
+    {
+      "id": "3540787992"
+    },
+    {
+      "id": "A. Novikov"
+    },
+    {
+      "id": "Expression class"
+    },
+    {
+      "id": "Abstract section"
+    },
+    {
+      "id": "RICAM"
+    },
+    {
+      "id": "D. Rao"
+    }
+  ],
+  "links": [
+    {
+      "label": "isA",
+      "source": "Operation",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Empirical explorations of the logic theory machine: a case study in heuristic (1957)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "presentedAtConference",
+      "source": "Empirical explorations of the logic theory machine: a case study in heuristic (1957)",
+      "target": "IRE-AIEE-ACM \u201957 (Western): Papers presented at the February 26-28, 1957, western joint computer conference: Techniques for reliability"
+    },
+    {
+      "label": "isA",
+      "source": "K. Simonyan",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "NeSy engines",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "Retrieval-augmented generation for large language models: A survey (2023)",
+      "target": "Preprint"
+    },
+    {
+      "label": "references",
+      "source": "Retrieval-augmented generation for large language models: A survey (2023)",
+      "target": "arXiv preprint arXiv:2312.10997"
+    },
+    {
+      "label": "isA",
+      "source": "Can generalist foundation models outcompete special-purpose tuning? case study in medicine (2023)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "L. E. Miller",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "J. Wang",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Journal of Neuroscience",
+      "target": "Journal"
+    },
+    {
+      "label": "isA",
+      "source": "X. Yin",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "logical AND",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "J. Mao",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Wasserstein-2 distance",
+      "target": "BibliometricIndicator"
+    },
+    {
+      "label": "isA",
+      "source": "K. Segaert",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Learning representations by back-propagating errors (1986)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "publishedInJournal",
+      "source": "Learning representations by back-propagating errors (1986)",
+      "target": "Nature"
+    },
+    {
+      "label": "isA",
+      "source": "M. Hofmarcher",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "D. Chae",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "deep-tech industry",
+      "target": "Organization"
+    },
+    {
+      "label": "isA",
+      "source": "R. F. Gamble",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "10.1145/360018.360022",
+      "target": "ISBN"
+    },
+    {
+      "label": "isA",
+      "source": "J. Larson",
+      "target": "Author"
+    },
+    {
+      "label": "hasSupplementaryArtefact",
+      "source": "Tree of Thoughts",
+      "target": "search tree of reasoning paths"
+    },
+    {
+      "label": "isA",
+      "source": "Tree of Thoughts",
+      "target": "ResearchOutput"
+    },
+    {
+      "label": "isA",
+      "source": "search tree of reasoning paths",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "publishedInJournal",
+      "source": "Applying formal verification methods to rule-based programs (1994)",
+      "target": "Int. J. Expert Syst."
+    },
+    {
+      "label": "isA",
+      "source": "Applying formal verification methods to rule-based programs (1994)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "isA",
+      "source": "Int. J. Expert Syst.",
+      "target": "Journal"
+    },
+    {
+      "label": "isA",
+      "source": "Driven by compression progress: A simple principle explains essential aspects of subjective beauty, novelty, surprise, interestingness, attention, curiosity, creativity, art, science, music, jokes (2009)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "Mastering the game of go without human knowledge (Silver et al. 2017b)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "publishedInJournal",
+      "source": "Mastering the game of go without human knowledge (Silver et al. 2017b)",
+      "target": "Nature"
+    },
+    {
+      "label": "isA",
+      "source": "Primitives",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Engine",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "J. Shim",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "H. Wang",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "DeepProbLog: Neural Probabilistic Logic Programming (2018)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "partOfBookSeries",
+      "source": "DeepProbLog: Neural Probabilistic Logic Programming (2018)",
+      "target": "Advances in Neural Information Processing Systems"
+    },
+    {
+      "label": "isA",
+      "source": "A. Newell",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "forward method",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Factorization",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "advanced program synthesis",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "M. Pechenizkiy",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "The Next Decade in AI: Four Steps Towards Robust Artificial Intelligence (2020)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "I. Sutskever",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "C. Finn",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "B. Poole",
+      "target": "Author"
+    },
+    {
+      "label": "hasSupplementaryArtefact",
+      "source": "SymbolicAI (CoLLAs 2024)",
+      "target": "SymbolicAI framework codebase"
+    },
+    {
+      "label": "hasSupplementaryArtefact",
+      "source": "SymbolicAI (CoLLAs 2024)",
+      "target": "SymbolicAI evaluation benchmark"
+    },
+    {
+      "label": "presentedAtConference",
+      "source": "SymbolicAI (CoLLAs 2024)",
+      "target": "3rd Conference on Lifelong Learning Agents (CoLLAs)"
+    },
+    {
+      "label": "isA",
+      "source": "SymbolicAI (CoLLAs 2024)",
+      "target": "ResearchOutput"
+    },
+    {
+      "label": "isA",
+      "source": "SymbolicAI framework codebase",
+      "target": "CodeRepository"
+    },
+    {
+      "label": "isA",
+      "source": "Expression",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Amazon Devices",
+      "target": "Organization"
+    },
+    {
+      "label": "isA",
+      "source": "Maximum Mean Discrepancy (MMD)",
+      "target": "BibliometricIndicator"
+    },
+    {
+      "label": "isA",
+      "source": "L. Ouyang",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "custom Expression",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "node",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Paper2vec: Combining graph and text information for scientific paper representation (2017)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "partOfBookSeries",
+      "source": "Paper2vec: Combining graph and text information for scientific paper representation (2017)",
+      "target": "Advances in Information Retrieval, Lecture Notes in Computer Science"
+    },
+    {
+      "label": "isA",
+      "source": "dynamic insertion",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Faiss",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "T. Demeester",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "N. Gimelshein",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "A. H. Miller",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "socio-economic landscape",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "computational graph",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "F. Petroni",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "M. Leach",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "0674920996",
+      "target": "ISBN"
+    },
+    {
+      "label": "isA",
+      "source": "problem space",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "error handling",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Symbol base type",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Bing is your AI-powered copilot for the web (2023)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "A new fun and robust version of an fMRI localizer for the frontotemporal language system (Scott et al. 2016)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "publishedInJournal",
+      "source": "A new fun and robust version of an fMRI localizer for the frontotemporal language system (Scott et al. 2016)",
+      "target": "Cognitive Neuroscience"
+    },
+    {
+      "label": "isA",
+      "source": "E. Fedorenko",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Large language models encode clinical knowledge (Singhal et al. 2023)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "publishedInJournal",
+      "source": "Large language models encode clinical knowledge (Singhal et al. 2023)",
+      "target": "Nature"
+    },
+    {
+      "label": "isA",
+      "source": "LaTeX table template",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "A. v. d. Oord",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "models",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "broad AI systems",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "U. Singer",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "S. Deng",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "X. Tan",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Linker class",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "metaclass",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "initial instruction x0",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "J. McCarthy",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Kai Chen",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "symbolic mathematics",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "CustomLogicPrimitive",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "R. J. Lowe",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "ReplikaAI",
+      "target": "Organization"
+    },
+    {
+      "label": "isA",
+      "source": "Software 1.0",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "customExpression",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "overloaded operator",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Advances in Information Retrieval, Lecture Notes in Computer Science",
+      "target": "BookSeries"
+    },
+    {
+      "label": "isA",
+      "source": "Hopfield networks is all you need (2020)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "B. G. Buchanan",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Cognitive Neuroscience",
+      "target": "Journal"
+    },
+    {
+      "label": "isA",
+      "source": "class diagram (Symbol, Expression, Sequence)",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "J. Brandstetter",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "L. Zhang",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "S. Agarwal",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Boosted prompt ensembles for large language models (2023)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "G. Chanan",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "artificial general intelligent agents",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "X. Gao",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "program synthesis",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "arXiv preprint arXiv:2309.16797",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "debugging",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "E.-S. Kim",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "NeSy framework",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "A proposal for the dartmouth summer research project on artificial intelligence (1955)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "publishedInJournal",
+      "source": "A proposal for the dartmouth summer research project on artificial intelligence (1955)",
+      "target": "AI magazine"
+    },
+    {
+      "label": "isA",
+      "source": "R. Loftin",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "H. Simon",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "B. K. Ayan",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "O\u2019Reilly Media",
+      "target": "Publisher"
+    },
+    {
+      "label": "isA",
+      "source": "M. Pavlovi\u0107",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "M. R. Zhang",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "T. Lillicrap",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Z3: an efficient smt solver (2008)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "presentedAtConference",
+      "source": "Z3: an efficient smt solver (2008)",
+      "target": "Proceedings of the Theory and Practice of Software, 14th International Conference on Tools and Algorithms for the Construction and Analysis of Systems, TACAS\u201908/ETAPS\u201908"
+    },
+    {
+      "label": "isA",
+      "source": "N. Cancedda",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "J. Gallee",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "9780596554743",
+      "target": "ISBN"
+    },
+    {
+      "label": "isA",
+      "source": "JVM",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "logical capability test",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "D. Rumelhart",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "J. Lehner",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "reference",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Data Sources and Compute Engines",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "S. Massaroli",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "R. Williams",
+      "target": "Author"
+    },
+    {
+      "label": "publishedInJournal",
+      "source": "Neural systems underlying british sign language and audio-visual english processing in native users (2002)",
+      "target": "Brain"
+    },
+    {
+      "label": "isA",
+      "source": "Neural systems underlying british sign language and audio-visual english processing in native users (2002)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "isA",
+      "source": "Brain",
+      "target": "Journal"
+    },
+    {
+      "label": "isA",
+      "source": "L. Zettlemoyer",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Expression objects",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "self-referential sub-process evaluations",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "embedding models",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "Examples",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Carl Djerassi",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "P. Kohli",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "API",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "Harvard University Press",
+      "target": "Publisher"
+    },
+    {
+      "label": "isA",
+      "source": "R. O. Ness",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Word2Vec",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "SymPy",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "linker object",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "K. Slama",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Neuro-Symbolic computation",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Large language models are neurosymbolic reasoners (2024)",
+      "target": "Preprint"
+    },
+    {
+      "label": "references",
+      "source": "Large language models are neurosymbolic reasoners (2024)",
+      "target": "arXiv preprint arXiv:2401.09334"
+    },
+    {
+      "label": "isA",
+      "source": "R. Rafailov",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "History compression via language models in reinforcement learning (2022)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "presentedAtConference",
+      "source": "History compression via language models in reinforcement learning (2022)",
+      "target": "Proceedings of the 39th International Conference on Machine Learning"
+    },
+    {
+      "label": "isA",
+      "source": "S. M. McKinney",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "H. Michalewski",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Symbol objects",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "cat",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "SerpApi",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "Rendering Engine",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "A. Kimmig",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Nature",
+      "target": "Journal"
+    },
+    {
+      "label": "partOfBookSeries",
+      "source": "Retrospective analysis of the 2019 minerl competition on sample efficient reinforcement learning (2020)",
+      "target": "Proceedings of the NeurIPS 2019 Competition and Demonstration Track"
+    },
+    {
+      "label": "isA",
+      "source": "Retrospective analysis of the 2019 minerl competition on sample efficient reinforcement learning (2020)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "isA",
+      "source": "Proceedings of the NeurIPS 2019 Competition and Demonstration Track",
+      "target": "BookSeries"
+    },
+    {
+      "label": "isA",
+      "source": "A. Graves",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "SymbolicAI evaluation benchmark",
+      "target": "CodeRepository"
+    },
+    {
+      "label": "isA",
+      "source": "L. Gao",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Speech Engine (Whisper)",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "Reflexion: an autonomous agent with dynamic memory and self-reflection (Shinn et al. 2023)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "C. White",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "The perceptron: A probabilistic model for information storage and organization in the brain (1958)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "publishedInJournal",
+      "source": "The perceptron: A probabilistic model for information storage and organization in the brain (1958)",
+      "target": "Psychological Review"
+    },
+    {
+      "label": "isA",
+      "source": "Game playing",
+      "target": "Field"
+    },
+    {
+      "label": "isA",
+      "source": "RKHS",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "word vector",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "A. Guez",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "SymbolicAI",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "model consensus accuracy",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "system-on-a-chip (SoC)",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "P. Mishkin",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "decorator",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Stream",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "G. K. Sandve",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Z. DeVito",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "E. Denton",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "multi-modal binding",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "J. Ba",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "U. Alon",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "W.-J. Zhu",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Efficient estimation of word representations in vector space (2013b)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "workflow-related scoring functionalities",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Proceedings of the 39th International Conference on Machine Learning",
+      "target": "Conference"
+    },
+    {
+      "label": "isA",
+      "source": "Symbol class",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "D. C. Dowson",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Y. Zhang",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "A. Ravenscroft",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "autonomously self-evolving cognitive architectures",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "M. Simens",
+      "target": "Author"
+    },
+    {
+      "label": "references",
+      "source": "Human-like few-shot learning via bayesian reasoning over natural language (2023)",
+      "target": "arXiv preprint arXiv:2306.02797"
+    },
+    {
+      "label": "isA",
+      "source": "Human-like few-shot learning via bayesian reasoning over natural language (2023)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "arXiv preprint arXiv:2306.02797",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "A. Ramesh",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "C++",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "B. V. Landau",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Markus Holzleitner",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Self-refine: Iterative refinement with self-feedback (2023)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "C#",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "G. Wang",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "N. Dziri",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "K. Chen",
+      "target": "Author"
+    },
+    {
+      "label": "presentedAtConference",
+      "source": "A dataset perspective on offline reinforcement learning (Schweighofer et al. 2022)",
+      "target": "Conference on Lifelong Learning Agents"
+    },
+    {
+      "label": "isA",
+      "source": "A dataset perspective on offline reinforcement learning (Schweighofer et al. 2022)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "isA",
+      "source": "Conference on Lifelong Learning Agents",
+      "target": "Conference"
+    },
+    {
+      "label": "isA",
+      "source": "Mpnet: Masked and permuted pre-training for language understanding (Song et al. 2020)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "isA",
+      "source": "IRE Transactions on information theory",
+      "target": "Journal"
+    },
+    {
+      "label": "isA",
+      "source": "multi-modal Expression",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "M. Apidianaki",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "I. A. Blank",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Werner Zellinger",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Proceedings of the 33rd International Conference on Neural Information Processing Systems",
+      "target": "Conference"
+    },
+    {
+      "label": "isA",
+      "source": "S. Riedel",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Neuro-Symbolic Programming",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "N. Kalchbrenner",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "stream processing expression",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "benchmark",
+      "target": "CodeRepository"
+    },
+    {
+      "label": "isA",
+      "source": "J. Lu",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Journal of neurophysiology",
+      "target": "Journal"
+    },
+    {
+      "label": "isA",
+      "source": "S. P. Mohanty",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "A. Khan",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "M. Lanctot",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Tool Interface",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "P.-J. Hsieh",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Toolformer: Language models can teach themselves to use tools (2023)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "IsBrotherOf",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Einstein\u2019s puzzle 'Who owns the fish?'",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "solver",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "H. Ramsauer",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Algorithm 1",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "T. Scott",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "S. Chilamkurthy",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "J. Schmidhuber",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "R. Luo",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Claude 2",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "democratic and open-source initiative",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "arXiv preprint arXiv:2312.10997",
+      "target": "Preprint"
+    },
+    {
+      "label": "presentedAtConference",
+      "source": "The neuro-symbolic concept learner: Interpreting scenes, words, and sentences from natural supervision (2019)",
+      "target": "7th International Conference on Learning Representations, ICLR 2019"
+    },
+    {
+      "label": "isA",
+      "source": "The neuro-symbolic concept learner: Interpreting scenes, words, and sentences from natural supervision (2019)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "7th International Conference on Learning Representations, ICLR 2019",
+      "target": "Conference"
+    },
+    {
+      "label": "isA",
+      "source": "International Conference on Machine Learning",
+      "target": "Conference"
+    },
+    {
+      "label": "isA",
+      "source": "Symbol",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Y. Yang",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "DSL snippet of the 'Who is Jay\u2019s brother?' puzzle",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "J. Tang",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "J. Lederberg",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "3rd Conference on Lifelong Learning Agents (CoLLAs)",
+      "target": "Conference"
+    },
+    {
+      "label": "isA",
+      "source": "hierarchical clustering structure",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "chunk",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "error",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "B. Mildenhall",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Y. Wu",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "template prompt",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "A. Paszke",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "online learning models",
+      "target": "Software"
+    },
+    {
+      "label": "hasPersistentIdentifier",
+      "source": "Learning Python: Powerful Object-Oriented Programming (2013)",
+      "target": "9781449355715"
+    },
+    {
+      "label": "isA",
+      "source": "Learning Python: Powerful Object-Oriented Programming (2013)",
+      "target": "Book"
+    },
+    {
+      "label": "partOfBookSeries",
+      "source": "Learning Python: Powerful Object-Oriented Programming (2013)",
+      "target": "Animal Guide"
+    },
+    {
+      "label": "isA",
+      "source": "9781449355715",
+      "target": "ISBN"
+    },
+    {
+      "label": "isA",
+      "source": "A. K \u00a8opf",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Symbolic Engine",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "@core.combine",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "M. Regev",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Tomas Mikolov",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "N. Usuyama",
+      "target": "Author"
+    },
+    {
+      "label": "hasSupplementaryArtefact",
+      "source": "Ensemble techniques for LLMs",
+      "target": "model consensus accuracy"
+    },
+    {
+      "label": "isA",
+      "source": "Ensemble techniques for LLMs",
+      "target": "ResearchOutput"
+    },
+    {
+      "label": "isA",
+      "source": "Lisp: A programming system for symbolic manipulations (1959)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "hasPersistentIdentifier",
+      "source": "Lisp: A programming system for symbolic manipulations (1959)",
+      "target": "9781450373647"
+    },
+    {
+      "label": "presentedAtConference",
+      "source": "Lisp: A programming system for symbolic manipulations (1959)",
+      "target": "14th National Meeting of the Association for Computing Machinery, ACM '59"
+    },
+    {
+      "label": "isA",
+      "source": "root of computational graph",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "V. Pudi",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "prompt",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "A. Sharma",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Psychological Review",
+      "target": "Journal"
+    },
+    {
+      "label": "isA",
+      "source": "plan xP",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "context size limitation",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "OR",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "S. Biderman",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "J. C. Shaw",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Method expression",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "context",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "D. Y. Fu",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "S. Baccus",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "A. Martelli",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "N. Fusi",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "L. Ruis",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "D. Banarse",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Generative Flow Networks",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "LLM",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "T. Qin",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "H. C. Cunningham",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Human problem solving (1972)",
+      "target": "Book"
+    },
+    {
+      "label": "isA",
+      "source": "A. Desmaison",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Title expression",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "covariance matrix C1",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Zero-shot text-to-image generation (2021)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "presentedAtConference",
+      "source": "Zero-shot text-to-image generation (2021)",
+      "target": "International Conference on Machine Learning"
+    },
+    {
+      "label": "isA",
+      "source": "jay",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "linear probing layers",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "sentiment analysis",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "formal language structures",
+      "target": "ResearchOutput"
+    },
+    {
+      "label": "isA",
+      "source": "Z. Lin",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "B. Peng",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "operator learning oriented functionalities",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "hasPersistentIdentifier",
+      "source": "Python Cookbook (2005)",
+      "target": "9780596554743"
+    },
+    {
+      "label": "isA",
+      "source": "Python Cookbook (2005)",
+      "target": "Book"
+    },
+    {
+      "label": "isA",
+      "source": "Hierarchical Computational Graph",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "K. Schweighofer",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "G. Hinton",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Mathematical discoveries from program search with large language models (2023)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "publishedInJournal",
+      "source": "Mathematical discoveries from program search with large language models (2023)",
+      "target": "Nature"
+    },
+    {
+      "label": "isA",
+      "source": "Sequence",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "H. Nori",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "N. King",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "T. Adler",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "P. F. Christiano",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "multi-step workflow evaluation",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Bulletin of Mathematical Biophysics",
+      "target": "Journal"
+    },
+    {
+      "label": "isA",
+      "source": "capabilities C",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "J. Nham",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Direct preference optimization: Your language model is secretly a reward model (2023)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "closed-source practices",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "dynamic type creation",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "arXiv",
+      "target": "BookSeries"
+    },
+    {
+      "label": "isA",
+      "source": "chain-of-thought prompting",
+      "target": "ResearchOutput"
+    },
+    {
+      "label": "hasSupplementaryArtefact",
+      "source": "chain-of-thought prompting",
+      "target": "step-by-step reasoning"
+    },
+    {
+      "label": "isA",
+      "source": "R. Dess\u00ec",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "mathematical expression",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "D. Hassabis",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "M. Widrich",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "@core.logic",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Introducing ChatGPT (2022)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "vector-valued property",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Output",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "R. Raileanu",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Cognitive Technologies",
+      "target": "BookSeries"
+    },
+    {
+      "label": "isA",
+      "source": "Database Engine",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "D. Raposo",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "A. Radler",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "T. Mikolov",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "D. Grewe",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "L. Chen",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Try",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "probabilistic methods",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Prompt Design",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Local Neuro-Symbolic Engine",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "M. Raison",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Virtualization Apps Frameworks",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "R. Manhaeve",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "M. Summerfield",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "generative design",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "J. Whang",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Python",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "B. Steiner",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Language Models as Knowledge Bases? (2019)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "presentedAtConference",
+      "source": "Language Models as Knowledge Bases? (2019)",
+      "target": "Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing, EMNLP-IJCNLP 2019"
+    },
+    {
+      "label": "isA",
+      "source": "Static Context",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "operational prompt",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "M.-C. Dinu",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "T. Dao",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Prompt",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "M. Lai",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "'Who is Jay\u2019s brother?' puzzle",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "puzzle statement",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "WolframAlpha",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "Python function with Z3 syntax",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "K. Papineni",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "C. Gan",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Human Interface",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Proceedings of the 34th International Conference on Machine Learning",
+      "target": "Conference"
+    },
+    {
+      "label": "isA",
+      "source": "A. Tejani",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "W. H. Guss",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "code execution",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "S. Roukos",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "APILayer",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "context-based prompt",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "C. E. Shannon",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "L. Gruber",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "edges",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "M. Dorfer",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "assembled Z3 logical clauses",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "presentedAtConference",
+      "source": "Interactive Learning from Policy-Dependent Human Feedback (2017)",
+      "target": "Proceedings of the 34th International Conference on Machine Learning"
+    },
+    {
+      "label": "isA",
+      "source": "Interactive Learning from Policy-Dependent Human Feedback (2017)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "isA",
+      "source": "S. Pitis",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "J. Pan",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Large language models are not zero-shot communicators (2022)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "P. Seidl",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "memory buffer M",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "B. Romera-Paredes",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "S. K. S. Ghasemipour",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "A. Bakhtin",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "S. Osindero",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "W. Chan",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing, EMNLP-IJCNLP 2019",
+      "target": "Conference"
+    },
+    {
+      "label": "isA",
+      "source": "Mastering the game of Go with deep neural networks and tree search (Silver et al. 2016)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "publishedInJournal",
+      "source": "Mastering the game of Go with deep neural networks and tree search (Silver et al. 2016)",
+      "target": "Nature"
+    },
+    {
+      "label": "isA",
+      "source": "Dissociating language and thought in large language models: a cognitive perspective (2023)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "C. J. Maddison",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "E. Wong",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "S. Hooker",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "S. Gray",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "M. Holzleitner",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Transformer",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "Symbol Evaluation Pipeline",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Greg Corrado",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "fallback statement",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "M. L. Littman",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "J. A. Arjona-Medina",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "K. Kavukcuoglu",
+      "target": "Author"
+    },
+    {
+      "label": "hasPersistentIdentifier",
+      "source": "Unified Theories of Cognition (1990)",
+      "target": "0674920996"
+    },
+    {
+      "label": "isA",
+      "source": "Unified Theories of Cognition (1990)",
+      "target": "Book"
+    },
+    {
+      "label": "isA",
+      "source": "explainable NeSy AI systems",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "T. Graepel",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Gaussian kernel",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "QueryExpression",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "F. Paischer",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "L. Li",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "A. Polyak",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "A. Ray",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Custom Method",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "FatherOf",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "reference to Einstein\u2019s puzzle solution",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "bob",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Translate",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "polymorphic context",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "A. Gopinath",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Pytorch: An imperative style, high-performance deep learning library (2019)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "S. Lehner",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Bleu: a method for automatic evaluation of machine translation (2002)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "presentedAtConference",
+      "source": "Bleu: a method for automatic evaluation of machine translation (2002)",
+      "target": "Proceedings of the 40th annual meeting of the Association for Computational Linguistics"
+    },
+    {
+      "label": "isA",
+      "source": "A. Huang",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "mean vector \u00b52",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "I. Antonoglou",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "User Input",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "text classification",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "B. Labash",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "ResNet",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "L. Menenti",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "J. Schulman",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "AND",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Compose",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Neuro-Symbolic System",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "advanced learning agent",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "S. Chintala",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Bridging the domain gap by clustering-based image-text graph matching (2023)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "code generation",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "quality measure",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Y. Gao",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "S. Havaldar",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "H. Zen",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "M. Macsweeney",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "E. Grefenstette",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "sym return type property",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "operator overloading in SymbolicAI",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "A. Nieto-Castanon",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Commun. ACM",
+      "target": "Journal"
+    },
+    {
+      "label": "isA",
+      "source": "Journal of Multivariate Analysis",
+      "target": "Journal"
+    },
+    {
+      "label": "isA",
+      "source": "A. Yazdanbakhsh",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "concept space",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Structure prediction",
+      "target": "Field"
+    },
+    {
+      "label": "isA",
+      "source": "Speech Engine",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "F. Massa",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "multivariate Gaussian distribution X2",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "A. Santoro",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Photorealistic text-to-image diffusion models with deep language understanding (2022)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "D. L. Roberts",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Annoy",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "Springer-Verlag",
+      "target": "Publisher"
+    },
+    {
+      "label": "isA",
+      "source": "A. Senior",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "P. S. H. Lewis",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "J. Bai",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "14th National Meeting of the Association for Computing Machinery, ACM '59",
+      "target": "Conference"
+    },
+    {
+      "label": "isA",
+      "source": "A. A. Ivanova",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "J. Dean",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "C. D. Manning",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "K. Nakata",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "generative node",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "P. Clark",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Advances in Neural Information Processing Systems",
+      "target": "BookSeries"
+    },
+    {
+      "label": "isA",
+      "source": "G. Marcus",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "N. S. Kuno",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "OpenAI",
+      "target": "Organization"
+    },
+    {
+      "label": "isA",
+      "source": "Semantic helm: An interpretable memory for reinforcement learning (2023)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "Source expression",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "AI-related concentration of data and resources",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "S. Zhang",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "M. L. Minsky",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "G.-C. Roman",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "pre-trained models",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "Q. Lyu",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Microsoft",
+      "target": "Organization"
+    },
+    {
+      "label": "isA",
+      "source": "Shared language: Overlap and segregation of the neuronal infrastructure for speaking and listening revealed by functional mri (2011)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "publishedInJournal",
+      "source": "Shared language: Overlap and segregation of the neuronal infrastructure for speaking and listening revealed by functional mri (2011)",
+      "target": "Psychological Science"
+    },
+    {
+      "label": "isA",
+      "source": "Clean",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "probability distribution P",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Claudiu Leoveanu\u2013Condrei",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "call method",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "kernel evaluation K(X1, X2)",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "J. Wei",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Wavenet: A generative model for raw audio (2016)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "B. P. Majumder",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Y. T. Lee",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "L. De Raedt",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "W. Liu",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Language processing",
+      "target": "Field"
+    },
+    {
+      "label": "publishedInJournal",
+      "source": "New method for fMRI investigations of language: Defining rois functionally in individual subjects (2010)",
+      "target": "Journal of neurophysiology"
+    },
+    {
+      "label": "isA",
+      "source": "New method for fMRI investigations of language: Defining rois functionally in individual subjects (2010)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "isA",
+      "source": "arXiv preprint arXiv:2401.09334",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "Make-a-video: Text-to-video generation without text-video data (Singer et al. 2022)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "E. Horvitz",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "search problem",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "LLM sub-symbolic model",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "AlphaFold",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "PostProcessor",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Abstract expression",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "DSL syntax and semantic structure",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Computer science as empirical inquiry: symbols and search (1976)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "publishedInJournal",
+      "source": "Computer science as empirical inquiry: symbols and search (1976)",
+      "target": "Commun. ACM"
+    },
+    {
+      "label": "isA",
+      "source": "test constructs template Z3",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Programming in Python 3: A Complete Introduction to the Python Language (Summerfield 2010)",
+      "target": "Book"
+    },
+    {
+      "label": "isA",
+      "source": "S. Welleck",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Milvus",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "S. Dumancic",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "A Logical Calculus of Ideas Immanent in Nervous Activity (1943)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "publishedInJournal",
+      "source": "A Logical Calculus of Ideas Immanent in Nervous Activity (1943)",
+      "target": "Bulletin of Mathematical Biophysics"
+    },
+    {
+      "label": "isA",
+      "source": "M. Poli",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "User instance",
+      "target": "User"
+    },
+    {
+      "label": "isA",
+      "source": "S. Gross",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "T. P. Lillicrap",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "IRE-AIEE-ACM \u201957 (Western): Papers presented at the February 26-28, 1957, western joint computer conference: Techniques for reliability",
+      "target": "Conference"
+    },
+    {
+      "label": "isA",
+      "source": "Faithful chain-of-thought reasoning (2023)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "Y. Bi",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Training language models to follow instructions with human feedback (2022)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "N. Shinn",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "M. Lomeli",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "M. Chen",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "O. Vinyals",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "D. Almeida",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "B. Sch\u00e4fl",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "M. K. Ho",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "R. Edgar",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Dynamic Context",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "task instructions",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "autonomous agents",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "T. Killeen",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "S. Gupta",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "J. T. Barron",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Knowledge Base",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "E. Z. Yang",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "K. Jia",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Pushing the Boundaries of AI to Talk to the Dead (2016)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "expected plan yP",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "M. Fang",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "R. G. Lopes",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "S. Dieleman",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "S. Azizi",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Y. Dai",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Z. Shi",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "9781450373647",
+      "target": "ISBN"
+    },
+    {
+      "label": "isA",
+      "source": "Search Engine (Google)",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "john",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Constraints",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "array of solvers",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "The fr\u0000e9chet distance between multivariate normal distributions (1982)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "publishedInJournal",
+      "source": "The fr\u0000e9chet distance between multivariate normal distributions (1982)",
+      "target": "Journal of Multivariate Analysis"
+    },
+    {
+      "label": "isA",
+      "source": "Align-RUDDER: Learning from few demonstrations by reward redistribution (2020)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "S. Kim",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Method section",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "C. J. Honey",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "J. Hilton",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Z3 solver",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "N. Bj\u00f8rner",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "out-of-sequence task execution",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Marius\u2013Constantin Dinu",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "E. Nguyen",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "G\u00f6del machines: Fully self-referential optimal universal self-improvers (2007)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "partOfBookSeries",
+      "source": "G\u00f6del machines: Fully self-referential optimal universal self-improvers (2007)",
+      "target": "Cognitive Technologies"
+    },
+    {
+      "label": "isA",
+      "source": "X. Jiang",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "feature mapping \u03d5(\u00b7)",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "S. Hallinan",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "S. M. E. Gierhan",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "non-sequential task execution model",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Conditions & Constraints",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "J. Kim",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "compositionality",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "J. Leike",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Differentiable Programming",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Dreamfusion: Text-to-3d using 2d diffusion (2022)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "Payload",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "self-referential systems",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "explainability",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "S. S. Mahdavi",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Johannes Kepler University",
+      "target": "Organization"
+    },
+    {
+      "label": "isA",
+      "source": "Mastering chess and shogi by self-play with a general reinforcement learning algorithm (Silver et al. 2017a)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "evaluation measure in existing benchmarks",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "references",
+      "source": "Promptbreeder: Self-referential self-improvement via prompt evolution (2023)",
+      "target": "arXiv preprint arXiv:2309.16797"
+    },
+    {
+      "label": "isA",
+      "source": "Promptbreeder: Self-referential self-improvement via prompt evolution (2023)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "Software 2.0",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "Association for Computing Machinery",
+      "target": "Publisher"
+    },
+    {
+      "label": "isA",
+      "source": "E. Feigenbaum",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Psychological Science",
+      "target": "Journal"
+    },
+    {
+      "label": "isA",
+      "source": "A. Bitto-Nemling",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "K. Mahowald",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "logical XOR",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "A. Madaan",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Paper expression",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "A. Jain",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Proceedings of the Theory and Practice of Software, 14th International Conference on Tools and Algorithms for the Construction and Analysis of Systems, TACAS\u201908/ETAPS\u201908",
+      "target": "Conference"
+    },
+    {
+      "label": "isA",
+      "source": "P. Gupta",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "vector-based similarity search",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Outline",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "J. Schrittwieser",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "base set of capabilities",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "reward signals",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Curran Associates, Inc.",
+      "target": "Publisher"
+    },
+    {
+      "label": "isA",
+      "source": "vector-valued mappings",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "H. Eghbal-zadeh",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "J. B. Tenenbaum",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "credit assignment",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Symbolic Engine (WolframAlpha)",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "logic-based methodologies",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "weight exchange of task-specific projections and executions",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "SymbolicAI framework",
+      "target": "Software"
+    },
+    {
+      "label": "publishedInJournal",
+      "source": "The logic theory machine\u2013a complex information processing system (1956)",
+      "target": "IRE Transactions on information theory"
+    },
+    {
+      "label": "isA",
+      "source": "The logic theory machine\u2013a complex information processing system (1956)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "isA",
+      "source": "ParentOf",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "final aggregated score s",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "S. Wiegreffe",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "generative models",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "dynamically generated code",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "P. Welinder",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "L. Fang",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "C. R\u00e9",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "probabilistic programming languages",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "C. Callison-Burch",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "G. van den Driessche",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "function composition in SymbolicAI",
+      "target": "ResearchOutput"
+    },
+    {
+      "label": "isA",
+      "source": "auxiliary fields",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "The cat has tail.",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Prentice-Hall",
+      "target": "Publisher"
+    },
+    {
+      "label": "isA",
+      "source": "V. Patil",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "BrotherOf",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "RelatedWork section",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "A. Askell",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "T. Hayes",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "AI magazine",
+      "target": "Journal"
+    },
+    {
+      "label": "isA",
+      "source": "Selenium",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "K. Song",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Offline reinforcement learning",
+      "target": "Field"
+    },
+    {
+      "label": "isA",
+      "source": "higher-order logic expressions",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Java",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "multivariate Gaussian distribution X1",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "clustering",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "D. Silver",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "L. De Moura",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "aspect-oriented programming",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "HAS",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "static context properties",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "M. E. Taylor",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Symbolic behaviour in artificial intelligence (2022)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "A. Lampinen",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "test environment",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Proceedings of the 40th annual meeting of the Association for Computational Linguistics",
+      "target": "Conference"
+    },
+    {
+      "label": "isA",
+      "source": "C. Saharia",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "S. Prabhumoye",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "K. Mathewson",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "fuzzy comparison",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "step-by-step reasoning",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "E. Simony",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Input",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "model-generated reasoning chains",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "L. Sifre",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "NeSy engine",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Reproducing Kernel Hilbert Space (RKHS)",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "T. Tu",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "VERTEX Protocol",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "M. Lutz",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "J. Dwivedi-Yu",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "summary node",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Dendral (1965)",
+      "target": "ResearchOutput"
+    },
+    {
+      "label": "isA",
+      "source": "Neuro-Symbolic Computation Engine",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "IS",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "T. Hubert",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "G. Goh",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "P. Hagoort",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "CLR",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "PreProcessor",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Cluster",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "W. E. Ball",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "RelatedWork expression",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Y. Xiong",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "D. Ascher",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "A. Wang",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Sepp Hochreiter",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "V. Panneershelvam",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Reinforcement learning",
+      "target": "Field"
+    },
+    {
+      "label": "isA",
+      "source": "dynamic casting",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Probabilistic logic neural networks for reasoning (2019)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "presentedAtConference",
+      "source": "Probabilistic logic neural networks for reasoning (2019)",
+      "target": "Proceedings of the 33rd International Conference on Neural Information Processing Systems"
+    },
+    {
+      "label": "isA",
+      "source": "Instructions",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "C. Voss",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "M. Qu",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Animal Guide",
+      "target": "BookSeries"
+    },
+    {
+      "label": "isA",
+      "source": "models (LLMs)",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "Fr\u00e9chet distance",
+      "target": "BibliometricIndicator"
+    },
+    {
+      "label": "isA",
+      "source": "Sibling",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "PMLR",
+      "target": "Publisher"
+    },
+    {
+      "label": "isA",
+      "source": "W. S. McCulloch",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "W. Pitts",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "A. Lerer",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "N. Tandon",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Template",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "domain-invariant association",
+      "target": "ResearchOutput"
+    },
+    {
+      "label": "isA",
+      "source": "J. Bradbury",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "L. Antiga",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "S. Saxena",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "G. Corrado",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "J. MacGlashan",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "ExtensityAI",
+      "target": "Organization"
+    },
+    {
+      "label": "isA",
+      "source": "K. Singhal",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "10.1145/1455567.1455605",
+      "target": "ISBN"
+    },
+    {
+      "label": "isA",
+      "source": "Image classification",
+      "target": "Field"
+    },
+    {
+      "label": "isA",
+      "source": "C. Fernando",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "nodes",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "hierarchical computational graphs",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "kernel mean embeddings",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "reinforcement learning methodologies",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "scheduler Q",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "N. Rochester",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "D. Kumaran",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "node summary",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "self-instruction",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "hasSupplementaryArtefact",
+      "source": "Self-generated CoT",
+      "target": "model-generated reasoning chains"
+    },
+    {
+      "label": "isA",
+      "source": "Self-generated CoT",
+      "target": "ResearchOutput"
+    },
+    {
+      "label": "isA",
+      "source": "N. Topin",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "C. Zhang",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "sentence subtraction",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "N. Kanwisher",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "S. Whitfield-Gabrieli",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Kevin Ellis",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Z3 theorem prover",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "H. Poon",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "M. Pavlov",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "P. M. Blies",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Efficient estimation of word representations in vector space (2013a)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "H. Eghbal-Zadeh",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "OpenAI Five",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "The cat has whiskers.",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "associative prediction",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "B. Houghton",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Search Engine",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "T. Scialom",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "A. Stein",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "C. L. Wainwright",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "T. Rocktaschel",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "S. Hochreiter",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "data stream",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Cite expression",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Y. Bengio",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "covariance matrix C2",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "coherent and stable 'thought' computational graphs",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "F. Kelton",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "template",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "F. Rosenblatt",
+      "target": "Author"
+    },
+    {
+      "label": "publishedInJournal",
+      "source": "Selective and invariant neural responses to spoken and written narratives (2013)",
+      "target": "Journal of Neuroscience"
+    },
+    {
+      "label": "isA",
+      "source": "Selective and invariant neural responses to spoken and written narratives (2013)",
+      "target": "JournalArticle"
+    },
+    {
+      "label": "isA",
+      "source": "T. Ward",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "N. Park",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "In-context learning methodologies (CoLLAs 2024)",
+      "target": "ResearchOutput"
+    },
+    {
+      "label": "isA",
+      "source": "U. Hasson",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "T. Schick",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "J. Sun",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "S. Milani",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "E. Mitchell",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Execute",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "logical OR",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Meta-Learner",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "Software 3.0",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "Expression subtype",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Hyena hierarchy: Towards larger convolutional language models (2023)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "Neuro-Symbolic Interface",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "J. Wu",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Jeffrey Dean",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "contextualized NeSy AI systems",
+      "target": "Software"
+    },
+    {
+      "label": "isA",
+      "source": "D. Carignan",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Y. Li",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "A. Radford",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "M. Barekatain",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "multi-modal data training",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "probability distribution Q",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "solve puzzle function",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "mean vector \u00b51",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "VERTEX score",
+      "target": "BibliometricIndicator"
+    },
+    {
+      "label": "isA",
+      "source": "S. Ganguly",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "GPT-4 Technical Report (2023)",
+      "target": "Preprint"
+    },
+    {
+      "label": "isA",
+      "source": "V. P. Patil",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "3540787992",
+      "target": "ISBN"
+    },
+    {
+      "label": "isA",
+      "source": "A. Novikov",
+      "target": "Author"
+    },
+    {
+      "label": "isA",
+      "source": "Expression class",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "Abstract section",
+      "target": "SupplementaryArtefact"
+    },
+    {
+      "label": "isA",
+      "source": "RICAM",
+      "target": "Organization"
+    },
+    {
+      "label": "isA",
+      "source": "D. Rao",
+      "target": "Author"
+    }
+  ]
+}

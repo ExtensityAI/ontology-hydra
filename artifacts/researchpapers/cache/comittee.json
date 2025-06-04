@@ -1,0 +1,410 @@
+{
+  "members": [
+    {
+      "persona": {
+        "name": "Dr. Priya Ranganathan",
+        "description": "A 42-year-old data scientist based in Bangalore, India, with a PhD in Computer Science specializing in information retrieval. Priya has 15 years of experience working with a leading academic search engine provider, designing algorithms for semantic search and entity extraction. She is deeply interested in AI-driven scholarly discovery, multilingual indexing, and open science initiatives. Technologically savvy and passionate about inclusive access to knowledge, Priya can provide insights on technical requirements, user needs for global researchers, and best practices in metadata modeling."
+      },
+      "group": {
+        "name": "Academic Search Engine Providers",
+        "description": "Companies or organizations offering services to search and analyze research papers and related data.",
+        "priority": {
+          "reason": "Rely on well-structured ontologies for effective search, ranking, and data visualization.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Dr. Lena Hoffman",
+        "description": "A 52-year-old senior program manager at the Deutscher Forschungsgemeinschaft (DFG) in Germany, Lena holds a PhD in Molecular Biology and an MBA in nonprofit management. She has over 20 years of experience managing competitive research grant programs and evaluating scientific outputs across STEM and humanities fields. Lena's work focuses on ensuring compliance with reporting standards, fostering interdisciplinary collaborations, and assessing the real-world impact of funded research. She is highly adept with digital grant management tools and prefers structured ontological frameworks to track grant lineage, researcher networks, and publication outcomes. Lena advocates for transparent, interconnected academic databases that streamline both internal reporting and external impact assessments."
+      },
+      "group": {
+        "name": "Funding Agencies and Grant Organizations",
+        "description": "Entities that fund academic research and track impact, compliance, and academic outputs.",
+        "priority": {
+          "reason": "Require sophisticated tracking of publications, authorships, and research outcomes.",
+          "value": "medium"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Jinwoo Park",
+        "description": "A 29-year-old backend developer from Seoul, South Korea, holding a master's degree in software engineering. Jinwoo works at a fast-growing startup developing AI-driven academic search engines for East Asian universities. His experience centers on full-stack development, RESTful APIs, and machine learning-based document indexing. Jinwoo is passionate about user-centric design and building robust APIs that power mobile and web academic tools. Technologically adept and curious, he offers a pragmatic viewpoint on developer usability, rapid prototyping, and the need for flexible ontology mappings in high-turnover development environments."
+      },
+      "group": {
+        "name": "Database Platform Developers",
+        "description": "Teams building and maintaining searchable academic databases and repositories.",
+        "priority": {
+          "reason": "Implementers of the ontology who need insights on technical integration, scalability, and interoperability.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Mr. Julian Becker",
+        "description": "A 33-year-old citation data scientist in Berlin, Germany, Julian has an MSc in Computer Science and 8 years’ experience at a large academic publishing house, specializing in the development of citation impact metrics and network visualizations. Technologically adept, he works with large-scale citation datasets, develops algorithms to detect citation patterns and anomalies, and is keenly interested in integrating altmetrics and contemporary digital scholarship footprints into ontologies. Julian brings a practical, tool-driven perspective oriented toward interoperability between citation systems, and a focus on real-time analysis of scholarly influence."
+      },
+      "group": {
+        "name": "Citation Analysis and Bibliometrics Experts",
+        "description": "Specialists who study academic impact, citation networks, and knowledge diffusion.",
+        "priority": {
+          "reason": "Have specific needs for modeling relationships between works, authors, and institutions.",
+          "value": "medium"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Dr. Anika Choudhury",
+        "description": "Aged 42, based in New Delhi, India, Dr. Choudhury holds a PhD in Library and Information Science and has 18 years’ experience in bibliometrics research across academia and government. She’s contributed to international projects mapping citation networks in non-English literature and is passionate about representing diverse academic communities. Dr. Choudhury is proficient with bibliometric analytics software and open metadata standards, and is deeply interested in ensuring ontologies address multi-lingual datasets and underrepresented research areas. Her unique perspective comes from her cross-cultural work and advocacy for equitable knowledge diffusion."
+      },
+      "group": {
+        "name": "Citation Analysis and Bibliometrics Experts",
+        "description": "Specialists who study academic impact, citation networks, and knowledge diffusion.",
+        "priority": {
+          "reason": "Have specific needs for modeling relationships between works, authors, and institutions.",
+          "value": "medium"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Dr. Ellen Fischer",
+        "description": "Aged 54, based in Berlin, Germany. Ellen holds a PhD in Library and Information Science, and has over 25 years of experience working at a leading international academic publisher. Her expertise includes developing metadata standards, orchestrating digital archiving initiatives, and managing peer review systems. She is passionate about interoperability between repositories, and is an advocate for open access. Tech-savvy, she champions semantic web integration in publishing workflows. Ellen brings a rigorous understanding of industry metadata schemas and the strategic challenges and opportunities facing digital academic publishing."
+      },
+      "group": {
+        "name": "Academic Publishers",
+        "description": "Organizations that process, publish, and archive research papers and related entities.",
+        "priority": {
+          "reason": "Define metadata requirements and standards and influence how academic material is indexed, described, and linked.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Carlos Mendoza",
+        "description": "Carlos, 42, is an Information Retrieval Analyst in Mexico City, supporting regional universities with research services. He holds a master’s degree in Information Science and frequently works with multilingual and multicultural collections. With extensive experience in user needs assessment, Carlos focuses on optimizing search and retrieval experiences for students and faculty, especially those navigating non-English resources. He brings a strong user-centered perspective and deep understanding of tagging, controlled vocabularies, and the importance of inclusivity in academic information access."
+      },
+      "group": {
+        "name": "Librarians and Information Specialists",
+        "description": "Professionals responsible for curating, cataloging, and enabling access to academic research materials in libraries and digital repositories.",
+        "priority": {
+          "reason": "Experts in metadata standards, classification, and search optimizations, critical for ontology design.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Priya Sharma",
+        "description": "Priya, a 22-year-old undergraduate student from Mumbai, India, is pursuing a degree in Biomedical Engineering. Having attended a public university, she's accustomed to using digital libraries and open-access journals but often finds herself struggling with jargon and navigating overlapping subject areas. Priya is curious and technology-savvy, enjoys collaborative study groups, and depends heavily on keyword searches to explore unfamiliar topics. Her unique perspective centers on the need for intuitive interfaces and clear pathways between related academic concepts, especially to bridge entry-level knowledge gaps."
+      },
+      "group": {
+        "name": "Students and Early-Career Scholars",
+        "description": "Learners and novice researchers who access research papers for education and exploration.",
+        "priority": {
+          "reason": "Represent a broad set of user needs and search behaviors, ensuring usability and accessibility.",
+          "value": "medium"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Sarah Burke",
+        "description": "A 35-year-old senior DevOps engineer located in Toronto, Canada, with a BSc in information systems and extensive experience supporting cloud-based academic data infrastructure for North American universities. Sarah specializes in scalability, CI/CD pipelines, and monitoring complex, multi-tenant database systems. She's well-versed in integrating ontologies within microservices architectures and ensuring uptime for scholarly communication platforms. Her interests include open-access initiatives and real-time analytics. Sarah brings an operations-focused perspective on ontology deployment, resilience under heavy query loads, and automated testing for ontology-driven features."
+      },
+      "group": {
+        "name": "Database Platform Developers",
+        "description": "Teams building and maintaining searchable academic databases and repositories.",
+        "priority": {
+          "reason": "Implementers of the ontology who need insights on technical integration, scalability, and interoperability.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Carlos Mendez",
+        "description": "A 36-year-old data analytics officer at a government-funded research council in Chile, Carlos has a background in Computer Science (BSc) and Statistics (MSc), specializing in research funding analysis. With ten years of experience supporting grant allocation and outcome tracking, Carlos bridges the gap between funding policies and data-driven evaluation. He is passionate about leveraging open data and AI for monitoring grant outputs, bibliometrics, and compliance with open access mandates. Carlos brings a keen interest in semantic web technologies, and he values intuitive, well-structured ontologies that accommodate multi-language metadata and facilitate cross-agency research impact comparisons."
+      },
+      "group": {
+        "name": "Funding Agencies and Grant Organizations",
+        "description": "Entities that fund academic research and track impact, compliance, and academic outputs.",
+        "priority": {
+          "reason": "Require sophisticated tracking of publications, authorships, and research outcomes.",
+          "value": "medium"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Marta Oliveira",
+        "description": "A 47-year-old lead platform architect based in Porto, Portugal, with a PhD in computer science specializing in distributed systems. Marta has over 20 years' experience building academic repositories for European research consortia. Her knowledge spans database schema design, large-scale search optimization, and compliance with data privacy directives. She has a strong interest in open-source solutions and international data sharing standards. With advanced proficiency in emerging technologies like graph databases and semantic search frameworks, Marta contributes a strategic perspective on long-term maintainability, multilingual support, and the challenges of integrating evolving ontologies into production-grade platforms."
+      },
+      "group": {
+        "name": "Database Platform Developers",
+        "description": "Teams building and maintaining searchable academic databases and repositories.",
+        "priority": {
+          "reason": "Implementers of the ontology who need insights on technical integration, scalability, and interoperability.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Ravi Menon",
+        "description": "A 38-year-old technical officer at the W3C based in Bangalore, India, with a master’s degree in Computer Science. Ravi brings over 12 years of hands-on involvement in the development and maintenance of web ontologies and linked data standards. He has contributed to the creation and revision of the Resource Description Framework (RDF) and Dublin Core standards. Ravi is enthusiastic about open-source solutions, regularly collaborates with academic institutions, and advocates for inclusive, multilingual metadata schemes. His technological expertise and focus on practical implementation ensure a perspective grounded in both theory and deployment realities."
+      },
+      "group": {
+        "name": "Standardization Bodies",
+        "description": "Organizations like ISO, NISO, or W3C that maintain standards for metadata and ontologies.",
+        "priority": {
+          "reason": "Ensure alignment with established standards, facilitating interoperability and adoption.",
+          "value": "medium"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Alejandro Torres",
+        "description": "A 35-year-old product manager from Madrid, Spain, holding a master's in Library and Information Science with a background in digital library curation. Alejandro has spent 10 years managing scholarly analytics platforms for a European search engine company. He brings a user-centered perspective, focusing on usability, researcher workflows, and interoperability between databases. With strong interests in visual analytics and citation networks, Alejandro is adept in bridging technical solutions and academic information needs."
+      },
+      "group": {
+        "name": "Academic Search Engine Providers",
+        "description": "Companies or organizations offering services to search and analyze research papers and related data.",
+        "priority": {
+          "reason": "Rely on well-structured ontologies for effective search, ranking, and data visualization.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Nathan Wolf",
+        "description": "Nathan Wolf is a 28-year-old knowledge graph engineer living in Berlin, Germany, holding an MSc in Semantic Web Technologies. He has 6 years of practical experience building semantic repositories for university libraries and startups. Nathan brings a strong background in ontology engineering, Linked Data publishing, and deploying graph databases such as Neo4j and GraphDB. Deeply interested in AI-driven applications for academic discovery, he is also well-versed in FAIR data principles. As a technophile, Nathan enjoys experimenting with new graph APIs and advocates for standardizing academic metadata, drawing on his experience bridging the needs of librarians, machine-learning teams, and software developers."
+      },
+      "group": {
+        "name": "Data Scientists and Knowledge Graph Engineers",
+        "description": "Professionals creating advanced analytics or semantic web applications with academic data.",
+        "priority": {
+          "reason": "Reliant on expressive, structured ontologies for tasks like automated reasoning, clustering, or recommendation.",
+          "value": "medium"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Dr. Emilia Wei",
+        "description": "Emilia is a 48-year-old Director of Research Administration at a major research university in Singapore. She has a PhD in Information Science and over 20 years of experience managing publication records, coordinating grant applications, and supporting institutional reporting. Emilia is highly detail-oriented, enjoys mentoring junior staff on metadata standards, and advocates for open science. She is tech-savvy, regularly using academic databases and reporting tools, and brings a global perspective from collaborating with institutions worldwide. Her main interest lies in ensuring the accuracy and comprehensiveness of institutional research outputs, making her insights crucial for representing administrative and reporting needs in the ontology."
+      },
+      "group": {
+        "name": "Research Institutions and Universities",
+        "description": "Organizations that oversee research activity, track publications, and assess institutional impact.",
+        "priority": {
+          "reason": "Have administrative and reporting needs that depend on accurate data on research outputs and affiliations.",
+          "value": "medium"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Dr. Priya Sethi",
+        "description": "A 42-year-old intellectual property lawyer based in London, UK, Dr. Sethi holds a PhD in Law with specialization in copyright and academic publishing rights. With over 15 years of experience advising universities and academic publishers, she has a nuanced understanding of international copyright law, open access models, and licensing frameworks like Creative Commons. Dr. Sethi is passionate about equitable knowledge sharing, regularly advises academic consortia, and stays current with digital scholarship trends. Technologically adept, she actively participates in digital rights management discussions and brings a strategic legal lens to ontology design, especially regarding rights metadata and representation of usage constraints in research paper metadata."
+      },
+      "group": {
+        "name": "Intellectual Property and Legal Experts",
+        "description": "Specialists in copyright, licensing, and academic publishing rights.",
+        "priority": {
+          "reason": "Advise on representation of legal concepts and usage rights in ontology design.",
+          "value": "low"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Miguel Hernández",
+        "description": "A 29-year-old early-career social sciences researcher from Mexico City, Miguel recently completed his Master's in Sociology at UNAM and is now pursuing a PhD focusing on digital inequality. With three years of field research experience and a growing publication record, Miguel is familiar with both Spanish and English academic systems. He uses institutional repositories and multilingual search platforms but often struggles with inconsistently categorized papers and language barriers in existing databases. Interested in data accessibility and inclusivity, Miguel’s technological proficiency is moderate—he is comfortable with common academic databases and reference tools, but less so with emerging semantic web technologies. He advocates for ontology structures that support multilingualism and equitable representation of research from the Global South."
+      },
+      "group": {
+        "name": "Academic Researchers",
+        "description": "Individuals conducting research who publish or consume research papers across academic disciplines.",
+        "priority": {
+          "reason": "Primary users who both generate the data and rely on accurate and comprehensive representation of academic entities and concepts.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "James Hernandez",
+        "description": "James, a 27-year-old first-year PhD candidate in Sociology at a university in the United States, previously worked as a community organizer after completing a master’s degree. While comfortable with scholarly databases, he seeks efficient ways to trace research lineages and interdisciplinary connections relevant to emerging social issues. James is passionate about social justice, interested in new digital tools, and values inclusivity in academic resources. His experience brings insight into the challenges faced by learners searching for comprehensive and accessible research, emphasizing the importance of clear metadata, advanced filtering, and support for non-traditional research approaches."
+      },
+      "group": {
+        "name": "Students and Early-Career Scholars",
+        "description": "Learners and novice researchers who access research papers for education and exploration.",
+        "priority": {
+          "reason": "Represent a broad set of user needs and search behaviors, ensuring usability and accessibility.",
+          "value": "medium"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Prof. Evelyn Murray",
+        "description": "A 61-year-old tenured professor of history at a small liberal arts college in the United States, Evelyn has over 35 years of teaching and research experience, with a focus on 19th-century European history. Her education includes a PhD from Oxford University. Evelyn has published extensively—including books, articles, and editorial work—and frequently collaborates with international scholars. She primarily uses library archives, traditional databases, and occasionally digital humanities platforms. While less technologically adept than younger colleagues, Evelyn is keen on thorough documentation and stresses the importance of representing various publication types (articles, books, conference proceedings) and citation nuances. Her perspective is valuable for ensuring the ontology recognizes the diversity of academic outputs and historical citation conventions."
+      },
+      "group": {
+        "name": "Academic Researchers",
+        "description": "Individuals conducting research who publish or consume research papers across academic disciplines.",
+        "priority": {
+          "reason": "Primary users who both generate the data and rely on accurate and comprehensive representation of academic entities and concepts.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Carlos Rodríguez",
+        "description": "Carlos, 33, is a Research Impact Analyst at a regional consortium of universities in Latin America, based in Bogotá, Colombia. Holding a master's in Data Analytics, he has a background in bibliometrics and institutional benchmarking. Carlos specializes in mapping cross-institution collaborations and tracking publication impact. He is passionate about leveraging technology for research evaluation and is skilled in using data visualization platforms, APIs, and integrating multiple data sources. Carlos is curious and analytical, with a unique perspective on data interoperability and multilingual research environments, which will help ensure the ontology accounts for diverse regional and linguistic contexts."
+      },
+      "group": {
+        "name": "Research Institutions and Universities",
+        "description": "Organizations that oversee research activity, track publications, and assess institutional impact.",
+        "priority": {
+          "reason": "Have administrative and reporting needs that depend on accurate data on research outputs and affiliations.",
+          "value": "medium"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Dr. Priya Raman",
+        "description": "Dr. Priya Raman is a 39-year-old data scientist based in Bangalore, India, specializing in academic text mining and large-scale data analytics. She holds a PhD in Computer Science with a focus on natural language processing for scholarly literature. With over 12 years of experience, Priya has led research projects integrating ontologies into search and clustering algorithms for digital libraries. Technically adept with Python, SPARQL, and ontology-driven app development, she is passionate about open science and advocates for inclusive, multilingual metadata modeling. Priya's unique perspective is informed by her collaborations with both academic researchers and IT industry partners, ensuring that ontology design is both theoretically sound and practically applicable."
+      },
+      "group": {
+        "name": "Data Scientists and Knowledge Graph Engineers",
+        "description": "Professionals creating advanced analytics or semantic web applications with academic data.",
+        "priority": {
+          "reason": "Reliant on expressive, structured ontologies for tasks like automated reasoning, clustering, or recommendation.",
+          "value": "medium"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Aisha Patel",
+        "description": "Aisha, 34, works as a Digital Repository Specialist at a university in Nairobi, Kenya. With a background in Computer Science and Information Management, she manages digital access, open-access repositories, and institutional research output. Highly proficient in digital tools and semantic web technologies (including RDF and linked data), Aisha is keenly interested in how new ontologies can enhance discoverability and integrate with global research platforms. Her international and technology-forward perspective ensures consideration of interoperability and accessibility for diverse academic communities."
+      },
+      "group": {
+        "name": "Librarians and Information Specialists",
+        "description": "Professionals responsible for curating, cataloging, and enabling access to academic research materials in libraries and digital repositories.",
+        "priority": {
+          "reason": "Experts in metadata standards, classification, and search optimizations, critical for ontology design.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Dr. Isabel Green",
+        "description": "A 42-year-old open science policy advisor based in Berlin, Germany, with a PhD in Information Science. Isabel has a decade of experience in academic publishing reform, focusing on the implementation of open access mandates and open data repositories across European universities. She has a strong technical proficiency in metadata standards, persistent identifiers (such as DOIs and ORCID), and FAIR data principles. Isabel is closely involved in international advocacy for the adoption of transparent peer review processes and believes ontologies should support discoverability, licensing clarity, and the ability to track open access compliance. She is passionate about interdisciplinary collaboration and eager to see ontologies bridge technical and social divides to empower researchers globally."
+      },
+      "group": {
+        "name": "Open Science and Open Access Advocates",
+        "description": "Stakeholders promoting transparency, accessibility, and the sharing of research outputs.",
+        "priority": {
+          "reason": "Require ontologies that support open access indicators and persistent identifiers.",
+          "value": "low"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Rohan Mehta",
+        "description": "34 years old, based in Mumbai, India. Rohan holds an MBA with a concentration in digital product management and currently leads a regional publisher specializing in emerging science and technology journals. His main interests lie in leveraging AI for automated indexing and content enrichment. Rohan is skilled at evaluating and implementing new software platforms for journal submission and publication, and he is deeply invested in creating user-friendly digital experiences for both authors and researchers. He offers a perspective focused on innovation, scalability, and the needs of growing, digitally native publishers in non-Western markets."
+      },
+      "group": {
+        "name": "Academic Publishers",
+        "description": "Organizations that process, publish, and archive research papers and related entities.",
+        "priority": {
+          "reason": "Define metadata requirements and standards and influence how academic material is indexed, described, and linked.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Joselyn Martínez",
+        "description": "42, living in Santiago, Chile. Joselyn has a background in linguistics and information architecture, with 15 years in editorial management of multilingual academic journals. She works at a university press and is responsible for cross-national partnerships and metadata compliance with global citation databases. Joselyn’s interests include enhancing research discoverability through multilingual metadata and linked data, addressing inclusive cataloguing for underrepresented disciplines, and integrating non-English research outputs. Her deep understanding of multilingual publishing, metadata standards, and inclusivity needs offer vital insights to ontology development."
+      },
+      "group": {
+        "name": "Academic Publishers",
+        "description": "Organizations that process, publish, and archive research papers and related entities.",
+        "priority": {
+          "reason": "Define metadata requirements and standards and influence how academic material is indexed, described, and linked.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Dr. Elena Fischer",
+        "description": "A 52-year-old metadata standards consultant from Berlin, Germany, with a PhD in Information Science. Elena has over 25 years of experience working with international standards organizations such as ISO and DIN, specializing in metadata schemas for academic publishing. She has chaired multiple working groups on metadata interoperability and is passionate about ensuring consistent application of standards across digital libraries. Elena is highly proficient in ontology development tools, attends global conferences, and mentors early-career professionals. Her experience offers a deep understanding of cross-domain metadata alignment."
+      },
+      "group": {
+        "name": "Standardization Bodies",
+        "description": "Organizations like ISO, NISO, or W3C that maintain standards for metadata and ontologies.",
+        "priority": {
+          "reason": "Ensure alignment with established standards, facilitating interoperability and adoption.",
+          "value": "medium"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Dr. Isabel Tan",
+        "description": "A 45-year-old biomedical researcher based in Singapore, Isabel holds a PhD in molecular biology from the National University of Singapore and has over 20 years of experience in interdisciplinary biomedical research. She leads a mid-sized lab, regularly publishes in high-impact journals, and mentors early-career scientists. Isabel is highly tech-savvy, frequently utilizing advanced databases, citation management tools, and bioinformatics software. She is passionate about open science and believes in transparent, well-organized research data. Her unique perspective brings a critical understanding of the difficulties in representing interdisciplinary collaborations and the nuanced relationships between emerging fields. Isabel seeks ontology designs that capture both established and novel research entities and advocate for features that highlight cross-disciplinary connections."
+      },
+      "group": {
+        "name": "Academic Researchers",
+        "description": "Individuals conducting research who publish or consume research papers across academic disciplines.",
+        "priority": {
+          "reason": "Primary users who both generate the data and rely on accurate and comprehensive representation of academic entities and concepts.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Janet Williams",
+        "description": "Janet, 58, is the Head Librarian at a major academic library in Boston, MA, with over 30 years of experience. She holds a Master’s in Library and Information Science (MLIS) and is renowned for her expertise in cataloging, MARC records, and implementing metadata standards for electronic and print research materials. Janet is passionate about bridging physical and digital archive collections, often mentoring younger librarians on advanced cataloging and subject indexing practices. Her extensive historical perspective and commitment to preservation make her an advocate for standardized yet inclusive ontological frameworks."
+      },
+      "group": {
+        "name": "Librarians and Information Specialists",
+        "description": "Professionals responsible for curating, cataloging, and enabling access to academic research materials in libraries and digital repositories.",
+        "priority": {
+          "reason": "Experts in metadata standards, classification, and search optimizations, critical for ontology design.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Emily Chen",
+        "description": "A 28-year-old UX researcher based in Vancouver, Canada, with a bachelor's in Cognitive Science and a background in HCI. Emily works at a startup that leverages ontologies for discovering emerging trends in academic publishing. She conducts user studies with graduate students and faculty, striving to improve discoverability and engagement with complex academic content. Emily is especially interested in personalization, accessibility, and the challenges of representing interdisciplinary research in searchable databases."
+      },
+      "group": {
+        "name": "Academic Search Engine Providers",
+        "description": "Companies or organizations offering services to search and analyze research papers and related data.",
+        "priority": {
+          "reason": "Rely on well-structured ontologies for effective search, ranking, and data visualization.",
+          "value": "high"
+        }
+      }
+    }
+  ]
+}

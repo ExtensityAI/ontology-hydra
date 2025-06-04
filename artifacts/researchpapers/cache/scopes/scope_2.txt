@@ -1,0 +1,77 @@
+1. Domain Overview
+   - Research papers, their related academic entities, and concepts intended for building a searchable database.
+
+2. Included Topics
+   2.1 Research Papers
+      - Titles
+      - Abstracts
+      - Full text (when available)
+      - Digital Object Identifiers (DOIs)
+      - Publication dates
+      - Versioning and retractions
+   2.2 Authorship and Contributors
+      - Authors and co-authors (names, affiliations, disambiguation)
+      - ORCID and other persistent researcher identifiers
+      - Corresponding author and author roles/contributions
+   2.3 Academic Publishing Entities
+      - Journals
+      - Conferences and proceedings
+      - Preprint servers
+      - Book chapters and edited volumes linked to journal articles
+   2.4 Research Organizations and Affiliations
+      - Universities and research institutes
+      - Research groups and labs
+      - National and international funding bodies
+   2.5 Funding and Grants
+      - Grant numbers and identifiers
+      - Funding agency metadata
+      - Links between publications and specific grant projects
+   2.6 Citations and References
+      - Internal and external citations
+      - Bibliographic reference metadata
+      - Citation counts and bibliometrics
+   2.7 Research Topics and Keywords
+      - Author-provided and standardized subject keywords
+      - Taxonomies and controlled vocabularies (e.g., MeSH, ACM CCS)
+   2.8 Publication Metadata
+      - Publisher details
+      - Open access status and licensing (e.g., CC-BY, embargo periods)
+      - ISSN, ISBN, and other standard identifiers
+      - Language of publication; multi-language metadata
+   2.9 Associated Research Artefacts
+      - Supplementary datasets
+      - Code repositories (e.g., GitHub links)
+      - Figures and tables
+      - Peer review history (if available)
+   2.10 Interoperability & Standards
+      - Use of ontologies (e.g., Dublin Core, RDF, schema.org)
+      - Compliance with open data and privacy regulations
+      - Support for linked data and semantic web protocols
+
+3. Explicit Exclusions
+   - Full-text retrieval, storage, and rights management for content behind paywalls (outside indexing metadata)
+   - Non-academic content (e.g., blogs, news articles, literary fiction)
+   - Patent documentation and legal case studies
+   - Fine-grained user access logs or analytics unrelated to academic content
+   - Non-research outputs (e.g., course syllabi, administrative documents, event flyers)
+   - Internal university records unrelated to research output
+   - Personal data of researchers beyond professional identifiers and affiliations (per data privacy standards)
+
+4. Gray Areas and Overlaps
+   - Datasets: Standalone research datasets may belong in a related but separate repository; include only references and descriptive metadata when linked to a publication.
+   - Code repositories and software: Include references and identifiers (e.g., DOI for software) when directly associated with a paper, but not the full software archives.
+   - Peer review reports: Include where openly available; may overlap with open peer review platforms not strictly tied to publications.
+   - Preprints: Covered when represented as papers, but ongoing versions and comments outside the publication scope.
+   - Conference presentations and posters: Included only if they result in or are formally linked to a publication.
+   - Bibliometric measures: Store citation and impact data when directly tied to entities, but not advanced analytics workflows or proprietary algorithmic scores.
+
+5. Adjacent Domains
+   - Institutional repositories and research data management systems
+   - Grant management and reporting systems
+   - Academic job or researcher profiling platforms
+   - Bibliometric and altmetric analytics platforms
+
+6. Shared Vocabulary and Terminology
+   - Ensure use of standard controlled vocabularies for authors, subjects, and organizations.
+   - Prioritize persistent identifiers (DOI, ORCID, ROR, Funder Registry, etc.) for interoperability.
+   - Adhere to international metadata schemas and encourage multilingual support.

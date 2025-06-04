@@ -1,0 +1,24 @@
+What are the precise definitions and distinguishing characteristics for each type of scholarly output (e.g., journal article, preprint, conference proceeding, thesis, dissertation, book chapter, poster, presentation) represented in the ontology?
+How does the ontology represent the versioning and publication status of research outputs (e.g., preprint, published, corrected, retracted), and what properties and relationships distinguish these states?
+What are the core metadata attributes required for each scholarly output, including multilingual titles, abstracts, keywords, publication details, and persistent identifiers?
+How are contributors (authors, editors, reviewers, corresponding authors, etc.) modeled with role-specific metadata, persistent identifiers (e.g., ORCID), authority control, and affiliation history/disambiguation?
+How does the ontology support tracking multiple affiliations for authors over time and representing historical affiliation data?
+What controlled vocabularies and classification systems (e.g., ACM CCS, MeSH) are supported for subject tagging, and how are multilingual and inclusive subject tags implemented?
+How is the hierarchical or relational structure among research domains, disciplines, and subfields represented and linked to research outputs?
+What properties define institutions and organizations (universities, research centers, consortia), and how are persistent identifiers (e.g., ROR, GRID), hierarchical relationships, and partnerships represented?
+How does the ontology model journals, conferences, publishers, and book series, including editorial boards and event-specific metadata such as ISSN/ISBN and event dates?
+How are funding bodies and grant information represented, including persistent identifiers, project/grant metadata, and linkages between grants, institutions, and publications?
+How are formal relationships between research outputs expressed (e.g., citation networks, bibliographic coupling, previous/next versions, inbound and outbound references)?
+How does the ontology support the representation of collaboration and co-authorship networks, including organizational and project-based collaborations?
+How are supplementary artefacts (datasets, software, code repositories, figures, tables) linked to research outputs using persistent identifiers and metadata references?
+Which properties encode open access and licensing status, including embargo information, and how is this information standardized for search and filtering?
+How are bibliometric indicators (citation counts, h-index, journal impact factors, altmetrics) modeled and associated directly with the relevant entities within the ontology?
+What mechanisms are in place for integrating or mapping to external metadata and semantic interoperability standards (e.g., Dublin Core, Crossref, DataCite, MARC, schema.org), and how are these mappings maintained?
+How does the ontology handle multilingual metadata for search and discoverability features, particularly for titles, abstracts, keywords, and subject taxonomies?
+What is the scope and structure for faceted search and personalization metadata, such as user tags, favorites, and reading lists?
+How are digital locations, archival holdings, repository links, and physical archive information for research outputs represented?
+What authority control mechanisms are in place for the unique identification and disambiguation of all relevant entities (authors, organizations, funders, journals, etc.)?
+How does the ontology address gray areas, such as inclusion criteria for preprints, supplementary materials, peer review metadata, and formally published educational outputs?
+How are rights, licensing, and conditions of use detailed for research outputs, including standardized representation for machine-readable rights statements?
+How does the ontology support alignment with the FAIR principles (Findable, Accessible, Interoperable, Reusable) in its core structures and metadata?
+Which constraints or business rules ensure only formally declared and referenceable information is represented, preventing inclusion of excluded or out-of-scope content?

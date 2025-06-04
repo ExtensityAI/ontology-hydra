@@ -179,7 +179,11 @@ class AdvancedGraphVisualizer:
                 },
             },
             "edges": {
-                "smooth": {"type": "dynamic", "forceDirection": "none", "roundness": 0.5},
+                "smooth": {
+                    "type": "dynamic",
+                    "forceDirection": "none",
+                    "roundness": 0.5,
+                },
                 "color": {"inherit": "from", "opacity": 0.7},
                 "arrows": {"to": {"enabled": True, "scaleFactor": 0.5}},
                 "shadow": {
@@ -217,9 +221,17 @@ class AdvancedGraphVisualizer:
                 "dragView": True,
                 "zoomView": True,
                 "navigationButtons": True,
-                "keyboard": {"enabled": True, "speed": {"x": 10, "y": 10, "zoom": 0.02}, "bindToWindow": True},
+                "keyboard": {
+                    "enabled": True,
+                    "speed": {"x": 10, "y": 10, "zoom": 0.02},
+                    "bindToWindow": True,
+                },
             },
-            "layout": {"randomSeed": 42, "improvedLayout": True, "hierarchical": {"enabled": False}},
+            "layout": {
+                "randomSeed": 42,
+                "improvedLayout": True,
+                "hierarchical": {"enabled": False},
+            },
             "configure": {
                 "enabled": False,  # Disable configure button for cleaner UI
             },
@@ -339,7 +351,10 @@ class AdvancedGraphVisualizer:
                 "color": color,
                 "shape": shape,
                 "size": size,
-                "font": {"size": font_size, "color": "#FFFFFF" if self.dark_mode else "#000000"},
+                "font": {
+                    "size": font_size,
+                    "color": "#FFFFFF" if self.dark_mode else "#000000",
+                },
                 "title": f"<div style='max-width: 250px;'><h3>{name}</h3><p>Type: {node_type.capitalize()}</p></div>",
             }
 
@@ -357,25 +372,8 @@ class AdvancedGraphVisualizer:
             add_node(sub_rel.subclass, "class")
             add_node(sub_rel.superclass, "class")
 
-        # From object properties (domain + range)
-        for obj_prop in ontology.object_properties:
-            # Add the property itself as a node
-            prop_id = add_node(obj_prop.name, "property")
-
-            for dom in obj_prop.domain:
-                dom_id = add_node(dom, "class")
-
-            for rng in obj_prop.range:
-                rng_id = add_node(rng, "class")
-
         # From data properties
         for data_prop in ontology.data_properties:
-            # Add the property itself as a node
-            prop_id = add_node(data_prop.name, "property")
-
-            for dom in data_prop.domain:
-                dom_id = add_node(dom, "class")
-
             # Add datatype node
             datatype_name = data_prop.range.value
             add_node(datatype_name, "datatype")
@@ -416,7 +414,9 @@ class AdvancedGraphVisualizer:
                             "font": {
                                 "size": 9,  # Reduced from 10
                                 "align": "middle",
-                                "background": "#2E2E2E" if self.dark_mode else "#FFFFFF",
+                                "background": "#2E2E2E"
+                                if self.dark_mode
+                                else "#FFFFFF",
                             },
                             "arrows": {"to": {"enabled": True, "type": "arrow"}},
                             "color": {
@@ -455,7 +455,9 @@ class AdvancedGraphVisualizer:
 
         # Create the visualization
         self._create_visualization(
-            graph_data, output_path, title=f"Ontology Visualization: {len(nodes)} classes & properties"
+            graph_data,
+            output_path,
+            title=f"Ontology Visualization: {len(nodes)} classes & properties",
         )
 
     def visualize_kg(self, kg: KG, output_path: Path):
@@ -517,13 +519,19 @@ class AdvancedGraphVisualizer:
         for triplet in kg.triplets or []:
             all_entities.add(triplet.subject)
             all_entities.add(triplet.object)
-            predicate_counts[triplet.predicate] = predicate_counts.get(triplet.predicate, 0) + 1
+            predicate_counts[triplet.predicate] = (
+                predicate_counts.get(triplet.predicate, 0) + 1
+            )
 
         # Calculate node sizes based on connections (degree centrality)
         node_connections = {}
         for triplet in kg.triplets or []:
-            node_connections[triplet.subject] = node_connections.get(triplet.subject, 0) + 1
-            node_connections[triplet.object] = node_connections.get(triplet.object, 0) + 1
+            node_connections[triplet.subject] = (
+                node_connections.get(triplet.subject, 0) + 1
+            )
+            node_connections[triplet.object] = (
+                node_connections.get(triplet.object, 0) + 1
+            )
 
         # Normalize node sizes - with more reasonable scaling
         max_connections = max(node_connections.values()) if node_connections else 1
@@ -546,7 +554,9 @@ class AdvancedGraphVisualizer:
                 shape = self.shapes["class"]
                 title = f"<div style='max-width: 250px;'><h3>{entity_name}</h3><p>Class/Type</p><p>Connections: {connections}</p></div>"
                 group = "types"
-            elif entity_name in entity_to_types and len(entity_to_types[entity_name]) > 0:
+            elif (
+                entity_name in entity_to_types and len(entity_to_types[entity_name]) > 0
+            ):
                 # This entity has at least one type
                 types = list(entity_to_types[entity_name])
                 first_type = types[0]
@@ -618,7 +628,11 @@ class AdvancedGraphVisualizer:
                         "scaleFactor": 0.4,  # Reduced from 0.5
                     }
                 },
-                "color": {"color": predicate_color_map[predicate], "opacity": 0.8, "highlight": "#FFFFFF"},
+                "color": {
+                    "color": predicate_color_map[predicate],
+                    "opacity": 0.8,
+                    "highlight": "#FFFFFF",
+                },
                 "title": f"<div>{triplet.subject} - <b>{predicate}</b> → {triplet.object}</div>",
             }
 
@@ -634,10 +648,14 @@ class AdvancedGraphVisualizer:
 
         # Create the visualization
         self._create_visualization(
-            graph_data, output_path, title=f"Knowledge Graph: {len(nodes)} entities, {len(edges)} relationships"
+            graph_data,
+            output_path,
+            title=f"Knowledge Graph: {len(nodes)} entities, {len(edges)} relationships",
         )
 
-    def _create_visualization(self, graph_data, output_path, title="Graph Visualization"):
+    def _create_visualization(
+        self, graph_data, output_path, title="Graph Visualization"
+    ):
         """
         Create an HTML file with an interactive visualization - optimized for performance.
 
@@ -2741,7 +2759,13 @@ class AdvancedGraphVisualizer:
 
         return str(output_path)
 
-    def visualize_combined(self, ontology: Ontology, kg: KG, output_path: Path, title: str = "Combined Visualization"):
+    def visualize_combined(
+        self,
+        ontology: Ontology,
+        kg: KG,
+        output_path: Path,
+        title: str = "Combined Visualization",
+    ):
         """
         Generate a visualization that combines both the ontology and knowledge graph.
         This shows how instances relate to their ontology classes.
@@ -2825,7 +2849,10 @@ class AdvancedGraphVisualizer:
                 "shape": shape,
                 "size": size,
                 "group": group,
-                "font": {"size": font_size, "color": "#FFFFFF" if self.dark_mode else "#000000"},
+                "font": {
+                    "size": font_size,
+                    "color": "#FFFFFF" if self.dark_mode else "#000000",
+                },
                 "title": f"<div style='max-width: 250px;'><h3>{name}</h3><p>Type: {node_type.capitalize()}</p></div>",
             }
 
@@ -3029,7 +3056,9 @@ class AdvancedGraphVisualizer:
                                 "font": {
                                     "size": 7,  # Reduced from 8
                                     "align": "middle",
-                                    "background": "#2E2E2E" if self.dark_mode else "#FFFFFF",
+                                    "background": "#2E2E2E"
+                                    if self.dark_mode
+                                    else "#FFFFFF",
                                 },
                                 "arrows": {"to": {"enabled": True, "type": "arrow"}},
                                 "dashes": [3, 3],
@@ -3044,7 +3073,9 @@ class AdvancedGraphVisualizer:
         graph_data = self.generate_graph_data(nodes, edges)
 
         # Adjust physics settings for combined visualization
-        graph_data["options"]["physics"]["forceAtlas2Based"]["gravitationalConstant"] = -70
+        graph_data["options"]["physics"]["forceAtlas2Based"][
+            "gravitationalConstant"
+        ] = -70
         graph_data["options"]["physics"]["forceAtlas2Based"]["springLength"] = 150
 
         # Increase simulation iterations for better layout
@@ -3054,7 +3085,8 @@ class AdvancedGraphVisualizer:
         self._create_visualization(
             graph_data,
             output_path,
-            title=title or f"Combined Ontology & KG: {len(nodes)} nodes, {len(edges)} relationships",
+            title=title
+            or f"Combined Ontology & KG: {len(nodes)} nodes, {len(edges)} relationships",
         )
 
 
@@ -3084,7 +3116,9 @@ class KnowledgeGraphViz:
             max_nodes_full_render=500,  # Threshold for simplified rendering
         )
 
-    def visualize_ontology(self, ontology: Ontology, filename: str = "ontology_viz.html"):
+    def visualize_ontology(
+        self, ontology: Ontology, filename: str = "ontology_viz.html"
+    ):
         """
         Visualize an ontology with an interactive graph.
 
@@ -3153,7 +3187,10 @@ class KnowledgeGraphViz:
         return self.visualizer.visualize_combined(ontology, kg, output_path, title)
 
     def filter_and_visualize(
-        self, kg: KG, filter_criteria: Dict[str, Any] = None, filename: str = "filtered_kg_viz.html"
+        self,
+        kg: KG,
+        filter_criteria: Dict[str, Any] = None,
+        filename: str = "filtered_kg_viz.html",
     ):
         """
         Filter a knowledge graph based on criteria and visualize the result.
@@ -3193,13 +3230,19 @@ class KnowledgeGraphViz:
                 entity_types.setdefault(triplet.subject, []).append(triplet.object)
 
                 # Check if this entity should be included based on type
-                if "entity_types" not in filter_criteria or triplet.object in filter_criteria["entity_types"]:
+                if (
+                    "entity_types" not in filter_criteria
+                    or triplet.object in filter_criteria["entity_types"]
+                ):
                     entities_to_include.add(triplet.subject)
 
         # Second pass: add filtered triplets
         for triplet in kg.triplets or []:
             # Check if triplet should be excluded based on predicates
-            if "predicates" in filter_criteria and triplet.predicate not in filter_criteria["predicates"]:
+            if (
+                "predicates" in filter_criteria
+                and triplet.predicate not in filter_criteria["predicates"]
+            ):
                 continue
 
             # Check if entities should be excluded
@@ -3212,7 +3255,10 @@ class KnowledgeGraphViz:
             # For non-isA relationships, check if entities are in the inclusion list
             if triplet.predicate.lower() != "isa":
                 if "entity_types" in filter_criteria:
-                    if triplet.subject not in entities_to_include and triplet.object not in entities_to_include:
+                    if (
+                        triplet.subject not in entities_to_include
+                        and triplet.object not in entities_to_include
+                    ):
                         continue
 
             # Add the triplet to the filtered KG
@@ -3255,8 +3301,12 @@ class KnowledgeGraphViz:
             predicates[triplet.predicate] = predicates.get(triplet.predicate, 0) + 1
 
             # Count connections per entity (degree)
-            entity_connections[triplet.subject] = entity_connections.get(triplet.subject, 0) + 1
-            entity_connections[triplet.object] = entity_connections.get(triplet.object, 0) + 1
+            entity_connections[triplet.subject] = (
+                entity_connections.get(triplet.subject, 0) + 1
+            )
+            entity_connections[triplet.object] = (
+                entity_connections.get(triplet.object, 0) + 1
+            )
 
         # Calculate metrics
         node_count = len(entities)
@@ -3275,7 +3325,9 @@ class KnowledgeGraphViz:
 
         # Find central entities (by degree centrality)
         centrality = sorted(
-            [(entity, degree) for entity, degree in entity_connections.items()], key=lambda x: x[1], reverse=True
+            [(entity, degree) for entity, degree in entity_connections.items()],
+            key=lambda x: x[1],
+            reverse=True,
         )[:10]  # Top 10
 
         return {
@@ -3287,7 +3339,12 @@ class KnowledgeGraphViz:
             "centrality": centrality,
         }
 
-    def generate_report(self, ontology: Ontology = None, kg: KG = None, filename: str = "graph_analysis_report.html"):
+    def generate_report(
+        self,
+        ontology: Ontology = None,
+        kg: KG = None,
+        filename: str = "graph_analysis_report.html",
+    ):
         """
         Generate a comprehensive HTML report with visualizations and metrics.
 
@@ -3348,7 +3405,9 @@ class KnowledgeGraphViz:
 
                 for degree, count in zip(degrees, degree_counts):
                     bin_index = degree // bin_size
-                    bin_label = f"{bin_index * bin_size}-{(bin_index + 1) * bin_size - 1}"
+                    bin_label = (
+                        f"{bin_index * bin_size}-{(bin_index + 1) * bin_size - 1}"
+                    )
                     binned_degrees[bin_label] = binned_degrees.get(bin_label, 0) + count
 
                 degrees = list(binned_degrees.keys())
@@ -3409,16 +3468,20 @@ class KnowledgeGraphViz:
             # Predicate distribution chart - optimized for performance
             if kg_metrics["predicate_distribution"]:
                 # Limit to top 10 predicates for readability
-                top_predicates = sorted(kg_metrics["predicate_distribution"].items(), key=lambda x: x[1], reverse=True)[
-                    :10
-                ]
+                top_predicates = sorted(
+                    kg_metrics["predicate_distribution"].items(),
+                    key=lambda x: x[1],
+                    reverse=True,
+                )[:10]
 
                 pred_labels = [p[0] for p in top_predicates]
                 pred_counts = [p[1] for p in top_predicates]
 
                 # Add "Other" category if there are more predicates
                 if len(kg_metrics["predicate_distribution"]) > 10:
-                    other_count = sum(kg_metrics["predicate_distribution"].values()) - sum(pred_counts)
+                    other_count = sum(
+                        kg_metrics["predicate_distribution"].values()
+                    ) - sum(pred_counts)
                     pred_labels.append("Other")
                     pred_counts.append(other_count)
 
@@ -3860,22 +3923,52 @@ class KnowledgeGraphViz:
 # Example usage
 if __name__ == "__main__":
     # Example usage of the visualization library
-    from ontopipe.models import KG, Class, DataProperty, DataType, ObjectProperty, Ontology, SubclassRelation
+    from ontopipe.models import (
+        KG,
+        Class,
+        DataProperty,
+        DataType,
+        ObjectProperty,
+        Ontology,
+        SubclassRelation,
+    )
 
     # Create a sample ontology
     ontology = Ontology(
         subclass_relations=[
-            SubclassRelation(subclass=Class(name="Person"), superclass=Class(name="Agent")),
-            SubclassRelation(subclass=Class(name="Employee"), superclass=Class(name="Person")),
-            SubclassRelation(subclass=Class(name="Company"), superclass=Class(name="Organization")),
+            SubclassRelation(
+                subclass=Class(name="Person"), superclass=Class(name="Agent")
+            ),
+            SubclassRelation(
+                subclass=Class(name="Employee"), superclass=Class(name="Person")
+            ),
+            SubclassRelation(
+                subclass=Class(name="Company"), superclass=Class(name="Organization")
+            ),
         ],
         object_properties=[
-            ObjectProperty(name="worksFor", domain=[Class(name="Person")], range=[Class(name="Organization")]),
-            ObjectProperty(name="hasManager", domain=[Class(name="Person")], range=[Class(name="Person")]),
+            ObjectProperty(
+                name="worksFor",
+                domain=[Class(name="Person")],
+                range=[Class(name="Organization")],
+            ),
+            ObjectProperty(
+                name="hasManager",
+                domain=[Class(name="Person")],
+                range=[Class(name="Person")],
+            ),
         ],
         data_properties=[
-            DataProperty(name="hasName", domain=[Class(name="Person")], range=DataType(value="string")),
-            DataProperty(name="hasAge", domain=[Class(name="Person")], range=DataType(value="integer")),
+            DataProperty(
+                name="hasName",
+                domain=[Class(name="Person")],
+                range=DataType(value="string"),
+            ),
+            DataProperty(
+                name="hasAge",
+                domain=[Class(name="Person")],
+                range=DataType(value="integer"),
+            ),
         ],
     )
 

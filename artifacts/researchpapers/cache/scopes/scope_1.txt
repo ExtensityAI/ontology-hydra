@@ -1,0 +1,60 @@
+1. Domain Overview
+   - Research papers, their related academic entities, and concepts as represented in a searchable database
+
+2. Included Topics
+   2.1 Research Paper Core Metadata
+      - Title
+      - Authors (including affiliations, ORCID, roles)
+      - Abstracts (including multi-language support)
+      - Keywords and subject tags
+      - Publication date
+      - Journal, conference, or repository of publication
+      - Digital Object Identifier (DOI) and other persistent identifiers
+      - Cited references and citation count
+      - Language(s) of publication
+      - Access type (open access, embargoed, subscription-based)
+
+   2.2 Academic Entities
+      - Authors (individuals, collaborative groups)
+      - Institutions and affiliations (universities, research centers, etc.)
+      - Publishers and repositories (journals, digital archives, preprint servers)
+      - Conferences and scholarly events
+      - Funding bodies and grant information
+      - Editorial boards and peer reviewers (limited to identification, not performance metrics)
+
+   2.3 Key Concepts and Relationships
+      - Research domains/disciplines
+      - Subject classifications and taxonomies (e.g., MeSH, ACM CCS, local vocabularies)
+      - Citation and reference links (including citation networks)
+      - Keywords, controlled vocabularies, and tagging systems
+      - Interlinking non-English and multilingual academic content
+      - Relationships: authorship, institutional affiliation, sponsorship, citation, keyword association
+
+   2.4 Enabling Structures
+      - Metadata standards and schemas (e.g., Dublin Core, MARC, Crossref, DataCite)
+      - Semantic web/linked data integration (e.g., RDF, ontologies)
+      - User interaction tags (search keywords, usage analytics, etc., as abstracted metadata)
+      - Accessible representations (multi-lingual support, accessibility tags)
+
+3. Explicitly Excluded
+   - Full research paper content (i.e., main body text, figures, datasets, unless referenced as external entities)
+   - Proprietary or sensitive author/reviewer information (e.g., private notes, peer review comments)
+   - Detailed peer review process documentation/outcomes
+   - Non-academic publications, media, or non-scholarly web sources
+   - Learning materials, textbooks, or popular science articles
+   - Internal operational/administrative records of institutions (not referenced in publication metadata)
+   - Non-bibliographic data unrelated to research outputs (e.g., lab notebooks, raw experimental data unless formally published)
+   
+4. Gray Areas and Overlaps
+   - Preprints and accepted manuscripts: included if formally catalogued as research outputs; pre-publication versions may straddle inclusion boundaries
+   - Research datasets: Included only if formally cited/referenced within a paper’s metadata; full dataset records are out of scope
+   - Supplemental materials (e.g., appendices, code): included only as metadata references, not full integration
+   - Scholarly metrics (e.g., h-index, journal impact factor): referenced as external indicators, not fully modeled
+   - Education-focused content (lesson plans, slides): excluded unless tied directly to research publication records
+   
+5. Adjacent Domains
+   - Library management systems and catalog operations (covered only as they intersect with research paper metadata)
+   - Grant and funding application systems (funding information included only as publication metadata, not as standalone entities)
+   - Author network analysis and social scholarly platforms (overlap with citation and authorship data)
+   - Legal and intellectual property entities (licenses and access rights included, but not full copyright or legal case modeling)
+
