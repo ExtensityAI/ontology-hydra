@@ -1,0 +1,6878 @@
+﻿[
+  {
+    "n": {
+      "identity": 3,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Amasa Coleman Lee",
+        "id": "Amasa Coleman Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:3"
+    },
+    "r": {
+      "identity": 6919781926966394908,
+      "start": 3,
+      "end": 28,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6919781926966394908",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:3",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    },
+    "m": {
+      "identity": 28,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Tom Robinson",
+        "id": "Tom Robinson"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    }
+  },
+  {
+    "n": {
+      "identity": 3,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Amasa Coleman Lee",
+        "id": "Amasa Coleman Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:3"
+    },
+    "r": {
+      "identity": 1152922604118474755,
+      "start": 3,
+      "end": 181,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474755",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:3",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:181"
+    },
+    "m": {
+      "identity": 181,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Two Black Men Accused Of Murder",
+        "id": "two black men accused of murder"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:181"
+    }
+  },
+  {
+    "n": {
+      "identity": 3,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Amasa Coleman Lee",
+        "id": "Amasa Coleman Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:3"
+    },
+    "r": {
+      "identity": 1152945693862658051,
+      "start": 3,
+      "end": 205,
+      "type": "classifiedByRole",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152945693862658051",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:3",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:205"
+    },
+    "m": {
+      "identity": 205,
+      "labels": [
+        "CharacterRoleType"
+      ],
+      "properties": {
+        "name": "Attorney",
+        "id": "attorney"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:205"
+    }
+  },
+  {
+    "n": {
+      "identity": 10,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mary Mc Donagh Murphy",
+        "id": "Mary McDonagh Murphy"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:10"
+    },
+    "r": {
+      "identity": 1159678003559530506,
+      "start": 10,
+      "end": 148,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1159678003559530506",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:10",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:148"
+    },
+    "m": {
+      "identity": 148,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Tom Brokaw",
+        "id": "Tom Brokaw"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:148"
+    }
+  },
+  {
+    "n": {
+      "identity": 10,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mary Mc Donagh Murphy",
+        "id": "Mary McDonagh Murphy"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:10"
+    },
+    "r": {
+      "identity": 1157426203745845258,
+      "start": 10,
+      "end": 184,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1157426203745845258",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:10",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:184"
+    },
+    "m": {
+      "identity": 184,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Oprah Winfrey",
+        "id": "Oprah Winfrey"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:184"
+    }
+  },
+  {
+    "n": {
+      "identity": 10,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mary Mc Donagh Murphy",
+        "id": "Mary McDonagh Murphy"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:10"
+    },
+    "r": {
+      "identity": 1155174403932160010,
+      "start": 10,
+      "end": 202,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1155174403932160010",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:10",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:202"
+    },
+    "m": {
+      "identity": 202,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Alice Lee",
+        "id": "Alice Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:202"
+    }
+  },
+  {
+    "n": {
+      "identity": 10,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mary Mc Donagh Murphy",
+        "id": "Mary McDonagh Murphy"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:10"
+    },
+    "r": {
+      "identity": 1152922604118474762,
+      "start": 10,
+      "end": 208,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474762",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:10",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:208"
+    },
+    "m": {
+      "identity": 208,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Rosanne Cash",
+        "id": "Rosanne Cash"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:208"
+    }
+  },
+  {
+    "n": {
+      "identity": 13,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Veronique Peck",
+        "id": "Veronique Peck"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:13"
+    },
+    "r": {
+      "identity": 6933292725848506505,
+      "start": 13,
+      "end": 137,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6933292725848506505",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:13",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:137"
+    },
+    "m": {
+      "identity": 137,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Harper Lee",
+        "id": "Harper Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:137"
+    }
+  },
+  {
+    "n": {
+      "identity": 15,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Reviewers",
+        "id": "reviewers"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:15"
+    },
+    "r": {
+      "identity": 6928789126221135946,
+      "start": 15,
+      "end": 74,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6928789126221135946",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:15",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74"
+    },
+    "m": {
+      "identity": 74,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Boo Radley",
+        "id": "Boo Radley"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74"
+    }
+  },
+  {
+    "n": {
+      "identity": 15,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Reviewers",
+        "id": "reviewers"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:15"
+    },
+    "r": {
+      "identity": 6942299925103247523,
+      "start": 15,
+      "end": 163,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6942299925103247523",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:15",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "m": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    }
+  },
+  {
+    "n": {
+      "identity": 15,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Reviewers",
+        "id": "reviewers"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:15"
+    },
+    "r": {
+      "identity": 6924285526593765547,
+      "start": 15,
+      "end": 171,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6924285526593765547",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:15",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "m": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    }
+  },
+  {
+    "n": {
+      "identity": 22,
+      "labels": [
+        "NarrativeEvent"
+      ],
+      "properties": {
+        "name": "Regent'S Park Open Air Theatre 2013 Production",
+        "id": "Regent's Park Open Air Theatre 2013 production"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:22"
+    },
+    "r": {
+      "identity": 1152923703630102550,
+      "start": 22,
+      "end": 106,
+      "type": "hasEventSetting",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152923703630102550",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:22",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:106"
+    },
+    "m": {
+      "identity": 106,
+      "labels": [
+        "EventSetting"
+      ],
+      "properties": {
+        "name": "Regent'S Park Open Air Theatre",
+        "id": "Regent's Park Open Air Theatre"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:106"
+    }
+  },
+  {
+    "n": {
+      "identity": 28,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Tom Robinson",
+        "id": "Tom Robinson"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    },
+    "r": {
+      "identity": 1164181603186901020,
+      "start": 28,
+      "end": 74,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1164181603186901020",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74"
+    },
+    "m": {
+      "identity": 74,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Boo Radley",
+        "id": "Boo Radley"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74"
+    }
+  },
+  {
+    "n": {
+      "identity": 28,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Tom Robinson",
+        "id": "Tom Robinson"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    },
+    "r": {
+      "identity": 1157426203745845276,
+      "start": 28,
+      "end": 163,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1157426203745845276",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "m": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    }
+  },
+  {
+    "n": {
+      "identity": 28,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Tom Robinson",
+        "id": "Tom Robinson"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    },
+    "r": {
+      "identity": 1168685202814271516,
+      "start": 28,
+      "end": 171,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1168685202814271516",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "m": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    }
+  },
+  {
+    "n": {
+      "identity": 28,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Tom Robinson",
+        "id": "Tom Robinson"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    },
+    "r": {
+      "identity": 1159678003559530524,
+      "start": 28,
+      "end": 216,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1159678003559530524",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:216"
+    },
+    "m": {
+      "identity": 216,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Bob Ewell",
+        "id": "Bob Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:216"
+    }
+  },
+  {
+    "n": {
+      "identity": 28,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Tom Robinson",
+        "id": "Tom Robinson"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    },
+    "r": {
+      "identity": 1166433403000586268,
+      "start": 28,
+      "end": 222,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1166433403000586268",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222"
+    },
+    "m": {
+      "identity": 222,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mayella Ewell",
+        "id": "Mayella Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222"
+    }
+  },
+  {
+    "n": {
+      "identity": 28,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Tom Robinson",
+        "id": "Tom Robinson"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    },
+    "r": {
+      "identity": 6919781926966395119,
+      "start": 28,
+      "end": 239,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6919781926966395119",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:239"
+    },
+    "m": {
+      "identity": 239,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Calpurnia",
+        "id": "Calpurnia"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:239"
+    }
+  },
+  {
+    "n": {
+      "identity": 28,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Tom Robinson",
+        "id": "Tom Robinson"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    },
+    "r": {
+      "identity": 1152922604118474780,
+      "start": 28,
+      "end": 243,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474780",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:243"
+    },
+    "m": {
+      "identity": 243,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jury",
+        "id": "jury"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:243"
+    }
+  },
+  {
+    "n": {
+      "identity": 28,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Tom Robinson",
+        "id": "Tom Robinson"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    },
+    "r": {
+      "identity": 1155176602955415580,
+      "start": 28,
+      "end": 216,
+      "type": "hasAntagonisticRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1155176602955415580",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:216"
+    },
+    "m": {
+      "identity": 216,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Bob Ewell",
+        "id": "Bob Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:216"
+    }
+  },
+  {
+    "n": {
+      "identity": 28,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Tom Robinson",
+        "id": "Tom Robinson"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    },
+    "r": {
+      "identity": 1157428402769100828,
+      "start": 28,
+      "end": 222,
+      "type": "hasAntagonisticRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1157428402769100828",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222"
+    },
+    "m": {
+      "identity": 222,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mayella Ewell",
+        "id": "Mayella Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222"
+    }
+  },
+  {
+    "n": {
+      "identity": 28,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Tom Robinson",
+        "id": "Tom Robinson"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    },
+    "r": {
+      "identity": 1152924803141730332,
+      "start": 28,
+      "end": 243,
+      "type": "hasAntagonisticRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152924803141730332",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:243"
+    },
+    "m": {
+      "identity": 243,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jury",
+        "id": "jury"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:243"
+    }
+  },
+  {
+    "n": {
+      "identity": 33,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Richard Matsch",
+        "id": "Richard Matsch"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:33"
+    },
+    "r": {
+      "identity": 1152922604118474785,
+      "start": 33,
+      "end": 78,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474785",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:33",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:78"
+    },
+    "m": {
+      "identity": 78,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Timothy Mc Veigh",
+        "id": "Timothy McVeigh"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:78"
+    }
+  },
+  {
+    "n": {
+      "identity": 33,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Richard Matsch",
+        "id": "Richard Matsch"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:33"
+    },
+    "r": {
+      "identity": 1155174403932160033,
+      "start": 33,
+      "end": 246,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1155174403932160033",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:33",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:246"
+    },
+    "m": {
+      "identity": 246,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus Finch",
+        "id": "Atticus Finch"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:246"
+    }
+  },
+  {
+    "n": {
+      "identity": 36,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jean Blackall",
+        "id": "Jean Blackall"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:36"
+    },
+    "r": {
+      "identity": 6919781926966394962,
+      "start": 36,
+      "end": 82,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6919781926966394962",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:36",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:82"
+    },
+    "m": {
+      "identity": 82,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jane Austen",
+        "id": "Jane Austen"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:82"
+    }
+  },
+  {
+    "n": {
+      "identity": 36,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jean Blackall",
+        "id": "Jean Blackall"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:36"
+    },
+    "r": {
+      "identity": 6935544525662191753,
+      "start": 36,
+      "end": 137,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6935544525662191753",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:36",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:137"
+    },
+    "m": {
+      "identity": 137,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Harper Lee",
+        "id": "Harper Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:137"
+    }
+  },
+  {
+    "n": {
+      "identity": 37,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Aunt Alexandra",
+        "id": "Aunt Alexandra"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:37"
+    },
+    "r": {
+      "identity": 6919785225501278379,
+      "start": 37,
+      "end": 171,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6919785225501278379",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:37",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "m": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    }
+  },
+  {
+    "n": {
+      "identity": 38,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Granville Hicks",
+        "id": "Granville Hicks"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:38"
+    },
+    "r": {
+      "identity": 1152922604118474790,
+      "start": 38,
+      "end": 122,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474790",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:38",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:122"
+    },
+    "m": {
+      "identity": 122,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Harding Le May",
+        "id": "Harding LeMay"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:122"
+    }
+  },
+  {
+    "n": {
+      "identity": 38,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Granville Hicks",
+        "id": "Granville Hicks"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:38"
+    },
+    "r": {
+      "identity": 6919781926966395043,
+      "start": 38,
+      "end": 163,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6919781926966395043",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:38",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "m": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    }
+  },
+  {
+    "n": {
+      "identity": 38,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Granville Hicks",
+        "id": "Granville Hicks"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:38"
+    },
+    "r": {
+      "identity": 6942299925103247531,
+      "start": 38,
+      "end": 171,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6942299925103247531",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:38",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "m": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    }
+  },
+  {
+    "n": {
+      "identity": 39,
+      "labels": [
+        "FictionBook"
+      ],
+      "properties": {
+        "name": "To Kill A Mockingbird",
+        "id": "To Kill a Mockingbird"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:39"
+    },
+    "r": {
+      "identity": 1152943494839402535,
+      "start": 39,
+      "end": 124,
+      "type": "hasStoryArc",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152943494839402535",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:39",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:124"
+    },
+    "m": {
+      "identity": 124,
+      "labels": [
+        "StoryArc"
+      ],
+      "properties": {
+        "name": "Mockingbird Story Arc",
+        "id": "MockingbirdStoryArc"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:124"
+    }
+  },
+  {
+    "n": {
+      "identity": 45,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Sheriff Tate",
+        "id": "Sheriff Tate"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:45"
+    },
+    "r": {
+      "identity": 1155174403932160045,
+      "start": 45,
+      "end": 96,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1155174403932160045",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:45",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "m": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    }
+  },
+  {
+    "n": {
+      "identity": 45,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Sheriff Tate",
+        "id": "Sheriff Tate"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:45"
+    },
+    "r": {
+      "identity": 6928789126221136035,
+      "start": 45,
+      "end": 163,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6928789126221136035",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:45",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "m": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    }
+  },
+  {
+    "n": {
+      "identity": 45,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Sheriff Tate",
+        "id": "Sheriff Tate"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:45"
+    },
+    "r": {
+      "identity": 1152922604118474797,
+      "start": 45,
+      "end": 224,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474797",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:45",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:224"
+    },
+    "m": {
+      "identity": 224,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Boo",
+        "id": "Boo"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:224"
+    }
+  },
+  {
+    "n": {
+      "identity": 47,
+      "labels": [
+        "EventSetting"
+      ],
+      "properties": {
+        "name": "Maycomb, Alabama",
+        "id": "Maycomb, Alabama"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:47"
+    },
+    "r": {
+      "identity": 1155183200025182255,
+      "start": 47,
+      "end": 117,
+      "type": "hasHistoricalElement",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1155183200025182255",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:47",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:117"
+    },
+    "m": {
+      "identity": 117,
+      "labels": [
+        "HistoricalElement"
+      ],
+      "properties": {
+        "name": "Great Depression",
+        "id": "Great Depression"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:117"
+    }
+  },
+  {
+    "n": {
+      "identity": 47,
+      "labels": [
+        "EventSetting"
+      ],
+      "properties": {
+        "name": "Maycomb, Alabama",
+        "id": "Maycomb, Alabama"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:47"
+    },
+    "r": {
+      "identity": 1152931400211497007,
+      "start": 47,
+      "end": 146,
+      "type": "hasHistoricalElement",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152931400211497007",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:47",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:146"
+    },
+    "m": {
+      "identity": 146,
+      "labels": [
+        "HistoricalElement"
+      ],
+      "properties": {
+        "name": "Maycomb History",
+        "id": "Maycomb history"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:146"
+    }
+  },
+  {
+    "n": {
+      "identity": 47,
+      "labels": [
+        "EventSetting"
+      ],
+      "properties": {
+        "name": "Maycomb, Alabama",
+        "id": "Maycomb, Alabama"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:47"
+    },
+    "r": {
+      "identity": 1157434999838867503,
+      "start": 47,
+      "end": 235,
+      "type": "hasHistoricalElement",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1157434999838867503",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:47",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:235"
+    },
+    "m": {
+      "identity": 235,
+      "labels": [
+        "HistoricalElement"
+      ],
+      "properties": {
+        "name": "Finch Family History",
+        "id": "Finch family history"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:235"
+    }
+  },
+  {
+    "n": {
+      "identity": 55,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Alice Petry",
+        "id": "Alice Petry"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:55"
+    },
+    "r": {
+      "identity": 1152922604118474807,
+      "start": 55,
+      "end": 246,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474807",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:55",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:246"
+    },
+    "m": {
+      "identity": 246,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus Finch",
+        "id": "Atticus Finch"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:246"
+    }
+  },
+  {
+    "n": {
+      "identity": 56,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "David Kipen",
+        "id": "David Kipen"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:56"
+    },
+    "r": {
+      "identity": 1152922604118474808,
+      "start": 56,
+      "end": 171,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474808",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:56",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "m": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    }
+  },
+  {
+    "n": {
+      "identity": 65,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Morris Dees",
+        "id": "Morris Dees"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:65"
+    },
+    "r": {
+      "identity": 1152922604118474817,
+      "start": 65,
+      "end": 246,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474817",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:65",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:246"
+    },
+    "m": {
+      "identity": 246,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus Finch",
+        "id": "Atticus Finch"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:246"
+    }
+  },
+  {
+    "n": {
+      "identity": 74,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Boo Radley",
+        "id": "Boo Radley"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74"
+    },
+    "r": {
+      "identity": 1161929803373215818,
+      "start": 74,
+      "end": 96,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1161929803373215818",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "m": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    }
+  },
+  {
+    "n": {
+      "identity": 74,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Boo Radley",
+        "id": "Boo Radley"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74"
+    },
+    "r": {
+      "identity": 1159678003559530570,
+      "start": 74,
+      "end": 163,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1159678003559530570",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "m": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    }
+  },
+  {
+    "n": {
+      "identity": 74,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Boo Radley",
+        "id": "Boo Radley"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74"
+    },
+    "r": {
+      "identity": 1157426203745845322,
+      "start": 74,
+      "end": 171,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1157426203745845322",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "m": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    }
+  },
+  {
+    "n": {
+      "identity": 74,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Boo Radley",
+        "id": "Boo Radley"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74"
+    },
+    "r": {
+      "identity": 1152922604118474826,
+      "start": 74,
+      "end": 222,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474826",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222"
+    },
+    "m": {
+      "identity": 222,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mayella Ewell",
+        "id": "Mayella Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222"
+    }
+  },
+  {
+    "n": {
+      "identity": 76,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Gregory Peck",
+        "id": "Gregory Peck"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:76"
+    },
+    "r": {
+      "identity": 1152922604118474828,
+      "start": 76,
+      "end": 246,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474828",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:76",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:246"
+    },
+    "m": {
+      "identity": 246,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus Finch",
+        "id": "Atticus Finch"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:246"
+    }
+  },
+  {
+    "n": {
+      "identity": 76,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Gregory Peck",
+        "id": "Gregory Peck"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:76"
+    },
+    "r": {
+      "identity": 1152925902653358156,
+      "start": 76,
+      "end": 196,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152925902653358156",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:76",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:196"
+    },
+    "m": {
+      "identity": 196,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Peck'S Grandson Harper",
+        "id": "Peck's grandson Harper"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:196"
+    }
+  },
+  {
+    "n": {
+      "identity": 77,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Truman Capote",
+        "id": "Truman Capote"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:77"
+    },
+    "r": {
+      "identity": 6931040926034821240,
+      "start": 77,
+      "end": 120,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6931040926034821240",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:77",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    },
+    "m": {
+      "identity": 120,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Lee",
+        "id": "Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    }
+  },
+  {
+    "n": {
+      "identity": 77,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Truman Capote",
+        "id": "Truman Capote"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:77"
+    },
+    "r": {
+      "identity": 6919781926966395122,
+      "start": 77,
+      "end": 242,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6919781926966395122",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:77",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:242"
+    },
+    "m": {
+      "identity": 242,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Truman Persons",
+        "id": "Truman Persons"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:242"
+    }
+  },
+  {
+    "n": {
+      "identity": 77,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Truman Capote",
+        "id": "Truman Capote"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:77"
+    },
+    "r": {
+      "identity": 1152925902653358157,
+      "start": 77,
+      "end": 57,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152925902653358157",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:77",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:57"
+    },
+    "m": {
+      "identity": 57,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Lee'S Aunts",
+        "id": "Lee's aunts"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:57"
+    }
+  },
+  {
+    "n": {
+      "identity": 77,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Truman Capote",
+        "id": "Truman Capote"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:77"
+    },
+    "r": {
+      "identity": 1155177702467043405,
+      "start": 77,
+      "end": 228,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1155177702467043405",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:77",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:228"
+    },
+    "m": {
+      "identity": 228,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Archulus Persons",
+        "id": "Archulus Persons"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:228"
+    }
+  },
+  {
+    "n": {
+      "identity": 82,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jane Austen",
+        "id": "Jane Austen"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:82"
+    },
+    "r": {
+      "identity": 1152922604118474834,
+      "start": 82,
+      "end": 137,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474834",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:82",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:137"
+    },
+    "m": {
+      "identity": 137,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Harper Lee",
+        "id": "Harper Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:137"
+    }
+  },
+  {
+    "n": {
+      "identity": 90,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Dill",
+        "id": "Dill"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:90"
+    },
+    "r": {
+      "identity": 1152922604118474842,
+      "start": 90,
+      "end": 30,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474842",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:90",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:30"
+    },
+    "m": {
+      "identity": 30,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Rev. Sykes",
+        "id": "Rev. Sykes"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:30"
+    }
+  },
+  {
+    "n": {
+      "identity": 90,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Dill",
+        "id": "Dill"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:90"
+    },
+    "r": {
+      "identity": 1161929803373215834,
+      "start": 90,
+      "end": 104,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1161929803373215834",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:90",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:104"
+    },
+    "m": {
+      "identity": 104,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Arthur \"Boo\" Radley",
+        "id": "Arthur \"Boo\" Radley"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:104"
+    }
+  },
+  {
+    "n": {
+      "identity": 90,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Dill",
+        "id": "Dill"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:90"
+    },
+    "r": {
+      "identity": 1164181603186901082,
+      "start": 90,
+      "end": 120,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1164181603186901082",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:90",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    },
+    "m": {
+      "identity": 120,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Lee",
+        "id": "Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    }
+  },
+  {
+    "n": {
+      "identity": 90,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Dill",
+        "id": "Dill"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:90"
+    },
+    "r": {
+      "identity": 1166433403000586330,
+      "start": 90,
+      "end": 163,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1166433403000586330",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:90",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "m": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    }
+  },
+  {
+    "n": {
+      "identity": 90,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Dill",
+        "id": "Dill"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:90"
+    },
+    "r": {
+      "identity": 1159678003559530586,
+      "start": 90,
+      "end": 171,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1159678003559530586",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:90",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "m": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    }
+  },
+  {
+    "n": {
+      "identity": 93,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Thomas Mallon",
+        "id": "Thomas Mallon"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:93"
+    },
+    "r": {
+      "identity": 6942299925103247456,
+      "start": 93,
+      "end": 96,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6942299925103247456",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:93",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "m": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    }
+  },
+  {
+    "n": {
+      "identity": 93,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Thomas Mallon",
+        "id": "Thomas Mallon"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:93"
+    },
+    "r": {
+      "identity": 6933292725848506539,
+      "start": 93,
+      "end": 171,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6933292725848506539",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:93",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "m": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    }
+  },
+  {
+    "n": {
+      "identity": 94,
+      "labels": [
+        "ActualHistoricalEvent"
+      ],
+      "properties": {
+        "name": "1936 Monroeville Event",
+        "id": "1936 Monroeville Event"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:94"
+    },
+    "r": {
+      "identity": 1152923703630102622,
+      "start": 94,
+      "end": 12,
+      "type": "hasEventSetting",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152923703630102622",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:94",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:12"
+    },
+    "m": {
+      "identity": 12,
+      "labels": [
+        "EventSetting"
+      ],
+      "properties": {
+        "name": "Monroeville, Alabama",
+        "id": "Monroeville, Alabama"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:12"
+    }
+  },
+  {
+    "n": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "r": {
+      "identity": 1170937002627956832,
+      "start": 96,
+      "end": 28,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1170937002627956832",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    },
+    "m": {
+      "identity": 28,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Tom Robinson",
+        "id": "Tom Robinson"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    }
+  },
+  {
+    "n": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "r": {
+      "identity": 1173188802441642080,
+      "start": 96,
+      "end": 156,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1173188802441642080",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:156"
+    },
+    "m": {
+      "identity": 156,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Black Spectators",
+        "id": "black spectators"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:156"
+    }
+  },
+  {
+    "n": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "r": {
+      "identity": 1168685202814271584,
+      "start": 96,
+      "end": 158,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1168685202814271584",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:158"
+    },
+    "m": {
+      "identity": 158,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Rabid Dog",
+        "id": "rabid dog"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:158"
+    }
+  },
+  {
+    "n": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "r": {
+      "identity": 1159678003559530592,
+      "start": 96,
+      "end": 163,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1159678003559530592",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "m": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    }
+  },
+  {
+    "n": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "r": {
+      "identity": 1166433403000586336,
+      "start": 96,
+      "end": 171,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1166433403000586336",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "m": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    }
+  },
+  {
+    "n": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "r": {
+      "identity": 1155174403932160096,
+      "start": 96,
+      "end": 185,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1155174403932160096",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:185"
+    },
+    "m": {
+      "identity": 185,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mrs. Dubose",
+        "id": "Mrs. Dubose"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:185"
+    }
+  },
+  {
+    "n": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "r": {
+      "identity": 1175440602255327328,
+      "start": 96,
+      "end": 239,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1175440602255327328",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:239"
+    },
+    "m": {
+      "identity": 239,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Calpurnia",
+        "id": "Calpurnia"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:239"
+    }
+  },
+  {
+    "n": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "r": {
+      "identity": 1152922604118474848,
+      "start": 96,
+      "end": 243,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474848",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:243"
+    },
+    "m": {
+      "identity": 243,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jury",
+        "id": "jury"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:243"
+    }
+  },
+  {
+    "n": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "r": {
+      "identity": 6919784125989650605,
+      "start": 96,
+      "end": 173,
+      "type": "hasAntagonisticRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6919784125989650605",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:173"
+    },
+    "m": {
+      "identity": 173,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "The Mob",
+        "id": "the mob"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:173"
+    }
+  },
+  {
+    "n": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "r": {
+      "identity": 1152924803141730400,
+      "start": 96,
+      "end": 185,
+      "type": "hasAntagonisticRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152924803141730400",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:185"
+    },
+    "m": {
+      "identity": 185,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mrs. Dubose",
+        "id": "Mrs. Dubose"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:185"
+    }
+  },
+  {
+    "n": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "r": {
+      "identity": 1152925902653358176,
+      "start": 96,
+      "end": 37,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152925902653358176",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:37"
+    },
+    "m": {
+      "identity": 37,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Aunt Alexandra",
+        "id": "Aunt Alexandra"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:37"
+    }
+  },
+  {
+    "n": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "r": {
+      "identity": 6919785225501278371,
+      "start": 96,
+      "end": 163,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6919785225501278371",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "m": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    }
+  },
+  {
+    "n": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "r": {
+      "identity": 1157429502280728672,
+      "start": 96,
+      "end": 171,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1157429502280728672",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "m": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    }
+  },
+  {
+    "n": {
+      "identity": 104,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Arthur \"Boo\" Radley",
+        "id": "Arthur \"Boo\" Radley"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:104"
+    },
+    "r": {
+      "identity": 6922033726780080218,
+      "start": 104,
+      "end": 90,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6922033726780080218",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:104",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:90"
+    },
+    "m": {
+      "identity": 90,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Dill",
+        "id": "Dill"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:90"
+    }
+  },
+  {
+    "n": {
+      "identity": 104,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Arthur \"Boo\" Radley",
+        "id": "Arthur \"Boo\" Radley"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:104"
+    },
+    "r": {
+      "identity": 6935544525662191779,
+      "start": 104,
+      "end": 163,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6935544525662191779",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:104",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "m": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    }
+  },
+  {
+    "n": {
+      "identity": 104,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Arthur \"Boo\" Radley",
+        "id": "Arthur \"Boo\" Radley"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:104"
+    },
+    "r": {
+      "identity": 1152922604118474856,
+      "start": 104,
+      "end": 241,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474856",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:104",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:241"
+    },
+    "m": {
+      "identity": 241,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jean Louise Finch",
+        "id": "Jean Louise Finch"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:241"
+    }
+  },
+  {
+    "n": {
+      "identity": 105,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Patrick Chura",
+        "id": "Patrick Chura"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:105"
+    },
+    "r": {
+      "identity": 1152922604118474857,
+      "start": 105,
+      "end": 2,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474857",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:105",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:2"
+    },
+    "m": {
+      "identity": 2,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Emmett Till",
+        "id": "Emmett Till"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:2"
+    }
+  },
+  {
+    "n": {
+      "identity": 105,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Patrick Chura",
+        "id": "Patrick Chura"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:105"
+    },
+    "r": {
+      "identity": 1155174403932160105,
+      "start": 105,
+      "end": 28,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1155174403932160105",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:105",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    },
+    "m": {
+      "identity": 28,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Tom Robinson",
+        "id": "Tom Robinson"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    }
+  },
+  {
+    "n": {
+      "identity": 120,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Lee",
+        "id": "Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    },
+    "r": {
+      "identity": 1159678003559530616,
+      "start": 120,
+      "end": 3,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1159678003559530616",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:3"
+    },
+    "m": {
+      "identity": 3,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Amasa Coleman Lee",
+        "id": "Amasa Coleman Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:3"
+    }
+  },
+  {
+    "n": {
+      "identity": 120,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Lee",
+        "id": "Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    },
+    "r": {
+      "identity": 1152922604118474872,
+      "start": 120,
+      "end": 77,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474872",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:77"
+    },
+    "m": {
+      "identity": 77,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Truman Capote",
+        "id": "Truman Capote"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:77"
+    }
+  },
+  {
+    "n": {
+      "identity": 120,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Lee",
+        "id": "Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    },
+    "r": {
+      "identity": 1157426203745845368,
+      "start": 120,
+      "end": 90,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1157426203745845368",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:90"
+    },
+    "m": {
+      "identity": 90,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Dill",
+        "id": "Dill"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:90"
+    }
+  },
+  {
+    "n": {
+      "identity": 120,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Lee",
+        "id": "Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    },
+    "r": {
+      "identity": 1164181603186901112,
+      "start": 120,
+      "end": 171,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1164181603186901112",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "m": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    }
+  },
+  {
+    "n": {
+      "identity": 120,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Lee",
+        "id": "Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    },
+    "r": {
+      "identity": 1159681302094413944,
+      "start": 120,
+      "end": 18,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1159681302094413944",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:18"
+    },
+    "m": {
+      "identity": 18,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Lee'S Father",
+        "id": "Lee's father"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:18"
+    }
+  },
+  {
+    "n": {
+      "identity": 120,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Lee",
+        "id": "Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    },
+    "r": {
+      "identity": 1157429502280728696,
+      "start": 120,
+      "end": 99,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1157429502280728696",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:99"
+    },
+    "m": {
+      "identity": 99,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Lee'S Mother",
+        "id": "Lee's mother"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:99"
+    }
+  },
+  {
+    "n": {
+      "identity": 120,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Lee",
+        "id": "Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    },
+    "r": {
+      "identity": 1164184901721784440,
+      "start": 120,
+      "end": 182,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1164184901721784440",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:182"
+    },
+    "m": {
+      "identity": 182,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Edwin",
+        "id": "Edwin"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:182"
+    }
+  },
+  {
+    "n": {
+      "identity": 120,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Lee",
+        "id": "Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    },
+    "r": {
+      "identity": 1152925902653358200,
+      "start": 120,
+      "end": 202,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152925902653358200",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:202"
+    },
+    "m": {
+      "identity": 202,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Alice Lee",
+        "id": "Alice Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:202"
+    }
+  },
+  {
+    "n": {
+      "identity": 120,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Lee",
+        "id": "Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    },
+    "r": {
+      "identity": 1155177702467043448,
+      "start": 120,
+      "end": 213,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1155177702467043448",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:213"
+    },
+    "m": {
+      "identity": 213,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Frances Cunningham Finch",
+        "id": "Frances Cunningham Finch"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:213"
+    }
+  },
+  {
+    "n": {
+      "identity": 124,
+      "labels": [
+        "StoryArc"
+      ],
+      "properties": {
+        "name": "Mockingbird Story Arc",
+        "id": "MockingbirdStoryArc"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:124"
+    },
+    "r": {
+      "identity": 1152942395327774844,
+      "start": 124,
+      "end": 6,
+      "type": "hasThematicElement",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152942395327774844",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:124",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6"
+    },
+    "m": {
+      "identity": 6,
+      "labels": [
+        "ThematicElement"
+      ],
+      "properties": {
+        "name": "Childhood Observation",
+        "id": "ChildhoodObservation"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6"
+    }
+  },
+  {
+    "n": {
+      "identity": 124,
+      "labels": [
+        "StoryArc"
+      ],
+      "properties": {
+        "name": "Mockingbird Story Arc",
+        "id": "MockingbirdStoryArc"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:124"
+    },
+    "r": {
+      "identity": 1166453194209886332,
+      "start": 124,
+      "end": 20,
+      "type": "hasThematicElement",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1166453194209886332",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:124",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:20"
+    },
+    "m": {
+      "identity": 20,
+      "labels": [
+        "ThematicElement"
+      ],
+      "properties": {
+        "name": "Southern Gothic",
+        "id": "Southern Gothic"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:20"
+    }
+  },
+  {
+    "n": {
+      "identity": 124,
+      "labels": [
+        "StoryArc"
+      ],
+      "properties": {
+        "name": "Mockingbird Story Arc",
+        "id": "MockingbirdStoryArc"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:124"
+    },
+    "r": {
+      "identity": 1159697794768830588,
+      "start": 124,
+      "end": 108,
+      "type": "hasThematicElement",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1159697794768830588",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:124",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:108"
+    },
+    "m": {
+      "identity": 108,
+      "labels": [
+        "ThematicElement"
+      ],
+      "properties": {
+        "name": "Racial Injustice",
+        "id": "RacialInjustice"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:108"
+    }
+  },
+  {
+    "n": {
+      "identity": 124,
+      "labels": [
+        "StoryArc"
+      ],
+      "properties": {
+        "name": "Mockingbird Story Arc",
+        "id": "MockingbirdStoryArc"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:124"
+    },
+    "r": {
+      "identity": 1168704994023571580,
+      "start": 124,
+      "end": 111,
+      "type": "hasThematicElement",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1168704994023571580",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:124",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:111"
+    },
+    "m": {
+      "identity": 111,
+      "labels": [
+        "ThematicElement"
+      ],
+      "properties": {
+        "name": "Adult Situations",
+        "id": "AdultSituations"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:111"
+    }
+  },
+  {
+    "n": {
+      "identity": 124,
+      "labels": [
+        "StoryArc"
+      ],
+      "properties": {
+        "name": "Mockingbird Story Arc",
+        "id": "MockingbirdStoryArc"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:124"
+    },
+    "r": {
+      "identity": 1157445994955145340,
+      "start": 124,
+      "end": 123,
+      "type": "hasThematicElement",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1157445994955145340",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:124",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:123"
+    },
+    "m": {
+      "identity": 123,
+      "labels": [
+        "ThematicElement"
+      ],
+      "properties": {
+        "name": "Destruction Of Innocence",
+        "id": "DestructionOfInnocence"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:123"
+    }
+  },
+  {
+    "n": {
+      "identity": 124,
+      "labels": [
+        "StoryArc"
+      ],
+      "properties": {
+        "name": "Mockingbird Story Arc",
+        "id": "MockingbirdStoryArc"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:124"
+    },
+    "r": {
+      "identity": 1170956793837256828,
+      "start": 124,
+      "end": 136,
+      "type": "hasThematicElement",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1170956793837256828",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:124",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:136"
+    },
+    "m": {
+      "identity": 136,
+      "labels": [
+        "ThematicElement"
+      ],
+      "properties": {
+        "name": "Mockingbird Symbolism",
+        "id": "MockingbirdSymbolism"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:136"
+    }
+  },
+  {
+    "n": {
+      "identity": 124,
+      "labels": [
+        "StoryArc"
+      ],
+      "properties": {
+        "name": "Mockingbird Story Arc",
+        "id": "MockingbirdStoryArc"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:124"
+    },
+    "r": {
+      "identity": 1155194195141460092,
+      "start": 124,
+      "end": 174,
+      "type": "hasThematicElement",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1155194195141460092",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:124",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:174"
+    },
+    "m": {
+      "identity": 174,
+      "labels": [
+        "ThematicElement"
+      ],
+      "properties": {
+        "name": "Bildungsroman",
+        "id": "Bildungsroman"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:174"
+    }
+  },
+  {
+    "n": {
+      "identity": 124,
+      "labels": [
+        "StoryArc"
+      ],
+      "properties": {
+        "name": "Mockingbird Story Arc",
+        "id": "MockingbirdStoryArc"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:124"
+    },
+    "r": {
+      "identity": 1164201394396201084,
+      "start": 124,
+      "end": 193,
+      "type": "hasThematicElement",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1164201394396201084",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:124",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:193"
+    },
+    "m": {
+      "identity": 193,
+      "labels": [
+        "ThematicElement"
+      ],
+      "properties": {
+        "name": "Family Name Finch",
+        "id": "FamilyNameFinch"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:193"
+    }
+  },
+  {
+    "n": {
+      "identity": 124,
+      "labels": [
+        "StoryArc"
+      ],
+      "properties": {
+        "name": "Mockingbird Story Arc",
+        "id": "MockingbirdStoryArc"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:124"
+    },
+    "r": {
+      "identity": 1161949594582515836,
+      "start": 124,
+      "end": 209,
+      "type": "hasThematicElement",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1161949594582515836",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:124",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:209"
+    },
+    "m": {
+      "identity": 209,
+      "labels": [
+        "ThematicElement"
+      ],
+      "properties": {
+        "name": "Prejudice",
+        "id": "Prejudice"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:209"
+    }
+  },
+  {
+    "n": {
+      "identity": 124,
+      "labels": [
+        "StoryArc"
+      ],
+      "properties": {
+        "name": "Mockingbird Story Arc",
+        "id": "MockingbirdStoryArc"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:124"
+    },
+    "r": {
+      "identity": 1152944594351030396,
+      "start": 124,
+      "end": 54,
+      "type": "hasSocietalTheme",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152944594351030396",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:124",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:54"
+    },
+    "m": {
+      "identity": 54,
+      "labels": [
+        "NarrativeSocietalTheme"
+      ],
+      "properties": {
+        "name": "Narrative Societal Theme Racial Inequality",
+        "id": "NarrativeSocietalTheme_RacialInequality"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:54"
+    }
+  },
+  {
+    "n": {
+      "identity": 127,
+      "labels": [
+        "NarrativeEvent"
+      ],
+      "properties": {
+        "name": "York Theatre Royal 2011 Production",
+        "id": "York Theatre Royal 2011 production"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:127"
+    },
+    "r": {
+      "identity": 1152923703630102655,
+      "start": 127,
+      "end": 150,
+      "type": "hasEventSetting",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152923703630102655",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:127",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:150"
+    },
+    "m": {
+      "identity": 150,
+      "labels": [
+        "EventSetting"
+      ],
+      "properties": {
+        "name": "York Theatre Royal",
+        "id": "York Theatre Royal"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:150"
+    }
+  },
+  {
+    "n": {
+      "identity": 131,
+      "labels": [
+        "FictionBook"
+      ],
+      "properties": {
+        "name": "Go Set A Watchman",
+        "id": "Go Set a Watchman"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:131"
+    },
+    "r": {
+      "identity": 1152943494839402627,
+      "start": 131,
+      "end": 69,
+      "type": "hasStoryArc",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152943494839402627",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:131",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:69"
+    },
+    "m": {
+      "identity": 69,
+      "labels": [
+        "StoryArc"
+      ],
+      "properties": {
+        "name": "Watchman Story Arc",
+        "id": "WatchmanStoryArc"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:69"
+    }
+  },
+  {
+    "n": {
+      "identity": 132,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mrs. Radley",
+        "id": "Mrs. Radley"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:132"
+    },
+    "r": {
+      "identity": 1152925902653358212,
+      "start": 132,
+      "end": 74,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152925902653358212",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:132",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74"
+    },
+    "m": {
+      "identity": 74,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Boo Radley",
+        "id": "Boo Radley"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74"
+    }
+  },
+  {
+    "n": {
+      "identity": 137,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Harper Lee",
+        "id": "Harper Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:137"
+    },
+    "r": {
+      "identity": 1164181603186901129,
+      "start": 137,
+      "end": 60,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1164181603186901129",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:137",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:60"
+    },
+    "m": {
+      "identity": 60,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Charles Shields",
+        "id": "Charles Shields"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:60"
+    }
+  },
+  {
+    "n": {
+      "identity": 137,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Harper Lee",
+        "id": "Harper Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:137"
+    },
+    "r": {
+      "identity": 1161929803373215881,
+      "start": 137,
+      "end": 76,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1161929803373215881",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:137",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:76"
+    },
+    "m": {
+      "identity": 76,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Gregory Peck",
+        "id": "Gregory Peck"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:76"
+    }
+  },
+  {
+    "n": {
+      "identity": 137,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Harper Lee",
+        "id": "Harper Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:137"
+    },
+    "r": {
+      "identity": 1152922604118474889,
+      "start": 137,
+      "end": 77,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474889",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:137",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:77"
+    },
+    "m": {
+      "identity": 77,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Truman Capote",
+        "id": "Truman Capote"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:77"
+    }
+  },
+  {
+    "n": {
+      "identity": 137,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Harper Lee",
+        "id": "Harper Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:137"
+    },
+    "r": {
+      "identity": 1166433403000586377,
+      "start": 137,
+      "end": 91,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1166433403000586377",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:137",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:91"
+    },
+    "m": {
+      "identity": 91,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Lee'S Family And Neighbors",
+        "id": "Lee's Family and Neighbors"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:91"
+    }
+  },
+  {
+    "n": {
+      "identity": 137,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Harper Lee",
+        "id": "Harper Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:137"
+    },
+    "r": {
+      "identity": 1155174403932160137,
+      "start": 137,
+      "end": 96,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1155174403932160137",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:137",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "m": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    }
+  },
+  {
+    "n": {
+      "identity": 137,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Harper Lee",
+        "id": "Harper Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:137"
+    },
+    "r": {
+      "identity": 1157426203745845385,
+      "start": 137,
+      "end": 202,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1157426203745845385",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:137",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:202"
+    },
+    "m": {
+      "identity": 202,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Alice Lee",
+        "id": "Alice Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:202"
+    }
+  },
+  {
+    "n": {
+      "identity": 141,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "The Cunninghams",
+        "id": "The Cunninghams"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:141"
+    },
+    "r": {
+      "identity": 6946803524730618027,
+      "start": 141,
+      "end": 171,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6946803524730618027",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:141",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "m": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    }
+  },
+  {
+    "n": {
+      "identity": 155,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jacqueline Tavernier Courbin",
+        "id": "Jacqueline Tavernier-Courbin"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:155"
+    },
+    "r": {
+      "identity": 6926537326407450744,
+      "start": 155,
+      "end": 120,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6926537326407450744",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:155",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    },
+    "m": {
+      "identity": 120,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Lee",
+        "id": "Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    }
+  },
+  {
+    "n": {
+      "identity": 160,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Carolyn Jones",
+        "id": "Carolyn Jones"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:160"
+    },
+    "r": {
+      "identity": 6922033726780080224,
+      "start": 160,
+      "end": 96,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6922033726780080224",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:160",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "m": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    }
+  },
+  {
+    "n": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "r": {
+      "identity": 1159678003559530659,
+      "start": 163,
+      "end": 28,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1159678003559530659",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    },
+    "m": {
+      "identity": 28,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Tom Robinson",
+        "id": "Tom Robinson"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    }
+  },
+  {
+    "n": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "r": {
+      "identity": 1182196001696383139,
+      "start": 163,
+      "end": 30,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1182196001696383139",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:30"
+    },
+    "m": {
+      "identity": 30,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Rev. Sykes",
+        "id": "Rev. Sykes"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:30"
+    }
+  },
+  {
+    "n": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "r": {
+      "identity": 1157426203745845411,
+      "start": 163,
+      "end": 63,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1157426203745845411",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:63"
+    },
+    "m": {
+      "identity": 63,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Miss Maudie",
+        "id": "Miss Maudie"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:63"
+    }
+  },
+  {
+    "n": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "r": {
+      "identity": 1179944201882697891,
+      "start": 163,
+      "end": 74,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1179944201882697891",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74"
+    },
+    "m": {
+      "identity": 74,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Boo Radley",
+        "id": "Boo Radley"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74"
+    }
+  },
+  {
+    "n": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "r": {
+      "identity": 6919781926966394970,
+      "start": 163,
+      "end": 90,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6919781926966394970",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:90"
+    },
+    "m": {
+      "identity": 90,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Dill",
+        "id": "Dill"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:90"
+    }
+  },
+  {
+    "n": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "r": {
+      "identity": 1168685202814271651,
+      "start": 163,
+      "end": 96,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1168685202814271651",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "m": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    }
+  },
+  {
+    "n": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "r": {
+      "identity": 1161929803373215907,
+      "start": 163,
+      "end": 104,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1161929803373215907",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:104"
+    },
+    "m": {
+      "identity": 104,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Arthur \"Boo\" Radley",
+        "id": "Arthur \"Boo\" Radley"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:104"
+    }
+  },
+  {
+    "n": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "r": {
+      "identity": 1152922604118474915,
+      "start": 163,
+      "end": 185,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474915",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:185"
+    },
+    "m": {
+      "identity": 185,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mrs. Dubose",
+        "id": "Mrs. Dubose"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:185"
+    }
+  },
+  {
+    "n": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "r": {
+      "identity": 1166433403000586403,
+      "start": 163,
+      "end": 216,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1166433403000586403",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:216"
+    },
+    "m": {
+      "identity": 216,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Bob Ewell",
+        "id": "Bob Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:216"
+    }
+  },
+  {
+    "n": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "r": {
+      "identity": 1173188802441642147,
+      "start": 163,
+      "end": 222,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1173188802441642147",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222"
+    },
+    "m": {
+      "identity": 222,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mayella Ewell",
+        "id": "Mayella Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222"
+    }
+  },
+  {
+    "n": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "r": {
+      "identity": 1184447801510068387,
+      "start": 163,
+      "end": 239,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1184447801510068387",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:239"
+    },
+    "m": {
+      "identity": 239,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Calpurnia",
+        "id": "Calpurnia"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:239"
+    }
+  },
+  {
+    "n": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "r": {
+      "identity": 1161933101908099235,
+      "start": 163,
+      "end": 96,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1161933101908099235",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "m": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    }
+  },
+  {
+    "n": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "r": {
+      "identity": 1159681302094413987,
+      "start": 163,
+      "end": 120,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1159681302094413987",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    },
+    "m": {
+      "identity": 120,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Lee",
+        "id": "Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    }
+  },
+  {
+    "n": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "r": {
+      "identity": 1152925902653358243,
+      "start": 163,
+      "end": 171,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152925902653358243",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "m": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    }
+  },
+  {
+    "n": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "r": {
+      "identity": 1164184901721784483,
+      "start": 163,
+      "end": 183,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1164184901721784483",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:183"
+    },
+    "m": {
+      "identity": 183,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mrs. Finch",
+        "id": "Mrs. Finch"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:183"
+    }
+  },
+  {
+    "n": {
+      "identity": 166,
+      "labels": [
+        "NarrativeEvent"
+      ],
+      "properties": {
+        "name": "Regent'S Park Open Air Theatre 2014 Return Production",
+        "id": "Regent's Park Open Air Theatre 2014 return production"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:166"
+    },
+    "r": {
+      "identity": 1152923703630102694,
+      "start": 166,
+      "end": 106,
+      "type": "hasEventSetting",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152923703630102694",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:166",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:106"
+    },
+    "m": {
+      "identity": 106,
+      "labels": [
+        "EventSetting"
+      ],
+      "properties": {
+        "name": "Regent'S Park Open Air Theatre",
+        "id": "Regent's Park Open Air Theatre"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:106"
+    }
+  },
+  {
+    "n": {
+      "identity": 170,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Duncan Preston",
+        "id": "Duncan Preston"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:170"
+    },
+    "r": {
+      "identity": 1152922604118474922,
+      "start": 170,
+      "end": 246,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474922",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:170",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:246"
+    },
+    "m": {
+      "identity": 246,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus Finch",
+        "id": "Atticus Finch"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:246"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1193455000764809387,
+      "start": 171,
+      "end": 28,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1193455000764809387",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    },
+    "m": {
+      "identity": 28,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Tom Robinson",
+        "id": "Tom Robinson"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1166433403000586411,
+      "start": 171,
+      "end": 30,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1166433403000586411",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:30"
+    },
+    "m": {
+      "identity": 30,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Rev. Sykes",
+        "id": "Rev. Sykes"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:30"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1206965799646920875,
+      "start": 171,
+      "end": 37,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1206965799646920875",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:37"
+    },
+    "m": {
+      "identity": 37,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Aunt Alexandra",
+        "id": "Aunt Alexandra"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:37"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1191203200951124139,
+      "start": 171,
+      "end": 59,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1191203200951124139",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:59"
+    },
+    "m": {
+      "identity": 59,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Walter Cunningham",
+        "id": "Walter Cunningham"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:59"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1186699601323753643,
+      "start": 171,
+      "end": 63,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1186699601323753643",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:63"
+    },
+    "m": {
+      "identity": 63,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Miss Maudie",
+        "id": "Miss Maudie"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:63"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1164181603186901163,
+      "start": 171,
+      "end": 74,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1164181603186901163",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74"
+    },
+    "m": {
+      "identity": 74,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Boo Radley",
+        "id": "Boo Radley"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1173188802441642155,
+      "start": 171,
+      "end": 90,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1173188802441642155",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:90"
+    },
+    "m": {
+      "identity": 90,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Dill",
+        "id": "Dill"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:90"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1209217599460606123,
+      "start": 171,
+      "end": 96,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1209217599460606123",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "m": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1195706800578494635,
+      "start": 171,
+      "end": 120,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1195706800578494635",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    },
+    "m": {
+      "identity": 120,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Lee",
+        "id": "Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1188951401137438891,
+      "start": 171,
+      "end": 133,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1188951401137438891",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:133"
+    },
+    "m": {
+      "identity": 133,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mr. Dolphus Raymond",
+        "id": "Mr. Dolphus Raymond"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:133"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1157426203745845419,
+      "start": 171,
+      "end": 141,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1157426203745845419",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:141"
+    },
+    "m": {
+      "identity": 141,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "The Cunninghams",
+        "id": "The Cunninghams"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:141"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1179944201882697899,
+      "start": 171,
+      "end": 157,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1179944201882697899",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:157"
+    },
+    "m": {
+      "identity": 157,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "The Ewells",
+        "id": "The Ewells"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:157"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1204713999833235627,
+      "start": 171,
+      "end": 163,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1204713999833235627",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "m": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1202462200019550379,
+      "start": 171,
+      "end": 185,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1202462200019550379",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:185"
+    },
+    "m": {
+      "identity": 185,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mrs. Dubose",
+        "id": "Mrs. Dubose"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:185"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1200210400205865131,
+      "start": 171,
+      "end": 197,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1200210400205865131",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:197"
+    },
+    "m": {
+      "identity": 197,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Frankie",
+        "id": "Frankie"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:197"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1161929803373215915,
+      "start": 171,
+      "end": 213,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1161929803373215915",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:213"
+    },
+    "m": {
+      "identity": 213,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Frances Cunningham Finch",
+        "id": "Frances Cunningham Finch"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:213"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1152922604118474923,
+      "start": 171,
+      "end": 222,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474923",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222"
+    },
+    "m": {
+      "identity": 222,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mayella Ewell",
+        "id": "Mayella Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1170937002627956907,
+      "start": 171,
+      "end": 239,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1170937002627956907",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:239"
+    },
+    "m": {
+      "identity": 239,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Calpurnia",
+        "id": "Calpurnia"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:239"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1152924803141730475,
+      "start": 171,
+      "end": 37,
+      "type": "hasAntagonisticRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152924803141730475",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:37"
+    },
+    "m": {
+      "identity": 37,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Aunt Alexandra",
+        "id": "Aunt Alexandra"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:37"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1161933101908099243,
+      "start": 171,
+      "end": 37,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1161933101908099243",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:37"
+    },
+    "m": {
+      "identity": 37,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Aunt Alexandra",
+        "id": "Aunt Alexandra"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:37"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1152925902653358251,
+      "start": 171,
+      "end": 96,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152925902653358251",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "m": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1164184901721784491,
+      "start": 171,
+      "end": 120,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1164184901721784491",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    },
+    "m": {
+      "identity": 120,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Lee",
+        "id": "Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1159681302094413995,
+      "start": 171,
+      "end": 163,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1159681302094413995",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "m": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "r": {
+      "identity": 1157429502280728747,
+      "start": 171,
+      "end": 183,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1157429502280728747",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:183"
+    },
+    "m": {
+      "identity": 183,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mrs. Finch",
+        "id": "Mrs. Finch"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:183"
+    }
+  },
+  {
+    "n": {
+      "identity": 172,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Robert Sean Leonard",
+        "id": "Robert Sean Leonard"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:172"
+    },
+    "r": {
+      "identity": 1152922604118474924,
+      "start": 172,
+      "end": 246,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474924",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:172",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:246"
+    },
+    "m": {
+      "identity": 246,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus Finch",
+        "id": "Atticus Finch"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:246"
+    }
+  },
+  {
+    "n": {
+      "identity": 173,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "The Mob",
+        "id": "the mob"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:173"
+    },
+    "r": {
+      "identity": 1152924803141730477,
+      "start": 173,
+      "end": 96,
+      "type": "hasAntagonisticRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152924803141730477",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:173",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "m": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    }
+  },
+  {
+    "n": {
+      "identity": 176,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Judge Taylor",
+        "id": "Judge Taylor"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:176"
+    },
+    "r": {
+      "identity": 6928789126221135968,
+      "start": 176,
+      "end": 96,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6928789126221135968",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:176",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "m": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    }
+  },
+  {
+    "n": {
+      "identity": 185,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mrs. Dubose",
+        "id": "Mrs. Dubose"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:185"
+    },
+    "r": {
+      "identity": 6926537326407450720,
+      "start": 185,
+      "end": 96,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6926537326407450720",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:185",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "m": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    }
+  },
+  {
+    "n": {
+      "identity": 185,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mrs. Dubose",
+        "id": "Mrs. Dubose"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:185"
+    },
+    "r": {
+      "identity": 6962566123426414763,
+      "start": 185,
+      "end": 171,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6962566123426414763",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:185",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "m": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    }
+  },
+  {
+    "n": {
+      "identity": 185,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mrs. Dubose",
+        "id": "Mrs. Dubose"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:185"
+    },
+    "r": {
+      "identity": 6919784125989650528,
+      "start": 185,
+      "end": 96,
+      "type": "hasAntagonisticRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6919784125989650528",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:185",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "m": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    }
+  },
+  {
+    "n": {
+      "identity": 196,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Peck'S Grandson Harper",
+        "id": "Peck's grandson Harper"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:196"
+    },
+    "r": {
+      "identity": 6924285526593765513,
+      "start": 196,
+      "end": 137,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6924285526593765513",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:196",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:137"
+    },
+    "m": {
+      "identity": 137,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Harper Lee",
+        "id": "Harper Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:137"
+    }
+  },
+  {
+    "n": {
+      "identity": 202,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Alice Lee",
+        "id": "Alice Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:202"
+    },
+    "r": {
+      "identity": 6926540624942334072,
+      "start": 202,
+      "end": 120,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6926540624942334072",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:202",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    },
+    "m": {
+      "identity": 120,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Lee",
+        "id": "Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    }
+  },
+  {
+    "n": {
+      "identity": 204,
+      "labels": [
+        "NarrativeEvent"
+      ],
+      "properties": {
+        "name": "Annual Monroeville Play",
+        "id": "Annual Monroeville play"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:204"
+    },
+    "r": {
+      "identity": 1155175503443787980,
+      "start": 204,
+      "end": 12,
+      "type": "hasEventSetting",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1155175503443787980",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:204",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:12"
+    },
+    "m": {
+      "identity": 12,
+      "labels": [
+        "EventSetting"
+      ],
+      "properties": {
+        "name": "Monroeville, Alabama",
+        "id": "Monroeville, Alabama"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:12"
+    }
+  },
+  {
+    "n": {
+      "identity": 204,
+      "labels": [
+        "NarrativeEvent"
+      ],
+      "properties": {
+        "name": "Annual Monroeville Play",
+        "id": "Annual Monroeville play"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:204"
+    },
+    "r": {
+      "identity": 1152923703630102732,
+      "start": 204,
+      "end": 180,
+      "type": "hasEventSetting",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152923703630102732",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:204",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:180"
+    },
+    "m": {
+      "identity": 180,
+      "labels": [
+        "EventSetting"
+      ],
+      "properties": {
+        "name": "Monroe County Courthouse",
+        "id": "Monroe County Courthouse"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:180"
+    }
+  },
+  {
+    "n": {
+      "identity": 204,
+      "labels": [
+        "NarrativeEvent"
+      ],
+      "properties": {
+        "name": "Annual Monroeville Play",
+        "id": "Annual Monroeville play"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:204"
+    },
+    "r": {
+      "identity": 1157427303257473228,
+      "start": 204,
+      "end": 214,
+      "type": "hasEventSetting",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1157427303257473228",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:204",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:214"
+    },
+    "m": {
+      "identity": 214,
+      "labels": [
+        "EventSetting"
+      ],
+      "properties": {
+        "name": "County Courthouse Grounds",
+        "id": "county courthouse grounds"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:214"
+    }
+  },
+  {
+    "n": {
+      "identity": 216,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Bob Ewell",
+        "id": "Bob Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:216"
+    },
+    "r": {
+      "identity": 6922033726780080350,
+      "start": 216,
+      "end": 222,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6922033726780080350",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:216",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222"
+    },
+    "m": {
+      "identity": 222,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mayella Ewell",
+        "id": "Mayella Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222"
+    }
+  },
+  {
+    "n": {
+      "identity": 216,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Bob Ewell",
+        "id": "Bob Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:216"
+    },
+    "r": {
+      "identity": 1157428402769101016,
+      "start": 216,
+      "end": 28,
+      "type": "hasAntagonisticRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1157428402769101016",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:216",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    },
+    "m": {
+      "identity": 28,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Tom Robinson",
+        "id": "Tom Robinson"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    }
+  },
+  {
+    "n": {
+      "identity": 216,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Bob Ewell",
+        "id": "Bob Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:216"
+    },
+    "r": {
+      "identity": 1152924803141730520,
+      "start": 216,
+      "end": 96,
+      "type": "hasAntagonisticRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152924803141730520",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:216",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "m": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    }
+  },
+  {
+    "n": {
+      "identity": 216,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Bob Ewell",
+        "id": "Bob Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:216"
+    },
+    "r": {
+      "identity": 1155176602955415768,
+      "start": 216,
+      "end": 222,
+      "type": "hasAntagonisticRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1155176602955415768",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:216",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222"
+    },
+    "m": {
+      "identity": 222,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mayella Ewell",
+        "id": "Mayella Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222"
+    }
+  },
+  {
+    "n": {
+      "identity": 218,
+      "labels": [
+        "NarrativeEvent"
+      ],
+      "properties": {
+        "name": "West Yorkshire Playhouse 2006 Production",
+        "id": "West Yorkshire Playhouse 2006 production"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:218"
+    },
+    "r": {
+      "identity": 1152923703630102746,
+      "start": 218,
+      "end": 130,
+      "type": "hasEventSetting",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152923703630102746",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:218",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:130"
+    },
+    "m": {
+      "identity": 130,
+      "labels": [
+        "EventSetting"
+      ],
+      "properties": {
+        "name": "West Yorkshire Playhouse",
+        "id": "West Yorkshire Playhouse"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:130"
+    }
+  },
+  {
+    "n": {
+      "identity": 222,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mayella Ewell",
+        "id": "Mayella Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222"
+    },
+    "r": {
+      "identity": 1155174403932160222,
+      "start": 222,
+      "end": 28,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1155174403932160222",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    },
+    "m": {
+      "identity": 28,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Tom Robinson",
+        "id": "Tom Robinson"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    }
+  },
+  {
+    "n": {
+      "identity": 222,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mayella Ewell",
+        "id": "Mayella Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222"
+    },
+    "r": {
+      "identity": 1152922604118474974,
+      "start": 222,
+      "end": 44,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474974",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:44"
+    },
+    "m": {
+      "identity": 44,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mrs. Ewell",
+        "id": "Mrs. Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:44"
+    }
+  },
+  {
+    "n": {
+      "identity": 222,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mayella Ewell",
+        "id": "Mayella Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222"
+    },
+    "r": {
+      "identity": 6919781926966394954,
+      "start": 222,
+      "end": 74,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6919781926966394954",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74"
+    },
+    "m": {
+      "identity": 74,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Boo Radley",
+        "id": "Boo Radley"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74"
+    }
+  },
+  {
+    "n": {
+      "identity": 222,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mayella Ewell",
+        "id": "Mayella Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222"
+    },
+    "r": {
+      "identity": 6940048125289562283,
+      "start": 222,
+      "end": 171,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6940048125289562283",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "m": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    }
+  },
+  {
+    "n": {
+      "identity": 222,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mayella Ewell",
+        "id": "Mayella Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222"
+    },
+    "r": {
+      "identity": 1152925902653358302,
+      "start": 222,
+      "end": 44,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152925902653358302",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:44"
+    },
+    "m": {
+      "identity": 44,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mrs. Ewell",
+        "id": "Mrs. Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:44"
+    }
+  },
+  {
+    "n": {
+      "identity": 222,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mayella Ewell",
+        "id": "Mayella Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222"
+    },
+    "r": {
+      "identity": 1155177702467043550,
+      "start": 222,
+      "end": 216,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1155177702467043550",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:216"
+    },
+    "m": {
+      "identity": 216,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Bob Ewell",
+        "id": "Bob Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:216"
+    }
+  },
+  {
+    "n": {
+      "identity": 224,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Boo",
+        "id": "Boo"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:224"
+    },
+    "r": {
+      "identity": 6919781926966395051,
+      "start": 224,
+      "end": 171,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6919781926966395051",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:224",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "m": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    }
+  },
+  {
+    "n": {
+      "identity": 225,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mr. Radley",
+        "id": "Mr. Radley"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:225"
+    },
+    "r": {
+      "identity": 1152924803141730529,
+      "start": 225,
+      "end": 74,
+      "type": "hasAntagonisticRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152924803141730529",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:225",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74"
+    },
+    "m": {
+      "identity": 74,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Boo Radley",
+        "id": "Boo Radley"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74"
+    }
+  },
+  {
+    "n": {
+      "identity": 225,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mr. Radley",
+        "id": "Mr. Radley"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:225"
+    },
+    "r": {
+      "identity": 1152925902653358305,
+      "start": 225,
+      "end": 74,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152925902653358305",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:225",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74"
+    },
+    "m": {
+      "identity": 74,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Boo Radley",
+        "id": "Boo Radley"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74"
+    }
+  },
+  {
+    "n": {
+      "identity": 228,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Archulus Persons",
+        "id": "Archulus Persons"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:228"
+    },
+    "r": {
+      "identity": 1152925902653358308,
+      "start": 228,
+      "end": 77,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152925902653358308",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:228",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:77"
+    },
+    "m": {
+      "identity": 77,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Truman Capote",
+        "id": "Truman Capote"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:77"
+    }
+  },
+  {
+    "n": {
+      "identity": 229,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Black Housekeeper",
+        "id": "black housekeeper"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:229"
+    },
+    "r": {
+      "identity": 6919781926966395000,
+      "start": 229,
+      "end": 120,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6919781926966395000",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:229",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    },
+    "m": {
+      "identity": 120,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Lee",
+        "id": "Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    }
+  },
+  {
+    "n": {
+      "identity": 239,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Calpurnia",
+        "id": "Calpurnia"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:239"
+    },
+    "r": {
+      "identity": 1159678003559530735,
+      "start": 239,
+      "end": 28,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1159678003559530735",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:239",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    },
+    "m": {
+      "identity": 28,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Tom Robinson",
+        "id": "Tom Robinson"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    }
+  },
+  {
+    "n": {
+      "identity": 239,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Calpurnia",
+        "id": "Calpurnia"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:239"
+    },
+    "r": {
+      "identity": 1164181603186901231,
+      "start": 239,
+      "end": 37,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1164181603186901231",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:239",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:37"
+    },
+    "m": {
+      "identity": 37,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Aunt Alexandra",
+        "id": "Aunt Alexandra"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:37"
+    }
+  },
+  {
+    "n": {
+      "identity": 239,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Calpurnia",
+        "id": "Calpurnia"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:239"
+    },
+    "r": {
+      "identity": 1168685202814271727,
+      "start": 239,
+      "end": 74,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1168685202814271727",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:239",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74"
+    },
+    "m": {
+      "identity": 74,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Boo Radley",
+        "id": "Boo Radley"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:74"
+    }
+  },
+  {
+    "n": {
+      "identity": 239,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Calpurnia",
+        "id": "Calpurnia"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:239"
+    },
+    "r": {
+      "identity": 1166433403000586479,
+      "start": 239,
+      "end": 120,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1166433403000586479",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:239",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    },
+    "m": {
+      "identity": 120,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Lee",
+        "id": "Lee"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:120"
+    }
+  },
+  {
+    "n": {
+      "identity": 239,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Calpurnia",
+        "id": "Calpurnia"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:239"
+    },
+    "r": {
+      "identity": 1161929803373215983,
+      "start": 239,
+      "end": 163,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1161929803373215983",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:239",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "m": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    }
+  },
+  {
+    "n": {
+      "identity": 239,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Calpurnia",
+        "id": "Calpurnia"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:239"
+    },
+    "r": {
+      "identity": 1157426203745845487,
+      "start": 239,
+      "end": 171,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1157426203745845487",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:239",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "m": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    }
+  },
+  {
+    "n": {
+      "identity": 239,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Calpurnia",
+        "id": "Calpurnia"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:239"
+    },
+    "r": {
+      "identity": 1152922604118474991,
+      "start": 239,
+      "end": 222,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474991",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:239",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222"
+    },
+    "m": {
+      "identity": 222,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Mayella Ewell",
+        "id": "Mayella Ewell"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:222"
+    }
+  },
+  {
+    "n": {
+      "identity": 241,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jean Louise Finch",
+        "id": "Jean Louise Finch"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:241"
+    },
+    "r": {
+      "identity": 6933292725848506458,
+      "start": 241,
+      "end": 90,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6933292725848506458",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:241",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:90"
+    },
+    "m": {
+      "identity": 90,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Dill",
+        "id": "Dill"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:90"
+    }
+  },
+  {
+    "n": {
+      "identity": 241,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jean Louise Finch",
+        "id": "Jean Louise Finch"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:241"
+    },
+    "r": {
+      "identity": 6919781926966394984,
+      "start": 241,
+      "end": 104,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6919781926966394984",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:241",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:104"
+    },
+    "m": {
+      "identity": 104,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Arthur \"Boo\" Radley",
+        "id": "Arthur \"Boo\" Radley"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:104"
+    }
+  },
+  {
+    "n": {
+      "identity": 241,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jean Louise Finch",
+        "id": "Jean Louise Finch"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:241"
+    },
+    "r": {
+      "identity": 6919785225501278304,
+      "start": 241,
+      "end": 96,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6919785225501278304",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:241",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    },
+    "m": {
+      "identity": 96,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus",
+        "id": "Atticus"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:96"
+    }
+  },
+  {
+    "n": {
+      "identity": 241,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jean Louise Finch",
+        "id": "Jean Louise Finch"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:241"
+    },
+    "r": {
+      "identity": 6922037025314963619,
+      "start": 241,
+      "end": 163,
+      "type": "hasFamilialRelationship",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6922037025314963619",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:241",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "m": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    }
+  },
+  {
+    "n": {
+      "identity": 242,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Truman Persons",
+        "id": "Truman Persons"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:242"
+    },
+    "r": {
+      "identity": 1152922604118474994,
+      "start": 242,
+      "end": 77,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:1152922604118474994",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:242",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:77"
+    },
+    "m": {
+      "identity": 77,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Truman Capote",
+        "id": "Truman Capote"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:77"
+    }
+  },
+  {
+    "n": {
+      "identity": 246,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus Finch",
+        "id": "Atticus Finch"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:246"
+    },
+    "r": {
+      "identity": 6926537326407450652,
+      "start": 246,
+      "end": 28,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6926537326407450652",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:246",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    },
+    "m": {
+      "identity": 28,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Tom Robinson",
+        "id": "Tom Robinson"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:28"
+    }
+  },
+  {
+    "n": {
+      "identity": 246,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus Finch",
+        "id": "Atticus Finch"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:246"
+    },
+    "r": {
+      "identity": 6940048125289562275,
+      "start": 246,
+      "end": 163,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6940048125289562275",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:246",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    },
+    "m": {
+      "identity": 163,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Jem",
+        "id": "Jem"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:163"
+    }
+  },
+  {
+    "n": {
+      "identity": 246,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Atticus Finch",
+        "id": "Atticus Finch"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:246"
+    },
+    "r": {
+      "identity": 6949055324544303275,
+      "start": 246,
+      "end": 171,
+      "type": "hasRelationshipTo",
+      "properties": {
+
+      },
+      "elementId": "5:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:6949055324544303275",
+      "startNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:246",
+      "endNodeElementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    },
+    "m": {
+      "identity": 171,
+      "labels": [
+        "Character"
+      ],
+      "properties": {
+        "name": "Scout",
+        "id": "Scout"
+      },
+      "elementId": "4:f4e3398f-4fb8-4f59-b550-ec42d8ef9989:171"
+    }
+  }
+]
