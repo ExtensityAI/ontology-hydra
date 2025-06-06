@@ -22,11 +22,15 @@ logger = getLogger("ontopipe.kg")
     pre_remedy=False,
     post_remedy=True,
     verbose=True,
-    remedy_retry_params=dict(tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False),
+    remedy_retry_params=dict(
+        tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False
+    ),
     accumulate_errors=False,
 )
 class TripletExtractor(Expression):
-    def __init__(self, name: str, ontology: Ontology, threshold: float = 0.7, *args, **kwargs):
+    def __init__(
+        self, name: str, ontology: Ontology, threshold: float = 0.7, *args, **kwargs
+    ):
         super().__init__(*args, **kwargs)
         self.name = name
         self.threshold = threshold
@@ -51,14 +55,18 @@ class TripletExtractor(Expression):
         errors = []
 
         new_type_defs = dict[str, str]()
-        existing_type_defs = {x.subject: x.object for x in self._triplets if x.predicate == "isA"}
+        existing_type_defs = {
+            x.subject: x.object for x in self._triplets if x.predicate == "isA"
+        }
 
         # ?: add information on how to fix for each of the errors
         # ?: consider adding context information to errors (i.e. for what types a property is valid, etc.)
 
         # first iteration: check for new isA triplets, ensure that they are valid
         for triplet in (t for t in triplets if t.predicate == "isA"):
-            if (current_type_def := existing_type_defs.get(triplet.subject, None)) is not None or (
+            if (
+                current_type_def := existing_type_defs.get(triplet.subject, None)
+            ) is not None or (
                 current_type_def := new_type_defs.get(triplet.subject, None)
             ) is not None:
                 if current_type_def in self.ontology.superclasses[triplet.object]:
@@ -112,7 +120,9 @@ class TripletExtractor(Expression):
                 )
                 continue
 
-            if not tdo and not property:  # (properties do not need type definition for object)
+            if (
+                not tdo and not property
+            ):  # (properties do not need type definition for object)
                 # Object entity does not have a type definition yet
                 errors.append(
                     f"{triplet}: Entity '{triplet.object}' lacks class assignment. First add ({triplet.object}, isA, <validClass>) before using this entity."
@@ -127,7 +137,9 @@ class TripletExtractor(Expression):
                 continue
 
             if isinstance(property, ObjectProperty):
-                if not property.is_valid_for(superclasses[current_type_def], superclasses[tdo]):
+                if not property.is_valid_for(
+                    superclasses[current_type_def], superclasses[tdo]
+                ):
                     # Ensure that the property is valid for the subject and object types
                     errors.append(
                         f"{triplet}: Property '{triplet.predicate}' cannot connect '{current_type_def}' entities to '{tdo}' entities according to the ontology constraints."
@@ -137,7 +149,9 @@ class TripletExtractor(Expression):
             # ? consider adding validation for data properties
 
         if errors:
-            raise ValueError(f"Triplet extraction failed with the following errors: \n- {'\n- '.join(errors)}")
+            raise ValueError(
+                f"Triplet extraction failed with the following errors: \n- {'\n- '.join(errors)}"
+            )
 
         return True
 
@@ -154,16 +168,24 @@ class TripletExtractor(Expression):
 
 
 def generate_kg(
-    texts: list[str], kg_name: str, ontology: Ontology, threshold: float = 0.7, batch_size: int = 1, epochs: int = 3
+    texts: list[str],
+    kg_name: str,
+    ontology: Ontology,
+    threshold: float = 0.7,
+    batch_size: int = 1,
+    epochs: int = 3,
 ) -> KG:
     extractor = TripletExtractor(name=kg_name, threshold=threshold, ontology=ontology)
 
     usage = None
     triplets = []
     for i in range(epochs):
+        n_new_triplets_in_epoch = 0
         with MetadataTracker() as tracker:
-            for i in tqdm(range(0, len(texts), batch_size)):
-                text = "\n".join(texts[i : i + batch_size])
+            for j in tqdm(
+                range(0, len(texts), batch_size), desc=f"Epoch {i + 1}/{epochs}"
+            ):
+                text = "\n".join(texts[j : j + batch_size])
 
                 input_data = TripletExtractorInput(
                     text=text,
@@ -183,8 +205,13 @@ def generate_kg(
                         n_triplets = len(triplets)
 
                         n_new_triplets = n_triplets - n_triplets_before
+                        n_new_triplets_in_epoch += n_new_triplets
 
-                        logger.debug("Extracted %i new triplets from text chunk: %s", n_new_triplets, text[:50])
+                        logger.debug(
+                            "Extracted %i new triplets from text chunk: %s",
+                            n_new_triplets,
+                            text[:50],
+                        )
 
                 except Exception as e:
                     logger.error("Error extracting triplets from text", exc_info=e)
@@ -192,6 +219,17 @@ def generate_kg(
             usage = tracker.usage
             extractor.contract_perf_stats()
 
+        logger.info(
+            "Epoch %i: Extracted %i new triplets, total %i triplets",
+            i,
+            n_new_triplets_in_epoch,
+            len(triplets),
+        )
+
         logger.debug("API Usage in Epoch %i: %s", i, usage)
+
+        if n_new_triplets_in_epoch == 0:
+            logger.info("No new triplets extracted in epoch %i, stopping early.", i)
+            break
 
     return extractor.get_kg()
