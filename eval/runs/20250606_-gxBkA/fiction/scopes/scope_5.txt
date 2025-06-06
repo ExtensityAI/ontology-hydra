@@ -1,0 +1,93 @@
+1. Domain Definition
+- This scope document covers the domain of Fiction Books, encompassing the works, concepts, and structures relevant to the creation, dissemination, categorization, and access of fictional narratives in book form.
+
+2. Core Topics Included
+
+2.1. Genres and Subgenres
+- Literary fiction
+- Commercial fiction
+- Genre fiction (e.g., mystery, science fiction, fantasy, romance, historical fiction, thriller, horror)
+- Children’s fiction
+- Young adult (YA) fiction
+- Emerging and blended genres (e.g., cli-fi, graphic novels, speculative fiction)
+
+2.2. Formats and Editions
+- Print books (hardcover, paperback)
+- E-books
+- Audiobooks
+- Serialized fiction
+- Graphic novels
+- Multilingual editions
+- Annotated and illustrated editions
+
+2.3. Authorship and Creation
+- Authors (debut, established)
+- Co-authorship and collaborations
+- Translators and adaptation specialists
+- Editors and contributors (e.g., illustrators, foreword writers)
+
+2.4. Publishing and Distribution
+- Independent/regional publishers
+- Major publishing houses
+- Self-publishing platforms
+- Digital publishing tools
+- International and multi-market distribution
+- Rights management (domestic, international, translation, adaptations)
+
+2.5. Metadata and Classification
+- Title, author(s), publication date
+- Genre, subgenre, audience level
+- Keywords and subject tags
+- Series and serializations
+- ISBN, identifiers
+- Rights and licensing metadata
+- Multilingual and cross-cultural metadata considerations
+
+2.6. Collection Management
+- Acquisition and curation strategies for libraries and publishers
+- Cataloging systems (Dewey, BISAC, custom schemas)
+- Digital collection management tools
+- Community-driven collection development (focus groups, outreach)
+
+2.7. Access and Discovery
+- Library lending systems
+- Online retail and e-book platforms
+- Recommendation and search algorithms
+- Accessibility features (format choices, language, reading levels, assistive tech)
+- Open data and interoperability for discovery
+
+2.8. Audience and Reader Engagement
+- Demographic segmentation (children, YA, adults)
+- Emerging reader trends and preferences
+- Diversity and inclusivity in representation
+- Community outreach and reading programs
+- Social media and digital engagement methods
+
+2.9. Rights, Licensing, and Contracts
+- Literary agent representation
+- Contract negotiation basics
+- International and translation rights
+- Adaptation rights (film, audio, etc.)
+- Digital rights management (DRM), copyright
+
+2.10. Technological Foundations
+- Semantic web and ontology modeling for fiction
+- Machine learning and automated classification
+- Multilingual taxonomy design
+- Metadata standards (ONIX, MARC, Dublin Core)
+
+2.11. Special Considerations
+- Underrepresented markets and linguistic diversity
+- Non-traditional and hybrid fiction formats
+- Preservation of regional and niche voices
+- Community feedback mechanisms
+
+3. Topics Explicitly Out of Scope
+- Non-fiction works (biography, memoir, reference)
+- Poetry outside narrative forms
+- Academic and scholarly publishing (unless directly tied to fiction work creation or dissemination)
+- Solely oral storytelling without recorded/literary form
+- Film, television, and game adaptations as separate domains (unless as rights/adaptation considerations for fiction books)
+
+4. Vocabulary Establishment
+- This document establishes a shared terminology for discussing fiction books, their classification, creation, access, and management, serving as the foundation for future ontology development and collaborative work in the domain.

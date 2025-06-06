@@ -1,0 +1,89 @@
+1. Domain Overview
+- The scope of this document is 'Fiction Books', encompassing written works classified as narrative literature created from imaginative invention rather than strictly factual or historical sources.
+
+2. Book Attributes
+  2.1 Core Bibliographic Metadata
+    - Title
+    - Author(s) and Contributors
+    - Publisher
+    - Publication Date
+    - ISBN/Identifiers
+    - Language(s) of Publication
+    - Edition/Format (e.g., print, e-book, audiobook)
+  2.2 Structural Elements
+    - Chapters and sections
+    - Foreword, afterword, preface, introduction, epilogue
+    - Illustrations and supplemental content (e.g., maps, appendices)
+
+3. Genre and Classification
+  3.1 Major Fiction Genres
+    - Literary fiction
+    - Genre fiction (e.g., science fiction, fantasy, detective/mystery, romance, horror, historical fiction, magical realism, adventure)
+    - Cross-genre and hybrid works
+    - Subgenres and niche categories
+  3.2 Classification Schemes
+    - Dewey Decimal and Library of Congress classification codes
+    - Reader-oriented tags and folksonomies
+    - Regional and non-Western genre conventions
+  3.3 Thematic and Topical Categorization
+    - Major themes (e.g., coming of age, dystopia, identity, social justice)
+    - Subject keywords
+    - Representation (e.g., underrepresented voices, cultural backgrounds, social-emotional themes)
+
+4. Narrative Elements
+  4.1 Narrative Style
+    - Point of view (e.g., first person, third person)
+    - Narrative voice (e.g., omniscient, unreliable narrator)
+    - Structural forms (e.g., linear, non-linear, epistolary)
+  4.2 Characterization
+    - Protagonists, antagonists, supporting characters
+    - Character archetypes
+    - Character development and arcs
+
+5. Cultural and Linguistic Context
+  5.1 Original Language and Translations
+    - Source language
+    - Translated editions
+    - Multilingual works
+  5.2 Regional/Global Literary Traditions
+    - Non-Western literary movements and genres
+    - Contextual tags for cross-cultural studies
+
+6. Accessibility and Formats
+  6.1 Accessible Editions
+    - Large print
+    - Audio versions
+    - E-book accessibility features (e.g., screen reader compatibility, adjustable font sizes)
+  6.2 Digital Book Metadata
+    - Format-specific metadata (e.g., EPUB, MOBI, PDF)
+    - DRM and lending permissions
+
+7. Educational and Reader Engagement Aspects
+  7.1 Curriculum Alignment
+    - Alignment with educational standards
+    - Reading level/complexity indicators
+    - Social-emotional learning connections
+  7.2 Learning Resources and Activities
+    - Discussion guides
+    - Interactive elements (e.g., quizzes, multimedia annotations)
+    - Integration into learning management systems
+  7.3 Reading Communities
+    - Reviews, ratings, and user tags
+    - Reading group guides and discussion forums
+
+8. Discovery and Search Functionality
+  8.1 Searchable Metadata Fields
+    - Author, title, genre, keywords, publication year
+  8.2 Recommendation Systems
+    - AI-driven personalization
+    - Collaborative filtering
+  8.3 Multilingual and Cross-cultural Search
+    - Support for multiple languages
+    - Mapping between regional genre conventions
+
+9. Exclusions
+- Non-fiction works (e.g., biographies, essays, reference books)
+- Purely oral, visual, or audio stories without written narrative forms
+- Works where factual accuracy is necessary to the primary function (e.g., journalism, academic monographs)
+
+This scope document establishes a shared vocabulary and boundary for the domain of Fiction Books, supporting metadata integration, educational use, global genre representation, reader engagement, and discovery across digital and physical contexts.

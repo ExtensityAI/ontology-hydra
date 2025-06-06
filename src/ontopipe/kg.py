@@ -96,6 +96,8 @@ class TripletExtractor(Expression):
             current_type_def = all_type_defs.get(triplet.subject, None)
             tdo = all_type_defs.get(triplet.object, None)
 
+            property = self.ontology.get_property(triplet.predicate)
+
             if not current_type_def:
                 # Ensure that the subject entity has a type definition
                 errors.append(
@@ -110,14 +112,12 @@ class TripletExtractor(Expression):
                 )
                 continue
 
-            if not tdo:
+            if not tdo and not property:  # (properties do not need type definition for object)
                 # Object entity does not have a type definition yet
                 errors.append(
                     f"{triplet}: Entity '{triplet.object}' lacks class assignment. First add ({triplet.object}, isA, <validClass>) before using this entity."
                 )
                 continue
-
-            property = self.ontology.get_property(triplet.predicate)
 
             if not property:
                 # Ensure that the predicate is a valid ontology property
@@ -154,39 +154,44 @@ class TripletExtractor(Expression):
 
 
 def generate_kg(
-    texts: list[str],
-    kg_name: str,
-    ontology: Ontology,
-    threshold: float = 0.7,
-    batch_size: int = 1,
+    texts: list[str], kg_name: str, ontology: Ontology, threshold: float = 0.7, batch_size: int = 1, epochs: int = 3
 ) -> KG:
     extractor = TripletExtractor(name=kg_name, threshold=threshold, ontology=ontology)
 
     usage = None
     triplets = []
-    with MetadataTracker() as tracker:
-        for i in tqdm(range(0, len(texts), batch_size)):
-            text = "\n".join(texts[i : i + batch_size])
+    for i in range(epochs):
+        with MetadataTracker() as tracker:
+            for i in tqdm(range(0, len(texts), batch_size)):
+                text = "\n".join(texts[i : i + batch_size])
 
-            input_data = TripletExtractorInput(
-                text=text,
-                ontology=ontology,
-                state=KGState(triplets=triplets) if triplets else None,
-            )
+                input_data = TripletExtractorInput(
+                    text=text,
+                    ontology=ontology,
+                    state=KGState(triplets=triplets) if triplets else None,
+                )
 
-            try:
-                # TODO we can drastically reduce input size by sending triplets in a form of (subject, predicate, object) instead of escaped JSON
-                result = extractor(input=input_data)
-                if result.triplets is not None:
-                    new_triplets = result.triplets
-                    triplets.extend(new_triplets)
-                    extractor.extend_triplets(new_triplets)
-            except Exception as e:
-                logger.error("Error extracting triplets from text", exc_info=e)
+                try:
+                    # TODO we can drastically reduce input size by sending triplets in a form of (subject, predicate, object) instead of escaped JSON
+                    result = extractor(input=input_data)
 
-        usage = tracker.usage
-        extractor.contract_perf_stats()
+                    if result.triplets is not None:
+                        n_triplets_before = len(triplets)
+                        new_triplets = result.triplets
+                        triplets.extend(new_triplets)
+                        extractor.extend_triplets(new_triplets)
+                        n_triplets = len(triplets)
 
-    logger.debug("API Usage: %s", usage)
+                        n_new_triplets = n_triplets - n_triplets_before
+
+                        logger.debug("Extracted %i new triplets from text chunk: %s", n_new_triplets, text[:50])
+
+                except Exception as e:
+                    logger.error("Error extracting triplets from text", exc_info=e)
+
+            usage = tracker.usage
+            extractor.contract_perf_stats()
+
+        logger.debug("API Usage in Epoch %i: %s", i, usage)
 
     return extractor.get_kg()

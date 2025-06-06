@@ -1,0 +1,79 @@
+1. Definition of the Domain: Fiction Books
+- Works of narrative prose that are invented or imagined by the author
+- Excludes non-fiction, academic texts, and reference materials
+- Includes both traditionally and digitally published works, as well as self-published books
+
+2. Genres and Subgenres
+- Literary fiction
+- Speculative fiction (science fiction, fantasy, alternate history, dystopian)
+- Historical fiction
+- Experimental fiction
+- Magical realism
+- Young adult and children's fiction
+- Mystery/thriller/crime
+- Romance and related subgenres
+- Multicultural and cross-cultural fiction
+- Genre hybrids and emergent genres
+
+3. Language and Cultural Scope
+- Fiction written in a variety of languages (including English and regional/indigenous languages)
+- Works that integrate multicultural themes or cross-cultural storytelling
+- Translated fiction and bilingual/multilingual works
+
+4. Audience and Target Readers
+- Adult
+- Young adult (YA)
+- Middle grade
+- Children's (varied reading levels)
+- Diverse audiences, including marginalized voices
+
+5. Authorship and Creators
+- Individual authors (including debut and established writers)
+- Collaborative authorship (teams, writing pairs)
+- Self-published and traditionally published authors
+- Representation by literary agents
+
+6. Publishing Models
+- Traditional publishing
+- Digital publishing (e-books, digital-first, web serials)
+- Self-publishing platforms
+- Hybrid publishing models
+
+7. Book Formats and Editions
+- Print (hardcover, paperback)
+- Digital (e-book formats)
+- Audiobook
+- Special editions (annotated, illustrated)
+- Serializations (web, magazine, periodical)
+
+8. Narrative Structures and Literary Features
+- Plot, character, setting, and theme
+- Narrative voice and point of view
+- Narrative experimentation (non-linear, fragmented, interactive)
+- Integration of cultural or historical references
+
+9. Metadata and Classification
+- Book titles and authors
+- Genre/subgenre tags
+- Age and reading level
+- Language and translation information
+- Publication date and edition
+- ISBN and other identifiers
+- Thematic keywords (multiculturalism, social justice, etc.)
+
+10. Educational and Literacy Contexts
+- Use in formal and informal education settings
+- Adaptations by reading level and learner needs
+- Curriculum integration
+- Digital and multimedia resources for education
+- Emphasis on empathy, critical thinking, and cultural awareness through fiction
+
+11. Legal and Rights Considerations
+- Copyright status and licenses
+- Author agreements (including translation and adaptation rights)
+- Rights management in digital and traditional publishing
+
+12. Exclusions
+- Non-fiction works (biographies, history, essays, etc.)
+- Purely visual narrative formats (comics, graphic novels) unless closely aligned with prose fiction themes
+- Oral storytelling unless transcribed or published as fiction books

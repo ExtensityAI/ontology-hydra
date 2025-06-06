@@ -222,33 +222,6 @@ Ensure your personas collectively cover the full spectrum of relevant domain exp
 """,
 )
 
-prompt_registry.register_instruction(
-    PromptLanguage.ENGLISH,
-    "generate_questions",
-    f"""{prompt_registry.tag("questions")}
-You represent a group of different experts as stated below in <group/> tags.. You have been presented with a scope document for an ontology in the given domain.
-
-## Your Task
-Based on your expertise and the provided scope document, generate a list of questions that you  would want answered by a comprehensive ontology in this domain.
-
-## Guidelines for Question Generation
-1. Focus on questions that are important to you as an expert in this field
-2. Consider questions about:
-   * Key concepts and their definitions
-   * Important distinctions between related terms
-   * Essential classifications or categorizations
-   * Critical attributes or properties
-   * Domain-specific constraints or rules
-
-## Output Format
-1. Organize your questions into a simple list format (- ...)
-2. Ensure each question is specific and concrete
-3. Phrase questions to elicit detailed, precise answers
-4. ONLY provide the list of questions, nothing else!
-
-Generate only questions that you, as these specific expert personas, would consider relevant and important for understanding the domain. Do not include questions outside your area of expertise.
-""",
-)
 
 prompt_registry.register_instruction(
     PromptLanguage.ENGLISH,
@@ -285,8 +258,6 @@ Your task is to create a scope document that defines the key topics and boundari
 
 ## Content Guidelines
 * Define what is included in this domain
-* Identify what is explicitly excluded
-* Note any gray areas or overlaps with adjacent domains
 
 Keep your document concise and focused on establishing a shared vocabulary and clear boundaries for future discussions.""",
 )
@@ -318,4 +289,38 @@ Your task is to merge the provided scope documents into a single, comprehensive,
 - Do not add any external information not present in the source documents
 - Do not omit significant details from any source document
 - Preserve domain-specific terminology and definitions""",
+)
+
+prompt_registry.register_instruction(
+    PromptLanguage.ENGLISH,
+    "generate_questions",
+    f"""{prompt_registry.tag("competency_question")}
+You are generating competency questions for an ontology in the specified domain.
+
+## What Are Competency Questions?
+Competency questions are specific queries that domain users would want to answer using the ontology. They:
+- Represent real information needs of users, not questions about the ontology itself
+- Should be answerable using the knowledge captured in the ontology
+- Help define the scope and requirements for the ontology
+
+## Examples of Good Competency Questions (for a publication ontology)
+- "Who are the authors of paper X?"
+- "Which papers cite methodology Y?"
+- "What experiments were conducted using equipment Z?"
+- "Which publications resulted from grant G?"
+- "What are all the research topics covered by lab L?"
+
+## Examples of BAD Questions (These are about the ontology design, not competency questions)
+- "How does the ontology represent different types of publications?"
+- "How does the ontology model the relationship between authors and papers?"
+
+## Guidelines
+1. Write questions from the perspective of domain users, not ontology engineers
+2. Focus on specific information users would need to retrieve
+3. Ensure questions are concrete and answerable with facts
+4. Cover diverse aspects of the domain
+5. Phrase questions using natural language as users would ask them
+
+Generate a list of at least 10 competency questions following these guidelines.
+""",
 )
