@@ -6,7 +6,7 @@ from pathlib import Path
 from symai.components import DynamicEngine
 
 from ontopipe.cqs.comittee import Comittee, generate_comittee_for_domain
-from ontopipe.cqs.question_generation import generate_questions
+from ontopipe.cqs.question_generation import QuestionDeduplicator, Questions, generate_questions
 from ontopipe.cqs.scoping import generate_scope_document, merge_scope_documents
 from ontopipe.models import Ontology
 from ontopipe.ontology.ontology_fixing import fix_ontology
@@ -66,6 +66,22 @@ def _generate_scope_with_cache(domain: str, comittee: Comittee, cache_path: Path
     return _merge_scope_documents_with_cache(domain, documents, merged_scope_path)
 
 
+def _deduplicate_cqs(cqs: list[str]) -> list[str]:
+    cqs = list(set(cqs))
+    cqs = sorted(cqs, key=lambda x: len(x.split(" ")), reverse=True)
+
+    with MetadataTracker() as tracker:
+        deduplicator = QuestionDeduplicator()
+        deduplicated_cqs = deduplicator(input=Questions(items=cqs))
+
+        deduplicator.contract_perf_stats()
+        logger.debug("CQ Deduplication API Usage: %s", tracker.usage)
+
+    logger.debug("Deduplicated %d CQs to %d unique CQs", len(cqs), len(deduplicated_cqs.items))
+
+    return deduplicated_cqs.items
+
+
 def _generate_cqs_with_cache(domain: str, merged_scope: str, comittee: Comittee, cache_path: Path):
     combined_cqs_path = cache_path / "cqs_combined.txt"
 
@@ -85,6 +101,9 @@ def _generate_cqs_with_cache(domain: str, merged_scope: str, comittee: Comittee,
         group_cqs = generate_questions(domain, group, merged_scope)
         group_cqs_cache_path.write_text("\n".join(group_cqs))
         cqs.extend(group_cqs)
+
+    # deduplicate CQs
+    cqs = _deduplicate_cqs(cqs)
 
     combined_cqs_path.write_text("\n".join(cqs))
 

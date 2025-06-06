@@ -12,7 +12,7 @@ logger = getLogger("ontopipe.cqs")
 
 
 class Priority(LLMDataModel):
-    reason: str = Field(..., description="Reason for the priority")
+    reason: str = Field(..., description="Why this priority was assigned")
     value: Literal["high", "medium", "low"]
 
 
@@ -35,9 +35,7 @@ class DomainDefinition(LLMDataModel):
     post_remedy=True,
     accumulate_errors=False,
     verbose=True,
-    remedy_retry_params=dict(
-        tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False
-    ),
+    remedy_retry_params=dict(tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False),
 )
 class GroupsGenerator(Expression):
     def __init__(self, *args, **kwargs):

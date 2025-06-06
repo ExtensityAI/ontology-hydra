@@ -1,4 +1,3 @@
-import json
 import logging
 from pathlib import Path
 
@@ -8,6 +7,7 @@ from symai.strategy import contract
 from tqdm import tqdm
 
 from ontopipe.models import (
+    Class,
     DataProperty,
     ObjectProperty,
     Ontology,
@@ -30,13 +30,9 @@ logger = logging.getLogger("ontopipe.ontology_generation")
     remedy_retry_params=dict(tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False),
 )
 class OWLBuilder(Expression):
-    def __init__(self, name: str, *args, **kwargs):
+    def __init__(self, ontology: Ontology, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.name = name
-        self._classes = set()
-        self._subclass_relations = set()
-        self._object_properties = set()
-        self._data_properties = set()
+        self._ontology = ontology
 
     @property
     def prompt(self) -> str:
@@ -60,42 +56,106 @@ class OWLBuilder(Expression):
                     )"""
 
         # TODO check if classes exist etc.
+
+        errors = []
+
+        all_superclasses = self._ontology.superclasses
+
+        for concept in output.concepts:
+            if isinstance(concept, Class):
+                # check if class already exists
+                if self._ontology.has_class(concept.name):
+                    errors.append(
+                        f"Class '{concept.name}' already exists in the ontology. Please ensure unique class names."
+                    )
+
+                    continue
+
+            elif isinstance(concept, SubClassRelation):
+                # check if subclass and superclass exist
+                if not self._ontology.has_class(concept.subclass):
+                    errors.append(f"Subclass {concept.subclass} does not exist in the ontology.")
+                    continue
+
+                if not self._ontology.has_class(concept.superclass):
+                    errors.append(f"Superclass {concept.superclass} does not exist in the ontology.")
+                    continue
+
+                # check if prospective subclass is already defined as a subclass
+                if (superclass := self._ontology.get_superclass_of(concept.subclass)) is not None:
+                    errors.append(
+                        f"Subclass '{concept.subclass}' is already defined as a subclass of '{superclass}'. Please ensure that each subclass has only one direct superclass."
+                    )
+
+                    continue
+
+                # ensure no circular subclass relations
+                su_superclasses = all_superclasses[concept.superclass]
+                sc_superclasses = all_superclasses[concept.subclass]
+
+                if any(sc in su_superclasses for sc in sc_superclasses):
+                    errors.append(
+                        f"Circular subclass relation detected: '{concept.subclass}' cannot be a subclass of '{concept.superclass}' as it is already a superclass of one of its subclasses."
+                    )
+                    continue
+
+            elif isinstance(concept, ObjectProperty):
+                # check if object property already exists
+                if self._ontology.has_property(concept.name):
+                    errors.append(
+                        f"Property '{concept.name}' already exists in the ontology. Please ensure unique object property names."
+                    )
+                    continue
+
+                # check if domains and ranges are valid classes
+                for domain in concept.domain:
+                    if not self._ontology.has_class(domain):
+                        errors.append(f"Domain class '{domain}' of object property '{concept.name}' does not exist.")
+                        continue
+
+                for range in concept.range:
+                    if not self._ontology.has_class(range):
+                        errors.append(f"Range class '{range}' of object property '{concept.name}' does not exist.")
+                        continue
+
+            elif isinstance(concept, DataProperty):
+                # check if data property already exists
+                if self._ontology.has_property(concept.name):
+                    errors.append(
+                        f"Property '{concept.name}' already exists in the ontology. Please ensure unique data property names."
+                    )
+                    continue
+
+                # check if domains are valid classes
+                for domain in concept.domain:
+                    if not self._ontology.has_class(domain):
+                        errors.append(f"Domain class '{domain}' of data property '{concept.name}' does not exist.")
+                        continue
+
         return True
+
+    def dump_ontology(self, folder: Path, fname: str = "ontology.json"):
+        """Dumps the current ontology to a JSON file."""
+        if not folder.exists():
+            folder.mkdir(parents=True, exist_ok=True)
+
+        ontology_path = folder / fname
+        with ontology_path.open("w", encoding="utf-8") as f:
+            f.write(self._ontology.model_dump_json(indent=2))
+        logger.debug("Ontology dumped to %s", ontology_path)
 
     def extend_concepts(self, concepts: list):
         for concept in concepts:
-            if isinstance(concept, SubClassRelation):
-                self._classes.add(concept.subclass)
-                self._classes.add(concept.superclass)
-                self._subclass_relations.add(concept)
+            if isinstance(concept, Class):
+                self._ontology.classes.append(concept)
+            elif isinstance(concept, SubClassRelation):
+                self._ontology.subclass_relations.append(concept)
             elif isinstance(concept, ObjectProperty):
-                for domain in concept.domain:
-                    self._classes.add(domain)
-                for range in concept.range:
-                    self._classes.add(range)
-                self._object_properties.add(concept)
+                self._ontology.object_properties.append(concept)
             elif isinstance(concept, DataProperty):
-                for domain in concept.domain:
-                    self._classes.add(domain)
-                self._data_properties.add(concept)
-
-    def get_ontology(self) -> Ontology:
-        return Ontology(
-            name=self.name,
-            subclass_relations=self._subclass_relations,
-            object_properties=self._object_properties,
-            data_properties=self._data_properties,
-        )
-
-    def dump_ontology(self, folder: Path, fname: str = "ontology.json"):
-        ontology = self.get_ontology()
-        if not folder.exists():
-            folder.mkdir(parents=True)
-        with open(folder / fname, "w") as f:
-            json.dump(ontology.model_dump(), f, indent=4)
-
-    def to_rdf(self, folder: Path, fname: str = "ontology.rdf"):
-        raise NotImplementedError("to_rdf method not implemented")
+                self._ontology.data_properties.append(concept)
+            else:
+                logger.warning(f"Unknown concept type: {type(concept)}. Skipping.")
 
 
 def generate_ontology(
@@ -108,7 +168,7 @@ def generate_ontology(
     builder = OWLBuilder(name=ontology_name)
 
     usage = None
-    state = OntologyState(concepts=None)
+    state = OntologyState(concepts=[])
     concepts = []
     with MetadataTracker() as tracker:  # For gpt-* models
         for i in tqdm(range(0, len(cqs), batch_size)):

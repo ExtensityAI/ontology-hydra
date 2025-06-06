@@ -22,15 +22,11 @@ logger = getLogger("ontopipe.kg")
     pre_remedy=False,
     post_remedy=True,
     verbose=True,
-    remedy_retry_params=dict(
-        tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False
-    ),
+    remedy_retry_params=dict(tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False),
     accumulate_errors=False,
 )
 class TripletExtractor(Expression):
-    def __init__(
-        self, name: str, ontology: Ontology, threshold: float = 0.7, *args, **kwargs
-    ):
+    def __init__(self, name: str, ontology: Ontology, threshold: float = 0.7, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.name = name
         self.threshold = threshold
@@ -46,10 +42,6 @@ class TripletExtractor(Expression):
         return True
 
     def post(self, output: KGState) -> bool:
-        # TODO if this is too difficult for the model to fix, maybe instead prompt it with the errors in batches and let it fix them then.
-
-        # TODO found problem: model often adds triplets that refer to multiple entities like (someone, invites, JemScoutAndDill) but that should probably be three separate triplets?
-
         if output.triplets is None:
             return True  # Nothing was extracted.
 
@@ -59,35 +51,37 @@ class TripletExtractor(Expression):
         errors = []
 
         new_type_defs = dict[str, str]()
-        existing_type_defs = {
-            x.subject: x.object for x in self._triplets if x.predicate == "isA"
-        }
+        existing_type_defs = {x.subject: x.object for x in self._triplets if x.predicate == "isA"}
 
-        # TODO: add information on how to fix for each of the errors
-        # TODO: consider adding context information to errors (i.e. for what types a property is valid, etc.)
+        # ?: add information on how to fix for each of the errors
+        # ?: consider adding context information to errors (i.e. for what types a property is valid, etc.)
 
         # first iteration: check for new isA triplets, ensure that they are valid
         for triplet in (t for t in triplets if t.predicate == "isA"):
-            if (tds := existing_type_defs.get(triplet.subject, None)) is not None or (
-                tds := new_type_defs.get(triplet.subject, None)
+            if (current_type_def := existing_type_defs.get(triplet.subject, None)) is not None or (
+                current_type_def := new_type_defs.get(triplet.subject, None)
             ) is not None:
+                if current_type_def in self.ontology.superclasses[triplet.object]:
+                    # allow to redefine a type definition if the new one is a subclass of the current one
+                    continue
+
                 # Ensure that the subject entity does not have a type def already
                 errors.append(
-                    f"{triplet}: Subject '{triplet.subject}' is already defined as type '{tds}' and cannot be redefined. To fix, omit this triplet."
+                    f"{triplet}: Entity '{triplet.subject}' already classified as '{current_type_def}'. Cannot reclassify as '{triplet.object}' unless it's a subclass. Either remove this triplet or use a valid subclass."
                 )
                 continue
 
             if not self.ontology.has_class(triplet.object):
                 # ensure ontology has class for object
                 errors.append(
-                    f"{triplet}: '{triplet.object}' is not a valid ontology class! To fix this, either choose an appropriate class or consider not adding this entity."
+                    f"{triplet}: '{triplet.object}' is not a defined class in the ontology schema. For isA relations, the object must be a class defined in the ontology schema."
                 )
                 continue
 
             if self.ontology.has_class(triplet.subject):
                 # Ensure that the subject is not an ontology class
                 errors.append(
-                    f"{triplet}: Subject '{triplet.subject}' can not be an ontology class! To fix this, choose a name for the subject that is not an ontology class."
+                    f"{triplet}: '{triplet.subject}' is a class, not an entity instance. In isA relations, the subject must be an entity instance, not a class."
                 )
                 continue
 
@@ -99,27 +93,27 @@ class TripletExtractor(Expression):
 
         # second iteration: make sure triplets have valid type definitions
         for triplet in (t for t in triplets if t.predicate != "isA"):
-            tds = all_type_defs.get(triplet.subject, None)
+            current_type_def = all_type_defs.get(triplet.subject, None)
             tdo = all_type_defs.get(triplet.object, None)
 
-            if not tds:
+            if not current_type_def:
                 # Ensure that the subject entity has a type definition
                 errors.append(
-                    f"{triplet}: Subject '{triplet.subject}' does not have a type definition. To fix this, add a triplet ({triplet.subject}, isA, <class>) to define the ontology class of the subject."
+                    f"{triplet}: Entity '{triplet.subject}' lacks class assignment. First add ({triplet.subject}, isA, <validClass>) before using this entity."
                 )
                 continue
 
             if self.ontology.has_class(triplet.object):
                 # Ensure that the object entity is not an ontology class (this is only allowed for isA predicates!)
                 errors.append(
-                    f"{triplet}: Object '{triplet.object}' can not be an ontology class! To fix this, you need to choose an object that is an entity and not an ontology class."
+                    f"{triplet}: '{triplet.object}' is a class definition, not an entity instance. For non-isA relations, both subject and object must be entity instances."
                 )
                 continue
 
             if not tdo:
                 # Object entity does not have a type definition yet
                 errors.append(
-                    f"{triplet}: Object '{triplet.object}' does not belong to a class yet! To fix this, add a triplet ({triplet.object}, isA, <class>) to define the ontology class of the object."
+                    f"{triplet}: Entity '{triplet.object}' lacks class assignment. First add ({triplet.object}, isA, <validClass>) before using this entity."
                 )
                 continue
 
@@ -128,22 +122,22 @@ class TripletExtractor(Expression):
             if not property:
                 # Ensure that the predicate is a valid ontology property
                 errors.append(
-                    f"{triplet}: Predicate '{triplet.predicate}' is not a valid ontology property! To fix this, either choose an appropriate property or consider not adding this triplet."
+                    f"{triplet}: '{triplet.predicate}' is not a valid property in the ontology schema. Use only defined properties from the schema."
                 )
                 continue
 
             if isinstance(property, ObjectProperty):
-                if not property.is_valid_for(superclasses[tds], superclasses[tdo]):
+                if not property.is_valid_for(superclasses[current_type_def], superclasses[tdo]):
                     # Ensure that the property is valid for the subject and object types
                     errors.append(
-                        f"{triplet}: Predicate '{triplet.predicate}' is not valid for subject type '{tds}' and object type '{tdo}'. To fix this, either choose an appropriate property or consider not adding this triplet."
+                        f"{triplet}: Property '{triplet.predicate}' cannot connect '{current_type_def}' entities to '{tdo}' entities according to the ontology constraints."
                     )
                     continue
 
+            # ? consider adding validation for data properties
+
         if errors:
-            raise ValueError(
-                f"Triplet extraction failed with the following errors: \n- {'\n- '.join(errors)}"
-            )
+            raise ValueError(f"Triplet extraction failed with the following errors: \n- {'\n- '.join(errors)}")
 
         return True
 

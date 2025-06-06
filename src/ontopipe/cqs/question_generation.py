@@ -59,3 +59,30 @@ def generate_questions(domain: str, group: list[ComitteeMember], scope_document:
         logger.debug("API Usage: %s", tracker.usage)
 
     return result.items
+
+
+@contract(
+    pre_remedy=False,
+    post_remedy=True,
+    accumulate_errors=False,
+    verbose=True,
+    remedy_retry_params=dict(tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False),
+)
+class QuestionDeduplicator(Expression):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+    def forward(self, input: Questions, **kwargs) -> Questions:
+        if self.contract_result is None:
+            raise ValueError("Contract failed!")
+        return self.contract_result
+
+    def post(self, output: Questions) -> bool:
+        # Ensure we have at least one question after deduplication
+        if not output.items or len(output.items) == 0:
+            return False
+        return True
+
+    @property
+    def prompt(self) -> str:
+        return prompt_registry.instruction("deduplicate_questions")
