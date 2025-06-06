@@ -1,1 +1,0 @@
-uv run python ..\..\demo.py --input 2402.00854v4.pdf --domain "Research papers, their related academic entities and concepts. Used to create a searchable database." -b 4 -c 1024 --output .
