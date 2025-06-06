@@ -174,3 +174,5 @@ cython_debug/
 
 artifacts/.DS_Store
 .DS_Store
+
+experiment.ipynb

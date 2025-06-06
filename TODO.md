@@ -13,4 +13,5 @@
 - [x] make checkpoints immutable (do not overwrite files)
 - [x] move evaluation to separate uv workspace
 
-- [ ] move kg to neo4j
+- [ ] convert kg to neo4j
+- [ ] figure out other evals that could be interesting
