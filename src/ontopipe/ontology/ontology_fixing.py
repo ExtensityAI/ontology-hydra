@@ -208,7 +208,12 @@ class Weaver(Expression):
                 if new_domain and new_range:
                     filtered_object_properties.append(
                         ObjectProperty(
-                            name=prop.name, domain=new_domain, range=new_range, characteristics=prop.characteristics
+                            name=prop.name,
+                            description=prop.description,
+                            usage_guideline=prop.usage_guideline,
+                            domain=new_domain,
+                            range=new_range,
+                            characteristics=prop.characteristics,
                         )
                     )
             new_ontology.object_properties = filtered_object_properties
@@ -219,7 +224,12 @@ class Weaver(Expression):
                 if new_domain:
                     filtered_data_properties.append(
                         DataProperty(
-                            name=prop.name, domain=new_domain, range=prop.range, characteristics=prop.characteristics
+                            name=prop.name,
+                            description=prop.description,
+                            usage_guideline=prop.usage_guideline,
+                            domain=new_domain,
+                            range=prop.range,
+                            characteristics=prop.characteristics,
                         )
                     )
             new_ontology.data_properties = filtered_data_properties
@@ -248,7 +258,12 @@ class Weaver(Expression):
                 if new_domain and new_range:
                     new_object_properties.append(
                         ObjectProperty(
-                            name=prop.name, domain=new_domain, range=new_range, characteristics=prop.characteristics
+                            name=prop.name,
+                            description=prop.description,
+                            usage_guideline=prop.usage_guideline,
+                            domain=new_domain,
+                            range=new_range,
+                            characteristics=prop.characteristics,
                         )
                     )
             new_ontology.object_properties = new_object_properties
@@ -259,7 +274,12 @@ class Weaver(Expression):
                 if new_domain:
                     new_data_properties.append(
                         DataProperty(
-                            name=prop.name, domain=new_domain, range=prop.range, characteristics=prop.characteristics
+                            name=prop.name,
+                            description=prop.description,
+                            usage_guideline=prop.usage_guideline,
+                            domain=new_domain,
+                            range=prop.range,
+                            characteristics=prop.characteristics,
                         )
                     )
             new_ontology.data_properties = new_data_properties

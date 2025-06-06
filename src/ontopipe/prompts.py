@@ -40,6 +40,9 @@ Analyze competency questions to identify ontological requirements and extract fo
 * Provide clear, concise definitions establishing essential characteristics
 * Position appropriately in the class hierarchy
 * Ensure each class represents a distinct, coherent domain concept
+* Always declare new classes with complete definitions before referencing them in subclass relations
+* Each class must be formally defined before it can be used in any relationship
+* Create consistent, reusable class definitions that can be referenced multiple times
 
 {prompt_registry.tag("owl_object_property")}
 * Connect instances to other instances (relationships between individuals)
@@ -77,17 +80,32 @@ Analyze competency questions to identify ontological requirements and extract fo
    - Correct: `publishedInYear` (xsd:integer) data property 
    - Incorrect: Creating a `Year` class with object properties
    
-2. Reuse established ontology design patterns
+2. Use object properties for relationships, not classes
+   - Correct: `hasAuthor` as an object property between `Paper` and `Person`
+   - Incorrect: Creating an `Authorship` class to connect papers and people
+   
+3. Reuse established ontology design patterns
    - Apply standard solutions before creating custom structures
    - Maintain compatibility with common knowledge modeling approaches
    
-3. Follow minimal ontological commitment
+4. Follow minimal ontological commitment
    - Include only concepts essential for answering competency questions
    - Avoid overengineering or excessive detail
 
-4. Ensure logical consistency throughout the ontology
+5. Ensure logical consistency throughout the ontology
    - Avoid contradictions in class hierarchies and property definitions
    - Maintain coherent semantic relationships
+
+6. Maintain a single-root hierarchical structure
+   - Design exactly one top-level abstract class (often named "Thing")
+   - Ensure all other classes are descendants (direct or indirect) of this root class
+   - Create a coherent tree structure where every class has a path to the root
+
+7. Avoid redundant encoding of information
+   - Use subclass relations to encode inherent categorical distinctions
+   - Do not create properties that duplicate information already encoded in the class hierarchy
+   - Example: If you have Article with subclasses ReviewArticle and EmpiricalStudy, do not create a 
+     redundant "hasArticleType" data property that encodes this same classification
 
 # Naming Conventions
 1. Classes: PascalCase (e.g., `ResearchPaper`, `Author`)
@@ -236,30 +254,19 @@ prompt_registry.register_instruction(
     PromptLanguage.ENGLISH,
     "deduplicate_questions",
     f"""{prompt_registry.tag("questions")}
-You are a data cleaning assistant specialized in identifying and removing duplicate questions.
+Review the provided questions and return only unique questions.
 
-## Your Task
-Analyze the provided list of questions and remove any duplicates while preserving the exact wording of each unique question.
+Two questions are duplicates if:
+- They ask for the same information (even with different wording)
+- They represent the same information need
 
-## Guidelines
-1. Consider questions as duplicates if they:
-   * Ask for the same information despite minor wording differences
-   * Would elicit identical answers from a knowledge base
-   * Represent the same conceptual query with different phrasing
+Instructions:
+1. Compare each question against all others
+2. Only keep the first occurrence of any semantically identical question
+3. Return the deduplicated list in the original format
+4. Return ONLY the questions themselves with no additional text
 
-2. When identifying duplicates:
-   * Preserve the first occurrence of any duplicate question
-   * Remove all subsequent occurrences
-   * Maintain the original order of questions
-
-## Output Requirements
-1. Return only the deduplicated list of questions
-2. Maintain the exact original wording of each question
-3. Keep the original formatting (bullet points, numbering)
-4. Do not add any explanations or comments to the output
-5. Do not modify, rephrase, or improve any questions - return them exactly as provided
-
-Return only the deduplicated list of questions, preserving their original form.
+Return only the deduplicated question list and nothing else.
 """,
 )
 

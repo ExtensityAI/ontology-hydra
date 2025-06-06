@@ -3,7 +3,7 @@ import tempfile
 from logging import getLogger
 from pathlib import Path
 
-from symai.components import DynamicEngine
+from symai.components import DynamicEngine, MetadataTracker
 
 from ontopipe.cqs.comittee import Comittee, generate_comittee_for_domain
 from ontopipe.cqs.question_generation import QuestionDeduplicator, Questions, generate_questions

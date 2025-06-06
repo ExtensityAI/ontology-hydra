@@ -22,6 +22,10 @@ class Questions(LLMDataModel):
     items: List[str] = Field(..., description="List of generated questions")
 
 
+class DeduplicatedQuestions(LLMDataModel):
+    items: List[str] = Field(..., description="List of deduplicated questions")
+
+
 @contract(
     pre_remedy=False,
     post_remedy=True,
@@ -72,12 +76,12 @@ class QuestionDeduplicator(Expression):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-    def forward(self, input: Questions, **kwargs) -> Questions:
+    def forward(self, input: Questions, **kwargs) -> DeduplicatedQuestions:
         if self.contract_result is None:
             raise ValueError("Contract failed!")
         return self.contract_result
 
-    def post(self, output: Questions) -> bool:
+    def post(self, output: DeduplicatedQuestions) -> bool:
         # Ensure we have at least one question after deduplication
         if not output.items or len(output.items) == 0:
             return False

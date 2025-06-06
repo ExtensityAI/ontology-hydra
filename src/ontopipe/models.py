@@ -1,3 +1,4 @@
+from collections import defaultdict
 from collections.abc import Iterable
 from pathlib import Path
 from typing import Literal
@@ -5,32 +6,19 @@ from typing import Literal
 from pydantic import Field, field_validator
 from symai.models import LLMDataModel
 
-
 # ==================================================#
 # ----Ontology Generation Data Models---------------#
 # ==================================================#
-class Characteristic(LLMDataModel):
-    value: str = Field(description="Property characteristic value.")
 
-    @field_validator("value")
-    @classmethod
-    def validate_characteristic(cls, v):
-        valid_characteristics = {
-            "functional",
-            "inverseFunctional",
-            "transitive",
-            "symmetric",
-            "asymmetric",
-            "reflexive",
-            "irreflexive",
-        }
-        if v not in valid_characteristics:
-            raise ValueError(f"Invalid characteristic: {v}. Must be one of {valid_characteristics}")
-        return v
-
-    def __hash__(self):
-        return hash(self.value)
-
+Characteristic = Literal[
+    "functional",
+    "inverseFunctional",
+    "transitive",
+    "symmetric",
+    "asymmetric",
+    "reflexive",
+    "irreflexive",
+]
 
 Datatype = Literal[
     "xsd:string",
@@ -56,7 +44,11 @@ class UsageGuideline(LLMDataModel):
 
 
 class Class(LLMDataModel):
-    """Represents an ontology class."""
+    """Represents an ontology class (concept/category).
+
+    Classes define types of things in the domain, not relationships.
+    Use PascalCase naming (e.g., ResearchPaper, Person).
+    """
 
     name: str = Field(description="Name of the class (without namespace).")
 
@@ -65,11 +57,23 @@ class Class(LLMDataModel):
 
 
 class SubClassRelation(LLMDataModel):
+    """Represents a taxonomic (isA) relationship between two classes.
+
+    Establishes class hierarchy where every instance of the subclass
+    is also an instance of the superclass.
+    """
+
     subclass: str = Field(description="The subclass (without namespace).")
     superclass: str = Field(description="The superclass (without namespace).")
 
 
 class ObjectProperty(LLMDataModel):
+    """Represents a relationship between instances of two classes.
+
+    Use for modeling relationships between entities (NOT as classes).
+    Always use camelCase verb phrases (e.g., hasAuthor, isPartOf).
+    """
+
     name: str = Field(description="Name of the object property (without namespace).")
     description: str = Field(description="Description of what this object property represents.")
     domain: list[str] = Field(description="Domain classes.")
@@ -86,6 +90,12 @@ class ObjectProperty(LLMDataModel):
 
 
 class DataProperty(LLMDataModel):
+    """Represents an attribute of class instances with literal values.
+
+    Use for simple attributes that have literal values (strings, numbers, etc.).
+    Do not use classes to represent attributes that should be data properties.
+    """
+
     name: str = Field(description="Name of the data property (without namespace).")
     description: str = Field(description="Description of what this data property represents.")
     domain: list[str] = Field(description="Names of domain classes.")
@@ -96,7 +106,7 @@ class DataProperty(LLMDataModel):
 
 
 class OntologyState(LLMDataModel):
-    concepts: list[SubClassRelation | ObjectProperty | DataProperty] = Field(
+    concepts: list[Class | SubClassRelation | ObjectProperty | DataProperty] = Field(
         description="List of the newly extracted concepts in the ontology. Only return new and unique concepts."
     )
 
@@ -131,14 +141,21 @@ class Ontology(LLMDataModel):
             property_name == prop.name for prop in self.data_properties
         )
 
+    def extend(self, concepts: list[Class | SubClassRelation | ObjectProperty | DataProperty]):
+        for concept in concepts:
+            if isinstance(concept, Class):
+                self.classes.append(concept)
+            elif isinstance(concept, SubClassRelation):
+                self.subclass_relations.append(concept)
+            elif isinstance(concept, ObjectProperty):
+                self.object_properties.append(concept)
+            elif isinstance(concept, DataProperty):
+                self.data_properties.append(concept)
+
     def get_superclass_of(self, subclass_name: str):
         return next(
             (relation.superclass for relation in self.subclass_relations if relation.subclass == subclass_name), None
         )
-
-    def has_superclass_for(self, subclass_name: str):
-        """Check if the ontology contains any superclass for the given subclass name."""
-        return any(subclass_name == relation.subclass for relation in self.subclass_relations)
 
     def get_property(self, property_name: str):
         """Get a property by name."""
@@ -156,7 +173,7 @@ class Ontology(LLMDataModel):
     def superclasses(self):
         """Returns a dict of class: superclasses/class itself for each class in the ontology"""
 
-        d = dict()
+        d = defaultdict(set)
 
         for cls in self.classes:
             d[cls.name] = {cls.name}

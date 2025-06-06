@@ -55,7 +55,17 @@ class OWLBuilder(Expression):
                         f"You've generated a duplicate concept: {concept}. It is already defined. Please focus on new and unique concepts while taking the history into account."
                     )"""
 
-        # TODO check if classes exist etc.
+        # TODO we have a problem: currently, we are not checking if there are duplicates in the output itself (i.e. classes, props, etc.)
+
+        temp = Ontology(
+            name="temp",
+            classes=[],
+            subclass_relations=[],
+            object_properties=[],
+            data_properties=[],
+        )
+
+        temp.extend(output.concepts)
 
         errors = []
 
@@ -71,13 +81,18 @@ class OWLBuilder(Expression):
 
                     continue
 
+                if concept.name[0] == concept.name[0].lower():
+                    errors.append(
+                        f"Class name '{concept.name}' should start with an uppercase letter. Are you trying to define a class or a relationship?"
+                    )
+
             elif isinstance(concept, SubClassRelation):
                 # check if subclass and superclass exist
-                if not self._ontology.has_class(concept.subclass):
+                if not self._ontology.has_class(concept.subclass) and not temp.has_class(concept.subclass):
                     errors.append(f"Subclass {concept.subclass} does not exist in the ontology.")
                     continue
 
-                if not self._ontology.has_class(concept.superclass):
+                if not self._ontology.has_class(concept.superclass) and not temp.has_class(concept.superclass):
                     errors.append(f"Superclass {concept.superclass} does not exist in the ontology.")
                     continue
 
@@ -109,12 +124,12 @@ class OWLBuilder(Expression):
 
                 # check if domains and ranges are valid classes
                 for domain in concept.domain:
-                    if not self._ontology.has_class(domain):
+                    if not self._ontology.has_class(domain) and not temp.has_class(domain):
                         errors.append(f"Domain class '{domain}' of object property '{concept.name}' does not exist.")
                         continue
 
                 for range in concept.range:
-                    if not self._ontology.has_class(range):
+                    if not self._ontology.has_class(range) and not temp.has_class(range):
                         errors.append(f"Range class '{range}' of object property '{concept.name}' does not exist.")
                         continue
 
@@ -128,9 +143,12 @@ class OWLBuilder(Expression):
 
                 # check if domains are valid classes
                 for domain in concept.domain:
-                    if not self._ontology.has_class(domain):
+                    if not self._ontology.has_class(domain) and not temp.has_class(domain):
                         errors.append(f"Domain class '{domain}' of data property '{concept.name}' does not exist.")
                         continue
+
+        if errors:
+            raise ValueError("Ontology validation failed with the following errors:\n- " + "\n- ".join(errors))
 
         return True
 
@@ -144,19 +162,6 @@ class OWLBuilder(Expression):
             f.write(self._ontology.model_dump_json(indent=2))
         logger.debug("Ontology dumped to %s", ontology_path)
 
-    def extend_concepts(self, concepts: list):
-        for concept in concepts:
-            if isinstance(concept, Class):
-                self._ontology.classes.append(concept)
-            elif isinstance(concept, SubClassRelation):
-                self._ontology.subclass_relations.append(concept)
-            elif isinstance(concept, ObjectProperty):
-                self._ontology.object_properties.append(concept)
-            elif isinstance(concept, DataProperty):
-                self._ontology.data_properties.append(concept)
-            else:
-                logger.warning(f"Unknown concept type: {type(concept)}. Skipping.")
-
 
 def generate_ontology(
     cqs: list[str],
@@ -165,7 +170,8 @@ def generate_ontology(
     fname: str = "ontology.json",
     batch_size: int = 1,
 ) -> Ontology:
-    builder = OWLBuilder(name=ontology_name)
+    ontology = Ontology(name=ontology_name, classes=[], subclass_relations=[], object_properties=[], data_properties=[])
+    builder = OWLBuilder(ontology)
 
     usage = None
     state = OntologyState(concepts=[])
@@ -179,8 +185,12 @@ def generate_ontology(
             except Exception as e:
                 logger.error(f"Error getting state update for batch: {e}")
                 continue
+
             concepts.extend(new_state.concepts)
-            builder.extend_concepts(concepts)
+            ontology.extend(new_state.concepts)
+
+            builder.dump_ontology(folder, fname + "_partial.json")
+
             state = OntologyState(concepts=concepts)
         builder.contract_perf_stats()
         usage = tracker.usage
@@ -189,7 +199,7 @@ def generate_ontology(
     builder.dump_ontology(folder, fname)
     logger.debug("Ontology creation completed!")
 
-    return builder.get_ontology()
+    return ontology
 
 
 if __name__ == "__main__":
