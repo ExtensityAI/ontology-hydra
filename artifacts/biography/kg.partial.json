@@ -1,0 +1,3035 @@
+{
+  "name": "EnhancedKG",
+  "triplets": [
+    {
+      "subject": "claude_shannon_population_genetics_theory_1940",
+      "predicate": "occurredOnDate",
+      "object": "1940"
+    },
+    {
+      "subject": "frank_ramsey",
+      "predicate": "hasLifeEvent",
+      "object": "ramsey_proposes_redundancy_theory_of_truth_1927"
+    },
+    {
+      "subject": "kurt_godel_migrates_to_us_1939",
+      "predicate": "occurredAtLocation",
+      "object": "us"
+    },
+    {
+      "subject": "walter_bedell_smith",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "cambridge_massachusetts",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "ramsey_growth_model",
+      "predicate": "isA",
+      "object": "InformalAchievement"
+    },
+    {
+      "subject": "adel_godel_death_1981",
+      "predicate": "involvedPerson",
+      "object": "adel_godel"
+    },
+    {
+      "subject": "adel_godel",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "claude_shannon_phd_in_mathematics_1940",
+      "predicate": "isA",
+      "object": "Credential"
+    },
+    {
+      "subject": "claude_shannon_and_edward_o_thorp_invent_wearable_computer",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "facts_and_propositions_1927",
+      "predicate": "isA",
+      "object": "Document"
+    },
+    {
+      "subject": "claude_shannon_ms_in_electrical_engineering_1937",
+      "predicate": "isA",
+      "object": "Credential"
+    },
+    {
+      "subject": "kurt_godel_starvation_death_1978_0114",
+      "predicate": "occurredAtLocation",
+      "object": "princeton_hospital"
+    },
+    {
+      "subject": "cryptography",
+      "predicate": "isA",
+      "object": "FieldOfStudy"
+    },
+    {
+      "subject": "frank_ramsey",
+      "predicate": "hasLifeEvent",
+      "object": "ramsey_proposes_reliabilism_knowledge_1931"
+    },
+    {
+      "subject": "claude_shannon_and_elwyn_berlekamp_mentorship",
+      "predicate": "isA",
+      "object": "Mentorship"
+    },
+    {
+      "subject": "claude_shannon_joins_cia_special_cryptologic_advisory_group_1951",
+      "predicate": "occurredOnDate",
+      "object": "1951"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_retirement_1978"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasRecognition",
+      "object": "claude_shannon_awarded_alfred_noble_prize_1939"
+    },
+    {
+      "subject": "bell_telephone_labs_location",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "automata_studies",
+      "predicate": "isA",
+      "object": "Document"
+    },
+    {
+      "subject": "claude_shannon_and_norma_levor_divorce_1941",
+      "predicate": "occurredOnDate",
+      "object": "1941"
+    },
+    {
+      "subject": "american_academy_of_achievement",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "claude_shannon_programs_computer_playing_chess_1949",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "math_encounters_presentation_2016",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_language_model_named_in_honor_of_claude_shannon_2023",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_invents_signal_flow_graphs_1942"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "heldEmploymentPeriod",
+      "object": "claude_shannon_joins_mit_faculty_1956"
+    },
+    {
+      "subject": "claude_shannon_writes_computers_and_automata_1953",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "heldEmploymentPeriod",
+      "object": "claude_shannon_and_team_anti_aircraft_systems_world_war_ii"
+    },
+    {
+      "subject": "claude_shannon_retirement_1978",
+      "predicate": "occurredOnDate",
+      "object": "1978"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasRecognition",
+      "object": "claude_shannon_awarded_john_fritz_medal_1983"
+    },
+    {
+      "subject": "first_shannon_conference_on_future_of_information_age_2016",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasAward",
+      "object": "claude_e_shannon_award"
+    },
+    {
+      "subject": "shannon_weaver_model",
+      "predicate": "isA",
+      "object": "InformalAchievement"
+    },
+    {
+      "subject": "claude_shannon_co_develops_pulse_code_modulation",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "macedonia_releases_shannon_stamp_2016",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "ivan_sutherland",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "evangelische_volksschule",
+      "predicate": "isA",
+      "object": "Institution"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_declassifies_publishes_communication_theory_of_secrecy_systems_1949"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasFamilyRelationship",
+      "object": "claude_shannon_and_mabel_wolf_shannon_familyrelationship"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasRecognition",
+      "object": "claude_shannon_awarded_national_medal_of_science_1966"
+    },
+    {
+      "subject": "royal_society",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "kurt_godel_burial_princeton_cemetery",
+      "predicate": "involvedPerson",
+      "object": "kurt_godel"
+    },
+    {
+      "subject": "isaac_newton",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "kurt_godel_health_crisis_rheumatic_fever_childhood",
+      "predicate": "isA",
+      "object": "HealthCrisis"
+    },
+    {
+      "subject": "information_theory",
+      "predicate": "isA",
+      "object": "FieldOfStudy"
+    },
+    {
+      "subject": "claude_shannon_moves_to_nursing_home",
+      "predicate": "isA",
+      "object": "Relocation"
+    },
+    {
+      "subject": "adele_godel",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "the_bit_player_premiere_2019",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "the_bit_player_documentary_produced",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_creates_information_theory"
+    },
+    {
+      "subject": "claude_shannon_and_danny_hillis_mentorship",
+      "predicate": "hasMentor",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "claude_shannon_attends_massachusetts_institute_of_technology",
+      "predicate": "receivedCredential",
+      "object": "claude_shannon_phd_in_mathematics_1940"
+    },
+    {
+      "subject": "claude_shannon_meets_alan_turing_1943",
+      "predicate": "involvedPerson",
+      "object": "alan_turing"
+    },
+    {
+      "subject": "kurt_godel_doctoral_dissertation_completion_1929",
+      "predicate": "occurredAtLocation",
+      "object": "vienna"
+    },
+    {
+      "subject": "universals_1925",
+      "predicate": "isA",
+      "object": "Document"
+    },
+    {
+      "subject": "james_gleick",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "hasLegalEvent",
+      "object": "kurt_godel_becomes_czechoslovak_citizen_1918"
+    },
+    {
+      "subject": "kurt_godel_awarded_national_medal_of_science_1974",
+      "predicate": "involvedPerson",
+      "object": "kurt_godel"
+    },
+    {
+      "subject": "claude_shannon_states_shannon_maxim",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasFamilyRelationship",
+      "object": "claude_shannon_and_claude_shannon_sr_familyrelationship"
+    },
+    {
+      "subject": "ramsey_effect",
+      "predicate": "isA",
+      "object": "InformalAchievement"
+    },
+    {
+      "subject": "ontologist",
+      "predicate": "isA",
+      "object": "QualitativeTag"
+    },
+    {
+      "subject": "boole_shannon_celebration",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "bell_telephone_labs",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_and_edward_o_thorp_invent_wearable_computer"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasRecognition",
+      "object": "claude_shannon_awarded_membership_royal_irish_academy_1985"
+    },
+    {
+      "subject": "bletchley_park",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "detection_theory",
+      "predicate": "isA",
+      "object": "FieldOfStudy"
+    },
+    {
+      "subject": "theseus_learning_machine",
+      "predicate": "isA",
+      "object": "InformalAchievement"
+    },
+    {
+      "subject": "kurt_godel_thesis_publication_1930",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_successful_investor"
+    },
+    {
+      "subject": "claude_shannon_builds_theseus_machine_1950",
+      "predicate": "involvedPerson",
+      "object": "betty_shannon"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_contributes_to_detection_theory"
+    },
+    {
+      "subject": "claude_shannon_and_claude_shannon_sr_familyrelationship",
+      "predicate": "isA",
+      "object": "FamilyRelationship"
+    },
+    {
+      "subject": "adel_godel",
+      "predicate": "hasLifeEvent",
+      "object": "kurt_godel_papers_donated_to_institute_for_advanced_study_1981"
+    },
+    {
+      "subject": "germany",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "kurt_godel_and_adele_godel_marriage_1938",
+      "predicate": "involvedPerson",
+      "object": "kurt_godel"
+    },
+    {
+      "subject": "claude_shannon_attends_massachusetts_institute_of_technology",
+      "predicate": "isAtInstitution",
+      "object": "massachusetts_institute_of_technology"
+    },
+    {
+      "subject": "claude_shannon_devises_distribution_expression_linked_traits_population_1940",
+      "predicate": "occurredOnDate",
+      "object": "1940"
+    },
+    {
+      "subject": "claude_shannon_and_danny_hillis_mentorship",
+      "predicate": "isA",
+      "object": "Mentorship"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_receives_phd_degree_1940"
+    },
+    {
+      "subject": "claude_shannon_co_develops_pulse_code_modulation",
+      "predicate": "involvedPerson",
+      "object": "john_r_pierce"
+    },
+    {
+      "subject": "kurt_godel_attends_university_of_vienna",
+      "predicate": "isA",
+      "object": "EducationEpisode"
+    },
+    {
+      "subject": "partha_dasgupta",
+      "predicate": "hasRecognition",
+      "object": "frank_ramsey_professor_of_economics_university_of_cambridge"
+    },
+    {
+      "subject": "roullete",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "government_code_and_cypher_school",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "develops_paranoid_symptoms_fear_of_being_poisoned",
+      "predicate": "isA",
+      "object": "QualitativeAnnotation"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasRecognition",
+      "object": "claude_shannon_awarded_membership_american_philosophical_society_1983"
+    },
+    {
+      "subject": "a_mind_at_play_published_2017",
+      "predicate": "involvedPerson",
+      "object": "jimmy_soni"
+    },
+    {
+      "subject": "claude_shannon_builds_theseus_machine_1950",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "petoskey_michigan",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "hasGroupParticipation",
+      "object": "kurt_godel_participation_vienna_circle"
+    },
+    {
+      "subject": "claude_shannon_and_norma_levor_divorce_1941",
+      "predicate": "involvedPerson",
+      "object": "norma_levor"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_works_bell_labs_1937"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "birthDate",
+      "object": "1916-04-30"
+    },
+    {
+      "subject": "claude_shannon_death_2001_0224",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "claude_shannon_phd_thesis",
+      "predicate": "hasNameValue",
+      "object": "An Algebra for Theoretical Genetics"
+    },
+    {
+      "subject": "claude_shannon_attends_university_of_michigan",
+      "predicate": "receivedCredential",
+      "object": "claude_shannon_bachelors_in_mathematics_1936"
+    },
+    {
+      "subject": "scientific_development_corp_location",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "ramsey_writes_contribution_theory_of_taxation_1927",
+      "predicate": "occurredOnDate",
+      "object": "1927"
+    },
+    {
+      "subject": "kurt_godel_participation_vienna_circle",
+      "predicate": "participatedInGroup",
+      "object": "vienna_circle"
+    },
+    {
+      "subject": "claude_shannon_attends_gaylord_high_school",
+      "predicate": "isAtInstitution",
+      "object": "gaylord_high_school"
+    },
+    {
+      "subject": "mazin_gilbert",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "claude_shannon_and_norma_levor_marriage_1940",
+      "predicate": "occurredOnDate",
+      "object": "1940"
+    },
+    {
+      "subject": "google_doodle",
+      "predicate": "isA",
+      "object": "DigitalArtifact"
+    },
+    {
+      "subject": "membership_american_philosophical_society",
+      "predicate": "isA",
+      "object": "Award"
+    },
+    {
+      "subject": "claude_shannon_devises_distribution_expression_linked_traits_population_1940",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "decision_analysis_society",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "marconi_society_lifetime_achievement_award",
+      "predicate": "isA",
+      "object": "Award"
+    },
+    {
+      "subject": "howard_raiffa",
+      "predicate": "hasRecognition",
+      "object": "frank_ramsey_professor_harvard_university"
+    },
+    {
+      "subject": "claude_shannon_attends_gaylord_high_school",
+      "predicate": "isA",
+      "object": "EducationEpisode"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "hasEducationEpisode",
+      "object": "kurt_godel_attends_deutsches_staats_realgymnasium_1916_1924"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_health_crisis_alzheimers"
+    },
+    {
+      "subject": "frank_lauren_hitchcock",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "claude_shannon_and_leonard_kleinrock_mentorship",
+      "predicate": "hasMentor",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "kurt_godel_attends_evangelische_volksschule_1912_1916",
+      "predicate": "isA",
+      "object": "EducationEpisode"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "hasLegalEvent",
+      "object": "kurt_godel_becomes_austrian_citizen_1929"
+    },
+    {
+      "subject": "claude_elwood_shannon",
+      "predicate": "isA",
+      "object": "PreferredName"
+    },
+    {
+      "subject": "claude_shannon_awarded_harold_pender_award_1978",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "truth_and_probability",
+      "predicate": "isA",
+      "object": "Document"
+    },
+    {
+      "subject": "kurt_godel_migrates_to_us_1939",
+      "predicate": "isA",
+      "object": "Migration"
+    },
+    {
+      "subject": "leonard_kleinrock",
+      "predicate": "hasMentorship",
+      "object": "claude_shannon_and_leonard_kleinrock_mentorship"
+    },
+    {
+      "subject": "information_entropy",
+      "predicate": "isA",
+      "object": "InformalAchievement"
+    },
+    {
+      "subject": "kurt_godel_periods_mental_instability_later_life",
+      "predicate": "involvedPerson",
+      "object": "kurt_godel"
+    },
+    {
+      "subject": "kurt_godel_papers_donated_to_institute_for_advanced_study_1981",
+      "predicate": "occurredAtLocation",
+      "object": "us"
+    },
+    {
+      "subject": "claude_shannon_bachelors_in_electrical_engineering_1936",
+      "predicate": "isA",
+      "object": "Credential"
+    },
+    {
+      "subject": "claude_shannon_life_narrative_father_of_information_theory",
+      "predicate": "isA",
+      "object": "LifeNarrative"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "hasAffiliation",
+      "object": "university_of_notre_dame"
+    },
+    {
+      "subject": "claude_shannon_and_ivan_sutherland_mentorship",
+      "predicate": "hasMentee",
+      "object": "ivan_sutherland"
+    },
+    {
+      "subject": "claude_shannon_and_ivan_sutherland_mentorship",
+      "predicate": "isA",
+      "object": "Mentorship"
+    },
+    {
+      "subject": "mit",
+      "predicate": "isA",
+      "object": "Institution"
+    },
+    {
+      "subject": "boston_museum_of_science",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "chess",
+      "predicate": "isA",
+      "object": "FieldOfStudy"
+    },
+    {
+      "subject": "mary_elizabeth_moore",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "shannon_demon",
+      "predicate": "isA",
+      "object": "InformalAchievement"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasEducationEpisode",
+      "object": "claude_shannon_attends_university_of_michigan"
+    },
+    {
+      "subject": "bell_labs_location",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "claude_shannon_invents_signal_flow_graphs_1942",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "vannevar_bush",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasRecognition",
+      "object": "claude_shannon_awarded_basic_research_award_eduard_rhein_foundation_1991"
+    },
+    {
+      "subject": "claude_shannon_meets_alan_turing_1943",
+      "predicate": "occurredOnDate",
+      "object": "1943"
+    },
+    {
+      "subject": "claude_shannon_and_leonard_kleinrock_mentorship",
+      "predicate": "isA",
+      "object": "Mentorship"
+    },
+    {
+      "subject": "mathematics",
+      "predicate": "isA",
+      "object": "FieldOfStudy"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_contributes_to_combinatorics"
+    },
+    {
+      "subject": "claude_shannon_develops_shannon_demon",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "nathaniel_rochester",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "kurt_godel_migrates_vienna_1924",
+      "predicate": "occurredAtLocation",
+      "object": "vienna"
+    },
+    {
+      "subject": "claude_shannon_lays_foundations_digital_age",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "claude_shannon_awarded_basic_research_award_eduard_rhein_foundation_1991",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "claude_shannon_and_frank_lauren_hitchcock_mentorship",
+      "predicate": "isA",
+      "object": "Mentorship"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "shannon_centenary_2016"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_moves_to_nursing_home"
+    },
+    {
+      "subject": "gregor_mendel",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "hasLifeEvent",
+      "object": "kurt_godel_formulates_godel_ontological_proof"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasRecognition",
+      "object": "claude_shannon_awarded_audio_engineering_society_gold_medal_award_1985"
+    },
+    {
+      "subject": "claude_shannon_and_ivan_sutherland_mentorship",
+      "predicate": "hasMentor",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "royal_irish_academy",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "moritz_schlick_murdered",
+      "predicate": "involvedPerson",
+      "object": "moritz_schlick"
+    },
+    {
+      "subject": "university_of_michigan",
+      "predicate": "isA",
+      "object": "Institution"
+    },
+    {
+      "subject": "deutsches_staats_realgymnasium",
+      "predicate": "isA",
+      "object": "Institution"
+    },
+    {
+      "subject": "claude_shannon_contributes_to_combinatorics",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "adel_godel_hospitalized_late_1977",
+      "predicate": "isA",
+      "object": "HealthCrisis"
+    },
+    {
+      "subject": "ramsey_proposes_redundancy_theory_of_truth_1927",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon_and_mabel_wolf_shannon_familyrelationship",
+      "predicate": "relatesPerson",
+      "object": "mabel_wolf_shannon"
+    },
+    {
+      "subject": "austria_hungary",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "claude_shannon_and_norma_levor_marriage_1940",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "claude_shannon_contributes_to_detection_theory",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "ramsey_writes_contribution_theory_of_taxation_1927",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "frank_ramsey",
+      "predicate": "hasLifeEvent",
+      "object": "ramsey_writes_mathematical_theory_of_saving_1928"
+    },
+    {
+      "subject": "claude_shannon_life_narrative_father_of_information_theory",
+      "predicate": "contextualizesEvent",
+      "object": "claude_shannon_creates_information_theory"
+    },
+    {
+      "subject": "kurt_godel_papers_donated_to_institute_for_advanced_study_1981",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_is_atheist"
+    },
+    {
+      "subject": "american_philosophical_society",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "claude_shannon_awarded_morris_liebmann_memorial_prize_1949",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_meets_alan_turing_1943"
+    },
+    {
+      "subject": "hendrik_wade_bode",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasAffiliation",
+      "object": "bell_labs"
+    },
+    {
+      "subject": "john_robinson_pierce",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "claude_shannon_attends_university_of_michigan",
+      "predicate": "isAtInstitution",
+      "object": "university_of_michigan"
+    },
+    {
+      "subject": "claude_shannon_awarded_audio_engineering_society_gold_medal_award_1985",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "claude_shannon_writes_programming_computer_for_playing_chess_1950",
+      "predicate": "occurredOnDate",
+      "object": "1950"
+    },
+    {
+      "subject": "claude_shannon_phd_thesis",
+      "predicate": "hasAuthorship",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "claude_shannon_writes_mathematical_theory_of_communication_1948",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "basic_research_award_eduard_rhein_foundation",
+      "predicate": "isA",
+      "object": "Award"
+    },
+    {
+      "subject": "kurt_godel_thesis_publication_1930",
+      "predicate": "involvedPerson",
+      "object": "kurt_godel"
+    },
+    {
+      "subject": "plastic_foam_shoes_water_walking",
+      "predicate": "isA",
+      "object": "InformalAchievement"
+    },
+    {
+      "subject": "shannon_maxim",
+      "predicate": "isA",
+      "object": "InformalAchievement"
+    },
+    {
+      "subject": "minivac_601_sold_by_scientific_development_corp_1961",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "ramsey_proposes_reliabilism_knowledge_1931",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "hasRecognition",
+      "object": "kurt_godel_awarded_membership_american_philosophical_society_1983"
+    },
+    {
+      "subject": "claude_e_shannon_award",
+      "predicate": "isA",
+      "object": "Award"
+    },
+    {
+      "subject": "godels_incompleteness_theorems",
+      "predicate": "isA",
+      "object": "Document"
+    },
+    {
+      "subject": "claude_shannon_unpublished_phd_thesis_1940",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon_moves_to_nursing_home",
+      "predicate": "occurredAtLocation",
+      "object": "nursing_home"
+    },
+    {
+      "subject": "claude_shannon_employment_donnor_professor_science_mit_1958_1979",
+      "predicate": "isA",
+      "object": "EmploymentPeriod"
+    },
+    {
+      "subject": "edward_o_thorp",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "claude_shannon_works_bell_labs_1937",
+      "predicate": "occurredAtLocation",
+      "object": "bell_labs_location"
+    },
+    {
+      "subject": "central_intelligence_agency",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "heinz_nixdorf_museum",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "claude_shannon_writes_data_smoothing_essay_1945",
+      "predicate": "occurredOnDate",
+      "object": "1945"
+    },
+    {
+      "subject": "danny_hillis",
+      "predicate": "hasMentorship",
+      "object": "claude_shannon_and_danny_hillis_mentorship"
+    },
+    {
+      "subject": "austria",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "juggling",
+      "predicate": "isA",
+      "object": "InformalAchievement"
+    },
+    {
+      "subject": "claude_shannon_birth_1916_0430",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "mabel_wolf_shannon",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "vienna_circle",
+      "predicate": "isA",
+      "object": "CommunityGroup"
+    },
+    {
+      "subject": "flame_throwing_trumpet",
+      "predicate": "isA",
+      "object": "InformalAchievement"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_writes_prediction_entropy_printed_english_1951"
+    },
+    {
+      "subject": "donald_davidson",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "massachusetts_institute_of_technology",
+      "predicate": "isA",
+      "object": "Institution"
+    },
+    {
+      "subject": "a_mind_at_play_published_2017",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "google_doodle",
+      "predicate": "isAssociatedWithEvent",
+      "object": "claude_shannon_google_doodle_2016_0430"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "hasProfessionalRecognition",
+      "object": "kurt_godel_elected_resident_member_american_philosophical_society_1961"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "heldEmploymentPeriod",
+      "object": "claude_shannon_works_bell_labs_1937"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_writes_programming_computer_for_playing_chess_1950"
+    },
+    {
+      "subject": "claude_shannon_death_2001_0224",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "frank_p_ramsey_medal",
+      "predicate": "isA",
+      "object": "Award"
+    },
+    {
+      "subject": "claude_shannon_writes_prediction_entropy_printed_english_1951",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon_creates_information_theory",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "hasProfessionalRecognition",
+      "object": "kurt_godel_elected_foreign_member_royal_society_1968"
+    },
+    {
+      "subject": "kurt_godel_health_crisis_paranoia",
+      "predicate": "involvedPerson",
+      "object": "kurt_godel"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasRecognition",
+      "object": "claude_shannon_awarded_stuart_ballantine_medal_1955"
+    },
+    {
+      "subject": "princeton_cemetery",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "claude_shannon_awarded_alfred_noble_prize_1939",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "claude_shannon_and_team_anti_aircraft_systems_world_war_ii",
+      "predicate": "isA",
+      "object": "EmploymentPeriod"
+    },
+    {
+      "subject": "claude_shannon_and_norma_levor_marriage_1940",
+      "predicate": "isA",
+      "object": "Marriage"
+    },
+    {
+      "subject": "donnor_professor_of_science",
+      "predicate": "isA",
+      "object": "JobTitle"
+    },
+    {
+      "subject": "kurt_godel_periods_mental_instability_later_life",
+      "predicate": "isA",
+      "object": "HealthCrisis"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "hasEducationEpisode",
+      "object": "kurt_godel_attends_university_of_vienna"
+    },
+    {
+      "subject": "completeness_theorem",
+      "predicate": "isA",
+      "object": "Document"
+    },
+    {
+      "subject": "claude_shannon_and_elwyn_berlekamp_mentorship",
+      "predicate": "hasMentor",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "kurt_godel_starvation_death_1978_0114",
+      "predicate": "occurredOnDate",
+      "object": "1978-01-14"
+    },
+    {
+      "subject": "bert_sutherland",
+      "predicate": "hasMentorship",
+      "object": "claude_shannon_and_bert_sutherland_mentorship"
+    },
+    {
+      "subject": "kurt_godel_and_adele_godel_marriage_1938",
+      "predicate": "isA",
+      "object": "Marriage"
+    },
+    {
+      "subject": "investing",
+      "predicate": "isA",
+      "object": "FieldOfStudy"
+    },
+    {
+      "subject": "symmetric_key_cryptography",
+      "predicate": "isA",
+      "object": "FieldOfStudy"
+    },
+    {
+      "subject": "massachusetts_institute_of_technology_location",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "ramsey_subjective_probability_theory_1926",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "tagsEntityWithQualitativeTag",
+      "object": "platonist"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_joins_cia_special_cryptologic_advisory_group_1951"
+    },
+    {
+      "subject": "claude_shannon_successful_investor",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "ramsey_subjective_probability_theory_1926",
+      "predicate": "occurredOnDate",
+      "object": "1926"
+    },
+    {
+      "subject": "kurt_godel_birth_april_28_1906",
+      "predicate": "occurredAtLocation",
+      "object": "brno"
+    },
+    {
+      "subject": "claude_shannon_and_betty_shannon_marriage_1949",
+      "predicate": "involvedPerson",
+      "object": "betty_shannon"
+    },
+    {
+      "subject": "eduard_rhein_foundation",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "claude_shannon_writes_mathematical_theory_of_cryptography_1945",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon_national_research_fellow_institute_for_advanced_study_1940",
+      "predicate": "occurredAtLocation",
+      "object": "princeton_new_jersey"
+    },
+    {
+      "subject": "kurt_godel_plenary_speaker_icm_1950",
+      "predicate": "isA",
+      "object": "ProfessionalRecognition"
+    },
+    {
+      "subject": "claude_shannon_and_mabel_wolf_shannon_familyrelationship",
+      "predicate": "relationshipType",
+      "object": "child"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "hasLifeNarrative",
+      "object": "kurt_godel_religious_views"
+    },
+    {
+      "subject": "claude_shannon_writes_mathematical_theory_of_cryptography_1945",
+      "predicate": "occurredOnDate",
+      "object": "1945"
+    },
+    {
+      "subject": "claude_shannon_works_bell_labs_1937",
+      "predicate": "isA",
+      "object": "EmploymentPeriod"
+    },
+    {
+      "subject": "kurt_godel_attends_evangelische_volksschule_1912_1916",
+      "predicate": "isAtInstitution",
+      "object": "evangelische_volksschule"
+    },
+    {
+      "subject": "claude_shannon_co_edits_automata_studies_1956",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasEducationEpisode",
+      "object": "claude_shannon_attends_massachusetts_institute_of_technology"
+    },
+    {
+      "subject": "dartmouth_workshop_1956",
+      "predicate": "involvedPerson",
+      "object": "marvin_minsky"
+    },
+    {
+      "subject": "vannevar_bush_recommends_shannon_research_cold_spring_harbor_1940",
+      "predicate": "occurredAtLocation",
+      "object": "cold_spring_harbor_laboratory"
+    },
+    {
+      "subject": "john_mccarthy",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "partha_dasgupta",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "howard_raiffa",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "kurt_godel_migrates_to_us_1939",
+      "predicate": "involvedPerson",
+      "object": "kurt_godel"
+    },
+    {
+      "subject": "claude_shannon_and_claude_shannon_sr_familyrelationship",
+      "predicate": "relationshipType",
+      "object": "child"
+    },
+    {
+      "subject": "mervin_kelly",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "warren_weaver",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "kurt_godel_birth_april_28_1906",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "the_bit_player",
+      "predicate": "isA",
+      "object": "Document"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_writes_computers_and_automata_1953"
+    },
+    {
+      "subject": "kurt_godel_religious_views",
+      "predicate": "isA",
+      "object": "LifeNarrative"
+    },
+    {
+      "subject": "knowledge_1929",
+      "predicate": "isA",
+      "object": "Document"
+    },
+    {
+      "subject": "claude_shannon_and_frank_lauren_hitchcock_mentorship",
+      "predicate": "hasMentee",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "claude_shannon_awarded_national_medal_of_science_1966",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "claude_shannon_sr",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "dartmouth_workshop_1956",
+      "predicate": "involvedPerson",
+      "object": "john_mccarthy"
+    },
+    {
+      "subject": "nachtfalter",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "macedonia_releases_shannon_stamp_2016",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "kurt_godel_plenary_speaker_icm_1950",
+      "predicate": "occurredOnDate",
+      "object": "1950"
+    },
+    {
+      "subject": "medford_massachusetts",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "claude_shannon_health_crisis_alzheimers",
+      "predicate": "hasQualitativeAnnotation",
+      "object": "alzheimers_disease_condition"
+    },
+    {
+      "subject": "kurt_godel_awarded_albert_einstein_award_1951",
+      "predicate": "involvedPerson",
+      "object": "kurt_godel"
+    },
+    {
+      "subject": "truth_and_probability",
+      "predicate": "hasAuthorship",
+      "object": "frank_ramsey"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "tagsEntityWithQualitativeTag",
+      "object": "scientist"
+    },
+    {
+      "subject": "claude_shannon_co_develops_pulse_code_modulation",
+      "predicate": "involvedPerson",
+      "object": "bernard_m_oliver"
+    },
+    {
+      "subject": "elwyn_berlekamp",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "claude_shannon_proves_one_time_pad_unbreakable_1949",
+      "predicate": "occurredOnDate",
+      "object": "1949"
+    },
+    {
+      "subject": "claude_shannon_google_doodle_2016_0430",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "claude_shannon_awarded_golden_plate_award_1967",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "membership_royal_irish_academy",
+      "predicate": "isA",
+      "object": "Award"
+    },
+    {
+      "subject": "digital_circuits",
+      "predicate": "isA",
+      "object": "FieldOfStudy"
+    },
+    {
+      "subject": "the_bit_player_premiere_2019",
+      "predicate": "involvedPerson",
+      "object": "mark_levinson"
+    },
+    {
+      "subject": "claude_shannon_writes_prediction_entropy_printed_english_1951",
+      "predicate": "occurredOnDate",
+      "object": "1951"
+    },
+    {
+      "subject": "claude_shannon_centennial_logo",
+      "predicate": "isA",
+      "object": "DigitalArtifact"
+    },
+    {
+      "subject": "ieee_medal_of_honor",
+      "predicate": "isA",
+      "object": "Award"
+    },
+    {
+      "subject": "vienna",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "universals_of_law_and_of_fact_1928",
+      "predicate": "isA",
+      "object": "Document"
+    },
+    {
+      "subject": "joseph_godel",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "richard_zeckhauser",
+      "predicate": "hasRecognition",
+      "object": "frank_ramsey_professor_of_political_economy_harvard_university"
+    },
+    {
+      "subject": "ivan_sutherland",
+      "predicate": "hasMentorship",
+      "object": "claude_shannon_and_ivan_sutherland_mentorship"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "hasRecognition",
+      "object": "kurt_godel_awarded_albert_einstein_award_1951"
+    },
+    {
+      "subject": "university_of_cambridge",
+      "predicate": "isA",
+      "object": "Institution"
+    },
+    {
+      "subject": "kurt_godel_doctoral_dissertation_completion_1929",
+      "predicate": "involvedPerson",
+      "object": "kurt_godel"
+    },
+    {
+      "subject": "computer_science",
+      "predicate": "isA",
+      "object": "FieldOfStudy"
+    },
+    {
+      "subject": "claude_shannon_builds_theseus_machine_1950",
+      "predicate": "occurredOnDate",
+      "object": "1950"
+    },
+    {
+      "subject": "kurt_godel_awarded_albert_einstein_award_1951",
+      "predicate": "involvedPerson",
+      "object": "julian_schwinger"
+    },
+    {
+      "subject": "alan_turing",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "claude_shannon_and_claude_shannon_sr_familyrelationship",
+      "predicate": "relatesPerson",
+      "object": "claude_shannon_sr"
+    },
+    {
+      "subject": "claude_shannon_and_bert_sutherland_mentorship",
+      "predicate": "isA",
+      "object": "Mentorship"
+    },
+    {
+      "subject": "claude_shannon_national_research_fellow_institute_for_advanced_study_1940",
+      "predicate": "occurredAtLocation",
+      "object": "institute_for_advanced_study_location"
+    },
+    {
+      "subject": "bell_system_technical_journal",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "boolean_algebra",
+      "predicate": "isA",
+      "object": "FieldOfStudy"
+    },
+    {
+      "subject": "united_states",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "tagsEntityWithQualitativeTag",
+      "object": "protestant_philosopher"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_co_edits_automata_studies_1956"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "hasAffiliation",
+      "object": "princeton_university"
+    },
+    {
+      "subject": "signal_flow_graphs",
+      "predicate": "isA",
+      "object": "InformalAchievement"
+    },
+    {
+      "subject": "institute_for_advanced_study",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "hasLegalEvent",
+      "object": "kurt_godel_becomes_german_citizen_1938"
+    },
+    {
+      "subject": "princeton_new_jersey",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "jimmy_soni",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "marvin_minsky",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "kurt_godel_elected_foreign_member_royal_society_1968",
+      "predicate": "isA",
+      "object": "ProfessionalRecognition"
+    },
+    {
+      "subject": "math_encounters_presentation_2016",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "u_s_navy_cryptanalytic_service",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "kurt_godel_health_crisis_paranoia",
+      "predicate": "isA",
+      "object": "HealthCrisis"
+    },
+    {
+      "subject": "university_of_vienna",
+      "predicate": "isA",
+      "object": "Institution"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasEducationEpisode",
+      "object": "claude_shannon_attends_gaylord_high_school"
+    },
+    {
+      "subject": "claude_shannon_invents_signal_flow_graphs_1942",
+      "predicate": "occurredOnDate",
+      "object": "1942"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_devises_distribution_expression_linked_traits_population_1940"
+    },
+    {
+      "subject": "kurt_godel_awarded_membership_american_philosophical_society_1983",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "marianne_godel",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "claude_shannon_programs_computer_playing_chess_1949",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon_birth_1916_0430",
+      "predicate": "occurredOnDate",
+      "object": "1916-04-30"
+    },
+    {
+      "subject": "claude_language_model_named_in_honor_of_claude_shannon_2023",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "gaylord_michigan",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "ramsey_proposes_reliabilism_knowledge_1931",
+      "predicate": "occurredOnDate",
+      "object": "1931"
+    },
+    {
+      "subject": "claude_shannon_awarded_national_inventors_hall_of_fame_2004",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "kurt_godel_migrates_vienna_1924",
+      "predicate": "isA",
+      "object": "Migration"
+    },
+    {
+      "subject": "claude_shannon_national_research_fellow_institute_for_advanced_study_1940",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon_receives_phd_degree_1940",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "leonard_kleinrock",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "claude_shannon_awarded_john_fritz_medal_1983",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "moritz_schlick_murdered",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "kurt_godel_papers_donated_to_institute_for_advanced_study_1981",
+      "predicate": "occurredOnDate",
+      "object": "1981"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "hasAffiliation",
+      "object": "institute_for_advanced_study"
+    },
+    {
+      "subject": "institute_of_electrical_and_electronics_engineers",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "first_shannon_conference_on_future_of_information_age_2016",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "hans_hahn",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_nyquist_shannon_sampling_theorem_1940"
+    },
+    {
+      "subject": "ramsey_writes_mathematical_theory_of_saving_1928",
+      "predicate": "occurredOnDate",
+      "object": "1928"
+    },
+    {
+      "subject": "frank_ramsey_professor_of_economics_university_of_cambridge",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "set_theorist",
+      "predicate": "isA",
+      "object": "QualitativeTag"
+    },
+    {
+      "subject": "claude_shannon_and_frank_lauren_hitchcock_mentorship",
+      "predicate": "hasMentor",
+      "object": "frank_lauren_hitchcock"
+    },
+    {
+      "subject": "claude_shannon_estimates_chess_complexity_1949",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasMentorship",
+      "object": "claude_shannon_and_frank_lauren_hitchcock_mentorship"
+    },
+    {
+      "subject": "scientist",
+      "predicate": "isA",
+      "object": "QualitativeTag"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasRecognition",
+      "object": "claude_shannon_awarded_foreign_membership_royal_netherlands_academy_arts_sciences_1975"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "hasCulturalBackground",
+      "object": "Austria-Hungary"
+    },
+    {
+      "subject": "claude_shannon_receives_phd_degree_1940",
+      "predicate": "occurredAtLocation",
+      "object": "massachusetts_institute_of_technology_location"
+    },
+    {
+      "subject": "university_of_notre_dame",
+      "predicate": "isA",
+      "object": "Institution"
+    },
+    {
+      "subject": "claude_shannon_awarded_membership_royal_irish_academy_1985",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "the_bit_player_premiere_2019",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "charles_darwin",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "claude_shannon_awarded_kyoto_prize_1985",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "harvard_university",
+      "predicate": "isA",
+      "object": "Institution"
+    },
+    {
+      "subject": "kurt_godel_and_adele_godel_marriage_1938",
+      "predicate": "occurredAtLocation",
+      "object": "vienna"
+    },
+    {
+      "subject": "alzheimer's_disease",
+      "predicate": "isA",
+      "object": "HealthCrisis"
+    },
+    {
+      "subject": "claude_shannon_phd_thesis",
+      "predicate": "hasCustodian",
+      "object": "massachusetts_institute_of_technology"
+    },
+    {
+      "subject": "rocket_powered_frisbee",
+      "predicate": "isA",
+      "object": "InformalAchievement"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "heldEmploymentPeriod",
+      "object": "claude_shannon_works_fire_control_cryptography_world_war_ii"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "tagsEntityWithQualitativeTag",
+      "object": "proof_theorist"
+    },
+    {
+      "subject": "kurt_godel_develops_obsessive_fear_of_being_poisoned",
+      "predicate": "involvedPerson",
+      "object": "kurt_godel"
+    },
+    {
+      "subject": "kurt_godel_and_adele_godel_marriage_1938",
+      "predicate": "occurredOnDate",
+      "object": "1938-09"
+    },
+    {
+      "subject": "cold_spring_harbor_laboratory",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasRecognition",
+      "object": "claude_shannon_awarded_harvey_prize_1972"
+    },
+    {
+      "subject": "bernard_m_oliver",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "adel_godel_death_1981",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "kurt_godel_becomes_us_citizen_1948",
+      "predicate": "isA",
+      "object": "CitizenshipChange"
+    },
+    {
+      "subject": "claude_shannon_loses_interest_in_phd_thesis_1940",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "dartmouth_workshop_1956",
+      "predicate": "occurredOnDate",
+      "object": "1956"
+    },
+    {
+      "subject": "kurt_godel_health_crisis_paranoia",
+      "predicate": "hasQualitativeAnnotation",
+      "object": "develops_paranoid_symptoms_fear_of_being_poisoned"
+    },
+    {
+      "subject": "claude_shannon_declassifies_publishes_communication_theory_of_secrecy_systems_1949",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon_writes_mathematical_theory_of_communication_1948",
+      "predicate": "occurredOnDate",
+      "object": "1948"
+    },
+    {
+      "subject": "claude_shannon_population_genetics_theory_1940",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "hermann_weyl",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "claude_shannon_and_danny_hillis_mentorship",
+      "predicate": "hasMentee",
+      "object": "danny_hillis"
+    },
+    {
+      "subject": "genetics",
+      "predicate": "isA",
+      "object": "FieldOfStudy"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasAffiliation",
+      "object": "massachusetts_institute_of_technology"
+    },
+    {
+      "subject": "claude_shannon_loses_interest_in_phd_thesis_1940",
+      "predicate": "precedesEvent",
+      "object": "claude_shannon_unpublished_phd_thesis_1940"
+    },
+    {
+      "subject": "kurt_godel_starvation_death_1978_0114",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "us",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "claude_shannon_death_2001_0224",
+      "predicate": "occurredOnDate",
+      "object": "2001-02-24"
+    },
+    {
+      "subject": "czechoslovakia",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "proof_theorist",
+      "predicate": "isA",
+      "object": "QualitativeTag"
+    },
+    {
+      "subject": "ben_barzman",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "hasRecognition",
+      "object": "kurt_godel_awarded_national_medal_of_science_1974"
+    },
+    {
+      "subject": "golden_plate_award",
+      "predicate": "isA",
+      "object": "Award"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasRecognition",
+      "object": "claude_shannon_awarded_ieee_medal_of_honor_1966"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasRecognition",
+      "object": "claude_shannon_awarded_morris_liebmann_memorial_prize_1949"
+    },
+    {
+      "subject": "norma_levor",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "claude_shannon_unpublished_phd_thesis_1940",
+      "predicate": "occurredOnDate",
+      "object": "1940"
+    },
+    {
+      "subject": "shannon_centenary_2016",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "alzheimers_disease_condition",
+      "predicate": "isA",
+      "object": "QualitativeAnnotation"
+    },
+    {
+      "subject": "kurt_godel_becomes_austrian_citizen_1929",
+      "predicate": "isA",
+      "object": "CitizenshipChange"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_writes_mathematical_theory_of_communication_1948"
+    },
+    {
+      "subject": "claude_shannon_awarded_claude_e_shannon_award_1973",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "minivac_601_sold_by_scientific_development_corp_1961",
+      "predicate": "occurredAtLocation",
+      "object": "scientific_development_corp_location"
+    },
+    {
+      "subject": "claude_shannon_attends_university_of_michigan",
+      "predicate": "receivedCredential",
+      "object": "claude_shannon_bachelors_in_electrical_engineering_1936"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasRecognition",
+      "object": "claude_shannon_awarded_claude_e_shannon_award_1973"
+    },
+    {
+      "subject": "rob_goodman",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "claude_shannon_develops_shannon_demon",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "electrical_engineering",
+      "predicate": "isA",
+      "object": "FieldOfStudy"
+    },
+    {
+      "subject": "rudolf_godel",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "frank_ramsey_professor_of_political_economy_harvard_university",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "dartmouth_workshop_1956"
+    },
+    {
+      "subject": "claude_shannon_health_crisis_alzheimers",
+      "predicate": "isA",
+      "object": "HealthCrisis"
+    },
+    {
+      "subject": "general_propositions_and_causality_1929",
+      "predicate": "isA",
+      "object": "Document"
+    },
+    {
+      "subject": "zeus",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "vannevar_bush",
+      "predicate": "hasLifeEvent",
+      "object": "vannevar_bush_recommends_shannon_research_cold_spring_harbor_1940"
+    },
+    {
+      "subject": "kurt_godel_burial_princeton_cemetery",
+      "predicate": "occurredAtLocation",
+      "object": "princeton_cemetery"
+    },
+    {
+      "subject": "data_compression",
+      "predicate": "isA",
+      "object": "FieldOfStudy"
+    },
+    {
+      "subject": "claude_language_model",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "richard_zeckhauser",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "kurt_godel_birth_april_28_1906",
+      "predicate": "involvedPerson",
+      "object": "kurt_godel"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_writes_mathematical_theory_of_cryptography_1945"
+    },
+    {
+      "subject": "claude_shannon_writes_programming_computer_for_playing_chess_1950",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon_and_bert_sutherland_mentorship",
+      "predicate": "hasMentee",
+      "object": "bert_sutherland"
+    },
+    {
+      "subject": "princeton_hospital",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "kurt_godel_migrates_vienna_1924",
+      "predicate": "involvedPerson",
+      "object": "kurt_godel"
+    },
+    {
+      "subject": "international_congress_of_mathematicians_icm",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "first_world_war",
+      "predicate": "isA",
+      "object": "SocietalDisruption"
+    },
+    {
+      "subject": "claude_shannon_lays_foundations_digital_age",
+      "predicate": "isLinkedToMovement",
+      "object": "digital_age"
+    },
+    {
+      "subject": "protestant_philosopher",
+      "predicate": "isA",
+      "object": "QualitativeTag"
+    },
+    {
+      "subject": "frank_ramsey",
+      "predicate": "hasLifeEvent",
+      "object": "ramsey_writes_contribution_theory_of_taxation_1927"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_proves_one_time_pad_unbreakable_1949"
+    },
+    {
+      "subject": "claude_shannon_contributes_to_detection_theory",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "digital_electronics",
+      "predicate": "isA",
+      "object": "FieldOfStudy"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasRecognition",
+      "object": "claude_shannon_awarded_harold_pender_award_1978"
+    },
+    {
+      "subject": "vannevar_bush_recommends_shannon_research_cold_spring_harbor_1940",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "causal_qualities_1929",
+      "predicate": "isA",
+      "object": "Document"
+    },
+    {
+      "subject": "claude_shannon_phd_thesis",
+      "predicate": "isA",
+      "object": "Document"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "tagsEntityWithQualitativeTag",
+      "object": "ontologist"
+    },
+    {
+      "subject": "claude_shannon_lays_foundations_digital_age",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "john_r_pierce",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "institute_for_advanced_study_location",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "national_medal_of_science",
+      "predicate": "isA",
+      "object": "Award"
+    },
+    {
+      "subject": "princeton_university",
+      "predicate": "isA",
+      "object": "Institution"
+    },
+    {
+      "subject": "claude_shannon_estimates_chess_complexity_1949",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "dartmouth_workshop_1956",
+      "predicate": "involvedPerson",
+      "object": "nathaniel_rochester"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_is_apolitical"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "heldEmploymentPeriod",
+      "object": "claude_shannon_employment_donnor_professor_science_mit_1958_1979"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "hasEducationEpisode",
+      "object": "kurt_godel_attends_evangelische_volksschule_1912_1916"
+    },
+    {
+      "subject": "ramsey_writes_mathematical_theory_of_saving_1928",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "john_von_neumann",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "claude_shannon_and_team_anti_aircraft_systems_world_war_ii",
+      "predicate": "occurredOnDate",
+      "object": "during_world_war_ii"
+    },
+    {
+      "subject": "bell_labs",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "claude_shannon_works_fire_control_cryptography_world_war_ii",
+      "predicate": "occurredAtLocation",
+      "object": "bell_labs_location"
+    },
+    {
+      "subject": "ralph_beebe_blackman",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "nursing_home",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "marconi_society",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "wearable_computer",
+      "predicate": "isA",
+      "object": "InformalAchievement"
+    },
+    {
+      "subject": "claude_shannon_awarded_ieee_medal_of_honor_1966",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_and_norma_levor_divorce_1941"
+    },
+    {
+      "subject": "kurt_godel_elected_resident_member_american_philosophical_society_1961",
+      "predicate": "isA",
+      "object": "ProfessionalRecognition"
+    },
+    {
+      "subject": "claude_shannon_proves_one_time_pad_unbreakable_1949",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon_contributes_to_combinatorics",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "mark_levinson",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "claude_shannon_bachelors_in_mathematics_1936",
+      "predicate": "isA",
+      "object": "Credential"
+    },
+    {
+      "subject": "artificial_intelligence",
+      "predicate": "isA",
+      "object": "FieldOfStudy"
+    },
+    {
+      "subject": "ieee_information_theory_society",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "claude_shannon_and_mabel_wolf_shannon_familyrelationship",
+      "predicate": "isA",
+      "object": "FamilyRelationship"
+    },
+    {
+      "subject": "theseus_mouse",
+      "predicate": "isA",
+      "object": "InformalAchievement"
+    },
+    {
+      "subject": "claude_shannon_and_bert_sutherland_mentorship",
+      "predicate": "hasMentor",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "world_war_ii",
+      "predicate": "isA",
+      "object": "SocietalDisruption"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_co_develops_pulse_code_modulation"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "hasCulturalBackground",
+      "object": "Margraviate of Moravia"
+    },
+    {
+      "subject": "claude_shannon_builds_theseus_mouse_1950",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "theories_1929",
+      "predicate": "isA",
+      "object": "Document"
+    },
+    {
+      "subject": "claude_shannon_is_apolitical",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon_and_edward_o_thorp_invent_wearable_computer",
+      "predicate": "involvedPerson",
+      "object": "edward_o_thorp"
+    },
+    {
+      "subject": "kurt_godel_and_adele_godel_marriage_1938",
+      "predicate": "involvedPerson",
+      "object": "adele_godel"
+    },
+    {
+      "subject": "throbac",
+      "predicate": "isA",
+      "object": "InformalAchievement"
+    },
+    {
+      "subject": "kurt_godel_burial_princeton_cemetery",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon_attends_massachusetts_institute_of_technology",
+      "predicate": "isA",
+      "object": "EducationEpisode"
+    },
+    {
+      "subject": "kurt_godel_attends_deutsches_staats_realgymnasium_1916_1924",
+      "predicate": "isA",
+      "object": "EducationEpisode"
+    },
+    {
+      "subject": "betty_shannon",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "a_mind_at_play_published_2017",
+      "predicate": "involvedPerson",
+      "object": "rob_goodman"
+    },
+    {
+      "subject": "julian_schwinger",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "claude_shannon_co_edits_automata_studies_1956",
+      "predicate": "occurredOnDate",
+      "object": "1956"
+    },
+    {
+      "subject": "claude_shannon_joins_mit_faculty_1956",
+      "predicate": "occurredOnDate",
+      "object": "1956"
+    },
+    {
+      "subject": "claude_shannon_awarded_foreign_membership_royal_netherlands_academy_arts_sciences_1975",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "tagsEntityWithQualitativeTag",
+      "object": "set_theorist"
+    },
+    {
+      "subject": "albert_einstein_award",
+      "predicate": "isA",
+      "object": "Award"
+    },
+    {
+      "subject": "minivac_601_sold_by_scientific_development_corp_1961",
+      "predicate": "occurredOnDate",
+      "object": "1961"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_national_research_fellow_institute_for_advanced_study_1940"
+    },
+    {
+      "subject": "adel_godel_death_1981",
+      "predicate": "occurredOnDate",
+      "object": "1981"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "hasLegalEvent",
+      "object": "kurt_godel_becomes_us_citizen_1948"
+    },
+    {
+      "subject": "cia_special_cryptologic_advisory_group",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "kurt_godel_formulates_godel_ontological_proof",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "kurt_godel_develops_obsessive_fear_of_being_poisoned",
+      "predicate": "isA",
+      "object": "HealthCrisis"
+    },
+    {
+      "subject": "ramsey_proposes_redundancy_theory_of_truth_1927",
+      "predicate": "occurredOnDate",
+      "object": "1927"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_lays_foundations_digital_age"
+    },
+    {
+      "subject": "claude_shannon_joins_mit_faculty_1956",
+      "predicate": "isA",
+      "object": "EmploymentPeriod"
+    },
+    {
+      "subject": "digital_age",
+      "predicate": "isA",
+      "object": "Movement"
+    },
+    {
+      "subject": "national_museum_of_mathematics",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "moritz_schlick",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "the_bit_player_documentary_produced",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "kurt_godel",
+      "predicate": "hasProfessionalRecognition",
+      "object": "kurt_godel_plenary_speaker_icm_1950"
+    },
+    {
+      "subject": "kurt_godel_starvation_death_1978_0114",
+      "predicate": "involvedPerson",
+      "object": "kurt_godel"
+    },
+    {
+      "subject": "claude_shannon_creates_information_theory",
+      "predicate": "isLinkedToMovement",
+      "object": "digital_age"
+    },
+    {
+      "subject": "kurt_godel_attends_university_of_vienna",
+      "predicate": "isAtInstitution",
+      "object": "university_of_vienna"
+    },
+    {
+      "subject": "platonist",
+      "predicate": "isA",
+      "object": "QualitativeTag"
+    },
+    {
+      "subject": "april_28_1906",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_loses_interest_in_phd_thesis_1940"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasPreferredName",
+      "object": "claude_elwood_shannon"
+    },
+    {
+      "subject": "claude_shannon_works_fire_control_cryptography_world_war_ii",
+      "predicate": "isA",
+      "object": "EmploymentPeriod"
+    },
+    {
+      "subject": "adel_godel_hospitalized_late_1977",
+      "predicate": "involvedPerson",
+      "object": "adel_godel"
+    },
+    {
+      "subject": "boole_shannon_celebration",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "rheumatic_fever",
+      "predicate": "isA",
+      "object": "HealthCrisis"
+    },
+    {
+      "subject": "on_truth_1929",
+      "predicate": "isA",
+      "object": "Document"
+    },
+    {
+      "subject": "mit_location",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeNarrative",
+      "object": "claude_shannon_life_narrative_father_of_information_theory"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_builds_theseus_machine_1950"
+    },
+    {
+      "subject": "claude_shannon_and_betty_shannon_marriage_1949",
+      "predicate": "occurredOnDate",
+      "object": "1949"
+    },
+    {
+      "subject": "claude_shannon_creates_information_theory",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon_and_norma_levor_divorce_1941",
+      "predicate": "isA",
+      "object": "Divorce"
+    },
+    {
+      "subject": "claude_shannon_joins_mit_faculty_1956",
+      "predicate": "occurredAtLocation",
+      "object": "mit_location"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_population_genetics_theory_1940"
+    },
+    {
+      "subject": "combinatorics",
+      "predicate": "isA",
+      "object": "FieldOfStudy"
+    },
+    {
+      "subject": "claude_shannon_receives_phd_degree_1940",
+      "predicate": "occurredOnDate",
+      "object": "1940"
+    },
+    {
+      "subject": "kurt_godel_becomes_czechoslovak_citizen_1918",
+      "predicate": "isA",
+      "object": "CitizenshipChange"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_and_norma_levor_marriage_1940"
+    },
+    {
+      "subject": "claude_shannon_awarded_marconi_society_lifetime_achievement_award_2000",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "foreign_member_royal_netherlands_academy_of_arts_and_sciences",
+      "predicate": "isA",
+      "object": "Award"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasRecognition",
+      "object": "claude_shannon_awarded_kyoto_prize_1985"
+    },
+    {
+      "subject": "claude_shannon_google_doodle_2016_0430",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "claude_shannon_awarded_membership_american_philosophical_society_1983",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "claude_shannon_birth_1916_0430",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "electronic_engineering",
+      "predicate": "isA",
+      "object": "FieldOfStudy"
+    },
+    {
+      "subject": "shannon_centenary_2016",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon_attends_university_of_michigan",
+      "predicate": "isA",
+      "object": "EducationEpisode"
+    },
+    {
+      "subject": "scientific_development_corp",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "kurt_godel_health_crisis_rheumatic_fever_childhood",
+      "predicate": "involvedPerson",
+      "object": "kurt_godel"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasRecognition",
+      "object": "claude_shannon_awarded_marconi_society_lifetime_achievement_award_2000"
+    },
+    {
+      "subject": "claude_shannon_and_leonard_kleinrock_mentorship",
+      "predicate": "hasMentee",
+      "object": "leonard_kleinrock"
+    },
+    {
+      "subject": "claude_shannon_nyquist_shannon_sampling_theorem_1940",
+      "predicate": "occurredOnDate",
+      "object": "1940"
+    },
+    {
+      "subject": "a_mind_at_play_published_2017",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "population_genetics",
+      "predicate": "isA",
+      "object": "FieldOfStudy"
+    },
+    {
+      "subject": "albert_einstein",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "claude_shannon_attends_massachusetts_institute_of_technology",
+      "predicate": "receivedCredential",
+      "object": "claude_shannon_ms_in_electrical_engineering_1937"
+    },
+    {
+      "subject": "claude_shannon_joins_cia_special_cryptologic_advisory_group_1951",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "kurt_godel_thesis_publication_1930",
+      "predicate": "occurredAtLocation",
+      "object": "vienna"
+    },
+    {
+      "subject": "unicycling",
+      "predicate": "isA",
+      "object": "InformalAchievement"
+    },
+    {
+      "subject": "kurt_godel_attends_deutsches_staats_realgymnasium_1916_1924",
+      "predicate": "isAtInstitution",
+      "object": "deutsches_staats_realgymnasium"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_and_betty_shannon_marriage_1949"
+    },
+    {
+      "subject": "claude_shannon_states_shannon_maxim",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "claude_shannon_declassifies_publishes_communication_theory_of_secrecy_systems_1949",
+      "predicate": "occurredOnDate",
+      "object": "1949"
+    },
+    {
+      "subject": "claude_shannon_is_atheist",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "kurt_godel_participation_vienna_circle",
+      "predicate": "isA",
+      "object": "GroupParticipation"
+    },
+    {
+      "subject": "claude_shannon_and_betty_shannon_marriage_1949",
+      "predicate": "involvedPerson",
+      "object": "claude_shannon"
+    },
+    {
+      "subject": "dartmouth_workshop_1956",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "kurt_godel_becomes_german_citizen_1938",
+      "predicate": "isA",
+      "object": "CitizenshipChange"
+    },
+    {
+      "subject": "gaylord_high_school",
+      "predicate": "isA",
+      "object": "Institution"
+    },
+    {
+      "subject": "claude_shannon_awarded_stuart_ballantine_medal_1955",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "a_mind_at_play",
+      "predicate": "isA",
+      "object": "Document"
+    },
+    {
+      "subject": "robot_juggling_machines",
+      "predicate": "isA",
+      "object": "InformalAchievement"
+    },
+    {
+      "subject": "claude_shannon_retirement_1978",
+      "predicate": "isA",
+      "object": "Retirement"
+    },
+    {
+      "subject": "brno",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "claude_shannon_death_2001_0224",
+      "predicate": "occurredAtLocation",
+      "object": "medford_massachusetts"
+    },
+    {
+      "subject": "margraviate_of_moravia",
+      "predicate": "isA",
+      "object": "Location"
+    },
+    {
+      "subject": "claude_shannon_loses_interest_in_phd_thesis_1940",
+      "predicate": "occurredOnDate",
+      "object": "1940"
+    },
+    {
+      "subject": "large_language_model",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "danny_hillis",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "claude_shannon_meets_alan_turing_1943",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "frank_ramsey",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "frank_ramsey_professor_harvard_university",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "shannon_number",
+      "predicate": "isA",
+      "object": "InformalAchievement"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasAffiliation",
+      "object": "institute_for_advanced_study"
+    },
+    {
+      "subject": "kurt_godel_awarded_albert_einstein_award_1951",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "frank_ramsey",
+      "predicate": "hasLifeEvent",
+      "object": "ramsey_subjective_probability_theory_1926"
+    },
+    {
+      "subject": "royal_netherlands_academy_of_arts_and_sciences",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "claude_shannon_and_betty_shannon_marriage_1949",
+      "predicate": "isA",
+      "object": "Marriage"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "birthPlace",
+      "object": "petoskey_michigan"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasRecognition",
+      "object": "claude_shannon_awarded_golden_plate_award_1967"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "tagsEntityWithQualitativeTag",
+      "object": "polymath"
+    },
+    {
+      "subject": "claude_shannon_and_norma_levor_marriage_1940",
+      "predicate": "involvedPerson",
+      "object": "norma_levor"
+    },
+    {
+      "subject": "kurt_godel_doctoral_dissertation_completion_1929",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon_and_elwyn_berlekamp_mentorship",
+      "predicate": "hasMentee",
+      "object": "elwyn_berlekamp"
+    },
+    {
+      "subject": "claude_shannon_nyquist_shannon_sampling_theorem_1940",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "rubiks_cube_solver_device",
+      "predicate": "isA",
+      "object": "InformalAchievement"
+    },
+    {
+      "subject": "claude_shannon_awarded_harvey_prize_1972",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "bert_sutherland",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "kurt_godel_awarded_national_medal_of_science_1974",
+      "predicate": "isA",
+      "object": "Recognition"
+    },
+    {
+      "subject": "claude_shannon_writes_computers_and_automata_1953",
+      "predicate": "occurredOnDate",
+      "object": "1953"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasRecognition",
+      "object": "claude_shannon_awarded_national_inventors_hall_of_fame_2004"
+    },
+    {
+      "subject": "claude_shannon_builds_theseus_mouse_1950",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon_birth_1916_0430",
+      "predicate": "occurredAtLocation",
+      "object": "petoskey_michigan"
+    },
+    {
+      "subject": "vienna_academy_of_science",
+      "predicate": "isA",
+      "object": "Organization"
+    },
+    {
+      "subject": "claude_shannon",
+      "predicate": "hasLifeEvent",
+      "object": "claude_shannon_writes_data_smoothing_essay_1945"
+    },
+    {
+      "subject": "polymath",
+      "predicate": "isA",
+      "object": "QualitativeTag"
+    },
+    {
+      "subject": "elwyn_berlekamp",
+      "predicate": "hasMentorship",
+      "object": "claude_shannon_and_elwyn_berlekamp_mentorship"
+    },
+    {
+      "subject": "claude_shannon_writes_data_smoothing_essay_1945",
+      "predicate": "isA",
+      "object": "LifeEvent"
+    },
+    {
+      "subject": "claude_shannon_writes_mathematical_theory_of_cryptography_1945",
+      "predicate": "occurredAtLocation",
+      "object": "bell_telephone_labs_location"
+    },
+    {
+      "subject": "minivac_601",
+      "predicate": "isA",
+      "object": "InformalAchievement"
+    }
+  ]
+}
