@@ -8,11 +8,21 @@ prompt_registry = PromptRegistry()
 # ==================================================#
 # Tags
 prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_class", "OWL CLASS")
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_subclass_relation", "OWL SUBCLASS RELATION")
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_object_property", "OWL OBJECT PROPERTY")
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_data_property", "OWL DATA PROPERTY")
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "competency_question", "COMPETENCY QUESTION")
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "ontology_guidelines", "ONTOLOGY GUIDELINES")
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "owl_subclass_relation", "OWL SUBCLASS RELATION"
+)
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "owl_object_property", "OWL OBJECT PROPERTY"
+)
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "owl_data_property", "OWL DATA PROPERTY"
+)
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "competency_question", "COMPETENCY QUESTION"
+)
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "ontology_guidelines", "ONTOLOGY GUIDELINES"
+)
 
 # Instructions
 prompt_registry.register_instruction(
@@ -97,7 +107,7 @@ Analyze competency questions to identify ontological requirements and extract fo
    - Maintain coherent semantic relationships
 
 6. Maintain a single-root hierarchical structure
-   - Design exactly one top-level abstract class (often named "Thing")
+   - Design exactly one top-level abstract class (often named "Thing", but if possible, use a more domain-specific name)
    - Ensure all other classes are descendants (direct or indirect) of this root class
    - Create a coherent tree structure where every class has a path to the root
 
@@ -151,7 +161,9 @@ Return your output as a structured set of operations with explicit details (incl
 # ----Triplet Extraction----------------------------#
 # ==================================================#
 # Tags
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "triplet_extraction", "TRIPLET EXTRACTION")
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "triplet_extraction", "TRIPLET EXTRACTION"
+)
 
 # Instructions
 prompt_registry.register_instruction(
