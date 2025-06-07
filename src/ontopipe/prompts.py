@@ -321,6 +321,6 @@ Competency questions are specific queries that domain users would want to answer
 4. Cover diverse aspects of the domain
 5. Phrase questions using natural language as users would ask them
 
-Generate a list of at least 10 competency questions following these guidelines.
+Generate a list of as many competency questions as required to cover the domain comprehensively.
 """,
 )

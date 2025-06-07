@@ -1,0 +1,400 @@
+{{short description|Mathematical logician and philosopher (1906–1978)}}
+{{Redirect2|Godel|Gödel}}
+{{Use mdy dates|date=July 2014}}
+{{Infobox scientist
+| name              = Kurt Gödel
+| image             = Kurt gödel.jpg
+| image_size        = 
+| caption           = Gödel {{circa}} 1926
+| birth_name        = Kurt Friedrich Gödel
+| birth_date        = {{birth date|1906|4|28}}
+| birth_place       = [[Brünn]], Austria-Hungary (now Brno, Czech Republic)
+| death_date        = {{death date and age|1978|1|14|1906|4|28}}
+| death_place       = [[Princeton, New Jersey]], U.S.
+| death_cause       = [[Inanition]]
+| citizenship       = {{ubl|Austria|Czechoslovakia|Germany|United States}}
+| field             = [[Mathematics]], [[mathematical logic]], [[physics]]
+| work_institutions = [[Institute for Advanced Study]]
+| alma_mater        = [[University of Vienna]] ([[Dr. Phil.]], 1930)
+| thesis_title      = Über die Vollständigkeit des Logikkalküls
+| thesis_url        = <!--prior link was to a review, not to the work itself-->
+| thesis_year       = 1929
+| doctoral_advisor  = [[Hans Hahn (mathematician)|Hans Hahn]]
+| doctoral_students = 
+| known_for         = {{collapsible list
+| [[Gödel's incompleteness theorems]]
+| [[Gödel's completeness theorem]]
+| [[Gödel's constructible universe]]
+| [[Gödel metric]] ([[closed timelike curve]])
+| [[Gödel logic]]
+| [[Gödel–Dummett logic]]
+| [[Gödel's β function]]
+| [[Gödel's Loophole]]
+| [[Gödel numbering]]
+| [[Gödel operation]]
+| [[Gödel's speed-up theorem]]
+| [[Gödel's ontological proof]]
+| [[Gödel–Gentzen translation]]
+| [[Modal companion#Gödel–McKinsey–Tarski translation|Gödel–McKinsey–Tarski translation]]
+| [[Von Neumann–Bernays–Gödel set theory]]
+| [[ω-consistent theory]]
+| The consistency of the [[continuum hypothesis]] with [[ZFC]]
+| [[Axiom of constructibility]]
+| [[Compactness theorem]]
+| [[Condensation lemma]]
+| [[Diagonal lemma]]
+| [[Dialectica interpretation]]
+| [[Ordinal definable set]]
+| [[Slingshot argument]]
+| title={{nbsp}}
+}}
+| prizes            = {{Plainlist|
+* [[Albert Einstein Award]] (1951)
+* [[Fellow of the Royal Society|ForMemRS]] (1968)<ref name=frs>{{Cite journal | last1 = Kreisel | first1 = G. | author-link = Georg Kreisel| doi = 10.1098/rsbm.1980.0005 | title = Kurt Godel. 28 April 1906–14 January 1978 | journal = [[Biographical Memoirs of Fellows of the Royal Society]] | volume = 26 | pages = 148–224| year = 1980 | s2cid = 120119270 }}</ref>
+* [[National Medal of Science]] (1974)
+}}
+| spouse            = {{marriage|Adele Nimbursky|1938}}
+| signature         = Kurt Gödel signature.svg
+| module            = {{Infobox philosopher 
+|embed= yes
+|school_tradition             = [[Analytic philosophy]]
+|era                = [[20th-century philosophy]]
+|region             = [[Western philosophy]]
+|main_interests          ={{ubl|[[Philosophy of logic]]|{{nowrap|[[Philosophy of mathematics]]}}|[[Philosophy of religion]] |[[General relativity]]}}
+}}
+}}
+
+'''Kurt Friedrich Gödel''' ({{IPAc-en|ˈ|ɡ|ɜːr|d|əl}} {{respell|GUR|dəl}};<ref>{{cite Merriam-Webster|Gödel}}</ref> {{IPA|de|kʊʁt ˈɡøːdl̩|lang|Kurt gödel.ogg}}; April 28, 1906&nbsp;– January 14, 1978) was a <!-- Please do not add a nationality --> [[logician]], [[mathematician]], and [[philosopher]]. Considered along with [[Aristotle]] and [[Gottlob Frege]] to be one of the most significant logicians in history, Gödel profoundly influenced scientific and philosophical thinking in the 20th century (at a time when [[Bertrand Russell]],<ref name="Stanford&Son">For instance, in their "''[http://plato.stanford.edu/entries/principia-mathematica/ Principia Mathematica]'' {{-"}} (''Stanford Encyclopedia of Philosophy'' edition).</ref> [[Alfred North Whitehead]],<ref name="Stanford&Son"/> and [[David Hilbert]] were using [[logic]] and [[set theory]] to investigate the [[foundations of mathematics]]), building on earlier work by Frege, [[Richard Dedekind]], and [[Georg Cantor]].
+
+Gödel's discoveries in the foundations of mathematics led to the proof of [[Gödel's completeness theorem|his completeness theorem]] in 1929 as part of his dissertation to earn a doctorate at the [[University of Vienna]], and the publication of [[Gödel's incompleteness theorems]] two years later, in 1931. The incompleteness theorems address limitations of formal axiomatic systems. In particular, they imply that a formal axiomatic system satisfying certain technical conditions cannot decide the truth value of all statements about the [[natural number]]s, and cannot prove that it is itself consistent.<ref>Smullyan, R. M. (1992). Gödel's Incompleteness Theorems. New York, Oxford: Oxford University Press, ch. V.</ref><ref>Smullyan, R. M. (1992). Gödel's Incompleteness Theorems. New York, Oxford: Oxford University Press, ch. IX.</ref> To prove this, Gödel developed a technique now known as [[Gödel numbering]], which codes formal expressions as natural numbers.
+
+Gödel also showed that neither the [[axiom of choice]] nor the [[continuum hypothesis]] can be disproved from the accepted [[Zermelo–Fraenkel set theory]], assuming that its axioms are consistent. The former result opened the door for mathematicians to assume the axiom of choice in their proofs. He also made important contributions to [[proof theory]] by clarifying the connections between [[classical logic]], [[intuitionistic logic]], and [[modal logic]].
+
+Born into a wealthy German-speaking family in [[Brno]], Gödel emigrated to the United States in 1939 to escape the rise of Nazi Germany. Later in life, he suffered from mental illness, which ultimately claimed his life: believing that his food was being poisoned, he refused to eat and starved to death.
+
+== Early life and education ==
+
+=== Childhood ===
+Gödel was born April 28, 1906, in Brünn, [[Austria-Hungary]] (now [[Brno]], Czech Republic), into the German-speaking family of Rudolf Gödel, the managing director and part owner of a major textile firm, and Marianne Gödel ([[née]] Handschuh).<ref>Dawson 1997, pp. 3–4.</ref> At the time of his birth the city had a [[German language|German-speaking]] majority which included his parents.<ref>Dawson 1997, p.&nbsp;12</ref> His father was Catholic and his mother was Protestant, and the children were raised as Protestants. Many of Kurt Gödel's ancestors were active in Brünn's cultural life. For example, his grandfather Joseph Gödel was a famous singer in his time and for some years a member of the {{lang|de|Brünner Männergesangverein}} (Men's Choral Union of Brünn).<ref>Procházka 2008, pp. 30–34.</ref>
+
+Gödel automatically became a citizen of [[Czechoslovakia]] at age 12 when the Austro-Hungarian Empire collapsed following its defeat in the [[First World War]]. According to his classmate {{lang|cs|Klepetař|italic=no}}, like many residents of the predominantly German {{lang|de|[[Sudetenland|Sudetenländer]]}}, "Gödel considered himself always Austrian and an exile in Czechoslovakia".<ref>Dawson 1997, p.&nbsp;15.</ref> In February 1929, he was granted release from his Czechoslovak citizenship and then, in April, granted Austrian citizenship.<ref>{{Cite book|url=https://books.google.com/books?id=5ya4A0w62skC&pg=PA37|title=Collected works|last=Gödel, Kurt|others=Feferman, Solomon|year=1986|isbn=0-19-503964-5 | publisher=Oxford University Press|location=Oxford|page=37|oclc=12371326}}</ref> When [[Nazi Germany|Germany]] [[Anschluss|annexed Austria]] in 1938, Gödel automatically became a German citizen at age 32. In 1948, after [[World War II]], at age 42, he became a U.S. citizen.<ref>{{cite web |last1=Balaguer |first1=Mark |title=Kurt Godel |url=https://school.eb.com/levels/high/article/Kurt-G%C3%B6del/37162 |website=Britannica School High |publisher=Encyclopædia Britannica, Inc. |access-date=3 June 2019}}</ref>
+
+In his family, the young Gödel was nicknamed {{lang|de|Herr Warum}} ("Mr. Why") because of his insatiable curiosity. According to his brother Rudolf, at the age of six or seven, Kurt suffered from [[rheumatic fever]]; he completely recovered, but remained convinced for the rest of his life that his heart had been permanently damaged. Beginning at age four, Gödel had "frequent episodes of poor health", which continued all his life.<ref>{{Cite book |url=http://plato.stanford.edu/archives/win2015/entries/johann-herbart/ |title=Johann Friedrich Herbart |last=Kim |first=Alan |date=2015-01-01 |publisher=Metaphysics Research Lab, Stanford University |editor-last=Zalta |editor-first=Edward N. |edition=Winter 2015 }}</ref>
+
+Gödel attended the {{lang|de|Evangelische Volksschule}}, a Lutheran school in Brünn, from 1912 to 1916, and was enrolled in the {{lang|de|Deutsches Staats-Realgymnasium}} from 1916 to 1924, excelling with honors in all subjects, particularly mathematics, languages, and religion. Although he had first excelled in languages, he became more interested in history and mathematics. His interest in mathematics increased when in 1920 his older brother Rudolf left for [[Vienna]], where he attended medical school at the [[University of Vienna]]. During his teens, Gödel studied [[Gabelsberger shorthand]],<ref>{{Cite web|url=https://www.helsinki.fi/en/researchgroups/godel-enigma/research/gabelsberger-stenography|title=Gabelsberger stenography &#124; Gödel Enigma &#124; University of Helsinki|website=www.helsinki.fi}}</ref> criticism of [[Isaac Newton]], and the writings of [[Immanuel Kant]].<ref>{{cite journal
+ | last = Parsons | first = Charles
+ | doi = 10.1093/philmat/nkq001
+ | issue = 2
+ | journal = Philosophia Mathematica
+ | mr = 2669137
+ | pages = 166–192
+ | series = Series III
+ | title = Gödel and philosophical idealism
+ | volume = 18
+ | year = 2010}}</ref>
+
+=== Studies in Vienna ===
+[[File:GoedelKurt.jpg|thumb|upright=1.4|Plaque to Gödel at 43-45 {{ill|Josefstädter Straße|de}}, [[Vienna]], where he discovered his incompleteness theorems]]
+At age 18, Gödel joined his brother at the [[University of Vienna]]. He had already mastered university-level mathematics.<ref>Dawson 1997, p.&nbsp;24.</ref> Although initially intending to study [[theoretical physics]], he also attended courses on mathematics and philosophy.<ref>At the University of Vienna, Gödel attended mathematics and philosophy courses side by side with [[Hermann Broch]], who was in his early forties. See: {{cite book|url=https://books.google.com/books?id=BFgpBAAAQBAJ&pg=PA27|title=Kurt Kurt Gödel: Das Album |author=Sigmund, Karl|author-link=Karl Sigmund|author2=Dawson Jr., John W.|author-link2=John W. Dawson Jr.|author3=Mühlberger, Kurt|page=27|publisher=Springer-Verlag|year=2007|isbn=978-3-8348-0173-9}}</ref> During this time, he adopted ideas of [[mathematical realism]]. He read Kant's {{lang|de|[[Metaphysical Foundations of Natural Science|Metaphysische Anfangsgründe der Naturwissenschaft]]|italic=yes}}, and participated in the [[Vienna Circle]] with [[Moritz Schlick]], [[Hans Hahn (mathematician)|Hans Hahn]], and [[Rudolf Carnap]]. Gödel then studied [[number theory]], but when he took part in a seminar run by [[Moritz Schlick]] that studied [[Bertrand Russell]]'s book ''Introduction to Mathematical Philosophy'', he became interested in [[mathematical logic]]. According to Gödel, mathematical logic was "a science prior to all others, which contains the ideas and principles underlying all sciences."<ref>Gleick, J. (2011) ''[[The Information: A History, a Theory, a Flood]],'' London, Fourth Estate, p. 181.</ref>
+
+Attending a lecture by [[David Hilbert]] in [[Bologna]] on completeness and consistency in mathematical systems may have set Gödel's life course. In 1928, Hilbert and [[Wilhelm Ackermann]] published {{lang|de|Grundzüge der theoretischen Logik|italic=yes}} (''[[Principles of Mathematical Logic]]''), an introduction to [[first-order logic]] in which the problem of completeness was posed: "Are the axioms of a formal system sufficient to derive every statement that is true in all models of the system?"<ref name="auto">{{Cite conference
+ | title = In the Scope of Logic, Methodology and Philosophy of Science
+ | volume = 1|conference=11th International Congress of Logic, Methodology and Philosophy of Science, Cracow, August 1999
+ | year = 2002|page=291}}
+</ref>
+
+Gödel chose this topic for his doctoral work.<ref name="auto"/> In 1929, aged 23, he completed his doctoral dissertation under Hans Hahn's supervision. In it, he established his eponymous [[Gödel's completeness theorem|completeness theorem]] regarding [[first-order logic]].<ref name="auto"/> He was awarded his doctorate in 1930,<ref name="auto"/> and his thesis (accompanied by additional work) was published by the [[Vienna Academy of Science]].
+
+In 1929 Gödel met {{ill|Adele Gödel|lt=Adele Nimbursky|es || ast}} (née Porkert), a divorcee living with her parents across the street from him.<ref name='dawson-vienna'>Dawson Jr., John W., and Karl Sigmund. “Gödel’s Vienna.” Mathematical Intelligencer, vol. 28, no. 3, Summer 2006, Page 46. EBSCOhost, https://doi.org/10.1007/BF02986884.M</ref> The two married (in a civil ceremony) a decade later, in September 1938.<ref>Dawson Jr., John W., and Karl Sigmund. “Gödel’s Vienna.” Mathematical Intelligencer, vol. 28, no. 3, Summer 2006, Page 52. EBSCOhost, https://doi.org/10.1007/BF02986884.M</ref> A trained ballet dancer, Adele was working as a masseuse at the time they met.<ref name='dawson-vienna' /> At one point she worked as a dancer at a downtown nightclub called the ''Nachtfalter'' ("nocturnal moth").<ref name='dawson-vienna' /> Gödel's parents opposed their relationship because of her background and age (six years older than him).<ref>Wang 1987. Page 80.</ref> It appears to have been a happy marriage.<ref>Brewer, William D. "Kurt Gödel: The Genius of Metamathematics". Springer Nature. 2022. Page 250</ref> Adele was an important support to Gödel, whose psychological problems affected their daily lives.<ref>Toates, Frederick. Olga Coschug-Toates. "Obsessive Compulsive Disorder: Practical, Tried-and-tested Strategies to Overcome OCD." Class Publishing Ltd. 2002. Page 221.</ref> The two had no children.
+
+== Career ==
+[[File:Young Kurt Gödel as a student in 1925.jpg|thumb|Gödel as a student in 1925]]
+
+=== Incompleteness theorems ===
+{{blockquote|Kurt Gödel's achievement in modern logic is singular and monumental—indeed it is more than a monument, it is a landmark which will remain visible far in space and time. ... The subject of logic has certainly completely changed its nature and possibilities with Gödel's achievement.|[[John von Neumann]]<ref>{{Cite journal |last=Halmos |first=P.R. |title=The Legend of von Neumann |journal=The American Mathematical Monthly |volume=80 |number=4 |date=April 1973 |pages=382–94|doi=10.1080/00029890.1973.11993293 }}</ref>}}
+
+In 1930 Gödel attended the [[Second Conference on the Epistemology of the Exact Sciences]], held in [[Königsberg]] on 5–7 September. There, he presented his completeness theorem of first-order logic, and, at the end of the talk, mentioned that this result does not generalise to higher-order logic, thus hinting at his [[Gödel's incompleteness theorems|incompleteness theorems]].<ref name="Stadler">{{cite book |last1=Stadler |first1=Friedrich |title=The Vienna Circle: Studies in the Origins, Development, and Influence of Logical Empiricism |date=2015 |publisher=Springer |isbn=978-3-319-16561-5|url=https://books.google.com/books?id=2rAlCQAAQBAJ&q=Erkenntnis+1930+Konigsberg&pg=PA161 |language=en}}</ref>
+
+Gödel published his incompleteness theorems in {{lang|de|Über formal unentscheidbare Sätze der {{lang|la|Principia Mathematica}} und verwandter Systeme}} (called in English "[[On Formally Undecidable Propositions of Principia Mathematica and Related Systems]]"). In that article, he proved for any [[recursion theory|computable]] [[axiomatic system]] powerful enough to describe the arithmetic of the [[natural numbers]] (e.g., the [[Peano axioms]] or [[Zermelo–Fraenkel set theory]] with the axiom of choice), that:
+
+#If a (logical or axiomatic formal) [[formal system|system]] is [[omega-consistency|omega-consistent]], it cannot be [[completeness (logic)|syntactically complete]].
+#The consistency of axioms cannot be proved within their own [[axiomatic system|system]].{{sfn|Dawson |1997 |pages=61–63}}
+These theorems ended a half-century of attempts, beginning with the work of Frege and culminating in {{lang|la|[[Principia Mathematica]]}} and [[Hilbert's program]], to find a non-[[Relative consistency|relatively]] consistent axiomatization sufficient for number theory (that was to serve as the foundation for other fields of mathematics).<ref>{{cite book |last=Nagel |first=Ernest |author-link=Ernest Nagel |title=Gödel's Proof |year=2001 |publisher=New York University Press |pages=85–87}}</ref>
+
+Gödel constructed a formula that claims it is itself unprovable in a given formal system. If it were provable, it would be false. Thus there will always be at least one true but unprovable statement. That is, for any [[computably enumerable set]] of axioms for arithmetic (that is, a set that can in principle be printed out by an idealized computer with unlimited resources), there is a formula that is true of arithmetic, but not provable in that system. To make this precise, Gödel had to produce a method to encode (as natural numbers) statements, proofs, and the concept of provability; he did this by a process known as [[Gödel numbering]].<ref>{{cite book |last=Raatikainen |first=Panu |title=Gödel's Incompleteness Theorems |publisher=Stanford Encyclopedia of Philosophy |date=2015 |url=https://plato.stanford.edu/entries/goedel-incompleteness/}}</ref>
+
+In his two-page paper {{lang|de|Zum intuitionistischen Aussagenkalkül}} (1932), Gödel refuted the finite-valuedness of [[intuitionistic logic]]. In the proof, he implicitly used what has later become known as [[intermediate logic|Gödel–Dummett intermediate logic]] (or [[t-norm fuzzy logics|Gödel fuzzy logic]]).<ref>{{cite book |last=Troelstra |first=A. S. |title=Constructivism in Mathematics: An Introduction |volume=1 |publisher=North-Holland |year=1988 |pages=64–66}}</ref>
+
+=== Mid-1930s: further work and U.S. visits ===
+Gödel earned his [[habilitation]] at Vienna in 1932, and in 1933 became a {{lang|de|[[Privatdozent]]}} (unpaid lecturer) there. In 1933, [[Adolf Hitler]] came to power in Germany, and over the following years the Nazis rose in influence in Austria and among Vienna's mathematicians. In June 1936, [[Moritz Schlick]], whose seminar had aroused Gödel's interest in logic, was murdered by one of his former students, [[Johann Nelböck]]. This triggered "a severe nervous crisis" in Gödel.<ref name=Casti2001>{{Cite book |last1=Casti |first1=John L. |last2=Depauli |first2=Werner |year=2001 |title=Godel: A Life Of Logic, The Mind, And Mathematics |doi= |isbn=978-0-7382-0518-2 |location= Cambridge, Mass. |publisher=Basic Books}}. From p.&nbsp;80, which quotes Rudolf Gödel, Kurt's brother and a medical doctor. The words "a severe nervous crisis", and the judgment that Schlick's murder was its trigger, are Rudolf Gödel's. Rudolf knew Kurt well in those years.</ref> He developed paranoid symptoms, including a fear of being poisoned, and spent several months in a sanitarium for nervous diseases.<ref>Dawson 1997, pp. 110–12</ref>
+
+In 1933, Gödel first traveled to the U.S., where he met [[Albert Einstein]], who became a good friend.<ref>''[[Hutchinson Encyclopedia]]'' (1988), p.&nbsp;518</ref> He delivered an address to the annual meeting of the [[American Mathematical Society]]. During this year, Gödel also developed the ideas of computability and [[Computable function|recursive functions]] to the point where he was able to present a lecture on general recursive functions and the concept of truth. This work was developed in number theory, using [[Gödel numbering]].
+
+In 1934, Gödel gave a series of lectures at the [[Institute for Advanced Study]] (IAS) in [[Princeton, New Jersey]], titled ''On undecidable propositions of formal mathematical systems''. [[Stephen Kleene]], who had just completed his PhD at Princeton, took notes on these lectures that were later published.
+
+Gödel visited the IAS again in the autumn of 1935. The traveling and hard work had exhausted him and the next year he took a break to recover from a depressive episode. He returned to teaching in 1937. During this time, he worked on the proof of consistency of the [[axiom of choice]] and of the [[continuum hypothesis]]; he went on to show that these hypotheses cannot be disproved from the common system of axioms of set theory.
+
+After marrying Adele Nimbursky in 1938, he visited the U.S. again, spending the autumn of 1938 at the IAS and publishing ''Consistency of the axiom of choice and of the generalized continuum-hypothesis with the axioms of set theory'',<ref>{{Cite journal |last=Gödel |first=Kurt |date=November 9, 1938 |title=The Consistency of the Axiom of Choice and of the Generalized Continuum-Hypothesis |journal=Proceedings of the National Academy of Sciences of the United States of America |volume=24 |issue=12 |pages=556–57 |issn=0027-8424 |pmc=1077160 |pmid=16577857 |bibcode=1938PNAS...24..556G |doi=10.1073/pnas.24.12.556 |doi-access=free }}</ref> a classic of modern mathematics. In it, he introduced the [[constructible universe]], a model of [[set theory]] in which the only sets that exist are those that can be constructed from simpler sets. Gödel showed that both the [[axiom of choice]] (AC) and the [[generalized continuum hypothesis]] (GCH) are true in the constructible universe, and therefore must be consistent with the [[Zermelo–Fraenkel axioms]] for set theory (ZF). This result has considerable consequences for working mathematicians, as it means they can assume the axiom of choice when proving the [[Hahn–Banach theorem]]. [[Paul Cohen]] later constructed a [[structure (mathematical logic)|model]] of ZF in which AC and GCH are false; together these proofs mean that AC and GCH are independent of the ZF axioms for set theory.
+
+Gödel spent the spring of 1939 at the [[University of Notre Dame]].<ref>{{cite web |url=https://math.nd.edu/assets/13975/logicatndweb.pdf |title=Kurt Gödel at Notre Dame |last=Dawson |first=John W. Jr |page=4 |quote=the Mathematics department at the University of Notre Dame was host ... for a single semester in the spring of 1939 [to] Kurt Gödel }}</ref>
+
+=== Princeton, Einstein, U.S. citizenship ===
+After the [[Anschluss]] on 12 March 1938, Austria became a part of [[Nazi Germany]]. Germany abolished the title {{lang|de|[[Privatdozent]]}}, so Gödel had to apply for a different position under the new order. His former association with Jewish members of the Vienna Circle, especially Hahn, weighed against him. The University of Vienna turned his application down.
+
+His predicament worsened when the German army found him fit for conscription. World War II started in September 1939. Before the year was up, Gödel and his wife left Vienna for [[Princeton, New Jersey|Princeton]]. To avoid the difficulty of an Atlantic crossing, the Gödels took the [[Trans-Siberian Railway]] to the Pacific, sailed from Japan to San Francisco (which they reached on March 4, 1940), then traveled to Princeton by train.<ref name=dawson>{{cite journal|last=Dawson Jr|first=John W|title=Max Dehn, Kurt Gödel, and the Trans-Siberian Escape Route|journal=Notices of the American Mathematical Society|date=October 2002|volume=49|issue=9|pages=1068–1075|url=https://www.ams.org/notices/200209/fea-dawson.pdf}}</ref> During this trip, Gödel was supposed to be carrying a secret letter to Einstein from Viennese physicist Hans Thirring to alert President [[Franklin D. Roosevelt]] of the possibility that Hitler was making an atom bomb. Gödel never conveyed that letter to Einstein, although they did meet, because he was not convinced Hitler could achieve this feat.<ref name=”Sigmund_2024”>{{cite journal | vauthors = Sigmund K| title = The spy who flunked it: Kurt Gödel's forgotten part in the atom-bomb story | journal = Nature  | volume = 627 | issue = 8002 | pages = 26–28| date = March 2024 | doi =10.1038/d41586-024-00644-1 |pmid = 38438543 | doi-access = free | bibcode = 2024Natur.627...26S }}</ref> In any case, [[Leo Szilard]] had already conveyed the message to Einstein, and Einstein had already warned Roosevelt.
+
+In Princeton, Gödel accepted a position at the Institute for Advanced Study (IAS), which he had visited during 1933–34.<ref>{{Cite web|url=https://www.ias.edu/scholars/godel|title=Kurt Gödel|website=Institute for Advanced Study|date=December 9, 2019}}</ref> 
+
+Einstein was also living in Princeton during this time. Gödel and Einstein developed a strong friendship, and were known to take long walks together to and from the IAS. The nature of their conversations was a mystery to the other Institute members. Economist [[Oskar Morgenstern]] recounts that toward the end of Einstein's life, Einstein confided that his "own work no longer meant much, that he came to the Institute merely ... to have the privilege of walking home with Gödel".<ref>{{Harvnb|Goldstein|2005|p=[https://books.google.com/books?id=tXk2AAAAQBAJ&pg=PA33 33]}}</ref>
+
+Gödel and his wife spent the summer of 1942 in [[Blue Hill, Maine]], at the Blue Hill Inn at the top of the bay. Gödel had a very productive summer of work. Using {{lang|de|Heft 15}} [volume 15] of Gödel's still-unpublished {{lang|de|Arbeitshefte}} [working notebooks], [[John W. Dawson Jr.]] conjectures that Gödel discovered a proof for the independence of the axiom of choice from finite type theory, a weakened form of set theory, while in Blue Hill in 1942. Gödel's close friend [[Hao Wang (academic)|Hao Wang]] supports this conjecture, noting that Gödel's Blue Hill notebooks contain his most extensive treatment of the problem.
+
+On December 5, 1947, Einstein and Morgenstern accompanied Gödel to his [[U.S. citizenship]] exam, where they acted as witnesses. Gödel had confided in them that he had discovered an inconsistency in the [[U.S. Constitution]] that could allow the U.S. to become a dictatorship; this has since been dubbed [[Gödel's Loophole]]. Einstein and Morgenstern were concerned that their friend's unpredictable behavior might jeopardize his application. The judge turned out to be [[Phillip Forman]], who knew Einstein and had administered the oath at Einstein's own citizenship hearing. Everything went smoothly until Forman happened to ask Gödel if he thought a dictatorship like the [[Nazi regime]] could happen in the U.S. Gödel then started to explain his discovery to Forman. Forman understood what was going on, cut Gödel off, and moved the hearing on to other questions and a routine conclusion.<ref>Dawson 1997, pp. 179–80. The story of Gödel's citizenship hearing has many versions. Dawson's account is the most carefully researched, but was written before the rediscovery of Morgenstern's written account. Most other accounts appear to be based on Dawson, hearsay, or speculation.</ref><ref>{{cite web |url=https://robert.accettura.com/wp-content/uploads/2010/10/Morgenstern_onGoedelcitizenship.pdf |title=History of the Naturalization of Kurt Gödel |date=September 13, 1971 |author=Oskar Morgenstern |access-date=April 16, 2019 }}</ref>
+
+Gödel became a permanent member of the Institute for Advanced Study at Princeton in 1946. Around this time he stopped publishing, though he continued to work. He became a full professor at the Institute in 1953 and an emeritus professor in 1976.<ref>{{cite web |url=https://www.ias.edu/people/godel |title=Kurt Gödel – Institute for Advanced Study |access-date=December 1, 2015 }}</ref>
+
+During his time at the institute, Gödel's interests turned to philosophy and physics. In 1949, he demonstrated the existence of solutions involving [[closed timelike curve]]s, to [[Einstein's field equations]] in [[general relativity]].<ref>{{cite journal |last=Gödel |first=Kurt |title=An Example of a New Type of Cosmological Solutions of Einstein's Field Equations of Gravitation |journal=[[Rev. Mod. Phys.]] |volume=21 |issue=447 |pages=447–450 |date=July 1, 1949 |doi=10.1103/RevModPhys.21.447 |bibcode=1949RvMP...21..447G |doi-access=free }}</ref> He is said to have given this elaboration to Einstein as a present for his 70th birthday.<ref>{{cite news |url=http://www.tagesspiegel.de/magazin/wissen/Albert-Einstein-Kurt-Goedel;art304,2454513 |title=Das Genie & der Wahnsinn |work=[[Der Tagesspiegel]] |date=January 13, 2008 |language=de }}</ref> His "rotating universes" would allow [[time travel]] to the past and caused Einstein to have doubts about his own theory. His solutions are known as the [[Gödel metric]] (an exact solution of the [[Einstein field equation]]).
+
+Gödel studied and admired the work of [[Gottfried Leibniz]], but came to believe that a hostile conspiracy had caused some of Leibniz's work to be suppressed.<ref>{{cite book | first=John W. Jr. |last=Dawson |url=https://books.google.com/books?id=gA8SucCU1AYC&q=godel+leibniz&pg=PA166 |title=Logical Dilemmas: The Life and Work of Kurt Gödel. |publisher=A K Peters |year=2005 |page=166 |isbn=978-1-56881-256-4 }}</ref> To a lesser extent he studied Kant and [[Edmund Husserl]]. In the early 1970s, Gödel circulated among his friends an elaboration of Leibniz's version of [[Anselm of Canterbury]]'s [[ontological argument]] for God's existence. This is now known as [[Gödel's ontological proof]].
+
+== Awards and honours ==
+Gödel was awarded (with [[Julian Schwinger]]) the first [[Albert Einstein Award]] in 1951 and the [[National Medal of Science]] in 1974.<ref>{{cite web|url=https://www.nsf.gov/od/nms/recip_details.jsp?recip_id=138|title=The President's National Medal of Science: Recipient Details {{!}} NSF – National Science Foundation|website=www.nsf.gov|access-date=2016-09-17}}</ref> Gödel was elected a resident member of the [[American Philosophical Society]] in 1961 and a [[List of Fellows of the Royal Society elected in 1968|Foreign Member of the Royal Society (ForMemRS) in 1968]].<ref>{{Cite web|title=APS Member History|url=https://search.amphilsoc.org/memhist/search?creator=Kurt+G%C3%B6del&title=&subject=&subdiv=&mem=&year=&year-max=&dead=&keyword=&smode=advanced|access-date=2021-01-28|website=search.amphilsoc.org}}</ref><ref name=frs/> He was a Plenary Speaker at the [[International Congress of Mathematicians|ICM]] in 1950 in Cambridge, Massachusetts.<ref>{{cite book|author=Gödel, Kurt|chapter=Rotating universes in general relativity theory|title=''In:'' Proceedings of the International Congress of Mathematicians, Cambridge, Massachusetts, August 30–September 6, 1950|volume=1|pages=175–81|year=1950|chapter-url=http://www.mathunion.org/ICM/ICM1950.1/Main/icm1950.1.0175.0181.ocr.pdf|access-date=December 4, 2017|archive-date=December 28, 2013|archive-url=https://web.archive.org/web/20131228052147/http://www.mathunion.org/ICM/ICM1950.1/Main/icm1950.1.0175.0181.ocr.pdf}}</ref>
+
+== Later life and death ==
+
+[[File:Kurt godel tomb 2004.jpg|right|thumb|200px|Gravestone of Kurt and Adele Gödel in the Princeton, N.J., cemetery]]
+
+Later in life, Gödel suffered periods of [[mental disorder|mental instability]] and illness. Some scholars have suggested [[Asperger syndrome]] and [[obsessive-compulsive disorder]] as diagnoses.<ref>Brewer, William D. "Kurt Gödel: The Genius of Metamathematics". Springer Nature. 2022. Pages 209-210</ref> After his close friend [[Moritz Schlick]] was murdered,<ref name="pape_Trag">{{Cite web |url = https://paperpile.com/blog/kurt-goedel/ | title = Tragic deaths in science: Kurt Gödel — looking over the edge of reason | first1= Nina| last1= Bausek | author2= Stefan Washietl |website= Paperpile.com| date= February 20, 2018| publisher= | access-date= May 7, 2025}}</ref> Gödel developed an [[persecutory delusion|obsessive fear of being poisoned]], and ate only food prepared by his wife, Adele. Adele was hospitalized beginning in late 1977, and in her absence Gödel refused to eat;<ref>{{cite journal|title=Gödel's universe | last= Davis| first= Martin| journal= Nature| date=May 4, 2005|volume=435|issue=7038|doi=10.1038/435019a|pages=19–20|bibcode=2005Natur.435...19D|doi-access=free}}</ref> he weighed {{convert|65|lbs|kg|order=flip}} when he died of "malnutrition and [[inanition]] caused by personality disturbance" in [[Princeton Hospital]] on January 14, 1978.<ref>{{cite book | last = Toates | first = Frederick |author2=Olga Coschug Toates | title = Obsessive Compulsive Disorder: Practical Tried-and-Tested Strategies to Overcome OCD| publisher=Class Publishing | year = 2002 | page = 221|isbn=978-1-85959-069-0}}</ref> He was buried in [[Princeton Cemetery]]. Adele died in 1981, donating Gödel's papers to the Institute for Advanced Study upon her death.<ref>{{cite web |last1=Dawson |first1=John W. |author-link1=John W. Dawson Jr. |title=Gödel and the limits of logic |url=https://plus.maths.org/content/goumldel-and-limits-logic |website=Plus |publisher=University of Cambridge |access-date=November 1, 2020 |language=en |date=June 1, 2006}}</ref>
+
+== Religious views ==
+Gödel believed that God was personal,<ref>{{cite book|title=A to Z of Mathematicians|year=2005|publisher=Infobase Publishing|isbn=978-0-8160-5338-4|author=Tucker McElroy|page=[https://archive.org/details/tozofmathematici0000mcel/page/118 118]|quote=Gödel had a happy childhood, and was called "Mr. Why" by his family, due to his numerous questions. He was baptized as a Lutheran, and remained a theist (a believer in a personal God) throughout his life.|url=https://archive.org/details/tozofmathematici0000mcel/page/118}}</ref> and called his philosophy "rationalistic, idealistic, optimistic, and theological".{{Sfn|Wang|1996|p=[https://books.google.com/books?id=pckvCy6L_ocC&pg=PA8 8]}} He formulated a [[formal proof]] of God's existence known as [[Gödel's ontological proof]].
+
+Gödel believed in an afterlife, saying, "Of course this supposes that there are many relationships which today's science and received wisdom haven't any inkling of. But I am convinced of this [the afterlife], independently of any theology." It is "possible today to perceive, by pure reasoning" that it "is entirely consistent with known facts." "If the world is rationally constructed and has meaning, then there must be such a thing [as an afterlife]."{{Sfn|Wang|1996|p=104-105}} He also read widely on other [[paranormal]] topics, including telepathy, reincarnation, and ghosts.<ref>Feldman, Burton. ''112 Mercer Street: Einstein, Russell, Gödel, Pauli, and the End of Innocence in Science''. Arcade Publishing. 2007. Page 7.</ref>
+
+In an unmailed answer to a questionnaire, Gödel described his religion as "baptized Lutheran (but not member of any religious congregation). My belief is ''theistic'', not pantheistic, following Leibniz rather than Spinoza."<ref>Gödel's answer to a special questionnaire sent him by the sociologist Burke Grandjean. This answer is quoted directly in {{harvnb|Wang|1987|p=[https://books.google.com/books?id=wLLePwhDOMYC&pg=PA18 18]}}, and indirectly in {{harvnb|Wang|1996|p=112}}. It is also quoted directly in {{harvnb|Dawson|1997|p=6}}, who cites {{harvnb|Wang|1987}}. The Grandjean questionnaire is perhaps the most extended autobiographical item in Gödel's papers. Gödel filled it out in pencil and wrote a cover letter, but did not return it. "Theistic" is italicized in both {{harvnb|Wang|1987}} and {{harvnb|Wang|1996}}. It is possible that this italicization is Wang's and not Gödel's. The quote follows {{harvnb|Wang|1987}}, with two corrections taken from {{harvnb|Wang|1996}}. {{harvnb|Wang|1987}} reads "Baptist Lutheran" where {{harvnb|Wang|1996}} has "baptized Lutheran". {{harvnb|Wang|1987}} has "rel. cong.", which in {{harvnb|Wang|1996}} is expanded to "religious congregation".</ref> Of religion(s) in general, he said: "Religions are for the most part bad, but not religion itself."<ref>{{Cite book |last=Gödel |first=Kurt |chapter-url=https://books.google.com/books?id=UZnlAgAAQBAJ&dq=%E2%80%9CReligions+are,+for+the+most+part,+bad%22&pg=PA425 |title=Kurt Gödel: Collected Works: Volume IV |publisher=OUP Oxford |year=2003 |isbn=978-0-19-968961-3 |editor-last=Feferman |editor-first=Solomon |editor-link=Solomon Feferman |page=425 |language=en |chapter=Marianne Gödel |doi=10.1093/oso/9780198500735.003.0018 |quote=Godel was not unmoved by religious concerns. On the contrary, his library included many books and tracts devoted to various religious sects; among his notebooks are two devoted to theology; and in a shorthand manuscript found in his ''Nachlaß'' he wrote, "Die Religionen sind zum größten Teil schlecht, aber nicht die Religion." ("Religions are for the most part bad, but not religion itself.") |editor-last2=Dawson |editor-first2=John W.}}</ref> According to his wife, Adele, "Gödel, although he did not go to church, was religious and read the Bible in bed every Sunday morning",{{sfn|Wang|1996|p=51}} while of [[Islam]], he said, "I like Islam: it is a consistent [or consequential] idea of religion and open-minded."<ref>{{harvnb|Wang|1996|p=148}}, 4.4.3. It is one of Gödel's observations, made between 16 November and 7 December 1975, that Wang found hard to classify under the main topics considered elsewhere in the book.</ref>
+
+== Legacy ==
+[[Douglas Hofstadter]]'s 1979 book {{lang|de|[[Gödel, Escher, Bach: an Eternal Golden Braid]]|italic=yes}} interweaves the work and ideas of Gödel, [[M. C. Escher]], and [[Johann Sebastian Bach]]. It partly explores the ramifications of the fact that Gödel's incompleteness theorem can be applied to any [[Turing-complete]] computational system, which may include the [[human brain]]. In 2005, [[John W. Dawson Jr.]] published a biography, ''Logical Dilemmas: The Life and Work of Kurt Gödel''.<ref>[[A. K. Peters]], Wellesley, MA, {{isbn|1-56881-256-6}}</ref> That year, [[Rebecca Goldstein]] published ''Incompleteness: The Proof and Paradox of Kurt Gödel'' as part of the Great Discoveries series. [[Stephen Budiansky]]'s Gödel's biography, ''Journey to the Edge of Reason: The Life of Kurt Gödel'',<ref>[[W. W. Norton & Company]], New York City, {{isbn|978-0-393-35820-9}}</ref> was a [[The New York Times|''New York Times'']] Critics' Top Book of 2021.<ref>{{cite web
+|url=https://www.nytimes.com/2021/12/15/books/critics-top-books-2021.html
+|title=Times Critics' Top Books of 2021
+|work=The New York Times
+|date=December 15, 2021
+|access-date=July 5, 2022}}</ref> Gödel was one of four mathematicians examined in [[David Malone (independent filmmaker)|David Malone]]'s 2008 [[BBC]] documentary ''Dangerous Knowledge''.<ref>{{cite web|url=https://www.bbc.co.uk/bbcfour/documentaries/features/dangerous-knowledge.shtml|title=Dangerous Knowledge|work=BBC  |date=June 11, 2008|access-date=October 6, 2009}}</ref>
+
+The [[Kurt Gödel Society]], founded in 1987, is an international organization for the promotion of research in logic, philosophy, and the [[history of mathematics]]. The [[University of Vienna]] hosts the Kurt Gödel Research Center for Mathematical Logic. The [[Association for Symbolic Logic]] has held an annual [[Gödel Lecture]] since 1990. The [[Gödel Prize]] is given annually to an outstanding paper in theoretical computer science. Gödel's philosophical notebooks<ref>{{Cite web|url=https://www.bbaw.de/en/research/kurt-goedel-forschungsstelle-die-philosophischen-bemerkungen-kurt-goedels-kurt-goedel-research-centre-the-philosophical-remarks-of-kurt-goedel|title=Kurt-Gödel-Forschungsstelle: die "Philosophischen Bemerkungen" Kurt Gödels (Kurt Gödel Research Centre: The 'Philosophical Remarks' of Kurt Gödel) – Berlin-Brandenburg Academy of Sciences and Humanities|website=www.bbaw.de}}</ref> are being edited at the Kurt Gödel Research Centre at the [[Berlin-Brandenburg Academy of Sciences and Humanities]].<ref>{{Cite web|url=https://www.bbaw.de/en/the-academy|title=The Academy – Berlin-Brandenburg Academy of Sciences and Humanities|website=www.bbaw.de}}</ref> Five volumes of Gödel's collected works have been published. The first two include his publications; the third includes unpublished manuscripts from his {{lang|de|[[Nachlass]]}}, and the final two include correspondence.
+
+In the 1994 film ''[[I.Q. (film)|I.Q.]]'', [[Lou Jacobi]] portrays Gödel. In the 2023 movie ''[[Oppenheimer (film)|Oppenheimer]]'', Gödel, played by [[James Urbaniak]], briefly appears walking with Einstein in the gardens of Princeton.
+
+== Bibliography ==
+
+=== Important publications ===
+In German:
+
+* 1930, "Die Vollständigkeit der Axiome des logischen Funktionenkalküls." ''Monatshefte für Mathematik und Physik'' '''37''': 349–60.
+* 1931, "Über formal unentscheidbare Sätze der ''[[Principia Mathematica]]'' und verwandter Systeme, I." ''Monatshefte für Mathematik und Physik'' '''38''': 173–98.
+* 1932, "Zum intuitionistischen Aussagenkalkül", ''Anzeiger Akademie der Wissenschaften Wien'' '''69''': 65–66.
+
+In English:
+
+* 1940. ''[[iarchive:consistencyofaxi0054gode|The Consistency of the Axiom of Choice and of the Generalized Continuum Hypothesis with the Axioms of Set Theory]].'' Princeton University Press.
+* 1947. [https://archive.org/details/AMMTop/What_is_Cantors_Continuum_Problem/mode/1up?view=theater "What is Cantor's continuum problem?"] ''The American Mathematical Monthly 54'': 515–25. Revised version in [[Paul Benacerraf]] and [[Hilary Putnam]], eds., 1984 (1964). ''Philosophy of Mathematics: Selected Readings''. Cambridge Univ. Press: 470–85.
+* 1950, "Rotating Universes in General Relativity Theory." ''Proceedings of the international Congress of Mathematicians in Cambridge,'' Vol. 1, pp.&nbsp;175–81.
+
+In English translation:
+
+* Kurt Gödel, 1992. ''On Formally Undecidable Propositions Of Principia Mathematica And Related Systems'', tr. B. Meltzer, with a comprehensive introduction by [[R. B. Braithwaite|Richard Braithwaite]]. Dover reprint of the 1962 Basic Books edition.
+* Kurt Gödel, 2000.<ref>{{cite journal|doi=10.1007/BF01700692|author=Kurt Godel |year=1931|url=http://www.research.ibm.com/people/h/hirzel/papers/canon00-goedel.pdf|title=Über formal unentscheidbare Sätze der Principia Mathematica und verwandter Systeme, I|trans-title=On formally undecidable propositions of Principia Mathematica and related systems I|journal=Monatshefte für Mathematik und Physik|volume= 38|pages= 173–98|s2cid=197663120 }}</ref> ''On Formally Undecidable Propositions Of Principia Mathematica And Related Systems'', tr. Martin Hirzel
+* [[Jean van Heijenoort]], 1967. ''A Source Book in Mathematical Logic, 1879–1931''. Harvard Univ. Press.
+** 1930. "The completeness of the axioms of the functional calculus of logic," 582–91.
+** 1930. "Some metamathematical results on completeness and consistency," 595–96. Abstract to (1931).
+** 1931. [[iarchive:onformallyundeci0000kurt|"On formally undecidable propositions of ''Principia Mathematica'' and related systems,"]] 596–616.
+** 1931a. "On completeness and consistency," 616–17.
+* ''Collected Works'': Oxford University Press: New York.  Editor-in-chief: [[Solomon Feferman]].
+
+*{{cite book|last=Gödel|first=Kurt|title=Collected Works|location=New York|publisher=[[Oxford University Press]]}}
+:{{cite book
+|last=Gödel|first=Kurt|author-mask=1
+<!-- |series=Collected Works -->
+|volume=I
+|year=1986
+|title=Publications 1929–1936
+|url=https://antilogicalism.com/wp-content/uploads/2021/12/Godel-1.pdf
+|editor1-last=Feferman|editor1-first=Solomon|editor1-link=Solomon Feferman
+|editor2-last=Dawson, Jr. |editor2-first=John W. |editor2-link=John W. Dawson Jr.
+|editor3-last=Kleene |editor3-first=Stephen C.|editor3-link=Stephen Cole Kleene
+|editor4-last=Moore |editor4-first=Gregory H.|editor5-last=Solovay |editor5-first=Robert M.|editor5-link=Robert M. Solovay
+|editor6-last=Van Heijenoort |editor6-first=Jean|editor6-link=Jean van Heijenoort
+<!-- |location=New York|publisher=[[Oxford University Press]] -->
+|isbn=978-0-19-503964-1
+}} / Paperback: {{isbn|978-0-19-514720-9}}
+:{{cite book
+|last=Gödel|first=Kurt|author-mask=1
+<!-- |series=Collected Works -->
+|volume=II
+|year=1990
+|title=Publications 1938–1974
+|publisher=Oxford University Press |url=https://antilogicalism.com/wp-content/uploads/2021/12/Godel-2.pdf
+|editor1-last=Feferman|editor1-first=Solomon|editor1-link=Solomon Feferman
+|editor2-last=Dawson, Jr. |editor2-first=John W. |editor2-link=John W. Dawson Jr.
+|editor3-last=Kleene |editor3-first=Stephen C.|editor3-link=Stephen Cole Kleene
+|editor4-last=Moore |editor4-first=Gregory H.|editor5-last=Solovay |editor5-first=Robert M.|editor5-link=Robert M. Solovay
+|editor6-last=Van Heijenoort |editor6-first=Jean|editor6-link=Jean van Heijenoort
+<!-- |location=New York|publisher=[[Oxford University Press]] -->
+|isbn=978-0-19-503972-6
+}} / Paperback: {{isbn|978-0-19-514721-6}}
+:{{cite book
+|last=Gödel|first=Kurt|author-mask=1
+<!-- |series=Collected Works -->
+|volume=III
+|year=1995
+|title=Unpublished Essays and Lectures
+|url=https://antilogicalism.com/wp-content/uploads/2021/12/Godel-3.pdf
+|editor1-last=Feferman|editor1-first=Solomon|editor1-link=Solomon Feferman
+|editor2-last=Dawson, Jr. |editor2-first=John W. |editor2-link=John W. Dawson Jr.
+|editor3-last=Goldfarb |editor3-first=Warren|editor3-link=Warren Goldfarb
+|editor4-last=Parsons |editor4-first=Charles|editor4-link=Charles Parsons (philosopher)
+|editor5-last=Solovay |editor5-first=Robert M.|editor5-link=Robert M. Solovay
+<!-- |location=New York|publisher=[[Oxford University Press]] -->
+|isbn=978-0-19-507255-6
+}} / Paperback: {{isbn|978-0-19-514722-3}}
+:{{cite book
+|last=Gödel|first=Kurt|author-mask=1
+<!-- |series=Collected Works -->
+|volume=IV
+|year=2003
+|title=Correspondence A–G
+|publisher=Clarendon Press |url=https://antilogicalism.com/wp-content/uploads/2021/12/Godel-4.pdf
+|editor1-last=Feferman|editor1-first=Solomon|editor1-link=Solomon Feferman
+|editor2-last=Dawson, Jr. |editor2-first=John W. |editor2-link=John W. Dawson Jr.
+|editor3-last=Goldfarb |editor3-first=Warren|editor3-link=Warren Goldfarb
+|editor4-last=Parsons |editor4-first=Charles|editor4-link=Charles Parsons (philosopher)
+|editor5-last=Sieg |editor5-first=Wilfried|editor5-link=
+<!-- |location=New York|publisher=[[Oxford University Press]] -->
+|isbn=978-0-19-850073-5
+}}
+:{{cite book|last=Gödel|first=Kurt|author-mask=1
+<!-- |series=Collected Works -->
+|volume=V
+|year=2003
+|title=Correspondence H–Z
+|publisher=Clarendon Press |url=https://antilogicalism.com/wp-content/uploads/2021/12/Godel-5.pdf
+|editor1-last=Feferman|editor1-first=Solomon|editor1-link=Solomon Feferman
+|editor2-last=Dawson, Jr. |editor2-first=John W. |editor2-link=John W. Dawson Jr.
+|editor3-last=Goldfarb |editor3-first=Warren|editor3-link=Warren Goldfarb
+|editor4-last=Parsons |editor4-first=Charles|editor4-link=Charles Parsons (philosopher)
+|editor5-last=Sieg |editor5-first=Wilfried|editor5-link=
+<!-- |location=New York|publisher=[[Oxford University Press]] -->
+|isbn=978-0-19-850075-9
+}}
+* ''Philosophische Notizbücher / Philosophical Notebooks'': De Gruyter: Berlin/München/Boston. Editor: {{ill|Eva-Maria Engelen|de|vertical-align=sup}}.
+** Volume 1: Philosophie I Maximen 0 / Philosophy I Maxims 0 {{ISBN|978-3-11-058374-8}} / Paperback: {{ISBN|978-3-11-077683-6}}.
+** Volume 2: Zeiteinteilung (Maximen) I und II / Time Management (Maxims) I and II {{ISBN|978-3-11-067409-5}}.
+** Volume 3: Maximen III / Maxims III {{ISBN|978-3-11-075325-7}}.
+** Volume 4: Maximen IV / Maxims IV {{ISBN|978-3-11-077294-4}}.
+** Volume 5: Maximen V / Maxims V {{ISBN|978-3-11-108114-4}}.
+** Volume 6: Maximen VI / Maxims VI {{ISBN|978-3-11-139031-4}}.
+
+== See also ==
+{{Portal|Biography|Philosophy}}
+
+* [[Original proof of Gödel's completeness theorem]]
+* [[T-norm#Prominent examples|Gödel fuzzy logic]]
+* [[Provability logic|Gödel–Löb logic]]
+* [[Gödel Prize]]
+* [[Gödel's ontological proof]]
+* [[Infinite-valued logic]]
+* [[List of Austrian scientists]]
+* [[List of pioneers in computer science]]
+* [[Mathematical Platonism]]
+* [[Primitive recursive functional]]
+* [[Strange loop]]
+* [[Tarski's undefinability theorem]]
+* [[World Logic Day]]
+* [[Gödel machine]]
+
+== Notes ==
+{{reflist|30em}}
+
+== References ==
+* {{Citation |last=Dawson |first=John W |year=1997 |title=Logical dilemmas: The life and work of Kurt Gödel |url=https://archive.org/details/logicaldilemmasl0000daws |place=Wellesley, MA |publisher=AK Peters}}.
+* {{Citation | first = Rebecca | last = Goldstein | author-link = Rebecca Goldstein | year = 2005 | title = Incompleteness: The Proof and Paradox of Kurt Gödel |url=https://books.google.com/books?id=tXk2AAAAQBAJ| publisher = W.W. Norton & Co | place = New York |isbn=978-0-393-32760-1 }}.
+* {{Citation | last = Wang | first = Hao | author-link = Hao Wang (academic) | year = 1987 | title = Reflections on Kurt Gödel | publisher = MIT Press | place = Cambridge |isbn=0-262-73087-1 | url = https://books.google.com/books?id=wLLePwhDOMYC }}
+* {{Citation | last = Wang | first = Hao | author-link = Hao Wang (academic) | year = 1996 | title = A Logical Journey: From Gödel to Philosophy | publisher = MIT Press | place = Cambridge |isbn=0-262-23189-1 | url = https://books.google.com/books?id=pckvCy6L_ocC }}
+
+== Further reading ==
+* [[Stephen Budiansky]], 2021. ''Journey to the Edge of Reason: The Life of Kurt Gödel''. W.W. Norton & Company.
+* {{Citation | first1 = John L | last1 = Casti | first2 = Werner | last2 = DePauli | year = 2000 | title = Gödel: A Life of Logic | publisher = Basic Books (Perseus Books Group) | place = Cambridge, MA |isbn=978-0-7382-0518-2}}.
+* {{Citation | first = John W Jr | last = Dawson | year = 1999 | title = Gödel and the Limits of Logic | journal = Scientific American | volume = 280 | number = 6 | pages = 76–81| pmid = 10048234 | bibcode = 1999SciAm.280f..76D | doi = 10.1038/scientificamerican0699-76 }}.
+* {{Citation | first = Torkel | last = Franzén | author-link = Torkel Franzén | year = 2005 | title = Gödel's Theorem: An Incomplete Guide to Its Use and Abuse | place = Wellesley, MA | publisher = AK Peters}}.
+* [[Ivor Grattan-Guinness]], 2000. ''The Search for Mathematical Roots 1870–1940''. Princeton Univ. Press.
+* {{cite book | author=Hämeen-Anttila, Maria | title=Gödel on Intuitionism and Constructive Foundations of Mathematics | type=Ph.D. thesis | location=Helsinki | publisher=University of Helsinki | year=2020 | isbn=978-951-51-5922-9 | url=http://urn.fi/URN:ISBN:978-951-51-5923-6 }}
+* [[Jaakko Hintikka]], 2000. ''[[iarchive:ongodel0000hint|On Gödel]]''. Wadsworth.
+* [[Douglas Hofstadter]], 1980. ''[[Gödel, Escher, Bach]]''. Vintage.
+* [[Stephen Kleene]], 1967. ''Mathematical Logic''. Dover paperback reprint c. 2001.
+* Stephen Kleene, 1980. ''Introduction to Metamathematics''. North Holland {{isbn|0-7204-2103-9}} (Ishi Press paperback. 2009. {{isbn|978-0-923891-57-2}})
+* [[J.R. Lucas]], 1970. ''The Freedom of the Will''. Clarendon Press, Oxford.
+* [[Ernest Nagel]] and [[James R. Newman|Newman, James]] R., 1958. ''Gödel's Proof.'' New York Univ. Press.
+* [[Ed Regis (author)|Ed Regis]], 1987. ''Who Got Einstein's Office?'' Addison-Wesley Publishing Company, Inc.
+* [[Raymond Smullyan]], 1992. ''Godel's Incompleteness Theorems''. Oxford University Press.
+* [[Olga Taussky-Todd]], 1983. [http://calteches.library.caltech.edu/605/02/Todd.pdf Remembrances of Kurt Gödel]. Engineering & Science, Winter 1988.
+* Yourgrau, Palle, 1999. ''Gödel Meets Einstein: Time Travel in the Gödel Universe.'' Chicago: Open Court.
+* Yourgrau, Palle, 2004. ''[[iarchive:worldwithouttime0000your q2d0|A World Without Time: The Forgotten Legacy of Gödel and Einstein]].'' Basic Books. {{ISBN|978-0-465-09293-2}}. (Reviewed by John Stachel in the ''[[Notices of the American Mathematical Society]]'' ('''54''' (7), [https://www.ams.org/notices/200707/tx070700861p.pdf pp. 861–68]).
+
+== External links ==
+{{Commons category|Kurt Gödel}}
+{{Wikiquote}}
+
+* {{ScienceWorldBiography | urlname=Goedel | title=Gödel, Kurt (1906–1978)}}
+* {{cite SEP |url-id=goedel |title=Kurt Gödel |last=Kennedy |first=Juliette}}
+* [http://www.newyorker.com/archive/2005/02/28/050228crat_atlarge Time Bandits]: an article about the relationship between Gödel and Einstein by Jim Holt
+* [https://www.ams.org/notices/200604/200604-toc.html Notices of the AMS, April 2006, Volume 53, Number 4] Kurt Gödel Centenary Issue
+* [https://www.abc.net.au/radionational/programs/scienceshow/kurt-godel/3383388 Paul Davies and Freeman Dyson discuss Kurt Godel] (transcript)
+* [http://www.edge.org/3rd_culture/goldstein05/goldstein05_index.html "Gödel and the Nature of Mathematical Truth"] Edge: A Talk with Rebecca Goldstein on Kurt Gödel.
+* [https://web.archive.org/web/20091106003330/http://simplycharly.com/godel/gregory_chaitin_interview.htm It's Not All In The Numbers: Gregory Chaitin Explains Gödel's Mathematical Complexities.]
+* [https://web.archive.org/web/20090301015757/http://www.univie.ac.at/bvi/photo-gallery/photo_gallery.htm Gödel photo gallery.] (archived)
+* [http://www-history.mcs.st-andrews.ac.uk/Biographies/Godel.html Kurt Gödel] [[MacTutor History of Mathematics archive]] page
+* [http://www.nasonline.org/publications/biographical-memoirs/memoir-pdfs/gdel-kurt.pdf National Academy of Sciences Biographical Memoir]
+
+{{Set theory}}
+{{Winners of the National Medal of Science|math-stat-comp}}
+{{Analytic philosophy}}
+{{Platonists}}
+{{Time 100: The Most Important People of the Century}}
+{{Authority control}}
+
+{{DEFAULTSORT:Godel, Kurt}}
+[[Category:1906 births]]
+[[Category:1978 deaths]]
+[[Category:20th-century American mathematicians]]
+[[Category:20th-century American philosophers]]
+[[Category:20th-century Austrian mathematicians]]
+[[Category:American logicians]]
+[[Category:American people of Moravian-German descent]]
+[[Category:American Protestants]]
+[[Category:American relativity theorists]]
+[[Category:Analytic philosophers]]
+[[Category:Austrian emigrants to the United States]]
+[[Category:Austrian logicians]]
+[[Category:Austrian people of Moravian-German descent]]
+[[Category:20th-century Austrian philosophers]]
+[[Category:Austrian Protestants]]
+[[Category:Burials at Princeton Cemetery]]
+[[Category:Corresponding fellows of the British Academy]]
+[[Category:Deaths by starvation]]
+[[Category:Foreign members of the Royal Society]]
+[[Category:Institute for Advanced Study faculty]]
+[[Category:Mathematicians from Austria-Hungary]]
+[[Category:National Medal of Science laureates]]
+[[Category:Naturalized citizens of the United States]]
+[[Category:Ontologists]]
+[[Category:People from the Margraviate of Moravia]]
+[[Category:Platonists]]
+[[Category:Princeton University faculty]]
+[[Category:Proof theorists]]
+[[Category:Protestant philosophers]]
+[[Category:Scientists from Brno]]
+[[Category:Set theorists]]
+[[Category:University of Notre Dame faculty]]
+[[Category:University of Vienna alumni]]
+[[Category:Vienna Circle]]
+[[Category:Members of the American Philosophical Society]]

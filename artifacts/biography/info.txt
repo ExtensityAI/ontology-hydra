@@ -1,0 +1,1 @@
+data/*_wiki.txt files are copies of Wikipedia source of the respective pages.
