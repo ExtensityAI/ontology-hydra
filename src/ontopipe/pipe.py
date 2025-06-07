@@ -22,7 +22,7 @@ def _generate_comittee_with_cache(domain: str, cache_path: Path):
         return Comittee.model_validate_json(cache_path.read_text())
 
     comittee = generate_comittee_for_domain(domain)
-    cache_path.write_text(comittee.model_dump_json(indent=2))
+    cache_path.write_text(comittee.model_dump_json(indent=2), encoding="utf-8")
     return comittee
 
 
@@ -40,7 +40,7 @@ def _generate_scope_documents_with_cache(domain: str, comittee: Comittee, cache_
         doc = generate_scope_document(domain, [m.persona for m in group])
         documents.append(doc)
 
-        doc_cache_path.write_text(doc)
+        doc_cache_path.write_text(doc, encoding="utf-8")
 
     return documents
 
@@ -50,7 +50,7 @@ def _merge_scope_documents_with_cache(domain: str, documents: list[str], cache_p
         return cache_path.read_text()
 
     merged_scope = merge_scope_documents(domain, documents)
-    cache_path.write_text(merged_scope)
+    cache_path.write_text(merged_scope, encoding="utf-8")
     return merged_scope
 
 
@@ -99,13 +99,13 @@ def _generate_cqs_with_cache(domain: str, merged_scope: str, comittee: Comittee,
             continue
 
         group_cqs = generate_questions(domain, group, merged_scope)
-        group_cqs_cache_path.write_text("\n".join(group_cqs))
+        group_cqs_cache_path.write_text("\n".join(group_cqs), encoding="utf-8")
         cqs.extend(group_cqs)
 
     # deduplicate CQs
     cqs = _deduplicate_cqs(cqs)
 
-    combined_cqs_path.write_text("\n".join(cqs))
+    combined_cqs_path.write_text("\n".join(cqs), encoding="utf-8")
 
     return cqs
 
@@ -124,7 +124,7 @@ def _generate_ontology_with_cache(domain: str, cqs: list[str], cache_path: Path,
 
     logger.debug("Fixing ontology")
     ontology = fix_ontology(ontology, fixed_cache_path.parent, fixed_cache_path.name)
-    fixed_cache_path.write_text(ontology.model_dump_json(indent=2))
+    fixed_cache_path.write_text(ontology.model_dump_json(indent=2), encoding="utf-8")
 
     visualize_ontology(ontology, Path(str(cache_path) + ".html"))
 

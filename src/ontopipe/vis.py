@@ -366,6 +366,9 @@ class AdvancedGraphVisualizer:
             added_nodes.add(name)
             return get_node_id(name)
 
+        for clz in ontology.classes:
+            add_node(clz.name, "class")
+
         # Process ontology components
         # 1. Add nodes for all classes discovered in the ontology
         for sub_rel in ontology.subclass_relations:

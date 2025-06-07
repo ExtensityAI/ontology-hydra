@@ -22,15 +22,11 @@ logger = getLogger("ontopipe.kg")
     pre_remedy=False,
     post_remedy=True,
     verbose=True,
-    remedy_retry_params=dict(
-        tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False
-    ),
+    remedy_retry_params=dict(tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False),
     accumulate_errors=False,
 )
 class TripletExtractor(Expression):
-    def __init__(
-        self, name: str, ontology: Ontology, threshold: float = 0.7, *args, **kwargs
-    ):
+    def __init__(self, name: str, ontology: Ontology, threshold: float = 0.7, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.name = name
         self.threshold = threshold
@@ -55,27 +51,23 @@ class TripletExtractor(Expression):
         errors = []
 
         new_type_defs = dict[str, str]()
-        existing_type_defs = {
-            x.subject: x.object for x in self._triplets if x.predicate == "isA"
-        }
+        existing_type_defs = {x.subject: x.object for x in self._triplets if x.predicate == "isA"}
 
         # ?: add information on how to fix for each of the errors
         # ?: consider adding context information to errors (i.e. for what types a property is valid, etc.)
 
         # first iteration: check for new isA triplets, ensure that they are valid
         for triplet in (t for t in triplets if t.predicate == "isA"):
-            if (
-                current_type_def := existing_type_defs.get(triplet.subject, None)
-            ) is not None or (
-                current_type_def := new_type_defs.get(triplet.subject, None)
+            if (subject_class := existing_type_defs.get(triplet.subject, None)) is not None or (
+                subject_class := new_type_defs.get(triplet.subject, None)
             ) is not None:
-                if current_type_def in self.ontology.superclasses[triplet.object]:
+                if subject_class in self.ontology.superclasses[triplet.object]:
                     # allow to redefine a type definition if the new one is a subclass of the current one
                     continue
 
                 # Ensure that the subject entity does not have a type def already
                 errors.append(
-                    f"{triplet}: Entity '{triplet.subject}' already classified as '{current_type_def}'. Cannot reclassify as '{triplet.object}' unless it's a subclass. Either remove this triplet or use a valid subclass."
+                    f"{triplet}: Entity '{triplet.subject}' already classified as '{subject_class}'. Cannot reclassify as '{triplet.object}' unless it's a subclass. Either remove this triplet or use a valid subclass."
                 )
                 continue
 
@@ -101,15 +93,31 @@ class TripletExtractor(Expression):
 
         # second iteration: make sure triplets have valid type definitions
         for triplet in (t for t in triplets if t.predicate != "isA"):
-            current_type_def = all_type_defs.get(triplet.subject, None)
-            tdo = all_type_defs.get(triplet.object, None)
+            # now, any triplet needs to be a property (either object or data)
+
+            subject_class = all_type_defs.get(triplet.subject, None)
+            object_class = all_type_defs.get(triplet.object, None)
 
             property = self.ontology.get_property(triplet.predicate)
 
-            if not current_type_def:
+            if not property:
+                # Ensure that the predicate is a valid ontology property
+                errors.append(
+                    f"{triplet}: '{triplet.predicate}' is not a valid property in the ontology schema. Use only defined properties from the schema."
+                )
+                continue
+
+            if not subject_class:
                 # Ensure that the subject entity has a type definition
                 errors.append(
                     f"{triplet}: Entity '{triplet.subject}' lacks class assignment. First add ({triplet.subject}, isA, <validClass>) before using this entity."
+                )
+                continue
+
+            if self.ontology.has_class(triplet.subject):
+                # Ensure that the subject entity is not an ontology class (this is only allowed for isA predicates!)
+                errors.append(
+                    f"{triplet}: '{triplet.subject}' is a class definition, not an entity instance. For non-isA relations, both subject and object must be entity instances."
                 )
                 continue
 
@@ -120,38 +128,25 @@ class TripletExtractor(Expression):
                 )
                 continue
 
-            if (
-                not tdo and not property
-            ):  # (properties do not need type definition for object)
-                # Object entity does not have a type definition yet
-                errors.append(
-                    f"{triplet}: Entity '{triplet.object}' lacks class assignment. First add ({triplet.object}, isA, <validClass>) before using this entity."
-                )
-                continue
-
-            if not property:
-                # Ensure that the predicate is a valid ontology property
-                errors.append(
-                    f"{triplet}: '{triplet.predicate}' is not a valid property in the ontology schema. Use only defined properties from the schema."
-                )
-                continue
-
             if isinstance(property, ObjectProperty):
-                if not property.is_valid_for(
-                    superclasses[current_type_def], superclasses[tdo]
-                ):
+                if not object_class:  # (properties do not need type definition for object)
+                    # Object entity does not have a type definition yet
+                    errors.append(
+                        f"{triplet}: Entity '{triplet.object}' lacks class assignment. First add ({triplet.object}, isA, <validClass>) before using this entity."
+                    )
+                    continue
+
+                if not property.is_valid_for(superclasses[subject_class], superclasses[object_class]):
                     # Ensure that the property is valid for the subject and object types
                     errors.append(
-                        f"{triplet}: Property '{triplet.predicate}' cannot connect '{current_type_def}' entities to '{tdo}' entities according to the ontology constraints."
+                        f"{triplet}: Property '{triplet.predicate}' cannot connect '{subject_class}' entities to '{object_class}' entities according to the ontology constraints."
                     )
                     continue
 
             # ? consider adding validation for data properties
 
         if errors:
-            raise ValueError(
-                f"Triplet extraction failed with the following errors: \n- {'\n- '.join(errors)}"
-            )
+            raise ValueError(f"Triplet extraction failed with the following errors: \n- {'\n- '.join(errors)}")
 
         return True
 
@@ -182,9 +177,7 @@ def generate_kg(
     for i in range(epochs):
         n_new_triplets_in_epoch = 0
         with MetadataTracker() as tracker:
-            for j in tqdm(
-                range(0, len(texts), batch_size), desc=f"Epoch {i + 1}/{epochs}"
-            ):
+            for j in tqdm(range(0, len(texts), batch_size), desc=f"Epoch {i + 1}/{epochs}"):
                 text = "\n".join(texts[j : j + batch_size])
 
                 input_data = TripletExtractorInput(

@@ -8,21 +8,11 @@ prompt_registry = PromptRegistry()
 # ==================================================#
 # Tags
 prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_class", "OWL CLASS")
-prompt_registry.register_tag(
-    PromptLanguage.ENGLISH, "owl_subclass_relation", "OWL SUBCLASS RELATION"
-)
-prompt_registry.register_tag(
-    PromptLanguage.ENGLISH, "owl_object_property", "OWL OBJECT PROPERTY"
-)
-prompt_registry.register_tag(
-    PromptLanguage.ENGLISH, "owl_data_property", "OWL DATA PROPERTY"
-)
-prompt_registry.register_tag(
-    PromptLanguage.ENGLISH, "competency_question", "COMPETENCY QUESTION"
-)
-prompt_registry.register_tag(
-    PromptLanguage.ENGLISH, "ontology_guidelines", "ONTOLOGY GUIDELINES"
-)
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_subclass_relation", "OWL SUBCLASS RELATION")
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_object_property", "OWL OBJECT PROPERTY")
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_data_property", "OWL DATA PROPERTY")
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "competency_question", "COMPETENCY QUESTION")
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "ontology_guidelines", "ONTOLOGY GUIDELINES")
 
 # Instructions
 prompt_registry.register_instruction(
@@ -94,24 +84,30 @@ Analyze competency questions to identify ontological requirements and extract fo
    - Correct: `hasAuthor` as an object property between `Paper` and `Person`
    - Incorrect: Creating an `Authorship` class to connect papers and people
    
-3. Reuse established ontology design patterns
+3. Distinguish between ontology elements and knowledge graph instances
+   - Ontology (include): Classes like `Book`, `Adaptation`, `IllustratedEdition`
+   - Knowledge graph (exclude): Specific instances like "'Alice in Wonderland'"
+   - Focus exclusively on modeling the schema/structure, not specific entities
+   - Competency questions may contain specific examples to illustrate queries, but these examples themselves should not become part of the ontology
+
+4. Reuse established ontology design patterns
    - Apply standard solutions before creating custom structures
    - Maintain compatibility with common knowledge modeling approaches
    
-4. Follow minimal ontological commitment
+5. Follow minimal ontological commitment
    - Include only concepts essential for answering competency questions
    - Avoid overengineering or excessive detail
 
-5. Ensure logical consistency throughout the ontology
+6. Ensure logical consistency throughout the ontology
    - Avoid contradictions in class hierarchies and property definitions
    - Maintain coherent semantic relationships
 
-6. Maintain a single-root hierarchical structure
+7. Maintain a single-root hierarchical structure
    - Design exactly one top-level abstract class (often named "Thing", but if possible, use a more domain-specific name)
    - Ensure all other classes are descendants (direct or indirect) of this root class
    - Create a coherent tree structure where every class has a path to the root
 
-7. Avoid redundant encoding of information
+8. Avoid redundant encoding of information
    - Use subclass relations to encode inherent categorical distinctions
    - Do not create properties that duplicate information already encoded in the class hierarchy
    - Example: If you have Article with subclasses ReviewArticle and EmpiricalStudy, do not create a 
@@ -161,9 +157,7 @@ Return your output as a structured set of operations with explicit details (incl
 # ----Triplet Extraction----------------------------#
 # ==================================================#
 # Tags
-prompt_registry.register_tag(
-    PromptLanguage.ENGLISH, "triplet_extraction", "TRIPLET EXTRACTION"
-)
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "triplet_extraction", "TRIPLET EXTRACTION")
 
 # Instructions
 prompt_registry.register_instruction(
@@ -210,11 +204,19 @@ prompt_registry.register_instruction(
     PromptLanguage.ENGLISH,
     "generate_groups",
     f"""{prompt_registry.tag("groups")}
-You are an ontology engineer tasked with creating a comprehensive ontology for the specified domain. 
-To ensure your ontology captures all relevant knowledge, perspectives, and use cases, you need to identify 
-key stakeholder groups to interview.
+You are an ontology engineer in the initial scoping phase of creating a comprehensive ontology for the specified domain. 
 
-Identify an exhaustive list of stakeholder groups who would provide valuable insights for this domain. Output your response as a properly formatted JSON object with nothing else.""",
+Your current task is to identify groups of people who possess deep knowledge about this domain. These are NOT people who would help implement or design the ontology itself (like developers, ontology engineers, or integration specialists).
+
+Instead, identify an exhaustive list of domain knowledge holders - the actual experts, practitioners, researchers, users, and other groups who:
+- Have first-hand experience with the domain concepts
+- Possess specialized knowledge about domain terminology, processes, and relationships
+- Work with or use domain-related information in their professional activities
+- Can provide insights about what aspects of the domain need to be formalized and understood
+
+These domain experts will be interviewed to help scope and define what should be included in the ontology.
+
+Output your response as a properly formatted JSON object with nothing else.""",
 )
 
 prompt_registry.register_instruction(
@@ -261,17 +263,29 @@ prompt_registry.register_instruction(
     f"""{prompt_registry.tag("scope_document")}
 You are a collaborative team of the given personas.
 
-Your task is to create a scope document that defines the key topics and boundaries within the given domain based on the collective expertise of these personas.
+Your task is to create a scope document that defines what is included within the given domain based on the collective expertise of these personas.
 
 ## Output Requirements
 1. Structure your document with numbered sections and subsections (e.g., 1, 1.1, 1.2)
 2. Use bullet points for lists and enumerations
 3. Focus on identifying topics, not relationships or processes
+4. Do not include any title, introduction, summary, or conclusion - only the content sections
 
 ## Content Guidelines
-* Define what is included in this domain
+1. Domain Definition:
+   - Provide a clear, concise definition of the domain
+   - Describe the conceptual areas that comprise this domain
 
-Keep your document concise and focused on establishing a shared vocabulary and clear boundaries for future discussions.""",
+2. Core Topics:
+   - List all major conceptual areas within the domain
+   - For each core topic, list all relevant sub-topics
+   - Ensure topics are defined at an appropriate level of abstraction
+
+3. Terminology:
+   - Define domain-specific terms and concepts
+   - Identify hierarchical relationships between key concepts
+
+Remember: Anything mentioned in this document is considered in-scope for the ontology. The document should thoroughly describe what the domain is about.""",
 )
 
 prompt_registry.register_instruction(
@@ -289,7 +303,6 @@ Your task is to merge the provided scope documents into a single, comprehensive,
 
 ## Content Guidelines:
 - Retain all essential information from each source document
-- Identify and harmonize key ontological elements (classes, properties, relationships, hierarchies)
 - Resolve conflicting information by selecting the most authoritative or comprehensive perspective
 - Maintain consistent terminology throughout
 - Eliminate redundancies while preserving nuanced differences
