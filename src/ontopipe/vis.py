@@ -25,7 +25,7 @@ def visualize_ontology(ontology: Ontology, output_html_path: Path):
     return viz.visualize_ontology(ontology, filename=output_html_path.name)
 
 
-def visualize_kg(kg: KG, output_html_path: Path):
+def visualize_kg(kg: KG, ontology: Ontology, output_html_path: Path):
     """
     Backwards compatible function that matches the original API.
     Creates an interactive visualization of a knowledge graph.
@@ -38,7 +38,7 @@ def visualize_kg(kg: KG, output_html_path: Path):
         Path to save the HTML visualization
     """
     viz = KnowledgeGraphViz(output_dir=str(output_html_path.parent))
-    return viz.visualize_kg(kg, filename=output_html_path.name)
+    return viz.visualize_kg(kg, filename=output_html_path.name, ontology=ontology)
 
 
 class AdvancedGraphVisualizer:
@@ -461,9 +461,10 @@ class AdvancedGraphVisualizer:
             title=f"Ontology Visualization: {len(nodes)} classes & properties",
         )
 
-    def visualize_kg(self, kg: KG, output_path: Path):
+    def visualize_kg(self, kg: KG, output_path: Path, ontology: Ontology):
         """
         Generate an interactive visualization of a knowledge graph.
+        If an ontology is provided, entities will be colored according to their ontology class.
 
         Parameters:
         -----------
@@ -471,6 +472,8 @@ class AdvancedGraphVisualizer:
             The knowledge graph to visualize
         output_path : Path
             Path to save the HTML visualization
+        ontology : Ontology, optional
+            Ontology to use for coloring entities based on their class
         """
         # High contrast palette for dark mode visualization
         palette = self.color_palette if self.dark_mode else self.light_palette
@@ -503,7 +506,7 @@ class AdvancedGraphVisualizer:
                 recognized_types.add(obj_name)
                 entity_to_types.setdefault(subj_name, set()).add(obj_name)
 
-        # Step 2. Assign each recognized type a unique color from the palette
+        # Step 2. Create color map for ontology classes if provided
         type_color_map = {}
 
         def get_type_color(type_name: str) -> str:
@@ -515,16 +518,26 @@ class AdvancedGraphVisualizer:
 
         # Step 3. Collect all entities (subjects + objects)
         all_entities = set()
-        predicate_counts = {}  # Track frequency of each predicate
+        predicate_counts = {}  # Track frequency of each predicate type
 
         for triplet in kg.triplets or []:
+            # Skip "isA" relationships if we have an ontology
+            if ontology and triplet.predicate.lower() == "isa":
+                continue
+
             all_entities.add(triplet.subject)
             all_entities.add(triplet.object)
+
+            # Count predicates
             predicate_counts[triplet.predicate] = predicate_counts.get(triplet.predicate, 0) + 1
 
-        # Calculate node sizes based on connections (degree centrality)
+        # Calculate node sizes based on connections (degree centrality) - skip isA when considering
         node_connections = {}
         for triplet in kg.triplets or []:
+            # Skip "isA" relationships if we have an ontology
+            if ontology and triplet.predicate.lower() == "isa":
+                continue
+
             node_connections[triplet.subject] = node_connections.get(triplet.subject, 0) + 1
             node_connections[triplet.object] = node_connections.get(triplet.object, 0) + 1
 
@@ -543,27 +556,21 @@ class AdvancedGraphVisualizer:
             size = 6 + min((connections / max_connections) * 20, 20)
 
             # Determine node color and shape based on type
-            if entity_name in recognized_types:
-                # This entity is itself a 'type' (class)
-                color = get_type_color(entity_name)
-                shape = self.shapes["class"]
-                title = f"<div style='max-width: 250px;'><h3>{entity_name}</h3><p>Class/Type</p><p>Connections: {connections}</p></div>"
-                group = "types"
-            elif entity_name in entity_to_types and len(entity_to_types[entity_name]) > 0:
-                # This entity has at least one type
+            color = default_color
+            shape = self.shapes["default"]
+            title = f"<div style='max-width: 250px;'><h3>{entity_name}</h3><p>Unclassified Entity</p><p>Connections: {connections}</p></div>"
+            group = "unclassified"
+            type_description = ""
+
+            if entity_name in entity_to_types and len(entity_to_types[entity_name]) > 0:
                 types = list(entity_to_types[entity_name])
                 first_type = types[0]
                 color = get_type_color(first_type)
                 shape = self.shapes["individual"]
-                type_list = ", ".join(types)
-                title = f"<div style='max-width: 250px;'><h3>{entity_name}</h3><p>Types: {type_list}</p><p>Connections: {connections}</p></div>"
                 group = first_type
-            else:
-                # Entity has no recognized type
-                color = default_color
-                shape = self.shapes["default"]
-                title = f"<div style='max-width: 250px;'><h3>{entity_name}</h3><p>Unclassified Entity</p><p>Connections: {connections}</p></div>"
-                group = "unclassified"
+                type_list = ", ".join(types)
+                type_description = f"Types: {type_list}"
+                title = f"<div style='max-width: 250px;'><h3>{entity_name}</h3><p>{type_description}</p><p>Connections: {connections}</p></div>"
 
             # Create node with optimized styling
             node = {
@@ -589,6 +596,10 @@ class AdvancedGraphVisualizer:
         predicate_index = 0
 
         for triplet in kg.triplets or []:
+            # Skip "isA" relationships if we have an ontology
+            if ontology and triplet.predicate.lower() == "isa":
+                continue
+
             source_id = get_node_id(triplet.subject)
             target_id = get_node_id(triplet.object)
             predicate = triplet.predicate
@@ -628,11 +639,6 @@ class AdvancedGraphVisualizer:
                 },
                 "title": f"<div>{triplet.subject} - <b>{predicate}</b> → {triplet.object}</div>",
             }
-
-            # Special styling for isA relationships
-            if predicate.lower() == "isa":
-                edge["dashes"] = [5, 5]  # Dashed line
-                edge["color"]["color"] = "#AAAAAA"  # Gray color
 
             edges.append(edge)
 
@@ -3121,7 +3127,7 @@ class KnowledgeGraphViz:
         output_path = self.output_dir / filename
         return self.visualizer.visualize_ontology(ontology, output_path)
 
-    def visualize_kg(self, kg: KG, filename: str = "knowledge_graph_viz.html"):
+    def visualize_kg(self, kg: KG, ontology: Ontology, filename: str = "knowledge_graph_viz.html"):
         """
         Visualize a knowledge graph with an interactive graph.
 
@@ -3129,6 +3135,8 @@ class KnowledgeGraphViz:
         -----------
         kg : KG
             The knowledge graph to visualize
+        ontology : Ontology
+            The ontology to use for visualization
         filename : str
             Filename for the output HTML
 
@@ -3138,7 +3146,7 @@ class KnowledgeGraphViz:
             Path to the generated visualization
         """
         output_path = self.output_dir / filename
-        return self.visualizer.visualize_kg(kg, output_path)
+        return self.visualizer.visualize_kg(kg, output_path, ontology)
 
     def visualize_combined(
         self,

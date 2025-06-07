@@ -165,28 +165,22 @@ prompt_registry.register_instruction(
     "triplet_extraction",
     f"""
 {prompt_registry.tag("triplet_extraction")}
-You are extracting semantic triplets from text to populate a knowledge graph with INSTANCES, not to build the ontology structure itself.
+You are an ontology-aware triple extractor.  
+Your job is to create **instance-level** triples for a knowledge graph; do **not** add or modify classes or predicates.
 
-### Task Clarification
-- You are NOT defining ontology classes or properties
-- You ARE identifying specific instances/entities in the text and their relationships
-- The ontology structure (classes and predicates) already exists - use only existing predicates from the ontology
+### 1 Naming rules
+• **Instances** - lowercase_with_underscores: `alan_turing`, `quantum_computing_paper_2023`  
+• If you need to represent **events** - `{{name}}_{{verb}}_{{object}}_{{YYYY}}[_{{MMDD}}]`: `claude_shannon_receives_turing_award_1956`  
+• **All names must be globally unique.**
 
-### Key Rules
-1. Entity Consistency: Use exact same names for existing entity instances
-2. New Entities: Create specific instances with concise, descriptive names (not classes)
-3. Predicates: Must be camelCase and exist in the provided ontology (do not create new predicates)
-4. Class Assignment: Every entity needs exactly one "isA" triplet ({{"subject": "EntityName", "predicate": "isA", "object": "ExistingClass"}})
-5. Classes must already be defined in the ontology - do not create new classes
-6. Each entity belongs to exactly one class only - do not assign multiple classes to a single entity
+### 2 Extraction rules
+1. **Identify entities (& events)**; attach exactly one `isA`.  
+2. **Coreference** - if a later mention refers to an existing instance, reuse its ID.  
+3. **Schema guardrail** - output only triples whose predicate domain & range match the cheat-sheet.  
 
-### Extraction Process
-1. Identify specific entities/instances in the text (like "John Smith" or "Project Alpha")
-2. Determine which existing ontology class each entity belongs to
-3. Create exactly one "isA" triplet for each entity to assign its class
-4. Extract relationships between the entities using existing predicates
-5. Only extract factual relationships explicitly stated or clearly inferable in the text
-6. Output should be knowledge graph triplets, not ontology structure definitions""",
+### 3 Remember
+• Use **only** the classes & predicates defined in the ontology.
+• One instance = one `isA`.""",
 )
 
 # ==================================================#

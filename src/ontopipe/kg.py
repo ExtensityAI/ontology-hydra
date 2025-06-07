@@ -19,6 +19,20 @@ from ontopipe.prompts import prompt_registry
 logger = getLogger("ontopipe.kg")
 
 
+def is_snake_case(s):
+    # Must not start or end with underscore
+    if not s or s[0] == "_" or s[-1] == "_":
+        return False
+    # Must not have consecutive underscores
+    if "__" in s:
+        return False
+    # Must only contain lowercase letters, numbers, or underscores
+    for c in s:
+        if not (c.islower() or c.isdigit() or c == "_"):
+            return False
+    return True
+
+
 @contract(
     pre_remedy=False,
     post_remedy=True,
@@ -64,6 +78,13 @@ class TripletExtractor(Expression):
             ) is not None:
                 if subject_class in self.ontology.superclasses[triplet.object]:
                     # allow to redefine a type definition if the new one is a subclass of the current one
+                    continue
+
+                if not is_snake_case(triplet.subject):
+                    # Ensure that the subject entity is in snake_case
+                    errors.append(
+                        f"{triplet}: Entity '{triplet.subject}' must be in snake_case format. Please rename it to follow the convention."
+                    )
                     continue
 
                 # Ensure that the subject entity does not have a type def already
@@ -129,6 +150,13 @@ class TripletExtractor(Expression):
                 )
                 continue
 
+            if not is_snake_case(triplet.subject):
+                # Ensure that the subject entity is in snake_case
+                errors.append(
+                    f"{triplet}: Entity '{triplet.subject}' must be in snake_case format. Please rename it to follow the convention."
+                )
+                continue
+
             if isinstance(property, ObjectProperty):
                 if not object_class:  # (properties do not need type definition for object)
                     # Object entity does not have a type definition yet
@@ -141,6 +169,13 @@ class TripletExtractor(Expression):
                     # Ensure that the property is valid for the subject and object types
                     errors.append(
                         f"{triplet}: Property '{triplet.predicate}' cannot connect '{subject_class}' entities to '{object_class}' entities according to the ontology constraints."
+                    )
+                    continue
+
+                if not is_snake_case(triplet.object):
+                    # Ensure that the object entity is in snake_case
+                    errors.append(
+                        f"{triplet}: Entity '{triplet.object}' must be in snake_case format. Please rename it to follow the convention."
                     )
                     continue
 

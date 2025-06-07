@@ -265,13 +265,6 @@ class Triplet(LLMDataModel):
     predicate: str = Field(description="Name of the relationship")
     object: str = Field(description="Object entity name")
 
-    """confidence: float = Field(
-        default=1.0,
-        ge=0.0,
-        le=1.0,
-        description="Confidence score for the extracted triplet [0, 1]",
-    )"""
-
     def __eq__(self, other):
         if not isinstance(other, Triplet):
             return False
