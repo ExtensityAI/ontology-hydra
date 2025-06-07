@@ -118,7 +118,6 @@ def extract_texts_from_folder(folder_path: Union[str, Path]) -> List[str]:
     texts = []
     for file_path in supported_files:
         text = extract_text_from_file(file_path)
-        print(text)
         if text:  # Only add non-empty texts
             texts.append(text)
             print(f"Extracted {len(text)} characters from {file_path}")
@@ -336,15 +335,13 @@ def compute_ontology_and_kg(
         # This shouldn't happen due to validation above
         raise ValueError("Either ontology_file or domain must be provided")
 
-    # Generate KG
-    output_file = "kg.json"
-
     try:
         print(f"Generating knowledge graph with {len(chunked_texts)} text segments...")
         print("Ontology file:", ontology_file)
         ontology = Ontology.from_json_file(ontology_file)
         visualize_ontology(ontology, output_path / "ontology_kg.html")
         kg = generate_kg(
+            kg_path=output_path / "kg.json",
             texts=chunked_texts,
             kg_name=kg_name,
             ontology=ontology,

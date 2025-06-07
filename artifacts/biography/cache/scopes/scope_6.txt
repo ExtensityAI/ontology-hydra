@@ -1,0 +1,84 @@
+1. Domain Definition
+1.1 The domain encompasses the structured representation of individuals' life histories.
+  - Focuses on detailed documentation of personal information, educational and career trajectories, significant life events, relationships, and affiliations
+  - Contextualizes all aspects with temporal (time-related) and spatial (location-related) attributes
+  - Enables a holistic, chronological, and geospatial overview of a person's life journey, emphasizing digital structure, narrative, and multimedia integration
+
+2. Core Topics
+2.1 Personal Information
+  - Names (legal, preferred, nicknames)
+  - Demographic data (date of birth, place of birth, nationality, gender identity)
+  - Contact details (addresses, phone numbers, email addresses)
+  - Identifying documents (passport numbers, social security numbers, ID cards)
+2.2 Educational Trajectories
+  - Formal education (primary, secondary, tertiary institutions)
+  - Degrees, certifications, diplomas
+  - Courses undertaken and areas of specialization
+  - Academic achievements, scholarships, honors
+  - Study locations and durations
+2.3 Career Trajectories
+  - Employment history (job titles, organizations, roles)
+  - Periods of employment, promotions, role changes
+  - Project involvement and major professional milestones
+  - Internships, apprenticeships, freelance work
+  - Career transitions or sabbaticals
+2.4 Significant Life Events
+  - Birth and early life milestones, rites of passage
+  - Marriages, partnerships, divorces
+  - Parenthood, adoptions, family growth
+  - Health events (major illnesses, accidents, recoveries)
+  - Migration, relocations, and travel experiences
+  - Military service, civic duties, or public service
+  - Retirement or life phase changes
+2.5 Relationships
+  - Family connections (parents, siblings, spouses, children)
+  - Friendships, mentors, and influential acquaintances
+  - Professional networks
+  - Group and community memberships
+2.6 Affiliations
+  - Organizations (educational, professional, religious, political, social)
+  - Clubs, associations, societies
+  - Volunteer work, philanthropic activities
+2.7 Temporal Contextualization
+  - Life timeline (sequencing of events)
+  - Time spans (start/end dates for activities or affiliations)
+  - Chronological ordering and grouping
+2.8 Spatial Contextualization
+  - Physical locations (addresses, cities, countries, geographic coordinates)
+  - Movement across locations (migrations, relocations, travel)
+  - Mapping life events to places (digital mapping, geotagging)
+2.9 Digital Representation and Multimedia
+  - Textual narratives
+  - Photographs, video, and audio recordings
+  - Artifacts and documents (scanned certificates, letters)
+  - Integration with interactive timelines and maps
+2.10 Metadata and Documentation
+  - Source attribution
+  - Date of entry/modification
+  - Authorship and narrative voice
+  - Privacy and access controls
+
+3. Terminology
+3.1 Life History: The comprehensive record of an individual's personal, educational, professional, and social experiences over time.
+3.2 Trajectories: The chronological progression of a person's educational and career developments.
+3.3 Affiliation: An official or informal association with organizations or groups.
+3.4 Significant Life Event: Any pivotal or transformative occurrence in a person's life (e.g. marriage, graduation).
+3.5 Temporal Attribute: Any data point related to time, including specific dates, durations, or periods.
+3.6 Spatial Attribute: Any data point describing physical locations, from addresses to geographic coordinates.
+3.7 Chronological Visualization: Methods or tools (e.g., timelines) used to represent the ordering and sequence of life events.
+3.8 Digital Mapping: Associating life events with specific locations using digital maps and geospatial technologies.
+3.9 Multimedia Integration: The inclusion of varied media types (audio, video, images, text) to enrich digital life histories.
+3.10 Metadata: Supplementary data about the entries, including authorship, source, modification dates, and access restrictions.
+
+3.11 Hierarchical Relationships Between Key Concepts
+  - Life History
+    • Personal Information
+    • Educational Trajectories
+    • Career Trajectories
+    • Significant Life Events
+      ○ Temporal Attribute
+      ○ Spatial Attribute
+    • Relationships
+    • Affiliations
+    • Digital Representation and Multimedia
+    • Metadata and Documentation

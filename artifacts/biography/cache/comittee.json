@@ -1,0 +1,354 @@
+{
+  "members": [
+    {
+      "persona": {
+        "name": "Darren Boyle",
+        "description": "Darren, a 34-year-old records manager for a large university in Dublin, Ireland, has a background in history and data management. He has worked extensively with both analog and digital student and alumni records, overseeing processes for cataloging, data migration, and privacy compliance. Technologically adept, Darren is passionate about developing interoperable data structures and improving retrieval methods for life event documentation. His unique perspective centers on balancing structured data needs with user-friendly search and retrieval for disparate life events and affiliations, and he brings a collaborative approach informed by his work with diverse academic and administrative stakeholders."
+      },
+      "group": {
+        "name": "Archivists and Records Managers",
+        "description": "Professionals responsible for preserving, cataloging, and retrieving structured records related to individuals’ life events, memberships, affiliations, and milestones.",
+        "priority": {
+          "reason": "They work with official documents and organizational data repositories, providing practical insights into data structure, relationships, and long-term information management.",
+          "value": "medium"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Dr. Samuel Weber",
+        "description": "A 58-year-old historian based in Berlin, Germany, Dr. Weber holds a PhD in Modern European History and has worked as a university professor and author for over three decades. He specializes in biographical research of political figures, with deep expertise in archival research and the analysis of correspondence and life events in relation to historical upheavals. He is passionate about digital humanities and is highly adept at using historical databases and text analysis tools. Dr. Weber's systematic approach and focus on accuracy make him an invaluable resource for designing ontology structures that robustly link personal milestones to historical contexts."
+      },
+      "group": {
+        "name": "Historians",
+        "description": "Experts who investigate and contextualize the lives of individuals or communities, focusing on significant life events and affiliations in historical periods.",
+        "priority": {
+          "reason": "They are adept at linking personal life events with broader contexts and interpreting relationships over time, aiding comprehensive ontology scoping.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Dr. Maria Svensson",
+        "description": "A 54-year-old professor of sociology based in Stockholm, Sweden, specializing in longitudinal research on intergenerational mobility and social networks. Maria holds a PhD from Lund University and has over 25 years of experience conducting and analyzing biographical interviews in multicultural urban settings. She is passionate about qualitative methods, collaborative international research, and the ethical representation of personal narratives. Her keen interest in digital archiving and semantic annotation tools equips her to bridge traditional sociological frameworks with advanced ontology structures. Maria’s nuanced understanding of temporal, relational, and spatial elements in life histories makes her invaluable for ensuring the ontology adequately represents dynamic, context-rich experiences."
+      },
+      "group": {
+        "name": "Social Scientists (e.g., Sociologists, Anthropologists)",
+        "description": "Academics and practitioners who study individuals’ life histories, roles, relationships, and events within social, cultural, and temporal contexts.",
+        "priority": {
+          "reason": "They bring expertise in understanding relationships and social structures over time, crucial for formalizing context-rich life histories.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Marisol Ortega",
+        "description": "Marisol is a 58-year-old personal historian based in San Antonio, Texas. Holding a master's degree in American Studies, she has spent over 30 years collecting and crafting oral histories within Hispanic and immigrant communities. Fluent in English and Spanish, Marisol combines deep cultural sensitivity with hands-on interview experience, often employing audio and video recording technologies. She is passionate about ensuring marginalized voices are included in life history narratives and is skilled in navigating intergenerational storytelling challenges. Her insights into cultural context, narrative structure, and temporal sequencing are invaluable for modeling nuanced, diverse life journeys."
+      },
+      "group": {
+        "name": "Personal Historians and Memoirists",
+        "description": "Writers who specialize in crafting or helping others document detailed life stories, focusing on personal perspectives, milestones, and contextualization.",
+        "priority": {
+          "reason": "They capture rich, narrative accounts and deep personal insights, which are critical for modeling comprehensive life histories.",
+          "value": "medium"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Miguel Hernández",
+        "description": "A 31-year-old vocational advisor in Barcelona, Spain, Miguel holds a bachelor's degree in Sociology and a master's in Human Resources. He guides young adults and recent immigrants through both educational and professional systems, often helping them translate experiences from one country or sector to another. With hands-on experience in apprenticeship, trade, and alternative education pathways, Miguel is passionate about recognizing non-traditional qualifications and diverse life experiences. He is highly proficient with career mapping technologies and data visualization tools. Miguel’s approach prioritizes user-friendly, inclusive representations of career and education data, ensuring the ontology addresses gaps for underrepresented groups, such as those with interrupted education or cross-sector transitions."
+      },
+      "group": {
+        "name": "Educational and Career Guidance Professionals",
+        "description": "Experts (such as career counselors, academic advisors) who track and interpret individuals’ educational and career paths, transitions, and achievements.",
+        "priority": {
+          "reason": "They provide firsthand knowledge on the attributes, data, and milestones relevant in educational and professional trajectories.",
+          "value": "medium"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Dr. Miranda Kessler",
+        "description": "Dr. Miranda Kessler is a 48-year-old demographer based in Berlin, Germany, with a PhD in Population Studies and over 20 years of experience in both academic and governmental research institutions. Her work centers on analyzing longitudinal census data to map individuals’ educational and career stages across generations. Miranda is passionate about demographic transitions and the interplay between life events such as migration, marriage, and job changes. She brings a keen eye for data standardization and ontological consistency, having led several projects creating interoperable datasets across European countries. Miranda is highly technologically proficient, comfortable working with Python, R, and complex database systems. She is keenly interested in ensuring the ontology accommodates international diversity in life events and records, highlighting variations in cultural contexts and data sources."
+      },
+      "group": {
+        "name": "Demographers",
+        "description": "Researchers who analyze statistical data about populations, including individuals’ educational, occupational, and life event trajectories, to uncover patterns and trends.",
+        "priority": {
+          "reason": "They possess insight into how life events, trajectories, and context are documented and analyzed at scale, informing ontology structure and terminology.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Ellen McDermott",
+        "description": "Ellen McDermott, 72, is a retired librarian and long-time community genealogist residing in rural Ireland. With decades of experience helping parishioners trace local roots, Ellen is expert in interpreting historical records, oral histories, and handwritten documents. She has limited formal technological training but is an experienced user of library cataloging systems and genealogy resources. Ellen is passionate about preserving ephemeral community knowledge, navigating gaps in archival material, and representing the continuity of familial relationships across generations. Her traditional expertise ensures the ontology remains accessible and accurate for diverse historical approaches."
+      },
+      "group": {
+        "name": "Genealogists",
+        "description": "Individuals who research, document, and maintain family histories and ancestries, often capturing detailed personal, relational, and temporal data.",
+        "priority": {
+          "reason": "They maintain structured data about individuals’ lives, relationships, and major events, providing essential perspectives on data organization and accuracy.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Dr. Arun Patel",
+        "description": "A 39-year-old anthropologist and field researcher from Ahmedabad, India, with a strong background in ethnographic studies exploring rural livelihoods and kinship systems. With a master's degree in social anthropology and a decade of work with NGOs, Arun has collected detailed oral histories and life narratives across diverse communities and castes. He is quick to adapt emerging technologies for data collection in resource-limited settings and is keenly aware of contextual sensitivities, particularly around migration, language, and identity. Arun’s unique perspective highlights the importance of cultural variation, informal relationships, and non-linear life trajectories in ontological representations."
+      },
+      "group": {
+        "name": "Social Scientists (e.g., Sociologists, Anthropologists)",
+        "description": "Academics and practitioners who study individuals’ life histories, roles, relationships, and events within social, cultural, and temporal contexts.",
+        "priority": {
+          "reason": "They bring expertise in understanding relationships and social structures over time, crucial for formalizing context-rich life histories.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Carla Mendez",
+        "description": "Carla is a 54-year-old senior archival manager based in Buenos Aires, Argentina. With a master's degree in library and information sciences, she has over 25 years of experience working in national archives, dealing with personal and governmental records. Carla specializes in organizing and contextualizing life event documents, from birth records to professional affiliations. She is deeply interested in the intersection of archival science and digital preservation, and is proficient with electronic records management systems and metadata standards. Carla approaches ontology design with a strong focus on long-term accessibility, verifiability, and the ethical management of sensitive life history data, drawing on her experience with multi-generational and multicultural records."
+      },
+      "group": {
+        "name": "Archivists and Records Managers",
+        "description": "Professionals responsible for preserving, cataloging, and retrieving structured records related to individuals’ life events, memberships, affiliations, and milestones.",
+        "priority": {
+          "reason": "They work with official documents and organizational data repositories, providing practical insights into data structure, relationships, and long-term information management.",
+          "value": "medium"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Dr. Maria Jennings",
+        "description": "A 54-year-old internist based in Chicago, Dr. Jennings has over 25 years of experience in primary care at a large urban hospital. She holds an MD and a Master's in Clinical Informatics. Maria is adept at leveraging electronic health record systems to chronicle complex patient narratives, including not only medical events but also social factors, family relationships, and major life transitions. She is passionate about improving continuity of care by integrating patients' life events—such as relocations, employment changes, or significant relationship developments—into medical records. Technologically proficient and an advocate for patient-centered data, she brings insight into structuring longitudinal data and highlighting the significance of context and temporality in healthcare histories."
+      },
+      "group": {
+        "name": "Healthcare Professionals Managing Patient Life Histories",
+        "description": "Medical professionals who maintain longitudinal records including patients’ personal, relational, and event histories to contextualize health and care over time.",
+        "priority": {
+          "reason": "They routinely collect structured and contextual life history data relevant for longitudinal analysis, offering domain structure and data granularity expertise.",
+          "value": "medium"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Samantha Jones",
+        "description": "A 28-year-old applied social researcher working in Chicago, USA, Samantha holds a master's in applied sociology and specializes in life course analysis using mixed methods. Her experience includes large-scale survey construction, archival research, and digital storytelling projects focused on marginalized urban youth. Highly proficient with data visualization, coding, and ontology-driven analytic tools, Samantha brings a pragmatic approach to modeling complex life events, transitions, and affiliation networks. Her interests in social justice, inclusivity, and technology-mediated life documentation drive her advocacy for making the ontology accessible and relevant to diverse communities."
+      },
+      "group": {
+        "name": "Social Scientists (e.g., Sociologists, Anthropologists)",
+        "description": "Academics and practitioners who study individuals’ life histories, roles, relationships, and events within social, cultural, and temporal contexts.",
+        "priority": {
+          "reason": "They bring expertise in understanding relationships and social structures over time, crucial for formalizing context-rich life histories.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Dr. Karen Okoro",
+        "description": "A 47-year-old career counselor based in Lagos, Nigeria, Karen holds a Ph.D. in Educational Psychology with 20 years of experience in both urban and rural settings. She specializes in navigating the challenges of non-linear career paths, frequently working with students transitioning between diverse educational systems, as well as adults making mid-career changes. Deeply knowledgeable about international education frameworks and local contextual factors, Karen is interested in how socio-economic background, cultural expectations, and personal aspirations intersect in shaping life trajectories. Technologically savvy, she integrates digital portfolio tools into her practice and advocates for ontology structures that reflect real-world complexity without bias. Her unique perspective emphasizes the need to capture pivotal life transitions and informal achievements that aren't always reflected in traditional records."
+      },
+      "group": {
+        "name": "Educational and Career Guidance Professionals",
+        "description": "Experts (such as career counselors, academic advisors) who track and interpret individuals’ educational and career paths, transitions, and achievements.",
+        "priority": {
+          "reason": "They provide firsthand knowledge on the attributes, data, and milestones relevant in educational and professional trajectories.",
+          "value": "medium"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Carlos Mendoza",
+        "description": "A 34-year-old independent biographer and journalist living in Buenos Aires, Argentina. Carlos holds a bachelor’s degree in Journalism and has authored several contemporary biographies across Latin America, focusing on political activists and artists. He frequently engages subjects from different socio-economic backgrounds, emphasizing the influence of local culture and regional events on personal development. Carlos is fluent in Spanish and English, is adept with multimedia tools for recording and mapping life events, and brings a strong interest in the impact of place and migration in shaping life trajectories."
+      },
+      "group": {
+        "name": "Biographers and Life Historians",
+        "description": "Professionals and scholars who research, document, and analyze the complete life histories of individuals, including personal, educational, and career events, relationships, and contextual data.",
+        "priority": {
+          "reason": "They possess deep expertise in collecting and interpreting comprehensive life trajectories, personal milestones, and contextualized histories.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Dr. Lucas Pereira",
+        "description": "Based in São Paulo, Brazil, Dr. Pereira is a 44-year-old historian with a focus on migration and diaspora studies, holding a PhD in Latin American History. He has extensive experience mapping the career trajectories and networks of migrants, using both qualitative and quantitative methods. Technologically, he blends GIS mapping with textual analysis tools to trace spatial and temporal life patterns. Dr. Pereira's interdisciplinary perspective—incorporating economics, sociology, and demography—enables nuanced modeling of how affiliations and significant events are shaped by geographical and time-based factors."
+      },
+      "group": {
+        "name": "Historians",
+        "description": "Experts who investigate and contextualize the lives of individuals or communities, focusing on significant life events and affiliations in historical periods.",
+        "priority": {
+          "reason": "They are adept at linking personal life events with broader contexts and interpreting relationships over time, aiding comprehensive ontology scoping.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Samuel Okoye, RN",
+        "description": "Samuel is a 32-year-old registered nurse working in a rural community health clinic in Ghana. With a bachelor's degree in nursing and certification in health information management, Samuel has first-hand experience documenting patients' extended family structures, migration histories, and local affiliations, which often inform treatment and prevention strategies. He has keen interest in mobile data collection and frequently supports remote monitoring initiatives. His unique perspective stems from balancing traditional community knowledge with modern health informatics, ensuring life history data remain inclusive of local cultural nuances. Samuel is detail-oriented and values capturing both clinical and socio-environmental determinants in structured patient records."
+      },
+      "group": {
+        "name": "Healthcare Professionals Managing Patient Life Histories",
+        "description": "Medical professionals who maintain longitudinal records including patients’ personal, relational, and event histories to contextualize health and care over time.",
+        "priority": {
+          "reason": "They routinely collect structured and contextual life history data relevant for longitudinal analysis, offering domain structure and data granularity expertise.",
+          "value": "medium"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Adwoa Mensah",
+        "description": "Adwoa, a 36-year-old social historian from Accra, Ghana, combines her master's training in African Studies with ten years of fieldwork capturing oral histories. She works for a cultural heritage NGO, focusing on the lives of ordinary community members and their affiliations through time. Her interests lie in preserving underrepresented voices and contextualizing personal narratives within broader social and familial structures. Adwoa is proficient in multimedia documentation and skilled with community-driven digital archives, offering unique insights into collective memory and non-Western approaches to life history."
+      },
+      "group": {
+        "name": "Historians",
+        "description": "Experts who investigate and contextualize the lives of individuals or communities, focusing on significant life events and affiliations in historical periods.",
+        "priority": {
+          "reason": "They are adept at linking personal life events with broader contexts and interpreting relationships over time, aiding comprehensive ontology scoping.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Professor Helen Kim",
+        "description": "A 59-year-old academic historian and educator from Seoul, South Korea, with 30 years of university teaching experience and numerous published works on the 20th-century East Asian diaspora. Helen has supervised dozens of graduate projects reconstructing detailed life histories, often using both archival sources and first-person interviews. She is committed to integrating personal, educational, and professional data across generations and is skilled in both traditional archival research and modern digital humanities tools. Helen’s perspective emphasizes the value of linking familial, educational, and professional affiliations through time and space."
+      },
+      "group": {
+        "name": "Biographers and Life Historians",
+        "description": "Professionals and scholars who research, document, and analyze the complete life histories of individuals, including personal, educational, and career events, relationships, and contextual data.",
+        "priority": {
+          "reason": "They possess deep expertise in collecting and interpreting comprehensive life trajectories, personal milestones, and contextualized histories.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Dr. Eliana Pérez",
+        "description": "Dr. Eliana Pérez is a 48-year-old clinical psychologist based in Buenos Aires, Argentina, holding a Ph.D. in Psychology from the University of Buenos Aires. With over 20 years of experience, she specializes in life-span development and has authored several studies on how sociocultural factors influence personal trajectories and transitions. Dr. Pérez integrates narrative therapy and career counseling in her practice, helping clients articulate pivotal life events, relational turning points, and vocational changes. She is deeply interested in representing life histories through both qualitative insights and structured, temporal data models. Highly technologically proficient, Dr. Pérez leverages digital therapeutic tools and is an advocate for ontology-driven approaches to annotate and analyze complex personal histories. Her multicultural background and experience working with clients across different life stages provide her with a nuanced perspective on mapping evolving identities, relationships, and personal growth within the ontology."
+      },
+      "group": {
+        "name": "Psychologists and Life Coaches",
+        "description": "Practitioners who map individuals’ developmental, relational, and career pathways to aid personal growth and address life events.",
+        "priority": {
+          "reason": "They conceptualize and track significant personal events and transitions, offering knowledge of life event modeling.",
+          "value": "low"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Carlos Andrés Herrera",
+        "description": "Carlos Herrera, 34, is an amateur genealogist and data analyst living in Bogotá, Colombia. With a background in computer science and experience as a family historian for his extended Latin American family, he is adept at organizing complex datasets and visualizing ancestral relationships. Carlos utilizes online family tree platforms and writes custom code to synchronize data from multiple genealogy apps. He advocates for representing non-traditional family structures and significant life events (migration, adoptions, etc.). His interests in storytelling and technical innovation provide a unique bridge between data structure and lived experiences."
+      },
+      "group": {
+        "name": "Genealogists",
+        "description": "Individuals who research, document, and maintain family histories and ancestries, often capturing detailed personal, relational, and temporal data.",
+        "priority": {
+          "reason": "They maintain structured data about individuals’ lives, relationships, and major events, providing essential perspectives on data organization and accuracy.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Janet Halvorsen",
+        "description": "Janet is a 54-year-old estate and family law attorney based in Minneapolis, Minnesota. She holds a Juris Doctor from the University of Minnesota and has 28 years of experience across both small practices and large law firms. Janet specializes in estate planning, wills, and the legal documentation of family events such as marriages, divorces, and child custody arrangements. She is deeply familiar with the intricacies of notarizing and interpreting personal life milestones and records. Janet enjoys genealogy and is interested in how life events are tracked across generations. Her technological proficiency is advanced—she’s an early adopter of digital case management systems and leverages secure cloud repositories for client data. Janet brings a strong legal lens to ontology work, emphasizing the precision and privacy needed for representing life history data. She is also keenly aware of how nuanced legal terms, relationships, and statuses affect an individual's narrative and legacy."
+      },
+      "group": {
+        "name": "Legal Professionals Specializing in Estate and Family Law",
+        "description": "Attorneys and paralegals involved in documenting and interpreting significant legal events in an individual's life: marriages, estates, affiliations, and changes in legal status.",
+        "priority": {
+          "reason": "They regularly process and formalize life milestones and relational changes from a legal documentation perspective.",
+          "value": "low"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Luis Eduardo Sánchez",
+        "description": "Luis Eduardo Sánchez, age 33, is a demographer and quantitative social scientist based in Bogotá, Colombia. With a Master’s in Applied Statistics and practical experience working with public health agencies, Luis specializes in integrating life-history survey data with administrative records to study socio-economic mobility and the impact of major events such as natural disasters on life courses. Fluent in Spanish and English, he champions equitable representation of marginalized and rural communities' trajectories in demographic data models. Technologically adept, Luis frequently develops scripts for data cleaning and visualization, and advocates for using open-source tools. He offers a perspective rooted in Latin American demographic trends, emphasizing the importance of capturing informal and non-linear life paths in the ontology."
+      },
+      "group": {
+        "name": "Demographers",
+        "description": "Researchers who analyze statistical data about populations, including individuals’ educational, occupational, and life event trajectories, to uncover patterns and trends.",
+        "priority": {
+          "reason": "They possess insight into how life events, trajectories, and context are documented and analyzed at scale, informing ontology structure and terminology.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Dr. Priya Ramanathan",
+        "description": "Dr. Priya Ramanathan is a 59-year-old senior demographer and professor at a leading university in Chennai, India. With a career spanning over thirty years, Priya’s expertise lies in qualitative demographic research, especially life histories collected through in-depth interviews and oral histories. She has led cross-disciplinary teams to combine quantitative data with rich contextual narratives, especially around gender, kinship, and regional migratory patterns. With a background in sociology and human geography, Priya is deeply interested in how cultural contexts and subjective experiences of life events can be systematically captured. Her moderate technological proficiency is paired with a strong commitment to making ontologies flexible enough to incorporate both structured and narrative data, ensuring voices from traditionally underrepresented groups are included in life history representations."
+      },
+      "group": {
+        "name": "Demographers",
+        "description": "Researchers who analyze statistical data about populations, including individuals’ educational, occupational, and life event trajectories, to uncover patterns and trends.",
+        "priority": {
+          "reason": "They possess insight into how life events, trajectories, and context are documented and analyzed at scale, informing ontology structure and terminology.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Dr. Lydia Chauhan",
+        "description": "A 46-year-old oral historian based in London, UK, with a doctorate in History. Lydia has spent two decades interviewing individuals from marginalized communities to document life stories often omitted from mainstream narratives. She combines qualitative research methods with digital archiving, and advocates for the ethical representation of personal histories. Lydia is passionate about narrative diversity and incorporating spatial-temporal context into digital life records. Her technological proficiency includes qualitative analysis software and digital storytelling platforms. She offers unique insight into how personal milestones and societal factors intersect over a lifetime."
+      },
+      "group": {
+        "name": "Biographers and Life Historians",
+        "description": "Professionals and scholars who research, document, and analyze the complete life histories of individuals, including personal, educational, and career events, relationships, and contextual data.",
+        "priority": {
+          "reason": "They possess deep expertise in collecting and interpreting comprehensive life trajectories, personal milestones, and contextualized histories.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Margaret “Maggie” Liu",
+        "description": "Maggie Liu, 54, is a professional genealogist based in Toronto, Canada. With an M.A. in History and over 25 years of experience, she specializes in tracing multi-generational immigrant family histories and integrating records across multiple languages and countries. Maggie leverages advanced genealogy software and GIS mapping, combining traditional research with digital archive mining. She is passionate about cultural preservation, enjoys local history societies, and hosts webinars on best practices in documenting temporal and spatial life events. Maggie brings a meticulous, multicultural, and technologically savvy perspective to structuring personal histories."
+      },
+      "group": {
+        "name": "Genealogists",
+        "description": "Individuals who research, document, and maintain family histories and ancestries, often capturing detailed personal, relational, and temporal data.",
+        "priority": {
+          "reason": "They maintain structured data about individuals’ lives, relationships, and major events, providing essential perspectives on data organization and accuracy.",
+          "value": "high"
+        }
+      }
+    },
+    {
+      "persona": {
+        "name": "Jacob Feldman",
+        "description": "Jacob is a 34-year-old memoirist and digital storytelling consultant in Berlin, Germany. With a background in computer science and creative writing, he specializes in helping clients integrate multimedia and digital mapping into their life stories. Jacob has guided both young professionals and retirees in capturing pivotal career moves, educational transitions, and affiliations using cutting-edge narrative and data tools. He’s especially interested in chronological visualization and the digital preservation of life events. His technological proficiency and dedication to user-centered narrative structures provide a modern, innovative perspective on structuring comprehensive life histories."
+      },
+      "group": {
+        "name": "Personal Historians and Memoirists",
+        "description": "Writers who specialize in crafting or helping others document detailed life stories, focusing on personal perspectives, milestones, and contextualization.",
+        "priority": {
+          "reason": "They capture rich, narrative accounts and deep personal insights, which are critical for modeling comprehensive life histories.",
+          "value": "medium"
+        }
+      }
+    }
+  ]
+}

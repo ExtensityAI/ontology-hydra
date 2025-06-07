@@ -1,0 +1,29 @@
+What are the significant life events (e.g., birth, marriage, migration, awards) in the life of person X, and when and where did they occur?
+How has the educational trajectory of individual Y evolved, including institutions attended, degrees earned, fields of study, and locations over time?
+What are the major career milestones for person Z, including positions held, employers, roles, and associated time periods and locations?
+Which organizations, groups, or communities has individual A been affiliated with, and during which periods and at what locations?
+Who are the immediate and extended family members (biological, adoptive, step, chosen) of person B, and how are they related?
+What migrations, relocations, or significant movements has individual C experienced, including origins, destinations, and time frames?
+What health-related events (e.g., major illnesses, disabilities, accidents) have occurred in the life of individual D, and what were the contexts and outcomes?
+How has the socio-economic status of person E changed over their life trajectory, and what major factors contributed to these changes?
+What are the major cultural, religious, or linguistic backgrounds associated with person F, and how have these influenced their life events and affiliations?
+What are the documented sources, provenance, or verification status for specific events or entries in the life history of individual G?
+Which events in the life of person H overlapped in time (e.g., simultaneous educational enrollment and employment), and how were they sequenced?
+What narrative accounts, oral histories, or testimonies are available for individual I, and in which languages or formats are they preserved?
+Where has person J lived throughout their life, and what is the chronological sequence of these residences?
+What official identifiers (e.g., national ID, passport, photographs) and demographic information (e.g., gender, ethnicity, nationality) are associated with individual K?
+Who has provided consent or access permissions regarding the use or sharing of life history data for person L?
+What informal learning experiences (e.g., apprenticeships, community education) has individual M recorded, and how do they complement formal education?
+How are person N’s professional relationships structured, including mentors, mentees, supervisors, and collaborators?
+What multimedia artifacts (photos, audio, video, scanned documents) are attached to the life history of individual O?
+How has individual P’s participation in volunteer, advocacy, or cultural groups evolved, and what roles did they hold?
+For life event Q, what were the related spatial and temporal details, and how did this event impact subsequent life milestones?
+What annotations, commentary, or qualitative codes are available for particular periods or events in person R’s life?
+How does person S's life history reflect major societal disruptions, migrations, or cultural transitions?
+What archival status (active, archived, uncertain) do various elements of individual T’s record have, and when were they last modified?
+In cases where life history data is incomplete, disrupted, or non-traditional (e.g., due to displacement or loss), what is documented and how is uncertainty represented?
+How do household compositions and living arrangements for person U change over time, and what factors contributed to these changes?
+What lineage or ancestry details are known for individual V, and how are intergenerational connections represented?
+How do environmental or contextual factors (e.g., major regional events, traditions) align with specific milestones in person W’s life history?
+What periods of unemployment, career breaks, or sabbaticals has individual X experienced, along with reasons and durations?
+Which legal events (citizenship, name changes, court cases, etc.) has person Y undergone, and what were the implications?

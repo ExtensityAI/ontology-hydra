@@ -1,4 +1,5 @@
 from logging import getLogger
+from pathlib import Path
 
 from symai import Expression
 from symai.components import MetadataTracker
@@ -163,6 +164,7 @@ class TripletExtractor(Expression):
 
 
 def generate_kg(
+    kg_path: Path,
     texts: list[str],
     kg_name: str,
     ontology: Ontology,
@@ -171,6 +173,8 @@ def generate_kg(
     epochs: int = 3,
 ) -> KG:
     extractor = TripletExtractor(name=kg_name, threshold=threshold, ontology=ontology)
+
+    partial_path = kg_path.with_suffix(".partial.json")
 
     usage = None
     triplets = []
@@ -200,6 +204,9 @@ def generate_kg(
                         n_new_triplets = n_triplets - n_triplets_before
                         n_new_triplets_in_epoch += n_new_triplets
 
+                        # write partial kg state to file already
+                        partial_path.write_text(extractor.get_kg().model_dump_json(indent=2), encoding="utf-8")
+
                         logger.debug(
                             "Extracted %i new triplets from text chunk: %s",
                             n_new_triplets,
@@ -225,4 +232,7 @@ def generate_kg(
             logger.info("No new triplets extracted in epoch %i, stopping early.", i)
             break
 
-    return extractor.get_kg()
+    kg = extractor.get_kg()
+    kg_path.write_text(kg.model_dump_json(indent=2), encoding="utf-8")
+
+    return kg

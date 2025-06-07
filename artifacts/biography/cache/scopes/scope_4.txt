@@ -1,0 +1,105 @@
+1. Domain Definition
+   1.1 A structured representation of individuals' life histories encompasses formalized data about personal identity, educational and career pathways, significant life events, relationships, and affiliations. Each aspect is contextualized with temporal (time-based) and spatial (location-based) attributes to provide a comprehensive account of a person’s life journey.
+   1.2 Conceptual areas include:
+       - Personal identification and demographic information
+       - Educational trajectory
+       - Professional and vocational history
+       - Significant life events and milestones
+       - Relationships and familial connections
+       - Group, organizational, and societal affiliations
+       - Temporal and spatial contextualization of life events and attributes
+
+2. Core Topics
+   2.1 Personal Information
+       - Legal name(s), aliases, and name changes
+       - Date and place of birth
+       - Gender, sex, and gender identity
+       - nationality, citizenship, and legal status
+       - Biographical narratives and self-descriptions
+   2.2 Educational Trajectory
+       - Primary, secondary, and tertiary education
+       - Vocational, technical, and professional training
+       - Degrees, certifications, and licenses
+       - Transitions between educational stages
+       - Academic performances, honors, scholarships
+   2.3 Career and Occupational History
+       - Jobs and occupations held
+       - Employer and organizational affiliations
+       - Career milestones, promotions, and changes
+       - Sabbaticals, retirements, and career interruptions
+       - Occupational certifications and professional development
+   2.4 Significant Life Events
+       - Birth, adoption, and death
+       - Marriages, divorces, civil unions, and domestic partnerships
+       - Parenthood and guardianship
+       - Migrations, emigrations, and relocations
+       - Health-related events (diagnoses, therapies, recoveries)
+       - Legal status changes (naturalization, emancipation, name changes)
+   2.5 Relationships
+       - Familial ties (biological, adoptive, step, foster relationships)
+       - Non-traditional and chosen family structures
+       - Romantic, platonic, and professional relationships
+       - Intergenerational connections and lineage
+       - Mentorship and influential relationships
+   2.6 Affiliations
+       - Membership in groups, organizations, institutions
+       - Community and religious associations
+       - Political and social affiliations
+       - Alumni and professional society memberships
+   2.7 Temporal Context
+       - Start and end dates for life events, stages, and affiliations
+       - Duration and periodicity of events and relationships
+   2.8 Spatial Context
+       - Geographic locations (address, city, region, country)
+       - Migration pathways and residence histories
+       - Place of significance for events (schools, workplaces, landmarks)
+   2.9 Legal Documentation and Status
+       - Official records (birth, marriage, death certificates)
+       - Notarized documents and legal contracts
+       - Wills, estate plans, custody documents
+       - Legal statuses and their temporal bounds
+   2.10 Narrative & Qualitative Annotations
+       - Subjective accounts of life stages and events
+       - Turning points, transitions, and reflections
+       - Multicultural and sociocultural contextual information
+
+3. Terminology
+   3.1 Domain-Specific Terms and Concepts
+       - Life History: The collective record of an individual’s personal, educational, professional, and relational journey.
+       - Personal Identifier: Any attribute or document that distinguishes a single individual (e.g., legal name, date of birth).
+       - Affiliation: Formal or informal connection between an individual and a group, organization, or institution.
+       - Milestone: A significant life event marking a personal or relational transition (e.g., graduation, marriage).
+       - Temporal Attribute: A timestamp or date range contextualizing an event or status.
+       - Spatial Attribute: Location-based information attached to life events or affiliations.
+       - Relationship: Any biological, legal, or chosen connection between individuals, including family, romantic, friendship, or professional ties.
+       - Lineage: Sequence of ancestral and descendant relationships.
+       - Status: Legal or social designation impacting an individual (e.g., marital status, citizenship).
+       - Annotation: Subjective or supplementary narratives and reflections enriching structured data.
+   3.2 Hierarchical Relationships Between Key Concepts
+       - Life History (top-level construct)
+            - Personal Information
+            - Educational Trajectory
+            - Career and Occupational History
+            - Significant Life Events
+            - Relationships
+            - Affiliations
+                - Each subcomponent contextualized with temporal and spatial attributes
+       - Relationships (subtopic)
+            - Familial
+                 - Biological
+                 - Adoptive
+                 - Step/Foster
+            - Non-Familial
+                 - Romantic
+                 - Professional
+                 - Social
+       - Affiliations (subtopic)
+            - Organizational (company, school, NGO)
+            - Community (religious, political, cultural)
+            - Informal (interest groups, online communities)
+       - Legal Documentation
+            - Vital records
+            - Estate documents
+            - Court and legal status documents
+            - Each document linked to the corresponding life event, temporal and spatial context
+       - Annotations (can reference any component of life history as qualitative enrichment)

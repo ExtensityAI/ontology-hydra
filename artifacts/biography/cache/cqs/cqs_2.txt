@@ -1,0 +1,32 @@
+What are the full names, aliases, and historical name changes of individual X throughout their life?
+What is the birth date and place of individual X?
+What demographic attributes (gender, sex, nationality, spoken languages, ethnicity) are recorded for individual X?
+What is the chronological sequence of educational institutions attended by individual X, including institutions’ names, locations, and enrollment periods?
+Which degrees, certifications, or diplomas has individual X obtained, and from which institutions?
+What were the major fields of study or specializations pursued by individual X?
+What non-formal or informal learning experiences (e.g., apprenticeships, self-taught skills) has individual X engaged in?
+What is the complete employment history of individual X, including job titles, employers, responsibilities, and employment periods?
+What professional recognitions, certifications, or informal achievements has individual X received during their career?
+What significant life events (birth, adoption, marriage, divorce, death, etc.) have occurred in individual X’s life, and when/where did they take place?
+What major health-related events (e.g., illnesses, recoveries, disabilities) has individual X experienced?
+Which individuals are part of individual X’s immediate and extended family networks, and what are their specific relationships (parent, sibling, spouse, etc.)?
+What social and professional relationships or networks does individual X maintain (e.g., mentors, colleagues, close friends), and how have these networks changed over time?
+In what organizations, associations, clubs, or communities has individual X held membership, with what roles, and during which periods?
+What volunteer, advocacy, or informal group affiliations has individual X participated in?
+What relocations, migrations, or travel events has individual X undertaken, and what locations are associated with these movements?
+What are the household compositions of individual X at different points in their life?
+How have individual X’s socio-economic status, cultural background, or environmental contexts evolved or interacted with their major life events?
+What narrative or self-descriptive accounts has individual X provided about key events, transitions, or roles in their life?
+What digital artifacts (photographs, videos, documents, audio recordings) are attached to individual X’s life history, and what do they represent?
+For each event or period in individual X’s life, what is the temporal ordering or overlap with other events (e.g., concurrent career and educational activities)?
+What is the provenance (source, author, reliability) of each piece of information in individual X’s life history?
+What consent records or privacy/access controls are associated with individual X’s information?
+How is incomplete, uncertain, or sensitive information about individual X represented and managed?
+What changes or disruptions (e.g., breaks in education or career, societal upheavals) have marked individual X’s life trajectory?
+Which languages or multicultural perspectives are represented in individual X’s biography or documentation?
+What legal events (citizenship changes, court cases, military service) has individual X experienced?
+What annotations or commentaries have been added to individual X’s records, and by whom?
+How do individual X’s affiliations and relationships reflect or impact their identity, opportunities, or life outcomes over time?
+At what ages have significant milestones in individual X’s life occurred?
+What formal and informal roles has individual X held in various group memberships over time?
+How are lifecycle phases, transitions, and major events represented on a timeline or geospatial map for individual X?

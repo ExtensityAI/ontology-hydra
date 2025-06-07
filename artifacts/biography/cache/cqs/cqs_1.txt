@@ -1,0 +1,24 @@
+What is the full life history of an individual, including major life events, educational and career milestones, relationships, and affiliations, mapped along a temporal and spatial timeline?
+How have an individual's legal names, preferred names, and aliases changed over time and in what contexts?
+What are the educational trajectories of an individual, including formal, non-formal, and informal learning experiences, institutions attended, and credentials obtained?
+Can I view the chronological sequence of an individual's career history, including job titles, employers, roles, career transitions, periods of unemployment, and recognitions received?
+Which significant life events (e.g., marriage, migration, legal changes, health events) occurred in a person’s life, and what were their corresponding dates and locations?
+How are familial and social relationships structured for a given individual, including biological, adoptive, step, and chosen family members, and how do these relationships change over generations?
+Which organizations, clubs, community groups, or networks is or was an individual affiliated with, and what roles did they hold during specific time periods?
+What spatial movements has an individual undertaken in their life (migrations, relocations, travels), and how are these mapped geographically and temporally?
+What autobiographical or narrative accounts, oral histories, or testimonies are linked to an individual’s life, and in which languages or formats are they recorded?
+Which digital artifacts (e.g., photographs, certificates, audio/video recordings, scanned documents) are associated with particular events or episodes in a person's life history?
+How can I determine the sources, provenance, and custodianship of life history records for an individual, including the reliability and authenticity of each record?
+What privacy, consent, and access restrictions are associated with different segments of an individual's life history data?
+How are socio-economic status, cultural background, religion, language, and environmental context represented and tracked across an individual’s life journey?
+Can I retrieve all household compositions and changes in living arrangements for a particular person over their lifetime?
+Which periods in an individual’s life involved overlapping or concurrent events (e.g., simultaneous employment and education, multiple affiliations)?
+What were the ages and locations of an individual at the time of key life milestones such as graduation, marriage, migration, or retirement?
+What are the professional networks and mentorship relationships influencing a person, and how did these shape their career development over time?
+How have interruptions or resumptions in education or career (such as sabbaticals, parental leave, or illness) impacted the overall life trajectory of an individual?
+Which major awards, recognitions, or informal achievements has an individual received, and in what context?
+What legal events (e.g., changes in citizenship, court cases, name or status changes) have affected an individual’s identity and life trajectory?
+Are there annotations, commentaries, or semantic tags enriching the structured life data for an individual, and what insights do they provide?
+How does the life history ontology document incomplete, disrupted, or non-traditional trajectories (such as periods of uncertainty, displacement, or informal livelihoods)?
+What intergenerational connections, lineages, and ancestral relationships exist for a given family or community?
+Which life events or affiliations are marked as sensitive or subject to special ethical handling, and what regulations govern their use and sharing?

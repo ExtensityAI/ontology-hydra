@@ -1,0 +1,3968 @@
+{
+  "nodes_count": 450,
+  "edges_count": 702,
+  "nodes": [
+    "G\u00f6delMarriage_Adele",
+    "Marriage",
+    "G\u00f6delEmigrationUS",
+    "United States",
+    "Shannon_MeetingWeylNeumannEinsteinGodel",
+    "Kurt G\u00f6del",
+    "G\u00f6delPhilosophicalInterests",
+    "G\u00f6delKantIdealismAnnotation",
+    "Claude Shannon",
+    "Shannon_JugglingUnicyclingChessInventor",
+    "G\u00f6delEducation_EvangelischeVolksschule",
+    "1916",
+    "ClaudeShannon_Education_MIT_MS",
+    "EducationEpisode",
+    "James Urbaniak",
+    "Person",
+    "Kurt Friedrich G\u00f6del",
+    "G\u00f6delHealthCrises",
+    "G\u00f6delConstructibleUniverse",
+    "Princeton Cemetery",
+    "Location",
+    "Brno",
+    "Royal Irish Academy Membership 1985",
+    "Cambridge, Massachusetts",
+    "Shannon_MIT_Employment",
+    "Professor",
+    "Shannon number",
+    "CareerMilestone",
+    "Incompleteness: The Proof and Paradox of Kurt G\u00f6del",
+    "LifeNarrative",
+    "Kyoto Prize",
+    "Award",
+    "1938",
+    "Family_CShannon-MabelWolfShannon",
+    "Mabel Wolf Shannon",
+    "Polymath",
+    "Shannon_JugglingMachines",
+    "Stephen Budiansky",
+    "Claude (language model)",
+    "DigitalArtifact",
+    "Marvin Minsky",
+    "ClaudeShannon_Education_UniversityOfMichigan",
+    "ClaudeShannon_Education_MIT_PhD",
+    "Rudolf G\u00f6del (brother)",
+    "John W. Dawson Jr.",
+    "MarriageClaudeShannonBettyShannon",
+    "1949",
+    "Successful investor",
+    "InformalAchievement",
+    "Claude E. Shannon: A Retrospective on His Life, Work, and Impact",
+    "Robert G. Gallager",
+    "JourneyToEdgeOfReasonNYTCriticsTopBook2021",
+    "QualitativeAnnotation",
+    "G\u00f6delAfterlifeBeliefAnnotation",
+    "ClaudeShannon_AI_DartmouthWorkshop",
+    "Descendant of German immigrants",
+    "Shannon's maxim",
+    "G\u00f6delFamilyRelationship_Mother",
+    "parent",
+    "ClaudeShannonNameHistory1",
+    "Claude Elwood Shannon",
+    "ClaudeShannonLanguageProficiency_English",
+    "English",
+    "G\u00f6delCollectedWorksPublication",
+    "LifeEvent",
+    "Shannon_RomanNumeralComputer_THROBAC",
+    "G\u00f6delMentalInstabilityCrisisLateLife",
+    "Royal Netherlands Academy of Arts and Sciences Foreign Member 1975",
+    "ProfessionalRecognition",
+    "Massachusetts Institute of Technology",
+    "G\u00f6delFamilyRelationship_Father",
+    "Rudolf G\u00f6del",
+    "ClaudeShannon_FoundingInformationTheory",
+    "Electrical Engineering",
+    "FieldOfStudy",
+    "G\u00f6delFamilyRelationship_Grandfather",
+    "Joseph G\u00f6del",
+    "Shannon_ResearchAtCSHL",
+    "G\u00f6delViewOnIslamAnnotation",
+    "Princeton University",
+    "Organization",
+    "Elwyn Berlekamp",
+    "G\u00f6del, Escher, Bach: an Eternal Golden Braid",
+    "GEB_Annotation",
+    "Jimmy Soni",
+    "Donnor Professor of Science MIT 1958\u20131979",
+    "Donnor Professor of Science",
+    "Automata Studies",
+    "EncouragedRamseyEconomicsRelationship",
+    "Pigou",
+    "ShannonMentor_Kleinrock",
+    "Leonard Kleinrock",
+    "Basic Research Award Eduard Rhein Foundation 1991",
+    "1958",
+    "Claude E. Shannon: Founder of Information Theory",
+    "Document",
+    "MarriageClaudeShannonNormaLevor",
+    "G\u00f6delRheumaticFeverChildIllHealth",
+    "G\u00f6del suffered rheumatic fever and lifelong belief in heart damage; frequent ill health episodes",
+    "Howard Raiffa",
+    "Tom Rutledge",
+    "American Philosophical Society Membership 1983",
+    "Causal Qualities (1929)",
+    "EditingGodelPhilosophicalNotebooks",
+    "G\u00f6del's philosophical notebooks are being edited at the Kurt G\u00f6del Research Centre at the Berlin-Brandenburg Academy of Sciences and Humanities",
+    "G\u00f6delPrincetonIAS_Affiliation",
+    "1940",
+    "Dartmouth workshop 1956",
+    "Nathaniel Rochester",
+    "G\u00f6delBibleReadingAnnotation",
+    "According to Adele, G\u00f6del read the Bible in bed every Sunday morning and was religious, though did not go to church",
+    "GodelCollectedWorksFiveVolumesAnnotation",
+    "Five volumes of G\u00f6del's collected works have been published",
+    "ClaudeShannon_AIFounder",
+    "Collaboration Shannon Weaver",
+    "AdeleDonatedGodelPapersIAS",
+    "Upon her death in 1981, Adele donated G\u00f6del's papers to the Institute for Advanced Study",
+    "Harvey Prize",
+    "Keynes",
+    "G\u00f6delTheistAffiliation",
+    "Theism",
+    "Shannon\u2013Weaver model",
+    "University of Vienna",
+    "Institution",
+    "G\u00f6delParanormalReading",
+    "G\u00f6delParanormalReadingAnnotation",
+    "Marconi Society Lifetime Achievement Award 2000",
+    "Marconi Society",
+    "Scientific Development Corp",
+    "Frank P. Ramsey",
+    "G\u00f6delCompletenessTheoremProof",
+    "ReligiousAffiliation",
+    "Audio Engineering Society Gold Medal Award",
+    "Betty Shannon",
+    "Numerical Analyst",
+    "University of Notre Dame",
+    "University of Michigan",
+    "LegacyPapersPaulSamuelson",
+    "SocialRelationship",
+    "Adele G\u00f6del",
+    "AdeleDeathEvent",
+    "Plenary Speaker ICM 1950",
+    "G\u00f6delEducation_Vienna",
+    "1924",
+    "G\u00f6del Prize",
+    "G\u00f6delObsessiveFearAnnotation",
+    "G\u00f6del developed an obsessive fear of being poisoned, ate only food prepared by his wife",
+    "Hermann Weyl",
+    "\"G\u00f6del said: 'I like Islam: it is a consistent or consequential idea of religion and open-minded'\"",
+    "ClaudeShannon_ReligiousAffiliationMethodism",
+    "ShannonMentor_ISutherland",
+    "Mentorship",
+    "ShannonMentor_BSutherland",
+    "Minivac 601",
+    "MultimediaArtifact",
+    "Donald Davidson",
+    "Claude Shannon (1916\u20132001)",
+    "Shannon_BellLabs_Summer1937",
+    "1937",
+    "Lou Jacobi",
+    "National Inventors Hall of Fame",
+    "ShannonAtheism",
+    "G\u00f6delDeathEvent",
+    "G\u00f6delRefusedToEatInAdeleAbsence",
+    "National Medal of Science",
+    "Claude E. Shannon Award",
+    "G\u00f6del read Kant; influenced by philosophical idealism and logical realism",
+    "Information Age",
+    "Movement",
+    "Claude Shannon Centenary 2016",
+    "G\u00f6delNaturalizationUS",
+    "The Bit Player screening",
+    "Mathematics",
+    "chess program",
+    "G\u00f6delNationalityHistory",
+    "Austrian Citizen, then Czechoslovak, then German, then U.S. Citizen",
+    "ShannonMentor_Hillis",
+    "1930",
+    "A Mathematical Theory of Saving (1928)",
+    "Robert Calderbank",
+    "EntrepreneurialActivity",
+    "G\u00f6delFamilyRelationship_Brother",
+    "Institute for Advanced Study",
+    "G\u00f6delAxiomOfChoiceConsistency",
+    "EmploymentPeriod",
+    "G\u00f6delBaptizedLutheranAffiliation",
+    "ClaudeShannon_Mentorship_Hitchcock",
+    "AwardingBody",
+    "Methodism",
+    "Shannon_BellLabs_WWII",
+    "ClaudeShannon_BellLabs_Employment",
+    "1941",
+    "American Academy of Achievement",
+    "Genetics",
+    "Claude Shannon USPS Stamp Petition",
+    "MIT",
+    "Shannon_RubiksCubeDevice",
+    "Golden Plate Award of the American Academy of Achievement 1967",
+    "John von Neumann",
+    "Rebecca Goldstein",
+    "AT&T Laboratories",
+    "Islam",
+    "AffiliationRole",
+    "AT&T Shannon Labs",
+    "Graham P. Collins",
+    "Descendant of John Ogden (colonist)",
+    "John Fritz Medal",
+    "Journey to the Edge of Reason: The Life of Kurt G\u00f6del",
+    "Neil J. A. Sloane",
+    "G\u00f6delDeathByMalnutritionAnnotation",
+    "G\u00f6del died from malnutrition and inanition caused by personality disturbance after refusing to eat",
+    "Rob Goodman",
+    "Frank P. Ramsey Professor of Political Economy",
+    "Bell Labs",
+    "1929",
+    "G\u00f6delGrandjeanQuestionnaire",
+    "Testimony",
+    "John Ogden (colonist)",
+    "Claude Shannon Memorial Park",
+    "The Bit Player",
+    "Boston Review",
+    "Universals (1925)",
+    "Albert Einstein Award",
+    "G\u00f6delViennaCircleParticipation",
+    "Family_CShannon-CShannonSr",
+    "Claude Shannon Sr.",
+    "G\u00f6delDeathAnnotation",
+    "Death resulting from refusal to eat due to belief that food was poisoned",
+    "Shannon_AI_Papers",
+    "G\u00f6delMentalIllnessCrisis",
+    "Logical Dilemmas: The Life and Work of Kurt G\u00f6del",
+    "JamesUrbaniakPlaysGodel",
+    "In the 2023 movie 'Oppenheimer', G\u00f6del is briefly portrayed by James Urbaniak",
+    "The Essential Message: Claude Shannon and the Making of Information Theory",
+    "Erico Marui Guizzo",
+    "Morris Liebmann Memorial Prize",
+    "HealthCrisis",
+    "Shannon_TheseusProject",
+    "G\u00f6delOntologicalProof",
+    "Cold Spring Harbor Laboratory",
+    "Foreign Member of the Royal Society 1968 (ForMemRS)",
+    "G\u00f6delMetric",
+    "1948",
+    "Kurt G\u00f6del Society",
+    "Austria-Hungary",
+    "World Science Festival",
+    "Royal Netherlands Academy of Arts and Sciences",
+    "Decision Analysis Society",
+    "Book interweaves the work and ideas of G\u00f6del, Escher, and Bach and discusses implications of incompleteness theorem for computational systems",
+    "G\u00f6delUSCitizenshipEvent",
+    "G\u00f6delReligionGeneralViewAnnotation",
+    "G\u00f6del stated: 'Religions are for the most part bad, but not religion itself'",
+    "G\u00f6delIncompletenessTheorems",
+    "Knowledge (1929)",
+    "G\u00f6delBirthEvent",
+    "1906-04-28",
+    "Alfred Noble Prize",
+    "American Philosophical Society Membership 1961",
+    "Originator",
+    "CareerRole",
+    "Frank Ramsey Professor Emeritus of Economics",
+    "Proof theorist",
+    "Shannon_PhDMathematics1940",
+    "AdeleHospitalizationLate1977",
+    "G\u00f6delDevelopedObsessiveFearOfPoisoning",
+    "SocialistViews",
+    "1978-01-14",
+    "childhood",
+    "LouJacobiPortraysGodel",
+    "In the 1994 film 'I.Q.', Lou Jacobi portrays G\u00f6del",
+    "Ivan Sutherland",
+    "Journey to the Edge of Reason was a New York Times Critics' Top Book of 2021",
+    "Claude Shannon Commemorative Stamp Macedonia",
+    "Recognition",
+    "Douglas Hofstadter",
+    "A Contribution to the Theory of Taxation (1927)",
+    "Ramsey pricing",
+    "Richard Zeckhauser",
+    "Partha Dasgupta",
+    "Shannon_Minivac601Design",
+    "ClaudeShannon_WWII_Cryptanalysis",
+    "IEEE Medal of Honor",
+    "G\u00f6delParanoidSymptoms",
+    "G\u00f6del suffered paranoia, fear of poisoning, spending months in a sanitarium",
+    "Frank Ramsey Professorships",
+    "Marianne G\u00f6del",
+    "Julian Schwinger",
+    "Frank Lauren Hitchcock",
+    "Moritz Schlick",
+    "Set theorist",
+    "large language model",
+    "General Propositions and Causality (1929)",
+    "Google Doodle",
+    "ClaudeShannon_MathematicalTheoryOfCommunication1948",
+    "Frank P. Ramsey Medal",
+    "Substantial contributions to decision theory",
+    "Norma Levor",
+    "Eduard Rhein Foundation",
+    "Lutheranism",
+    "Kurt G\u00f6del Research Centre, Berlin-Brandenburg Academy of Sciences and Humanities",
+    "Shannon_SignalFlowGraphInvention1942",
+    "1942",
+    "FamilyRelationship",
+    "G\u00f6delEducation_Realgymnasium",
+    "GroupParticipation",
+    "Shannon_AlzheimersDiagnosis",
+    "Theseus",
+    "Harvard University",
+    "ClaudeShannonDemographicAmerican",
+    "DemographicAttribute",
+    "ClaudeShannon_BellLabs_Researcher",
+    "Princeton, New Jersey",
+    "Dangerous Knowledge",
+    "G\u00f6delMentalInstabilityAnnotation_SuspectedAspergersOCD",
+    "Frank P. Ramsey Professor of Managerial Economics",
+    "ClaudeShannon_MIT_Employment",
+    "ClaudeShannon_MIT_Professor",
+    "G\u00f6delNumberingDevelopment",
+    "Harold Pender Award",
+    "Kurt G\u00f6del Research Center for Mathematical Logic",
+    "JobTitle",
+    "Paul Samuelson",
+    "Statues_of_Claude_Shannon",
+    "ClaudeShannon_CoInventBitPulseCodeModulationWearableComputer",
+    "Oppenheimer (film)",
+    "Albert Einstein",
+    "Thomas Edison",
+    "grandparent",
+    "Ramsey's subjective probability interpretation",
+    "Information theory",
+    "Evangelische Volksschule",
+    "Shannon_NationalResearchFellowship_InstituteAdvancedStudy",
+    "National Research Fellow",
+    "LanguageProficiency",
+    "Edward O. Thorp",
+    "1939",
+    "Influential in academic economics; basis for optimal accumulation theory",
+    "Theories (1929)",
+    "Margraviate of Moravia",
+    "University of Notre Dame faculty",
+    "Princeton Hospital",
+    "G\u00f6del Lecture",
+    "Warren Weaver",
+    "PigouSuggestedTaxationProblem",
+    "Arthur Pigou",
+    "Vienna Circle",
+    "CommunityGroup",
+    "G\u00f6del read widely on paranormal topics including telepathy, reincarnation, and ghosts",
+    "John McCarthy",
+    "ShannonMentor_Berlekamp",
+    "The Economic Journal",
+    "G\u00f6delChoralUnionParticipation",
+    "Shannon_RocketPoweredFrisbees",
+    "Frank Ramsey Professor of Economics",
+    "ClaudeShannonDemographicMale",
+    "male",
+    "Ramsey Effect",
+    "Gaylord High School",
+    "Austro-Hungarian mathematician",
+    "A Mind at Play",
+    "1916-04-30",
+    "Western Union",
+    "1938-09",
+    "SocioEconomicStatusChange",
+    "Stuart Ballantine Medal",
+    "G\u00f6delPersonalGodAnnotation",
+    "Protestant philosopher",
+    "Petoskey, Michigan",
+    "G\u00f6del believed God was personal, remained a theist throughout his life, and called his philosophy rationalistic, idealistic, optimistic, theological",
+    "Shannon_CoInventWearableComputer",
+    "G\u00f6delDoctorateEarned",
+    "Shannon_FlameThrowingTrumpets",
+    "information theory",
+    "American Philosophical Society",
+    "1912",
+    "I.Q. (film)",
+    "Researcher",
+    "Ramsey growth model",
+    "G\u00f6del believed in an afterlife and paranormal topics such as telepathy, reincarnation, and ghosts",
+    "Claude Shannon Google Doodle 2016",
+    "Language",
+    "G\u00f6delPhilosophicalNotebooksEditing",
+    "1950",
+    "University of California, San Diego",
+    "Truth and Probability (1926/1931)",
+    "Moritz Schlick Murder",
+    "G\u00f6delSocietyFoundedAnnotation",
+    "Br\u00fcnner M\u00e4nnergesangverein",
+    "Shannon_Thesis_TheoreticalGenetics_Unpublished",
+    "Shannon_PlasticFoamShoesOnLake",
+    "David Malone",
+    "ClaudeShannon_MastersThesis1937",
+    "Br\u00fcnn",
+    "Danny Hillis",
+    "early 1970s",
+    "Bert Sutherland",
+    "BitPlayerClaudeShannonFilm",
+    "The Bit Player is a feature film about Claude Shannon directed by Mark Levinson, premiered at the World Science Festival in 2019.",
+    "AncestryDetail",
+    "G\u00f6delGrandjeanReligionSelfDescription",
+    "G\u00f6del described his religion as 'baptized Lutheran (but not member of any religious congregation). My belief is theistic, not pantheistic, following Leibniz rather than Spinoza'",
+    "Some scholars suggested G\u00f6del may have had Asperger syndrome or obsessive-compulsive disorder",
+    "Facts and Propositions (1927)",
+    "Ramsey's redundancy theory of truth",
+    "GoogleDoodle100thBirthday",
+    "On April 30, 2016, Google honored Claude Shannon with a Doodle for his 100th birthday.",
+    "Shannon's demon",
+    "1956",
+    "1931",
+    "G\u00f6delOntologicalProofDescription",
+    "G\u00f6del formulated a formal proof of God's existence known as G\u00f6del's ontological proof",
+    "Association for Symbolic Logic",
+    "Princeton University faculty",
+    "Platonist",
+    "Boston Review Claude Shannon Article",
+    "CitizenshipChange",
+    "The Kurt G\u00f6del Society, founded in 1987, is for promoting research in logic, philosophy, and history of mathematics",
+    "Czechoslovakia",
+    "1977",
+    "Royal Irish Academy",
+    "Ramsey's reliability theory of knowledge",
+    "1981",
+    "sibling",
+    "Marconi Society Lifetime Achievement Award",
+    "Royal Society",
+    "Shannon_NDRCLifeEvent",
+    "InformalLearningExperience",
+    "2001",
+    "NamedInHonorOfClaudeShannon",
+    "Awarded annually for outstanding paper in theoretical computer science",
+    "early 1950s",
+    "Mark Levinson",
+    "On Truth (1929)",
+    "An Algebra for Theoretical Genetics",
+    "1936",
+    "Ontologist",
+    "1979",
+    "NameHistory",
+    "International Congress of Mathematicians",
+    "Deutsches Staats-Realgymnasium",
+    "Universals of Law and of Fact (1928)",
+    "Artificial intelligence",
+    "Migration",
+    "LegalStatusHistory",
+    "The 'Claude' language model was named in honor of Claude Shannon.",
+    "Atheism",
+    "American",
+    "1976",
+    "Gaylord, Michigan",
+    "Annual lecture held by the Association for Symbolic Logic since 1990 in honor of Kurt G\u00f6del"
+  ],
+  "edges": [
+    {
+      "source": "G\u00f6delMarriage_Adele",
+      "target": "Marriage",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delMarriage_Adele",
+      "target": "Adele G\u00f6del",
+      "label": "involvedPerson"
+    },
+    {
+      "source": "G\u00f6delMarriage_Adele",
+      "target": "1938-09",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "G\u00f6delMarriage_Adele",
+      "target": "Kurt Friedrich G\u00f6del",
+      "label": "involvedPerson"
+    },
+    {
+      "source": "G\u00f6delEmigrationUS",
+      "target": "United States",
+      "label": "occurredAtLocation"
+    },
+    {
+      "source": "G\u00f6delEmigrationUS",
+      "target": "1939",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "G\u00f6delEmigrationUS",
+      "target": "Migration",
+      "label": "isA"
+    },
+    {
+      "source": "United States",
+      "target": "Location",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon_MeetingWeylNeumannEinsteinGodel",
+      "target": "Kurt G\u00f6del",
+      "label": "relatesPersonInSocialRelationship"
+    },
+    {
+      "source": "Shannon_MeetingWeylNeumannEinsteinGodel",
+      "target": "John von Neumann",
+      "label": "relatesPersonInSocialRelationship"
+    },
+    {
+      "source": "Shannon_MeetingWeylNeumannEinsteinGodel",
+      "target": "Hermann Weyl",
+      "label": "relatesPersonInSocialRelationship"
+    },
+    {
+      "source": "Shannon_MeetingWeylNeumannEinsteinGodel",
+      "target": "Albert Einstein",
+      "label": "relatesPersonInSocialRelationship"
+    },
+    {
+      "source": "Shannon_MeetingWeylNeumannEinsteinGodel",
+      "target": "Claude Shannon",
+      "label": "relatesPersonInSocialRelationship"
+    },
+    {
+      "source": "Shannon_MeetingWeylNeumannEinsteinGodel",
+      "target": "SocialRelationship",
+      "label": "isA"
+    },
+    {
+      "source": "Kurt G\u00f6del",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delPhilosophicalInterests",
+      "target": "G\u00f6delKantIdealismAnnotation",
+      "label": "hasQualitativeAnnotation"
+    },
+    {
+      "source": "G\u00f6delPhilosophicalInterests",
+      "target": "LifeEvent",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delKantIdealismAnnotation",
+      "target": "G\u00f6del read Kant; influenced by philosophical idealism and logical realism",
+      "label": "providesInsight"
+    },
+    {
+      "source": "G\u00f6delKantIdealismAnnotation",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon_JugglingUnicyclingChessInventor",
+      "label": "hasInformalAchievement"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Royal Irish Academy Membership 1985",
+      "label": "hasProfessionalRecognition"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Polymath",
+      "label": "hasInformalAchievement"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon_JugglingMachines",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ClaudeShannon_Education_UniversityOfMichigan",
+      "label": "hasEducationEpisode"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Descendant of German immigrants",
+      "label": "hasAncestryDetail"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon's maxim",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon_RomanNumeralComputer_THROBAC",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "American Philosophical Society Membership 1983",
+      "label": "hasProfessionalRecognition"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon number",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Collaboration Shannon Weaver",
+      "label": "hasSocialRelationship"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Harvey Prize",
+      "label": "hasAward"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ClaudeShannonLanguageProficiency_English",
+      "label": "hasLanguageProficiency"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Audio Engineering Society Gold Medal Award",
+      "label": "hasAward"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon_ResearchAtCSHL",
+      "label": "hasEducationEpisode"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ClaudeShannon_ReligiousAffiliationMethodism",
+      "label": "hasReligiousAffiliation"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "National Inventors Hall of Fame",
+      "label": "hasAward"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ClaudeShannon_Education_MIT_MS",
+      "label": "hasEducationEpisode"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "National Medal of Science",
+      "label": "hasAward"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Claude E. Shannon Award",
+      "label": "hasAward"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Claude Shannon Centenary 2016",
+      "label": "hasRecognition"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "The Bit Player screening",
+      "label": "hasRecognition"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon_BellLabs_Summer1937",
+      "label": "heldEmploymentPeriod"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "chess program",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon_BellLabs_WWII",
+      "label": "heldEmploymentPeriod"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Claude Shannon USPS Stamp Petition",
+      "label": "hasRecognition"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Marconi Society Lifetime Achievement Award 2000",
+      "label": "hasAward"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Golden Plate Award of the American Academy of Achievement 1967",
+      "label": "hasAward"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Descendant of John Ogden (colonist)",
+      "label": "hasAncestryDetail"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "John Fritz Medal",
+      "label": "hasAward"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Institute for Advanced Study",
+      "label": "hasAffiliation"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Morris Liebmann Memorial Prize",
+      "label": "hasAward"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Bell Labs",
+      "label": "hasAffiliation"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon_TheseusProject",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ClaudeShannon_AI_DartmouthWorkshop",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Alfred Noble Prize",
+      "label": "hasAward"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ClaudeShannon_AIFounder",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Royal Netherlands Academy of Arts and Sciences Foreign Member 1975",
+      "label": "hasProfessionalRecognition"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Massachusetts Institute of Technology",
+      "label": "hasAffiliation"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ClaudeShannon_WWII_Cryptanalysis",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Kyoto Prize",
+      "label": "hasAward"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "IEEE Medal of Honor",
+      "label": "hasAward"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ClaudeShannon_MathematicalTheoryOfCommunication1948",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Dartmouth workshop 1956",
+      "label": "hasLifeEvent"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon_AlzheimersDiagnosis",
+      "label": "hasLifeEvent"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Family_CShannon-MabelWolfShannon",
+      "label": "hasFamilyRelationship"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ClaudeShannon_BellLabs_Employment",
+      "label": "heldEmploymentPeriod"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ClaudeShannon_CoInventBitPulseCodeModulationWearableComputer",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Successful investor",
+      "label": "hasInformalAchievement"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Claude Shannon Commemorative Stamp Macedonia",
+      "label": "hasRecognition"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Family_CShannon-CShannonSr",
+      "label": "hasFamilyRelationship"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ClaudeShannon_Education_MIT_PhD",
+      "label": "hasEducationEpisode"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ClaudeShannon_Mentorship_Hitchcock",
+      "label": "hasMentorship"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ShannonMentor_BSutherland",
+      "label": "hasMentorship"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Minivac 601",
+      "label": "hasMultimediaArtifact"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon_MeetingWeylNeumannEinsteinGodel",
+      "label": "hasSocialRelationship"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "A Mind at Play",
+      "label": "hasLifeNarrative"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "1916-04-30",
+      "label": "birthDate"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Stuart Ballantine Medal",
+      "label": "hasAward"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Petoskey, Michigan",
+      "label": "birthPlace"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon_CoInventWearableComputer",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Statues_of_Claude_Shannon",
+      "label": "hasRecognition"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon_FlameThrowingTrumpets",
+      "label": "hasInformalAchievement"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Claude Shannon Google Doodle 2016",
+      "label": "hasRecognition"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ShannonMentor_Berlekamp",
+      "label": "hasMentorship"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Western Union",
+      "label": "hasAffiliation"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ShannonAtheism",
+      "label": "hasReligiousAffiliation"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Donnor Professor of Science MIT 1958\u20131979",
+      "label": "heldEmploymentPeriod"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ClaudeShannon_MastersThesis1937",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Basic Research Award Eduard Rhein Foundation 1991",
+      "label": "hasAward"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Harold Pender Award",
+      "label": "hasAward"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ClaudeShannonDemographicAmerican",
+      "label": "hasDemographicAttribute"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Information Age",
+      "label": "isLinkedToMovement"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon_Minivac601Design",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ClaudeShannon_MIT_Employment",
+      "label": "heldEmploymentPeriod"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon_RocketPoweredFrisbees",
+      "label": "hasInformalAchievement"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon's demon",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Theseus",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon_PlasticFoamShoesOnLake",
+      "label": "hasInformalAchievement"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Boston Review Claude Shannon Article",
+      "label": "hasLifeNarrative"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon_PhDMathematics1940",
+      "label": "hasEducationEpisode"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Gaylord High School",
+      "label": "hasAffiliation"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon_MIT_Employment",
+      "label": "heldEmploymentPeriod"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Marconi Society Lifetime Achievement Award",
+      "label": "hasAward"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon_RubiksCubeDevice",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon_NationalResearchFellowship_InstituteAdvancedStudy",
+      "label": "heldEmploymentPeriod"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ShannonMentor_Hillis",
+      "label": "hasMentorship"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon\u2013Weaver model",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon_NDRCLifeEvent",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ShannonMentor_Kleinrock",
+      "label": "hasMentorship"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ClaudeShannon_FoundingInformationTheory",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ClaudeShannonNameHistory1",
+      "label": "hasNameHistory"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon_Thesis_TheoreticalGenetics_Unpublished",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon_SignalFlowGraphInvention1942",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ClaudeShannonDemographicMale",
+      "label": "hasDemographicAttribute"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "ShannonMentor_ISutherland",
+      "label": "hasMentorship"
+    },
+    {
+      "source": "Claude Shannon",
+      "target": "Shannon_AI_Papers",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Shannon_JugglingUnicyclingChessInventor",
+      "target": "InformalAchievement",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delEducation_EvangelischeVolksschule",
+      "target": "1916",
+      "label": "hasEventEndDate"
+    },
+    {
+      "source": "G\u00f6delEducation_EvangelischeVolksschule",
+      "target": "1912",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "G\u00f6delEducation_EvangelischeVolksschule",
+      "target": "Evangelische Volksschule",
+      "label": "isAtInstitution"
+    },
+    {
+      "source": "G\u00f6delEducation_EvangelischeVolksschule",
+      "target": "EducationEpisode",
+      "label": "isA"
+    },
+    {
+      "source": "ClaudeShannon_Education_MIT_MS",
+      "target": "EducationEpisode",
+      "label": "isA"
+    },
+    {
+      "source": "ClaudeShannon_Education_MIT_MS",
+      "target": "Massachusetts Institute of Technology",
+      "label": "isAtInstitution"
+    },
+    {
+      "source": "ClaudeShannon_Education_MIT_MS",
+      "target": "1937",
+      "label": "hasEventEndDate"
+    },
+    {
+      "source": "ClaudeShannon_Education_MIT_MS",
+      "target": "1936",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "ClaudeShannon_Education_MIT_MS",
+      "target": "Electrical Engineering",
+      "label": "hasFieldOfStudy"
+    },
+    {
+      "source": "James Urbaniak",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delHealthCrises",
+      "label": "hasLifeEvent"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delConstructibleUniverse",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "Brno",
+      "label": "birthPlace"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delMentalInstabilityCrisisLateLife",
+      "label": "hasLifeEvent"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "University of Notre Dame",
+      "label": "hasAffiliation"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "Plenary Speaker ICM 1950",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delRefusedToEatInAdeleAbsence",
+      "label": "hasLifeEvent"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delNaturalizationUS",
+      "label": "hasLegalEvent"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delFamilyRelationship_Father",
+      "label": "hasFamilyRelationship"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "Institute for Advanced Study",
+      "label": "hasAffiliation"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delAxiomOfChoiceConsistency",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delViennaCircleParticipation",
+      "label": "hasGroupParticipation"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delMentalIllnessCrisis",
+      "label": "hasLifeEvent"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delMetric",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delDevelopedObsessiveFearOfPoisoning",
+      "label": "hasLifeEvent"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delDeathEvent",
+      "label": "hasLifeEvent"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "Foreign Member of the Royal Society 1968 (ForMemRS)",
+      "label": "hasProfessionalRecognition"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delPhilosophicalInterests",
+      "label": "hasLifeEvent"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "National Medal of Science",
+      "label": "hasAward"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "Set theorist",
+      "label": "heldAffiliationRole"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delNumberingDevelopment",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "Proof theorist",
+      "label": "heldAffiliationRole"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delTheistAffiliation",
+      "label": "hasReligiousAffiliation"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "University of Notre Dame faculty",
+      "label": "heldAffiliationRole"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "Princeton University",
+      "label": "hasAffiliation"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delEducation_Realgymnasium",
+      "label": "hasEducationEpisode"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delFamilyRelationship_Mother",
+      "label": "hasFamilyRelationship"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delParanormalReading",
+      "label": "hasInformalLearningExperience"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delPrincetonIAS_Affiliation",
+      "label": "heldEmploymentPeriod"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delNationalityHistory",
+      "label": "hasLegalStatusHistory"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delMarriage_Adele",
+      "label": "hasLifeEvent"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delEducation_EvangelischeVolksschule",
+      "label": "hasEducationEpisode"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "Br\u00fcnn",
+      "label": "birthPlace"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "Austro-Hungarian mathematician",
+      "label": "hasDemographicAttribute"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delFamilyRelationship_Grandfather",
+      "label": "hasFamilyRelationship"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "1906-04-28",
+      "label": "birthDate"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "Albert Einstein Award",
+      "label": "hasAward"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "Princeton University faculty",
+      "label": "heldAffiliationRole"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delOntologicalProof",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delBaptizedLutheranAffiliation",
+      "label": "hasReligiousAffiliation"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "American Philosophical Society Membership 1961",
+      "label": "hasProfessionalRecognition"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delUSCitizenshipEvent",
+      "label": "hasLegalEvent"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delDoctorateEarned",
+      "label": "hasLifeEvent"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "Protestant philosopher",
+      "label": "heldAffiliationRole"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "Platonist",
+      "label": "heldAffiliationRole"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "Ontologist",
+      "label": "heldAffiliationRole"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delCompletenessTheoremProof",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delEducation_Vienna",
+      "label": "hasEducationEpisode"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delIncompletenessTheorems",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delFamilyRelationship_Brother",
+      "label": "hasFamilyRelationship"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delBirthEvent",
+      "label": "hasLifeEvent"
+    },
+    {
+      "source": "Kurt Friedrich G\u00f6del",
+      "target": "G\u00f6delEmigrationUS",
+      "label": "hasLifeEvent"
+    },
+    {
+      "source": "G\u00f6delHealthCrises",
+      "target": "G\u00f6delRheumaticFeverChildIllHealth",
+      "label": "hasQualitativeAnnotation"
+    },
+    {
+      "source": "G\u00f6delHealthCrises",
+      "target": "HealthCrisis",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delConstructibleUniverse",
+      "target": "1938",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "G\u00f6delConstructibleUniverse",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "Princeton Cemetery",
+      "target": "Location",
+      "label": "isA"
+    },
+    {
+      "source": "Brno",
+      "target": "Location",
+      "label": "isA"
+    },
+    {
+      "source": "Royal Irish Academy Membership 1985",
+      "target": "ProfessionalRecognition",
+      "label": "isA"
+    },
+    {
+      "source": "Cambridge, Massachusetts",
+      "target": "Location",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon_MIT_Employment",
+      "target": "Professor",
+      "label": "hasJobTitle"
+    },
+    {
+      "source": "Shannon_MIT_Employment",
+      "target": "1956",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "Shannon_MIT_Employment",
+      "target": "EmploymentPeriod",
+      "label": "isA"
+    },
+    {
+      "source": "Professor",
+      "target": "JobTitle",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon number",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "Incompleteness: The Proof and Paradox of Kurt G\u00f6del",
+      "target": "LifeNarrative",
+      "label": "isA"
+    },
+    {
+      "source": "Kyoto Prize",
+      "target": "Award",
+      "label": "isA"
+    },
+    {
+      "source": "Family_CShannon-MabelWolfShannon",
+      "target": "Mabel Wolf Shannon",
+      "label": "relatesPerson"
+    },
+    {
+      "source": "Family_CShannon-MabelWolfShannon",
+      "target": "FamilyRelationship",
+      "label": "isA"
+    },
+    {
+      "source": "Family_CShannon-MabelWolfShannon",
+      "target": "parent",
+      "label": "relationshipType"
+    },
+    {
+      "source": "Mabel Wolf Shannon",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Polymath",
+      "target": "InformalAchievement",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon_JugglingMachines",
+      "target": "EntrepreneurialActivity",
+      "label": "isA"
+    },
+    {
+      "source": "Stephen Budiansky",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Claude (language model)",
+      "target": "DigitalArtifact",
+      "label": "isA"
+    },
+    {
+      "source": "Marvin Minsky",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "ClaudeShannon_Education_UniversityOfMichigan",
+      "target": "University of Michigan",
+      "label": "isAtInstitution"
+    },
+    {
+      "source": "ClaudeShannon_Education_UniversityOfMichigan",
+      "target": "Mathematics",
+      "label": "hasFieldOfStudy"
+    },
+    {
+      "source": "ClaudeShannon_Education_UniversityOfMichigan",
+      "target": "Electrical Engineering",
+      "label": "hasFieldOfStudy"
+    },
+    {
+      "source": "ClaudeShannon_Education_UniversityOfMichigan",
+      "target": "1936",
+      "label": "hasEventEndDate"
+    },
+    {
+      "source": "ClaudeShannon_Education_UniversityOfMichigan",
+      "target": "EducationEpisode",
+      "label": "isA"
+    },
+    {
+      "source": "ClaudeShannon_Education_MIT_PhD",
+      "target": "EducationEpisode",
+      "label": "isA"
+    },
+    {
+      "source": "ClaudeShannon_Education_MIT_PhD",
+      "target": "Massachusetts Institute of Technology",
+      "label": "isAtInstitution"
+    },
+    {
+      "source": "ClaudeShannon_Education_MIT_PhD",
+      "target": "Mathematics",
+      "label": "hasFieldOfStudy"
+    },
+    {
+      "source": "ClaudeShannon_Education_MIT_PhD",
+      "target": "1940",
+      "label": "hasEventEndDate"
+    },
+    {
+      "source": "Rudolf G\u00f6del (brother)",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "John W. Dawson Jr.",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "MarriageClaudeShannonBettyShannon",
+      "target": "1949",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "MarriageClaudeShannonBettyShannon",
+      "target": "Betty Shannon",
+      "label": "involvedPerson"
+    },
+    {
+      "source": "MarriageClaudeShannonBettyShannon",
+      "target": "Claude Shannon",
+      "label": "involvedPerson"
+    },
+    {
+      "source": "MarriageClaudeShannonBettyShannon",
+      "target": "2001",
+      "label": "hasEventEndDate"
+    },
+    {
+      "source": "MarriageClaudeShannonBettyShannon",
+      "target": "Marriage",
+      "label": "isA"
+    },
+    {
+      "source": "Successful investor",
+      "target": "InformalAchievement",
+      "label": "isA"
+    },
+    {
+      "source": "Claude E. Shannon: A Retrospective on His Life, Work, and Impact",
+      "target": "Robert G. Gallager",
+      "label": "hasAuthorship"
+    },
+    {
+      "source": "Claude E. Shannon: A Retrospective on His Life, Work, and Impact",
+      "target": "Document",
+      "label": "isA"
+    },
+    {
+      "source": "Robert G. Gallager",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "JourneyToEdgeOfReasonNYTCriticsTopBook2021",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "JourneyToEdgeOfReasonNYTCriticsTopBook2021",
+      "target": "Journey to the Edge of Reason was a New York Times Critics' Top Book of 2021",
+      "label": "providesInsight"
+    },
+    {
+      "source": "G\u00f6delAfterlifeBeliefAnnotation",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delAfterlifeBeliefAnnotation",
+      "target": "G\u00f6del believed in an afterlife and paranormal topics such as telepathy, reincarnation, and ghosts",
+      "label": "providesInsight"
+    },
+    {
+      "source": "ClaudeShannon_AI_DartmouthWorkshop",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "Descendant of German immigrants",
+      "target": "AncestryDetail",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon's maxim",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delFamilyRelationship_Mother",
+      "target": "parent",
+      "label": "relationshipType"
+    },
+    {
+      "source": "G\u00f6delFamilyRelationship_Mother",
+      "target": "Marianne G\u00f6del",
+      "label": "relatesPerson"
+    },
+    {
+      "source": "G\u00f6delFamilyRelationship_Mother",
+      "target": "FamilyRelationship",
+      "label": "isA"
+    },
+    {
+      "source": "ClaudeShannonNameHistory1",
+      "target": "Claude Elwood Shannon",
+      "label": "hasNameValue"
+    },
+    {
+      "source": "ClaudeShannonNameHistory1",
+      "target": "NameHistory",
+      "label": "isA"
+    },
+    {
+      "source": "Claude Elwood Shannon",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "ClaudeShannonLanguageProficiency_English",
+      "target": "English",
+      "label": "inLanguage"
+    },
+    {
+      "source": "ClaudeShannonLanguageProficiency_English",
+      "target": "LanguageProficiency",
+      "label": "isA"
+    },
+    {
+      "source": "English",
+      "target": "Language",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delCollectedWorksPublication",
+      "target": "LifeEvent",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delCollectedWorksPublication",
+      "target": "GodelCollectedWorksFiveVolumesAnnotation",
+      "label": "hasQualitativeAnnotation"
+    },
+    {
+      "source": "Shannon_RomanNumeralComputer_THROBAC",
+      "target": "EntrepreneurialActivity",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delMentalInstabilityCrisisLateLife",
+      "target": "HealthCrisis",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delMentalInstabilityCrisisLateLife",
+      "target": "G\u00f6delMentalInstabilityAnnotation_SuspectedAspergersOCD",
+      "label": "hasQualitativeAnnotation"
+    },
+    {
+      "source": "Royal Netherlands Academy of Arts and Sciences Foreign Member 1975",
+      "target": "ProfessionalRecognition",
+      "label": "isA"
+    },
+    {
+      "source": "Massachusetts Institute of Technology",
+      "target": "Institution",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delFamilyRelationship_Father",
+      "target": "Rudolf G\u00f6del",
+      "label": "relatesPerson"
+    },
+    {
+      "source": "G\u00f6delFamilyRelationship_Father",
+      "target": "parent",
+      "label": "relationshipType"
+    },
+    {
+      "source": "G\u00f6delFamilyRelationship_Father",
+      "target": "FamilyRelationship",
+      "label": "isA"
+    },
+    {
+      "source": "Rudolf G\u00f6del",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "ClaudeShannon_FoundingInformationTheory",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "Electrical Engineering",
+      "target": "FieldOfStudy",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delFamilyRelationship_Grandfather",
+      "target": "Joseph G\u00f6del",
+      "label": "relatesPerson"
+    },
+    {
+      "source": "G\u00f6delFamilyRelationship_Grandfather",
+      "target": "FamilyRelationship",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delFamilyRelationship_Grandfather",
+      "target": "grandparent",
+      "label": "relationshipType"
+    },
+    {
+      "source": "Joseph G\u00f6del",
+      "target": "G\u00f6delChoralUnionParticipation",
+      "label": "hasGroupParticipation"
+    },
+    {
+      "source": "Joseph G\u00f6del",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon_ResearchAtCSHL",
+      "target": "EducationEpisode",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon_ResearchAtCSHL",
+      "target": "Genetics",
+      "label": "hasFieldOfStudy"
+    },
+    {
+      "source": "Shannon_ResearchAtCSHL",
+      "target": "1940",
+      "label": "hasEventEndDate"
+    },
+    {
+      "source": "Shannon_ResearchAtCSHL",
+      "target": "Cold Spring Harbor Laboratory",
+      "label": "isAtInstitution"
+    },
+    {
+      "source": "G\u00f6delViewOnIslamAnnotation",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delViewOnIslamAnnotation",
+      "target": "\"G\u00f6del said: 'I like Islam: it is a consistent or consequential idea of religion and open-minded'\"",
+      "label": "providesInsight"
+    },
+    {
+      "source": "Princeton University",
+      "target": "Organization",
+      "label": "isA"
+    },
+    {
+      "source": "Elwyn Berlekamp",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6del, Escher, Bach: an Eternal Golden Braid",
+      "target": "GEB_Annotation",
+      "label": "hasQualitativeAnnotation"
+    },
+    {
+      "source": "G\u00f6del, Escher, Bach: an Eternal Golden Braid",
+      "target": "LifeNarrative",
+      "label": "isA"
+    },
+    {
+      "source": "GEB_Annotation",
+      "target": "Book interweaves the work and ideas of G\u00f6del, Escher, and Bach and discusses implications of incompleteness theorem for computational systems",
+      "label": "providesInsight"
+    },
+    {
+      "source": "GEB_Annotation",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "Jimmy Soni",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Donnor Professor of Science MIT 1958\u20131979",
+      "target": "Donnor Professor of Science",
+      "label": "hasJobTitle"
+    },
+    {
+      "source": "Donnor Professor of Science MIT 1958\u20131979",
+      "target": "1958",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "Donnor Professor of Science MIT 1958\u20131979",
+      "target": "EmploymentPeriod",
+      "label": "isA"
+    },
+    {
+      "source": "Donnor Professor of Science MIT 1958\u20131979",
+      "target": "1979",
+      "label": "hasEventEndDate"
+    },
+    {
+      "source": "Donnor Professor of Science",
+      "target": "JobTitle",
+      "label": "isA"
+    },
+    {
+      "source": "Automata Studies",
+      "target": "Claude Shannon",
+      "label": "hasAuthorship"
+    },
+    {
+      "source": "Automata Studies",
+      "target": "Document",
+      "label": "isA"
+    },
+    {
+      "source": "Automata Studies",
+      "target": "John McCarthy",
+      "label": "hasAuthorship"
+    },
+    {
+      "source": "EncouragedRamseyEconomicsRelationship",
+      "target": "Pigou",
+      "label": "relatesPersonInSocialRelationship"
+    },
+    {
+      "source": "EncouragedRamseyEconomicsRelationship",
+      "target": "Keynes",
+      "label": "relatesPersonInSocialRelationship"
+    },
+    {
+      "source": "EncouragedRamseyEconomicsRelationship",
+      "target": "Frank P. Ramsey",
+      "label": "relatesPersonInSocialRelationship"
+    },
+    {
+      "source": "EncouragedRamseyEconomicsRelationship",
+      "target": "SocialRelationship",
+      "label": "isA"
+    },
+    {
+      "source": "Pigou",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Pigou",
+      "target": "EncouragedRamseyEconomicsRelationship",
+      "label": "hasSocialRelationship"
+    },
+    {
+      "source": "ShannonMentor_Kleinrock",
+      "target": "Leonard Kleinrock",
+      "label": "hasMentee"
+    },
+    {
+      "source": "ShannonMentor_Kleinrock",
+      "target": "Mentorship",
+      "label": "isA"
+    },
+    {
+      "source": "ShannonMentor_Kleinrock",
+      "target": "Claude Shannon",
+      "label": "hasMentor"
+    },
+    {
+      "source": "Leonard Kleinrock",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Basic Research Award Eduard Rhein Foundation 1991",
+      "target": "Award",
+      "label": "isA"
+    },
+    {
+      "source": "Basic Research Award Eduard Rhein Foundation 1991",
+      "target": "Eduard Rhein Foundation",
+      "label": "awardedBy"
+    },
+    {
+      "source": "Claude E. Shannon: Founder of Information Theory",
+      "target": "Document",
+      "label": "isA"
+    },
+    {
+      "source": "Claude E. Shannon: Founder of Information Theory",
+      "target": "Graham P. Collins",
+      "label": "hasAuthorship"
+    },
+    {
+      "source": "MarriageClaudeShannonNormaLevor",
+      "target": "Claude Shannon",
+      "label": "involvedPerson"
+    },
+    {
+      "source": "MarriageClaudeShannonNormaLevor",
+      "target": "Marriage",
+      "label": "isA"
+    },
+    {
+      "source": "MarriageClaudeShannonNormaLevor",
+      "target": "1940",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "MarriageClaudeShannonNormaLevor",
+      "target": "Norma Levor",
+      "label": "involvedPerson"
+    },
+    {
+      "source": "MarriageClaudeShannonNormaLevor",
+      "target": "1941",
+      "label": "hasEventEndDate"
+    },
+    {
+      "source": "G\u00f6delRheumaticFeverChildIllHealth",
+      "target": "G\u00f6del suffered rheumatic fever and lifelong belief in heart damage; frequent ill health episodes",
+      "label": "providesInsight"
+    },
+    {
+      "source": "G\u00f6delRheumaticFeverChildIllHealth",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "Howard Raiffa",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Howard Raiffa",
+      "target": "Frank P. Ramsey Professor of Managerial Economics",
+      "label": "heldAffiliationRole"
+    },
+    {
+      "source": "Tom Rutledge",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "American Philosophical Society Membership 1983",
+      "target": "ProfessionalRecognition",
+      "label": "isA"
+    },
+    {
+      "source": "Causal Qualities (1929)",
+      "target": "Document",
+      "label": "isA"
+    },
+    {
+      "source": "EditingGodelPhilosophicalNotebooks",
+      "target": "G\u00f6del's philosophical notebooks are being edited at the Kurt G\u00f6del Research Centre at the Berlin-Brandenburg Academy of Sciences and Humanities",
+      "label": "providesInsight"
+    },
+    {
+      "source": "EditingGodelPhilosophicalNotebooks",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delPrincetonIAS_Affiliation",
+      "target": "1940",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "G\u00f6delPrincetonIAS_Affiliation",
+      "target": "EmploymentPeriod",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delPrincetonIAS_Affiliation",
+      "target": "Professor",
+      "label": "hasJobTitle"
+    },
+    {
+      "source": "G\u00f6delPrincetonIAS_Affiliation",
+      "target": "1976",
+      "label": "hasEventEndDate"
+    },
+    {
+      "source": "Dartmouth workshop 1956",
+      "target": "Nathaniel Rochester",
+      "label": "involvedPerson"
+    },
+    {
+      "source": "Dartmouth workshop 1956",
+      "target": "LifeEvent",
+      "label": "isA"
+    },
+    {
+      "source": "Dartmouth workshop 1956",
+      "target": "John McCarthy",
+      "label": "involvedPerson"
+    },
+    {
+      "source": "Dartmouth workshop 1956",
+      "target": "Marvin Minsky",
+      "label": "involvedPerson"
+    },
+    {
+      "source": "Nathaniel Rochester",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delBibleReadingAnnotation",
+      "target": "According to Adele, G\u00f6del read the Bible in bed every Sunday morning and was religious, though did not go to church",
+      "label": "providesInsight"
+    },
+    {
+      "source": "G\u00f6delBibleReadingAnnotation",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "GodelCollectedWorksFiveVolumesAnnotation",
+      "target": "Five volumes of G\u00f6del's collected works have been published",
+      "label": "providesInsight"
+    },
+    {
+      "source": "GodelCollectedWorksFiveVolumesAnnotation",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "ClaudeShannon_AIFounder",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "Collaboration Shannon Weaver",
+      "target": "Claude Shannon",
+      "label": "relatesPersonInSocialRelationship"
+    },
+    {
+      "source": "Collaboration Shannon Weaver",
+      "target": "SocialRelationship",
+      "label": "isA"
+    },
+    {
+      "source": "Collaboration Shannon Weaver",
+      "target": "Warren Weaver",
+      "label": "relatesPersonInSocialRelationship"
+    },
+    {
+      "source": "AdeleDonatedGodelPapersIAS",
+      "target": "Upon her death in 1981, Adele donated G\u00f6del's papers to the Institute for Advanced Study",
+      "label": "providesInsight"
+    },
+    {
+      "source": "AdeleDonatedGodelPapersIAS",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "Harvey Prize",
+      "target": "Award",
+      "label": "isA"
+    },
+    {
+      "source": "Keynes",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Keynes",
+      "target": "EncouragedRamseyEconomicsRelationship",
+      "label": "hasSocialRelationship"
+    },
+    {
+      "source": "G\u00f6delTheistAffiliation",
+      "target": "Theism",
+      "label": "hasReligion"
+    },
+    {
+      "source": "G\u00f6delTheistAffiliation",
+      "target": "ReligiousAffiliation",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon\u2013Weaver model",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "University of Vienna",
+      "target": "Institution",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delParanormalReading",
+      "target": "G\u00f6delParanormalReadingAnnotation",
+      "label": "hasQualitativeAnnotation"
+    },
+    {
+      "source": "G\u00f6delParanormalReading",
+      "target": "InformalLearningExperience",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delParanormalReadingAnnotation",
+      "target": "G\u00f6del read widely on paranormal topics including telepathy, reincarnation, and ghosts",
+      "label": "providesInsight"
+    },
+    {
+      "source": "G\u00f6delParanormalReadingAnnotation",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "Marconi Society Lifetime Achievement Award 2000",
+      "target": "Marconi Society",
+      "label": "awardedBy"
+    },
+    {
+      "source": "Marconi Society Lifetime Achievement Award 2000",
+      "target": "Award",
+      "label": "isA"
+    },
+    {
+      "source": "Marconi Society",
+      "target": "AwardingBody",
+      "label": "isA"
+    },
+    {
+      "source": "Scientific Development Corp",
+      "target": "Organization",
+      "label": "isA"
+    },
+    {
+      "source": "Frank P. Ramsey",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Frank P. Ramsey",
+      "target": "EncouragedRamseyEconomicsRelationship",
+      "label": "hasSocialRelationship"
+    },
+    {
+      "source": "Frank P. Ramsey",
+      "target": "SocialistViews",
+      "label": "hasSocioEconomicStatusChange"
+    },
+    {
+      "source": "Frank P. Ramsey",
+      "target": "Frank Ramsey Professorships",
+      "label": "hasRecognition"
+    },
+    {
+      "source": "Frank P. Ramsey",
+      "target": "LegacyPapersPaulSamuelson",
+      "label": "hasSocialRelationship"
+    },
+    {
+      "source": "Frank P. Ramsey",
+      "target": "Ramsey's reliability theory of knowledge",
+      "label": "hasLifeEvent"
+    },
+    {
+      "source": "Frank P. Ramsey",
+      "target": "PigouSuggestedTaxationProblem",
+      "label": "hasSocialRelationship"
+    },
+    {
+      "source": "Frank P. Ramsey",
+      "target": "Ramsey growth model",
+      "label": "hasCareerMilestone"
+    },
+    {
+      "source": "Frank P. Ramsey",
+      "target": "Ramsey's redundancy theory of truth",
+      "label": "hasLifeEvent"
+    },
+    {
+      "source": "G\u00f6delCompletenessTheoremProof",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delCompletenessTheoremProof",
+      "target": "1930",
+      "label": "hasEventEndDate"
+    },
+    {
+      "source": "G\u00f6delCompletenessTheoremProof",
+      "target": "1929",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "Audio Engineering Society Gold Medal Award",
+      "target": "Award",
+      "label": "isA"
+    },
+    {
+      "source": "Betty Shannon",
+      "target": "Numerical Analyst",
+      "label": "heldAffiliationRole"
+    },
+    {
+      "source": "Betty Shannon",
+      "target": "Bell Labs",
+      "label": "hasAffiliation"
+    },
+    {
+      "source": "Betty Shannon",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Numerical Analyst",
+      "target": "AffiliationRole",
+      "label": "isA"
+    },
+    {
+      "source": "University of Notre Dame",
+      "target": "Institution",
+      "label": "isA"
+    },
+    {
+      "source": "University of Michigan",
+      "target": "Institution",
+      "label": "isA"
+    },
+    {
+      "source": "LegacyPapersPaulSamuelson",
+      "target": "SocialRelationship",
+      "label": "isA"
+    },
+    {
+      "source": "LegacyPapersPaulSamuelson",
+      "target": "Paul Samuelson",
+      "label": "relatesPersonInSocialRelationship"
+    },
+    {
+      "source": "LegacyPapersPaulSamuelson",
+      "target": "Frank P. Ramsey",
+      "label": "relatesPersonInSocialRelationship"
+    },
+    {
+      "source": "Adele G\u00f6del",
+      "target": "AdeleDeathEvent",
+      "label": "hasLifeEvent"
+    },
+    {
+      "source": "Adele G\u00f6del",
+      "target": "AdeleHospitalizationLate1977",
+      "label": "hasLifeEvent"
+    },
+    {
+      "source": "Adele G\u00f6del",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Adele G\u00f6del",
+      "target": "G\u00f6delMarriage_Adele",
+      "label": "hasLifeEvent"
+    },
+    {
+      "source": "AdeleDeathEvent",
+      "target": "AdeleDonatedGodelPapersIAS",
+      "label": "hasQualitativeAnnotation"
+    },
+    {
+      "source": "AdeleDeathEvent",
+      "target": "1981",
+      "label": "occurredOnDate"
+    },
+    {
+      "source": "AdeleDeathEvent",
+      "target": "LifeEvent",
+      "label": "isA"
+    },
+    {
+      "source": "Plenary Speaker ICM 1950",
+      "target": "1950",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "Plenary Speaker ICM 1950",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delEducation_Vienna",
+      "target": "1924",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "G\u00f6delEducation_Vienna",
+      "target": "Mathematics",
+      "label": "hasFieldOfStudy"
+    },
+    {
+      "source": "G\u00f6delEducation_Vienna",
+      "target": "University of Vienna",
+      "label": "isAtInstitution"
+    },
+    {
+      "source": "G\u00f6delEducation_Vienna",
+      "target": "1930",
+      "label": "hasEventEndDate"
+    },
+    {
+      "source": "G\u00f6delEducation_Vienna",
+      "target": "EducationEpisode",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6del Prize",
+      "target": "Award",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6del Prize",
+      "target": "Awarded annually for outstanding paper in theoretical computer science",
+      "label": "recognitionContext"
+    },
+    {
+      "source": "G\u00f6delObsessiveFearAnnotation",
+      "target": "G\u00f6del developed an obsessive fear of being poisoned, ate only food prepared by his wife",
+      "label": "providesInsight"
+    },
+    {
+      "source": "G\u00f6delObsessiveFearAnnotation",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "Hermann Weyl",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "ClaudeShannon_ReligiousAffiliationMethodism",
+      "target": "Methodism",
+      "label": "hasReligion"
+    },
+    {
+      "source": "ClaudeShannon_ReligiousAffiliationMethodism",
+      "target": "ReligiousAffiliation",
+      "label": "isA"
+    },
+    {
+      "source": "ShannonMentor_ISutherland",
+      "target": "Mentorship",
+      "label": "isA"
+    },
+    {
+      "source": "ShannonMentor_ISutherland",
+      "target": "Ivan Sutherland",
+      "label": "hasMentee"
+    },
+    {
+      "source": "ShannonMentor_ISutherland",
+      "target": "Claude Shannon",
+      "label": "hasMentor"
+    },
+    {
+      "source": "ShannonMentor_BSutherland",
+      "target": "Mentorship",
+      "label": "isA"
+    },
+    {
+      "source": "ShannonMentor_BSutherland",
+      "target": "Claude Shannon",
+      "label": "hasMentor"
+    },
+    {
+      "source": "ShannonMentor_BSutherland",
+      "target": "Bert Sutherland",
+      "label": "hasMentee"
+    },
+    {
+      "source": "Minivac 601",
+      "target": "MultimediaArtifact",
+      "label": "isA"
+    },
+    {
+      "source": "Donald Davidson",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Donald Davidson",
+      "target": "Ramsey Effect",
+      "label": "hasRecognition"
+    },
+    {
+      "source": "Claude Shannon (1916\u20132001)",
+      "target": "Document",
+      "label": "isA"
+    },
+    {
+      "source": "Claude Shannon (1916\u20132001)",
+      "target": "Robert Calderbank",
+      "label": "hasAuthorship"
+    },
+    {
+      "source": "Claude Shannon (1916\u20132001)",
+      "target": "Neil J. A. Sloane",
+      "label": "hasAuthorship"
+    },
+    {
+      "source": "Shannon_BellLabs_Summer1937",
+      "target": "1937",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "Shannon_BellLabs_Summer1937",
+      "target": "EmploymentPeriod",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon_BellLabs_Summer1937",
+      "target": "Researcher",
+      "label": "hasJobTitle"
+    },
+    {
+      "source": "Lou Jacobi",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "National Inventors Hall of Fame",
+      "target": "Award",
+      "label": "isA"
+    },
+    {
+      "source": "ShannonAtheism",
+      "target": "ReligiousAffiliation",
+      "label": "isA"
+    },
+    {
+      "source": "ShannonAtheism",
+      "target": "Atheism",
+      "label": "hasReligion"
+    },
+    {
+      "source": "G\u00f6delDeathEvent",
+      "target": "LifeEvent",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delDeathEvent",
+      "target": "1978-01-14",
+      "label": "occurredOnDate"
+    },
+    {
+      "source": "G\u00f6delDeathEvent",
+      "target": "Princeton, New Jersey",
+      "label": "occurredAtLocation"
+    },
+    {
+      "source": "G\u00f6delDeathEvent",
+      "target": "G\u00f6delDeathByMalnutritionAnnotation",
+      "label": "hasQualitativeAnnotation"
+    },
+    {
+      "source": "G\u00f6delDeathEvent",
+      "target": "Princeton Hospital",
+      "label": "occurredAtLocation"
+    },
+    {
+      "source": "G\u00f6delDeathEvent",
+      "target": "G\u00f6delDeathAnnotation",
+      "label": "hasQualitativeAnnotation"
+    },
+    {
+      "source": "G\u00f6delRefusedToEatInAdeleAbsence",
+      "target": "HealthCrisis",
+      "label": "isA"
+    },
+    {
+      "source": "National Medal of Science",
+      "target": "Award",
+      "label": "isA"
+    },
+    {
+      "source": "Claude E. Shannon Award",
+      "target": "Award",
+      "label": "isA"
+    },
+    {
+      "source": "Information Age",
+      "target": "Movement",
+      "label": "isA"
+    },
+    {
+      "source": "Claude Shannon Centenary 2016",
+      "target": "Recognition",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delNaturalizationUS",
+      "target": "1948",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "G\u00f6delNaturalizationUS",
+      "target": "CitizenshipChange",
+      "label": "isA"
+    },
+    {
+      "source": "The Bit Player screening",
+      "target": "Recognition",
+      "label": "isA"
+    },
+    {
+      "source": "Mathematics",
+      "target": "FieldOfStudy",
+      "label": "isA"
+    },
+    {
+      "source": "chess program",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delNationalityHistory",
+      "target": "Austrian Citizen, then Czechoslovak, then German, then U.S. Citizen",
+      "label": "hasLegalStatusValue"
+    },
+    {
+      "source": "G\u00f6delNationalityHistory",
+      "target": "LegalStatusHistory",
+      "label": "isA"
+    },
+    {
+      "source": "ShannonMentor_Hillis",
+      "target": "Claude Shannon",
+      "label": "hasMentor"
+    },
+    {
+      "source": "ShannonMentor_Hillis",
+      "target": "Danny Hillis",
+      "label": "hasMentee"
+    },
+    {
+      "source": "ShannonMentor_Hillis",
+      "target": "Mentorship",
+      "label": "isA"
+    },
+    {
+      "source": "A Mathematical Theory of Saving (1928)",
+      "target": "Document",
+      "label": "isA"
+    },
+    {
+      "source": "A Mathematical Theory of Saving (1928)",
+      "target": "Influential in academic economics; basis for optimal accumulation theory",
+      "label": "documentsLifeEvent"
+    },
+    {
+      "source": "Robert Calderbank",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delFamilyRelationship_Brother",
+      "target": "Rudolf G\u00f6del (brother)",
+      "label": "relatesPerson"
+    },
+    {
+      "source": "G\u00f6delFamilyRelationship_Brother",
+      "target": "sibling",
+      "label": "relationshipType"
+    },
+    {
+      "source": "G\u00f6delFamilyRelationship_Brother",
+      "target": "FamilyRelationship",
+      "label": "isA"
+    },
+    {
+      "source": "Institute for Advanced Study",
+      "target": "Organization",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delAxiomOfChoiceConsistency",
+      "target": "1938",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "G\u00f6delAxiomOfChoiceConsistency",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delBaptizedLutheranAffiliation",
+      "target": "ReligiousAffiliation",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delBaptizedLutheranAffiliation",
+      "target": "childhood",
+      "label": "affiliationPeriod"
+    },
+    {
+      "source": "G\u00f6delBaptizedLutheranAffiliation",
+      "target": "Lutheranism",
+      "label": "hasReligion"
+    },
+    {
+      "source": "ClaudeShannon_Mentorship_Hitchcock",
+      "target": "Mentorship",
+      "label": "isA"
+    },
+    {
+      "source": "ClaudeShannon_Mentorship_Hitchcock",
+      "target": "Frank Lauren Hitchcock",
+      "label": "hasMentor"
+    },
+    {
+      "source": "ClaudeShannon_Mentorship_Hitchcock",
+      "target": "Claude Shannon",
+      "label": "hasMentee"
+    },
+    {
+      "source": "Shannon_BellLabs_WWII",
+      "target": "1941",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "Shannon_BellLabs_WWII",
+      "target": "EmploymentPeriod",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon_BellLabs_WWII",
+      "target": "Researcher",
+      "label": "hasJobTitle"
+    },
+    {
+      "source": "ClaudeShannon_BellLabs_Employment",
+      "target": "1941",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "ClaudeShannon_BellLabs_Employment",
+      "target": "EmploymentPeriod",
+      "label": "isA"
+    },
+    {
+      "source": "ClaudeShannon_BellLabs_Employment",
+      "target": "ClaudeShannon_BellLabs_Researcher",
+      "label": "hasJobTitle"
+    },
+    {
+      "source": "ClaudeShannon_BellLabs_Employment",
+      "target": "early 1950s",
+      "label": "hasEventEndDate"
+    },
+    {
+      "source": "American Academy of Achievement",
+      "target": "AwardingBody",
+      "label": "isA"
+    },
+    {
+      "source": "Genetics",
+      "target": "FieldOfStudy",
+      "label": "isA"
+    },
+    {
+      "source": "Claude Shannon USPS Stamp Petition",
+      "target": "Recognition",
+      "label": "isA"
+    },
+    {
+      "source": "MIT",
+      "target": "Institution",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon_RubiksCubeDevice",
+      "target": "EntrepreneurialActivity",
+      "label": "isA"
+    },
+    {
+      "source": "Golden Plate Award of the American Academy of Achievement 1967",
+      "target": "American Academy of Achievement",
+      "label": "awardedBy"
+    },
+    {
+      "source": "Golden Plate Award of the American Academy of Achievement 1967",
+      "target": "Award",
+      "label": "isA"
+    },
+    {
+      "source": "John von Neumann",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Rebecca Goldstein",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "AT&T Laboratories",
+      "target": "Organization",
+      "label": "isA"
+    },
+    {
+      "source": "Islam",
+      "target": "ReligiousAffiliation",
+      "label": "isA"
+    },
+    {
+      "source": "AT&T Shannon Labs",
+      "target": "Organization",
+      "label": "isA"
+    },
+    {
+      "source": "Graham P. Collins",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Descendant of John Ogden (colonist)",
+      "target": "AncestryDetail",
+      "label": "isA"
+    },
+    {
+      "source": "John Fritz Medal",
+      "target": "Award",
+      "label": "isA"
+    },
+    {
+      "source": "Journey to the Edge of Reason: The Life of Kurt G\u00f6del",
+      "target": "LifeNarrative",
+      "label": "isA"
+    },
+    {
+      "source": "Journey to the Edge of Reason: The Life of Kurt G\u00f6del",
+      "target": "JourneyToEdgeOfReasonNYTCriticsTopBook2021",
+      "label": "hasQualitativeAnnotation"
+    },
+    {
+      "source": "Neil J. A. Sloane",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delDeathByMalnutritionAnnotation",
+      "target": "G\u00f6del died from malnutrition and inanition caused by personality disturbance after refusing to eat",
+      "label": "providesInsight"
+    },
+    {
+      "source": "G\u00f6delDeathByMalnutritionAnnotation",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "Rob Goodman",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Frank P. Ramsey Professor of Political Economy",
+      "target": "AffiliationRole",
+      "label": "isA"
+    },
+    {
+      "source": "Bell Labs",
+      "target": "Organization",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delGrandjeanQuestionnaire",
+      "target": "Testimony",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delGrandjeanQuestionnaire",
+      "target": "Kurt Friedrich G\u00f6del",
+      "label": "isAccountOfPerson"
+    },
+    {
+      "source": "John Ogden (colonist)",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Claude Shannon Memorial Park",
+      "target": "Location",
+      "label": "isA"
+    },
+    {
+      "source": "The Bit Player",
+      "target": "MultimediaArtifact",
+      "label": "isA"
+    },
+    {
+      "source": "Boston Review",
+      "target": "Organization",
+      "label": "isA"
+    },
+    {
+      "source": "Universals (1925)",
+      "target": "Document",
+      "label": "isA"
+    },
+    {
+      "source": "Albert Einstein Award",
+      "target": "Award",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delViennaCircleParticipation",
+      "target": "GroupParticipation",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delViennaCircleParticipation",
+      "target": "Vienna Circle",
+      "label": "participatedInGroup"
+    },
+    {
+      "source": "Family_CShannon-CShannonSr",
+      "target": "Claude Shannon Sr.",
+      "label": "relatesPerson"
+    },
+    {
+      "source": "Family_CShannon-CShannonSr",
+      "target": "FamilyRelationship",
+      "label": "isA"
+    },
+    {
+      "source": "Family_CShannon-CShannonSr",
+      "target": "parent",
+      "label": "relationshipType"
+    },
+    {
+      "source": "Claude Shannon Sr.",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delDeathAnnotation",
+      "target": "Death resulting from refusal to eat due to belief that food was poisoned",
+      "label": "providesInsight"
+    },
+    {
+      "source": "G\u00f6delDeathAnnotation",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon_AI_Papers",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delMentalIllnessCrisis",
+      "target": "HealthCrisis",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delMentalIllnessCrisis",
+      "target": "G\u00f6delParanoidSymptoms",
+      "label": "hasQualitativeAnnotation"
+    },
+    {
+      "source": "Logical Dilemmas: The Life and Work of Kurt G\u00f6del",
+      "target": "LifeNarrative",
+      "label": "isA"
+    },
+    {
+      "source": "JamesUrbaniakPlaysGodel",
+      "target": "In the 2023 movie 'Oppenheimer', G\u00f6del is briefly portrayed by James Urbaniak",
+      "label": "providesInsight"
+    },
+    {
+      "source": "JamesUrbaniakPlaysGodel",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "The Essential Message: Claude Shannon and the Making of Information Theory",
+      "target": "Erico Marui Guizzo",
+      "label": "hasAuthorship"
+    },
+    {
+      "source": "The Essential Message: Claude Shannon and the Making of Information Theory",
+      "target": "Document",
+      "label": "isA"
+    },
+    {
+      "source": "Erico Marui Guizzo",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Morris Liebmann Memorial Prize",
+      "target": "Award",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon_TheseusProject",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delOntologicalProof",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delOntologicalProof",
+      "target": "early 1970s",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "Cold Spring Harbor Laboratory",
+      "target": "Institution",
+      "label": "isA"
+    },
+    {
+      "source": "Foreign Member of the Royal Society 1968 (ForMemRS)",
+      "target": "ProfessionalRecognition",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delMetric",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delMetric",
+      "target": "1949",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "Kurt G\u00f6del Society",
+      "target": "Organization",
+      "label": "isA"
+    },
+    {
+      "source": "Austria-Hungary",
+      "target": "Location",
+      "label": "isA"
+    },
+    {
+      "source": "World Science Festival",
+      "target": "Organization",
+      "label": "isA"
+    },
+    {
+      "source": "Royal Netherlands Academy of Arts and Sciences",
+      "target": "AwardingBody",
+      "label": "isA"
+    },
+    {
+      "source": "Decision Analysis Society",
+      "target": "Organization",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delUSCitizenshipEvent",
+      "target": "1948",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "G\u00f6delUSCitizenshipEvent",
+      "target": "CitizenshipChange",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delReligionGeneralViewAnnotation",
+      "target": "G\u00f6del stated: 'Religions are for the most part bad, but not religion itself'",
+      "label": "providesInsight"
+    },
+    {
+      "source": "G\u00f6delReligionGeneralViewAnnotation",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delIncompletenessTheorems",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delIncompletenessTheorems",
+      "target": "1931",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "Knowledge (1929)",
+      "target": "Document",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delBirthEvent",
+      "target": "1906-04-28",
+      "label": "occurredOnDate"
+    },
+    {
+      "source": "G\u00f6delBirthEvent",
+      "target": "LifeEvent",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delBirthEvent",
+      "target": "Br\u00fcnn",
+      "label": "occurredAtLocation"
+    },
+    {
+      "source": "Alfred Noble Prize",
+      "target": "Award",
+      "label": "isA"
+    },
+    {
+      "source": "American Philosophical Society Membership 1961",
+      "target": "ProfessionalRecognition",
+      "label": "isA"
+    },
+    {
+      "source": "Originator",
+      "target": "CareerRole",
+      "label": "isA"
+    },
+    {
+      "source": "Frank Ramsey Professor Emeritus of Economics",
+      "target": "AffiliationRole",
+      "label": "isA"
+    },
+    {
+      "source": "Proof theorist",
+      "target": "AffiliationRole",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon_PhDMathematics1940",
+      "target": "1940",
+      "label": "hasEventEndDate"
+    },
+    {
+      "source": "Shannon_PhDMathematics1940",
+      "target": "EducationEpisode",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon_PhDMathematics1940",
+      "target": "Massachusetts Institute of Technology",
+      "label": "isAtInstitution"
+    },
+    {
+      "source": "Shannon_PhDMathematics1940",
+      "target": "Mathematics",
+      "label": "hasFieldOfStudy"
+    },
+    {
+      "source": "AdeleHospitalizationLate1977",
+      "target": "HealthCrisis",
+      "label": "isA"
+    },
+    {
+      "source": "AdeleHospitalizationLate1977",
+      "target": "1977",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "G\u00f6delDevelopedObsessiveFearOfPoisoning",
+      "target": "HealthCrisis",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delDevelopedObsessiveFearOfPoisoning",
+      "target": "G\u00f6delObsessiveFearAnnotation",
+      "label": "hasQualitativeAnnotation"
+    },
+    {
+      "source": "SocialistViews",
+      "target": "SocioEconomicStatusChange",
+      "label": "isA"
+    },
+    {
+      "source": "LouJacobiPortraysGodel",
+      "target": "In the 1994 film 'I.Q.', Lou Jacobi portrays G\u00f6del",
+      "label": "providesInsight"
+    },
+    {
+      "source": "LouJacobiPortraysGodel",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "Ivan Sutherland",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Claude Shannon Commemorative Stamp Macedonia",
+      "target": "Recognition",
+      "label": "isA"
+    },
+    {
+      "source": "Douglas Hofstadter",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "A Contribution to the Theory of Taxation (1927)",
+      "target": "Ramsey pricing",
+      "label": "documentsLifeEvent"
+    },
+    {
+      "source": "A Contribution to the Theory of Taxation (1927)",
+      "target": "Document",
+      "label": "isA"
+    },
+    {
+      "source": "Ramsey pricing",
+      "target": "LifeEvent",
+      "label": "isA"
+    },
+    {
+      "source": "Richard Zeckhauser",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Richard Zeckhauser",
+      "target": "Frank P. Ramsey Professor of Political Economy",
+      "label": "heldAffiliationRole"
+    },
+    {
+      "source": "Partha Dasgupta",
+      "target": "Frank Ramsey Professor Emeritus of Economics",
+      "label": "heldAffiliationRole"
+    },
+    {
+      "source": "Partha Dasgupta",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Partha Dasgupta",
+      "target": "Frank Ramsey Professor of Economics",
+      "label": "heldAffiliationRole"
+    },
+    {
+      "source": "Shannon_Minivac601Design",
+      "target": "EntrepreneurialActivity",
+      "label": "isA"
+    },
+    {
+      "source": "ClaudeShannon_WWII_Cryptanalysis",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "IEEE Medal of Honor",
+      "target": "Award",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delParanoidSymptoms",
+      "target": "G\u00f6del suffered paranoia, fear of poisoning, spending months in a sanitarium",
+      "label": "providesInsight"
+    },
+    {
+      "source": "G\u00f6delParanoidSymptoms",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "Frank Ramsey Professorships",
+      "target": "Recognition",
+      "label": "isA"
+    },
+    {
+      "source": "Marianne G\u00f6del",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Julian Schwinger",
+      "target": "Albert Einstein Award",
+      "label": "hasAward"
+    },
+    {
+      "source": "Julian Schwinger",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Frank Lauren Hitchcock",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Moritz Schlick",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Moritz Schlick",
+      "target": "Moritz Schlick Murder",
+      "label": "hasLifeEvent"
+    },
+    {
+      "source": "Set theorist",
+      "target": "AffiliationRole",
+      "label": "isA"
+    },
+    {
+      "source": "large language model",
+      "target": "Movement",
+      "label": "isA"
+    },
+    {
+      "source": "General Propositions and Causality (1929)",
+      "target": "Document",
+      "label": "isA"
+    },
+    {
+      "source": "Google Doodle",
+      "target": "DigitalArtifact",
+      "label": "isA"
+    },
+    {
+      "source": "ClaudeShannon_MathematicalTheoryOfCommunication1948",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "Frank P. Ramsey Medal",
+      "target": "Substantial contributions to decision theory",
+      "label": "recognitionContext"
+    },
+    {
+      "source": "Frank P. Ramsey Medal",
+      "target": "Award",
+      "label": "isA"
+    },
+    {
+      "source": "Norma Levor",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Eduard Rhein Foundation",
+      "target": "AwardingBody",
+      "label": "isA"
+    },
+    {
+      "source": "Kurt G\u00f6del Research Centre, Berlin-Brandenburg Academy of Sciences and Humanities",
+      "target": "Organization",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon_SignalFlowGraphInvention1942",
+      "target": "1942",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "Shannon_SignalFlowGraphInvention1942",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delEducation_Realgymnasium",
+      "target": "1924",
+      "label": "hasEventEndDate"
+    },
+    {
+      "source": "G\u00f6delEducation_Realgymnasium",
+      "target": "1916",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "G\u00f6delEducation_Realgymnasium",
+      "target": "EducationEpisode",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delEducation_Realgymnasium",
+      "target": "Deutsches Staats-Realgymnasium",
+      "label": "isAtInstitution"
+    },
+    {
+      "source": "Shannon_AlzheimersDiagnosis",
+      "target": "HealthCrisis",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon_AlzheimersDiagnosis",
+      "target": "2001",
+      "label": "hasEventEndDate"
+    },
+    {
+      "source": "Theseus",
+      "target": "EntrepreneurialActivity",
+      "label": "isA"
+    },
+    {
+      "source": "Harvard University",
+      "target": "Institution",
+      "label": "isA"
+    },
+    {
+      "source": "ClaudeShannonDemographicAmerican",
+      "target": "DemographicAttribute",
+      "label": "isA"
+    },
+    {
+      "source": "ClaudeShannonDemographicAmerican",
+      "target": "American",
+      "label": "hasDemographicAttributeValue"
+    },
+    {
+      "source": "ClaudeShannon_BellLabs_Researcher",
+      "target": "JobTitle",
+      "label": "isA"
+    },
+    {
+      "source": "Princeton, New Jersey",
+      "target": "Location",
+      "label": "isA"
+    },
+    {
+      "source": "Dangerous Knowledge",
+      "target": "MultimediaArtifact",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delMentalInstabilityAnnotation_SuspectedAspergersOCD",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delMentalInstabilityAnnotation_SuspectedAspergersOCD",
+      "target": "Some scholars suggested G\u00f6del may have had Asperger syndrome or obsessive-compulsive disorder",
+      "label": "providesInsight"
+    },
+    {
+      "source": "Frank P. Ramsey Professor of Managerial Economics",
+      "target": "AffiliationRole",
+      "label": "isA"
+    },
+    {
+      "source": "ClaudeShannon_MIT_Employment",
+      "target": "ClaudeShannon_MIT_Professor",
+      "label": "hasJobTitle"
+    },
+    {
+      "source": "ClaudeShannon_MIT_Employment",
+      "target": "EmploymentPeriod",
+      "label": "isA"
+    },
+    {
+      "source": "ClaudeShannon_MIT_Employment",
+      "target": "1956",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "ClaudeShannon_MIT_Professor",
+      "target": "JobTitle",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delNumberingDevelopment",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delNumberingDevelopment",
+      "target": "1931",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "Harold Pender Award",
+      "target": "Award",
+      "label": "isA"
+    },
+    {
+      "source": "Kurt G\u00f6del Research Center for Mathematical Logic",
+      "target": "Organization",
+      "label": "isA"
+    },
+    {
+      "source": "Paul Samuelson",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Statues_of_Claude_Shannon",
+      "target": "Recognition",
+      "label": "isA"
+    },
+    {
+      "source": "ClaudeShannon_CoInventBitPulseCodeModulationWearableComputer",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "Oppenheimer (film)",
+      "target": "MultimediaArtifact",
+      "label": "isA"
+    },
+    {
+      "source": "Albert Einstein",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Thomas Edison",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Ramsey's subjective probability interpretation",
+      "target": "LifeEvent",
+      "label": "isA"
+    },
+    {
+      "source": "Information theory",
+      "target": "FieldOfStudy",
+      "label": "isA"
+    },
+    {
+      "source": "Evangelische Volksschule",
+      "target": "Institution",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon_NationalResearchFellowship_InstituteAdvancedStudy",
+      "target": "National Research Fellow",
+      "label": "hasJobTitle"
+    },
+    {
+      "source": "Shannon_NationalResearchFellowship_InstituteAdvancedStudy",
+      "target": "EmploymentPeriod",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon_NationalResearchFellowship_InstituteAdvancedStudy",
+      "target": "1940",
+      "label": "hasEventStartDate"
+    },
+    {
+      "source": "National Research Fellow",
+      "target": "JobTitle",
+      "label": "isA"
+    },
+    {
+      "source": "Edward O. Thorp",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Influential in academic economics; basis for optimal accumulation theory",
+      "target": "LifeEvent",
+      "label": "isA"
+    },
+    {
+      "source": "Theories (1929)",
+      "target": "Document",
+      "label": "isA"
+    },
+    {
+      "source": "Margraviate of Moravia",
+      "target": "Location",
+      "label": "isA"
+    },
+    {
+      "source": "University of Notre Dame faculty",
+      "target": "AffiliationRole",
+      "label": "isA"
+    },
+    {
+      "source": "Princeton Hospital",
+      "target": "Location",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6del Lecture",
+      "target": "Recognition",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6del Lecture",
+      "target": "Annual lecture held by the Association for Symbolic Logic since 1990 in honor of Kurt G\u00f6del",
+      "label": "recognitionContext"
+    },
+    {
+      "source": "Warren Weaver",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "PigouSuggestedTaxationProblem",
+      "target": "Arthur Pigou",
+      "label": "relatesPersonInSocialRelationship"
+    },
+    {
+      "source": "PigouSuggestedTaxationProblem",
+      "target": "SocialRelationship",
+      "label": "isA"
+    },
+    {
+      "source": "PigouSuggestedTaxationProblem",
+      "target": "Frank P. Ramsey",
+      "label": "relatesPersonInSocialRelationship"
+    },
+    {
+      "source": "Arthur Pigou",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Vienna Circle",
+      "target": "CommunityGroup",
+      "label": "isA"
+    },
+    {
+      "source": "John McCarthy",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "ShannonMentor_Berlekamp",
+      "target": "Mentorship",
+      "label": "isA"
+    },
+    {
+      "source": "ShannonMentor_Berlekamp",
+      "target": "Claude Shannon",
+      "label": "hasMentor"
+    },
+    {
+      "source": "ShannonMentor_Berlekamp",
+      "target": "Elwyn Berlekamp",
+      "label": "hasMentee"
+    },
+    {
+      "source": "The Economic Journal",
+      "target": "Document",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delChoralUnionParticipation",
+      "target": "GroupParticipation",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delChoralUnionParticipation",
+      "target": "Br\u00fcnner M\u00e4nnergesangverein",
+      "label": "participatedInGroup"
+    },
+    {
+      "source": "Shannon_RocketPoweredFrisbees",
+      "target": "InformalAchievement",
+      "label": "isA"
+    },
+    {
+      "source": "Frank Ramsey Professor of Economics",
+      "target": "AffiliationRole",
+      "label": "isA"
+    },
+    {
+      "source": "ClaudeShannonDemographicMale",
+      "target": "male",
+      "label": "hasDemographicAttributeValue"
+    },
+    {
+      "source": "ClaudeShannonDemographicMale",
+      "target": "DemographicAttribute",
+      "label": "isA"
+    },
+    {
+      "source": "Ramsey Effect",
+      "target": "Recognition",
+      "label": "isA"
+    },
+    {
+      "source": "Gaylord High School",
+      "target": "Institution",
+      "label": "isA"
+    },
+    {
+      "source": "Austro-Hungarian mathematician",
+      "target": "DemographicAttribute",
+      "label": "isA"
+    },
+    {
+      "source": "A Mind at Play",
+      "target": "LifeNarrative",
+      "label": "isA"
+    },
+    {
+      "source": "Western Union",
+      "target": "Organization",
+      "label": "isA"
+    },
+    {
+      "source": "Stuart Ballantine Medal",
+      "target": "Award",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delPersonalGodAnnotation",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delPersonalGodAnnotation",
+      "target": "G\u00f6del believed God was personal, remained a theist throughout his life, and called his philosophy rationalistic, idealistic, optimistic, theological",
+      "label": "providesInsight"
+    },
+    {
+      "source": "Protestant philosopher",
+      "target": "AffiliationRole",
+      "label": "isA"
+    },
+    {
+      "source": "Petoskey, Michigan",
+      "target": "Location",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon_CoInventWearableComputer",
+      "target": "EntrepreneurialActivity",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delDoctorateEarned",
+      "target": "LifeEvent",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delDoctorateEarned",
+      "target": "1930",
+      "label": "occurredOnDate"
+    },
+    {
+      "source": "Shannon_FlameThrowingTrumpets",
+      "target": "InformalAchievement",
+      "label": "isA"
+    },
+    {
+      "source": "information theory",
+      "target": "FieldOfStudy",
+      "label": "isA"
+    },
+    {
+      "source": "American Philosophical Society",
+      "target": "AwardingBody",
+      "label": "isA"
+    },
+    {
+      "source": "I.Q. (film)",
+      "target": "MultimediaArtifact",
+      "label": "isA"
+    },
+    {
+      "source": "Researcher",
+      "target": "JobTitle",
+      "label": "isA"
+    },
+    {
+      "source": "Ramsey growth model",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "Claude Shannon Google Doodle 2016",
+      "target": "GoogleDoodle100thBirthday",
+      "label": "hasQualitativeAnnotation"
+    },
+    {
+      "source": "Claude Shannon Google Doodle 2016",
+      "target": "Recognition",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delPhilosophicalNotebooksEditing",
+      "target": "LifeEvent",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delPhilosophicalNotebooksEditing",
+      "target": "EditingGodelPhilosophicalNotebooks",
+      "label": "hasQualitativeAnnotation"
+    },
+    {
+      "source": "University of California, San Diego",
+      "target": "Institution",
+      "label": "isA"
+    },
+    {
+      "source": "Truth and Probability (1926/1931)",
+      "target": "Ramsey's subjective probability interpretation",
+      "label": "documentsLifeEvent"
+    },
+    {
+      "source": "Truth and Probability (1926/1931)",
+      "target": "Document",
+      "label": "isA"
+    },
+    {
+      "source": "Moritz Schlick Murder",
+      "target": "LifeEvent",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delSocietyFoundedAnnotation",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delSocietyFoundedAnnotation",
+      "target": "The Kurt G\u00f6del Society, founded in 1987, is for promoting research in logic, philosophy, and history of mathematics",
+      "label": "providesInsight"
+    },
+    {
+      "source": "Br\u00fcnner M\u00e4nnergesangverein",
+      "target": "CommunityGroup",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon_Thesis_TheoreticalGenetics_Unpublished",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon_PlasticFoamShoesOnLake",
+      "target": "InformalAchievement",
+      "label": "isA"
+    },
+    {
+      "source": "David Malone",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "ClaudeShannon_MastersThesis1937",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "Br\u00fcnn",
+      "target": "Location",
+      "label": "isA"
+    },
+    {
+      "source": "Danny Hillis",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "Bert Sutherland",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "BitPlayerClaudeShannonFilm",
+      "target": "The Bit Player is a feature film about Claude Shannon directed by Mark Levinson, premiered at the World Science Festival in 2019.",
+      "label": "providesInsight"
+    },
+    {
+      "source": "BitPlayerClaudeShannonFilm",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delGrandjeanReligionSelfDescription",
+      "target": "G\u00f6del described his religion as 'baptized Lutheran (but not member of any religious congregation). My belief is theistic, not pantheistic, following Leibniz rather than Spinoza'",
+      "label": "providesInsight"
+    },
+    {
+      "source": "G\u00f6delGrandjeanReligionSelfDescription",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "Facts and Propositions (1927)",
+      "target": "Ramsey's redundancy theory of truth",
+      "label": "documentsLifeEvent"
+    },
+    {
+      "source": "Facts and Propositions (1927)",
+      "target": "Document",
+      "label": "isA"
+    },
+    {
+      "source": "Ramsey's redundancy theory of truth",
+      "target": "LifeEvent",
+      "label": "isA"
+    },
+    {
+      "source": "GoogleDoodle100thBirthday",
+      "target": "On April 30, 2016, Google honored Claude Shannon with a Doodle for his 100th birthday.",
+      "label": "providesInsight"
+    },
+    {
+      "source": "GoogleDoodle100thBirthday",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon's demon",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "G\u00f6delOntologicalProofDescription",
+      "target": "G\u00f6del formulated a formal proof of God's existence known as G\u00f6del's ontological proof",
+      "label": "providesInsight"
+    },
+    {
+      "source": "G\u00f6delOntologicalProofDescription",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "Association for Symbolic Logic",
+      "target": "Organization",
+      "label": "isA"
+    },
+    {
+      "source": "Princeton University faculty",
+      "target": "AffiliationRole",
+      "label": "isA"
+    },
+    {
+      "source": "Platonist",
+      "target": "AffiliationRole",
+      "label": "isA"
+    },
+    {
+      "source": "Boston Review Claude Shannon Article",
+      "target": "LifeNarrative",
+      "label": "isA"
+    },
+    {
+      "source": "Czechoslovakia",
+      "target": "Location",
+      "label": "isA"
+    },
+    {
+      "source": "Royal Irish Academy",
+      "target": "AwardingBody",
+      "label": "isA"
+    },
+    {
+      "source": "Ramsey's reliability theory of knowledge",
+      "target": "LifeEvent",
+      "label": "isA"
+    },
+    {
+      "source": "Marconi Society Lifetime Achievement Award",
+      "target": "Award",
+      "label": "isA"
+    },
+    {
+      "source": "Royal Society",
+      "target": "AwardingBody",
+      "label": "isA"
+    },
+    {
+      "source": "Shannon_NDRCLifeEvent",
+      "target": "CareerMilestone",
+      "label": "isA"
+    },
+    {
+      "source": "NamedInHonorOfClaudeShannon",
+      "target": "QualitativeAnnotation",
+      "label": "isA"
+    },
+    {
+      "source": "NamedInHonorOfClaudeShannon",
+      "target": "The 'Claude' language model was named in honor of Claude Shannon.",
+      "label": "providesInsight"
+    },
+    {
+      "source": "Mark Levinson",
+      "target": "Person",
+      "label": "isA"
+    },
+    {
+      "source": "On Truth (1929)",
+      "target": "Document",
+      "label": "isA"
+    },
+    {
+      "source": "An Algebra for Theoretical Genetics",
+      "target": "Document",
+      "label": "isA"
+    },
+    {
+      "source": "An Algebra for Theoretical Genetics",
+      "target": "Claude Shannon",
+      "label": "hasAuthorship"
+    },
+    {
+      "source": "Ontologist",
+      "target": "AffiliationRole",
+      "label": "isA"
+    },
+    {
+      "source": "International Congress of Mathematicians",
+      "target": "Organization",
+      "label": "isA"
+    },
+    {
+      "source": "Deutsches Staats-Realgymnasium",
+      "target": "Institution",
+      "label": "isA"
+    },
+    {
+      "source": "Universals of Law and of Fact (1928)",
+      "target": "Document",
+      "label": "isA"
+    },
+    {
+      "source": "Artificial intelligence",
+      "target": "FieldOfStudy",
+      "label": "isA"
+    },
+    {
+      "source": "Gaylord, Michigan",
+      "target": "Location",
+      "label": "isA"
+    }
+  ]
+}

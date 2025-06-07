@@ -75,7 +75,7 @@ def _start_new_evaluation(args):
 
     # prepare output path
     path.mkdir(exist_ok=True, parents=True)
-    (path / "config.json").write_text(config.model_dump_json(indent=2))
+    (path / "config.json").write_text(config.model_dump_json(indent=2), encoding="utf-8")
 
     log_dir_path = path / "logs"
     log_dir_path.mkdir(exist_ok=True, parents=True)

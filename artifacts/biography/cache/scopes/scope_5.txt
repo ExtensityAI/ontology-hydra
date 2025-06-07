@@ -1,0 +1,83 @@
+1. Domain Definition
+   1.1 A structured representation of individuals' life histories encompasses the organized documentation and contextualization of personal information, educational and career trajectories, significant life events, relationships, and affiliations. Each component is detailed with temporal (time-based) and spatial (location-based) attributes, aiming to present a comprehensive, multifaceted overview of a person's life journey. This domain integrates both quantitative and qualitative data, capturing linear and non-linear life paths as well as narrative and structured accounts, ensuring equitable and culturally sensitive representation across diverse populations.
+   1.2 Conceptual areas comprising this domain include:
+      - Personal identification and demographic attributes
+      - Educational histories and learning trajectories
+      - Occupational and career paths
+      - Life events (major, minor, formative, and disruptive)
+      - Familial, kinship, and social relationships
+      - Institutional affiliations and group memberships
+      - Migration, mobility, and spatial context
+      - Temporal sequencing and chronology
+      - Narrative accounts and subjective life experiences
+      - Documentation, digital archiving, and evidence linkage
+
+2. Core Topics
+   2.1 Personal Information
+       - Names, aliases, and identifiers
+       - Demographic attributes (age, gender, nationality, etc.)
+       - Birth information (date, place)
+       - Legal status and documentation
+   2.2 Educational Trajectories
+       - Formal education (institutions, degrees, certificates)
+       - Informal learning, apprenticeships, vocational training
+       - Educational interruptions and transitions
+       - Achievement records and recognitions
+   2.3 Career and Occupational Histories
+       - Employment records and occupations
+       - Career progression, changes, and breaks
+       - Informal, unpaid, and non-standard labor
+       - Professional certifications and achievements
+   2.4 Significant Life Events
+       - Marriages, partnerships, and unions
+       - Childbirths, adoptions, and family expansions
+       - Deaths, losses, and separations
+       - Health-related events and crises
+       - Natural disasters, wars, and societal disruptions
+       - Migrations, relocations, and displacements
+   2.5 Relationships and Kinship Networks
+       - Family trees and genealogical connections
+       - Social, professional, and support networks
+       - Non-traditional and chosen families
+       - Household compositions
+   2.6 Affiliations and Group Memberships
+       - Religious, cultural, and political groups
+       - Educational and professional associations
+       - Community and social organizations
+       - Membership periods and roles
+   2.7 Migration, Spatial, and Temporal Context
+       - Places of residence and relocations
+       - Countries, regions, and localities
+       - Mobility patterns and distances moved
+       - Temporal sequencing of life events
+       - Lifecycle stages and transitions
+   2.8 Narrative and Qualitative Life Accounts
+       - Personal testimonies and oral histories
+       - Subjective experiences of major life events
+       - Cultural context and interpretative frameworks
+       - Narrative structures (chronological, thematic, episodic)
+   2.9 Documentation and Evidence Linkage
+       - Administrative and civil records
+       - Oral, written, and digital sources
+       - Multimedia and archival materials
+       - Source reliability and provenance
+
+3. Terminology
+   3.1 Domain-Specific Terms and Concepts
+       - Life History: The comprehensive record of an individual's lived experiences, contextualized temporally and spatially.
+       - Trajectory: The sequence and progression of an individual’s experiences across life domains (e.g., career, education).
+       - Event: A discrete occurrence affecting a person’s life course (e.g., marriage, migration).
+       - Chronology: The temporal sequencing of events and states in a life history.
+       - Affiliation: A formal or informal connection to a group or institution.
+       - Relationship: A connection, by blood, law, choice, or circumstance, between individuals.
+       - Kinship: The web of familial ties and genealogical connections.
+       - Narrative Account: A qualitative description or story of a person’s experiences and perspectives.
+       - Spatial Attribute: Location data associated with life events (e.g., birthplace, migration destination).
+       - Temporal Attribute: Time data associated with life events (e.g., date, age at event).
+       - Informal Life Paths: Trajectories not typically recorded through formal channels, such as informal labor or non-institutional education.
+   3.2 Hierarchical Relationships
+       - The highest-level concept is the "Individual Life History." 
+           - Subordinate to this are major domains: Personal Information, Educational Trajectories, Career Histories, Life Events, Relationships, and Affiliations. 
+               - Each of these domains comprises specific sub-topics (e.g., under Relationships: Kinship, Social Networks).
+           - Life Events are further classified by type (e.g., familial, occupational, migratory) and contextualized with temporal and spatial attributes.
+           - Narrative accounts and documentation provide interpretive and evidentiary layers across all domains.

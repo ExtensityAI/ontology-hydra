@@ -1,0 +1,30 @@
+What are the full legal names, preferred names, and historical name changes for person X?
+When and where was person X born, and what are their demographic and biographical attributes?
+Which educational institutions did person X attend, what programs did they study, and in which locations and time periods?
+What degrees, diplomas, or certifications has person X earned, and from which institutions and at what times?
+What significant interruptions, resumptions, or transitions occurred within person X's educational trajectory?
+What jobs and professional roles has person X held, including employers, positions, durations, and geographic locations?
+What notable career milestones, such as promotions, occupational changes, or entrepreneurial activities, are documented for person X?
+What periods of unemployment, informal work, or career breaks are present in person X's occupational history?
+Which significant life events (e.g., marriage, divorce, parenthood, migration, health events) has person X experienced, including dates and places?
+What are the familial relationships of person X, including parents, siblings, children, spouses, and any non-traditional or chosen kinships?
+Who are the professional and social contacts of person X, such as mentors, colleagues, and influential acquaintances?
+What organizations, associations, or communities has person X been affiliated with, including roles, periods of involvement, and status of membership?
+Which household compositions or living arrangements has person X experienced during different life stages?
+How are major life events in person X's history sequenced chronologically and mapped geographically?
+What were the locations associated with each major life event in person X's trajectory (e.g., residences, workplaces, institutions, migration paths)?
+What narratives, oral histories, personal testimonies, or qualitative accounts exist about person X’s life?
+What multimedia artifacts such as photographs, videos, or audio recordings are linked to person X's life history?
+What are the official sources, documents, or institutional records verifying the information in person X's life history?
+What is the provenance and metadata for each record or event in person X’s life history, including creation and modification dates and authorship?
+What consent records exist governing the collection, use, and sharing of person X's life history data?
+How are sensitive or potentially private aspects of person X’s history handled or restricted within the ontology?
+How does person X’s socio-economic status, cultural background, or religious affiliation change over time and influence their life events?
+What languages does person X speak, and how have these evolved or been used in different contexts?
+How are multicultural and intersectional contexts—such as migration, minority status, or community participation—represented in person X's life history?
+Are there periods of disruption, non-traditional pathways, or incomplete records in person X's life trajectory, and how are these captured?
+How does person X’s involvement in volunteerism, advocacy, or civic movements affect their affiliations and identity?
+What evidence exists for membership or participation in online or informal networks for person X?
+What is the complete timeline of person X’s roles, events, and affiliations, including overlaps and concurrent episodes?
+How are annotations, commentaries, or external interpretations attached to structured data about person X’s life?
+Which legal events (such as citizenship changes or court cases) have significantly affected person X’s life history, and what documentation supports these events?

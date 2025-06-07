@@ -1,0 +1,94 @@
+1. Domain Definition
+   1.1 The domain encompasses structured representations of individuals' life histories.
+   1.2 It includes: 
+      - Personal information 
+      - Educational trajectories
+      - Career trajectories
+      - Significant life events
+      - Relationships and affiliations
+      - Temporal and spatial attributes providing context for each aspect
+   1.3 The domain aims to comprehensively describe a person's life journey, capturing the evolution, context, and interrelation of life components.
+
+2. Core Topics
+   2.1 Personal Information
+      - Name (legal, chosen, aliases)
+      - Date and place of birth
+      - Demographic data (gender, ethnicity, nationality, language)
+      - Identifiers (national ID, passport number)
+   2.2 Educational Trajectories
+      - Levels of education (primary, secondary, tertiary, vocational)
+      - Institutions attended
+      - Fields of study
+      - Academic qualifications and certifications
+      - Periods of attendance
+      - Locations of study
+   2.3 Career Trajectories
+      - Professions and occupations
+      - Employment history
+      - Roles and responsibilities
+      - Significant career milestones
+      - Employers/organizations
+      - Geographical locations of work
+      - Career transitions and gaps
+   2.4 Significant Life Events
+      - Migration events (internal, international)
+      - Births, deaths, marriages, divorces
+      - Health-related events (illnesses, recovery, disability)
+      - Achievements and recognitions
+      - Personal crises or turning points
+      - Participation in movements, conflicts, or significant societal events
+   2.5 Relationships
+      - Family structures (nuclear, extended)
+      - Marital/partnership relations
+      - Children and descendants
+      - Mentorships and influential figures
+      - Social and professional networks
+   2.6 Affiliations
+      - Memberships in organizations (political, cultural, religious, professional)
+      - Community groups and informal affiliations
+      - Periods and significance of affiliations
+   2.7 Temporal Attributes
+      - Sequencing of events
+      - Date ranges for events and roles
+      - Duration of relationships and affiliations
+   2.8 Spatial Attributes
+      - Birthplace, residences, and migration paths
+      - Locations of education and employment
+      - Mapping significant events to places
+      - Representations of movement (e.g., geospatial timelines)
+   2.9 Cultural, Socio-Economic, and Environmental Contexts
+      - Socio-economic status over time
+      - Cultural background and traditions
+      - Language, religion, and customs
+      - Environmental exposures or determinants
+   2.10 Documentation and Data Sources
+      - Oral histories and testimonies
+      - Multimedia records (audio, video, photographs, maps)
+      - Digital and archival documents
+      - Community-driven archives and collective memory
+   2.11 Identity and Representation
+      - Self-identification and personal narratives
+      - Inclusion of underrepresented or marginalized perspectives
+      - Synchronic and diachronic representations of identity
+
+3. Terminology
+   3.1 Life History: A structured or narrative account detailing personal, educational, career, and contextual elements of an individual's life.
+   3.2 Trajectory: The sequence and progression of events or statuses within a specific aspect (e.g., educational, career, migration).
+   3.3 Event: A discrete, temporally and spatially defined occurrence in the person’s life (e.g., graduation, migration, marriage).
+      - Hierarchy: Events are components of trajectories.
+   3.4 Affiliation: Ongoing or time-bounded formal or informal association with organizations, communities, or groups.
+   3.5 Relationship: A social, familial, or professional connection established between individuals.
+   3.6 Temporal Attribute: Any date, duration, or frequency that anchors an event, relationship, or affiliation in time.
+   3.7 Spatial Attribute: Any location, place, or geographical context relevant to a person’s life aspect or event.
+   3.8 Network: A structured set of relationships and affiliations forming the social environment around an individual.
+   3.9 Migration: Movement across geographical regions with a change in residence, which may be internal or international.
+   3.10 Context: Socio-cultural, economical, and environmental factors influencing or situating a life event or status.
+   3.11 Documentation Source: The origin of life history data, such as oral accounts, archival documents, audio-visual evidence, or digital records.
+   3.12 Identity: The self-concept of the individual, as informed by demographic details, social roles, affiliations, and personal narratives.
+   3.13 Hierarchical Relationships:
+      - Life History > Trajectories > Events
+      - Life History > Relationships/Networks > Individual Connections
+      - Life History > Affiliations > Membership Details
+      - Life History > Context > Cultural/Socio-Economic/Environmental Details
+      - Life History > Documentation Source > Data Type
+      - Life History > Temporal/Spatial Attributes (contextualizing all components)

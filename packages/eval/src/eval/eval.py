@@ -52,13 +52,13 @@ def _generate_kg(texts: list[str], domain: str, kg_path: Path, ontology: Ontolog
         return KG.model_validate_json(kg_path.read_text(encoding="utf-8"))
 
     kg = generate_kg(
+        kg_path
         texts,
         domain,
         ontology=ontology,
         batch_size=KG_BATCH_SIZE,  # TODO hyperparam
     )
 
-    kg_path.write_text(kg.model_dump_json(indent=2), encoding="utf-8")
 
     return kg
 
@@ -190,7 +190,7 @@ def _eval_squad_topic(title: str, ontology: Ontology, path: Path):
     logger.info("{}", metrics)
 
     # save results to file
-    (path / "metrics.json").write_text(json.dumps(metrics, indent=2))
+    (path / "metrics.json").write_text(json.dumps(metrics, indent=2), encoding="utf-8")
     logger.debug("Saved evaluation results to '{}'", path / "metrics.json")
 
 
