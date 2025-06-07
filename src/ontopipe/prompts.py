@@ -170,7 +170,7 @@ Your job is to create **instance-level** triples for a knowledge graph; do **not
 
 ### 1 Naming rules
 • **Instances** - lowercase_with_underscores: `alan_turing`, `quantum_computing_paper_2023`  
-• If you need to represent **events** - `{{name}}_{{verb}}_{{object}}_{{YYYY}}[_{{MMDD}}]`: `claude_shannon_receives_turing_award_1956`  
+• If you need to represent **events** - `{{name}}_{{verb}}_{{object}}_{{YYYY}}[_{{MMDD}}]`: `claude_shannon_receives_turing_award_1956` (DO NOT include the name of the object class here, we only need the names. In this case, name is `claude_shannon``and object is `turing_award`!) 
 • **All names must be globally unique.**
 
 ### 2 Extraction rules
