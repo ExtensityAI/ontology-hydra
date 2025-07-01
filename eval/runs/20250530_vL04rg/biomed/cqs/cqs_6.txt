@@ -1,0 +1,7 @@
+What are the key standards for ensuring patient safety in the design of medical devices, specifically concerning surface temperature regulations?
+How do different bands of the electromagnetic spectrum contribute to diagnostic imaging, and what are their specific applications in clinical settings?
+What criteria are used to determine biocompatibility of materials for use in artificial organs, such as membrane oxygenators?
+In what ways can advances in biomedical signal processing improve the interpretation of physiological data for diagnostics?
+How do anatomical knowledge and physiological insights drive the development of diagnostic tools in cardiology and other medical fields?
+What role do emerging technologies, like AI, play in enhancing the functionality and safety of biomedical engineering solutions?
+What are the main challenges in integrating engineering innovation with regulatory standards in the development of medical devices?

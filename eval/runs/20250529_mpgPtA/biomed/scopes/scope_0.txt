@@ -1,0 +1,54 @@
+## Biomedical Engineering Scope Document
+
+### 1. Introduction
+Biomedical engineering is a multidisciplinary field that integrates principles of engineering with biological and medical sciences to develop technologies that improve healthcare. This document outlines the core topics and boundaries within the domain based on the collective expertise of various personas.
+
+### 2. Included Topics
+
+#### 2.1 Medical Device Design and Regulation
+- Development and design of medical devices
+- Regulation standards emphasizing patient safety
+- Thermal management of medical device surfaces
+
+#### 2.2 Diagnostic Imaging Technologies
+- Application of electromagnetic waves in medical imaging
+  - X-ray
+  - MRI
+  - Ultrasound
+  - Thermography
+- Use of imaging modalities for non-invasive diagnostics
+- AI and machine learning integration in imaging analysis
+
+#### 2.3 Human Anatomy Knowledge
+- Anatomical structures critical to diagnostics, e.g., heart wall layers (epicardium, myocardium, endocardium)
+- Importance of organ structure understanding in diagnostic tool development
+
+#### 2.4 Artificial Organs and Material Selection
+- Selection of biocompatible and effective materials
+  - Membrane oxygenators
+  - Materials like silicone rubber and Teflon
+- Considerations for cardiopulmonary bypass procedures
+
+#### 2.5 Biomedical Signal Processing
+- Techniques for interpreting biological signals
+  - Modulation
+  - Demodulation
+  - Amplification
+- Application of AI and machine learning in real-time data processing
+
+#### 2.6 Precision Diagnostic Devices
+- Specialized tools for measuring physiological parameters
+  - Bone densitometers using X-rays or ultrasound
+- Comparison to general medical instruments like blood pressure monitors
+
+### 3. Excluded Topics
+- General signal processing concepts not applicable to medical devices, such as synthesis
+- Non-biomedical engineering fields
+
+### 4. Gray Areas and Overlaps
+- Overlap with general medical instrumentation and shared technologies
+- Intersection of material science and biomedical engineering for biocompatibility
+- Financial implications and insurance processing in adopting new technologies, interacting with health policy and insurance analysis
+
+### 5. Conclusion
+This scope document establishes a clear understanding of the main topics within the biomedical engineering domain. The focus is on areas that contribute directly to patient care improvements, emphasizing the integration of engineering and biological sciences.

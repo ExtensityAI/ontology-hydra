@@ -1,0 +1,1600 @@
+{
+  "name": "Biomedical Engineering",
+  "triplets": [
+    {
+      "subject": "Osmosis",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "HumanBodyInteraction",
+      "predicate": "isA",
+      "object": "BiomedicalEngineeringInteraction"
+    },
+    {
+      "subject": "EvokedElectromyography",
+      "predicate": "isA",
+      "object": "BiomedicalSignalProcessingTechnique"
+    },
+    {
+      "subject": "BiphasicWaveforms",
+      "predicate": "isA",
+      "object": "ElectromagneticWaveModality"
+    },
+    {
+      "subject": "medullaOblongata",
+      "predicate": "isA",
+      "object": "Body"
+    },
+    {
+      "subject": "X-ray CT",
+      "predicate": "isA",
+      "object": "DiagnosticImagingTechnologyUsingEMW"
+    },
+    {
+      "subject": "ShockWaveGenerator",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "PGA",
+      "predicate": "isA",
+      "object": "BiocompatibleMaterial"
+    },
+    {
+      "subject": "PGA",
+      "predicate": "interactsWithBiologicalTissue",
+      "object": "SuturedTissue"
+    },
+    {
+      "subject": "CoincidenceCircuit",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "ElectricalIonization",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "Stent",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "CapillaryDilationToEpithelialization",
+      "predicate": "isA",
+      "object": "Process"
+    },
+    {
+      "subject": "MonophasicWaveforms",
+      "predicate": "isA",
+      "object": "ElectromagneticWaveModality"
+    },
+    {
+      "subject": "Hydroxyapatite",
+      "predicate": "isA",
+      "object": "Ceramic"
+    },
+    {
+      "subject": "GoldmannTonometer",
+      "predicate": "usedToClassifyDevice",
+      "object": "IntraocularPressure"
+    },
+    {
+      "subject": "SmootherOperation",
+      "predicate": "isA",
+      "object": "Functionality"
+    },
+    {
+      "subject": "LaserMedicalDevices",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "MainMagnet",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "Oxygenator",
+      "predicate": "isA",
+      "object": "MembraneOxygenator"
+    },
+    {
+      "subject": "SuturedTissue",
+      "predicate": "isA",
+      "object": "BiologicalTissue"
+    },
+    {
+      "subject": "HighViscosity",
+      "predicate": "isA",
+      "object": "DesignProperty"
+    },
+    {
+      "subject": "ArtificialHeart",
+      "predicate": "isA",
+      "object": "MembraneOxygenator"
+    },
+    {
+      "subject": "PreciseSpeedControl",
+      "predicate": "isA",
+      "object": "Functionality"
+    },
+    {
+      "subject": "HumanBody",
+      "predicate": "isA",
+      "object": "Body"
+    },
+    {
+      "subject": "DICOM",
+      "predicate": "isA",
+      "object": "RegulatoryStandard"
+    },
+    {
+      "subject": "BiomedicalCeramicMaterials",
+      "predicate": "interactsWithBiologicalTissue",
+      "object": "Bone"
+    },
+    {
+      "subject": "Allergy",
+      "predicate": "isA",
+      "object": "BiocompatibilityConcern"
+    },
+    {
+      "subject": "Electrode",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "SPONTMode",
+      "predicate": "isA",
+      "object": "FunctionalityConcern"
+    },
+    {
+      "subject": "ESWL",
+      "predicate": "isA",
+      "object": "ElectromagneticWaveModality"
+    },
+    {
+      "subject": "Cells",
+      "predicate": "isA",
+      "object": "BiologicalStructure"
+    },
+    {
+      "subject": "ExternalBeamTherapyDevice",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "CarbonMonoxide",
+      "predicate": "isA",
+      "object": "BiocompatibilityConcern"
+    },
+    {
+      "subject": "BiologicalEffect",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "AMR",
+      "predicate": "isA",
+      "object": "HealthInformaticsSystem"
+    },
+    {
+      "subject": "MRI",
+      "predicate": "isA",
+      "object": "DiagnosticImagingTechnologyUsingEMW"
+    },
+    {
+      "subject": "Insulin",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "Ultrasound",
+      "predicate": "isA",
+      "object": "ElectromagneticWaveModality"
+    },
+    {
+      "subject": "StainlessSteel",
+      "predicate": "isA",
+      "object": "BiocompatibleMaterial"
+    },
+    {
+      "subject": "MercurySphygmomanometer",
+      "predicate": "isA",
+      "object": "DiagnosticDevice"
+    },
+    {
+      "subject": "PacemakerElectrode",
+      "predicate": "isA",
+      "object": "MedicalDeviceAttachment"
+    },
+    {
+      "subject": "Skin",
+      "predicate": "isA",
+      "object": "BiologicalTissue"
+    },
+    {
+      "subject": "Endocardium",
+      "predicate": "isA",
+      "object": "HeartAnatomyLayer"
+    },
+    {
+      "subject": "Ionization",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "BiomedicalCeramicMaterials",
+      "predicate": "isA",
+      "object": "Ceramic"
+    },
+    {
+      "subject": "Synthesis",
+      "predicate": "isA",
+      "object": "BiomedicalSignalProcessingTechnique"
+    },
+    {
+      "subject": "Phonocardiogram",
+      "predicate": "isA",
+      "object": "DiagnosticDevice"
+    },
+    {
+      "subject": "CMR",
+      "predicate": "isA",
+      "object": "HealthInformaticsSystem"
+    },
+    {
+      "subject": "SafetyProtocol41C",
+      "predicate": "isA",
+      "object": "TemperatureSafetyProtocol"
+    },
+    {
+      "subject": "Dermis",
+      "predicate": "isA",
+      "object": "BiologicalTissue"
+    },
+    {
+      "subject": "BoneDensity",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "Microwaves",
+      "predicate": "isA",
+      "object": "ElectromagneticWaveModality"
+    },
+    {
+      "subject": "TypeCFPart",
+      "predicate": "isA",
+      "object": "MedicalDeviceAttachment"
+    },
+    {
+      "subject": "Hypothalamus",
+      "predicate": "isA",
+      "object": "Body"
+    },
+    {
+      "subject": "CancerousTissue",
+      "predicate": "isA",
+      "object": "BiologicalTissue"
+    },
+    {
+      "subject": "PDT",
+      "predicate": "isA",
+      "object": "DiagnosticImagingTechnologyUsingEMW"
+    },
+    {
+      "subject": "Platinum",
+      "predicate": "isA",
+      "object": "BiocompatibleMaterial"
+    },
+    {
+      "subject": "MassDefectPhenomenon",
+      "predicate": "isA",
+      "object": "BiomedicalEngineeringInteraction"
+    },
+    {
+      "subject": "PolarizationVoltage",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "MedicalDataCoding",
+      "predicate": "isA",
+      "object": "HealthInformaticsSystem"
+    },
+    {
+      "subject": "C/kg",
+      "predicate": "isA",
+      "object": "MeasurementAccuracy"
+    },
+    {
+      "subject": "DigitalSignal",
+      "predicate": "isA",
+      "object": "BiomedicalSignalProcessing"
+    },
+    {
+      "subject": "PET",
+      "predicate": "isA",
+      "object": "DiagnosticImagingTechnologyUsingEMW"
+    },
+    {
+      "subject": "BioresorbableMaterial",
+      "predicate": "isA",
+      "object": "BiocompatibleMaterial"
+    },
+    {
+      "subject": "LaserDevices",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "QRSComplex",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "HyperkalemiaState",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "DeviceAttachment",
+      "predicate": "employsSafetyProtocol",
+      "object": "SafetyProtocol41C"
+    },
+    {
+      "subject": "BiologicalTissues",
+      "predicate": "isA",
+      "object": "BiologicalTissue"
+    },
+    {
+      "subject": "PhotomultiplierTube",
+      "predicate": "isA",
+      "object": "DiagnosticDevice"
+    },
+    {
+      "subject": "HealthInformation",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "FetalStethoscope",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "Spectrophotometer",
+      "predicate": "isA",
+      "object": "DiagnosticTool"
+    },
+    {
+      "subject": "ThermalAction",
+      "predicate": "isA",
+      "object": "FunctionalityConcern"
+    },
+    {
+      "subject": "PACS",
+      "predicate": "isA",
+      "object": "HealthInformaticsSystem"
+    },
+    {
+      "subject": "EnvironmentalFactors",
+      "predicate": "isA",
+      "object": "BiomedicalAttribute"
+    },
+    {
+      "subject": "X-rays",
+      "predicate": "isA",
+      "object": "ElectromagneticWaveModality"
+    },
+    {
+      "subject": "ShockWaveTransmissionMedium",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "DeviceAttachment",
+      "predicate": "hasSafetyConstraint",
+      "object": "StandardSafetyConstraint"
+    },
+    {
+      "subject": "HumanTissue",
+      "predicate": "isA",
+      "object": "BiologicalTissue"
+    },
+    {
+      "subject": "RadiationTherapy",
+      "predicate": "isA",
+      "object": "MedicalProcedure"
+    },
+    {
+      "subject": "InterferentialTherapyDevice",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "SurroundingNormalTissue",
+      "predicate": "isA",
+      "object": "BiologicalTissue"
+    },
+    {
+      "subject": "RedWhiteBloodCellTest",
+      "predicate": "isA",
+      "object": "ClinicalDiagnostic"
+    },
+    {
+      "subject": "CorrosionResistance",
+      "predicate": "isA",
+      "object": "DesignProperty"
+    },
+    {
+      "subject": "SpecialWeldingGas",
+      "predicate": "isA",
+      "object": "Material"
+    },
+    {
+      "subject": "Joints",
+      "predicate": "isA",
+      "object": "BiologicalStructure"
+    },
+    {
+      "subject": "PairProduction",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "SIMV",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "BasalLayer",
+      "predicate": "isA",
+      "object": "BiologicalTissue"
+    },
+    {
+      "subject": "Paste",
+      "predicate": "isA",
+      "object": "Material"
+    },
+    {
+      "subject": "GammaCamera",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "Teflon",
+      "predicate": "isA",
+      "object": "BiocompatibleMaterial"
+    },
+    {
+      "subject": "Myocardium",
+      "predicate": "isA",
+      "object": "HeartAnatomyLayer"
+    },
+    {
+      "subject": "BioSurfaceElectrode",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "Hydroxyapatite",
+      "predicate": "interactsWithBiologicalTissue",
+      "object": "Bone"
+    },
+    {
+      "subject": "MotorVibration",
+      "predicate": "isA",
+      "object": "FunctionalityConcern"
+    },
+    {
+      "subject": "LowerLimbProsthesis",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "FlexibleElectrode",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "Hindbrain",
+      "predicate": "isA",
+      "object": "Body"
+    },
+    {
+      "subject": "Aluminium",
+      "predicate": "isA",
+      "object": "Material"
+    },
+    {
+      "subject": "BioinertMaterial",
+      "predicate": "isA",
+      "object": "BiocompatibleMaterial"
+    },
+    {
+      "subject": "TibiaPerpendicularPhase",
+      "predicate": "isA",
+      "object": "BiomedicalAttribute"
+    },
+    {
+      "subject": "Keratin",
+      "predicate": "isA",
+      "object": "BiologicalTissue"
+    },
+    {
+      "subject": "HighFrequencyElectromagneticField",
+      "predicate": "isA",
+      "object": "ElectromagneticWaveModality"
+    },
+    {
+      "subject": "SpecificRegulatoryChallenge",
+      "predicate": "isA",
+      "object": "RegulatoryChallenge"
+    },
+    {
+      "subject": "Electromyograph",
+      "predicate": "isA",
+      "object": "DiagnosticDevice"
+    },
+    {
+      "subject": "Prosthesis",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "NuclearFusion",
+      "predicate": "isA",
+      "object": "BiomedicalEngineeringInteraction"
+    },
+    {
+      "subject": "SPECT",
+      "predicate": "isA",
+      "object": "DiagnosticImagingTechnologyUsingEMW"
+    },
+    {
+      "subject": "HemodialysisMachine",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "SympatheticNervousSystem",
+      "predicate": "isA",
+      "object": "Body"
+    },
+    {
+      "subject": "AMode",
+      "predicate": "isA",
+      "object": "DiagnosticImagingDevice"
+    },
+    {
+      "subject": "NuclearFission",
+      "predicate": "isA",
+      "object": "BiomedicalEngineeringInteraction"
+    },
+    {
+      "subject": "GranularLayer",
+      "predicate": "isA",
+      "object": "BiologicalTissue"
+    },
+    {
+      "subject": "Electrocardiogram",
+      "predicate": "isA",
+      "object": "BiomedicalSignalProcessing"
+    },
+    {
+      "subject": "CellMembrane",
+      "predicate": "isA",
+      "object": "Body"
+    },
+    {
+      "subject": "LateralHornOfSpinalCord",
+      "predicate": "isA",
+      "object": "AnatomicalStructure"
+    },
+    {
+      "subject": "Skeleton",
+      "predicate": "isA",
+      "object": "BiologicalStructure"
+    },
+    {
+      "subject": "ContactResistance",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "MeasurementElectrodes",
+      "predicate": "isA",
+      "object": "MedicalDeviceAttachment"
+    },
+    {
+      "subject": "ElectromagneticVibrationMethod",
+      "predicate": "isA",
+      "object": "ElectromagneticWaveModality"
+    },
+    {
+      "subject": "PlaneJoint",
+      "predicate": "isA",
+      "object": "BiologicalStructure"
+    },
+    {
+      "subject": "MetallicProsthesis",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "AgAgCl",
+      "predicate": "isA",
+      "object": "BiocompatibleMaterial"
+    },
+    {
+      "subject": "Fat",
+      "predicate": "isA",
+      "object": "BiologicalTissue"
+    },
+    {
+      "subject": "ArtificialRespirationMedicalGas",
+      "predicate": "isA",
+      "object": "Material"
+    },
+    {
+      "subject": "Muscles",
+      "predicate": "isA",
+      "object": "BiologicalTissue"
+    },
+    {
+      "subject": "CalciumIon",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "RegulatoryPositionDevice",
+      "predicate": "isA",
+      "object": "DiagnosticDevice"
+    },
+    {
+      "subject": "Breathing",
+      "predicate": "isA",
+      "object": "FunctionalityConcern"
+    },
+    {
+      "subject": "MYCIN",
+      "predicate": "isA",
+      "object": "AIApplication"
+    },
+    {
+      "subject": "BiomechanicalLoading",
+      "predicate": "isA",
+      "object": "BiomedicalAttribute"
+    },
+    {
+      "subject": "BoneMarrow",
+      "predicate": "isA",
+      "object": "BiologicalTissue"
+    },
+    {
+      "subject": "AbsorbedRadiationAmount",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "Grid",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "WaterBalance",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "Gold",
+      "predicate": "isA",
+      "object": "BiocompatibleMaterial"
+    },
+    {
+      "subject": "Incubator",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "BioactiveMaterial",
+      "predicate": "isA",
+      "object": "BiocompatibleMaterial"
+    },
+    {
+      "subject": "Condenser",
+      "predicate": "isA",
+      "object": "MedicalDeviceAttachment"
+    },
+    {
+      "subject": "ThermographicCamera",
+      "predicate": "isA",
+      "object": "DiagnosticDevice"
+    },
+    {
+      "subject": "Ligaments",
+      "predicate": "isA",
+      "object": "BiologicalTissue"
+    },
+    {
+      "subject": "CardiacCycle",
+      "predicate": "isA",
+      "object": "Process"
+    },
+    {
+      "subject": "ElectromagneticWaves",
+      "predicate": "isA",
+      "object": "ElectromagneticWaveModality"
+    },
+    {
+      "subject": "ElectronPositronCombination",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "Exoskeleton",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "DistributionCapacity",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "PatientMonitoringDevice",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "Orthosis",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "UmbilicalCordBloodPreservation",
+      "predicate": "isA",
+      "object": "MedicalProcedure"
+    },
+    {
+      "subject": "ESR",
+      "predicate": "isA",
+      "object": "HealthInformaticsSystem"
+    },
+    {
+      "subject": "PositioningDevice",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "AbsorbedRadiationEnergy",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "Neutron",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "ComptonScattering",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "PowerLineFrequency",
+      "predicate": "isA",
+      "object": "FunctionalityConcern"
+    },
+    {
+      "subject": "FilmDigitizer",
+      "predicate": "isA",
+      "object": "DiagnosticDevice"
+    },
+    {
+      "subject": "RadiationUnit",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "BodyTemperature",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "Convection",
+      "predicate": "isA",
+      "object": "BiomedicalSignalProcessing"
+    },
+    {
+      "subject": "HormoneTest",
+      "predicate": "isA",
+      "object": "ClinicalDiagnostic"
+    },
+    {
+      "subject": "ATC",
+      "predicate": "isA",
+      "object": "RegulatoryStandard"
+    },
+    {
+      "subject": "ComponentTest",
+      "predicate": "isA",
+      "object": "ClinicalDiagnostic"
+    },
+    {
+      "subject": "Ultraviolet",
+      "predicate": "isA",
+      "object": "ElectromagneticWaveModality"
+    },
+    {
+      "subject": "UpperLimbOrthosis",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "SuperconductingMRIMachine",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "ShimmingCoil",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "ArtificialJoint",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "StandardSafetyConstraint",
+      "predicate": "isA",
+      "object": "SafetyStandard"
+    },
+    {
+      "subject": "Vaporizer",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "teflon membrane",
+      "predicate": "isA",
+      "object": "Material"
+    },
+    {
+      "subject": "InternalCrystalStructure",
+      "predicate": "isA",
+      "object": "BiologicalStructure"
+    },
+    {
+      "subject": "DeviceAttachment",
+      "predicate": "isA",
+      "object": "NonHeatingMedicalDeviceAttachment"
+    },
+    {
+      "subject": "Linac",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "BloodCells",
+      "predicate": "isA",
+      "object": "BiologicalTissue"
+    },
+    {
+      "subject": "XRayDiffractionAnalysis",
+      "predicate": "isA",
+      "object": "DiagnosticTool"
+    },
+    {
+      "subject": "Respiration",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "LightAbsorption",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "InVitroTest",
+      "predicate": "isA",
+      "object": "BiocompatibilityTestCriterion"
+    },
+    {
+      "subject": "Brittleness",
+      "predicate": "isA",
+      "object": "DesignProperty"
+    },
+    {
+      "subject": "ExtracorporealShockWaveLithotripter",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "Scintillator",
+      "predicate": "isA",
+      "object": "DiagnosticDevice"
+    },
+    {
+      "subject": "UltrasoundScanner",
+      "predicate": "isA",
+      "object": "DiagnosticImagingDevice"
+    },
+    {
+      "subject": "AnesthesiaMachineSystem",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "GammaRays",
+      "predicate": "isA",
+      "object": "ElectromagneticWaveModality"
+    },
+    {
+      "subject": "ElectrosurgicalUnit",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "BodyCompositionAnalyzer",
+      "predicate": "isA",
+      "object": "DiagnosticDevice"
+    },
+    {
+      "subject": "ChargeQuantity",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "OxygenSaturation",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "Epicardium",
+      "predicate": "isA",
+      "object": "HeartAnatomyLayer"
+    },
+    {
+      "subject": "Mercury",
+      "predicate": "isA",
+      "object": "Material"
+    },
+    {
+      "subject": "FatigueTest",
+      "predicate": "isA",
+      "object": "DiagnosticTool"
+    },
+    {
+      "subject": "LiquidHelium",
+      "predicate": "isA",
+      "object": "Material"
+    },
+    {
+      "subject": "Diffusion",
+      "predicate": "isA",
+      "object": "BiomedicalSignalProcessing"
+    },
+    {
+      "subject": "Nitrogen",
+      "predicate": "isA",
+      "object": "Material"
+    },
+    {
+      "subject": "HormoneSecretion",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "NeedleElectrodes",
+      "predicate": "isA",
+      "object": "MedicalDeviceAttachment"
+    },
+    {
+      "subject": "TemperatureControlDevice",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "IntraocularPressure",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "StratumCorneum",
+      "predicate": "isA",
+      "object": "BiologicalTissue"
+    },
+    {
+      "subject": "Pt",
+      "predicate": "isA",
+      "object": "BiocompatibleMaterial"
+    },
+    {
+      "subject": "K+IonMovement",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "PlateauPhase",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "BiopotentialSignalMeasurementElectrode",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "EarthLeakageCurrent",
+      "predicate": "isA",
+      "object": "FunctionalityConcern"
+    },
+    {
+      "subject": "HighEnergy",
+      "predicate": "isA",
+      "object": "Property"
+    },
+    {
+      "subject": "BMode",
+      "predicate": "isA",
+      "object": "DiagnosticImagingDevice"
+    },
+    {
+      "subject": "BodyEntity",
+      "predicate": "isA",
+      "object": "BiologicalSystem"
+    },
+    {
+      "subject": "Tendons",
+      "predicate": "isA",
+      "object": "BiologicalTissue"
+    },
+    {
+      "subject": "ArtificialBloodVessel",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "RestingPotential",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "membrane oxygenator",
+      "predicate": "isA",
+      "object": "ArtificialOrgan"
+    },
+    {
+      "subject": "GammaRay",
+      "predicate": "isA",
+      "object": "ElectromagneticWaveModality"
+    },
+    {
+      "subject": "MTF",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "V6",
+      "predicate": "isA",
+      "object": "BiomedicalSignalProcessing"
+    },
+    {
+      "subject": "WearResistance",
+      "predicate": "isA",
+      "object": "DesignProperty"
+    },
+    {
+      "subject": "ElectricalConductivity",
+      "predicate": "isA",
+      "object": "DesignProperty"
+    },
+    {
+      "subject": "ECGSignal",
+      "predicate": "isA",
+      "object": "BiomedicalSignalProcessing"
+    },
+    {
+      "subject": "OrderCommunicationSystem",
+      "predicate": "isA",
+      "object": "HealthInformaticsSystem"
+    },
+    {
+      "subject": "ArtificialHeart",
+      "predicate": "selectsBiocompatibleMaterials",
+      "object": "Polyurethane"
+    },
+    {
+      "subject": "RadiationExposureDoseMeasurement",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "DopplerEffect",
+      "predicate": "isA",
+      "object": "BiomedicalSignalProcessingTechnique"
+    },
+    {
+      "subject": "Zinc",
+      "predicate": "isA",
+      "object": "Material"
+    },
+    {
+      "subject": "BetaCells",
+      "predicate": "isA",
+      "object": "BiologicalStructure"
+    },
+    {
+      "subject": "BoneDensitometer",
+      "predicate": "isA",
+      "object": "DiagnosticDevice"
+    },
+    {
+      "subject": "T1",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "MnemonicCodes",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "MechanicalStrength",
+      "predicate": "isA",
+      "object": "DesignProperty"
+    },
+    {
+      "subject": "Zirconium",
+      "predicate": "isA",
+      "object": "Material"
+    },
+    {
+      "subject": "Spectrophotometry",
+      "predicate": "isA",
+      "object": "DiagnosticTool"
+    },
+    {
+      "subject": "ChemicalChange",
+      "predicate": "isA",
+      "object": "FunctionalityConcern"
+    },
+    {
+      "subject": "Defibrillator",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "CardiacOutput",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "BiocompatibilityEvaluation",
+      "predicate": "isA",
+      "object": "BiocompatibilityConcern"
+    },
+    {
+      "subject": "Beer'sLaw",
+      "predicate": "isA",
+      "object": "BiomedicalSignalProcessingTechnique"
+    },
+    {
+      "subject": "SynovialFluid",
+      "predicate": "isA",
+      "object": "BiocompatibleMaterial"
+    },
+    {
+      "subject": "Infrared",
+      "predicate": "isA",
+      "object": "ElectromagneticWaveModality"
+    },
+    {
+      "subject": "DendriteComponent",
+      "predicate": "isA",
+      "object": "BiologicalStructure"
+    },
+    {
+      "subject": "SerumTest",
+      "predicate": "isA",
+      "object": "ClinicalDiagnostic"
+    },
+    {
+      "subject": "Centrifuge",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "CatheterInsertion",
+      "predicate": "isA",
+      "object": "MedicalProcedure"
+    },
+    {
+      "subject": "Ultrafiltration",
+      "predicate": "isA",
+      "object": "MedicalProcedure"
+    },
+    {
+      "subject": "AnimalTest",
+      "predicate": "isA",
+      "object": "BiocompatibilityTestCriterion"
+    },
+    {
+      "subject": "EmergencyMedicalGas",
+      "predicate": "isA",
+      "object": "Material"
+    },
+    {
+      "subject": "IsovolumetricContractionPhase",
+      "predicate": "isA",
+      "object": "MedicalProcedure"
+    },
+    {
+      "subject": "ProteinDenaturationAndAdsorptionPhenomenon",
+      "predicate": "isA",
+      "object": "BiomedicalEngineeringInteraction"
+    },
+    {
+      "subject": "OutermostPartOfSkin",
+      "predicate": "isA",
+      "object": "AnatomicalStructure"
+    },
+    {
+      "subject": "Electromyography",
+      "predicate": "isA",
+      "object": "BiomedicalSignalProcessingTechnique"
+    },
+    {
+      "subject": "ceramic membrane",
+      "predicate": "isA",
+      "object": "Material"
+    },
+    {
+      "subject": "Bone",
+      "predicate": "isA",
+      "object": "BiologicalTissue"
+    },
+    {
+      "subject": "FilmBadge",
+      "predicate": "isA",
+      "object": "PrecisionDiagnosticDevice"
+    },
+    {
+      "subject": "Pt",
+      "predicate": "hasCriticalProperty",
+      "object": "CorrosionResistance"
+    },
+    {
+      "subject": "Socket",
+      "predicate": "isA",
+      "object": "MedicalDeviceAttachment"
+    },
+    {
+      "subject": "GoldmannTonometer",
+      "predicate": "isA",
+      "object": "DiagnosticDevice"
+    },
+    {
+      "subject": "Rad",
+      "predicate": "isA",
+      "object": "MeasurementAccuracy"
+    },
+    {
+      "subject": "AnnihilationRadiationDetection",
+      "predicate": "isA",
+      "object": "DiagnosticImagingTechnology"
+    },
+    {
+      "subject": "OpticalAction",
+      "predicate": "isA",
+      "object": "ElectromagneticWaveModality"
+    },
+    {
+      "subject": "EHR",
+      "predicate": "isA",
+      "object": "HealthInformaticsSystem"
+    },
+    {
+      "subject": "silicon rubber membrane",
+      "predicate": "isA",
+      "object": "Material"
+    },
+    {
+      "subject": "Polyurethane",
+      "predicate": "isA",
+      "object": "BiocompatibleMaterial"
+    },
+    {
+      "subject": "Biomaterial",
+      "predicate": "isA",
+      "object": "BiocompatibleMaterial"
+    },
+    {
+      "subject": "AnesthesiaProcess",
+      "predicate": "isA",
+      "object": "MedicalProcedure"
+    },
+    {
+      "subject": "Electrooculogram",
+      "predicate": "isA",
+      "object": "BiomedicalSignalProcessing"
+    },
+    {
+      "subject": "R",
+      "predicate": "isA",
+      "object": "MeasurementAccuracy"
+    },
+    {
+      "subject": "CalciumIonInflux",
+      "predicate": "isA",
+      "object": "Process"
+    },
+    {
+      "subject": "Electroencephalogram",
+      "predicate": "isA",
+      "object": "BiomedicalSignalProcessing"
+    },
+    {
+      "subject": "T2",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "Pancreas",
+      "predicate": "isA",
+      "object": "OrganStructure"
+    },
+    {
+      "subject": "MuscleMovement",
+      "predicate": "isA",
+      "object": "FunctionalityConcern"
+    },
+    {
+      "subject": "CollimatorHelmet",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "TMMode",
+      "predicate": "isA",
+      "object": "DiagnosticImagingDevice"
+    },
+    {
+      "subject": "Sv",
+      "predicate": "isA",
+      "object": "MeasurementAccuracy"
+    },
+    {
+      "subject": "DataEncryption",
+      "predicate": "isA",
+      "object": "BiomedicalEngineeringInteraction"
+    },
+    {
+      "subject": "BloodborneDiseasesDiagnosis",
+      "predicate": "isA",
+      "object": "ClinicalDiagnostic"
+    },
+    {
+      "subject": "SampleMeasurementMethod",
+      "predicate": "isA",
+      "object": "MeasurementAccuracy"
+    },
+    {
+      "subject": "kidneys",
+      "predicate": "isA",
+      "object": "OrganStructure"
+    },
+    {
+      "subject": "RelaxedMentalState",
+      "predicate": "isA",
+      "object": "PatientExperience"
+    },
+    {
+      "subject": "Flowmeter",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "MMode",
+      "predicate": "isA",
+      "object": "DiagnosticImagingDevice"
+    },
+    {
+      "subject": "SpatialResolution",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "Foot",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "Bones",
+      "predicate": "isA",
+      "object": "BiologicalStructure"
+    },
+    {
+      "subject": "NeuronCellBody",
+      "predicate": "isA",
+      "object": "Body"
+    },
+    {
+      "subject": "polypropylene membrane",
+      "predicate": "isA",
+      "object": "Material"
+    },
+    {
+      "subject": "Gy",
+      "predicate": "isA",
+      "object": "MeasurementAccuracy"
+    },
+    {
+      "subject": "PTFE",
+      "predicate": "isA",
+      "object": "BiocompatibleMaterial"
+    },
+    {
+      "subject": "ClinicalTest",
+      "predicate": "isA",
+      "object": "BiocompatibilityTestCriterion"
+    },
+    {
+      "subject": "AlphaWave",
+      "predicate": "isA",
+      "object": "ElectromagneticWaveModality"
+    },
+    {
+      "subject": "GammaKnifeUnit",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "ActivateDuringStress",
+      "predicate": "isA",
+      "object": "BiomedicalAttribute"
+    },
+    {
+      "subject": "ProstheticArm",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "PositronEmitter",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "PhotonAmplification",
+      "predicate": "isA",
+      "object": "BiomedicalSignalProcessing"
+    },
+    {
+      "subject": "Cerebellum",
+      "predicate": "isA",
+      "object": "Body"
+    },
+    {
+      "subject": "Ventilator",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "liver",
+      "predicate": "isA",
+      "object": "OrganStructure"
+    },
+    {
+      "subject": "DiagnosticRadiationInteraction",
+      "predicate": "isA",
+      "object": "BiomedicalEngineeringInteraction"
+    },
+    {
+      "subject": "IABP",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "PatientTable",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "Thermoregulation",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    },
+    {
+      "subject": "BiocompositeMaterial",
+      "predicate": "isA",
+      "object": "BiocompatibleMaterial"
+    },
+    {
+      "subject": "ImplantationTest",
+      "predicate": "isA",
+      "object": "BiocompatibilityTestCriterion"
+    },
+    {
+      "subject": "ScintillationDetectors",
+      "predicate": "isA",
+      "object": "DiagnosticDevice"
+    },
+    {
+      "subject": "DermatologicalSurgery",
+      "predicate": "isA",
+      "object": "MedicalProcedure"
+    },
+    {
+      "subject": "AnestheticMedicalGas",
+      "predicate": "isA",
+      "object": "Material"
+    },
+    {
+      "subject": "MeningitisDiagnosis",
+      "predicate": "isA",
+      "object": "ClinicalDiagnostic"
+    },
+    {
+      "subject": "HeartFunction",
+      "predicate": "isA",
+      "object": "FunctionalityConcern"
+    },
+    {
+      "subject": "ElectrodeAttachmentForMeasurement",
+      "predicate": "isA",
+      "object": "MedicalProcedure"
+    },
+    {
+      "subject": "PituitaryGland",
+      "predicate": "isA",
+      "object": "Body"
+    },
+    {
+      "subject": "ArteriovenousFistula",
+      "predicate": "isA",
+      "object": "MedicalProcedure"
+    },
+    {
+      "subject": "Hemodialysis",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "BiometricSignalMeasurement",
+      "predicate": "isA",
+      "object": "MeasurementAccuracy"
+    },
+    {
+      "subject": "ElectronicPositronAnnihilation",
+      "predicate": "isA",
+      "object": "BiomedicalSignalProcessing"
+    },
+    {
+      "subject": "AtomicNucleus",
+      "predicate": "isA",
+      "object": "BiologicalStructure"
+    },
+    {
+      "subject": "ScintillationCrystal",
+      "predicate": "isA",
+      "object": "MedicalDevice"
+    },
+    {
+      "subject": "SilverChlorideElectrode",
+      "predicate": "isA",
+      "object": "BiocompatibleMaterial"
+    },
+    {
+      "subject": "HydrogenDensity",
+      "predicate": "isA",
+      "object": "BiomedicalParameter"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+- What are the key safety regulations that medical device manufacturers must comply with globally?
+- How do ergonomic and usability considerations impact medical device design?
+- What specific diagnostic imaging technologies utilize electromagnetic waves, and how do they differ in application?
+- How can AI and machine learning be integrated into diagnostic imaging analysis?
+- What are the key structures of the heart that must be considered in developing diagnostic tools for cardiology?
+- What materials are commonly used in artificial organs, and what are their biocompatibility characteristics?
+- What are the essential techniques in biomedical signal processing, and how are they applied in diagnostics?
+- What distinguishes specialized diagnostic devices like bone densitometers from general medical instruments?
+- How do manufacturers ensure the sustainability of materials used in medical devices?
+- What are the practical benefits of integrating AI and IoT in wearable medical devices for patients?

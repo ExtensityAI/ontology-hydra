@@ -1,0 +1,36 @@
+1. Introduction
+   - The scope covers the domain of Biomedical Engineering with a focus on the integration of engineering principles with biological and medical sciences to improve healthcare.
+
+2. Included Topics
+   2.1 Medical Device Design and Regulation
+       - Safety standards for device attachments, including temperature limits to prevent skin damage.
+       - Focus on patient safety and compliance with regulatory standards.
+   2.2 Electromagnetic Waves in Diagnostic Imaging
+       - Use of thermography, X-rays, microwaves, ultraviolet, and infrared imaging for diagnostic purposes.
+       - Exploration of their applications in clinical decision-making.
+   2.3 Human Anatomy Understanding
+       - Knowledge of organ structures for the development of diagnostic tools, e.g., the heart wall composition.
+   2.4 Artificial Organ Materials
+       - Selection of biocompatible materials like silicone rubber or Teflon for devices like membrane oxygenators.
+       - Balance between functionality and biocompatibility.
+   2.5 Biomedical Signal Processing
+       - Conversion of analog physiological data into diagnostic information using techniques like modulation and demodulation.
+       - Real-time monitoring through wearable technology.
+   2.6 Specific Diagnostic Devices
+       - Specialized devices such as bone densitometers for measuring bone mineral density.
+
+3. Excluded Topics
+   3.1 General Signal Processing beyond Medical Contexts
+       - Techniques irrelevant to medical applications, such as signal synthesis, are excluded.
+   3.2 Non-Biomedical Engineering Disciplines
+       - Engineering domains not intersecting with medical or biological applications are outside the scope.
+
+4. Gray Areas and Overlaps
+   4.1 Overlaps with Health Informatics
+       - The utilization of AI and machine learning for diagnostics overlaps with biomedical signal processing.
+       - Collaborative potential in leveraging electronic health records for improved patient outcomes.
+   4.2 Intersection with Sustainable Materials Sciences
+       - The development of biocompatible materials involves considerations from environmental engineering.
+
+5. Usage and Interpretation
+   - This document serves as a guide to frame discussions on biomedical engineering projects, ensuring all stakeholders share a clear and common understanding of the domain's scope.

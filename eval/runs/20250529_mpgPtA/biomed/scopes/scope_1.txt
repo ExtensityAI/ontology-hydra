@@ -1,0 +1,52 @@
+## Scope Document: Biomedical Engineering
+
+### 1. Key Areas within Biomedical Engineering
+
+#### 1.1 Medical Device Design and Regulation
+- Integration of engineering principles with biological sciences
+- Focus on ensuring patient safety through device design
+- Temperature regulations for device attachments (e.g., not exceeding 41°C)
+- User-centered design with emphasis on safety and functionality
+
+#### 1.2 Diagnostic Imaging Technologies
+- Use of electromagnetic waves (thermography, X-rays, microwaves, ultraviolet, infrared)
+- Visualization of physiological parameters
+- Detection of abnormalities and clinical decision support
+
+#### 1.3 Anatomical Knowledge Application
+- Understanding of human anatomy (e.g., heart wall structure: epicardium, myocardium, endocardium)
+- Development of diagnostic tools and interventions in cardiology
+
+#### 1.4 Artificial Organ Development
+- Selection of biocompatible materials (e.g., silicone rubber, Teflon)
+- Use in membrane oxygenators and cardiopulmonary procedures
+- Collaboration with engineers to enhance functionality
+
+#### 1.5 Biomedical Signal Processing
+- Interpretation of biological signals (modulation, demodulation, amplification)
+- Conversion of analog physiological data into diagnostic information
+- Exclusion of non-applicable general signal processing concepts (e.g., synthesis)
+
+#### 1.6 Specialized Diagnostic Devices
+- Design of tools like bone densitometers
+- Measurement of specific medical conditions (e.g., bone mineral density, osteoporosis)
+- Contrast with general medical instruments (e.g., blood pressure monitors)
+
+### 2. Exclusions from the Domain
+- General engineering principles that do not directly apply to biomedical applications
+- Non-medical uses of electromagnetic wave technologies
+- Signal processing concepts not applicable to biological data
+- General medical conditions without a focus on device interaction
+
+### 3. Gray Areas and Overlaps
+
+#### 3.1 Overlaps with Adjacent Engineering Fields
+- Shared technologies between biomedical and mechanical/electrical engineering
+- Cross-disciplinary innovations involving AI and IoT
+
+#### 3.2 Intersections with Medical Sciences
+- Integration of traditional medicine with modern technological approaches
+- Cooperative development with disciplines such as cardiology and sports medicine
+
+### Conclusion
+Biomedical engineering is a dynamic and interdisciplinary field that bridges the gap between engineering and medical sciences. This scope document outlines the key areas within the domain, identifying what is included, excluded, and areas of overlap. It aims to establish clear boundaries and terminology for effective collaboration and innovation moving forward.

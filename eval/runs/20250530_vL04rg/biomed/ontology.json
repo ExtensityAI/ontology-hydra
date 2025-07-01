@@ -1,0 +1,1283 @@
+{
+    "name": "Biomedical engineering is a multidisciplinary field that integrates principles of engineering with biological and medical sciences to develop technologies that improve healthcare. A key area within the field is the design and regulation of medical devices, particularly with regard to patient safety. For instance, attachments on medical devices that are not intended to heat the patient must not exceed a surface temperature of 41\u00b0C. This threshold is established to prevent skin damage, thermal burns, and unintended increases in body temperature, ensuring a safe interaction between devices and the human body.\n\nAnother important aspect of biomedical engineering is the application of electromagnetic waves in diagnostic imaging. Technologies such as thermography, X-rays, microwaves, ultraviolet, and infrared imaging are used to visualize physiological parameters, detect abnormalities, and assist in clinical decision-making. These imaging modalities leverage different bands of the electromagnetic spectrum, each suited for specific diagnostic purposes.\n\nUnderstanding human anatomy, especially organ structure, is also critical. For example, the heart wall is composed of three distinct layers\u2014epicardium, myocardium, and endocardium\u2014in that specific order. This anatomical knowledge is essential for the development of accurate diagnostic tools and interventions in cardiology.\n\nIn the realm of artificial organs, biomedical engineers must select materials that are both biocompatible and functionally effective. For instance, membrane oxygenators in heart-lung machines often use materials like silicone rubber or Teflon. These materials are chosen based on their permeability and ability to safely interact with blood and other tissues during procedures such as cardiopulmonary bypass.\n\nBiomedical signal processing is another core area, involving the interpretation of biological signals using techniques like modulation, demodulation, and amplification. These methods are critical for converting analog physiological data into meaningful diagnostic information, though not all concepts from general signal processing\u2014such as synthesis\u2014are applicable in the medical context.\n\nFinally, diagnostic devices such as bone densitometers highlight the precision of biomedical technologies. These devices, which use X-rays or ultrasound, are specialized tools designed to measure bone mineral density and assess conditions like osteoporosis. Their specificity contrasts with more general medical instruments like blood pressure monitors, underscoring the tailored nature of biomedical engineering solutions.\n\nOverall, biomedical engineering serves as a bridge between engineering innovation and medical application, focusing on developing safe, effective, and technologically advanced solutions to enhance patient care.",
+    "subclass_relations": [
+        {
+            "subclass": "PatientExperience",
+            "superclass": "Experience"
+        },
+        {
+            "subclass": "DiagnosticPrecision",
+            "superclass": "PrecisionCriterion"
+        },
+        {
+            "subclass": "Ceramic",
+            "superclass": "Material"
+        },
+        {
+            "subclass": "DiagnosticTool",
+            "superclass": "MedicalDevice"
+        },
+        {
+            "subclass": "BiologicalTissue",
+            "superclass": "BiologicalStructure"
+        },
+        {
+            "subclass": "FunctionalityConcern",
+            "superclass": "Concern"
+        },
+        {
+            "subclass": "ElectromagneticWaveModality",
+            "superclass": "ImagingModality"
+        },
+        {
+            "subclass": "TemperatureSafetyProtocol",
+            "superclass": "SafetyProtocol"
+        },
+        {
+            "subclass": "DesignProperty",
+            "superclass": "Property"
+        },
+        {
+            "subclass": "BiocompatibilityConcern",
+            "superclass": "Concern"
+        },
+        {
+            "subclass": "HealthInformaticsSystem",
+            "superclass": "InformationSystem"
+        },
+        {
+            "subclass": "BiomedicalAttribute",
+            "superclass": "Attribute"
+        },
+        {
+            "subclass": "RegulatoryRole",
+            "superclass": "Role"
+        },
+        {
+            "subclass": "Intervention",
+            "superclass": "MedicalProcedure"
+        },
+        {
+            "subclass": "SustainableMedicalDevice",
+            "superclass": "MedicalDevice"
+        },
+        {
+            "subclass": "PhysiologicalKnowledge",
+            "superclass": "MedicalKnowledge"
+        },
+        {
+            "subclass": "BiocompatibleMaterial",
+            "superclass": "ArtificialOrganMaterialSelection"
+        },
+        {
+            "subclass": "MeasurementAccuracy",
+            "superclass": "AccuracyCriterion"
+        },
+        {
+            "subclass": "RegulatoryChallenge",
+            "superclass": "Challenge"
+        },
+        {
+            "subclass": "HeartAnatomyLayer",
+            "superclass": "AnatomicalStructure"
+        },
+        {
+            "subclass": "RegulatoryIntegration",
+            "superclass": "Integration"
+        },
+        {
+            "subclass": "OptimizationTechnique",
+            "superclass": "Technique"
+        },
+        {
+            "subclass": "InterdisciplinaryStandards",
+            "superclass": "Standard"
+        },
+        {
+            "subclass": "MembraneOxygenator",
+            "superclass": "ArtificialOrgan"
+        },
+        {
+            "subclass": "AdvancedImagingTechnology",
+            "superclass": "DiagnosticImagingTechnology"
+        },
+        {
+            "subclass": "ArtificialOrganMaterialSelection",
+            "superclass": "MaterialSelectionProcess"
+        },
+        {
+            "subclass": "OrganStructure",
+            "superclass": "BiologicalStructure"
+        },
+        {
+            "subclass": "BiocompatibleMaterialSelection",
+            "superclass": "MaterialSelectionProcess"
+        },
+        {
+            "subclass": "ErgonomicUserInterface",
+            "superclass": "UserInterface"
+        },
+        {
+            "subclass": "CarbonFootprintReductionPractice",
+            "superclass": "Practice"
+        },
+        {
+            "subclass": "AISystemIntegration",
+            "superclass": "SystemIntegration"
+        },
+        {
+            "subclass": "MedicalDevice",
+            "superclass": "Device"
+        },
+        {
+            "subclass": "ImagingModality",
+            "superclass": "DiagnosticImagingTechnology"
+        },
+        {
+            "subclass": "SafetyStandard",
+            "superclass": "RegulatoryStandard"
+        },
+        {
+            "subclass": "AIApplication",
+            "superclass": "SoftwareTool"
+        },
+        {
+            "subclass": "BiomedicalEngineeringInteraction",
+            "superclass": "Interaction"
+        },
+        {
+            "subclass": "SurfaceTemperatureLimit",
+            "superclass": "TemperatureConstraint"
+        },
+        {
+            "subclass": "PrecisionDiagnosticDevice",
+            "superclass": "DiagnosticTool"
+        },
+        {
+            "subclass": "DiagnosticImagingStandard",
+            "superclass": "RegulatoryStandard"
+        },
+        {
+            "subclass": "InsurancePolicy",
+            "superclass": "Policy"
+        },
+        {
+            "subclass": "ElectromagneticDiagnosticApplication",
+            "superclass": "ElectromagneticWaveApplication"
+        },
+        {
+            "subclass": "DiagnosticImagingTechnologyUsingEMW",
+            "superclass": "DiagnosticImagingTechnology"
+        },
+        {
+            "subclass": "BiomedicalParameter",
+            "superclass": "Parameter"
+        },
+        {
+            "subclass": "AIInDiagnosticImaging",
+            "superclass": "AIApplication"
+        },
+        {
+            "subclass": "DiagnosticDeviceAttribute",
+            "superclass": "DeviceAttribute"
+        },
+        {
+            "subclass": "DiagnosticDevice",
+            "superclass": "Device"
+        },
+        {
+            "subclass": "RegulatoryStandard",
+            "superclass": "Standard"
+        },
+        {
+            "subclass": "ClinicalDiagnostic",
+            "superclass": "ClinicalApplication"
+        },
+        {
+            "subclass": "MedicalDeviceAttachment",
+            "superclass": "MedicalDevice"
+        },
+        {
+            "subclass": "ClinicalApplication",
+            "superclass": "MedicalApplication"
+        },
+        {
+            "subclass": "Body",
+            "superclass": "BiologicalSystem"
+        },
+        {
+            "subclass": "BiocompatibilityTestCriterion",
+            "superclass": "Criterion"
+        },
+        {
+            "subclass": "BiomedicalInnovation",
+            "superclass": "Innovation"
+        },
+        {
+            "subclass": "UserInclusivityCriterion",
+            "superclass": "Criterion"
+        },
+        {
+            "subclass": "SafetyRequirement",
+            "superclass": "Requirement"
+        },
+        {
+            "subclass": "BiomedicalSignalInterpretation",
+            "superclass": "BiomedicalSignalProcessing"
+        },
+        {
+            "subclass": "ArtificialOrgan",
+            "superclass": "MedicalDevice"
+        },
+        {
+            "subclass": "PermeabilityCharacteristic",
+            "superclass": "MaterialProperty"
+        },
+        {
+            "subclass": "DesignFeature",
+            "superclass": "Feature"
+        },
+        {
+            "subclass": "BiocompatibleMaterial",
+            "superclass": "Material"
+        },
+        {
+            "subclass": "NonHeatingMedicalDeviceAttachment",
+            "superclass": "MedicalDeviceAttachment"
+        },
+        {
+            "subclass": "BiocompatibleProperty",
+            "superclass": "Property"
+        },
+        {
+            "subclass": "CardiologyTool",
+            "superclass": "MedicalDevice"
+        },
+        {
+            "subclass": "RealTimeMonitoring",
+            "superclass": "MonitoringProcess"
+        },
+        {
+            "subclass": "BiomaterialDesign",
+            "superclass": "DesignProcess"
+        },
+        {
+            "subclass": "DataAnalyticsTool",
+            "superclass": "SoftwareTool"
+        },
+        {
+            "subclass": "AIEnhancedFunctionality",
+            "superclass": "Functionality"
+        },
+        {
+            "subclass": "BiomedicalSignalProcessingTechnique",
+            "superclass": "SignalProcessingTechnique"
+        },
+        {
+            "subclass": "ImplantableDeviceMaterialSelection",
+            "superclass": "MaterialSelectionProcess"
+        },
+        {
+            "subclass": "BiocompatibilityCriteria",
+            "superclass": "Criterion"
+        },
+        {
+            "subclass": "BiomedicalSignalProcessing",
+            "superclass": "SignalProcessing"
+        },
+        {
+            "subclass": "DiagnosticImagingDevice",
+            "superclass": "MedicalDevice"
+        },
+        {
+            "subclass": "Integration",
+            "superclass": "Process"
+        },
+        {
+            "subclass": "ElectromagneticSpectrumApplication",
+            "superclass": "ElectromagneticWaveApplication"
+        },
+        {
+            "subclass": "HeartWallLayer",
+            "superclass": "AnatomicalStructure"
+        },
+        {
+            "subclass": "AnatomicalKnowledge",
+            "superclass": "MedicalKnowledge"
+        },
+        {
+            "subclass": "AIIntegration",
+            "superclass": "Integration"
+        }
+    ],
+    "object_properties": [
+        {
+            "name": "affectsPerformanceAndSafety",
+            "domain": [
+                "Material"
+            ],
+            "range": [
+                "MembraneOxygenator"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "employsSafetyProtocol",
+            "domain": [
+                "MedicalDeviceAttachment"
+            ],
+            "range": [
+                "TemperatureSafetyProtocol"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "selectsBiocompatibleMaterials",
+            "domain": [
+                "ArtificialOrgan"
+            ],
+            "range": [
+                "BiocompatibleMaterial"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "prioritizesConsideration",
+            "domain": [
+                "ErgonomicUserInterface"
+            ],
+            "range": [
+                "Consideration"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "supportsAnatomicalConcept",
+            "domain": [
+                "DiagnosticDevice",
+                "TherapeuticIntervention"
+            ],
+            "range": [
+                "AnatomicalConcept"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "influencesToolDesign",
+            "domain": [
+                "OrganStructure"
+            ],
+            "range": [
+                "DiagnosticToolDesign"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "evaluatesCostEffectiveness",
+            "domain": [
+                "BiomedicalInnovation"
+            ],
+            "range": [
+                "CostEffectivenessCriterion"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "differsInBiomedicalApplication",
+            "domain": [
+                "BiomedicalSignalProcessing"
+            ],
+            "range": [
+                "GeneralSignalProcessing"
+            ],
+            "characteristics": [
+                {
+                    "value": "inverseFunctional"
+                }
+            ]
+        },
+        {
+            "name": "addressesSafetyAndEfficacy",
+            "domain": [
+                "ElectromagneticWaveApplication"
+            ],
+            "range": [
+                "DiagnosticImagingTechnology"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "playsRegulatoryRole",
+            "domain": [
+                "RegulatoryStandard"
+            ],
+            "range": [
+                "RegulatoryRole"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "compliesWithSafetyRequirement",
+            "domain": [
+                "MedicalDeviceDesign"
+            ],
+            "range": [
+                "SafetyRequirement"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "accuratelyDiagnoses",
+            "domain": [
+                "AdvancedImagingTechnology"
+            ],
+            "range": [
+                "Patient"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "impactsDiagnosticPrecision",
+            "domain": [
+                "BiomedicalDevice"
+            ],
+            "range": [
+                "DiagnosticPrecision"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "ensuresInteroperability",
+            "domain": [
+                "MedicalDevice"
+            ],
+            "range": [
+                "HealthInformationSystem"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "appliesRegulatoryStandards",
+            "domain": [
+                "BiomedicalEngineering"
+            ],
+            "range": [
+                "InterdisciplinaryStandards"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "impactsCardiologyToolDevelopment",
+            "domain": [
+                "HeartWallLayer"
+            ],
+            "range": [
+                "CardiologyTool"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "ensuresAccuracyInMeasurement",
+            "domain": [
+                "DiagnosticDevice"
+            ],
+            "range": [
+                "MeasurementAccuracy"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "enhancesAccuracyAndEfficiency",
+            "domain": [
+                "AIInDiagnosticImaging"
+            ],
+            "range": [
+                "ClinicalDiagnostic"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "ensuresPatientSafety",
+            "domain": [
+                "ImagingMethod"
+            ],
+            "range": [
+                "PatientSafety"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "integratesAI",
+            "domain": [
+                "BiomedicalEngineering"
+            ],
+            "range": [
+                "AIIntegration"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "usedToClassifyDevice",
+            "domain": [
+                "DiagnosticDevice"
+            ],
+            "range": [
+                "BiomedicalParameter"
+            ],
+            "characteristics": [
+                {
+                    "value": "inverseFunctional"
+                }
+            ]
+        },
+        {
+            "name": "mustNavigate",
+            "domain": [
+                "DiagnosticImagingDevice"
+            ],
+            "range": [
+                "RegulatoryChallenge"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "improvesInterpretation",
+            "domain": [
+                "BiomedicalSignalProcessing"
+            ],
+            "range": [
+                "BiomedicalSignalInterpretation"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "appliedInClinicalDiagnostics",
+            "domain": [
+                "ImagingModality"
+            ],
+            "range": [
+                "ClinicalApplication"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "bestPracticesForMaterialSelection",
+            "domain": [
+                "ArtificialOrgan"
+            ],
+            "range": [
+                "BiocompatibleMaterialSelection"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "integratesHumanAnatomyAndPhysiology",
+            "domain": [
+                "DiagnosticDevice"
+            ],
+            "range": [
+                "AnatomicalKnowledge",
+                "PhysiologicalKnowledge"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "utilizesElectromagneticBand",
+            "domain": [
+                "DiagnosticImagingModality"
+            ],
+            "range": [
+                "ElectromagneticDiagnosticApplication"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "facesIntegrationChallenges",
+            "domain": [
+                "EngineeringInnovation"
+            ],
+            "range": [
+                "RegulatoryStandard"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasChallengesInDevelopment",
+            "domain": [
+                "SustainableMedicalDevice"
+            ],
+            "range": [
+                "DevelopmentChallenge"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "meetsRegulatoryStandard",
+            "domain": [
+                "Material"
+            ],
+            "range": [
+                "RegulatoryStandard"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "impactsMaterialSelection",
+            "domain": [
+                "RegulatoryStandard"
+            ],
+            "range": [
+                "Material"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasSafetyConstraint",
+            "domain": [
+                "MedicalDeviceAttachment"
+            ],
+            "range": [
+                "SafetyStandard"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "differentiatesDeviceType",
+            "domain": [
+                "PrecisionDiagnosticDevice"
+            ],
+            "range": [
+                "GeneralMedicalInstrument"
+            ],
+            "characteristics": [
+                {
+                    "value": "inverseFunctional"
+                }
+            ]
+        },
+        {
+            "name": "isOptimizedForIntegration",
+            "domain": [
+                "Ceramic"
+            ],
+            "range": [
+                "Integration",
+                "Body"
+            ],
+            "characteristics": [
+                {
+                    "value": "reflexive"
+                }
+            ]
+        },
+        {
+            "name": "ensuresSafetyAndEffectiveness",
+            "domain": [
+                "DesignFeature"
+            ],
+            "range": [
+                "MedicalDevice"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasBiocompatibilityCriteria",
+            "domain": [
+                "ArtificialOrgan",
+                "MedicalImplant"
+            ],
+            "range": [
+                "BiocompatibilityCriteria"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "drivesDevelopment",
+            "domain": [
+                "AnatomicalKnowledge",
+                "PhysiologicalKnowledge"
+            ],
+            "range": [
+                "DiagnosticTool"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "hasClinicalApplication",
+            "domain": [
+                "DiagnosticImagingTechnologyUsingEMW"
+            ],
+            "range": [
+                "ClinicalApplication"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "usedInRealTimeMonitoring",
+            "domain": [
+                "BiomedicalSignalProcessingTechnique"
+            ],
+            "range": [
+                "RealTimeMonitoring"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "incorporatesAnatomicalKnowledge",
+            "domain": [
+                "DiagnosticTool"
+            ],
+            "range": [
+                "AnatomicalKnowledge",
+                "PhysiologicalKnowledge"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "interactsWithBiologicalTissue",
+            "domain": [
+                "Material"
+            ],
+            "range": [
+                "BiologicalTissue"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "differsInApplication",
+            "domain": [
+                "ElectromagneticWaveModality"
+            ],
+            "range": [
+                "MedicalImagingDiagnostic"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasBiocompatibleProperty",
+            "domain": [
+                "BiocompatibleMaterial"
+            ],
+            "range": [
+                "BiocompatibleProperty"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "emphasizesCriteria",
+            "domain": [
+                "RegulatoryGuideline"
+            ],
+            "range": [
+                "Criterion"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "regulatedByStandard",
+            "domain": [
+                "ArtificialIntelligenceApplication"
+            ],
+            "range": [
+                "RegulatoryStandard"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "influencesAdoption",
+            "domain": [
+                "InsurancePolicy"
+            ],
+            "range": [
+                "BiomedicalInnovation"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "usesBestPractice",
+            "domain": [
+                "MedicalImagingFacility"
+            ],
+            "range": [
+                "CarbonFootprintReductionPractice"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasSurfaceTemperatureLimit",
+            "domain": [
+                "MedicalDevice"
+            ],
+            "range": [
+                "SurfaceTemperatureLimit"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "usesElectromagneticSpectrum",
+            "domain": [
+                "ImagingModality"
+            ],
+            "range": [
+                "ElectromagneticSpectrumApplication"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "enhancesFunctionality",
+            "domain": [
+                "AIApplication"
+            ],
+            "range": [
+                "BiomedicalEngineeringSolution"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "ensuresDurabilityAndEaseOfUse",
+            "domain": [
+                "MedicalDevice"
+            ],
+            "range": [
+                "DesignProperty"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "requiresAnatomicalKnowledgeForDevelopment",
+            "domain": [
+                "DiagnosticTool",
+                "Intervention"
+            ],
+            "range": [
+                "AnatomicalKnowledge"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "hasCriticalProperty",
+            "domain": [
+                "BiocompatibleMaterial"
+            ],
+            "range": [
+                "Property"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "supportsTemperatureRegulation",
+            "domain": [
+                "Material"
+            ],
+            "range": [
+                "MedicalDevice"
+            ],
+            "characteristics": [
+                {
+                    "value": "inverseFunctional"
+                }
+            ]
+        },
+        {
+            "name": "integratesAIWithHealthInformatics",
+            "domain": [
+                "AIApplication"
+            ],
+            "range": [
+                "HealthInformaticsSystem"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "optimizesResolution",
+            "domain": [
+                "OptimizationTechnique"
+            ],
+            "range": [
+                "MRI"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "distinguishesModality",
+            "domain": [
+                "ImagingModality"
+            ],
+            "range": [
+                "ClinicalApplication"
+            ],
+            "characteristics": [
+                {
+                    "value": "inverseFunctional"
+                }
+            ]
+        },
+        {
+            "name": "categorizedBy",
+            "domain": [
+                "DiagnosticImagingTechnologyUsingEMW"
+            ],
+            "range": [
+                "ImagingModality"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "integratesAI",
+            "domain": [
+                "BiomedicalEngineering"
+            ],
+            "range": [
+                "AISystemIntegration"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "selectsBiocompatibilityTestCriterion",
+            "domain": [
+                "ArtificialOrganMaterialSelection"
+            ],
+            "range": [
+                "BiocompatibilityTestCriterion"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "guidesMaterialSelection",
+            "domain": [
+                "BiocompatibilityConcern",
+                "FunctionalityConcern"
+            ],
+            "range": [
+                "ImplantableDeviceMaterialSelection"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "contributesToClinicalDiagnostic",
+            "domain": [
+                "ElectromagneticImagingModality"
+            ],
+            "range": [
+                "ClinicalDiagnostic"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "evaluatesSafetyAndEfficacy",
+            "domain": [
+                "MedicalDeviceDesign"
+            ],
+            "range": [
+                "SafetyCriterion",
+                "EfficacyCriterion"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "analyzesTemperatureImpact",
+            "domain": [
+                "SurfaceTemperatureLimit"
+            ],
+            "range": [
+                "PatientSafety"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "regulatesTemperature",
+            "domain": [
+                "NonHeatingMedicalDeviceAttachment"
+            ],
+            "range": [
+                "TemperatureRegulation"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "shapesDesign",
+            "domain": [
+                "PatientExperience"
+            ],
+            "range": [
+                "DiagnosticImagingTechnology"
+            ],
+            "characteristics": []
+        },
+        {
+            "name": "enhancesDesign",
+            "domain": [
+                "AIApplication",
+                "DataAnalyticsTool"
+            ],
+            "range": [
+                "BiomaterialDesign"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "addressesUserInclusivity",
+            "domain": [
+                "MedicalDeviceDesign"
+            ],
+            "range": [
+                "UserInclusivityCriterion"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "considersMaterialPermeability",
+            "domain": [
+                "MaterialSelectionProcess"
+            ],
+            "range": [
+                "PermeabilityCharacteristic"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "includedInTechniques",
+            "domain": [
+                "BiomedicalSignalProcessing"
+            ],
+            "range": [
+                "SignalProcessingTechnique"
+            ],
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "relatedToFunctionalityAndSustainability",
+            "domain": [
+                "BiocompatibleMaterialSelection"
+            ],
+            "range": [
+                "FunctionalityConcern",
+                "SustainabilityConcern"
+            ],
+            "characteristics": []
+        }
+    ],
+    "data_properties": [
+        {
+            "name": "hasCriticalAttribute",
+            "domain": [
+                "BiocompatibleMaterial"
+            ],
+            "range": {
+                "value": "xsd:string"
+            },
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "definesBiocompatibility",
+            "domain": [
+                "BiocompatibilityConcern"
+            ],
+            "range": {
+                "value": "xsd:string"
+            },
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "materialsHaveTemperatureConstraint",
+            "domain": [
+                "Material"
+            ],
+            "range": {
+                "value": "xsd:float"
+            },
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "impactOnPatientSafety",
+            "domain": [
+                "MedicalDevice"
+            ],
+            "range": {
+                "value": "xsd:string"
+            },
+            "characteristics": []
+        },
+        {
+            "name": "impactOnPatientComfort",
+            "domain": [
+                "DiagnosticImagingTechnology"
+            ],
+            "range": {
+                "value": "xsd:integer"
+            },
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        },
+        {
+            "name": "challengesInInteroperability",
+            "domain": [
+                "MedicalDevice",
+                "HealthInformationSystem"
+            ],
+            "range": {
+                "value": "xsd:string"
+            },
+            "characteristics": [
+                {
+                    "value": "functional"
+                }
+            ]
+        }
+    ]
+}

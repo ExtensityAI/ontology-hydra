@@ -1,0 +1,48 @@
+## Scope Document: Biomedical Engineering
+
+### 1. Introduction
+Biomedical engineering is a multidisciplinary field that integrates principles of engineering with biological and medical sciences to develop technologies that improve healthcare. Key areas include the design and regulation of medical devices, application of electromagnetic waves in diagnostic imaging, and the development of artificial organs.
+
+### 2. Key Topics
+
+#### 2.1 Medical Devices
+- Design and regulation with a focus on patient safety
+- Temperature regulation, e.g., devices not exceeding a surface temperature of 41°C
+- Regulatory compliance and standards for device integrity
+
+#### 2.2 Diagnostic Imaging
+- Use of electromagnetic waves including:
+  - Thermography
+  - X-rays
+  - Microwaves
+  - Ultraviolet
+  - Infrared imaging
+- Visualization of physiological parameters and detection of abnormalities
+
+#### 2.3 Human Anatomy
+- Understanding organ structures important for device development
+- Example: Heart layers—epicardium, myocardium, endocardium
+
+#### 2.4 Artificial Organs
+- Selection and testing of biocompatible materials
+- Examples of materials: Silicone rubber, Teflon
+- Application in devices like membrane oxygenators
+
+#### 2.5 Biomedical Signal Processing
+- Interpretation and processing of biological signals
+- Techniques include modulation, demodulation, and amplification
+
+#### 2.6 Specialized Diagnostic Devices
+- Use of X-rays or ultrasound in bone densitometers
+- Specificity versus general medical instruments like blood pressure monitors
+
+### 3. Exclusions
+- General signal processing techniques not specific to the medical field, e.g., synthesis
+- Non-medical engineering applications
+
+### 4. Gray Areas/Overlaps
+- Possible overlaps with healthcare policy, especially in regulatory standards
+- Interaction between technology innovation and patient safety in device development
+
+### 5. Conclusion
+Biomedical engineering serves as an essential bridge between engineering innovation and medical application, focusing on developing safe, effective, and technologically advanced solutions to enhance patient care.

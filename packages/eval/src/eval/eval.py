@@ -20,7 +20,7 @@ NO_ANSWER_THRESHOLD = 0.5
 squadv2 = SquadV2()
 
 
-SQUAD_TRAIN_DATASET_PATH = Path("eval/train-v2.0.json")
+SQUAD_TRAIN_DATASET_PATH = Path(__file__).parent.parent.parent.parent.parent / "MedExQA" / "test" / "biomedical_engineer_test.json"
 
 if not SQUAD_TRAIN_DATASET_PATH.exists():
     raise FileNotFoundError(
@@ -52,7 +52,7 @@ def _generate_kg(texts: list[str], domain: str, kg_path: Path, ontology: Ontolog
         return KG.model_validate_json(kg_path.read_text(encoding="utf-8"))
 
     kg = generate_kg(
-        kg_path
+        kg_path,
         texts,
         domain,
         ontology=ontology,

@@ -1,0 +1,45 @@
+1. Introduction to Biomedical Engineering
+   - Definition: Biomedical engineering is a multidisciplinary field that integrates principles of engineering with biological and medical sciences to develop technologies that improve healthcare.
+   - Focus: The development of safe, effective, and technologically advanced solutions to enhance patient care.
+
+2. Medical Devices
+   2.1. Design and Regulation
+       - Emphasis on ensuring device safety and regulatory compliance.
+       - Key threshold for external device temperature: Surface temperature must not exceed 41°C to prevent skin damage and other issues.
+   2.2. Exclusion
+       - Concepts from general signal processing like synthesis that are not applicable in the medical context.
+
+3. Diagnostic Imaging
+   3.1. Use of Electromagnetic Waves
+       - Utilization of imaging modalities such as thermography, X-rays, microwaves, ultraviolet, and infrared imaging.
+       - Each modality operates on specific bands of the electromagnetic spectrum for diagnostic purposes.
+   3.2. Gray Areas
+       - Overlap with adjacent domains such as radiology and imaging technology.
+
+4. Understanding Human Anatomy
+   4.1. Specific Focus
+       - Detailed anatomical knowledge for developing diagnostic tools, especially in cardiology.
+       - Example: Composition of the heart wall (epicardium, myocardium, endocardium).
+   4.2. Exclusion
+       - General anatomy studies without direct application to device design and function.
+
+5. Artificial Organs
+   5.1. Material Selection
+       - Importance of biocompatibility and functionality in materials such as silicone rubber or Teflon for membrane oxygenators.
+   5.2. Exclusion
+       - Non-medical applications of similar materials.
+
+6. Biomedical Signal Processing
+   6.1. Techniques
+       - Focus on modulation, demodulation, and amplification for converting analog physiological data into diagnostic information.
+   6.2. Exclusion
+       - Broader signal processing concepts irrelevant to medical diagnostics.
+
+7. Specialized Diagnostic Devices
+   7.1. Types of Devices
+       - Discussion of bone densitometers and their specific use cases contrasted with general medical instruments like blood pressure monitors.
+   7.2. Exclusion
+       - General diagnostic tools without specialized biomedical engineering applications.
+
+8. Conclusion
+   - Biomedical engineering acts as a bridge between engineering innovation and medical applications, emphasizing the need for collaboration among engineers, clinicians, and researchers to foster advancements in patient care.

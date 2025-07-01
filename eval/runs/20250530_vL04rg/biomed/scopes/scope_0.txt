@@ -1,0 +1,36 @@
+## Scope Document for Biomedical Engineering
+
+### 1. Introduction
+This scope document defines the key topics and boundaries within the domain of Biomedical Engineering, focusing on medical devices, diagnostic imaging, biomaterials, and biomedical signal processing. It incorporates insights from experts in these fields to create a shared understanding for future discussions.
+
+### 2. Included Topics
+2.1 Medical Devices
+- Design and development of medical devices with a focus on patient safety, such as ensuring devices do not exceed a surface temperature of 41°C
+- Regulatory compliance for medical devices, particularly regarding biocompatibility and patient interaction
+- Implantable cardiac devices, emphasizing biocompatibility and safety standards
+- Artificial organs and selection of biocompatible materials (e.g., membrane oxygenators)
+
+2.2 Diagnostic Imaging
+- Use of electromagnetic waves in imaging (thermography, X-rays, microwaves, UV, and infrared)
+- Imaging techniques targeted at comfort and improved patient experience
+- Consideration of human-centered design in imaging equipment
+
+2.3 Biomaterials
+- Development and optimization of ceramic materials for bone grafts and regeneration
+- Use of data analytics and AI in material science to meet regulatory standards
+- Focus on eco-friendly and sustainable design materials in medical devices
+
+2.4 Biomedical Signal Processing
+- Techniques for interpreting biological signals such as modulation, demodulation, and amplification
+- Excludes synthesis techniques not applicable to medical data context
+
+### 3. Excluded Topics
+- General engineering processes that are not tailored to the biomedical sphere
+- Non-medical applications of engineering and material science
+
+### 4. Gray Areas and Overlaps
+- Overlap with general material science in the context of biocompatibility and sustainable materials
+- Interaction between design principles in industrial design and human-centered healthcare technology
+
+### 5. Conclusion
+This document serves as a foundational reference point for discussions in Biomedical Engineering, establishing clear boundaries and a common vocabulary to facilitate advancements in patient-centric medical technologies.

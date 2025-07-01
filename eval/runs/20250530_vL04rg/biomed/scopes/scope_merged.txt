@@ -1,0 +1,57 @@
+## 1. Introduction to Biomedical Engineering
+
+Biomedical engineering is a multidisciplinary field that integrates engineering principles with biological and medical sciences. Its primary goal is to develop technologies that improve healthcare, focusing on patient safety and effective medical interventions.
+
+## 2. Key Topics in Biomedical Engineering
+
+### 2.1 Medical Devices
+
+- Design and regulation emphasizing patient safety and usability.
+- Surface temperature standards, e.g., ensuring non-heating attachments do not exceed 41°C.
+- Development and approval processes focusing on safety and regulatory compliance.
+- Selection of biocompatible materials for implants and artificial organs, such as in membrane oxygenators made with silicone rubber or Teflon.
+
+### 2.2 Diagnostic Imaging
+
+- Application of electromagnetic waves across modalities such as thermography, X-rays, microwaves, ultraviolet, and infrared imaging for clinical diagnostics.
+- Technologies essential for visualizing physiological parameters and assisting in clinical decision-making.
+
+### 2.3 Anatomy and Physiology Understanding
+
+- In-depth anatomical and physiological knowledge essential for developing diagnostic and therapeutic interventions. For example, the heart is composed of three layers: epicardium, myocardium, and endocardium.
+
+### 2.4 Artificial Organs & Biocompatibility
+
+- Criteria for selecting biocompatible materials ensuring biological compatibility and functional integrity.
+- Considerations include material permeability and interaction with biological tissues, focusing on sustainable and eco-friendly options.
+
+### 2.5 Biomedical Signal Processing
+
+- Techniques involve the interpretation of biological signals using modulation, demodulation, and amplification.
+- Exclusion of non-applicable signal processing concepts, such as synthesis.
+
+### 2.6 Specific Diagnostic Devices
+
+- Development of precision diagnostic devices like bone densitometers, contrasting with more general instruments.
+- These devices measure specific health parameters, such as bone mineral density for conditions like osteoporosis.
+
+## 3. Exclusions from the Scope
+
+- Exclusion of non-medical engineering disciplines and signal processing techniques not applicable to the medical field.
+- Omission of general engineering topics not directly related to healthcare advancements.
+
+## 4. Gray Areas and Overlaps
+
+### 4.1 Interdisciplinary Regulatory Standards and AI Integration
+
+- Overlaps with pharmaceutical regulation concerning device safety and efficacy standards.
+- Emerging intersections with AI technologies in diagnostics and patient monitoring.
+
+### 4.2 Medical Field Interfaces
+
+- Shared boundaries with clinical practices and material sciences regarding biocompatible materials.
+- Collaborative opportunities with health informatics in data utilization for patient outcomes.
+
+## 5. Conclusion
+
+Biomedical engineering essentially bridges the gap between engineering innovation and medical applications. It serves as a reference for discussions in the field, ensuring a shared understanding among stakeholders and promoting innovation and alignment towards enhanced healthcare solutions.

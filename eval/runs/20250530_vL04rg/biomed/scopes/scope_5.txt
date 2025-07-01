@@ -1,0 +1,46 @@
+## Biomedical Engineering Scope Document
+
+### 1. Introduction
+Biomedical engineering is a multidisciplinary field integrating engineering principles with biological and medical sciences to improve healthcare. This document outlines the key topics and boundaries within the domain, leveraging expertise from various personas.
+
+### 2. Scope Definition
+#### 2.1 Included Topics
+- **Medical Device Design and Regulation**
+  - Standards for device safety, particularly device surface temperature limits.
+  - Regulatory frameworks harmonizing international safety and efficacy standards.
+
+- **Diagnostic Imaging Technologies**
+  - Use of electromagnetic waves (thermography, X-rays, microwaves, ultraviolet, and infrared imaging).
+  - Development and regulation of imaging modalities for clinical decision-making.
+
+- **Human Anatomy and Physiology**
+  - Detailed understanding of organ structures, particularly cardiac anatomy.
+  - Application of anatomical knowledge to design prosthetics and diagnostic tools.
+
+- **Materials in Artificial Organs**
+  - Selection of biocompatible materials for safe interaction with human tissues.
+  - Use of materials like silicone rubber in membrane oxygenators.
+
+- **Biomedical Signal Processing**
+  - Techniques for interpreting biological signals (modulation, demodulation, amplification).
+  - Conversion of physiological data into diagnostic information.
+
+- **Diagnostic Devices**
+  - Design and precision of devices like bone densitometers for specialized assessments.
+
+#### 2.2 Explicit Exclusions
+- General signal processing techniques not applicable to the medical context (e.g., synthesis).
+- Non-medical applications of engineering or biological sciences.
+
+#### 2.3 Gray Areas and Overlaps
+- **Interdisciplinary Regulatory Standards**
+  - Overlaps with pharmaceutical regulation and standards.
+
+- **Adjacent Medical Fields**
+  - Potential overlaps with general medicine, surgery, and other specialized medical fields.
+
+- **Integration of AI**
+  - Emerging overlaps with the field of AI and its application in device innovations.
+
+### 3. Conclusion
+This scope document establishes a foundational understanding of biomedical engineering focused on device development, diagnostic technologies, and regulatory affairs. Clear boundaries are set, distinguishing core topics from excluded areas, while acknowledging interdisciplinary overlaps crucial for ongoing collaboration and innovation.

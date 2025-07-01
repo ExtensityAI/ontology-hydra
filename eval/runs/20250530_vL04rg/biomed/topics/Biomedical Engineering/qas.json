@@ -1,0 +1,862 @@
+{
+  "responses": [
+    {
+      "qid": "medexqa_0",
+      "answer": "The maximum surface temperature should comply with SafetyProtocol41C for device attachments that are non-heating medical device attachments.",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_1",
+      "answer": "Infrared is the band of electromagnetic waves used in a thermographic camera.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_10",
+      "answer": "The knowledge graph does not specify the properties of biomedical ceramic materials explicitly, but Hydroxyapatite is an example that interacts with bone tissue. Without specific property details, it's not possible to identify which property is not of biomedical ceramic materials.",
+      "no_answer_prob": 0.7,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_100",
+      "answer": "IsovolumetricContractionPhase is the period during the cardiac cycle when ventricular pressure increases sharply while all valves are closed, maintaining a constant ventricular volume.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_101",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_102",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_103",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_104",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_105",
+      "answer": "ShimmingCoil",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_106",
+      "answer": "GoldmannTonometer",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_107",
+      "answer": "BMode",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_108",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_109",
+      "answer": "TypeCFPart",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_11",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_110",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_111",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_112",
+      "answer": "IABP (Intra-Aortic Balloon Pump) is a medical device that assists heart function to increase cardiac output and prevent reduced oxygen supply to the brain due to decreased blood flow when blood pressure drops.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_113",
+      "answer": "Ligaments are passive biological tissues that mechanically connect bones to bones.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_114",
+      "answer": "Hydroxyapatite is the osteoconductive ceramic material most commonly used for artificial bones.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_115",
+      "answer": "QRSComplex is the ECG finding related to heart activity and would show abnormalities in the case of hyperkalemia causing delayed depolarization.",
+      "no_answer_prob": 0.2,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_116",
+      "answer": "The knowledge graph does not provide information about common characteristics of biomedical metal materials.",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_117",
+      "answer": "The knowledge graph does not provide specific information about the energy of gamma rays used in PET.",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_118",
+      "answer": "CollimatorHelmet is used to prevent degradation of image resolution due to Compton scattering in radiographic imaging equipment.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_119",
+      "answer": "Oxygenator is considered the most important device alongside the arterial pump in a cardiopulmonary bypass machine, supplying oxygen to venous blood and removing carbon dioxide.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_12",
+      "answer": "EvokedElectromyography",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_120",
+      "answer": "SPONTMode",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_121",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_122",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_123",
+      "answer": "Foot is a medical device and can be part of a lower limb prosthesis; no information about components NOT part of lower limb prosthesis is provided in the data.",
+      "no_answer_prob": 0.8,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_124",
+      "answer": "The knowledge graph lists materials like AnestheticMedicalGas and EmergencyMedicalGas but does not specify gases NOT used in anesthesia.",
+      "no_answer_prob": 0.8,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_125",
+      "answer": "The knowledge graph mentions BiometricSignalMeasurement as a measurement accuracy but does not provide information on considerations when measuring biometric signals or those that are not considered.",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_126",
+      "answer": "The knowledge graph contains no specific descriptions or incorrect statements about the thermal properties of the body.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_127",
+      "answer": "No data found in the knowledge graph about diagnostic radiation generating devices or specific devices to classify as not being diagnostic radiation generating devices.",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_128",
+      "answer": "No data found in the knowledge graph about the characteristics of the passive properties of biological tissues.",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_129",
+      "answer": "No data found in the knowledge graph about the actions occurring in the human body when excessive current flows.",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_13",
+      "answer": "No data found in the knowledge graph about components of an extracorporeal shock wave lithotripter.",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_130",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_131",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_132",
+      "answer": "HumanBodyInteraction is related to BiomedicalEngineeringInteraction, SympatheticNervousSystem is a Body, unrelated to HumanBodyInteraction",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_133",
+      "answer": "Centrifuge is a MedicalDevice used to separate solid particles in a liquid by spinning the sample and using the force to separate, purify, and concentrate components.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_134",
+      "answer": "No data found to determine the incorrect statement about radiation therapy.",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_135",
+      "answer": "No data found about the types of synovial joints.",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_136",
+      "answer": "No data found about the form of energy in a defibrillator or related incorrect statements.",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_137",
+      "answer": "No data found about specific materials unsuitable for needle electrodes inserted into the human body.",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_138",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_139",
+      "answer": "ArtificialRespirationMedicalGas is a material used for respiration, EmergencyMedicalGas is a material, AnestheticMedicalGas is a material, and ArtificialBloodVessel is a medical device; only medical gases as materials are related to medical gas use.",
+      "no_answer_prob": 0.2,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_14",
+      "answer": "Cerebellum is part of the brain related to balance, movement, and muscle tone; Thermoregulation is a biomedical parameter representing homeostatic regulation of body temperature.",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_140",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_141",
+      "answer": "BioresorbableMaterial",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_142",
+      "answer": "DermatologicalSurgery is widely used in dermatological surgery",
+      "no_answer_prob": 0.9,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_15",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_16",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_17",
+      "answer": "LiquidHelium is the gas used for freezing purposes such as preserving umbilical cord blood.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_18",
+      "answer": "No data found on the sequence of inflammatory response around the damaged wound tissue caused by the insertion of biomaterials.",
+      "no_answer_prob": 0.95,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_19",
+      "answer": "No data found regarding functions or purposes of an upper limb orthosis.",
+      "no_answer_prob": 0.95,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_2",
+      "answer": "No data found on suitable or unsuitable materials for the membrane oxygenator in an artificial heart-lung machine.",
+      "no_answer_prob": 0.95,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_20",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_21",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_22",
+      "answer": null,
+      "no_answer_prob": 0.8,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_23",
+      "answer": "RestingPotential is a BiomedicalParameter",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_24",
+      "answer": "Scintillator",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_25",
+      "answer": "no_data_found",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_26",
+      "answer": "MYCIN",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_27",
+      "answer": "no_data_found",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_28",
+      "answer": "FatigueTest",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_29",
+      "answer": "ProteinDenaturationAndAdsorptionPhenomenon",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_3",
+      "answer": "BoneDensitometer",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_30",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_31",
+      "answer": "DeviceAttachment does not use a catheter (not explicitly listed as a MedicalDevice involving catheter usage)",
+      "no_answer_prob": 0.6,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_32",
+      "answer": "BodyCompositionAnalyzer measures body composition by flowing a constant alternating current through the body and measuring impedance.",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_33",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_34",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_35",
+      "answer": "BioinertMaterial",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_36",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_37",
+      "answer": "AgAgCl",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_38",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_39",
+      "answer": "no_data_found",
+      "no_answer_prob": 0.95,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_4",
+      "answer": "no_data_found",
+      "no_answer_prob": 0.95,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_40",
+      "answer": "no_data_found",
+      "no_answer_prob": 0.95,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_41",
+      "answer": "no_data_found",
+      "no_answer_prob": 0.95,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_42",
+      "answer": "no_data_found",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_43",
+      "answer": "Beer's Law is related to the measurement of oxygen saturation.",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_44",
+      "answer": "PTFE is commonly known as Teflon and is used for making artificial blood vessels.",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_45",
+      "answer": "no_data_found",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_46",
+      "answer": "DopplerEffect",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_47",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_48",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_49",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_5",
+      "answer": "The correct order of the heart wall layers from outermost to innermost is Epicardium, Myocardium, Endocardium.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_50",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_51",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_52",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_53",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_54",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_55",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_56",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_57",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_58",
+      "answer": "EHR",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_59",
+      "answer": "Allergy",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_6",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_60",
+      "answer": "InVitroTest",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_61",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_62",
+      "answer": "Osmosis",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_63",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_64",
+      "answer": "Prosthesis",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_65",
+      "answer": "GammaKnifeUnit",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_66",
+      "answer": null,
+      "no_answer_prob": 0.95,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_67",
+      "answer": "SIMV",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_68",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_69",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_7",
+      "answer": "Pancreas",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_70",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_71",
+      "answer": "AgAgCl",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_72",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_73",
+      "answer": "FlexibleElectrode",
+      "no_answer_prob": 0.05,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_74",
+      "answer": "AlphaWave",
+      "no_answer_prob": 0.05,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_75",
+      "answer": "PGA is a biocompatible material that interacts with sutured tissue and is used as a medical suture material that is absorbable.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_76",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_77",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_78",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_79",
+      "answer": "StratumCorneum",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_8",
+      "answer": "XRayDiffractionAnalysis",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_80",
+      "answer": "Pt (Platinum)",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_81",
+      "answer": "medullaOblongata",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_82",
+      "answer": "No data found in the knowledge graph to determine mechanisms regulating the resting membrane potential.",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_83",
+      "answer": "ElectricalIonization is an example of ionizing radiation as it is a BiomedicalParameter related to ionization processes.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_84",
+      "answer": "No data found in the knowledge graph related to preventive methods for physically protecting files to reduce data damage.",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_85",
+      "answer": "ExtracorporealShockWaveLithotripter is the device that treats conditions such as stones in the body by applying high-energy shock waves intensively without surgery.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_86",
+      "answer": "no_data_found",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_87",
+      "answer": "Polyurethane",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_88",
+      "answer": "EarthLeakageCurrent",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_89",
+      "answer": "V6",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_9",
+      "answer": "PatientTable",
+      "no_answer_prob": 0.05,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_90",
+      "answer": "TibiaPerpendicularPhase",
+      "no_answer_prob": 0.01,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_91",
+      "answer": "InterferentialTherapyDevice",
+      "no_answer_prob": 0.05,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_92",
+      "answer": "DendriteComponent",
+      "no_answer_prob": 0.01,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_93",
+      "answer": "LiquidHelium",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_94",
+      "answer": "DICOM",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_95",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_96",
+      "answer": "Rad",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_97",
+      "answer": "CardiacOutput is a BiomedicalParameter.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_98",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_99",
+      "answer": "GammaRays, X-rays, and other ElectromagneticWaveModalities do not belong to particle radiation; particle radiation is not explicitly defined but Neutron and PositronEmitter are BiomedicalParameters indicating particle radiation.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    }
+  ]
+}
