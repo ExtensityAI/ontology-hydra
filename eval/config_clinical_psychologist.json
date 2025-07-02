@@ -1,7 +1,7 @@
 {
   "scenarios": [{
     "id": "clinical_psychologist",
-    "domain": null,
+    "domain": "The topics discussed in this clinical psychology material span a wide range of foundational and applied concepts essential to psychological assessment and therapy. A significant focus is placed on therapeutic techniques such as paradoxical intention, systematic desensitization, behavior shaping, and role-playing, each serving different functions in helping clients confront, process, and modify their emotional or behavioral patterns. Questions also delve into psychological testing and interpretation, including the precautions necessary when analyzing test results, the validity and reliability of psychological tests, and methods like survey research, controlled observation, and experimental design used in psychological research. Moreover, the test explores symptomatology and diagnosis, differentiating between positive and negative symptoms of schizophrenia, and examines appropriate clinical practices versus common misconceptions in therapy. Vocational and aptitude assessments such as the GATB (General Aptitude Test Battery) are also discussed in relation to career counseling. Overall, the content reflects a comprehensive overview of clinical psychology, integrating theoretical knowledge, diagnostic criteria, research methodology, and practical therapeutic strategies. ￼",
     "squad_titles": ["Clinical Psychology"]
   }]
 }
