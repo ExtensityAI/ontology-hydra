@@ -1,0 +1,862 @@
+{
+  "responses": [
+    {
+      "qid": "medexqa_0",
+      "answer": "41 degrees celsius",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_1",
+      "answer": "infrared band",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_10",
+      "answer": "easy to mold and process",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_100",
+      "answer": "isovolumetric contraction phase",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_101",
+      "answer": "The single-limb-support phase coincides with the swing phase of the opposite limb.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_102",
+      "answer": "Synovial fluid has the highest viscosity among biological tissues.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_103",
+      "answer": "Upper limb orthosis is not categorized based on impact on human joints; it maintains constant joint angle and protects weak muscles.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_104",
+      "answer": "Red and white blood cells are not measured by spectrophotometry, and spectrophotometry is not used for blood pressure or pulse measurement.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_105",
+      "answer": "shimming_coil",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_106",
+      "answer": "goldmann_tonometer",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_107",
+      "answer": "b_mode",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_108",
+      "answer": "supports human body",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_109",
+      "answer": "type_cf_part",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_11",
+      "answer": "in_vitro_test",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_110",
+      "answer": "1.67",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_111",
+      "answer": "metallic_prosthesis",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_112",
+      "answer": "iabp is a medical device that assists heart function to increase cardiac output and prevents reduced oxygen supply to the brain due to decreased blood flow to the brain when blood pressure drops.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_113",
+      "answer": "Ligaments are passive biological tissue that mechanically connect bones to bones.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_114",
+      "answer": "Hydroxyapatite is the osteoconductive ceramic material most commonly used for artificial bones.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_115",
+      "answer": "In hyperkalemia, the ECG finding is widening of the QRS wave.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_116",
+      "answer": "Brittleness",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_117",
+      "answer": "511keV",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_118",
+      "answer": "collimator_helmet",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_119",
+      "answer": "oxygenator",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_12",
+      "answer": "evoked_electromyography",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_120",
+      "answer": "spont_mode",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_121",
+      "answer": "200cm",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_122",
+      "answer": "coding improves accessibility of data",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_123",
+      "answer": "prosthetic_arm is NOT part of lower limb prosthesis.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_124",
+      "answer": "special_welding_gas is NOT used for medical gas (including anesthesia).",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_125",
+      "answer": "humidity and temperature affect biometric signal measurement but heart electrical activity is NOT affected by humidity or temperature.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_126",
+      "answer": "41 degrees celsius may cause thermal burns and can damage human skin tissue; it is considered safe temperature but may cause harm, which might be incorrect if assumed absolutely safe.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_127",
+      "answer": "Extracorporeal shock wave lithotripter is not a diagnostic radiation generating device; it is a treatment device applying high energy shock waves.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_128",
+      "answer": "Biological tissues do not have the property of electrical insulation; instead, they are electrically active.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_129",
+      "answer": "The knowledge graph does not provide explicit information on the actions occurring in the human body when excessive current flows, so this cannot be determined.",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_13",
+      "answer": "The temperature control device is not a component of an extracorporeal shock wave lithotripter.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_130",
+      "answer": "Extracorporeal shock wave lithotripter operates by focusing pressure waves generated by an electromagnetic vibration method involving a vibrating metal membrane with an electromagnet to create shock waves.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_131",
+      "answer": "Biomaterials must not cause inflammation or allergies, must not exhibit toxicity, and must have high biocompatibility (such as ag_agcl, platinum, and hydroxyapatite) to satisfy biocompatibility.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_132",
+      "answer": "Increase in secretion of digestive juices is not related to the sympathetic nervous system.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_133",
+      "answer": "The centrifuge separates solid particles in a liquid by spinning the sample and using centrifugal force to separate, purify, and concentrate components with specific weights or densities.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_134",
+      "answer": "The incorrect statement is that radiation therapy does not minimize impact on surrounding normal tissue. Actually, radiation therapy minimizes impact on surrounding normal tissue.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_135",
+      "answer": "Synovial joints are characterized by the presence of a plane joint with flat articulating surfaces, surrounded by a tight joint capsule and ligaments that limit movements and stabilize joints.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_136",
+      "answer": "The incorrect statement is that biphasic waveforms increase the size of energy in a defibrillator. Actually, biphasic waveforms do not increase the size of energy.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_137",
+      "answer": "Materials that are unsuitable for needle electrodes inserted into the human body are those that are toxic or corrode quickly. Specifically, zinc is toxic and corrodes quickly, making it unsuitable, while needle electrodes must have high biocompatibility and should not be toxic or corrode.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_138",
+      "answer": "Diffusion and convection are methods used for solute removal in hemodialysis, with ultrafiltration not being a method of solute removal in hemodialysis.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_139",
+      "answer": "Special welding gas is not used as a medical gas.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_14",
+      "answer": "The cerebellum is responsible for balance, movement, and muscle tone, and the hypothalamus maintains normal body temperature.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_140",
+      "answer": "Incorrect description: Microelectrodes are not used for measuring chemical substances (this is a use for microelectrodes), and they are very small electrodes (correct).",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_141",
+      "answer": "bioresorbable_materials",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_142",
+      "answer": "laser_devices",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_15",
+      "answer": "The knowledge graph does not provide information on incorrect descriptions about the gamma camera.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_16",
+      "answer": "The knowledge graph does not contain information to answer this combinatorial question about total codes needed.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_17",
+      "answer": "Nitrogen",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_18",
+      "answer": "capillary_dilation, cell_infiltration, regeneration, epithelialization, disintegration",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_19",
+      "answer": "supports body weight",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_2",
+      "answer": "ceramic membrane",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_20",
+      "answer": "synthesizing_and_breaking_down_glycogen",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_21",
+      "answer": "red_and_white_blood_cells",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_22",
+      "answer": "external_beam_therapy_devices",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_23",
+      "answer": "ion_movement",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_24",
+      "answer": "coincidence_circuit",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_25",
+      "answer": "electromyography",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_26",
+      "answer": "mycin",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_27",
+      "answer": "mass_defect",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_28",
+      "answer": "fatigue_test",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_29",
+      "answer": "protein_denaturation_and_adsorption",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_3",
+      "answer": "bone_densitometer",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_30",
+      "answer": "medical_device_risk_classification",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_31",
+      "answer": "fetal_stethoscope",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_32",
+      "answer": "body_composition_analyzer",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_33",
+      "answer": "electromyography",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_34",
+      "answer": "vibration",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_35",
+      "answer": "bioinert_materials",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_36",
+      "answer": "mass_defect",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_37",
+      "answer": "platinum",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_38",
+      "answer": "hypothalamus",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_39",
+      "answer": "Hemodialysis uses convection and diffusion methods for solute removal. No incorrect statement about hemodialysis is identified from the data.",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_4",
+      "answer": "The data does not provide information on methods for processing analog biological signals.",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_40",
+      "answer": "PACS enables sharing and analysis of medical images, uses standardized formats and protocols like DICOM, and supports standardized exchange methods. No clinical impact not related to PACS is stated.",
+      "no_answer_prob": 0.2,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_41",
+      "answer": "Heat transfer from biological tissues is affected by tissue density and tissue specific heat; the data does not specify incorrect combinations of these factors.",
+      "no_answer_prob": 0.7,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_42",
+      "answer": "The statement that is incorrect: \"heart sounds are directly related to bioelectrical phenomena\" because heart sounds are not directly related to bioelectrical phenomena.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_43",
+      "answer": "Beer law is related to the measurement of oxygen saturation.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_44",
+      "answer": "Teflon is commonly known as PTFE and used for artificial blood vessels.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_45",
+      "answer": "Increased bone density is NOT related to the use of artificial joints.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_46",
+      "answer": "doppler_effect",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_47",
+      "answer": "bio_surface_electrode shouldHaveContactWith large_area",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_48",
+      "answer": "unknown, no data found about goals not proposed by AMIA",
+      "no_answer_prob": 0.8,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_49",
+      "answer": "freezing_control",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_5",
+      "answer": "The correct order of the heart wall layers from outermost to innermost is epicardium, myocardium, and endocardium.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_50",
+      "answer": "No data found to determine which definition of electrocardiogram (ECG) waveforms is NOT correct.",
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_51",
+      "answer": "Brittleness is NOT a required property for metal materials used in artificial hip joints.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_52",
+      "answer": "The CT number of water is 0.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_53",
+      "answer": "leakage_current_test",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_54",
+      "answer": "thermal action causes destruction and is the most important effect of electromagnetic waves; high-frequency electromagnetic fields cause movement of ions and stimulate cells, not an incorrect description given in the data.",
+      "no_answer_prob": 0.8,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_55",
+      "answer": "An analog signal has the characteristic of continuous variation.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_56",
+      "answer": "order communication system",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_57",
+      "answer": "Biological phenomena have low reproducibility.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_58",
+      "answer": "electronic_health_record",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_59",
+      "answer": "allergy",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_6",
+      "answer": "The knowledge graph does not contain data about the modulus of elasticity of specific biomaterials to determine which has the lowest modulus of elasticity.",
+      "no_answer_prob": 0.95,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_60",
+      "answer": "implantation_test",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_61",
+      "answer": "humidity",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_62",
+      "answer": "osmosis",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_63",
+      "answer": "arteriovenous_fistula",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_64",
+      "answer": "Orthosis",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_65",
+      "answer": "Gamma knife units",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_66",
+      "answer": "Condenser",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_67",
+      "answer": "Synchronized intermittent mandatory ventilation",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_68",
+      "answer": "distribution_capacity",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_69",
+      "answer": "radiation_workers use film_badges to measure radiation exposure dose at least once a month",
+      "no_answer_prob": 0.7,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_7",
+      "answer": "insulin is produced by beta_cells",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_70",
+      "answer": "Modulation Transfer Function (MTF) is an indicator for spatial resolution in CT",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_71",
+      "answer": "ag_agcl",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_72",
+      "answer": "fat",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_73",
+      "answer": "flexible_electrode",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_74",
+      "answer": "alpha_wave",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_75",
+      "answer": "PGA (polyglycolic acid) is used for absorbable surgical sutures.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_76",
+      "answer": "Red and white blood cells are not measured by spectrophotometry.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_77",
+      "answer": "Heart sounds are not directly related to bioelectrical phenomena and thus are not a bioelectrical signal.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_78",
+      "answer": "Sample measurement is a method that measures biological tissues separated from the body.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_79",
+      "answer": "stratum_corneum",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_8",
+      "answer": "x_ray_diffraction_analysis",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_80",
+      "answer": "platinum",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_81",
+      "answer": "medulla_oblongata",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_82",
+      "answer": "Data not found to determine specific mechanisms that regulate resting membrane potential.",
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_83",
+      "answer": "X_rays are an example of ionizing radiation.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_84",
+      "answer": "Data encryption is not related to physical file protection methods, it protects data by preventing access.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_85",
+      "answer": "Extracorporeal shock wave lithotripter (eswl) can treat stones in the body by applying high-energy shock waves without surgery.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_86",
+      "answer": "fat is NOT a biometric variable measured for evaluation of respiratory function.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_87",
+      "answer": "polyurethane is the synthetic rubber material with best elasticity and toughness, biocompatible and elastic, used for artificial hearts.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_88",
+      "answer": "earth leakage current flows from the power supply through insulation to the protective earth and poses risk to patients or users.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_89",
+      "answer": "V6 is an ECG measurement not obtained from the limbs; it is measured from the chest wall.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_9",
+      "answer": "film_digitizer",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_90",
+      "answer": "gait_analysis_mid_swing_phase",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_91",
+      "answer": "interferential_therapy_device",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_92",
+      "answer": "dendrites",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_93",
+      "answer": "liquid_helium",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_94",
+      "answer": "dicom",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_95",
+      "answer": "chemical_change_in_oral_cavity",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_96",
+      "answer": "rad",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_97",
+      "answer": "Cardiac output refers to volume of blood pumped by heart into aorta per minute.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_98",
+      "answer": "PET requires a cyclotron.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_99",
+      "answer": "Gamma rays do not belong to particle radiation; they are electromagnetic radiation.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    }
+  ]
+}

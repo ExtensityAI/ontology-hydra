@@ -41,7 +41,7 @@ def is_snake_case(s):
     accumulate_errors=False,
 )
 class TripletExtractor(Expression):
-    def __init__(self, name: str, ontology: Ontology, threshold: float = 0.7, *args, **kwargs):
+    def __init__(self, name: str, ontology: Ontology | None = None, threshold: float = 0.7, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.name = name
         self.threshold = threshold
@@ -62,6 +62,10 @@ class TripletExtractor(Expression):
 
         # ignore triplets that are already in the KG
         triplets = [t for t in output.triplets if t not in self._triplets]
+
+        # If no ontology is provided, skip validation and accept all triplets
+        if self.ontology is None:
+            return True
 
         errors = []
 
@@ -186,9 +190,13 @@ class TripletExtractor(Expression):
 
         return True
 
+    # TODO: Will this work?
     @property
     def prompt(self) -> str:
-        return prompt_registry.instruction("triplet_extraction")
+        if self.ontology is None:
+            return prompt_registry.instruction("triplet_extraction_no_ontology")
+        else:
+            return prompt_registry.instruction("triplet_extraction")
 
     def extend_triplets(self, new_triplets: list[Triplet]):
         if new_triplets:
@@ -202,7 +210,7 @@ def generate_kg(
     kg_path: Path,
     texts: list[str],
     kg_name: str,
-    ontology: Ontology,
+    ontology: Ontology | None = None,
     threshold: float = 0.7,
     batch_size: int = 1,
     epochs: int = 3,

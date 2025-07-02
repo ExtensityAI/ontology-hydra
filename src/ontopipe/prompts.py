@@ -77,13 +77,13 @@ Analyze competency questions to identify ontological requirements and extract fo
 
 # Modeling Principles
 1. Use data properties for literal values, not classes
-   - Correct: `publishedInYear` (xsd:integer) data property 
+   - Correct: `publishedInYear` (xsd:integer) data property
    - Incorrect: Creating a `Year` class with object properties
-   
+
 2. Use object properties for relationships, not classes
    - Correct: `hasAuthor` as an object property between `Paper` and `Person`
    - Incorrect: Creating an `Authorship` class to connect papers and people
-   
+
 3. Distinguish between ontology elements and knowledge graph instances
    - Ontology (include): Classes like `Book`, `Adaptation`, `IllustratedEdition`
    - Knowledge graph (exclude): Specific instances like "'Alice in Wonderland'"
@@ -93,7 +93,7 @@ Analyze competency questions to identify ontological requirements and extract fo
 4. Reuse established ontology design patterns
    - Apply standard solutions before creating custom structures
    - Maintain compatibility with common knowledge modeling approaches
-   
+
 5. Follow minimal ontological commitment
    - Include only concepts essential for answering competency questions
    - Avoid overengineering or excessive detail
@@ -110,7 +110,7 @@ Analyze competency questions to identify ontological requirements and extract fo
 8. Avoid redundant encoding of information
    - Use subclass relations to encode inherent categorical distinctions
    - Do not create properties that duplicate information already encoded in the class hierarchy
-   - Example: If you have Article with subclasses ReviewArticle and EmpiricalStudy, do not create a 
+   - Example: If you have Article with subclasses ReviewArticle and EmpiricalStudy, do not create a
      redundant "hasArticleType" data property that encodes this same classification
 
 # Naming Conventions
@@ -214,6 +214,56 @@ Instructions Recap: Extract all relevant triples from the text, including each e
 """,
 )
 
+# Instructions for ontology-free triplet extraction
+prompt_registry.register_instruction(
+    PromptLanguage.ENGLISH,
+    "triplet_extraction_no_ontology",
+    f"""
+{prompt_registry.tag("triplet_extraction")}
+You are tasked with extracting factual (subject, predicate, object) triples from a given input text without any predefined ontology constraints. Extract meaningful relationships and entities based on the content of the text itself.
+
+Extraction Guidelines:
+
+1. Extract Stated Facts Only: Identify only the triples that are explicitly stated in the input text. Do not infer, assume, or add information that the text does not provide. No hallucination or guesswork is allowed - every triple must be directly supported by the text.
+
+2. Include Entity Types (isA): For every unique entity you mention in any triple, include one triple using the predicate isA to state that entity's class/type. Choose appropriate, general class names that describe the entity (e.g., Person, Organization, Location, Event, Concept, etc.). For example: claude_shannon isA Person.
+
+3. Strict Entity Naming Conventions:
+    - Use snake_case for multi-word names: Combine words in lowercase with underscores. Examples: alan_turing, vienna_city_hall.
+    - Event Entity Format: If the entity represents a specific event or occurrence, name it in the format {{subject}}_{{verb}}_{{object}}_{{YYYY}} (optionally add _MMDD for month and day if known). Use the main subject's canonical name, a concise verb, and an object that is the focus of the event. For example: claude_shannon_develops_phd_dissertation_1939.
+    - Compound or Relationship Entities: For composite entities that inherently involve multiple named parties (e.g., a marriage, treaty, or partnership), include the full names of all primary participants to avoid ambiguity. Connect them with _and_ if needed. Example: marriage_john_doe_and_jane_doe.
+    - Each entity must have only the information needed to uniquely identify it, and never redundant or concatenated details.
+
+4. Use Meaningful Predicates: Choose predicate names that clearly describe the relationship between entities. Use camelCase for predicates (e.g., hasAuthor, isPartOf, worksAt, founded, etc.). Be consistent with predicate naming throughout the extraction.
+
+5. Consistent Entity References: Maintain consistency in entity naming throughout all triples. If the same entity is mentioned multiple times in the text (even under different names or aliases), use the exact same entity name (same spelling and underscores) every time in your output.
+
+6. Coreference Resolution: Resolve pronouns and ambiguous references in the text to their specific entities. If the text says "He founded the company in 1998" and earlier it's clear that "He" refers to, say, Larry Page, then use the explicit entity name (larry_page) in the triple. Only replace a pronoun with an entity name when you are certain of the reference from the context. If a reference cannot be resolved unambiguously, it's safer to omit that potential triple than to guess.
+
+7. Avoid Overloaded or Redundant Entity Names: Never create entity names that concatenate multiple unrelated elements. Each entity should represent exactly one thing, and additional facts like location, date, or related items should be expressed as separate triples using properties.
+
+## Output Format:
+
+Your final output must be a JSON array (list) of objects, where each object represents one triple. Each object should have exactly three keys: "subject", "predicate", and "object". The values for these keys should be the corresponding entity or literal names (as strings):
+
+- The subject and object should be the entity names following the conventions above (or a literal value if the predicate is assigning an attribute value).
+- The predicate should be a meaningful relationship name in camelCase (for isA triples, the predicate is simply "isA").
+
+Format the output as a JSON list [...] containing one object per triple. Do not include any additional commentary or explanation in the output—only the JSON data.
+
+### Example Output values:
+
+- {{"subject": "claude_shannon", "predicate": "isA", "object": "Person" }}
+- {{"subject": "claude_shannon_develops_phd_dissertation_1939", "predicate": "isA", "object": "Event" }}
+- {{"subject": "claude_shannon_phd_dissertation", "predicate": "isA", "object": "Document" }}
+- {{"subject": "claude_shannon_develops_phd_dissertation_1939", "predicate": "hasParticipant", "object": "claude_shannon" }}
+- {{"subject": "claude_shannon_develops_phd_dissertation_1939", "predicate": "happensIn", "object": "1939" }}
+- {{"subject": "claude_shannon_develops_phd_dissertation_1939", "predicate": "producesDocument", "object": "claude_shannon_phd_dissertation" }}
+
+Instructions Recap: Extract all relevant triples from the text, including each entity's isA type triple, and present them as JSON {{subject, predicate, object}} objects. Follow the naming rules and create meaningful relationships. Ensure every fact is backed by the text, with no extraneous or inferred information. Avoid overloaded or redundant entity names. By adhering to these guidelines, the output will consist of high-quality triples ready for knowledge graph construction.
+""",
+)
+
 # ==================================================#
 # ----CQS-------------------------------------------#
 # ==================================================#
@@ -229,7 +279,7 @@ prompt_registry.register_instruction(
     PromptLanguage.ENGLISH,
     "generate_groups",
     f"""{prompt_registry.tag("groups")}
-You are an ontology engineer in the initial scoping phase of creating a comprehensive ontology for the specified domain. 
+You are an ontology engineer in the initial scoping phase of creating a comprehensive ontology for the specified domain.
 
 Your current task is to identify groups of people who possess deep knowledge about this domain. These are NOT people who would help implement or design the ontology itself (like developers, ontology engineers, or integration specialists).
 

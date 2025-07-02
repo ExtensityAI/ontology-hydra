@@ -25,7 +25,7 @@ def visualize_ontology(ontology: Ontology, output_html_path: Path):
     return viz.visualize_ontology(ontology, filename=output_html_path.name)
 
 
-def visualize_kg(kg: KG, ontology: Ontology, output_html_path: Path):
+def visualize_kg(kg: KG, output_html_path: Path, ontology: Ontology | None = None):
     """
     Backwards compatible function that matches the original API.
     Creates an interactive visualization of a knowledge graph.
@@ -36,6 +36,8 @@ def visualize_kg(kg: KG, ontology: Ontology, output_html_path: Path):
         The knowledge graph to visualize
     output_html_path : Path
         Path to save the HTML visualization
+    ontology : Ontology | None
+        Optional ontology for enhanced visualization
     """
     viz = KnowledgeGraphViz(output_dir=str(output_html_path.parent))
     return viz.visualize_kg(kg, filename=output_html_path.name, ontology=ontology)
@@ -461,7 +463,7 @@ class AdvancedGraphVisualizer:
             title=f"Ontology Visualization: {len(nodes)} classes & properties",
         )
 
-    def visualize_kg(self, kg: KG, output_path: Path, ontology: Ontology):
+    def visualize_kg(self, kg: KG, output_path: Path, ontology: Ontology | None = None):
         """
         Generate an interactive visualization of a knowledge graph.
         If an ontology is provided, entities will be colored according to their ontology class.
@@ -472,7 +474,7 @@ class AdvancedGraphVisualizer:
             The knowledge graph to visualize
         output_path : Path
             Path to save the HTML visualization
-        ontology : Ontology, optional
+        ontology : Ontology | None, optional
             Ontology to use for coloring entities based on their class
         """
         # High contrast palette for dark mode visualization
@@ -3127,7 +3129,7 @@ class KnowledgeGraphViz:
         output_path = self.output_dir / filename
         return self.visualizer.visualize_ontology(ontology, output_path)
 
-    def visualize_kg(self, kg: KG, ontology: Ontology, filename: str = "knowledge_graph_viz.html"):
+    def visualize_kg(self, kg: KG, filename: str = "knowledge_graph_viz.html", ontology: Ontology | None = None):
         """
         Visualize a knowledge graph with an interactive graph.
 
@@ -3135,10 +3137,10 @@ class KnowledgeGraphViz:
         -----------
         kg : KG
             The knowledge graph to visualize
-        ontology : Ontology
-            The ontology to use for visualization
         filename : str
             Filename for the output HTML
+        ontology : Ontology | None
+            Optional ontology to use for enhanced visualization
 
         Returns:
         --------

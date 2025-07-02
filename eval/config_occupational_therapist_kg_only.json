@@ -1,0 +1,7 @@
+{
+  "scenarios": [{
+    "id": "occupational_therapist_kg_only",
+    "domain": null,
+    "squad_titles": ["Occupational Therapy"]
+  }]
+}

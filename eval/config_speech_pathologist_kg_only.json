@@ -1,0 +1,7 @@
+{
+  "scenarios": [{
+    "id": "speech_pathologist_kg_only",
+    "domain": null,
+    "squad_titles": ["Speech Pathology"]
+  }]
+}

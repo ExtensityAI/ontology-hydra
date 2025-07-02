@@ -1,0 +1,7 @@
+{
+  "scenarios": [{
+    "id": "clinical_psychologist",
+    "domain": null,
+    "squad_titles": ["Clinical Psychology"]
+  }]
+}

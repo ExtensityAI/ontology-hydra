@@ -288,5 +288,5 @@ class KG(LLMDataModel):
 
 class TripletExtractorInput(LLMDataModel):
     text: str = Field(description="Text to extract triplets from.")
-    ontology: Ontology = Field(description="Ontology schema to use for discovery.")
+    ontology: Ontology | None = Field(default=None, description="Ontology schema to use for discovery. If None, no ontology constraints will be applied.")
     state: KGState | None = Field(description="Existing knowledge graph state (triplets), if any.")

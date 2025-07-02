@@ -9,6 +9,7 @@ import json
 import re
 from math import ceil
 from pathlib import Path
+from collections import defaultdict
 
 # === CONFIGURATION ===
 JSON_PATH = Path(__file__).parent.parent.parent / "MedExQA" / "test" / "biomedical_engineer_test.json"
@@ -16,6 +17,7 @@ NEO4J_URI = "bolt://localhost:7687"
 NEO4J_USER = "neo4j"
 NEO4J_PASSWORD = "ontology"
 BATCH_SIZE = 5  # Number of questions to process in each batch
+NUM_ITERATIONS = 10  # Number of times to run the evaluation
 
 class Neo4jQueryInput(LLMDataModel):
     """Input for Neo4j query generation"""
@@ -155,14 +157,17 @@ class BatchQuestionToCypherConverter(Expression):
         if len(output.queries) != len(self._input.questions):
             raise ValueError(f"Number of output queries ({len(output.queries)}) does not match number of input questions ({len(self._input.questions)})")
 
-        with self.driver.session() as session:
-            labels, rels, props = session.read_transaction(self._get_schema)
+        try:
+            with self.driver.session() as session:
+                labels, rels, props = session.read_transaction(self._get_schema)
+        except Exception as e:
+            raise ValueError(f"Failed to get schema from Neo4j: {e}")
 
-        for query in output.queries:
+        for i, query in enumerate(output.queries):
             if not query.strip():
-                raise ValueError("Individual Cypher query cannot be empty")
+                raise ValueError(f"Query {i+1} cannot be empty")
             if not query.upper().startswith("MATCH"):
-                raise ValueError("Each Cypher query must start with MATCH")
+                raise ValueError(f"Query {i+1} must start with MATCH: {query[:50]}...")
 
             # Extract and validate schema elements
             q_labels, q_rels, q_props = self._extract_cypher_elements(query)
@@ -172,11 +177,11 @@ class BatchQuestionToCypherConverter(Expression):
             invalid_props = q_props - props
 
             if invalid_labels:
-                raise ValueError(f"Query uses non-existent labels: {invalid_labels}")
+                raise ValueError(f"Query {i+1} uses non-existent labels: {invalid_labels}")
             if invalid_rels:
-                raise ValueError(f"Query uses non-existent relationships: {invalid_rels}")
+                raise ValueError(f"Query {i+1} uses non-existent relationships: {invalid_rels}")
             if invalid_props:
-                raise ValueError(f"Query uses non-existent properties: {invalid_props}")
+                raise ValueError(f"Query {i+1} uses non-existent properties: {invalid_props}")
 
         return True
 
@@ -252,15 +257,15 @@ def main():
     # Initialize Neo4j connection
     driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASSWORD))
 
-    successful_queries = 0
-    queries_with_results = 0
-    total_queries = 0
-    matching_results = 0
     converter = BatchQuestionToCypherConverter(driver=driver)
     kg_file = "/Users/ryang/Work/ExtensityAI/research-ontology/eval/runs/20250530_vL04rg/biomed/topics/Biomedical Engineering/kg.json"
     with open(kg_file, "r") as f:
         kg_data = json.load(f)
     schema = json.dumps(kg_data)
+
+    print(f"Loaded schema from: {kg_file}")
+    print(f"Schema size: {len(schema)} characters")
+    print(f"Schema preview: {schema[:200]}...")
 
     # Collect all questions, options, and answers
     all_questions = []
@@ -273,63 +278,216 @@ def main():
                 all_questions.append(qa['question'])
                 all_options.append([ans['text'] for ans in qa['all_answers']])
                 all_answers.append(qa['answers'][0]['text'] if qa['answers'] else "")
-                total_queries += 1
 
-    # Process questions in batches
-    num_batches = ceil(len(all_questions) / BATCH_SIZE)
+    total_queries = len(all_questions)
 
-    for batch_idx in range(num_batches):
-        start_idx = batch_idx * BATCH_SIZE
-        end_idx = min((batch_idx + 1) * BATCH_SIZE, len(all_questions))
+    # Initialize results storage
+    results_data = []
+    query_stats = defaultdict(lambda: {
+        'successful': False,
+        'returned_results': False,
+        'correct': False,
+        'iterations': []
+    })
 
-        print(f"\nProcessing batch {batch_idx + 1}/{num_batches}")
+    print(f"Running evaluation {NUM_ITERATIONS} times for {total_queries} queries...")
 
-        batch_questions = all_questions[start_idx:end_idx]
-        batch_options = all_options[start_idx:end_idx]
-        batch_answers = all_answers[start_idx:end_idx]
+    # Run evaluation N times
+    for iteration in range(NUM_ITERATIONS):
+        print(f"\n{'='*60}")
+        print(f"ITERATION {iteration + 1}/{NUM_ITERATIONS}")
+        print(f"{'='*60}")
 
-        try:
-            # Convert questions to queries using contract
-            input_data = Neo4jQueryInput(
-                questions=batch_questions,
-                options=batch_options,
-                answers=batch_answers,
-                schema=schema
-            )
-            result = converter(input=input_data)
-            queries = result.queries
+        # Process questions in batches
+        num_batches = ceil(len(all_questions) / BATCH_SIZE)
 
-            # Process each query in the batch
-            for i, (question, options, answer, query) in enumerate(zip(batch_questions, batch_options, batch_answers, queries)):
-                if not query.strip():
-                    print(f"Skipping: '{question}' (No Cypher query generated)")
-                    continue
+        for batch_idx in range(num_batches):
+            start_idx = batch_idx * BATCH_SIZE
+            end_idx = min((batch_idx + 1) * BATCH_SIZE, len(all_questions))
 
-                print(f"\nQuestion {start_idx + i + 1}: '{question}'")
-                print(f"Options: {options}")
-                print(f"Expected answer: {answer}")
-                print(f"Generated Cypher: {query}")
+            print(f"\nProcessing batch {batch_idx + 1}/{num_batches}")
 
-                results = run_neo4j_query(driver, query)
-                print(f"Results: {results}")
+            batch_questions = all_questions[start_idx:end_idx]
+            batch_options = all_options[start_idx:end_idx]
+            batch_answers = all_answers[start_idx:end_idx]
 
-                successful_queries += 1
-                if len(results) > 0:
-                    queries_with_results += 1
-                    result_value = list(results[0].values())[0] if results[0] else None
-                    if result_value is not None:
-                        result_str = str(result_value).lower().replace(' ', '')
-                        answer_str = str(answer).lower().replace(' ', '')
-                        if result_str == answer_str:
-                            matching_results += 1
+            try:
+                # Convert questions to queries using contract
+                input_data = Neo4jQueryInput(
+                    questions=batch_questions,
+                    options=batch_options,
+                    answers=batch_answers,
+                    schema=schema
+                )
 
-        except Exception as e:
-            print(f"Error processing batch {batch_idx + 1}: {e}\n")
+                print(f"  Converting {len(batch_questions)} questions to Cypher queries...")
+                result = converter(input=input_data)
+                queries = result.queries
+                print(f"  Successfully generated {len(queries)} queries")
 
-    print(f"\nFinal Results:")
-    print(f"Successfully processed {successful_queries} / {total_queries} queries")
+                # Process each query in the batch
+                for i, (question, options, answer, query) in enumerate(zip(batch_questions, batch_options, batch_answers, queries)):
+                    query_idx = start_idx + i
+
+                    # Initialize iteration result
+                    iteration_result = {
+                        'iteration': iteration + 1,
+                        'query_idx': query_idx + 1,
+                        'question': question,
+                        'options': options,
+                        'expected_answer': answer,
+                        'generated_query': query,
+                        'successful': False,
+                        'returned_results': False,
+                        'correct': False,
+                        'results': [],
+                        'error': None
+                    }
+
+                    if not query.strip():
+                        iteration_result['error'] = "No Cypher query generated"
+                        print(f"  Skipping: '{question}' (No Cypher query generated)")
+                    else:
+                        try:
+                            results = run_neo4j_query(driver, query)
+                            iteration_result['results'] = results
+                            iteration_result['successful'] = True
+
+                            if len(results) > 0:
+                                iteration_result['returned_results'] = True
+                                result_value = list(results[0].values())[0] if results[0] else None
+                                if result_value is not None:
+                                    result_str = str(result_value).lower().replace(' ', '')
+                                    answer_str = str(answer).lower().replace(' ', '')
+                                    if result_str == answer_str:
+                                        iteration_result['correct'] = True
+
+                            print(f"  Question {query_idx + 1}: '{question}'")
+                            print(f"  Generated Cypher: {query}")
+                            print(f"  Results: {results}")
+                            print(f"  Successful: {iteration_result['successful']}, Returned Results: {iteration_result['returned_results']}, Correct: {iteration_result['correct']}")
+
+                        except Exception as e:
+                            iteration_result['error'] = str(e)
+                            print(f"  Error executing query: {e}")
+
+                    # Store iteration result
+                    results_data.append(iteration_result)
+
+                    # Update query stats
+                    query_stats[query_idx]['iterations'].append(iteration_result)
+                    if iteration_result['successful']:
+                        query_stats[query_idx]['successful'] = True
+                    if iteration_result['returned_results']:
+                        query_stats[query_idx]['returned_results'] = True
+                    if iteration_result['correct']:
+                        query_stats[query_idx]['correct'] = True
+
+            except Exception as e:
+                print(f"  ERROR processing batch {batch_idx + 1}: {e}")
+                print(f"  Error type: {type(e).__name__}")
+                print(f"  Error details: {str(e)}")
+
+                # Try to get more specific error information
+                if hasattr(e, '__cause__') and e.__cause__:
+                    print(f"  Caused by: {e.__cause__}")
+
+                # Mark all queries in this batch as failed
+                for i in range(start_idx, end_idx):
+                    iteration_result = {
+                        'iteration': iteration + 1,
+                        'query_idx': i + 1,
+                        'question': all_questions[i],
+                        'options': all_options[i],
+                        'expected_answer': all_answers[i],
+                        'generated_query': "",
+                        'successful': False,
+                        'returned_results': False,
+                        'correct': False,
+                        'results': [],
+                        'error': f"Batch processing error: {type(e).__name__}: {str(e)}"
+                    }
+                    results_data.append(iteration_result)
+                    query_stats[i]['iterations'].append(iteration_result)
+
+    # Generate detailed results table
+    print(f"\n{'='*80}")
+    print("DETAILED RESULTS TABLE")
+    print(f"{'='*80}")
+
+    # Create DataFrame for detailed results
+    df_results = pd.DataFrame(results_data)
+
+    # Display detailed table
+    print("\nDetailed Results by Query and Iteration:")
+    print("-" * 80)
+
+    for query_idx in range(total_queries):
+        query_data = df_results[df_results['query_idx'] == query_idx + 1]
+        question = query_data.iloc[0]['question']
+
+        print(f"\nQuery {query_idx + 1}: {question}")
+        print(f"Expected Answer: {query_data.iloc[0]['expected_answer']}")
+        print(f"{'Iter':<4} {'Success':<8} {'Results':<8} {'Correct':<8} {'Query':<20} {'Error':<20}")
+        print("-" * 80)
+
+        for _, row in query_data.iterrows():
+            query_preview = row['generated_query'][:17] + "..." if len(row['generated_query']) > 20 else row['generated_query']
+            error_preview = str(row['error'])[:17] + "..." if row['error'] and len(str(row['error'])) > 20 else str(row['error']) or ""
+
+            print(f"{row['iteration']:<4} {str(row['successful']):<8} {str(row['returned_results']):<8} {str(row['correct']):<8} {query_preview:<20} {error_preview:<20}")
+
+    # Calculate aggregated statistics
+    print(f"\n{'='*80}")
+    print("AGGREGATED STATISTICS")
+    print(f"{'='*80}")
+
+    successful_queries = sum(1 for stats in query_stats.values() if stats['successful'])
+    queries_with_results = sum(1 for stats in query_stats.values() if stats['returned_results'])
+    correct_queries = sum(1 for stats in query_stats.values() if stats['correct'])
+
+    print(f"\nFinal Results (Any Success Across {NUM_ITERATIONS} Iterations):")
+    print(f"Successfully processed: {successful_queries} / {total_queries} queries")
     print(f"Queries that returned results: {queries_with_results} / {total_queries}")
-    print(f"Correct results: {matching_results} / {total_queries}")
+    print(f"Correct results: {correct_queries} / {total_queries}")
+
+    # Calculate per-iteration statistics
+    print(f"\nPer-Iteration Statistics:")
+    print(f"{'Iteration':<10} {'Successful':<12} {'With Results':<12} {'Correct':<10}")
+    print("-" * 50)
+
+    for iteration in range(NUM_ITERATIONS):
+        iter_data = df_results[df_results['iteration'] == iteration + 1]
+        successful_count = iter_data['successful'].sum()
+        results_count = iter_data['returned_results'].sum()
+        correct_count = iter_data['correct'].sum()
+
+        print(f"{iteration + 1:<10} {successful_count:<12} {results_count:<12} {correct_count:<10}")
+
+    # Save detailed results to CSV
+    output_file = "neo4j_evaluation_results.csv"
+    df_results.to_csv(output_file, index=False)
+    print(f"\nDetailed results saved to: {output_file}")
+
+    # Save aggregated statistics
+    stats_data = []
+    for query_idx, stats in query_stats.items():
+        stats_data.append({
+            'query_idx': query_idx + 1,
+            'question': stats['iterations'][0]['question'],
+            'expected_answer': stats['iterations'][0]['expected_answer'],
+            'successful_any_iteration': stats['successful'],
+            'returned_results_any_iteration': stats['returned_results'],
+            'correct_any_iteration': stats['correct'],
+            'successful_iterations': sum(1 for iter_result in stats['iterations'] if iter_result['successful']),
+            'results_iterations': sum(1 for iter_result in stats['iterations'] if iter_result['returned_results']),
+            'correct_iterations': sum(1 for iter_result in stats['iterations'] if iter_result['correct'])
+        })
+
+    df_stats = pd.DataFrame(stats_data)
+    stats_file = "neo4j_evaluation_stats.csv"
+    df_stats.to_csv(stats_file, index=False)
+    print(f"Aggregated statistics saved to: {stats_file}")
 
     driver.close()
 

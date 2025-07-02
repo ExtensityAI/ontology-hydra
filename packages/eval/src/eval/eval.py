@@ -36,15 +36,15 @@ class EvalScenario(BaseModel):
 
     id: str
 
-    domain: str
-    """The domain used for ontology creation"""
+    domain: str | None = None
+    """The domain used for ontology creation. If None, no ontology will be created."""
 
     squad_titles: tuple[str, ...]
     """Titles of topics in the SQuAD dataset to use for evaluation (title field)"""
     # intuition: we create an ontology for the domain, create KGs for each SQuAD topic based on the associated texts and the ontology and then evaluate using SQuAD questions
 
 
-def _generate_kg(texts: list[str], domain: str, kg_path: Path, ontology: Ontology):
+def _generate_kg(texts: list[str], domain: str, kg_path: Path, ontology: Ontology | None = None):
     """Generate a knowledge graph from a list of texts as well as the current ontology and domain"""
 
     if kg_path.exists():
@@ -148,7 +148,7 @@ def _answer_all_questions(kg: KG, qas: list[SquadQAPair], cache_path: Path):
     return details
 
 
-def _eval_squad_topic(title: str, ontology: Ontology, path: Path):
+def _eval_squad_topic(title: str, ontology: Ontology | None, path: Path):
     """Evaluate QA performance on a specific scenario consisting of multiple SQuAD topics using the generated ontology."""
 
     logger.info("Generating kg for '{}'", title)
@@ -168,7 +168,7 @@ def _eval_squad_topic(title: str, ontology: Ontology, path: Path):
 
     kg = _generate_kg(contexts, title, path / "kg.json", ontology)
 
-    visualize_kg(kg, path / "kg.html")
+    visualize_kg(kg, path / "kg.html", ontology)
 
     logger.debug("KG generated with {} triplets", len(kg.triplets))
 
@@ -234,11 +234,13 @@ def eval_scenario(scenario: EvalScenario, path: Path):
         scenario.id,
     )
 
-    logger.info("Generating ontology...")
-
-    ontology = ontopipe(scenario.domain, path)
-
-    visualize_ontology(ontology, path / "ontology.html")
+    ontology = None
+    if scenario.domain is not None:
+        logger.info("Generating ontology...")
+        ontology = ontopipe(scenario.domain, path)
+        visualize_ontology(ontology, path / "ontology.html")
+    else:
+        logger.info("No domain specified, skipping ontology generation")
 
     topics_path = path / "topics"
     topics_path.mkdir(exist_ok=True, parents=True)

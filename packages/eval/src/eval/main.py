@@ -45,6 +45,16 @@ def _parse_args():
         default=_generate_unique_run_path(Path("eval/runs")),
     )
 
+    kg_only_cmd = subparsers.add_parser("kg-only", help="Start a new evaluation run without ontology generation")
+    kg_only_cmd.add_argument("--config", type=Path, help="Path to the JSON config file", default=Path("eval/config.json"))
+    kg_only_cmd.add_argument(
+        "--output",
+        "-o",
+        type=Path,
+        help="Output path for the evaluation run",
+        default=_generate_unique_run_path(Path("eval/runs")),
+    )
+
     resume_cmd = subparsers.add_parser("resume", help="Resume an existing evaluation run")
     resume_cmd.add_argument("--path", type=Path, help="Path to the evaluation run", required=True)
 
@@ -89,6 +99,45 @@ def _start_new_evaluation(args):
     _run(path, config)
 
 
+def _start_kg_only_evaluation(args):
+    """Start a new evaluation run without ontology generation"""
+
+    if args.output.exists():
+        raise FileExistsError(
+            f"Output path '{args.output}' already exists. Please choose a different path to start a new evaluation run."
+        )
+
+    config = EvalConfig.model_validate_json(args.config.read_text(encoding="utf-8"))
+    path = args.output
+
+    # prepare output path
+    path.mkdir(exist_ok=True, parents=True)
+    (path / "config.json").write_text(config.model_dump_json(indent=2), encoding="utf-8")
+
+    log_dir_path = path / "logs"
+    log_dir_path.mkdir(exist_ok=True, parents=True)
+    init_logging(log_dir_path)
+
+    logger.info(
+        "Starting knowledge graph only evaluation under '{}'",
+        path,
+    )
+
+    # Modify config to remove domain (ontology) for all scenarios
+    kg_only_config = EvalConfig(
+        scenarios=tuple(
+            EvalScenario(
+                id=scenario.id,
+                domain=None,  # Remove domain to skip ontology generation
+                squad_titles=scenario.squad_titles
+            )
+            for scenario in config.scenarios
+        )
+    )
+
+    _run(path, kg_only_config)
+
+
 def _resume_evaluation(args):
     """Resume an existing evaluation run"""
     config_path = args.path / "config.json"
@@ -115,5 +164,7 @@ def main():
 
     if args.command == "new":
         _start_new_evaluation(args)
+    elif args.command == "kg-only":
+        _start_kg_only_evaluation(args)
     elif args.command == "resume":
         _resume_evaluation(args)

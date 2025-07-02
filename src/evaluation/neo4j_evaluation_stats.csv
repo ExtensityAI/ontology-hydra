@@ -1,0 +1,144 @@
+query_idx,question,expected_answer,successful_any_iteration,returned_results_any_iteration,correct_any_iteration,successful_iterations,results_iterations,correct_iterations
+1,What should be the maximum surface temperature of a device attachment that is not intended to heat the patient?,41℃,True,False,False,3,0,0
+2,What is the band of electromagnetic waves used in a thermographic camera?,Infrared,True,False,False,3,0,0
+3,Which of the following is not a suitable material for the membrane oxygenator in an artificial heart-lung machine?,Ceramic membrane,True,False,False,3,0,0
+4,Which device diagnoses the condition of bones by measuring the calcium concentration in bones using X-rays or ultrasound?,bone densitometer,True,False,False,3,0,0
+5,Which of the following is NOT a typical method for processing analog biological signals?,Synthesis,True,False,False,2,0,0
+6,The wall of the heart is structured in three layers. What is the correct order of these layers from the outermost to the innermost?,Epicardium-Myocardium-Endocardium,True,False,False,2,0,0
+7,Which of the following biomaterials has the lowest modulus of elasticity?,Synovial fluid,True,False,False,3,0,0
+8,Where is insulin produced?,pancreas,True,False,False,3,0,0
+9,Which method can be used to analyze the crystal structure by calculating the interplanar spacing within the biomaterial?,X-ray diffraction analysis,True,False,False,3,0,0
+10,Which device is used in the image acquisition part of PACS?,film digitizer,True,False,False,3,0,0
+11,Which of the following is not a property of biomedical ceramic materials?,Easy to mold and process.,True,True,False,2,1,0
+12,What type of test conditions are implemented when evaluating biocompatibility using cells or tissues?,In vitro test,True,True,False,2,1,0
+13,What is the name of the electromyography method that measures and records the action potentials generated from muscles under the control of a nerve by directly applying electrical stimulation to the peripheral nerve?,Evoked electromyography,True,False,False,2,0,0
+14,Which of the following is NOT a component of an extracorporeal shock wave lithotripter?,temperature control device,True,True,False,2,1,0
+15,"Which part of the brain is responsible for sensory information related to balance, movement, and muscle tone, and corresponds to the homeostatic regulator that maintains normal body temperature?",cerebellum,True,False,False,2,0,0
+16,Which of the following descriptions about the gamma camera is incorrect?,The scintillation crystal converts gamma rays into infrared rays.,True,False,False,3,0,0
+17,"To classify medical procedures using a combination code that arranges the actions, instruments, purposes, and parts of the therapeutic process in order, how many total codes are needed if there are 10 types of actions, 10 types of instruments, 10 types of purposes, and 20 types of parts?","20,000 types",True,True,False,3,1,0
+18,Which gas is used for freezing purposes such as preserving umbilical cord blood?,Nitrogen,True,False,False,3,0,0
+19,What is the correct sequence of inflammatory response around the damaged wound tissue caused by the insertion of biomaterials?,Capillary dilation → Cell infiltration → Regeneration → Epithelialization → Disintegration,True,False,False,3,0,0
+26,Which of the following is NOT a measurement parameter of patient monitoring devices?,"Body temperature, electromyography",True,True,False,3,1,0
+27,"What is the name of the medical expert system created for the diagnosis, treatment, and advice system for bloodborne diseases and meningitis?",MYCIN,True,False,False,3,0,0
+28,Which of the following is not an interaction between the human body and diagnostic radiation?,Mass defect,True,False,False,2,0,0
+29,Which test belongs to dynamic testing method that measures the mechanical properties of biomaterials caused by repetitive loading?,fatigue test,True,False,False,3,0,0
+30,What is the first phenomenon that occurs when a medical device made of biomaterials enters the bloodstream?,protein denaturation and adsorption,True,False,False,3,0,0
+31,Which of the following is not related to the Anatomical Therapeutic Chemical (ATC) classification system?,It uses mnemonic codes.,True,False,False,3,0,0
+32,Which device does not use a catheter?,fetal stethoscope,True,True,False,3,2,0
+33,"Which medical device measures body composition such as water, protein, and fat by flowing a constant alternating current through the body and measuring impedance?",body composition analyzer,True,True,False,3,1,0
+34,Which of the following is NOT commonly measured by a patient monitoring device?,Electromyography (EMG),True,True,False,2,1,0
+35,"Which action of laser medical devices causes disruption of cell membranes, evaporation of water from cells, swelling, and cell rupture?",Thermal action,True,False,False,2,0,0
+36,What is the type of a material such as alumina that does not cause any chemical reaction in the body after being implanted into biological tissue?,Bioinert material,True,False,False,3,0,0
+37,Which of the following is NOT an imaging variable in Magnetic Resonance Imaging (MRI)?,Electron density,True,True,False,3,1,0
+38,What is the typical material used for metal electrodes in biopotential signal measurement?,Ag-AgCl,True,False,False,3,0,0
+39,Which of the following structures is not part of the hindbrain?,hypothalamus,True,False,False,3,0,0
+40,Which of the following statements about hemodialysis is incorrect?,Inserting a catheter into a vein for vascular access is called an arteriovenous fistula.,True,False,False,3,0,0
+41,Which of the following is NOT a clinical impact of PACS (Picture Archiving and Communication System)?,standards are unnecessary for the exchange of imaging information,True,True,False,2,1,0
+42,Which combination of factors affecting the degree of heat transfer from biological tissues is incorrect?,"Tissue density, tissue specific heat, convection",True,True,True,2,2,1
+43,Which of the following statements about the heart is incorrect?,The plateau phase in the cardiac muscle action potential curve is due to the action of Fe.,True,True,True,2,2,1
+44,Which law is related to the measurement of oxygen saturation?,Beer's law on the absorption of light,True,False,False,1,0,0
+45,Which of the following is commonly known as Teflon and primarily used for making artificial blood vessels?,PTFE (Polytetrafluoroethylene),True,False,False,2,0,0
+46,Which of the following is NOT a problem that can arise from the use of artificial joints?,Increased bone density,True,True,False,3,1,0
+47,What effect is used to measure the velocity of blood flow by measuring the frequency change of the ultrasound reflected back from the blood cells?,Doppler effect,True,False,False,3,0,0
+48,Which of the following statements about bio-surface electrodes is incorrect?,"Contact resistance is proportional to the area, so the actual contact area with the surface should be reduced.",True,False,False,3,0,0
+49,Which of the following is NOT a goal of medical informatics as proposed by the American Medical Informatics Association (AMIA)?,Increasing the efficiency of medical records,True,False,False,3,0,0
+50,Which of the following is NOT a basic function of an incubator?,freezing control,True,False,False,3,0,0
+51,Which of the following is NOT correct definition of electrocardiogram (ECG) waveforms?,The T wave represents repolarization of the atria,True,False,False,3,0,0
+52,Which of the following is NOT a required property for the metal materials used in artificial hip joints?,Brittleness,True,False,False,3,0,0
+61,Which of the following is an initial evaluation test for the biological safety of a medical device?,implantation test,True,False,False,3,0,0
+62,Which factor does not significantly affect the signal when measuring an electrocardiogram (ECG)?,Changes in temperature and humidity of the examination room,True,False,False,3,0,0
+63,What is the phenomenon where substances move in only one direction due to the selective permeability of the cell membrane?,Osmosis,True,False,False,3,0,0
+64,Which of the following is NOT a component of a cardiopulmonary bypass machine?,arteriovenous fistula,True,False,False,2,0,0
+65,"What is the device that helps to restore function, directly or indirectly heal, or prevent deterioration in areas where the human body has structural defects or lost/reduced function through artificial apparatus or devices?",Orthosis,True,False,False,3,0,0
+66,Which of the following radiation therapy devices is not an external beam therapy device?,Gamma knife units,True,False,False,3,0,0
+67,Which of the following is NOT a component of an anesthesia machine system?,condenser,True,False,False,3,0,0
+68,Which mode of ventilation in mechanical ventilators delivers air in synchrony with the patient's ventilatory effort?,Synchronized intermittent mandatory ventilation,True,False,False,3,0,0
+69,Which respiratory function test assesses the ability of the lungs to distribute air evenly between alveoli?,Distribution capacity,True,False,False,3,0,0
+70,In which case must a radiation worker receive radiation exposure dose measurement at least once a month?,When using film badges,True,False,False,3,0,0
+71,What is the performance metric represented by the Modulation Transfer Function (MTF) in CT?,Spatial resolution,True,False,False,3,0,0
+72,Which of the following is a common nonpolarizing electrode used in medical and biological experiments?,silver-silver chloride electrode,True,False,False,3,0,0
+73,Which tissue has the highest resistivity at a frequency of 100[Hz]?,Fat,True,False,False,3,0,0
+74,Which type of electrode is designed in the form of a thin plate or membrane to increase contact with the curved surfaces of the body and to reduce the effects of movement by being easily bendable?,flexible electrode,True,False,False,3,0,0
+75,What is the name of the brainwave with a frequency range of 8 to 13 Hz?,Alpha wave,True,False,False,3,0,0
+76,Which medical suture material is used for absorbable surgical sutures?,PGA,True,False,False,3,0,0
+77,Which statement is not true about spectrophotometers used in clinical laboratories and how they work?,X-rays are used as the light source.,True,False,False,3,0,0
+78,Which of the following is not a bioelectrical signal?,Phonocardiogram (PCG),True,False,False,3,0,0
+79,What is the method called that uses sensors to measure biological tissues separated from the body?,sample measurement,True,False,False,3,0,0
+80,"Which layer of the skin is located on the outermost part, composed of a protein called Keratin, has the highest resistance in the equivalent circuit between the electrode and the skin surface, and is removed during electrode attachment for measurement?",stratum corneum,True,False,False,3,0,0
+81,Which metal material is used as an electrode material in pacemakers because of its excellent corrosion resistance and electrical conductivity?,Pt,True,False,False,3,0,0
+82,Which part of the brain contains the respiratory center that regulates breathing?,medulla oblongata,True,False,False,3,0,0
+83,Which of the following is NOT a mechanism that regulates the resting membrane potential?,Osmosis moves ions.,True,True,True,3,1,1
+84,Which of the following is an example of ionizing radiation?,Gamma rays,True,True,True,3,1,1
+85,Which of the following is not a preventive method for physically protecting files to reduce the possibility of data damage?,Data encryption,True,True,True,3,1,1
+86,Which device can treat conditions such as stones in the body by applying high-energy shock waves intensively without surgery?,ESWL,True,False,False,3,0,0
+87,Which of the following is NOT a biometric variable that needs to be measured for the evaluation of respiratory function?,Bone density,True,True,False,3,1,0
+88,"Which synthetic rubber material has the best elasticity and toughness, is biocompatible and elastic, can undergo surface modifications, and is used as a material for artificial hearts?",Polyurethane,True,False,False,3,0,0
+89,Which leakage current for a medical device flows from the power source through the insulation to the protective ground wire either internally or through the surface?,Earth leakage current,True,False,False,3,0,0
+90,Which of the following ECG measurements is not obtained from the limbs?,V6,True,False,False,3,0,0
+91,At which stage of gait analysis does the tibia become perpendicular to the ground from maximum knee flexion?,mid-swing phase,True,False,False,3,0,0
+92,Which device uses a new frequency waveform generated by the difference between two high frequencies that cross each other with almost no skin resistance?,interferential therapy device,True,False,False,3,0,0
+93,"What is the thin cytoplasmic protrusion attached to a neuron that, along with the cell body and axon, constitutes the neural unit of a neuron?",dendrite,True,False,False,3,0,0
+94,What gas is used in large quantities in superconducting MRI machines?,Liquid helium,True,False,False,3,0,0
+95,Which of the following is a term that collectively refers to various standards used for digital image representation and communication in medical devices?,DICOM,True,False,False,3,0,0
+96,Which of the following is NOT a criterion for determining the potential risk in the classification of medical devices?,whether there is a chemical change in the oral cavity,True,False,False,2,0,0
+97,Which unit of radiation is used to determine how much radiation has been absorbed?,Gy (Gray),True,False,False,3,0,0
+98,Which of the following is the correct definition of cardiac output?,The volume of blood pumped by the heart into the aorta per minute,True,True,False,3,1,0
+99,Which of the following imaging devices requires a cyclotron?,PET,True,False,False,3,0,0
+100,Which of the following types of radiation does not belong to particle radiation?,Gamma rays,True,False,False,2,0,0
+101,"During the cardiac cycle, when does the ventricular pressure increase sharply while all valves are closed, maintaining a constant ventricular volume?",isovolumetric contraction phase,True,False,False,3,0,0
+102,What is equivalent to the single-limb-support phase in gait?,Swing phase of the opposite limb,True,False,False,3,0,0
+103,Which biological tissue has the highest viscosity?,Bone,True,False,False,3,0,0
+104,Which type of orthosis is NOT categorized based on the impact on human joints?,enhancement orthosis,True,False,False,2,0,0
+105,Which of the following is not an item used for blood pressure or pulse measurement?,mercury sphygmomanometer,True,False,False,3,0,0
+106,Which coil is additionally used in an MRI system to improve the field uniformity of the main magnet (superconducting electromagnet)?,shimming coil,True,False,False,2,0,0
+107,What is the method of measuring the force that flattens the cornea until its diameter becomes 3.06mm after injecting a fluorescent liquid into the examiner's cornea?,Goldmann tonometer,True,False,False,3,0,0
+108,Which ultrasound imaging technique shows a cross-sectional view of the inside of the human body?,B-mode,True,False,False,3,0,0
+109,Which of the following is a function of the skeleton?,hematopoietic function,True,False,False,3,0,0
+110,"What is the classification of medical device parts that can be attached to the body, where the patient leakage current is 0.01mA under normal conditions and less than 0.05mA under a single fault condition?",Type CF part,True,False,False,3,0,0
+111,"What is the ratio of calcium to phosphorus (Ca/P) in hydroxyapatite [Ca10(PO4)6(OH)2], a component of bone?",1.67,True,False,False,3,0,0
+112,What has the highest CT Number?,Metallic prosthesis,True,False,False,3,0,0
+113,Which medical device assists heart function to increase cardiac output with a mechanical device to prevent the problem of reduced oxygen supply to the brain due to decreased blood flow to the brain when blood pressure drops?,IABP (Intra Aortic Balloon Pump),True,False,False,3,0,0
+114,Which passive biological tissue mechanically connects bones to bones?,ligament,True,False,False,3,0,0
+115,Which osteoconductive ceramic material is most commonly used for artificial bones?,Hydroxyapatite,True,False,False,3,0,0
+116,"In the state of hyperkalemia, where there is an excess of K+ outside the cells, the phenomenon of delayed depolarization occurs. What is the ECG finding in this case?",The QRS complex widens (Widening).,True,True,False,3,1,0
+117,Which of the following is NOT a common characteristic of biomedical metal materials?,They have a low specific gravity and a metallic luster.,True,False,False,3,0,0
+118,What is the energy of the gamma rays used in PET?,511keV,True,True,False,3,1,0
+119,Which device is used to prevent the degradation of image resolution due to Compton scattering in radiographic imaging equipment?,grid,True,False,False,3,0,0
+120,"Among the components of a cardiopulmonary bypass machine, which device is considered most important alongside the arterial pump, as it supplies oxygen to venous blood and also removes carbon dioxide?",oxygenator,True,False,False,3,0,0
+121,Which ventilator mode is used for a patient who has completely transitioned from mandatory to spontaneous breathing?,SPONT,True,True,False,3,1,0
+122,"When the distance from the X-ray tube to the imaged object is 50 cm, how far should the distance from the X-ray tube to the X-ray detector be to achieve a magnification of 4 times?",200cm,True,True,False,3,2,0
+123,Which of the following is a correct description about the codification of medical data?,Coding improves the accessibility of data.,True,True,True,3,2,1
+124,Which of the following is NOT a component of a lower limb prosthesis?,Prosthetic arm,True,True,False,3,1,0
+125,Which of the following gases is NOT used in anesthesia?,Carbon monoxide,True,True,False,3,2,0
+126,Which of the following is NOT a consideration when measuring biometric signals?,"Measurements are not affected by temperature, humidity, noise, sterilization, etc., so they do not need to be considered.",True,False,False,2,0,0
+127,Which of the following descriptions about the thermal properties of the body is incorrect?,Heat dissipation primarily occurs through respiration.,True,False,False,2,0,0
+128,Which of the following is not a diagnostic radiation generating device?,Magnetic resonance imaging (MRI) device,True,True,False,2,1,0
+129,Which of the following is NOT a characteristic of the passive properties of biological tissues?,electrical insulation,True,False,False,2,0,0
+130,Which of the following actions does not occur in the human body when excessive current flows?,Optical action,True,False,False,2,0,0
+131,Which method of generating energy in an extracorporeal shock wave lithotripter involves focusing pressure waves generated by vibrating a metal membrane with an electromagnet to create shock waves?,electromagnetic vibration method,True,False,False,3,0,0
+132,What are the conditions that must be met for biomaterials to satisfy biocompatibility?,The biomaterial should have sufficient mechanical strength to perform its function,True,False,False,2,0,0
+133,Which of the following is not related to the sympathetic nervous system?,It increases the secretion of digestive juices.,True,True,False,3,1,0
+134,"Which piece of clinical diagnostic equipment separates solid particles in a liquid by spinning the sample and using the force to separate, purify, and concentrate components with specific weights or densities?",Centrifuge,True,False,False,3,0,0
+135,Which of the following statements about radiation therapy is incorrect?,Radiation only causes damage to cancerous tissue and has no effect on normal tissue.,True,True,False,3,1,0
+136,Which of the following is a correct description of the types of synovial joints?,"Plane joint: The articulating surfaces are flat, and the joint is surrounded by a tight joint capsule and strong ligaments, limiting movement.",True,False,False,3,0,0
+137,Which statement about the form of energy in a defibrillator is incorrect?,"When using biphasic waveforms, the size of the energy is increased.",True,False,False,2,0,0
+138,Which material is unsuitable for needle electrodes inserted into the human body?,Zinc (Zn),True,False,False,3,0,0
+139,Which of the following are methods of solute removal used only in hemodialysis?,"Diffusion, Convection",True,True,False,3,1,0
+140,Which of the following is NOT a use for medical gas?,For special welding,True,False,False,3,0,0
+141,Which of the following descriptions about microelectrodes is incorrect?,A metal microelectrode is said to be one that contains an electrolyte solution inside a glass capillary.,True,True,False,2,1,0
+20,Which of the following is not a function or purpose of an upper limb orthosis?,To support body weight,True,False,False,2,0,0
+21,Which of the following is NOT a function of the kidneys?,Synthesis and breakdown of glycogen,True,False,False,2,0,0
+22,Which of the following cannot be tested using spectrophotometry?,Red/white blood cell test,True,False,False,2,0,0
+23,Which of the following is NOT a component of the Gamma Knife?,harmonic oscillator,True,True,False,2,1,0
+24,What is related to the resting potential?,K+ ion,True,True,False,2,1,0
+25,Which component of a PET scanner is used to collect the position information of annihilation radiation?,Coincidence circuit,True,False,False,2,0,0
+53,What is the CT number of water?,0,True,False,False,2,0,0
+54,Which of the following is NOT a type of mechanical strength test for medical devices?,Leakage current test,True,False,False,2,0,0
+55,Which of the following descriptions about the thermal effects of high-frequency electromagnetic fields on biological tissues is incorrect?,"Stimulation of cells occurs frequently, and a decrease in temperature due to thermal action occurs.",True,False,False,2,0,0
+56,Which of the following is a correct description of an analog signal?,a physical quantity in which voltage and current change continuously depending on time,True,False,False,2,0,0
+57,What is the most important part of the HIS that digitizes the series of processes centered around patient visits?,OCS,True,False,False,2,0,0
+58,Which of the following descriptions about the specificity of biological phenomena is incorrect?,"There are few transient phenomena, and reproducibility is excellent.",True,False,False,2,0,0
+59,"What is the term for the electronic health information that is collected over the long term, including a patient's past and present health and medical treatment, as well as relevant facts about their vitality and health status?",Electronic Health Record (EHR),True,False,False,2,0,0
+60,"What type of hypersensitivity, a pathological antigen-antibody reaction, is caused by specific memory to implants or biomaterials?",Allergy,True,False,False,2,0,0
+142,What is the biomaterial that gradually degrades or gets absorbed by the body tissue over time after being implanted into the body tissue?,Bioresorbable material,True,False,False,2,0,0
+143,What is widely used in dermatological surgery?,Laser device,True,True,False,2,2,0
