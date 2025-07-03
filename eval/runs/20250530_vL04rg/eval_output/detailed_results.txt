@@ -3,35 +3,35 @@ Detailed Results by Query and Iteration:
 
 Query 1: Which EEG waveform is most commonly seen in the parietal or occipital region and is suppressed by visual and sensory stimuli?
 Expected Answer: Alpha waves
-cypher: MATCH (w:ElectromagneticWaveModality {name: 'AlphaWave'}) WITH w MATCH (b:Body {name: 'ParietalRegion'}), (o:Body {name: 'OccipitalRegion'}) RETURN w.name as waveform, COLLECT(DISTINCT b.name) as regions, COLLECT(DISTINCT o.name) as regions
+cypher: MATCH (e:ElectromagneticWaveModality {name: 'AlphaWave'}) RETURN DISTINCT e.name
 Iter Success  Results  Correct  Error               
 --------------------------------------------------------------------------------
-1    False    False    False    {code: Neo.Client...
+1    True     False    False    None                
 
 Query 2: Which of the following is NOT a nonlinear characteristic of a biometric measuring device?
 Expected Answer: Sensitivity drift
-cypher: MATCH (b:BiomedicalParameter {name: 'SensitivityDrift'}) RETURN b.name as nonlinearCharacteristic
+cypher: MATCH (dp:DesignProperty) WHERE NOT dp.name IN ['breakdown', 'dead zone', 'saturation'] RETURN DISTINCT dp.name
 Iter Success  Results  Correct  Error               
 --------------------------------------------------------------------------------
 1    True     False    False    None                
 
 Query 3: What is the phenomenon called where the myocardium contracts and relaxes asynchronously due to the electrical and structural chaos in the heart?
 Expected Answer: Fibrillation
-cypher: MATCH (p:BiomedicalParameter {name: 'Fibrillation'}) RETURN p.name as phenomenon
+cypher: MATCH (h:HeartAnatomyLayer {name: 'Myocardium'})<-[:isA]-(f:Fibrillation) RETURN DISTINCT f.name
 Iter Success  Results  Correct  Error               
 --------------------------------------------------------------------------------
 1    True     False    False    None                
 
 Query 4: Which of the following descriptions about piezoelectric devices is incorrect?
 Expected Answer: A device made up of the junction of two different metals that generates electromotive force (EMF) due to the temperature difference between the two ends
-cypher: MATCH (d:MedicalDevice {name: 'A device made up of the junction of two different metals that generates electromotive force (EMF) due to the temperature difference between the two ends'}) RETURN d.name as incorrectDevice
+cypher: MATCH (d:MedicalDevice) WHERE NOT d.name = 'Two metal junction device that generates electromotive force due to temperature difference' RETURN DISTINCT d.name
 Iter Success  Results  Correct  Error               
 --------------------------------------------------------------------------------
-1    True     False    False    None                
+1    True     True     False    None                
 
 Query 5: Which of the following devices does not use a piezoelectric sensor?
 Expected Answer: electrocardiograph
-cypher: MATCH (d:MedicalDevice {name: 'Electrocardiograph'}) RETURN d.name as deviceWithoutPiezo
+cypher: MATCH (d:MedicalDevice {name: 'Electrode'}) RETURN DISTINCT d.name
 Iter Success  Results  Correct  Error               
 --------------------------------------------------------------------------------
 1    True     False    False    None                

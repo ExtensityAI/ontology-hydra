@@ -5,11 +5,15 @@ from pydantic import BaseModel, Field
 from symai import Expression
 from symai.strategy import contract
 from symai.models import LLMDataModel
+from symai.utils import RuntimeInfo
+from symai.components import MetadataTracker
+from .logging_setup import logger
 import json
 import re
 from math import ceil
 from pathlib import Path
 from collections import defaultdict
+import time
 
 # === CONFIGURATION ===
 JSON_PATH = Path(__file__).parent.parent.parent / "MedExQA" / "dev" / "biomedical_engineer_dev.json"
@@ -23,6 +27,54 @@ NUM_ITERATIONS = 1  # Number of times to run the evaluation
 RUNS_FOLDER = KG.parent.parent.parent.parent
 EVAL_OUTPUT_FOLDER = RUNS_FOLDER / "eval_output"
 EVAL_OUTPUT_FOLDER.mkdir(exist_ok=True)  # Create the eval_output folder if it doesn't exist
+
+# Pricing configuration for cost estimation
+PRICING = {
+    ('GPTXChatEngine', 'gpt-4.1'): {
+        'input': 2. / 1e6,
+        'cached_input': 0.5 / 1e6,
+        'output': 8. / 1e6
+    },
+    ('GPTXReasoningEngine', 'o4-mini'): {
+        'input': 1.1 / 1e6,
+        'cached_input': 0.275 / 1e6,
+        'output': 4.4 / 1e6
+    },
+    ('GPTXReasoningEngine', 'o3'): {
+        'input': 2. / 1e6,
+        'cached_input': 0.5 / 1e6,
+        'output': 8. / 1e6
+    },
+    ('GPTXSearchEngine', 'gpt-4.1-mini'): {
+        'input': 0.40 / 1e6,
+        'cached_input': 0.10 / 1e6,
+        'output': 1.6 / 1e6,
+        'calls': 30. / 1e3
+    },
+    ('GPTXSearchEngine', 'gpt-4.1'): {
+        'input': 2. / 1e6,
+        'cached_input': 0.5 / 1e6,
+        'output': 8. / 1e6,
+        'calls': 50 / 1e3
+    },
+    ('GPTXChatEngine', 'gpt-4o'): {
+    'input': 1.2 / 1e6,
+    'cached_input': 0.3 / 1e6,
+    'output': 4.8 / 1e6
+    },
+    ('GPTXChatEngine', 'gpt-4o-mini'): {
+    'input': 1.1 / 1e6,
+    'cached_input': 0.275 / 1e6,
+    'output': 4.4 / 1e6
+    }
+}
+
+def estimate_cost(info: RuntimeInfo, pricing: dict) -> float:
+    """Estimate cost based on token usage and pricing."""
+    input_cost = (info.prompt_tokens - info.cached_tokens) * pricing.get('input', 0)
+    cached_input_cost = info.cached_tokens * pricing.get('cached_input', 0)
+    output_cost = info.completion_tokens * pricing.get('output', 0)
+    return input_cost + cached_input_cost + output_cost
 
 class Neo4jQueryInput(LLMDataModel):
     """Input for Neo4j query generation"""
@@ -294,6 +346,9 @@ def main():
         'iterations': []
     })
 
+    # Initialize runtime tracking
+    total_runtime_info = RuntimeInfo(0, 0, 0, 0, 0, 0, 0, 0)
+
     print(f"Running evaluation {NUM_ITERATIONS} times for {total_queries} queries...")
 
     # Run evaluation N times
@@ -325,9 +380,44 @@ def main():
                 )
 
                 print(f"  Converting {len(batch_questions)} questions to Cypher queries...")
-                result = converter(input=input_data)
+
+                # Track runtime information for this batch
+                batch_runtime_info = RuntimeInfo(0, 0, 0, 0, 0, 0, 0, 0)
+                with MetadataTracker() as tracker:
+                    start_time = time.perf_counter()
+                    try:
+                        result = converter(input=input_data)
+                    except Exception as e:
+                        raise e
+                    finally:
+                        time.sleep(0.05)
+                        end_time = time.perf_counter()
+
+                                # Process runtime information
+                print(f"  Debug: Tracker metadata keys: {list(tracker.metadata.keys()) if hasattr(tracker, 'metadata') else 'No metadata'}")
+                usage_per_engine = RuntimeInfo.from_tracker(tracker, end_time - start_time)
+                print(f"  Debug: Found {len(usage_per_engine)} engine(s) in metadata")
+
+                for (engine_name, model_name), data in usage_per_engine.items():
+                    print(f"  Debug: Engine: {engine_name}, Model: {model_name}")
+                    print(f"  Debug: Data tokens - prompt: {data.prompt_tokens}, completion: {data.completion_tokens}, total: {data.total_tokens}")
+
+                    if (engine_name, model_name) in PRICING:
+                        print(f"  Debug: Found pricing for ({engine_name}, {model_name})")
+                        batch_runtime_info += RuntimeInfo.estimate_cost(data, estimate_cost, pricing=PRICING[(engine_name, model_name)])
+                    else:
+                        print(f"  Debug: No pricing found for ({engine_name}, {model_name})")
+                        batch_runtime_info += data
+
+                # Add total elapsed time
+                batch_runtime_info.total_elapsed_time = end_time - start_time
+                total_runtime_info += batch_runtime_info
+
                 queries = result.queries
                 print(f"  Successfully generated {len(queries)} queries")
+                print(f"  Batch runtime: {batch_runtime_info.total_elapsed_time:.2f}s, "
+                      f"tokens: {batch_runtime_info.total_tokens}, "
+                      f"cost: ${batch_runtime_info.cost_estimate:.4f}")
 
                 # Process each query in the batch
                 for i, (question, options, answer, query) in enumerate(zip(batch_questions, batch_options, batch_answers, queries)):
@@ -486,6 +576,19 @@ def main():
     for line in stats_output:
         print(line)
 
+    # Add runtime statistics
+    print(f"\n{'='*80}")
+    print("RUNTIME STATISTICS")
+    print(f"{'='*80}")
+    print(f"Total elapsed time: {total_runtime_info.total_elapsed_time:.2f} seconds")
+    print(f"Total prompt tokens: {total_runtime_info.prompt_tokens:,}")
+    print(f"Total completion tokens: {total_runtime_info.completion_tokens:,}")
+    print(f"Total reasoning tokens: {total_runtime_info.reasoning_tokens:,}")
+    print(f"Total cached tokens: {total_runtime_info.cached_tokens:,}")
+    print(f"Total tokens: {total_runtime_info.total_tokens:,}")
+    print(f"Total calls: {total_runtime_info.total_calls}")
+    print(f"Estimated cost: ${total_runtime_info.cost_estimate:.4f}")
+
     # Save formatted outputs to text files
     detailed_output_file = EVAL_OUTPUT_FOLDER / "detailed_results.txt"
     with open(detailed_output_file, 'w') as f:
@@ -496,6 +599,25 @@ def main():
     with open(stats_output_file, 'w') as f:
         f.write('\n'.join(stats_output))
     print(f"Aggregated statistics saved to: {stats_output_file}")
+
+    # Save runtime statistics
+    runtime_stats = [
+        "RUNTIME STATISTICS",
+        "=" * 80,
+        f"Total elapsed time: {total_runtime_info.total_elapsed_time:.2f} seconds",
+        f"Total prompt tokens: {total_runtime_info.prompt_tokens:,}",
+        f"Total completion tokens: {total_runtime_info.completion_tokens:,}",
+        f"Total reasoning tokens: {total_runtime_info.reasoning_tokens:,}",
+        f"Total cached tokens: {total_runtime_info.cached_tokens:,}",
+        f"Total tokens: {total_runtime_info.total_tokens:,}",
+        f"Total calls: {total_runtime_info.total_calls}",
+        f"Estimated cost: ${total_runtime_info.cost_estimate:.4f}"
+    ]
+
+    runtime_stats_file = EVAL_OUTPUT_FOLDER / "runtime_statistics.txt"
+    with open(runtime_stats_file, 'w') as f:
+        f.write('\n'.join(runtime_stats))
+    print(f"Runtime statistics saved to: {runtime_stats_file}")
 
     # Save detailed results to CSV
     output_file = EVAL_OUTPUT_FOLDER / "neo4j_evaluation_results.csv"
