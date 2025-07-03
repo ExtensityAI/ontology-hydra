@@ -7,7 +7,7 @@ from symai.strategy import contract
 from symai.models import LLMDataModel
 from symai.utils import RuntimeInfo
 from symai.components import MetadataTracker
-from .logging_setup import logger
+from logging_setup import logger
 import json
 import re
 from math import ceil
@@ -16,14 +16,18 @@ from collections import defaultdict
 import time
 
 # === CONFIGURATION ===
-JSON_PATH = Path(__file__).parent.parent.parent / "MedExQA" / "dev" / "biomedical_engineer_dev.json"
-KG = Path(__file__).parent.parent.parent / "eval" / "runs" / "20250530_vL04rg" / "biomed" / "topics" / "Biomedical Engineering" / "kg.json"
+RUN = "20250530_vL04rg"
+TOPIC = "Biomedical Engineer"
+ID = "biomed"
+MODE = "dev"  # or "test"
 NEO4J_URI = "bolt://localhost:7687"
 NEO4J_USER = "neo4j"
 NEO4J_PASSWORD = "ontology"
 BATCH_SIZE = 5  # Number of questions to process in each batch
 NUM_ITERATIONS = 1  # Number of times to run the evaluation
 
+KG = Path(__file__).parent.parent.parent / "eval" / "runs" / RUN / ID / "topics" / TOPIC / "kg.json"
+JSON_PATH = Path(__file__).parent.parent.parent / "MedExQA" / MODE / f"{TOPIC.lower().replace(' ', '_')}_{MODE}.json"
 RUNS_FOLDER = KG.parent.parent.parent.parent
 EVAL_OUTPUT_FOLDER = RUNS_FOLDER / "eval_output"
 EVAL_OUTPUT_FOLDER.mkdir(exist_ok=True)  # Create the eval_output folder if it doesn't exist
@@ -505,9 +509,9 @@ def main():
                     query_stats[i]['iterations'].append(iteration_result)
 
     # Generate detailed results table
-    print(f"\n{'='*80}")
-    print("DETAILED RESULTS TABLE")
-    print(f"{'='*80}")
+    logger.info("=" * 80)
+    logger.info("DETAILED RESULTS TABLE")
+    logger.info("=" * 80)
 
     # Create DataFrame for detailed results
     df_results = pd.DataFrame(results_data)
@@ -539,14 +543,14 @@ def main():
 
             detailed_output.append(f"{row['iteration']:<4} {str(row['successful']):<8} {str(row['returned_results']):<8} {str(row['correct']):<8} {error_preview:<20}")
 
-    # Display detailed table
+    # Log detailed table
     for line in detailed_output:
-        print(line)
+        logger.info(line)
 
     # Calculate aggregated statistics
-    print(f"\n{'='*80}")
-    print("AGGREGATED STATISTICS")
-    print(f"{'='*80}")
+    logger.info("=" * 80)
+    logger.info("AGGREGATED STATISTICS")
+    logger.info("=" * 80)
 
     successful_queries = sum(1 for stats in query_stats.values() if stats['successful'])
     queries_with_results = sum(1 for stats in query_stats.values() if stats['returned_results'])
@@ -572,59 +576,27 @@ def main():
 
         stats_output.append(f"{iteration + 1:<10} {successful_count:<12} {results_count:<12} {correct_count:<10}")
 
-    # Display aggregated statistics
+    # Log aggregated statistics
     for line in stats_output:
-        print(line)
+        logger.info(line)
 
     # Add runtime statistics
-    print(f"\n{'='*80}")
-    print("RUNTIME STATISTICS")
-    print(f"{'='*80}")
-    print(f"Total elapsed time: {total_runtime_info.total_elapsed_time:.2f} seconds")
-    print(f"Total prompt tokens: {total_runtime_info.prompt_tokens:,}")
-    print(f"Total completion tokens: {total_runtime_info.completion_tokens:,}")
-    print(f"Total reasoning tokens: {total_runtime_info.reasoning_tokens:,}")
-    print(f"Total cached tokens: {total_runtime_info.cached_tokens:,}")
-    print(f"Total tokens: {total_runtime_info.total_tokens:,}")
-    print(f"Total calls: {total_runtime_info.total_calls}")
-    print(f"Estimated cost: ${total_runtime_info.cost_estimate:.4f}")
+    logger.info("=" * 80)
+    logger.info("RUNTIME STATISTICS")
+    logger.info("=" * 80)
+    logger.info(f"Total elapsed time: {total_runtime_info.total_elapsed_time:.2f} seconds")
+    logger.info(f"Total prompt tokens: {total_runtime_info.prompt_tokens:,}")
+    logger.info(f"Total completion tokens: {total_runtime_info.completion_tokens:,}")
+    logger.info(f"Total reasoning tokens: {total_runtime_info.reasoning_tokens:,}")
+    logger.info(f"Total cached tokens: {total_runtime_info.cached_tokens:,}")
+    logger.info(f"Total tokens: {total_runtime_info.total_tokens:,}")
+    logger.info(f"Total calls: {total_runtime_info.total_calls}")
+    logger.info(f"Estimated cost: ${total_runtime_info.cost_estimate:.4f}")
 
-    # Save formatted outputs to text files
-    detailed_output_file = EVAL_OUTPUT_FOLDER / "detailed_results.txt"
-    with open(detailed_output_file, 'w') as f:
-        f.write('\n'.join(detailed_output))
-    print(f"\nDetailed results table saved to: {detailed_output_file}")
+    # Create DataFrames for CSV output
+    # 1. Detailed results DataFrame (already created as df_results)
 
-    stats_output_file = EVAL_OUTPUT_FOLDER / "aggregated_statistics.txt"
-    with open(stats_output_file, 'w') as f:
-        f.write('\n'.join(stats_output))
-    print(f"Aggregated statistics saved to: {stats_output_file}")
-
-    # Save runtime statistics
-    runtime_stats = [
-        "RUNTIME STATISTICS",
-        "=" * 80,
-        f"Total elapsed time: {total_runtime_info.total_elapsed_time:.2f} seconds",
-        f"Total prompt tokens: {total_runtime_info.prompt_tokens:,}",
-        f"Total completion tokens: {total_runtime_info.completion_tokens:,}",
-        f"Total reasoning tokens: {total_runtime_info.reasoning_tokens:,}",
-        f"Total cached tokens: {total_runtime_info.cached_tokens:,}",
-        f"Total tokens: {total_runtime_info.total_tokens:,}",
-        f"Total calls: {total_runtime_info.total_calls}",
-        f"Estimated cost: ${total_runtime_info.cost_estimate:.4f}"
-    ]
-
-    runtime_stats_file = EVAL_OUTPUT_FOLDER / "runtime_statistics.txt"
-    with open(runtime_stats_file, 'w') as f:
-        f.write('\n'.join(runtime_stats))
-    print(f"Runtime statistics saved to: {runtime_stats_file}")
-
-    # Save detailed results to CSV
-    output_file = EVAL_OUTPUT_FOLDER / "neo4j_evaluation_results.csv"
-    df_results.to_csv(output_file, index=False)
-    print(f"\nDetailed results saved to: {output_file}")
-
-    # Save aggregated statistics
+    # 2. Aggregated statistics DataFrame
     stats_data = []
     for query_idx, stats in query_stats.items():
         stats_data.append({
@@ -640,9 +612,92 @@ def main():
         })
 
     df_stats = pd.DataFrame(stats_data)
-    stats_file = EVAL_OUTPUT_FOLDER / "neo4j_evaluation_stats.csv"
-    df_stats.to_csv(stats_file, index=False)
-    print(f"Aggregated statistics saved to: {stats_file}")
+
+        # 3. Per-iteration statistics DataFrame
+    iteration_stats_data = []
+    for iteration in range(NUM_ITERATIONS):
+        iter_data = df_results[df_results['iteration'] == iteration + 1]
+        successful_count = iter_data['successful'].sum()
+        results_count = iter_data['returned_results'].sum()
+        correct_count = iter_data['correct'].sum()
+
+        iteration_stats_data.append({
+            'iteration': iteration + 1,
+            'successful_count': successful_count,
+            'results_count': results_count,
+            'correct_count': correct_count,
+            'total_queries': len(iter_data)
+        })
+
+    # Add total row
+    total_successful = sum(row['successful_count'] for row in iteration_stats_data)
+    total_results = sum(row['results_count'] for row in iteration_stats_data)
+    total_correct = sum(row['correct_count'] for row in iteration_stats_data)
+    total_queries = sum(row['total_queries'] for row in iteration_stats_data)
+
+    iteration_stats_data.append({
+        'iteration': 'TOTAL',
+        'successful_count': total_successful,
+        'results_count': total_results,
+        'correct_count': total_correct,
+        'total_queries': total_queries
+    })
+
+    df_iteration_stats = pd.DataFrame(iteration_stats_data)
+
+    # 4. Runtime statistics DataFrame
+    runtime_stats_data = [{
+        'metric': 'total_elapsed_time_seconds',
+        'value': total_runtime_info.total_elapsed_time,
+        'formatted_value': f"{total_runtime_info.total_elapsed_time:.2f}"
+    }, {
+        'metric': 'total_prompt_tokens',
+        'value': total_runtime_info.prompt_tokens,
+        'formatted_value': f"{total_runtime_info.prompt_tokens:,}"
+    }, {
+        'metric': 'total_completion_tokens',
+        'value': total_runtime_info.completion_tokens,
+        'formatted_value': f"{total_runtime_info.completion_tokens:,}"
+    }, {
+        'metric': 'total_reasoning_tokens',
+        'value': total_runtime_info.reasoning_tokens,
+        'formatted_value': f"{total_runtime_info.reasoning_tokens:,}"
+    }, {
+        'metric': 'total_cached_tokens',
+        'value': total_runtime_info.cached_tokens,
+        'formatted_value': f"{total_runtime_info.cached_tokens:,}"
+    }, {
+        'metric': 'total_tokens',
+        'value': total_runtime_info.total_tokens,
+        'formatted_value': f"{total_runtime_info.total_tokens:,}"
+    }, {
+        'metric': 'total_calls',
+        'value': total_runtime_info.total_calls,
+        'formatted_value': str(total_runtime_info.total_calls)
+    }, {
+        'metric': 'estimated_cost_usd',
+        'value': total_runtime_info.cost_estimate,
+        'formatted_value': f"${total_runtime_info.cost_estimate:.4f}"
+    }]
+
+    df_runtime_stats = pd.DataFrame(runtime_stats_data)
+
+    # Save all DataFrames to CSV files
+    detailed_results_file = EVAL_OUTPUT_FOLDER / "neo4j_evaluation_results.csv"
+    df_results.to_csv(detailed_results_file, index=False)
+    logger.info(f"Detailed results saved to: {detailed_results_file}")
+
+    aggregated_stats_file = EVAL_OUTPUT_FOLDER / "neo4j_evaluation_stats.csv"
+    df_stats.to_csv(aggregated_stats_file, index=False)
+    logger.info(f"Aggregated statistics saved to: {aggregated_stats_file}")
+
+    iteration_stats_file = EVAL_OUTPUT_FOLDER / "neo4j_iteration_stats.csv"
+    df_iteration_stats.to_csv(iteration_stats_file, index=False)
+    logger.info(f"Per-iteration statistics saved to: {iteration_stats_file}")
+
+    runtime_stats_file = EVAL_OUTPUT_FOLDER / "neo4j_runtime_stats.csv"
+    df_runtime_stats.to_csv(runtime_stats_file, index=False)
+    logger.info(f"Runtime statistics saved to: {runtime_stats_file}")
 
     driver.close()
 

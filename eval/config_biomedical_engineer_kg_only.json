@@ -2,6 +2,6 @@
   "scenarios": [{
     "id": "biomedical_engineer_kg_only",
     "domain": null,
-    "squad_titles": ["Biomedical Engineering"]
+    "squad_titles": ["Biomedical Engineer"]
   }]
 }
