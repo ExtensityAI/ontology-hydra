@@ -10,7 +10,7 @@
 
 ontopipe is a powerful framework for generating domain-specific ontologies and knowledge graphs. It uses a committee-based approach with AI personas to comprehensively scope domains, generate ontological structures, and create knowledge graphs that can be used for various applications including question answering and domain exploration.
 
-The framework combines symbolic AI techniques (using the [symbolicai](https://github.com/ExtensityAI/symbolicai) framework) with large language models to create structured representations of domain knowledge that are both human-readable and machine-actionable.
+It combines symbolic AI techniques (using the [symbolicai](https://github.com/ExtensityAI/symbolicai) framework) with large language models to create structured representations of domain knowledge that are both human-readable and machine-actionable.
 
 ## Setup
 
