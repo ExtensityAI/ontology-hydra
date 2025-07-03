@@ -1,0 +1,240 @@
+{
+  "version": "v1.0",
+  "data": [
+    {
+      "title": "Clinical Psychologist Dev",
+      "paragraphs": [
+        {
+          "context": "The statement that according to the choice theory of reality therapy, humans are born as a blank state motivated by some external force is incorrect. According to the choice theory of reality therapy, humans are born with five genetically encoded needs, and these needs interact with the environment to determine an individual's behavior. Therefore, humans are not born as a blank state motivated by external forces, but rather their behavior is shaped by the interaction of internal needs and the external environment, which is a core concept of the choice theory in reality therapy. Correct Answer: 'According to the choice theory of reality therapy, humans are born as a blank state motivated by some external force.' According to choice theory, humans act from birth until death, and this behavior is the result of internal motivation and choice. Additionally, if one's behavior is the result of choice, then the individual must take responsibility for the consequences. However, the idea that humans are born as a blank state motivated by some external force is not consistent with the view of human nature in reality therapy. Reality therapy believes that humans are born already influenced by internal drives and the external environment, and through this, they develop their personality and behavior.",
+          "qas": [
+            {
+              "question": "Which of the following statements is not the view of human nature in reality therapy?",
+              "id": "medexqa_0",
+              "answers": [
+                {
+                  "text": "According to the choice theory of reality therapy, humans are born as a blank state motivated by some external force.",
+                  "answer_start": 602
+                },
+                {
+                  "text": "According to the choice theory of reality therapy, humans are born as a blank state motivated by some external force.",
+                  "answer_start": 602
+                },
+                {
+                  "text": "According to the choice theory of reality therapy, humans are born as a blank state motivated by some external force.",
+                  "answer_start": 602
+                },
+                {
+                  "text": "According to the choice theory of reality therapy, humans are born as a blank state motivated by some external force.",
+                  "answer_start": 602
+                }
+              ],
+              "is_impossible": false,
+              "all_answers": [
+                {
+                  "text": "Humans have five genetically encoded needs (survival, love and belonging, power, freedom, and fun).",
+                  "option": "A"
+                },
+                {
+                  "text": "According to the choice theory of reality therapy, humans are born as a blank state motivated by some external force.",
+                  "option": "B"
+                },
+                {
+                  "text": "Humans act from birth until death, and behavior is emphasized as a result of internal motivation and choice.",
+                  "option": "C"
+                },
+                {
+                  "text": "If one's behavior is the result of choice, then the individual must take responsibility for the consequences.",
+                  "option": "D"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "context": "Type A personality is characterized by being competitive, highly stressed, quick in handling tasks, and valuing achievement. Such personality traits can induce stress and are associated with heart disease according to behavioral medicine research. Therefore, the typical personality trait associated with coronary heart disease is Type A personality. Behavioral medicine suggests a strong association between coronary heart disease and Type A personality. Individuals with Type A personality are competitive, highly stressed, and strive to handle tasks quickly and perfectly. These personality traits can induce stress, and if stress persists, it can negatively affect the cardiovascular system, which is why there is reported to be a high association with coronary heart disease.",
+          "qas": [
+            {
+              "question": "What is the typical personality trait associated with coronary heart disease based on behavioral medicine?",
+              "id": "medexqa_1",
+              "answers": [
+                {
+                  "text": "Type A personality",
+                  "answer_start": 0
+                },
+                {
+                  "text": "Type A personality",
+                  "answer_start": 0
+                },
+                {
+                  "text": "Type A personality",
+                  "answer_start": 0
+                },
+                {
+                  "text": "Type A personality",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false,
+              "all_answers": [
+                {
+                  "text": "Type A personality",
+                  "option": "A"
+                },
+                {
+                  "text": "Perfectionism",
+                  "option": "B"
+                },
+                {
+                  "text": "Optimism",
+                  "option": "C"
+                },
+                {
+                  "text": "Type C personality",
+                  "option": "D"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "context": "The roles of a clinical psychologist primarily focus on psychological assessment, psychotherapy, and psychological consultation. All of these are methods to address psychological issues of patients. However, case management is a method to resolve medical issues of patients, which is less related to the role of a clinical psychologist. Case management involves collaborating with medical staff to address medical issues and improve the patient's health condition. The roles of a clinical psychologist mainly include psychological assessment, psychotherapy, and psychological consultation. These are all methods to address psychological issues of patients, understanding their symptoms and problems, providing appropriate assessments and treatments, and offering consultation when necessary. On the other hand, case management primarily involves coordinating with medical staff to adjust the patient's treatment plan and manage medical services. Therefore, case management is a task that is less related to the role of a clinical psychologist.",
+          "qas": [
+            {
+              "question": "Which of the following is not the unique role of a clinical psychologist?",
+              "id": "medexqa_2",
+              "answers": [
+                {
+                  "text": "Case management",
+                  "answer_start": 337
+                },
+                {
+                  "text": "Case management",
+                  "answer_start": 337
+                },
+                {
+                  "text": "Case management",
+                  "answer_start": 337
+                },
+                {
+                  "text": "Case management",
+                  "answer_start": 337
+                }
+              ],
+              "is_impossible": false,
+              "all_answers": [
+                {
+                  "text": "Psychological assessment",
+                  "option": "A"
+                },
+                {
+                  "text": "Psychological consultation",
+                  "option": "B"
+                },
+                {
+                  "text": "Case management",
+                  "option": "C"
+                },
+                {
+                  "text": "Psychotherapy",
+                  "option": "D"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "context": "Direct association with therapy is not one of the potential problems of behavioral observation. Behavioral observation is primarily used to identify and analyze behavior patterns to establish intervention strategies. Therefore, a direct association with therapy is not necessary for behavioral observation. Observer reliability, the possibility of intervention, and situational factors are important considerations in behavioral observation. Behavioral observation is an important method for observing and assisting in the diagnosis and treatment of a patient's behavior, but the direct association with therapy is the least related issue. This is because behavioral observation simply involves observing and recording a patient's behavior, not directly determining the therapy or treatment methods. Therefore, issues such as observer reliability, the possibility of observer intervention, and situational factors can be more problematic than a direct association with therapy.",
+          "qas": [
+            {
+              "question": "Which of the following is least related to the potential problems of behavioral observation?",
+              "id": "medexqa_3",
+              "answers": [
+                {
+                  "text": "Direct association with therapy",
+                  "answer_start": 0
+                },
+                {
+                  "text": "Direct association with therapy",
+                  "answer_start": 0
+                },
+                {
+                  "text": "Direct association with therapy",
+                  "answer_start": 0
+                },
+                {
+                  "text": "Direct association with therapy",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false,
+              "all_answers": [
+                {
+                  "text": "Situational factors",
+                  "option": "A"
+                },
+                {
+                  "text": "Possibility of observer intervention",
+                  "option": "B"
+                },
+                {
+                  "text": "Direct association with therapy",
+                  "option": "C"
+                },
+                {
+                  "text": "Observer reliability",
+                  "option": "D"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "context": "Among the options, 'avoidance of the problem' is not a factor that leads to good outcomes in short-term psychotherapy. Avoiding the problem means postponing or evading it, and in psychotherapy, it is important to confront and solve the problem. 'Avoidance of the problem' is the answer. It refers to avoiding or ignoring the problem during the therapeutic process, which cannot be a factor that leads to good outcomes in short-term psychotherapy where it is important to confront and resolve issues. Therefore, 'therapist's warmth and empathy', 'a strong therapeutic alliance', and 'client's appropriate positive expectations' are factors that lead to good outcomes in short-term psychotherapy.",
+          "qas": [
+            {
+              "question": "Which of the following is NOT a factor that leads to good outcomes in short-term psychotherapy?",
+              "id": "medexqa_4",
+              "answers": [
+                {
+                  "text": "Avoidance of the problem",
+                  "answer_start": 246
+                },
+                {
+                  "text": "Avoidance of the problem",
+                  "answer_start": 246
+                },
+                {
+                  "text": "Avoidance of the problem",
+                  "answer_start": 246
+                },
+                {
+                  "text": "Avoidance of the problem",
+                  "answer_start": 246
+                }
+              ],
+              "is_impossible": false,
+              "all_answers": [
+                {
+                  "text": "Avoidance of the problem",
+                  "option": "A"
+                },
+                {
+                  "text": "Therapist's warmth and empathy",
+                  "option": "B"
+                },
+                {
+                  "text": "A strong therapeutic alliance",
+                  "option": "C"
+                },
+                {
+                  "text": "Client's appropriate positive expectations",
+                  "option": "D"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

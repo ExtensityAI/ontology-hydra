@@ -1,0 +1,10 @@
+
+Final Results (Any Success Across 1 Iterations):
+Successfully processed: 4 / 5 queries
+Queries that returned results: 0 / 5
+Correct results: 0 / 5
+
+Per-Iteration Statistics:
+Iteration  Successful   With Results Correct   
+--------------------------------------------------
+1          4            0            0         

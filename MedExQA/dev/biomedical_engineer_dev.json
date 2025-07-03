@@ -1,0 +1,240 @@
+{
+  "version": "v1.0",
+  "data": [
+    {
+      "title": "Biomedical Engineer Dev",
+      "paragraphs": [
+        {
+          "context": "Alpha waves are a type of brainwave that appear predominantly in a relaxed state and become more pronounced when visual and sensory stimuli are suppressed, such as when closing the eyes or during meditation. Therefore, the EEG waveform that is prominent in the parietal or occipital region and is suppressed by visual and sensory stimuli is the alpha wave. Alpha waves are brainwaves that are primarily present in a relaxed state and become more distinct during focused states such as closing the eyes or meditation. They have the characteristic of being suppressed by visual and sensory stimuli, and thus appear less when the eyes are open. Therefore, the EEG waveform that is prominent in the parietal or occipital region and is suppressed by visual and sensory stimuli is the alpha wave.",
+          "qas": [
+            {
+              "question": "Which EEG waveform is most commonly seen in the parietal or occipital region and is suppressed by visual and sensory stimuli?",
+              "id": "medexqa_0",
+              "answers": [
+                {
+                  "text": "Alpha waves",
+                  "answer_start": 0
+                },
+                {
+                  "text": "Alpha waves",
+                  "answer_start": 0
+                },
+                {
+                  "text": "Alpha waves",
+                  "answer_start": 0
+                },
+                {
+                  "text": "Alpha waves",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false,
+              "all_answers": [
+                {
+                  "text": "Alpha waves",
+                  "option": "A"
+                },
+                {
+                  "text": "Beta waves",
+                  "option": "B"
+                },
+                {
+                  "text": "Delta waves",
+                  "option": "C"
+                },
+                {
+                  "text": "Theta waves",
+                  "option": "D"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "context": "Sensitivity drift is not a nonlinear characteristic of a biometric measuring device. Sensitivity drift refers to the change in measured values over time. This is one of the factors that can degrade the accuracy of measuring devices and requires calibration. Saturation refers to the condition where the measurement value reaches a maximum and does not increase further, dead zone refers to the condition where the measurement value does not change within a certain range, and breakdown refers to the destruction of the measuring device due to overload. Sensitivity drift is not a characteristic of nonlinearity in biometric measuring devices. Sensitivity drift means that the sensitivity of the biometric measuring device changes over time. This can occur due to environmental factors such as temperature or humidity. Therefore, the nonlinear characteristics of biometric measuring devices include saturation, dead zone, and breakdown. Saturation occurs when the output signal becomes fixed at a certain value once the input signal exceeds a certain range, dead zone occurs when the output signal does not change while the input signal is within a certain range, and breakdown occurs when the biometric measuring device fails if the input signal exceeds a certain threshold.",
+          "qas": [
+            {
+              "question": "Which of the following is NOT a nonlinear characteristic of a biometric measuring device?",
+              "id": "medexqa_1",
+              "answers": [
+                {
+                  "text": "Sensitivity drift",
+                  "answer_start": 0
+                },
+                {
+                  "text": "Sensitivity drift",
+                  "answer_start": 0
+                },
+                {
+                  "text": "Sensitivity drift",
+                  "answer_start": 0
+                },
+                {
+                  "text": "Sensitivity drift",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false,
+              "all_answers": [
+                {
+                  "text": "breakdown",
+                  "option": "A"
+                },
+                {
+                  "text": "sensitivity drift",
+                  "option": "B"
+                },
+                {
+                  "text": "dead zone",
+                  "option": "C"
+                },
+                {
+                  "text": "saturation",
+                  "option": "D"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "context": "Fibrillation refers to a state of electrical and structural chaos in the heart, where the myocardium contracts and relaxes asynchronously. This disrupts the normal contraction and relaxation of the heart, impairing its function and potentially leading to cardiac arrest. Therefore, fibrillation is one of the most dangerous conditions among heart diseases. The correct answer is 'Fibrillation'. Fibrillation is a phenomenon where the myocardium contracts and relaxes asynchronously due to the electrical and structural chaos in the heart. It occurs due to the heart's own electrical impulses, and typically happens when the heart's normal signal transmission system is disrupted or there are structural problems with the heart.",
+          "qas": [
+            {
+              "question": "What is the phenomenon called where the myocardium contracts and relaxes asynchronously due to the electrical and structural chaos in the heart?",
+              "id": "medexqa_2",
+              "answers": [
+                {
+                  "text": "Fibrillation",
+                  "answer_start": 0
+                },
+                {
+                  "text": "Fibrillation",
+                  "answer_start": 0
+                },
+                {
+                  "text": "Fibrillation",
+                  "answer_start": 0
+                },
+                {
+                  "text": "Fibrillation",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false,
+              "all_answers": [
+                {
+                  "text": "Asynchronous",
+                  "option": "A"
+                },
+                {
+                  "text": "Electrode",
+                  "option": "B"
+                },
+                {
+                  "text": "FES",
+                  "option": "C"
+                },
+                {
+                  "text": "Fibrillation",
+                  "option": "D"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "context": "Piezoelectric devices do not generate electromotive force due to temperature differences, but rather due to pressure or electrical potential. Therefore, the description 'A device made up of the junction of two different metals that generates electromotive force due to the temperature difference between the two ends' is incorrect. The correct description is that a piezoelectric device is not one that generates electromotive force due to temperature differences between two different metals. The described phenomenon is actually thermoelectricity, which involves generating a voltage difference from a temperature difference and is used to measure temperature. Therefore, the descriptions 'A device that can measure displacement or pressure changes from electrical potential' and 'A device that generates electrical potential when physical pressure is applied' are indeed characteristics of piezoelectric devices.",
+          "qas": [
+            {
+              "question": "Which of the following descriptions about piezoelectric devices is incorrect?",
+              "id": "medexqa_3",
+              "answers": [
+                {
+                  "text": "A device made up of the junction of two different metals that generates electromotive force (EMF) due to the temperature difference between the two ends",
+                  "answer_start": -1
+                },
+                {
+                  "text": "A device made up of the junction of two different metals that generates electromotive force (EMF) due to the temperature difference between the two ends",
+                  "answer_start": -1
+                },
+                {
+                  "text": "A device made up of the junction of two different metals that generates electromotive force (EMF) due to the temperature difference between the two ends",
+                  "answer_start": -1
+                },
+                {
+                  "text": "A device made up of the junction of two different metals that generates electromotive force (EMF) due to the temperature difference between the two ends",
+                  "answer_start": -1
+                }
+              ],
+              "is_impossible": false,
+              "all_answers": [
+                {
+                  "text": "A device made up of the junction of two different metals that generates electromotive force (EMF) due to the temperature difference between the two ends",
+                  "option": "A"
+                },
+                {
+                  "text": "A device that deforms when voltage is applied",
+                  "option": "B"
+                },
+                {
+                  "text": "A device that can measure displacement or pressure changes from electrical potential",
+                  "option": "C"
+                },
+                {
+                  "text": "A device that generates electrical potential when physical pressure is applied",
+                  "option": "D"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "context": "Piezoelectric sensors are used to detect pressure, but an electrocardiograph is used to measure the electrical activity of the heart, so it does not use a piezoelectric sensor. A piezoelectric sensor is a device that detects pressure and converts it into an electrical signal. Therefore, an electrocardiograph, which is used to measure the electrical signals of the heart, does not use a piezoelectric sensor. Ultrasound imaging devices, blood pressure measuring devices, and phonocardiogram devices all use piezoelectric sensors for measurement or detection purposes.",
+          "qas": [
+            {
+              "question": "Which of the following devices does not use a piezoelectric sensor?",
+              "id": "medexqa_4",
+              "answers": [
+                {
+                  "text": "electrocardiograph",
+                  "answer_start": 58
+                },
+                {
+                  "text": "electrocardiograph",
+                  "answer_start": 58
+                },
+                {
+                  "text": "electrocardiograph",
+                  "answer_start": 58
+                },
+                {
+                  "text": "electrocardiograph",
+                  "answer_start": 58
+                }
+              ],
+              "is_impossible": false,
+              "all_answers": [
+                {
+                  "text": "Phonocardiogram device",
+                  "option": "A"
+                },
+                {
+                  "text": "Ultrasound imaging device",
+                  "option": "B"
+                },
+                {
+                  "text": "Blood pressure measuring device",
+                  "option": "C"
+                },
+                {
+                  "text": "Electrocardiograph",
+                  "option": "D"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

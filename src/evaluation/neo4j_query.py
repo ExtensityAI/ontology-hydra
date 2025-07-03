@@ -12,12 +12,17 @@ from pathlib import Path
 from collections import defaultdict
 
 # === CONFIGURATION ===
-JSON_PATH = Path(__file__).parent.parent.parent / "MedExQA" / "test" / "biomedical_engineer_test.json"
+JSON_PATH = Path(__file__).parent.parent.parent / "MedExQA" / "dev" / "biomedical_engineer_dev.json"
+KG = Path(__file__).parent.parent.parent / "eval" / "runs" / "20250530_vL04rg" / "biomed" / "topics" / "Biomedical Engineering" / "kg.json"
 NEO4J_URI = "bolt://localhost:7687"
 NEO4J_USER = "neo4j"
 NEO4J_PASSWORD = "ontology"
 BATCH_SIZE = 5  # Number of questions to process in each batch
-NUM_ITERATIONS = 10  # Number of times to run the evaluation
+NUM_ITERATIONS = 1  # Number of times to run the evaluation
+
+RUNS_FOLDER = KG.parent.parent.parent.parent
+EVAL_OUTPUT_FOLDER = RUNS_FOLDER / "eval_output"
+EVAL_OUTPUT_FOLDER.mkdir(exist_ok=True)  # Create the eval_output folder if it doesn't exist
 
 class Neo4jQueryInput(LLMDataModel):
     """Input for Neo4j query generation"""
@@ -258,12 +263,11 @@ def main():
     driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASSWORD))
 
     converter = BatchQuestionToCypherConverter(driver=driver)
-    kg_file = "/Users/ryang/Work/ExtensityAI/research-ontology/eval/runs/20250530_vL04rg/biomed/topics/Biomedical Engineering/kg.json"
-    with open(kg_file, "r") as f:
+    with open(KG, "r") as f:
         kg_data = json.load(f)
     schema = json.dumps(kg_data)
 
-    print(f"Loaded schema from: {kg_file}")
+    print(f"Loaded schema from: {KG}")
     print(f"Schema size: {len(schema)} characters")
     print(f"Schema preview: {schema[:200]}...")
 
@@ -418,24 +422,36 @@ def main():
     # Create DataFrame for detailed results
     df_results = pd.DataFrame(results_data)
 
-    # Display detailed table
-    print("\nDetailed Results by Query and Iteration:")
-    print("-" * 80)
+    # Prepare detailed table output
+    detailed_output = []
+    detailed_output.append("Detailed Results by Query and Iteration:")
+    detailed_output.append("-" * 80)
 
     for query_idx in range(total_queries):
         query_data = df_results[df_results['query_idx'] == query_idx + 1]
         question = query_data.iloc[0]['question']
 
-        print(f"\nQuery {query_idx + 1}: {question}")
-        print(f"Expected Answer: {query_data.iloc[0]['expected_answer']}")
-        print(f"{'Iter':<4} {'Success':<8} {'Results':<8} {'Correct':<8} {'Query':<20} {'Error':<20}")
-        print("-" * 80)
+        detailed_output.append(f"\nQuery {query_idx + 1}: {question}")
+        detailed_output.append(f"Expected Answer: {query_data.iloc[0]['expected_answer']}")
+
+        # Add Cypher query underneath
+        for _, row in query_data.iterrows():
+            if row['generated_query'].strip():
+                detailed_output.append(f"cypher: {row['generated_query']}")
+            else:
+                detailed_output.append("cypher: (No query generated)")
+
+        detailed_output.append(f"{'Iter':<4} {'Success':<8} {'Results':<8} {'Correct':<8} {'Error':<20}")
+        detailed_output.append("-" * 80)
 
         for _, row in query_data.iterrows():
-            query_preview = row['generated_query'][:17] + "..." if len(row['generated_query']) > 20 else row['generated_query']
             error_preview = str(row['error'])[:17] + "..." if row['error'] and len(str(row['error'])) > 20 else str(row['error']) or ""
 
-            print(f"{row['iteration']:<4} {str(row['successful']):<8} {str(row['returned_results']):<8} {str(row['correct']):<8} {query_preview:<20} {error_preview:<20}")
+            detailed_output.append(f"{row['iteration']:<4} {str(row['successful']):<8} {str(row['returned_results']):<8} {str(row['correct']):<8} {error_preview:<20}")
+
+    # Display detailed table
+    for line in detailed_output:
+        print(line)
 
     # Calculate aggregated statistics
     print(f"\n{'='*80}")
@@ -446,15 +462,17 @@ def main():
     queries_with_results = sum(1 for stats in query_stats.values() if stats['returned_results'])
     correct_queries = sum(1 for stats in query_stats.values() if stats['correct'])
 
-    print(f"\nFinal Results (Any Success Across {NUM_ITERATIONS} Iterations):")
-    print(f"Successfully processed: {successful_queries} / {total_queries} queries")
-    print(f"Queries that returned results: {queries_with_results} / {total_queries}")
-    print(f"Correct results: {correct_queries} / {total_queries}")
+    # Prepare aggregated statistics output
+    stats_output = []
+    stats_output.append(f"\nFinal Results (Any Success Across {NUM_ITERATIONS} Iterations):")
+    stats_output.append(f"Successfully processed: {successful_queries} / {total_queries} queries")
+    stats_output.append(f"Queries that returned results: {queries_with_results} / {total_queries}")
+    stats_output.append(f"Correct results: {correct_queries} / {total_queries}")
 
     # Calculate per-iteration statistics
-    print(f"\nPer-Iteration Statistics:")
-    print(f"{'Iteration':<10} {'Successful':<12} {'With Results':<12} {'Correct':<10}")
-    print("-" * 50)
+    stats_output.append(f"\nPer-Iteration Statistics:")
+    stats_output.append(f"{'Iteration':<10} {'Successful':<12} {'With Results':<12} {'Correct':<10}")
+    stats_output.append("-" * 50)
 
     for iteration in range(NUM_ITERATIONS):
         iter_data = df_results[df_results['iteration'] == iteration + 1]
@@ -462,10 +480,25 @@ def main():
         results_count = iter_data['returned_results'].sum()
         correct_count = iter_data['correct'].sum()
 
-        print(f"{iteration + 1:<10} {successful_count:<12} {results_count:<12} {correct_count:<10}")
+        stats_output.append(f"{iteration + 1:<10} {successful_count:<12} {results_count:<12} {correct_count:<10}")
+
+    # Display aggregated statistics
+    for line in stats_output:
+        print(line)
+
+    # Save formatted outputs to text files
+    detailed_output_file = EVAL_OUTPUT_FOLDER / "detailed_results.txt"
+    with open(detailed_output_file, 'w') as f:
+        f.write('\n'.join(detailed_output))
+    print(f"\nDetailed results table saved to: {detailed_output_file}")
+
+    stats_output_file = EVAL_OUTPUT_FOLDER / "aggregated_statistics.txt"
+    with open(stats_output_file, 'w') as f:
+        f.write('\n'.join(stats_output))
+    print(f"Aggregated statistics saved to: {stats_output_file}")
 
     # Save detailed results to CSV
-    output_file = "neo4j_evaluation_results.csv"
+    output_file = EVAL_OUTPUT_FOLDER / "neo4j_evaluation_results.csv"
     df_results.to_csv(output_file, index=False)
     print(f"\nDetailed results saved to: {output_file}")
 
@@ -485,7 +518,7 @@ def main():
         })
 
     df_stats = pd.DataFrame(stats_data)
-    stats_file = "neo4j_evaluation_stats.csv"
+    stats_file = EVAL_OUTPUT_FOLDER / "neo4j_evaluation_stats.csv"
     df_stats.to_csv(stats_file, index=False)
     print(f"Aggregated statistics saved to: {stats_file}")
 

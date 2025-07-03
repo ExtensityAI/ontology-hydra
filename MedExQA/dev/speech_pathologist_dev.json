@@ -1,0 +1,240 @@
+{
+  "version": "v1.0",
+  "data": [
+    {
+      "title": "Speech Pathologist Dev",
+      "paragraphs": [
+        {
+          "context": "In speech-language pathology, the outlook for a patient's progress, or prognosis, is predicted by a speech-language pathologist by evaluating the person's present level of functioning and their performance on language assessments. The prognosis in the context of speech-language pathology is not static and can change over time. It is influenced by various factors, including the individual's constitution and environment. While long-term predictions can be uncertain, a clinician can make an informed prediction about the prognosis by considering the individual's current functional level and the results of language assessments. This prediction is used to guide treatment planning and to set realistic goals for therapy.",
+          "qas": [
+            {
+              "question": "Which statement is correct regarding the prognosis based on language assessment results?",
+              "id": "medexqa_0",
+              "answers": [
+                {
+                  "text": "It is the clinician's prediction based on test results and current functional level.",
+                  "answer_start": -1
+                },
+                {
+                  "text": "It is the clinician's prediction based on test results and current functional level.",
+                  "answer_start": -1
+                },
+                {
+                  "text": "It is the clinician's prediction based on test results and current functional level.",
+                  "answer_start": -1
+                },
+                {
+                  "text": "It is the clinician's prediction based on test results and current functional level.",
+                  "answer_start": -1
+                }
+              ],
+              "is_impossible": false,
+              "all_answers": [
+                {
+                  "text": "Prognosis does not change over time.",
+                  "option": "A"
+                },
+                {
+                  "text": "Constitution and environment do not influence the prognosis.",
+                  "option": "B"
+                },
+                {
+                  "text": "It provides certainty about the long-term prognosis.",
+                  "option": "C"
+                },
+                {
+                  "text": "It is the clinician's prediction based on test results and current functional level.",
+                  "option": "D"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "context": "Multiple regression analysis is a statistical approach that enables the investigation of the influence of several independent variables on a single outcome variable. For this scenario, the outcome variable is the child's expressive language development, and the predictors include the child's gender, the amount of time spent watching television, and the duration of mother-child interactions. Multiple regression analysis is a statistical technique that allows researchers to examine the relationship between a single dependent variable and multiple independent variables. In this case, the dependent variable is the child's expressive language development, and the independent variables are the child's gender, television viewing time, and interaction time with the mother. This method is suitable for determining how each independent variable contributes to the variance in the dependent variable, while controlling for the influence of other independent variables in the model.",
+          "qas": [
+            {
+              "question": "What statistical method can be applied to study the impact of a child's gender, television viewing time, and interaction time with the mother on the child's expressive language development?",
+              "id": "medexqa_1",
+              "answers": [
+                {
+                  "text": "Multiple regression analysis",
+                  "answer_start": 0
+                },
+                {
+                  "text": "Multiple regression analysis",
+                  "answer_start": 0
+                },
+                {
+                  "text": "Multiple regression analysis",
+                  "answer_start": 0
+                },
+                {
+                  "text": "Multiple regression analysis",
+                  "answer_start": 0
+                }
+              ],
+              "is_impossible": false,
+              "all_answers": [
+                {
+                  "text": "Frequency analysis",
+                  "option": "A"
+                },
+                {
+                  "text": "One-way ANOVA",
+                  "option": "B"
+                },
+                {
+                  "text": "Paired sample analysis",
+                  "option": "C"
+                },
+                {
+                  "text": "Multiple regression analysis",
+                  "option": "D"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "context": "Language learning disabilities, such as dyslexia, are characterized by difficulties with reading and writing stemming from issues with processing language. These challenges are not directly caused by visual or motor impairments. Although language learning disabilities may occur alongside other disorders like autism spectrum disorder, there is no one-to-one correlation between the two; individuals with language learning disabilities may not have autism, and vice versa. It is inaccurate to say that language learning disabilities only affect basic language skills. Language learning disabilities, such as dyslexia, typically involve challenges with reading and writing. These difficulties are due to problems with language processing, not necessarily related to visual or motor disabilities. While language learning disabilities can co-occur with other conditions, including autism spectrum disorder, not all individuals with language learning disabilities have autism, and not all individuals with autism have language learning disabilities. The statement that language learning disabilities do not show problems with higher-level language abilities is incorrect, as these disabilities can affect a range of language-related skills, including phonological processing, vocabulary, syntax, and comprehension.",
+          "qas": [
+            {
+              "question": "Which of the following is a correct description of a language learning disability?",
+              "id": "medexqa_2",
+              "answers": [
+                {
+                  "text": "It shows difficulties in reading and writing.",
+                  "answer_start": -1
+                },
+                {
+                  "text": "It shows difficulties in reading and writing.",
+                  "answer_start": -1
+                },
+                {
+                  "text": "It shows difficulties in reading and writing.",
+                  "answer_start": -1
+                },
+                {
+                  "text": "It shows difficulties in reading and writing.",
+                  "answer_start": -1
+                }
+              ],
+              "is_impossible": false,
+              "all_answers": [
+                {
+                  "text": "It shows difficulties in reading and writing.",
+                  "option": "A"
+                },
+                {
+                  "text": "It does not show problems with higher-level language abilities.",
+                  "option": "B"
+                },
+                {
+                  "text": "It occurs due to visual or motor disabilities.",
+                  "option": "C"
+                },
+                {
+                  "text": "It often accompanies autism spectrum disorder.",
+                  "option": "D"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "context": "For adults undergoing fluency shaping therapy for stuttering, engaging in activities during the maintenance phase is key to preserving the progress made earlier in treatment. Involvement in stuttering support groups is particularly beneficial, as it provides a chance to continuously apply fluency skills in a welcoming setting. It also allows individuals to exchange personal insights and gain motivation from peers familiar with the struggles associated with stuttering. Such consistent reinforcement is vital in solidifying the behavioral adjustments and strategies for managing stuttering that were developed during therapy, aiding in the long-term retention of fluent speech. In the context of fluency shaping therapy for adults who stutter, maintenance phase activities are crucial for sustaining the improvements achieved during the initial stages of therapy. Regular participation in stuttering support groups offers individuals the opportunity to practice fluency techniques in a supportive environment, share experiences, and receive encouragement from others who understand the challenges of stuttering. This ongoing support is essential for reinforcing the behavioral changes and coping strategies learned in therapy, thereby helping to maintain fluency over time.",
+          "qas": [
+            {
+              "question": "What is an appropriate maintenance phase activity for fluency shaping therapy in adults who stutter?",
+              "id": "medexqa_3",
+              "answers": [
+                {
+                  "text": "Regularly participating in stuttering support groups",
+                  "answer_start": -1
+                },
+                {
+                  "text": "Regularly participating in stuttering support groups",
+                  "answer_start": -1
+                },
+                {
+                  "text": "Regularly participating in stuttering support groups",
+                  "answer_start": -1
+                },
+                {
+                  "text": "Regularly participating in stuttering support groups",
+                  "answer_start": -1
+                }
+              ],
+              "is_impossible": false,
+              "all_answers": [
+                {
+                  "text": "Pausing briefly at moments of stuttering and then starting again",
+                  "option": "A"
+                },
+                {
+                  "text": "Speaking simultaneously with another person",
+                  "option": "B"
+                },
+                {
+                  "text": "Regularly participating in stuttering support groups",
+                  "option": "C"
+                },
+                {
+                  "text": "Gradually reducing the rate of speech",
+                  "option": "D"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "context": "Damage to the right hemisphere of the brain can lead to difficulties in grasping non-literal aspects of language, such as idioms, metaphors, and sarcasm. This is due to the right hemisphere's role in processing the subtleties of language that go beyond the direct meaning of words. The right hemisphere of the brain is responsible for processing non-literal language, emotional expression, and complex visual-spatial skills. When this hemisphere is damaged, patients may have trouble with tasks that involve understanding figurative language, such as idioms, metaphors, and sarcasm. This is because these tasks require the ability to interpret language beyond its literal meaning, which is a cognitive function that can be compromised with right hemisphere damage.",
+          "qas": [
+            {
+              "question": "Which task is most prominently impaired in patients with right hemisphere damage?",
+              "id": "medexqa_4",
+              "answers": [
+                {
+                  "text": "Understanding idioms",
+                  "answer_start": -1
+                },
+                {
+                  "text": "Understanding idioms",
+                  "answer_start": -1
+                },
+                {
+                  "text": "Understanding idioms",
+                  "answer_start": -1
+                },
+                {
+                  "text": "Understanding idioms",
+                  "answer_start": -1
+                }
+              ],
+              "is_impossible": false,
+              "all_answers": [
+                {
+                  "text": "Repeating words",
+                  "option": "A"
+                },
+                {
+                  "text": "Responding to simple questions",
+                  "option": "B"
+                },
+                {
+                  "text": "Understanding idioms",
+                  "option": "C"
+                },
+                {
+                  "text": "Naming objects in view",
+                  "option": "D"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
