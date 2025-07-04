@@ -348,7 +348,7 @@ def compute_ontology_and_kg(
             threshold=threshold,
             batch_size=batch_size,
         )
-        visualize_kg(kg, output_path / "kg.html")
+        visualize_kg(kg, ontology, output_path / "kg.html")
     except Exception as e:
         print(f"Error generating knowledge graph: {e}")
         # print stack trace for debugging

@@ -1,4 +1,16 @@
-# research-ontology
+# Research Ontology
+
+> An advanced tool for generating, visualizing, and evaluating domain-specific knowledge graphs and ontologies.
+
+<div align="center">
+  <img src=".assets/kg-zoom.png" alt="Knowledge Graph Visualization" width="800"/>
+</div>
+
+## About
+
+ontopipe is a powerful framework for generating domain-specific ontologies and knowledge graphs. It uses a committee-based approach with AI personas to comprehensively scope domains, generate ontological structures, and create knowledge graphs that can be used for various applications including question answering and domain exploration.
+
+It combines symbolic AI techniques (using the [symbolicai](https://github.com/ExtensityAI/symbolicai) framework) with large language models to create structured representations of domain knowledge that are both human-readable and machine-actionable.
 
 ## Setup
 
@@ -11,6 +23,33 @@ $ uv sync --all-packages
 ```
 
 _Note: It is important to use the `--all-packages` parameter as the evaluation framework is located in a separate package under `./packages/eval`._
+
+## Usage
+
+### Generating Ontologies and Knowledge Graphs
+
+You can use the ontopipe API to generate ontologies and knowledge graphs for a specific domain:
+
+```python
+from ontopipe import ontopipe, generate_kg
+from pathlib import Path
+
+# Define the domain and output directory
+domain = "biology"
+artifacts_dir = Path("./artifacts/biology")
+
+# Generate ontology
+ontology = ontopipe(domain, cache_dir=artifacts_dir)
+
+# Generate knowledge graph
+kg = generate_kg(ontology, artifacts_dir / "data.txt")
+
+# Visualize the ontology and knowledge graph
+from ontopipe.vis import visualize_ontology, visualize_kg
+
+visualize_ontology(ontology, artifacts_dir / "ontology_viz.html")
+visualize_kg(kg, artifacts_dir / "kg_viz.html")
+```
 
 ## Evaluation
 
