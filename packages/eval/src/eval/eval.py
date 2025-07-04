@@ -16,6 +16,7 @@ from ontopipe.kg import generate_kg
 from ontopipe.models import KG, Ontology
 from ontopipe.vis import visualize_kg, visualize_ontology
 from eval.neo4j_eval import Neo4jConfig, _eval_neo4j_qa
+from eval.config import EvalScenario, EvalConfig
 
 KG_BATCH_SIZE = 4
 QA_BATCH_SIZE = 4
@@ -41,23 +42,6 @@ def load_dataset(mode: str, topic: str) -> SquadDataset:
         )
 
     return SquadDataset.model_validate_json(dataset_path.read_text(encoding="utf-8"))
-
-
-class EvalScenario(BaseModel):
-    model_config = ConfigDict(frozen=True)
-
-    id: str
-
-    domain: str | None = None
-    """The domain used for ontology creation. If None, no ontology will be created."""
-
-    squad_titles: tuple[str, ...]
-    """Titles of topics in the SQuAD dataset to use for evaluation (title field)"""
-    # intuition: we create an ontology for the domain, create KGs for each SQuAD topic based on the associated texts and the ontology and then evaluate using SQuAD questions
-
-    neo4j: Neo4jConfig = Neo4jConfig()  # Add Neo4j config, default disabled
-
-    dataset_mode: str = "test"  # "dev" or "test" - which dataset to use for evaluation
 
 
 def _generate_kg(texts: list[str], domain: str, kg_path: Path, ontology: Ontology | None = None):
@@ -220,7 +204,7 @@ def _answer_all_questions(kg: KG, qas: list[SquadQAPair], cache_path: Path):
     return details
 
 
-def _eval_squad_topic(title: str, ontology: Ontology | None, path: Path, neo4j_config: Neo4jConfig, dataset_mode: str):
+def _eval_squad_topic(title: str, ontology: Ontology | None, path: Path, neo4j_config: Neo4jConfig, dataset_mode: str, skip_qa: bool = True):
     """Evaluate QA performance on a specific scenario consisting of multiple SQuAD topics using the generated ontology."""
 
     logger.info("Generating kg for '{}' using {} dataset", title, dataset_mode)
@@ -250,22 +234,34 @@ def _eval_squad_topic(title: str, ontology: Ontology | None, path: Path, neo4j_c
 
     logger.debug("Found {} questions for topic '{}'", len(qas), title)
 
-    qa_cache_path = path / "qas.json"
+    if skip_qa:
+        logger.info("Skipping question answering evaluation")
+        # Create empty metrics for consistency
+        empty_metrics = {
+            'exact_match': 0.0,
+            'f1': 0.0,
+            'no_answer_probability': 0.0,
+            'skip_qa': True
+        }
+        (path / "metrics.json").write_text(json.dumps(empty_metrics, indent=2), encoding="utf-8")
+        logger.debug("Saved empty evaluation results to '{}'", path / "metrics.json")
+    else:
+        qa_cache_path = path / "qas.json"
 
-    details = _answer_all_questions(kg, qas, qa_cache_path)
+        details = _answer_all_questions(kg, qas, qa_cache_path)
 
-    # TODO IMPORTANT how do we ensure that answers are sourced only from the KG?
+        # TODO IMPORTANT how do we ensure that answers are sourced only from the KG?
 
-    # TODO also save preds and refs to file?
+        # TODO also save preds and refs to file?
 
-    predictions, references = _format_predictions(details, qas)
-    metrics = squadv2.compute(predictions=predictions, references=references)
-    logger.info("Evaluation results for topic '{}':", title)
-    logger.info("{}", metrics)
+        predictions, references = _format_predictions(details, qas)
+        metrics = squadv2.compute(predictions=predictions, references=references)
+        logger.info("Evaluation results for topic '{}':", title)
+        logger.info("{}", metrics)
 
-    # save results to file
-    (path / "metrics.json").write_text(json.dumps(metrics, indent=2), encoding="utf-8")
-    logger.debug("Saved evaluation results to '{}'", path / "metrics.json")
+        # save results to file
+        (path / "metrics.json").write_text(json.dumps(metrics, indent=2), encoding="utf-8")
+        logger.debug("Saved evaluation results to '{}'", path / "metrics.json")
 
     # --- Neo4j evaluation ---
     _eval_neo4j_qa(kg, qas, neo4j_config, path)
@@ -350,7 +346,7 @@ def eval_scenario(scenario: EvalScenario, path: Path):
         topic_path = topics_path / title
         topic_path.mkdir(exist_ok=True, parents=True)
 
-        _eval_squad_topic(title, ontology, topic_path, scenario.neo4j, scenario.dataset_mode)
+        _eval_squad_topic(title, ontology, topic_path, scenario.neo4j, scenario.dataset_mode, scenario.skip_qa)
 
 
 def _generate_run_metrics_and_stats(path: Path, config: EvalConfig):

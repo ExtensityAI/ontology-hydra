@@ -1,0 +1,88 @@
+{
+  "total_scenarios": 1,
+  "total_topics": 1,
+  "scenarios_with_ontology": 0,
+  "scenarios_without_ontology": 1,
+  "neo4j_enabled_scenarios": 1,
+  "scenarios": [
+    {
+      "id": "kg_only",
+      "domain": null,
+      "dataset_mode": "dev",
+      "neo4j_enabled": true,
+      "topics": [
+        {
+          "title": "Biomedical Engineer",
+          "questions": 5,
+          "kg_triplets": 52,
+          "squad_metrics": {
+            "exact": 60.0,
+            "f1": 69.96960486322189,
+            "total": 5,
+            "HasAns_exact": 60.0,
+            "HasAns_f1": 69.96960486322189,
+            "HasAns_total": 5,
+            "best_exact": 60.0,
+            "best_exact_thresh": 0.0,
+            "best_f1": 69.96960486322189,
+            "best_f1_thresh": 0.0
+          },
+          "neo4j_metrics": {
+            "database_name": "neo4j",
+            "run_id": "20250704_D88HgA",
+            "successful_queries": 4,
+            "total_queries": 5,
+            "success_rate": 0.8,
+            "queries_with_results": 2,
+            "results_rate": 0.4,
+            "correct_queries": 0,
+            "accuracy": 0.0,
+            "total_elapsed_time_seconds": 18.745935500017367,
+            "estimated_cost_usd": 0.012553199999999999,
+            "auto_cleanup_enabled": false
+          }
+        }
+      ],
+      "total_questions": 5,
+      "total_kg_triplets": 52,
+      "squad_metrics": {
+        "exact_match": 0.0,
+        "f1": 69.96960486322189,
+        "no_answer_probability": 0.0
+      },
+      "neo4j_metrics": {
+        "successful_queries": 4,
+        "total_queries": 5,
+        "success_rate": 0.8,
+        "queries_with_results": 2,
+        "results_rate": 0.4,
+        "correct_queries": 0,
+        "accuracy": 0.0
+      }
+    }
+  ],
+  "overall_squad_metrics": {
+    "exact_match": 0.0,
+    "f1": 69.96960486322189,
+    "no_answer_probability": 0.0
+  },
+  "overall_neo4j_metrics": {
+    "successful_queries": 4,
+    "total_queries": 5,
+    "success_rate": 0.8,
+    "queries_with_results": 2,
+    "results_rate": 0.4,
+    "correct_queries": 0,
+    "accuracy": 0.0
+  },
+  "runtime_stats": {
+    "total_elapsed_time_seconds": 76.6924167079851,
+    "total_prompt_tokens": 11905.0,
+    "total_completion_tokens": 839.0,
+    "total_reasoning_tokens": 0.0,
+    "total_cached_tokens": 6400.0,
+    "total_tokens": 12744.0,
+    "total_calls": 5.0,
+    "estimated_cost_usd": 0.0125531999999999
+  }
+}

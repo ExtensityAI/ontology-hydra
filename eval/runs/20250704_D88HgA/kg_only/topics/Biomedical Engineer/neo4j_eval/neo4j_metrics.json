@@ -1,0 +1,14 @@
+{
+  "database_name": "neo4j",
+  "run_id": "20250704_D88HgA",
+  "successful_queries": 4,
+  "total_queries": 5,
+  "success_rate": 0.8,
+  "queries_with_results": 2,
+  "results_rate": 0.4,
+  "correct_queries": 0,
+  "accuracy": 0.0,
+  "total_elapsed_time_seconds": 18.745935500017367,
+  "estimated_cost_usd": 0.012553199999999999,
+  "auto_cleanup_enabled": false
+}

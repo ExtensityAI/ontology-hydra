@@ -1,0 +1,34 @@
+{
+  "responses": [
+    {
+      "qid": "medexqa_0",
+      "answer": "alpha_wave",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_1",
+      "answer": "sensitivity_drift",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_2",
+      "answer": "fibrillation",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_3",
+      "answer": "Piezoelectric devices do not generate electromotive force due to temperature difference; this statement is correct, so no incorrect description found in provided data.",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_4",
+      "answer": "electrocardiograph",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    }
+  ]
+}

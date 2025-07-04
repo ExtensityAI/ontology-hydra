@@ -5,7 +5,10 @@
     "user": "neo4j",
     "password": "ontology",
     "batch_size": 5,
-    "num_iterations": 5
+    "num_iterations": 5,
+    "use_run_specific_databases": true,
+    "default_database": "neo4j",
+    "auto_cleanup": false
   },
   "scenarios": [
     {

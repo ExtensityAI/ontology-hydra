@@ -108,9 +108,9 @@ class BatchQuestionToCypherConverter(Expression):
         self.data_model = Neo4jQueryOutput
         self.driver = driver
 
-    def get_schema(self) -> str:
+    def get_schema(self, database_name: str = "neo4j") -> str:
         """Query Neo4j for complete schema information."""
-        with self.driver.session() as session:
+        with self.driver.session(database=database_name) as session:
             # Get node labels and their counts
             labels_result = session.run("""
                 MATCH (n)
@@ -155,7 +155,7 @@ class BatchQuestionToCypherConverter(Expression):
                        for record in patterns_result]
 
             # Format the schema string
-            schema = "Complete Neo4j Schema:\n\n"
+            schema = f"Complete Neo4j Schema (Database: {database_name}):\n\n"
 
             schema += "1. Node Labels and Counts:\n"
             for label, count in node_labels:
@@ -201,40 +201,14 @@ class BatchQuestionToCypherConverter(Expression):
         if len(output.queries) != len(self._input.questions):
             raise ValueError(f"Number of output queries ({len(output.queries)}) does not match number of input questions ({len(self._input.questions)})")
 
-        try:
-            with self.driver.session() as session:
-                labels, rels, props = session.read_transaction(self._get_schema)
-        except Exception as e:
-            raise ValueError(f"Failed to get schema from Neo4j: {e}")
-
+        # Basic validation of query format
         for i, query in enumerate(output.queries):
             if not query.strip():
                 raise ValueError(f"Query {i+1} cannot be empty")
             if not query.upper().startswith("MATCH"):
                 raise ValueError(f"Query {i+1} must start with MATCH: {query[:50]}...")
 
-            # Extract and validate schema elements
-            q_labels, q_rels, q_props = self._extract_cypher_elements(query)
-
-            invalid_labels = q_labels - labels
-            invalid_rels = q_rels - rels
-            invalid_props = q_props - props
-
-            if invalid_labels:
-                raise ValueError(f"Query {i+1} uses non-existent labels: {invalid_labels}")
-            if invalid_rels:
-                raise ValueError(f"Query {i+1} uses non-existent relationships: {invalid_rels}")
-            if invalid_props:
-                raise ValueError(f"Query {i+1} uses non-existent properties: {invalid_props}")
-
         return True
-
-    def _get_schema(self, tx):
-        """Get schema elements from Neo4j."""
-        labels = {record["label"] for record in tx.run("CALL db.labels()")}
-        rels = {record["relationshipType"] for record in tx.run("CALL db.relationshipTypes()")}
-        props = {record["propertyKey"] for record in tx.run("CALL db.propertyKeys()")}
-        return labels, rels, props
 
     def _extract_cypher_elements(self, query):
         """Extract Cypher elements using regex."""
@@ -296,21 +270,105 @@ class Neo4jConfig(BaseModel):
     password: str = "ontology"
     batch_size: int = 5
     num_iterations: int = 1
+    use_run_specific_databases: bool = True  # New field to control database strategy
+    default_database: str = "neo4j"  # Fallback database name
+    auto_cleanup: bool = False  # New field to control automatic cleanup
+
+    def __init__(self, **data):
+        # Allow environment variables to override defaults
+        import os
+
+        # Override with environment variables if they exist
+        if 'NEO4J_URI' in os.environ:
+            data['uri'] = os.environ['NEO4J_URI']
+        if 'NEO4J_USER' in os.environ:
+            data['user'] = os.environ['NEO4J_USER']
+        if 'NEO4J_PASSWORD' in os.environ:
+            data['password'] = os.environ['NEO4J_PASSWORD']
+        if 'NEO4J_USE_RUN_SPECIFIC_DATABASES' in os.environ:
+            data['use_run_specific_databases'] = os.environ['NEO4J_USE_RUN_SPECIFIC_DATABASES'].lower() == 'true'
+        if 'NEO4J_DEFAULT_DATABASE' in os.environ:
+            data['default_database'] = os.environ['NEO4J_DEFAULT_DATABASE']
+        if 'NEO4J_AUTO_CLEANUP' in os.environ:
+            data['auto_cleanup'] = os.environ['NEO4J_AUTO_CLEANUP'].lower() == 'true'
+
+        super().__init__(**data)
 
 
-def run_neo4j_query(driver, query):
+def run_neo4j_query(driver, query, database_name: str = "neo4j"):
     """Execute a Neo4j query and return results"""
-    with driver.session() as session:
+    with driver.session(database=database_name) as session:
         result = session.run(query)
         return [record.data() for record in result]
 
 
-def _load_kg_to_neo4j(kg: KG, driver: GraphDatabase.driver):
-    """Load knowledge graph into Neo4j database"""
-    logger.info("Loading knowledge graph into Neo4j...")
+def _extract_run_id_from_path(path: Path) -> str:
+    """Extract the run ID from the evaluation path."""
+    # The path structure is: eval/runs/YYYYMMDD_XXXXX/scenario_id/topics/topic_name
+    # We need to extract the YYYYMMDD_XXXXX part
+    parts = path.parts
+    for i, part in enumerate(parts):
+        if part == "runs" and i + 1 < len(parts):
+            return parts[i + 1]
 
-    # Clear existing data
-    with driver.session() as session:
+    # Fallback: use the last part of the path
+    return path.name
+
+
+def _create_run_specific_database(driver: GraphDatabase.driver, run_id: str, config: Neo4jConfig) -> str:
+    """Create a run-specific database and return the database name."""
+    if not config.use_run_specific_databases:
+        logger.info(f"Run-specific databases disabled, using default database: {config.default_database}")
+        return config.default_database
+
+    # Convert run_id to use only lowercase letters and numbers
+    # Neo4j database names will look like: r20250704pdiq9q
+    import re
+    # Remove all non-alphanumeric characters and convert to lowercase
+    safe_run_id = re.sub(r'[^a-zA-Z0-9]', '', run_id.lower())
+    # Add "r" prefix to ensure it starts with a letter
+    database_name = f"r{safe_run_id}"
+
+    try:
+        with driver.session() as session:
+            # First, try to check if we can list databases (requires admin privileges)
+            try:
+                result = session.run("SHOW DATABASES")
+                existing_databases = [record["name"] for record in result]
+
+                if database_name not in existing_databases:
+                    # Try to create the database with proper quoting
+                    try:
+                        session.run(f'CREATE DATABASE `{database_name}`')
+                        logger.info(f"Created Neo4j database: {database_name}")
+                    except Exception as create_error:
+                        logger.warning(f"Could not create database '{database_name}': {create_error}")
+                        logger.warning("This might be due to insufficient privileges or Neo4j version limitations")
+                        logger.warning(f"Falling back to default database: {config.default_database}")
+                        return config.default_database
+                else:
+                    logger.info(f"Using existing Neo4j database: {database_name}")
+
+            except Exception as list_error:
+                logger.warning(f"Could not list databases: {list_error}")
+                logger.warning("This might be due to insufficient privileges")
+                logger.warning(f"Falling back to default database: {config.default_database}")
+                return config.default_database
+
+    except Exception as e:
+        logger.warning(f"Could not access Neo4j: {e}")
+        logger.warning(f"Falling back to default database: {config.default_database}")
+        return config.default_database
+
+    return database_name
+
+
+def _load_kg_to_neo4j(kg: KG, driver: GraphDatabase.driver, database_name: str = "neo4j"):
+    """Load knowledge graph into Neo4j database"""
+    logger.info(f"Loading knowledge graph into Neo4j database: {database_name}")
+
+    # Clear existing data in the specified database
+    with driver.session(database=database_name) as session:
         session.run("MATCH (n) DETACH DELETE n")
 
         # Create constraints
@@ -323,14 +381,14 @@ def _load_kg_to_neo4j(kg: KG, driver: GraphDatabase.driver):
     # Load triplets
     total_triplets = len(kg.triplets)
     for i, triplet in enumerate(kg.triplets, 1):
-        _load_triplet(driver, triplet.subject, triplet.predicate, triplet.object)
+        _load_triplet(driver, triplet.subject, triplet.predicate, triplet.object, database_name)
         if i % 100 == 0:
             logger.debug(f"Processed {i}/{total_triplets} triplets")
 
-    logger.info(f"Successfully loaded {total_triplets} triplets into Neo4j")
+    logger.info(f"Successfully loaded {total_triplets} triplets into Neo4j database: {database_name}")
 
 
-def _load_triplet(driver: GraphDatabase.driver, subject: str, predicate: str, object: str):
+def _load_triplet(driver: GraphDatabase.driver, subject: str, predicate: str, object: str, database_name: str = "neo4j"):
     """Create a single triplet in the graph with proper labels and relationship types."""
     # Clean up predicate and object for use as Neo4j identifiers
     rel_type = predicate.upper().replace(' ', '_')
@@ -351,8 +409,121 @@ def _load_triplet(driver: GraphDatabase.driver, subject: str, predicate: str, ob
         MERGE (s)-[r:`{rel_type}`]->(o)
         """
 
-    with driver.session() as session:
+    with driver.session(database=database_name) as session:
         session.run(query, subject=subject, object=object)
+
+
+def _cleanup_old_databases(driver: GraphDatabase.driver, config: Neo4jConfig):
+    """Clean up existing run-specific databases based on configuration."""
+    if not config.auto_cleanup:
+        logger.debug("Auto-cleanup disabled, skipping database cleanup")
+        return
+
+    try:
+        with driver.session() as session:
+            # Get list of all databases
+            result = session.run("SHOW DATABASES")
+            databases = [record["name"] for record in result]
+
+            # Filter for run-specific databases (databases that start with "r" followed by lowercase letters and numbers)
+            import re
+            run_databases = [db for db in databases if re.match(r'^r[a-z0-9]+$', db) and db != 'neo4j' and db != 'system']
+
+            if not run_databases:
+                logger.debug("No run-specific databases found for cleanup")
+                return
+
+            logger.info(f"Found {len(run_databases)} run-specific databases for cleanup")
+
+            cleaned_count = 0
+            for db_name in run_databases:
+                try:
+                    logger.info(f"Cleaning up database: {db_name}")
+                    session.run(f'DROP DATABASE `{db_name}`')
+                    cleaned_count += 1
+                except Exception as e:
+                    logger.warning(f"Failed to clean up database {db_name}: {e}")
+                    continue
+
+            if cleaned_count > 0:
+                logger.info(f"Cleaned up {cleaned_count} run-specific databases")
+            else:
+                logger.debug("No databases were cleaned up")
+
+    except Exception as e:
+        logger.warning(f"Failed to perform database cleanup: {e}")
+
+
+def _get_database_schema(driver: GraphDatabase.driver, database_name: str) -> str:
+    """Get the complete schema information from a Neo4j database."""
+    with driver.session(database=database_name) as session:
+        # Get node labels and their counts
+        labels_result = session.run("""
+            MATCH (n)
+            WITH labels(n) as labels
+            UNWIND labels as label
+            WITH label, count(*) as count
+            RETURN label, count
+            ORDER BY label
+        """)
+        node_labels = [(record["label"], record["count"]) for record in labels_result]
+
+        # Get relationship types and their counts
+        rels_result = session.run("""
+            MATCH ()-[r]->()
+            WITH type(r) as relType, count(*) as count
+            RETURN relType, count
+            ORDER BY relType
+        """)
+        relationship_types = [(record["relType"], record["count"]) for record in rels_result]
+
+        # Get property keys and their usage across node types
+        props_result = session.run("""
+            MATCH (n)
+            WITH labels(n) as nodeLabels, keys(n) as props
+            UNWIND nodeLabels as label
+            UNWIND props as prop
+            WITH label, prop, count(*) as count
+            RETURN label, prop, count
+            ORDER BY label, prop
+        """)
+        property_usage = [(record["label"], record["prop"], record["count"]) for record in props_result]
+
+        # Get common relationship patterns
+        patterns_result = session.run("""
+            MATCH (a)-[r]->(b)
+            WITH labels(a)[0] as fromType, type(r) as relType, labels(b)[0] as toType,
+                 count(*) as count
+            RETURN fromType, relType, toType, count
+            ORDER BY count DESC
+        """)
+        patterns = [(record["fromType"], record["relType"], record["toType"], record["count"])
+                   for record in patterns_result]
+
+        # Format the schema string
+        schema = f"Complete Neo4j Schema (Database: {database_name}):\n\n"
+
+        schema += "1. Node Labels and Counts:\n"
+        for label, count in node_labels:
+            schema += f"   - {label}: {count} nodes\n"
+
+        schema += "\n2. Relationship Types and Counts:\n"
+        for rel_type, count in relationship_types:
+            schema += f"   - :{rel_type}: {count} relationships\n"
+
+        schema += "\n3. Property Keys by Node Label:\n"
+        current_label = None
+        for label, prop, count in property_usage:
+            if label != current_label:
+                schema += f"\n   {label}:\n"
+                current_label = label
+            schema += f"   - {prop} (used in {count} nodes)\n"
+
+        schema += "\n4. Common Relationship Patterns:\n"
+        for from_type, rel_type, to_type, count in patterns:
+            schema += f"   - ({from_type})-[:{rel_type}]->({to_type}): {count} occurrences\n"
+
+        return schema
 
 
 def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_path: Path):
@@ -363,18 +534,29 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
 
     logger.info("Starting Neo4j evaluation...")
 
+    # Extract run ID from the output path
+    run_id = _extract_run_id_from_path(output_path)
+    logger.info(f"Extracted run ID: {run_id}")
+
     # Initialize Neo4j connection
     driver = GraphDatabase.driver(config.uri, auth=(config.user, config.password))
 
     try:
-        # Load knowledge graph into Neo4j
-        _load_kg_to_neo4j(kg, driver)
+        # Clean up old databases at the start of evaluation
+        _cleanup_old_databases(driver, config)
 
-        # Initialize converter
+        # Create run-specific database
+        database_name = _create_run_specific_database(driver, run_id, config)
+        logger.info(f"Using Neo4j database: {database_name}")
+
+        # Load knowledge graph into the run-specific database
+        _load_kg_to_neo4j(kg, driver, database_name)
+
+        # Initialize converter with the driver (it will use the database_name parameter in queries)
         converter = BatchQuestionToCypherConverter(driver=driver)
 
-        # Get schema from Neo4j
-        schema = converter.get_schema()
+        # Get schema from the run-specific database
+        schema = _get_database_schema(driver, database_name)
 
         # Collect all questions, options, and answers
         all_questions = []
@@ -481,7 +663,11 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
                             logger.debug(f"Skipping: '{question}' (No Cypher query generated)")
                         else:
                             try:
-                                results = run_neo4j_query(driver, query)
+                                # Execute query in the run-specific database
+                                with driver.session(database=database_name) as session:
+                                    result = session.run(query)
+                                    results = [record.data() for record in result]
+
                                 iteration_result['results'] = results
                                 iteration_result['successful'] = True
 
@@ -539,6 +725,7 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
         correct_queries = sum(1 for stats in query_stats.values() if stats['correct'])
 
         logger.info("Neo4j Evaluation Results:")
+        logger.info(f"Database used: {database_name}")
         logger.info(f"Successfully processed: {successful_queries} / {total_queries} queries")
         logger.info(f"Queries that returned results: {queries_with_results} / {total_queries}")
         logger.info(f"Correct results: {correct_queries} / {total_queries}")
@@ -547,6 +734,12 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
 
         # Create DataFrames for CSV output
         df_results = pd.DataFrame(results_data)
+
+        # Debug: Check if DataFrame is empty or missing columns
+        if df_results.empty:
+            logger.warning("No results data to process, creating empty DataFrames")
+            df_results = pd.DataFrame(columns=['iteration', 'query_idx', 'question', 'options', 'expected_answer',
+                                              'generated_query', 'successful', 'returned_results', 'correct', 'results', 'error'])
 
         # Aggregated statistics DataFrame
         stats_data = []
@@ -568,18 +761,41 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
         # Per-iteration statistics DataFrame
         iteration_stats_data = []
         for iteration in range(config.num_iterations):
-            iter_data = df_results[df_results['iteration'] == iteration + 1]
-            successful_count = iter_data['successful'].sum()
-            results_count = iter_data['returned_results'].sum()
-            correct_count = iter_data['correct'].sum()
+            try:
+                # Check if 'iteration' column exists
+                if 'iteration' not in df_results.columns:
+                    logger.warning("'iteration' column not found in results DataFrame")
+                    # Create empty iteration data
+                    iteration_stats_data.append({
+                        'iteration': iteration + 1,
+                        'successful_count': 0,
+                        'results_count': 0,
+                        'correct_count': 0,
+                        'total_queries': 0
+                    })
+                    continue
 
-            iteration_stats_data.append({
-                'iteration': iteration + 1,
-                'successful_count': successful_count,
-                'results_count': results_count,
-                'correct_count': correct_count,
-                'total_queries': len(iter_data)
-            })
+                iter_data = df_results[df_results['iteration'] == iteration + 1]
+                successful_count = iter_data['successful'].sum() if 'successful' in iter_data.columns else 0
+                results_count = iter_data['returned_results'].sum() if 'returned_results' in iter_data.columns else 0
+                correct_count = iter_data['correct'].sum() if 'correct' in iter_data.columns else 0
+
+                iteration_stats_data.append({
+                    'iteration': iteration + 1,
+                    'successful_count': successful_count,
+                    'results_count': results_count,
+                    'correct_count': correct_count,
+                    'total_queries': len(iter_data)
+                })
+            except Exception as e:
+                logger.warning(f"Error processing iteration {iteration + 1}: {e}")
+                iteration_stats_data.append({
+                    'iteration': iteration + 1,
+                    'successful_count': 0,
+                    'results_count': 0,
+                    'correct_count': 0,
+                    'total_queries': 0
+                })
 
         # Add total row
         total_successful = sum(row['successful_count'] for row in iteration_stats_data)
@@ -656,6 +872,8 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
 
         # Save summary metrics
         neo4j_metrics = {
+            'database_name': database_name,
+            'run_id': run_id,
             'successful_queries': successful_queries,
             'total_queries': total_queries,
             'success_rate': successful_queries / total_queries if total_queries > 0 else 0,
@@ -664,7 +882,8 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
             'correct_queries': correct_queries,
             'accuracy': correct_queries / total_queries if total_queries > 0 else 0,
             'total_elapsed_time_seconds': total_runtime_info.total_elapsed_time,
-            'estimated_cost_usd': total_runtime_info.cost_estimate
+            'estimated_cost_usd': total_runtime_info.cost_estimate,
+            'auto_cleanup_enabled': config.auto_cleanup
         }
 
         metrics_file = neo4j_output_path / "neo4j_metrics.json"

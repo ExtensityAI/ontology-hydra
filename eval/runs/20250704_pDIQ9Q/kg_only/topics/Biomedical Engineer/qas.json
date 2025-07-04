@@ -1,0 +1,34 @@
+{
+  "responses": [
+    {
+      "qid": "medexqa_0",
+      "answer": "Alpha wave",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_1",
+      "answer": "Sensitivity drift",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_2",
+      "answer": "Fibrillation",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_3",
+      "answer": "Piezoelectric devices generate force by pressure or electrical potential (correct statement, so no incorrect description found)",
+      "no_answer_prob": 0.7,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_4",
+      "answer": "Electrocardiograph",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    }
+  ]
+}

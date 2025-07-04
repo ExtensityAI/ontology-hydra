@@ -6,7 +6,8 @@ from pathlib import Path
 from loguru import logger
 from pydantic import BaseModel, ConfigDict
 
-from eval.eval import EvalScenario, eval_scenario, _generate_run_metrics_and_stats
+from eval.config import EvalScenario, EvalConfig
+from eval.eval import eval_scenario, _generate_run_metrics_and_stats
 from eval.logs import init_logging
 
 

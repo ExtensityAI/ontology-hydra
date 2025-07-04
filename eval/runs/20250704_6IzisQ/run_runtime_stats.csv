@@ -1,0 +1,9 @@
+metric,value,formatted_value
+total_elapsed_time_seconds,111.02374641690403,111.02
+total_prompt_tokens,0.0,0
+total_completion_tokens,0.0,0
+total_reasoning_tokens,0.0,0
+total_cached_tokens,0.0,0
+total_tokens,0.0,0
+total_calls,0.0,0
+estimated_cost_usd,0.0,$0.0000
