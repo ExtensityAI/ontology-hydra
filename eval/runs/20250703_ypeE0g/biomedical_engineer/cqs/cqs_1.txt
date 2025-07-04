@@ -1,0 +1,15 @@
+What is the maximum safe surface temperature for medical devices to prevent skin damage?
+Which medical devices are commonly used in cardiopulmonary bypass procedures?
+How does thermography utilize the electromagnetic spectrum for medical diagnostic purposes?
+What materials are used in the construction of membrane oxygenators, and why?
+Which imaging modalities are best suited for detecting abnormalities in human anatomy?
+How are X-rays applied in bone densitometry to assess bone mineral density?
+What are the core components of the heart wall, and why are they significant in diagnostic tool development?
+How can AI be integrated into diagnostic imaging tools to enhance their accuracy?
+What are the safety standards for biocompatible materials used in artificial organs?
+What diagnostic applications are associated with the use of infrared imaging?
+How does understanding human anatomical structures aid in the design of medical devices?
+Which techniques are most effective for the signal processing of physiological data?
+What are the regulatory compliance requirements for new medical devices intended for patient care?
+How can telemedicine improve access to radiological services in rural areas?
+Which type of electromagnetic waves is used in microwave imaging, and for what diagnostic purposes?

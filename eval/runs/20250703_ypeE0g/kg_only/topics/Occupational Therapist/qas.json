@@ -1,0 +1,34 @@
+{
+  "responses": [
+    {
+      "qid": "medexqa_0",
+      "answer": "The first training activity is shutting off water during the washing hair task using backward chaining.",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_1",
+      "answer": "The tonsils consist of lymphoid tissue gathered in the mucosal epithelium surrounding the pharynx, forming small, round masses.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_2",
+      "answer": "Sodium ions move from the outside to the inside during depolarization, changing the inside of the cell membrane to a positively charged state.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_3",
+      "answer": "The ureter transports urine from the kidney to the urinary bladder.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_4",
+      "answer": "styloid_process",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+1. Domain Definition
+- Biomedical engineering is a multidisciplinary field integrating engineering principles with biological and medical sciences to develop technologies that improve healthcare.
+- Key areas include medical device design and regulation, diagnostic imaging, anatomical understanding, artificial organ development, biomedical signal processing, and precision diagnostic devices.
+
+2. Core Topics
+  2.1. Medical Devices
+  - Design and safety regulations
+  - Patient safety standards (e.g., surface temperature thresholds not exceeding 41°C)
+  - Regulatory compliance and certification
+  - Examples include membrane oxygenators and artificial organs
+  - Considerations for material selection to ensure biocompatibility
+
+  2.2. Diagnostic Imaging
+  - Application of electromagnetic waves
+  - Imaging modalities: thermography, X-rays, microwaves, ultraviolet, infrared
+  - Use in visualizing physiological parameters and detecting abnormalities
+
+  2.3. Human Anatomy and Physiology
+  - Anatomical structure and function as a basis for medical device design
+  - Heart wall composition: epicardium, myocardium, endocardium
+  - Significance in diagnostic tool development
+
+  2.4. Artificial Organs
+  - Use of biocompatible materials such as silicone rubber and Teflon
+  - Functional effectiveness and safety in medical procedures
+  - Development considerations in cardiopulmonary bypass materials
+
+  2.5. Biomedical Signal Processing
+  - Techniques: modulation, demodulation, amplification
+  - Conversion of physiological data into diagnostics
+  - Specificity of techniques applicable to medical contexts
+  
+  2.6. Precision Diagnostic Devices
+  - Specialized tools such as bone densitometers using X-rays or ultrasound
+  - Designed for measuring bone mineral density
+  - Comparison with general medical instruments to highlight specificity
+
+3. Terminology
+  3.1. Biocompatibility
+  - Definition: Ability of materials to interact safely with human biology
+
+  3.2. Medical Device Regulations
+  - Standards ensuring device safety, efficacy, and compliance
+
+  3.3. Electromagnetic Spectrum
+  - Range of wavelengths used in medical imaging modalities
+
+  3.4. Signal Processing
+  - Methods for interpreting biological signals and translating them into medical data
+
+  3.5. Anatomical Layers of the Heart
+  - Epicardium, myocardium, and endocardium
+
+  3.6. Certification and Regulatory Affairs
+  - Safety standards, approval processes, including integration of AI in compliance
+
+4. Hierarchical Relationships Between Key Concepts
+  4.1. Structure of Biomedical Engineering
+  - Subdomains: Medical Device Design, Diagnostic Imaging, Human Anatomy, Artificial Organs, Biomedical Signal Processing, Precision Diagnostic Devices
+
+  4.2. Anatomical Focus in Cardiovascular System
+  - Heart wall structure: epicardium, myocardium, endocardium
+
+  4.3. Classification of Electromagnetic Imaging Modalities
+  - Based on band usage in the electromagnetic spectrum
+  - Suitability for specific diagnostic purposes

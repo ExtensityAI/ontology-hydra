@@ -1,0 +1,36 @@
+1. Domain Definition
+   - Clinical psychology encompasses the assessment, diagnosis, and treatment of mental disorders, focusing on therapeutic techniques and psychological testing.
+   - This domain integrates foundational and applied concepts critical to psychological assessment and therapy, emphasizing therapeutic techniques, symptomatology, and vocational counseling.
+
+2. Core Topics
+   2.1 Therapeutic Techniques
+      - Paradoxical Intention
+      - Systematic Desensitization
+      - Behavior Shaping
+      - Role-Playing
+   2.2 Psychological Testing and Interpretation
+      - Precautions in Test Analysis
+      - Validity and Reliability of Psychological Tests
+      - Methods of Psychological Research (Survey Research, Controlled Observation, Experimental Design)
+   2.3 Symptomatology and Diagnosis
+      - Differentiation between Positive and Negative Symptoms of Schizophrenia
+      - Appropriate Clinical Practices and Common Misconceptions in Therapy
+   2.4 Vocational and Aptitude Assessments
+      - General Aptitude Test Battery (GATB)
+      - Career Counseling Strategies
+   2.5 Integrative Approaches
+      - Theoretical Knowledge
+      - Diagnostic Criteria
+      - Research Methodology
+      - Practical Therapeutic Strategies
+
+3. Terminology
+   3.1 Domain-Specific Terms
+      - "Paradoxical Intention": A therapeutic technique used to make the occurrence of an unwanted behavior less threatening.
+      - "Systematic Desensitization": A method to reduce phobic responses through gradual exposure to the feared object or situation.
+      - "Behavior Shaping": A process of reinforcing successive approximations to a desired behavior.
+      - "Role-Playing": An experiential technique used in therapy for practicing behaviors in a controlled environment.
+   3.2 Hierarchical Relationships
+      - Foundation of Psychological Testing: Reliability and Validity > Testing Methods > Interpretation Guidance
+      - Layers of Symptomatology: Diagnosis > Symptom Classification > Clinical Practice Metrics
+      - Vocational Assessment Structure: GATB > Individual Aptitude Assessment > Career Counseling Application

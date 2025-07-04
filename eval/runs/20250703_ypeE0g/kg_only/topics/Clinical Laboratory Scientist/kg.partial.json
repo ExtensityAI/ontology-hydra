@@ -1,0 +1,200 @@
+{
+  "name": "Clinical Laboratory Scientist",
+  "triplets": [
+    {
+      "subject": "delayed_type_hypersensitivity",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "type_iv_hypersensitivity",
+      "predicate": "characterizedBy",
+      "object": "mobilization_and_activation_of_t_cells_and_macrophages"
+    },
+    {
+      "subject": "triglycerides",
+      "predicate": "isA",
+      "object": "Lipid"
+    },
+    {
+      "subject": "thyroid_gland",
+      "predicate": "isA",
+      "object": "AnatomicalOrgan"
+    },
+    {
+      "subject": "curie",
+      "predicate": "isA",
+      "object": "UnitOfRadioactivity"
+    },
+    {
+      "subject": "henri_becquerel",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "macrophages",
+      "predicate": "isA",
+      "object": "CellType"
+    },
+    {
+      "subject": "maternal_mortality_ratio",
+      "predicate": "isA",
+      "object": "HealthMetric"
+    },
+    {
+      "subject": "type_iv_hypersensitivity",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "healthcare_system",
+      "predicate": "isA",
+      "object": "System"
+    },
+    {
+      "subject": "radioactive_isotope_based_thyroxine_test",
+      "predicate": "evaluates",
+      "object": "thyroid_activity"
+    },
+    {
+      "subject": "t_cells",
+      "predicate": "isA",
+      "object": "CellType"
+    },
+    {
+      "subject": "chylomicrons",
+      "predicate": "isA",
+      "object": "Lipoprotein"
+    },
+    {
+      "subject": "becquerel",
+      "predicate": "namedAfter",
+      "object": "henri_becquerel"
+    },
+    {
+      "subject": "thyroxine",
+      "predicate": "isA",
+      "object": "Hormone"
+    },
+    {
+      "subject": "maternal_mortality_ratio",
+      "predicate": "quantifies",
+      "object": "maternal_deaths_per_100000_live_births"
+    },
+    {
+      "subject": "chylomicrons",
+      "predicate": "composedOf",
+      "object": "triglycerides"
+    },
+    {
+      "subject": "tuberculin_skin_test",
+      "predicate": "isA",
+      "object": "DiagnosticTest"
+    },
+    {
+      "subject": "rad",
+      "predicate": "isA",
+      "object": "UnitOfAbsorbedDose"
+    },
+    {
+      "subject": "sustainable_development_goals",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "becquerel",
+      "predicate": "isA",
+      "object": "UnitOfRadioactivity"
+    },
+    {
+      "subject": "radioactive_decay",
+      "predicate": "isA",
+      "object": "Process"
+    },
+    {
+      "subject": "becquerel",
+      "predicate": "measures",
+      "object": "radioactive_decay"
+    },
+    {
+      "subject": "tuberculin_skin_test",
+      "predicate": "usedToDetect",
+      "object": "exposure_to_tuberculosis"
+    },
+    {
+      "subject": "tuberculin",
+      "predicate": "isA",
+      "object": "Substance"
+    },
+    {
+      "subject": "maternal_mortality_ratio",
+      "predicate": "evaluates",
+      "object": "healthcare_system"
+    },
+    {
+      "subject": "chylomicrons",
+      "predicate": "function",
+      "object": "facilitate_transport_of_dietary_lipids"
+    },
+    {
+      "subject": "intestinal_lining",
+      "predicate": "isA",
+      "object": "AnatomicalLocation"
+    },
+    {
+      "subject": "tuberculin_skin_test",
+      "predicate": "causes",
+      "object": "localized_swelling_and_redness"
+    },
+    {
+      "subject": "tuberculin_skin_test",
+      "predicate": "indicates",
+      "object": "dth_response"
+    },
+    {
+      "subject": "type_iv_hypersensitivity",
+      "predicate": "causes",
+      "object": "inflammatory_response_and_potential_tissue_damage"
+    },
+    {
+      "subject": "chylomicrons",
+      "predicate": "synthesizedIn",
+      "object": "intestinal_lining"
+    },
+    {
+      "subject": "maternal_mortality_ratio",
+      "predicate": "focusesOn",
+      "object": "maternal_care"
+    },
+    {
+      "subject": "tuberculin_skin_test",
+      "predicate": "involves",
+      "object": "injection_of_tuberculin"
+    },
+    {
+      "subject": "type_iv_hypersensitivity",
+      "predicate": "alsoKnownAs",
+      "object": "delayed_type_hypersensitivity"
+    },
+    {
+      "subject": "radioactive_isotope_based_thyroxine_test",
+      "predicate": "isA",
+      "object": "DiagnosticTest"
+    },
+    {
+      "subject": "mycobacterium_tuberculosis",
+      "predicate": "isA",
+      "object": "Bacteria"
+    },
+    {
+      "subject": "type_iv_hypersensitivity",
+      "predicate": "drivenBy",
+      "object": "t_cells"
+    },
+    {
+      "subject": "roentgen",
+      "predicate": "isA",
+      "object": "UnitOfExposure"
+    }
+  ]
+}

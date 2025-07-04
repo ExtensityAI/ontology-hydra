@@ -1,0 +1,40 @@
+{
+  "name": "Biomedical Engineer",
+  "triplets": [
+    {
+      "subject": "saturation",
+      "predicate": "isA",
+      "object": "MeasurementResult"
+    },
+    {
+      "subject": "dead_zone",
+      "predicate": "isA",
+      "object": "MeasurementResult"
+    },
+    {
+      "subject": "fibrillation",
+      "predicate": "isA",
+      "object": "HeartFunction"
+    },
+    {
+      "subject": "alpha_wave",
+      "predicate": "isA",
+      "object": "BiomedicalSignalProcessing"
+    },
+    {
+      "subject": "piezoelectric_device",
+      "predicate": "isA",
+      "object": "PrecisionDiagnosticDevice"
+    },
+    {
+      "subject": "breakdown",
+      "predicate": "isA",
+      "object": "MeasurementResult"
+    },
+    {
+      "subject": "sensitivity_drift",
+      "predicate": "isA",
+      "object": "MeasurementResult"
+    }
+  ]
+}

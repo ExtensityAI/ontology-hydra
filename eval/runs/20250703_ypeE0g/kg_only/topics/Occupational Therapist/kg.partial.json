@@ -1,0 +1,360 @@
+{
+  "name": "Occupational Therapist",
+  "triplets": [
+    {
+      "subject": "action_potential",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "ureter",
+      "predicate": "connectedTo",
+      "object": "urinary_bladder"
+    },
+    {
+      "subject": "backward_chaining",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "tonsils",
+      "predicate": "locatedIn",
+      "object": "pharynx"
+    },
+    {
+      "subject": "backward_chaining",
+      "predicate": "involves",
+      "object": "breaking_tasks_into_smaller_steps"
+    },
+    {
+      "subject": "styloid_process",
+      "predicate": "locatedOn",
+      "object": "radius"
+    },
+    {
+      "subject": "olecranon",
+      "predicate": "isA",
+      "object": "BoneFeature"
+    },
+    {
+      "subject": "styloid_process",
+      "predicate": "influences",
+      "object": "wrist_joint_movement"
+    },
+    {
+      "subject": "trochlea",
+      "predicate": "foundOn",
+      "object": "humerus"
+    },
+    {
+      "subject": "trochlea",
+      "predicate": "isA",
+      "object": "BoneFeature"
+    },
+    {
+      "subject": "urethra",
+      "predicate": "transportsSubstance",
+      "object": "urine"
+    },
+    {
+      "subject": "immune_response",
+      "predicate": "isA",
+      "object": "Process"
+    },
+    {
+      "subject": "washing_hair_task",
+      "predicate": "involvesStep",
+      "object": "using_towel_to_dry_hair"
+    },
+    {
+      "subject": "nerve_cells",
+      "predicate": "isA",
+      "object": "Cell"
+    },
+    {
+      "subject": "tonsils",
+      "predicate": "consistsOf",
+      "object": "lymphoid_tissue"
+    },
+    {
+      "subject": "pharynx",
+      "predicate": "isA",
+      "object": "Organ"
+    },
+    {
+      "subject": "styloid_process",
+      "predicate": "servesAsAttachmentFor",
+      "object": "ligaments"
+    },
+    {
+      "subject": "shutting_off_water",
+      "predicate": "isA",
+      "object": "TaskStep"
+    },
+    {
+      "subject": "styloid_process",
+      "predicate": "locatedOn",
+      "object": "ulna"
+    },
+    {
+      "subject": "depolarization",
+      "predicate": "involvesIonFlow",
+      "object": "sodium_ions"
+    },
+    {
+      "subject": "ureter",
+      "predicate": "isA",
+      "object": "Duct"
+    },
+    {
+      "subject": "prostate_gland",
+      "predicate": "influences",
+      "object": "urinary_functions"
+    },
+    {
+      "subject": "collecting_ducts",
+      "predicate": "isA",
+      "object": "Tissue"
+    },
+    {
+      "subject": "sodium_ions",
+      "predicate": "involvesFlowDuring",
+      "object": "depolarization"
+    },
+    {
+      "subject": "ligaments",
+      "predicate": "isA",
+      "object": "Tissue"
+    },
+    {
+      "subject": "pharynx",
+      "predicate": "contains",
+      "object": "tonsils"
+    },
+    {
+      "subject": "neuron_action_potential",
+      "predicate": "involvesProcess",
+      "object": "depolarization"
+    },
+    {
+      "subject": "action_potential",
+      "predicate": "occursAlong",
+      "object": "nerve_cells"
+    },
+    {
+      "subject": "wrist_joint",
+      "predicate": "isA",
+      "object": "Joint"
+    },
+    {
+      "subject": "radius",
+      "predicate": "isA",
+      "object": "Bone"
+    },
+    {
+      "subject": "ureter",
+      "predicate": "transportsSubstance",
+      "object": "urine"
+    },
+    {
+      "subject": "autism_spectrum_disorder",
+      "predicate": "isA",
+      "object": "Condition"
+    },
+    {
+      "subject": "backward_chaining",
+      "predicate": "focusesOn",
+      "object": "instructing_adolescent_final_step"
+    },
+    {
+      "subject": "occupational_therapist",
+      "predicate": "isA",
+      "object": "Profession"
+    },
+    {
+      "subject": "washing_hair_task",
+      "predicate": "involvesStep",
+      "object": "shutting_off_water"
+    },
+    {
+      "subject": "ureter",
+      "predicate": "connectsOrgan",
+      "object": "kidney"
+    },
+    {
+      "subject": "peristalsis",
+      "predicate": "isA",
+      "object": "Process"
+    },
+    {
+      "subject": "depolarization",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "backward_chaining",
+      "predicate": "isUsedFor",
+      "object": "teaching_complex_tasks"
+    },
+    {
+      "subject": "backward_chaining",
+      "predicate": "benefits",
+      "object": "individuals_with_autism_spectrum_disorder"
+    },
+    {
+      "subject": "ulna",
+      "predicate": "isA",
+      "object": "Bone"
+    },
+    {
+      "subject": "ureter",
+      "predicate": "connectsOrgan",
+      "object": "urinary_bladder"
+    },
+    {
+      "subject": "collecting_ducts",
+      "predicate": "gatherSubstance",
+      "object": "urine"
+    },
+    {
+      "subject": "viruses",
+      "predicate": "isA",
+      "object": "Pathogen"
+    },
+    {
+      "subject": "styloid_process",
+      "predicate": "isA",
+      "object": "BoneStructure"
+    },
+    {
+      "subject": "backward_chaining",
+      "predicate": "isUsedFor",
+      "object": "simplifying_learning_of_complex_activities"
+    },
+    {
+      "subject": "depolarization",
+      "predicate": "happensDuring",
+      "object": "action_potential"
+    },
+    {
+      "subject": "adolescent",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "occupational_therapist",
+      "predicate": "usesTechnique",
+      "object": "backward_chaining"
+    },
+    {
+      "subject": "sodium_ions",
+      "predicate": "isA",
+      "object": "Ion"
+    },
+    {
+      "subject": "prostate_gland",
+      "predicate": "isA",
+      "object": "Organ"
+    },
+    {
+      "subject": "tonsils",
+      "predicate": "isA",
+      "object": "LymphaticOrgan"
+    },
+    {
+      "subject": "tonsils",
+      "predicate": "composedOf",
+      "object": "lymphoid_tissue"
+    },
+    {
+      "subject": "lymphoid_tissue",
+      "predicate": "isA",
+      "object": "Tissue"
+    },
+    {
+      "subject": "using_towel_to_dry_hair",
+      "predicate": "isA",
+      "object": "TaskStep"
+    },
+    {
+      "subject": "prostate_gland",
+      "predicate": "surrounds",
+      "object": "urethra"
+    },
+    {
+      "subject": "styloid_process",
+      "predicate": "foundOn",
+      "object": "radius"
+    },
+    {
+      "subject": "bacteria",
+      "predicate": "isA",
+      "object": "Pathogen"
+    },
+    {
+      "subject": "radial_fossa",
+      "predicate": "foundOn",
+      "object": "humerus"
+    },
+    {
+      "subject": "urethra",
+      "predicate": "isA",
+      "object": "Duct"
+    },
+    {
+      "subject": "instructing_adolescent_final_step",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "kidney",
+      "predicate": "isA",
+      "object": "Organ"
+    },
+    {
+      "subject": "radial_fossa",
+      "predicate": "isA",
+      "object": "BoneFeature"
+    },
+    {
+      "subject": "olecranon",
+      "predicate": "locatedOn",
+      "object": "ulna"
+    },
+    {
+      "subject": "neuron",
+      "predicate": "hasPhase",
+      "object": "depolarization"
+    },
+    {
+      "subject": "styloid_process",
+      "predicate": "foundOn",
+      "object": "ulna"
+    },
+    {
+      "subject": "urinary_bladder",
+      "predicate": "isA",
+      "object": "Organ"
+    },
+    {
+      "subject": "tonsils",
+      "predicate": "contributesTo",
+      "object": "immune_response"
+    },
+    {
+      "subject": "ureter",
+      "predicate": "connectedTo",
+      "object": "kidney"
+    },
+    {
+      "subject": "neuron",
+      "predicate": "isA",
+      "object": "Cell"
+    },
+    {
+      "subject": "washing_hair_task",
+      "predicate": "isA",
+      "object": "Task"
+    }
+  ]
+}

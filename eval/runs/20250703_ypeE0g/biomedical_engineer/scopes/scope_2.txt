@@ -1,0 +1,38 @@
+1. Domain Definition
+   - Biomedical engineering integrates engineering principles with biological and medical sciences to improve healthcare.
+   - Key areas include the design and regulation of medical devices, application of diagnostic imaging, anatomical studies, the development of artificial organs, and biomedical signal processing.
+
+2. Core Topics
+   2.1. Medical Devices
+       - Design and patient safety
+       - Regulatory compliance and standards
+       - Device attachment temperature guidelines (max 41°C)
+   2.2. Diagnostic Imaging
+       - Thermography
+       - X-rays
+       - Microwaves
+       - Ultraviolet imaging
+       - Infrared imaging
+   2.3. Human Anatomy
+       - Anatomical structure and function
+       - Heart wall composition (epicardium, myocardium, endocardium)
+   2.4. Artificial Organs
+       - Biocompatible materials
+       - Membrane oxygenators
+       - Material examples: silicone rubber, Teflon
+   2.5. Biomedical Signal Processing
+       - Interpretation of biological signals
+       - Techniques: modulation, demodulation, and amplification
+   2.6. Diagnostic Devices
+       - Bone densitometers
+       - Measurement techniques: X-rays, ultrasound
+
+3. Terminology
+   3.1. Key Concepts
+       - Biocompatibility: suitability of materials for contact with the human body
+       - Epicardium, Myocardium, Endocardium: layers of the heart wall
+       - Regulatory compliance: adherence to safety and efficacy standards
+   3.2. Hierarchical Relationships
+       - Medical Devices > Design > Safety Standards
+       - Diagnostic Imaging > Electromagnetic Spectrum > Imaging Modalities
+       - Artificial Organs > Materials > Biocompatibility

@@ -1,0 +1,250 @@
+{
+  "name": "Speech Pathologist",
+  "triplets": [
+    {
+      "subject": "prognosis_in_speech_language_pathology",
+      "predicate": "isA",
+      "object": "Prognosis"
+    },
+    {
+      "subject": "interaction_time_with_mother",
+      "predicate": "isA",
+      "object": "IndependentVariable"
+    },
+    {
+      "subject": "prognosis_in_speech_language_pathology",
+      "predicate": "canChangeOverTime",
+      "object": "itself"
+    },
+    {
+      "subject": "maintenance_phase",
+      "predicate": "isA",
+      "object": "TherapyPhase"
+    },
+    {
+      "subject": "right_hemisphere_of_the_brain",
+      "predicate": "canLeadTo",
+      "object": "difficulties_in_language_processing"
+    },
+    {
+      "subject": "stuttering_support_groups",
+      "predicate": "isA",
+      "object": "SupportGroup"
+    },
+    {
+      "subject": "speech_language_pathology",
+      "predicate": "isA",
+      "object": "Field"
+    },
+    {
+      "subject": "prognosis_in_speech_language_pathology",
+      "predicate": "predictedBy",
+      "object": "speech_language_pathologist"
+    },
+    {
+      "subject": "language_learning_disabilities",
+      "predicate": "characterizedBy",
+      "object": "difficultiesWithReadingAndWriting"
+    },
+    {
+      "subject": "stuttering_support_groups",
+      "predicate": "provide",
+      "object": "support_and_practice_for_stutterers"
+    },
+    {
+      "subject": "right_hemisphere_of_the_brain",
+      "predicate": "responsibleFor",
+      "object": "nonLiteralLanguageProcessing"
+    },
+    {
+      "subject": "fluency_shaping_therapy_for_stuttering",
+      "predicate": "hasPhase",
+      "object": "maintenance_phase"
+    },
+    {
+      "subject": "complexVisualSpatialSkills",
+      "predicate": "isA",
+      "object": "CognitiveFunction"
+    },
+    {
+      "subject": "fluency_shaping_therapy_for_stuttering",
+      "predicate": "hasGoal",
+      "object": "achieveFluentSpeech"
+    },
+    {
+      "subject": "child_expressive_language_development",
+      "predicate": "isAffectedBy",
+      "object": "television_viewing_time"
+    },
+    {
+      "subject": "speech_language_pathologist",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "television_viewing_time",
+      "predicate": "isA",
+      "object": "IndependentVariable"
+    },
+    {
+      "subject": "right_hemisphere_of_the_brain",
+      "predicate": "responsibleFor",
+      "object": "emotionalExpression"
+    },
+    {
+      "subject": "fluency_shaping_therapy_for_stuttering",
+      "predicate": "isA",
+      "object": "Therapy"
+    },
+    {
+      "subject": "right_hemisphere_of_the_brain",
+      "predicate": "isA",
+      "object": "BodyPart"
+    },
+    {
+      "subject": "understanding_idioms_metaphors_and_sarcasm",
+      "predicate": "isA",
+      "object": "Task"
+    },
+    {
+      "subject": "language_learning_disabilities",
+      "predicate": "mayCooccurWith",
+      "object": "autism_spectrum_disorder"
+    },
+    {
+      "subject": "fluency_shaping_therapy_for_stuttering",
+      "predicate": "hasKeyActivity",
+      "object": "maintenance_phase_activities"
+    },
+    {
+      "subject": "multiple_regression_analysis",
+      "predicate": "isA",
+      "object": "StatisticalTechnique"
+    },
+    {
+      "subject": "multiple_regression_analysis",
+      "predicate": "investigatesEffect",
+      "object": "independent_variables_on_single_outcome_variable"
+    },
+    {
+      "subject": "achieveFluentSpeech",
+      "predicate": "isA",
+      "object": "TherapyGoal"
+    },
+    {
+      "subject": "difficulties_in_language_processing",
+      "predicate": "isA",
+      "object": "Condition"
+    },
+    {
+      "subject": "right_hemisphere_of_the_brain",
+      "predicate": "responsibleFor",
+      "object": "processing_nonLiteralLanguage_emotionalExpression_and_visualSpatial_skills"
+    },
+    {
+      "subject": "support_and_practice_for_stutterers",
+      "predicate": "isA",
+      "object": "Benefit"
+    },
+    {
+      "subject": "prognosis_in_speech_language_pathology",
+      "predicate": "evaluatedBy",
+      "object": "assessing_current_functioning_and_performance"
+    },
+    {
+      "subject": "child_expressive_language_development",
+      "predicate": "isAffectedBy",
+      "object": "interaction_time_with_mother"
+    },
+    {
+      "subject": "autism_spectrum_disorder",
+      "predicate": "isA",
+      "object": "Disorder"
+    },
+    {
+      "subject": "child_expressive_language_development",
+      "predicate": "isA",
+      "object": "OutcomeVariable"
+    },
+    {
+      "subject": "child_expressive_language_development",
+      "predicate": "isAffectedBy",
+      "object": "child_gender"
+    },
+    {
+      "subject": "language_learning_disabilities",
+      "predicate": "isA",
+      "object": "Disability"
+    },
+    {
+      "subject": "damage_to_right_hemisphere",
+      "predicate": "canLeadTo",
+      "object": "difficulties_in_language_processing"
+    },
+    {
+      "subject": "language_learning_disabilities",
+      "predicate": "affect",
+      "object": "reading_and_writing"
+    },
+    {
+      "subject": "maintenance_phase_activities",
+      "predicate": "isA",
+      "object": "Activity"
+    },
+    {
+      "subject": "nonLiteralLanguageProcessing",
+      "predicate": "isA",
+      "object": "CognitiveFunction"
+    },
+    {
+      "subject": "right_hemisphere_of_the_brain",
+      "predicate": "responsibleFor",
+      "object": "complexVisualSpatialSkills"
+    },
+    {
+      "subject": "challenges_with_phonological_processing_vocabulary_and_syntax",
+      "predicate": "isA",
+      "object": "Symptom"
+    },
+    {
+      "subject": "language_learning_disabilities",
+      "predicate": "involve",
+      "object": "challenges_with_phonological_processing_vocabulary_and_syntax"
+    },
+    {
+      "subject": "difficulties_in_language_processing",
+      "predicate": "involves",
+      "object": "understanding_idioms_metaphors_and_sarcasm"
+    },
+    {
+      "subject": "assessing_current_functioning_and_performance",
+      "predicate": "isA",
+      "object": "Action"
+    },
+    {
+      "subject": "dyslexia",
+      "predicate": "isA",
+      "object": "LanguageLearningDisability"
+    },
+    {
+      "subject": "difficultiesWithReadingAndWriting",
+      "predicate": "isA",
+      "object": "Symptom"
+    },
+    {
+      "subject": "child_gender",
+      "predicate": "isA",
+      "object": "IndependentVariable"
+    },
+    {
+      "subject": "emotionalExpression",
+      "predicate": "isA",
+      "object": "CognitiveFunction"
+    },
+    {
+      "subject": "language_learning_disabilities",
+      "predicate": "notCausedBy",
+      "object": "visualOrMotorImpairments"
+    }
+  ]
+}

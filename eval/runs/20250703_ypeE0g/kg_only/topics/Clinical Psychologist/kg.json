@@ -1,0 +1,175 @@
+{
+  "name": "Clinical Psychologist",
+  "triplets": [
+    {
+      "subject": "avoidance_of_the_problem",
+      "predicate": "isNotFactorIn",
+      "object": "good_outcomes_in_short_term_psychotherapy"
+    },
+    {
+      "subject": "clinical_psychologist_roles",
+      "predicate": "focusOn",
+      "object": "psychological_assessment_psychotherapy_consultation"
+    },
+    {
+      "subject": "healthy_cardiovascular_system",
+      "predicate": "affectedBy",
+      "object": "persistent_stress"
+    },
+    {
+      "subject": "type_a_personality",
+      "predicate": "characterizedBy",
+      "object": "quick_in_handling_tasks"
+    },
+    {
+      "subject": "strong_therapeutic_alliance",
+      "predicate": "isFactorIn",
+      "object": "good_outcomes_in_short_term_psychotherapy"
+    },
+    {
+      "subject": "case_management",
+      "predicate": "lessRelatedTo",
+      "object": "role_of_clinical_psychologist"
+    },
+    {
+      "subject": "type_a_personality",
+      "predicate": "characterizedBy",
+      "object": "being_highly_stressed"
+    },
+    {
+      "subject": "possibility_of_intervention",
+      "predicate": "isProblemIn",
+      "object": "behavioral_observation"
+    },
+    {
+      "subject": "type_a_personality",
+      "predicate": "associatedWith",
+      "object": "coronary_heart_disease"
+    },
+    {
+      "subject": "behavioral_observation",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "situational_factors",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "clients_appropriate_positive_expectations",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "clients_appropriate_positive_expectations",
+      "predicate": "isFactorIn",
+      "object": "good_outcomes_in_short_term_psychotherapy"
+    },
+    {
+      "subject": "clinical_psychologist_roles",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "type_a_personality",
+      "predicate": "characterizedBy",
+      "object": "being_competitive"
+    },
+    {
+      "subject": "observer_reliability",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "case_management",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "type_a_personality",
+      "predicate": "canInduce",
+      "object": "stress"
+    },
+    {
+      "subject": "type_a_personality",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "choice_theory_reality_therapy",
+      "predicate": "isA",
+      "object": "Theory"
+    },
+    {
+      "subject": "direct_association_with_therapy",
+      "predicate": "isNotProblemIn",
+      "object": "behavioral_observation"
+    },
+    {
+      "subject": "avoidance_of_the_problem",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "coronary_heart_disease",
+      "predicate": "isAssociatedWith",
+      "object": "type_a_personality"
+    },
+    {
+      "subject": "type_a_personality",
+      "predicate": "characterizedBy",
+      "object": "valuing_achievement"
+    },
+    {
+      "subject": "type_a_personality",
+      "predicate": "associatedWith",
+      "object": "heart_disease"
+    },
+    {
+      "subject": "therapists_warmth_and_empathy",
+      "predicate": "isFactorIn",
+      "object": "good_outcomes_in_short_term_psychotherapy"
+    },
+    {
+      "subject": "situational_factors",
+      "predicate": "isProblemIn",
+      "object": "behavioral_observation"
+    },
+    {
+      "subject": "choice_theory_reality_therapy",
+      "predicate": "propose",
+      "object": "five_genetically_encoded_needs"
+    },
+    {
+      "subject": "observer_reliability",
+      "predicate": "isProblemIn",
+      "object": "behavioral_observation"
+    },
+    {
+      "subject": "therapists_warmth_and_empathy",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "possibility_of_intervention",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "behavioral_medicine",
+      "predicate": "isA",
+      "object": "Field"
+    },
+    {
+      "subject": "behavioral_medicine",
+      "predicate": "suggests",
+      "object": "strong_association_between_type_a_personality_and_coronary_heart_disease"
+    },
+    {
+      "subject": "strong_therapeutic_alliance",
+      "predicate": "isA",
+      "object": "Concept"
+    }
+  ]
+}

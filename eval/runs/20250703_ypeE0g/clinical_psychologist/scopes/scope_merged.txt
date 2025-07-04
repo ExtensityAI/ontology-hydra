@@ -1,0 +1,53 @@
+1. Domain Definition
+   - Clinical psychology is the branch of psychology focused on the assessment, diagnosis, treatment, and prevention of mental disorders and emotional difficulties. It integrates the science of psychology with therapeutic practices to address complex human issues.
+   - This domain encompasses theoretical knowledge, diagnostic criteria, research methodology, therapeutic interventions, and vocational counseling.
+
+2. Core Topics
+   2.1 Psychological Assessment
+      - Psychological testing
+         - Validity and reliability of psychological tests
+         - Interpretation and precautions in test result analysis
+         - Technologies in psychometric tools
+            - User-friendly interface design
+            - Engaging assessment delivery
+      - Career and vocational assessments
+         - General Aptitude Test Battery (GATB)
+         - Career counseling techniques
+   2.2 Therapeutic Interventions
+      - Cognitive-behavioral therapy (CBT)
+      - Systematic desensitization
+      - Paradoxical intention
+      - Behavior shaping
+      - Role-playing
+      - Integration of mindfulness techniques
+   2.3 Research Methodology
+      - Survey research
+      - Controlled observation
+      - Experimental design
+      - Cross-cultural studies
+         - Impact of techniques across diverse populations
+   2.4 Symptomatology and Diagnosis
+      - Positive and negative symptoms of schizophrenia
+      - Diagnostic criteria in clinical practices
+      - Differentiating between scientific and non-scientific treatments
+   2.5 Clinical Practices
+      - Appropriate practices in therapy
+      - Common misconceptions in therapy
+
+3. Terminology
+   3.1 Domain-specific Terms
+      - "Paradoxical Intention": A therapeutic technique used to make the occurrence of an unwanted behavior less threatening and to encourage clients to face their fears by deliberately confronting the feared outcome.
+      - "Systematic Desensitization": A behavioral technique used to reduce phobic responses through gradual exposure to the feared object or situation.
+      - "Behavior Shaping": A process of reinforcing successive approximations to a desired behavior.
+      - "Cognitive-Behavioral Therapy (CBT)": A type of psychotherapy that helps patients understand the thoughts and feelings that influence behavior.
+      - "Vocational Assessment": An evaluation process to determine an individual's career-related strengths and interests, including tools like the General Aptitude Test Battery (GATB).
+      - "Psychological Testing": The systematic administration of tests to measure a person’s psychological attributes.
+      - "Reliability": The consistency of a test in measuring what it aims to measure.
+      - "Validity": The degree to which a test accurately measures what it purports to measure.
+      - "Positive Symptoms": Psychotic behaviors not seen in healthy individuals, such as hallucinations and delusions.
+      - "Negative Symptoms": Absence or lack of normal mental functions, such as lack of emotion and withdrawal from social life.
+   3.2 Hierarchical Relationships
+      - Psychological assessments are foundational and influence diagnosis and treatment planning.
+      - Therapeutic interventions are used in treatment after assessment and diagnosis.
+      - Research methodologies validate assessment tools and intervention efficacy.
+      - Vocational assessments integrate with psychological testing to guide career counseling efforts.

@@ -1,0 +1,12 @@
+{
+  "exact": 20.0,
+  "f1": 29.92481203007519,
+  "total": 5,
+  "HasAns_exact": 20.0,
+  "HasAns_f1": 29.92481203007519,
+  "HasAns_total": 5,
+  "best_exact": 20.0,
+  "best_exact_thresh": 0.0,
+  "best_f1": 29.92481203007519,
+  "best_f1_thresh": 0.0
+}

@@ -1,0 +1,6 @@
+query_idx,question,expected_answer,successful_any_iteration,returned_results_any_iteration,correct_any_iteration,successful_iterations,results_iterations,correct_iterations
+1,What is the first training activity performed by an adolescent with Autism Spectrum Disorder when teaching them how to wash their hair using the backward chaining method?,Dry the hair with a towel.,True,True,False,3,1,0
+2,"What is the structure that consists of lymphoid tissue gathered in the mucosal epithelium surrounding the pharynx, forming small, round masses?",tonsil,True,False,False,3,0,0
+3,"During depolarization, which ion moves from the outside to the inside of the cell membrane, changing the inside of the cell membrane to a positively charged state?",Na+,True,False,False,3,0,0
+4,What is the structure that transports urine from the kidney to the bladder?,ureter,True,False,False,3,0,0
+5,What is the structure common to both the ulna and the radius?,styloid process,True,False,False,3,0,0

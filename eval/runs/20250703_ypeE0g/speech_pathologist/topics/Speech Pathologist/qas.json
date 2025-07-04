@@ -1,0 +1,34 @@
+{
+  "responses": [
+    {
+      "qid": "medexqa_0",
+      "answer": "speech_language_pathology_prognosis relates to the severity of stuttering.",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_1",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_2",
+      "answer": "language_learning_disability_dyslexia is a type of LanguageDisorder.",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_3",
+      "answer": "maintenance_phase_activities is a type of TherapyStrategy, appropriate for fluency shaping therapy.",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_4",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    }
+  ]
+}

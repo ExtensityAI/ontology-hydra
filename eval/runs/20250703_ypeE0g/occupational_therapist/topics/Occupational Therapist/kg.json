@@ -1,0 +1,40 @@
+{
+  "name": "Occupational Therapist",
+  "triplets": [
+    {
+      "subject": "backward_chaining",
+      "predicate": "addressesSensoryModality",
+      "object": "sensory_modality"
+    },
+    {
+      "subject": "sensory_integration_technique",
+      "predicate": "isA",
+      "object": "SensoryIntegrationTechnique"
+    },
+    {
+      "subject": "occupational_therapist",
+      "predicate": "isA",
+      "object": "OccupationalTherapy"
+    },
+    {
+      "subject": "sensory_modality",
+      "predicate": "isA",
+      "object": "SensoryModality"
+    },
+    {
+      "subject": "autism_spectrum_disorder",
+      "predicate": "isA",
+      "object": "DevelopmentalDisorder"
+    },
+    {
+      "subject": "backward_chaining",
+      "predicate": "isA",
+      "object": "Therapy"
+    },
+    {
+      "subject": "adolescent",
+      "predicate": "isA",
+      "object": "PediatricPopulation"
+    }
+  ]
+}

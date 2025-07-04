@@ -1,0 +1,35 @@
+1. Domain Definition
+   - Biomedical engineering is a multidisciplinary field that integrates principles of engineering with biological and medical sciences to develop technologies that improve healthcare.
+   - Major conceptual areas include design and regulation of medical devices, application of electromagnetic waves in diagnostic imaging, understanding of human anatomy for medical tools, development of artificial organs, and biomedical signal processing.
+
+2. Core Topics
+   2.1 Medical Devices
+       - Design principles
+       - Regulation and safety standards
+       - Temperature thresholds for safe device operation
+   2.2 Electromagnetic Waves in Diagnostic Imaging
+       - Imaging modalities: Thermography, X-rays, microwaves, ultraviolet, infrared
+       - Visualization of physiological parameters
+   2.3 Human Anatomy
+       - Structural knowledge of organs (e.g., heart layers)
+       - Importance in diagnostic tool development
+   2.4 Artificial Organs
+       - Biocompatible materials
+       - Functionality and safety in medical procedures
+       - Example materials: Silicone rubber, Teflon
+   2.5 Biomedical Signal Processing
+       - Techniques: Modulation, demodulation, amplification
+       - Conversion of physiological data for diagnostics
+   2.6 Diagnostic Instruments
+       - Specialized tools: Bone densitometers
+       - X-ray and ultrasound for bone mineral density measurement
+
+3. Terminology
+   3.1 Key Concepts
+       - Biocompatibility: Suitability of materials for safe use in the human body
+       - Signal processing: Methods to interpret biological signals
+       - Electromagnetic spectrum: Range of wavelengths used for imaging
+   3.2 Hierarchical Relationships
+       - Medical devices encompass diagnostic instruments
+       - Electromagnetic waves and signal processing directly relate to imaging technologies
+       - Human anatomy knowledge underpins the development of various medical and diagnostic tools.

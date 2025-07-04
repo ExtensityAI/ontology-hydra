@@ -1,0 +1,34 @@
+{
+  "responses": [
+    {
+      "qid": "medexqa_0",
+      "answer": "alpha_wave",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_1",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_2",
+      "answer": "fibrillation",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_3",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_4",
+      "answer": null,
+      "no_answer_prob": 0.9,
+      "no_data_found": true
+    }
+  ]
+}

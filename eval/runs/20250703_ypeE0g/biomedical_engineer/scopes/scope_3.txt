@@ -1,0 +1,54 @@
+1. Domain Definition
+   - Biomedical engineering is a multidisciplinary field integrating engineering principles with biological and medical sciences to develop technologies that enhance healthcare.
+   - Key areas include medical device design and regulation, diagnostic imaging, anatomical understanding, artificial organ development, biomedical signal processing, and precision diagnostic devices.
+
+2. Core Topics
+   2.1 Medical Device Design and Regulation
+       - Surface temperature regulations for safety
+       - Patient-device interaction
+       - Regulatory standards for medical devices
+   2.2 Diagnostic Imaging
+       - Electromagnetic wave application in imaging
+       - Thermography
+       - X-ray imaging
+       - Microwave, ultraviolet, and infrared imaging
+   2.3 Human Anatomy
+       - Organ structure and function
+       - Cardiovascular anatomy
+       - Anatomical precision in device implementation
+   2.4 Artificial Organs
+       - Material selection for biocompatibility
+       - Membrane oxygenators
+       - Cardiopulmonary bypass materials
+   2.5 Biomedical Signal Processing
+       - Biological signal interpretation
+       - Techniques: modulation, demodulation, amplification
+       - Exclusion of non-relevant signal processing concepts (e.g., synthesis)
+   2.6 Precision Diagnostic Devices
+       - Bone densitometers for bone mineral density measurement
+       - Comparison with general medical instruments
+
+3. Terminology
+   3.1 Biocompatibility
+       - Ability of materials to interact safely with human biology
+   3.2 Signal Processing
+       - Methods for converting analog physiological data into diagnostic information
+   3.3 Electromagnetic Spectrum
+       - Range of electromagnetic waves used in medical imaging
+   3.4 Anatomical Layers of the Heart
+       - Epicardium
+       - Myocardium
+       - Endocardium
+   3.5 Medical Device Regulations
+       - Standards for device safety and efficacy
+   3.6 Artificial Organ Materials
+       - Properties emphasizing permeability and safety (e.g., silicone rubber, Teflon)
+
+4. Hierarchical Relationships Between Key Concepts
+   4.1 Biomedical Engineering
+       - Subdomains: Medical Device Design, Diagnostic Imaging, Human Anatomy, Artificial Organs, Biomedical Signal Processing, Precision Diagnostic Devices
+   4.2 Layers of Human Anatomy in Cardiovascular System
+       - Heart wall structure: Epicardium < Myocardium < Endocardium
+   4.3 Electromagnetic Imaging Modalities
+       - Classification by electromagnetic spectrum band usage
+       - Suitability for specific diagnostic purposes

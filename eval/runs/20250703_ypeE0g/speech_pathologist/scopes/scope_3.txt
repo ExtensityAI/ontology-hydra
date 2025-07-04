@@ -1,0 +1,75 @@
+1. Domain Definition
+1.1 Speech Pathology
+- Speech pathology encompasses the evaluation, diagnosis, and treatment of communication and swallowing disorders.
+- The domain addresses conditions affecting speech fluency, voice, language, and cognitive communication disorders, as well as swallowing disorders.
+
+2. Core Topics
+2.1 Speech Disorders
+- Stuttering
+  - Neurogenic stuttering
+  - Psychogenic stuttering
+- Speech fluency assessment tools
+  - Stuttering Severity Instrument
+- Voice disorders
+  - Vocal nodules
+  - Spasmodic dysphonia
+
+2.2 Voice Disorders
+- Assessment methods
+  - CAPE-V
+  - Voice Handicap Index
+- Treatment techniques
+  - Accent method
+  - Voice hygiene practices
+  - Acoustic measures
+    - Cepstral peak prominence
+    - Mean airflow rate
+
+2.3 Language Disorders
+- Assessment tools
+  - Language Scale for School-Aged Children
+  - Vygotsky’s Zone of Proximal Development
+- Script tailoring and intervention complexity
+
+2.4 Neurological Communication Disorders
+- Aphasia
+- Cognitive and linguistic profiles
+  - Grammar
+  - Pragmatics
+  - Prosody
+
+2.5 Anatomical and Physiological Foundations
+- Broca’s area role
+- Myoelastic-aerodynamic theory in phonation
+
+2.6 Swallowing Disorders
+- Pharyngeal stage examination
+  - Hyoid and larynx elevation
+
+2.7 Auditory Disorders
+- Auditory training
+  - Open-set tasks
+- Rehabilitative strategies post-laryngectomy
+  - Tracheoesophageal speech
+
+3. Terminology
+3.1 Domain-Specific Terms
+- Stuttering: A speech disorder characterized by repeated or prolonged sounds, syllables, or words.
+- Stuttering Severity Instrument: A tool used to assess the severity of stuttering.
+- CAPE-V: Consensus Auditory-Perceptual Evaluation of Voice, used for voice disorder assessment.
+- Voice Handicap Index: A questionnaire assessing the emotional and functional impact of voice disorders.
+
+3.2 Key Concepts Hierarchy
+- Communication disorders
+  - Speech disorders
+  - Language disorders
+  - Voice disorders
+- Neurological disorders in communication
+  - Aphasia
+  - Cognitive communication deficits
+- Speech pathology assessments
+  - Standardized assessments
+  - Dynamic assessments
+- Therapy techniques
+  - Acoustic measures
+  - Voice hygiene practices

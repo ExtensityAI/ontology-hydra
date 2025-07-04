@@ -1,0 +1,55 @@
+1. Domain Definition
+
+1.1 Occupational Therapy
+   - Occupational Therapy is a client-centered health profession concerned with promoting health and well-being through occupation.
+   - It involves the therapeutic use of everyday activities to help individuals recover from injury, illness, or disability, aiming to improve their ability to perform tasks in their daily living and working environments.
+
+1.2 Conceptual Areas
+   - Anatomy and Physiology
+   - Neurological Function
+   - Sensory Integration
+   - Public Health Principles
+
+2. Core Topics
+
+2.1 Anatomy and Physiology
+   - Human body structures
+     - Semicircular ducts
+     - Ampullary crest
+   - Vestibular and movement disorders
+
+2.2 Neurological Function
+   - Neural pathways
+     - Red nucleus
+     - Basal ganglia
+   - Motor control
+   - Proprioception
+
+2.3 Sensory Integration
+   - Sensory modalities
+     - Proprioception
+     - Pain
+     - Temperature sensations
+   - Sensory processing
+   - Vision and auditory pathways
+
+2.4 Public Health Principles
+   - Prevention levels
+     - Primary
+     - Secondary
+     - Tertiary
+   - Health promotion
+   - Disease prevention
+   - Rehabilitation
+
+3. Terminology
+
+3.1 Key Terms and Concepts
+   - Proprioception: The sense of the relative position of one's own parts of the body and strength of effort being employed in movement.
+   - Sensory Integration: The process by which we receive information through our senses, organize this information, and use it to participate in everyday activities.
+   - Vestibular Rehabilitation: Therapy intended to alleviate primary and secondary problems caused by vestibular disorders.
+
+3.2 Hierarchical Relationships
+   - Sensory Integration < Proprioception, Vestibular Rehabilitation
+   - Neurological Function < Neural Pathways, Motor Control
+   - Public Health < Health Promotion, Disease Prevention, Rehabilitation

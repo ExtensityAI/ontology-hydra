@@ -1,0 +1,34 @@
+{
+  "responses": [
+    {
+      "qid": "medexqa_0",
+      "answer": "avoidance_of_the_problem",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_1",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_2",
+      "answer": "roles_of_a_clinical_psychologist",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_3",
+      "answer": null,
+      "no_answer_prob": 1.0,
+      "no_data_found": true
+    },
+    {
+      "qid": "medexqa_4",
+      "answer": "Avoidance of the problem is NOT a factor that leads to good outcomes in short-term psychotherapy, as it is categorized as a Therapy Misconception.",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "name": "Speech Pathologist",
+  "triplets": [
+    {
+      "subject": "maintenance_phase",
+      "predicate": "isPartOf",
+      "object": "fluency_shaping_therapy"
+    },
+    {
+      "subject": "prognosis",
+      "predicate": "isEvaluatedBy",
+      "object": "speech_language_pathologist"
+    },
+    {
+      "subject": "right_hemisphere",
+      "predicate": "responsibleFor",
+      "object": "processing_nonLiteral_language"
+    },
+    {
+      "subject": "speech_language_pathologist",
+      "predicate": "isA",
+      "object": "Person"
+    },
+    {
+      "subject": "right_hemisphere",
+      "predicate": "responsibleFor",
+      "object": "emotional_expression"
+    },
+    {
+      "subject": "television_viewing_time",
+      "predicate": "isA",
+      "object": "IndependentVariable"
+    },
+    {
+      "subject": "speech_language_pathologist",
+      "predicate": "predicts",
+      "object": "prognosis"
+    },
+    {
+      "subject": "child_expressive_language_development",
+      "predicate": "isA",
+      "object": "OutcomeVariable"
+    },
+    {
+      "subject": "prognosis",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "brain",
+      "predicate": "canBeDamaged",
+      "object": "right_hemisphere"
+    },
+    {
+      "subject": "prognosis",
+      "predicate": "isPredictedBy",
+      "object": "speech_language_pathologist"
+    },
+    {
+      "subject": "dyslexia",
+      "predicate": "causedBy",
+      "object": "language_processing_problems"
+    },
+    {
+      "subject": "mother_child_interaction_time",
+      "predicate": "isA",
+      "object": "IndependentVariable"
+    },
+    {
+      "subject": "right_hemisphere",
+      "predicate": "playsRoleIn",
+      "object": "complex_visual_spatial_skills"
+    },
+    {
+      "subject": "stuttering_support_groups",
+      "predicate": "provideBenefitFor",
+      "object": "fluency_shaping_therapy"
+    },
+    {
+      "subject": "fluency_shaping_therapy",
+      "predicate": "isA",
+      "object": "Treatment"
+    },
+    {
+      "subject": "multiple_regression_analysis",
+      "predicate": "isA",
+      "object": "StatisticalMethod"
+    },
+    {
+      "subject": "child_gender",
+      "predicate": "isA",
+      "object": "IndependentVariable"
+    },
+    {
+      "subject": "multiple_regression_analysis",
+      "predicate": "controlsFor",
+      "object": "other_independent_variables"
+    },
+    {
+      "subject": "right_hemisphere",
+      "predicate": "responsibleFor",
+      "object": "complex_visual_spatial_skills"
+    },
+    {
+      "subject": "fluency_shaping_therapy",
+      "predicate": "includesPhase",
+      "object": "maintenance_phase"
+    },
+    {
+      "subject": "language_learning_disabilities",
+      "predicate": "areCharacterizedBy",
+      "object": "difficulties_reading_and_writing"
+    },
+    {
+      "subject": "multiple_regression_analysis",
+      "predicate": "includesIndependentVariable",
+      "object": "television_viewing_time"
+    },
+    {
+      "subject": "dyslexia",
+      "predicate": "relatedTo",
+      "object": "difficulties_reading_and_writing"
+    },
+    {
+      "subject": "dyslexia",
+      "predicate": "isCharacterizedBy",
+      "object": "processing_challenges"
+    },
+    {
+      "subject": "language_learning_disabilities",
+      "predicate": "canCoOccurWith",
+      "object": "autism_spectrum_disorder"
+    },
+    {
+      "subject": "right_hemisphere",
+      "predicate": "canImpact",
+      "object": "nonLiteralLanguage"
+    },
+    {
+      "subject": "dyslexia",
+      "predicate": "isA",
+      "object": "language_learning_disability"
+    },
+    {
+      "subject": "multiple_regression_analysis",
+      "predicate": "investigatesInfluenceOn",
+      "object": "child_expressive_language_development"
+    },
+    {
+      "subject": "right_hemisphere",
+      "predicate": "isA",
+      "object": "BrainPart"
+    },
+    {
+      "subject": "language_learning_disabilities",
+      "predicate": "isA",
+      "object": "Disability"
+    },
+    {
+      "subject": "speech_language_pathology",
+      "predicate": "isA",
+      "object": "Field"
+    },
+    {
+      "subject": "right_hemisphere",
+      "predicate": "playsRoleIn",
+      "object": "processing_nonLiteral_language"
+    },
+    {
+      "subject": "multiple_regression_analysis",
+      "predicate": "includesIndependentVariable",
+      "object": "mother_child_interaction_time"
+    },
+    {
+      "subject": "multiple_regression_analysis",
+      "predicate": "includesIndependentVariable",
+      "object": "child_gender"
+    },
+    {
+      "subject": "right_hemisphere",
+      "predicate": "playsRoleIn",
+      "object": "emotional_expression"
+    }
+  ]
+}

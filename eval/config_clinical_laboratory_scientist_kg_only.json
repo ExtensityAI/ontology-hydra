@@ -1,7 +1,0 @@
-{
-  "scenarios": [{
-    "id": "clinical_laboratory_scientist_kg_only",
-    "domain": null,
-    "squad_titles": ["Clinical Laboratory Scientist"]
-  }]
-}

@@ -1,0 +1,50 @@
+{
+  "name": "Clinical Psychologist",
+  "triplets": [
+    {
+      "subject": "direct_association_with_therapy",
+      "predicate": "isA",
+      "object": "TherapyMisconception"
+    },
+    {
+      "subject": "choice_theory_of_reality_therapy",
+      "predicate": "isA",
+      "object": "TherapyMisconception"
+    },
+    {
+      "subject": "therapists_warmth_and_empathy",
+      "predicate": "isA",
+      "object": "TreatmentEfficacy"
+    },
+    {
+      "subject": "clients_appropriate_positive_expectations",
+      "predicate": "isA",
+      "object": "TreatmentEfficacy"
+    },
+    {
+      "subject": "roles_of_a_clinical_psychologist",
+      "predicate": "isA",
+      "object": "ClinicalPractice"
+    },
+    {
+      "subject": "avoidance_of_the_problem",
+      "predicate": "isA",
+      "object": "TherapyMisconception"
+    },
+    {
+      "subject": "strong_therapeutic_alliance",
+      "predicate": "isA",
+      "object": "TreatmentEfficacy"
+    },
+    {
+      "subject": "case_management",
+      "predicate": "isA",
+      "object": "TherapyMisconception"
+    },
+    {
+      "subject": "observer_reliability",
+      "predicate": "isA",
+      "object": "Reliability"
+    }
+  ]
+}

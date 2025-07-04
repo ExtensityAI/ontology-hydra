@@ -1,0 +1,34 @@
+{
+  "responses": [
+    {
+      "qid": "medexqa_0",
+      "answer": "becquerel",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_1",
+      "answer": "maternal_mortality_ratio",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_2",
+      "answer": "chylomicrons",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_3",
+      "answer": "delayed_type_hypersensitivity",
+      "no_answer_prob": 0.0,
+      "no_data_found": false
+    },
+    {
+      "qid": "medexqa_4",
+      "answer": "The thyroxine T4 test evaluates the thyroid gland, which can be related to conditions like hyperthyroidism characterized by excessive thyroid hormones including T4.",
+      "no_answer_prob": 0.1,
+      "no_data_found": false
+    }
+  ]
+}

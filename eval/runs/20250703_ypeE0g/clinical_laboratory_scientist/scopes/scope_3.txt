@@ -1,0 +1,53 @@
+1. Domain Definition
+   - Clinical Laboratory Science is a multidisciplinary field focused on the laboratory-based diagnosis, monitoring, and treatment of diseases. It encompasses various scientific disciplines including immunology, microbiology, chemistry, hematology, and quality control, each contributing to the accurate analysis and interpretation of clinical data.
+
+2. Core Topics
+   2.1. Transplant Immunology
+       - Types of grafts
+         - Isografts
+         - Xenografts
+   2.2. Microbiology
+       - Pathogen characteristics
+         - Escherichia coli
+         - Viral pathogens
+   2.3. Primary Health Care
+       - Integration of laboratory data in patient care
+   2.4. Cytopathology
+       - Examination techniques
+         - Cytological examination
+         - Histological examination
+       - Specialized procedures
+         - Cytocentrifugation
+   2.5. Hematopoiesis
+       - Fetal developmental stages
+         - Organs active during fetal development
+   2.6. Laboratory Quality Control
+       - Daily procedures
+         - Monitoring blood product storage conditions
+   2.7. Instrumentation and Clinical Chemistry
+       - Laboratory device components
+         - Photomultiplier tube
+       - Data interpretation
+         - Flow cytometry
+   2.8. Neurophysiology
+       - Brain wave patterns in adults
+   2.9. Hematology
+       - Granulocyte morphological changes during maturation
+
+3. Terminology
+   3.1. Transplant Immunology
+       - Graft: A piece of living tissue that is transplanted surgically.
+         - Isograft: Tissue transplanted between genetically identical individuals.
+         - Xenograft: Tissue transplanted between different species.
+   3.2. Microbiology
+       - Pathogen: An organism that causes disease.
+         - Characteristics, diagnostics, and susceptibility profiles.
+   3.3. Cytopathology
+       - Cytological examination: The study of cells to diagnose diseases.
+       - Histological examination: The study of tissues in a detailed manner.
+   3.4. Quality Control
+       - Compliance: Adherence to laboratory standards and regulations.
+   3.5. Instrumentation
+       - Photomultiplier tube: A device used to detect and amplify light signals, important in diagnostic instruments such as flow cytometers.
+   3.6. Neurophysiology
+       - Brain wave: Patterns of electrical activity produced by the brain, indicative of different physiological and pathological states.

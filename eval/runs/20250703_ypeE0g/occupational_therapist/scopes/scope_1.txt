@@ -1,0 +1,40 @@
+1. Domain Definition
+   - The domain of occupational therapy encompasses a comprehensive understanding of human anatomy and physiology, sensory integration, neurological function, and public health principles. It emphasizes the integration of interdisciplinary knowledge and therapeutic practices targeted towards improving occupational performance, particularly in those with sensory and movement disorders.
+
+2. Core Topics
+   2.1 Anatomy and Physiology
+     - Semicircular ducts
+     - Ampullary crest
+     - Vestibular system
+   2.2 Neurological Components
+     - Red nucleus
+     - Basal ganglia
+     - Motor control pathways
+   2.3 Sensory Integration
+     - Sensory modalities (proprioception, pain, temperature)
+     - Sensory processing and integration
+     - Virtual reality simulations for therapy
+   2.4 Sensory Systems
+     - Vision pathways
+     - Auditory pathways
+   2.5 Public Health Principles
+     - Population health concepts
+     - Levels of prevention (primary, secondary, tertiary)
+     - Health promotion and disease prevention
+   2.6 Therapeutic Practices
+     - Sensory integration therapy
+     - Interdisciplinary education in therapeutic sciences
+     - Technological advancements in therapy (e.g., MRI, CT scans, 3D modeling)
+
+3. Terminology
+   3.1 Domain-Specific Terms
+     - Vestibular system: A sensory system that contributes to balance and spatial orientation.
+     - Semicircular ducts: Part of the vestibular system involved in detecting rotational movements.
+     - Ampullary crest: A sensory receptor within the semicircular ducts that detects fluid motion.
+     - Red nucleus: A midbrain structure involved in motor control.
+     - Basal ganglia: Brain structures crucial for movement regulation.
+   3.2 Hierarchical Relationships
+     - Anatomy is foundational to understanding neurological components.
+     - Neurological functions are critical for motor control and sensory integration.
+     - Sensory systems are integral to occupational performance and therapeutic applications.
+     - Public health principles provide a broader context for therapeutic practices and interventions in occupational therapy.

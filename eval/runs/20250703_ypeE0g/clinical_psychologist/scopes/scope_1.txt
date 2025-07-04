@@ -1,0 +1,40 @@
+1. Domain Definition
+   - Clinical psychology is the branch of psychology focused on assessing and treating mental illness, abnormal behavior, and psychiatric problems. It integrates the science of psychology with the treatment of complex human issues. The domain encompasses theoretical knowledge, diagnostic criteria, research methodology, and practical therapeutic strategies.
+
+2. Core Topics
+   2.1. Psychological Assessment
+       - Psychological testing: validity and reliability
+       - Precautions in test result analysis
+       - Survey research, controlled observation, experimental design
+   2.2. Therapeutic Techniques
+       - Paradoxical Intention
+       - Systematic Desensitization
+       - Behavior Shaping
+       - Role-Playing
+   2.3. Symptomatology
+       - Differentiation between positive and negative symptoms of schizophrenia
+       - Symptom analysis and diagnosis
+   2.4. Vocational and Aptitude Assessments
+       - General Aptitude Test Battery (GATB)
+       - Career counseling techniques
+   2.5. Clinical Practices
+       - Appropriate practices in therapy
+       - Common misconceptions in therapy
+
+3. Terminology
+   3.1. Paradoxical Intention
+       - A technique intended to help clients face their fears by deliberately confronting the feared outcome.
+   3.2. Systematic Desensitization
+       - A behavioral technique used to a reduce phobia through gradual exposure to the fear.
+   3.3. Behavior Shaping
+       - A method of modifying behavior by reinforcing successive approximations of a desired behavior.
+   3.4. Cognitive-Behavioral Therapy (CBT)
+       - A type of psychotherapy that helps patients understand the thoughts and feelings that influence behavior.
+   3.5. Symptomatology
+       - The set of symptoms associated with a disease or disorder, particularly used in diagnosing psychological disorders.
+   3.6. Validity
+       - The degree to which a test accurately measures what it purports to measure.
+   3.7. Reliability
+       - The consistency of a research study or measuring test.
+   3.8. General Aptitude Test Battery (GATB)
+       - A multiple-aptitude test battery used to measure vocational abilities and aptitudes for career counseling.

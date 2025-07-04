@@ -1,0 +1,11 @@
+{
+  "successful_queries": 4,
+  "total_queries": 5,
+  "success_rate": 0.8,
+  "queries_with_results": 0,
+  "results_rate": 0.0,
+  "correct_queries": 0,
+  "accuracy": 0.0,
+  "total_elapsed_time_seconds": 35.82493329199497,
+  "estimated_cost_usd": 0.0199008
+}

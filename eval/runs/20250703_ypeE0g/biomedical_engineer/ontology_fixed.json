@@ -1,0 +1,454 @@
+{
+  "name": "Biomedical engineering is a multidisciplinary field that integrates principles of engineering with biological and medical sciences to develop technologies that improve healthcare. A key area within the field is the design and regulation of medical devices, particularly with regard to patient safety. For instance, attachments on medical devices that are not intended to heat the patient must not exceed a surface temperature of 41°C. This threshold is established to prevent skin damage, thermal burns, and unintended increases in body temperature, ensuring a safe interaction between devices and the human body.\n\nAnother important aspect of biomedical engineering is the application of electromagnetic waves in diagnostic imaging. Technologies such as thermography, X-rays, microwaves, ultraviolet, and infrared imaging are used to visualize physiological parameters, detect abnormalities, and assist in clinical decision-making. These imaging modalities leverage different bands of the electromagnetic spectrum, each suited for specific diagnostic purposes.\n\nUnderstanding human anatomy, especially organ structure, is also critical. For example, the heart wall is composed of three distinct layers—epicardium, myocardium, and endocardium—in that specific order. This anatomical knowledge is essential for the development of accurate diagnostic tools and interventions in cardiology.\n\nIn the realm of artificial organs, biomedical engineers must select materials that are both biocompatible and functionally effective. For instance, membrane oxygenators in heart-lung machines often use materials like silicone rubber or Teflon. These materials are chosen based on their permeability and ability to safely interact with blood and other tissues during procedures such as cardiopulmonary bypass.\n\nBiomedical signal processing is another core area, involving the interpretation of biological signals using techniques like modulation, demodulation, and amplification. These methods are critical for converting analog physiological data into meaningful diagnostic information, though not all concepts from general signal processing—such as synthesis—are applicable in the medical context.\n\nFinally, diagnostic devices such as bone densitometers highlight the precision of biomedical technologies. These devices, which use X-rays or ultrasound, are specialized tools designed to measure bone mineral density and assess conditions like osteoporosis. Their specificity contrasts with more general medical instruments like blood pressure monitors, underscoring the tailored nature of biomedical engineering solutions.\n\nOverall, biomedical engineering serves as a bridge between engineering innovation and medical application, focusing on developing safe, effective, and technologically advanced solutions to enhance patient care.",
+  "classes": [
+    {
+      "name": "PrecisionDiagnosticDevice",
+      "description": "A category of diagnostic devices specifically designed for high-accuracy measurement tasks, such as measuring bone mineral density.",
+      "usage_guideline": {
+        "description": "Use this class to represent any diagnostic device that is specifically designed for precise measurement tasks.",
+        "constraints": "Ensure this is not used to represent general diagnostic tools."
+      }
+    },
+    {
+      "name": "GeneralMedicalInstrument",
+      "description": "A tool used in the general practice of medicine, which may include diagnostic, therapeutic, or surgical instruments.",
+      "usage_guideline": {
+        "description": "Use this class for instruments used in a wide range of medical applications beyond precision diagnostics.",
+        "constraints": "This class should not overlap with specialized diagnostic devices."
+      }
+    },
+    {
+      "name": "HeartWallComponent",
+      "description": "Core anatomical components that make up the structure of the heart wall, significant for cardiovascular function and relevant in diagnostic tool development.",
+      "usage_guideline": {
+        "description": "Use this class to categorize parts of the heart wall, which are critical in cardiovascular studies.",
+        "constraints": "Ensure components are correctly identified as part of the heart's structural anatomy."
+      }
+    },
+    {
+      "name": "MembraneOxygenator",
+      "description": "A device integral to heart-lung machines, facilitating gas exchange by oxygenating blood and removing carbon dioxide in medical applications.",
+      "usage_guideline": {
+        "description": "Use this class to represent oxygenators within extracorporeal circuits.",
+        "constraints": "Do not confuse with other oxygenation technologies not related to heart-lung systems."
+      }
+    },
+    {
+      "name": "Material",
+      "description": "Substance used in the construction of medical devices, selected for functionality and safety in medical applications.",
+      "usage_guideline": {
+        "description": "Represent materials with specific characteristics that are applicable to medical device construction.",
+        "constraints": "Ensure materials are noted for their medical-grade properties."
+      }
+    },
+    {
+      "name": "SafetyRegulation",
+      "description": "A category of regulations focused on ensuring the safety of medical devices in various applications.",
+      "usage_guideline": {
+        "description": "Use this class to represent any set of rules or guidelines intended to ensure the safe design and use of medical devices.",
+        "constraints": "Ensure this is specifically applied to safety-related regulations."
+      }
+    },
+    {
+      "name": "ImagingModality",
+      "description": "Technologies used for diagnostic imaging, such as X-rays and infrared.",
+      "usage_guideline": {
+        "description": "Use this class to categorize different imaging technologies employed in medical diagnostics.",
+        "constraints": "Ensure categories are specific to diagnostic imaging."
+      }
+    },
+    {
+      "name": "RegulatoryStandard",
+      "description": "Standards that medical devices must meet for certification and compliance in the healthcare industry.",
+      "usage_guideline": {
+        "description": "Use this class for representing mandatory industry standards that medical devices must comply with.",
+        "constraints": "Distinguish from general guidelines; focus on compliance-related standards."
+      }
+    },
+    {
+      "name": "AnatomicalLayer",
+      "description": "Distinctive layers of a body part, crucial for understanding medical device interactions.",
+      "usage_guideline": {
+        "description": "Use this class to represent distinct anatomical layers relevant to medical device applications.",
+        "constraints": "Ensure anatomical layers are accurately categorized as distinct, functional entities."
+      }
+    },
+    {
+      "name": "SurgicalProcedure",
+      "description": "A medical operation conducted by surgical methods to treat or manage a condition.",
+      "usage_guideline": {
+        "description": "Use this class for any medical procedure that involves surgery.",
+        "constraints": "Differentiate from non-invasive therapeutic procedures."
+      }
+    },
+    {
+      "name": "BiomedicalSignalProcessing",
+      "description": "Techniques used to analyze physiological data to derive meaningful diagnostic information.",
+      "usage_guideline": {
+        "description": "This class encompasses methods used to process and interpret biomedical signals.",
+        "constraints": "Focus on techniques used specifically for diagnostic purposes."
+      }
+    },
+    {
+      "name": "ElectromagneticWaveType",
+      "description": "Types of electromagnetic waves used in medical diagnostics, such as microwave.",
+      "usage_guideline": {
+        "description": "Categorize different electromagnetic wave types relevant to diagnostic imaging.",
+        "constraints": "Ensure the wave types are explicitly tied to their diagnostic use."
+      }
+    },
+    {
+      "name": "BoneDensitometer",
+      "description": "A precision diagnostic device used to measure bone mineral density, crucial for assessing conditions like osteoporosis.",
+      "usage_guideline": {
+        "description": "Use this class to represent devices specifically designed to measure bone density.",
+        "constraints": "Ensure this class is not used for general diagnostic tools."
+      }
+    },
+    {
+      "name": "Osteoporosis",
+      "description": "A medical condition characterized by reduced bone density, increasing fracture risk.",
+      "usage_guideline": {
+        "description": "Use this class to represent the medical condition of osteoporosis.",
+        "constraints": "Ensure this is distinguished from other bone-related conditions."
+      }
+    },
+    {
+      "name": "BiocompatibleMaterial",
+      "description": "Materials that are compatible with living tissue, commonly used in artificial organs.",
+      "usage_guideline": {
+        "description": "Use this class for materials specifically selected for their compatibility with biological systems.",
+        "constraints": "Ensure materials are proven safe and effective for medical use."
+      }
+    },
+    {
+      "name": "ArtificialOrgan",
+      "description": "Devices created to replace or support the function of a biological organ.",
+      "usage_guideline": {
+        "description": "Use this class to represent devices that mimic the natural organs.",
+        "constraints": "Ensure clear distinction between artificial and natural organs."
+      }
+    },
+    {
+      "name": "HumanAnatomy",
+      "description": "The structural organization of the human body, essential for designing medical aids such as prosthetics.",
+      "usage_guideline": {
+        "description": "Use this class to refer to the body parts and structures relevant in medical device design.",
+        "constraints": "Ensure clear classification and understanding of anatomical features."
+      }
+    },
+    {
+      "name": "MobilityAid",
+      "description": "Devices designed to assist individuals in moving more easily and maintaining balance.",
+      "usage_guideline": {
+        "description": "Use this class for devices aiding mobility, such as canes and walkers.",
+        "constraints": "Ensure these are distinct from prosthetics or other supportive devices."
+      }
+    },
+    {
+      "name": "ProstheticDevice",
+      "description": "Artificial devices used to replace a missing body part.",
+      "usage_guideline": {
+        "description": "Use this class to represent devices intended to replace or enhance body parts.",
+        "constraints": "Ensure clear differentiation from mobility aids and other assistive technologies."
+      }
+    },
+    {
+      "name": "NonHeatingMedicalDeviceComponent",
+      "description": "Components of medical devices that are not intended to generate or retain significant heat during their operation.",
+      "usage_guideline": {
+        "description": "Use this class for parts of medical devices that do not perform heating functions.",
+        "constraints": "Ensure this class is not used for components with intended heating capabilities."
+      }
+    },
+    {
+      "name": "TemperatureThreshold",
+      "description": "The maximum temperature limit beyond which medical device components may present risks.",
+      "usage_guideline": {
+        "description": "Use to define the safety cut-off temperature for non-heating components.",
+        "constraints": "Ensure these thresholds are set according to safety standards relevant to the device."
+      }
+    },
+    {
+      "name": "RegulatoryComplianceRequirement",
+      "description": "Requirements that medical devices must fulfill to meet regulatory standards.",
+      "usage_guideline": {
+        "description": "Use for defining specific obligations that new medical devices must satisfy to comply with health regulations.",
+        "constraints": "Distinct from optional guidelines; focus on mandatory compliance."
+      }
+    },
+    {
+      "name": "GlobalHealthStandard",
+      "description": "International standards aimed at enhancing transparency and safety in medical device regulations.",
+      "usage_guideline": {
+        "description": "Use this class to represent universal standards applicable across multiple jurisdictions.",
+        "constraints": "Ensure these standards are globally recognized."
+      }
+    },
+    {
+      "name": "AIImpactAssessment",
+      "description": "The analysis of how artificial intelligence affects the regulatory approval processes for medical devices.",
+      "usage_guideline": {
+        "description": "Use to assess the influence of AI on regulatory frameworks.",
+        "constraints": "Focus on how AI changes compliance, not on general AI effects."
+      }
+    },
+    {
+      "name": "SelectionCriteria",
+      "description": "A set of parameters or conditions used to determine suitable materials in biomedical engineering applications.",
+      "usage_guideline": {
+        "description": "Use this class to categorize criteria applicable to material selection in biomedical contexts.",
+        "constraints": "Ensure criteria are specific to biomedical applications and adhere to relevant standards."
+      }
+    },
+    {
+      "name": "TemperatureLimit",
+      "description": "Defines specific temperature limits that medical devices must not exceed to ensure patient safety.",
+      "usage_guideline": {
+        "description": "Use to define safety temperature limits for device usage in patient care.",
+        "constraints": "Ensure adherence to established safety regulations and standards."
+      }
+    },
+    {
+      "name": "MeasurementResult",
+      "description": "A specific output or reading obtained from using a medical diagnostic device.",
+      "usage_guideline": {
+        "description": "Use this class to represent results from diagnostic measurements performed by medical devices.",
+        "constraints": "Ensure clarity and accuracy in representing diagnostic outcomes."
+      }
+    },
+    {
+      "name": "DiagnosticImagingTool",
+      "description": "Tools used in the acquisition, processing, and interpretation of medical images for diagnostic purposes.",
+      "usage_guideline": {
+        "description": "Use this class to represent devices designed specifically for capturing and analyzing medical images.",
+        "constraints": "Ensure differentiation from general imaging technology."
+      }
+    },
+    {
+      "name": "AIIntegration",
+      "description": "The process of incorporating artificial intelligence technologies into existing systems or tools to enhance performance or accuracy.",
+      "usage_guideline": {
+        "description": "Use this class to categorize instances where AI technologies are applied to enhance tools.",
+        "constraints": "Focus on processes where AI specifically improves existing capabilities."
+      }
+    },
+    {
+      "name": "RegulatoryCompliance",
+      "description": "Conformance with guidelines, rules, or standards established by regulatory entities, specifically in the context of medical devices.",
+      "usage_guideline": {
+        "description": "Use this class to represent adherence to required medical standards and regulations.",
+        "constraints": "Ensure clear linkage to specific regulatory entities and standards."
+      }
+    },
+    {
+      "name": "SignalProcessingTechnique",
+      "description": "Methods or algorithms applied to enhance or decode the data acquired from physiological signals.",
+      "usage_guideline": {
+        "description": "Use this class to categorize methods used in the analysis of physiological data.",
+        "constraints": "Focus on techniques that derive diagnostic data from raw signals."
+      }
+    },
+    {
+      "name": "DetectionCapability",
+      "description": "The ability of a system or tool to identify and respond to specific inputs or stimuli, particularly in medical diagnostics.",
+      "usage_guideline": {
+        "description": "Use this class to denote the capacity to recognize specific medical conditions or anomalies.",
+        "constraints": "Ensure the ability directly correlates with diagnostic objectives."
+      }
+    },
+    {
+      "name": "XRayApplication",
+      "description": "The use of X-rays in medical imaging, particularly for assessing bone mineral density.",
+      "usage_guideline": {
+        "description": "Use this class to represent situations where X-ray technology is applied for diagnostic imaging.",
+        "constraints": "Ensure the context specifically involves X-ray applications in diagnostic imaging."
+      }
+    },
+    {
+      "name": "PortableBiomedicalDevice",
+      "description": "Biomedical devices designed to be easily transported and used in various clinical settings.",
+      "usage_guideline": {
+        "description": "Use this class to represent devices that are portable for use in clinical practice.",
+        "constraints": "Ensure the devices are specifically designed for portability in clinical use."
+      }
+    },
+    {
+      "name": "ClinicalSetting",
+      "description": "A setting where medical treatment and diagnostics are performed, including hospitals and clinics.",
+      "usage_guideline": {
+        "description": "Use this class to represent various environments where medical practice takes place.",
+        "constraints": "Ensure these settings are explicitly connected to health services and clinical activities."
+      }
+    },
+    {
+      "name": "BiocompatibilityConsideration",
+      "description": "Factors that must be evaluated to ensure that a medical device or component can perform with an appropriate host response in a specific application.",
+      "usage_guideline": {
+        "description": "Use this class to represent the criteria necessary for evaluating the compatibility of a medical device with living tissues.",
+        "constraints": "Ensure that considerations are specific to the device's application and do not already exist as separate classes."
+      }
+    },
+    {
+      "name": "MembraneOxygenatorBiocompatibility",
+      "description": "The capability of membrane oxygenators to operate without triggering adverse reactions during cardiopulmonary bypass surgeries.",
+      "usage_guideline": {
+        "description": "Use this property to encapsulate the biocompatibility considerations specific to membrane oxygenators in surgical applications.",
+        "constraints": "Only apply to devices explicitly labeled as membrane oxygenators in cardiopulmonary contexts."
+      }
+    },
+    {
+      "name": "ElectromagneticSpectrumBand",
+      "description": "Categories of electromagnetic waves divided by frequency range, used in applications such as thermography.",
+      "usage_guideline": {
+        "description": "Use this class to represent different segments within the electromagnetic spectrum that are applicable in medical diagnostics, including thermography.",
+        "constraints": "Ensure distinct separations based on wavelength/frequency criteria relevant to medical imaging."
+      }
+    },
+    {
+      "name": "Thermography",
+      "description": "The use of thermographic technology for diagnostic purposes by analyzing infrared radiation emitted from the body.",
+      "usage_guideline": {
+        "description": "Use this class to categorize applications of thermography in medical imaging contexts.",
+        "constraints": "Focus on thermographic applications relevant to diagnostics."
+      }
+    },
+    {
+      "name": "Telemedicine",
+      "description": "The delivery of healthcare services through telecommunications technology, especially for remote areas.",
+      "usage_guideline": {
+        "description": "Use this class to represent services offered via telecommunication for medical consultations and remote diagnostics.",
+        "constraints": "Ensure telemedicine applications are connected to diagnostic and treatment services."
+      }
+    },
+    {
+      "name": "RegulatoryBody",
+      "description": "Organizations responsible for the authorization and certification of medical devices across different regions.",
+      "usage_guideline": {
+        "description": "Use this class to categorize official entities that govern the certification standards for medical devices.",
+        "constraints": "Ensure each organization is region-specific or internationally recognized."
+      }
+    },
+    {
+      "name": "MedicalDeviceCertification",
+      "description": "The process and documentation required for a medical device to be approved for use according to regional regulations.",
+      "usage_guideline": {
+        "description": "Use this class to encompass different certification processes for medical devices by various regulatory entities.",
+        "constraints": "Ensure clear alignment with corresponding regulatory bodies and compliance standards."
+      }
+    },
+    {
+      "name": "ConstructionMaterial",
+      "description": "Materials commonly used in the design of thermographs, noted for safety and effectiveness.",
+      "usage_guideline": {
+        "description": "Use this class to specify safe materials employed in the design and construction of thermographic equipment.",
+        "constraints": "Ensure materials meet safety and performance standards for medical applications."
+      }
+    },
+    {
+      "name": "CardiopulmonaryBypassDevice",
+      "description": "Medical devices used in procedures to temporarily take over the function of the heart and lungs during surgery.",
+      "usage_guideline": {
+        "description": "Use this class to represent devices specifically designed for cardiopulmonary bypass.",
+        "constraints": "Ensure the device is essential for cardiopulmonary bypass procedures."
+      }
+    },
+    {
+      "name": "RegulatoryApprovalProcess",
+      "description": "The method by which a device or material gains permission from a regulatory body to be distributed or sold.",
+      "usage_guideline": {
+        "description": "Use this class to represent the overall process of gaining regulatory approval for devices.",
+        "constraints": "Ensure this class is not used interchangeably with individual regulation standards."
+      }
+    },
+    {
+      "name": "UnderstandingHumanAnatomy",
+      "description": "A process or state of knowledge concerning the human body's structure, which is pivotal in medical device design.",
+      "usage_guideline": {
+        "description": "Use this class to represent the knowledge required for designing medical devices.",
+        "constraints": "Ensure that the application of anatomical knowledge is in the context of medical device development."
+      }
+    },
+    {
+      "name": "HeartLayer",
+      "description": "Distinct layers of the heart wall, each contributing uniquely to heart function and relevant to cardiovascular studies.",
+      "usage_guideline": {
+        "description": "Use this class to represent different layers of the heart wall, critical in understanding heart function.",
+        "constraints": "Ensure each layer is distinct and accurately categorized as part of the heart's anatomy."
+      }
+    },
+    {
+      "name": "HeartFunction",
+      "description": "The overall efficiency and effectiveness of the heart in performing its circulatory duties.",
+      "usage_guideline": {
+        "description": "Use this class to represent the collective result of all heart layers working together.",
+        "constraints": "Ensure correlation with specific physiological functions of the heart."
+      }
+    },
+    {
+      "name": "MedicalDeviceSafetyConsideration",
+      "description": "Factors to be considered for ensuring the safety of medical devices when used in complex surgical procedures.",
+      "usage_guideline": {
+        "description": "Use this class to categorize safety considerations for medical devices in surgical contexts.",
+        "constraints": "Ensure considerations are specific to complex surgeries and device interaction."
+      }
+    }
+  ],
+  "subclass_relations": [
+    {
+      "subclass": "BoneDensitometer",
+      "superclass": "PrecisionDiagnosticDevice"
+    },
+    {
+      "subclass": "BiocompatibleMaterial",
+      "superclass": "Material"
+    },
+    {
+      "subclass": "BoneDensitometer",
+      "superclass": "Material"
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "isConstructedFrom",
+      "description": "Describes the material composition of a medical device.",
+      "domain": [
+        "PrecisionDiagnosticDevice"
+      ],
+      "range": [
+        "Material"
+      ],
+      "characteristics": [
+        "asymmetric",
+        "functional"
+      ],
+      "usage_guideline": null
+    }
+  ],
+  "data_properties": [
+    {
+      "name": "MaterialSafety",
+      "description": "Attribute representing the safety level of a material when used in medical devices.",
+      "domain": [
+        "Material"
+      ],
+      "range": "xsd:boolean",
+      "characteristics": [
+        "functional"
+      ],
+      "usage_guideline": null
+    },
+    {
+      "name": "MaterialFunctionality",
+      "description": "Attribute representing the suitability of a material for its intended use in medical applications.",
+      "domain": [
+        "Material"
+      ],
+      "range": "xsd:boolean",
+      "characteristics": [
+        "functional"
+      ],
+      "usage_guideline": null
+    }
+  ]
+}

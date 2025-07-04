@@ -1,0 +1,66 @@
+1. Domain Definition
+   - Speech pathology is the domain focusing on the evaluation, diagnosis, and treatment of communication and swallowing disorders. It encompasses conditions affecting speech fluency, voice, language, and swallowing, integrating medical, linguistic, and technological aspects.
+
+2. Core Topics
+   2.1. Speech Fluency Disorders
+      - Stuttering
+        - Neurogenic Stuttering
+        - Psychogenic Stuttering
+      - Assessment Techniques
+        - Stuttering Severity Instrument
+      - Factors Influencing Severity
+
+   2.2. Voice Disorders
+      - Assessment Tools
+        - CAPE-V (Consensus Auditory-Perceptual Evaluation of Voice)
+        - Voice Handicap Index
+      - Disorders
+        - Vocal Nodules
+        - Spasmodic Dysphonia
+      - Treatment Techniques
+        - Accent Method
+        - Voice Hygiene Practices
+
+   2.3. Language Disorders
+      - Assessment Tools
+        - Language Scale for School-Aged Children
+      - Therapeutic Approaches
+        - Vygotsky’s Zone of Proximal Development
+        - Tailoring Scripts and Intervention Complexity
+
+   2.4. Neurological Communication Disorders
+      - Conditions
+        - Aphasia
+        - Traumatic Brain Injury
+      - Cognitive and Linguistic Profiles
+        - Grammar
+        - Pragmatics
+        - Prosody
+
+   2.5. Swallowing Disorders
+      - Phases of Swallowing
+        - Pharyngeal Stage
+        - Movements: Hyoid and Larynx Elevation
+
+   2.6. Auditory and Post-Laryngectomy Rehabilitation
+      - Auditory Training
+        - Open-Set Tasks
+      - Post-Laryngectomy Strategies
+        - Tracheoesophageal Speech
+
+3. Terminology
+   3.1. Domain-Specific Terms
+      - Broca’s Area
+        - Role in Speech Programming
+      - Myoelastic-Aerodynamic Theory
+        - Mechanics of Phonation
+      - Cepstral Peak Prominence
+      - Mean Airflow Rate
+
+   3.2. Hierarchical Relationships
+      - Fluency Disorders > Stuttering > Subtypes (Neurogenic, Psychogenic)
+      - Voice Disorders > Assessment Tools > CAPE-V, Voice Handicap Index
+      - Language Disorders > Assessments > Standardized, Dynamic
+      - Neurological Disorders > Semantic Domains > Grammar, Pragmatics, Prosody
+
+This document outlines the scope of the speech pathology domain through its core topics, terminologies, and conceptual areas relevant to diagnosing and treating communication and swallowing disorders, ensuring a comprehensive understanding across diverse clinical and research settings.
