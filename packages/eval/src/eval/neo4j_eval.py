@@ -324,6 +324,7 @@ def _create_run_specific_database(driver: GraphDatabase.driver, run_id: str, con
     # Convert run_id to use only lowercase letters and numbers
     # Neo4j database names will look like: r20250704pdiq9q
     import re
+    import time
     # Remove all non-alphanumeric characters and convert to lowercase
     safe_run_id = re.sub(r'[^a-zA-Z0-9]', '', run_id.lower())
     # Add "r" prefix to ensure it starts with a letter
@@ -341,6 +342,34 @@ def _create_run_specific_database(driver: GraphDatabase.driver, run_id: str, con
                     try:
                         session.run(f'CREATE DATABASE `{database_name}`')
                         logger.info(f"Created Neo4j database: {database_name}")
+
+                        # Wait for database to be available and verify it exists
+                        max_retries = 10
+                        retry_delay = 0.5
+                        for attempt in range(max_retries):
+                            try:
+                                time.sleep(retry_delay)
+                                # Try to verify the database exists by listing databases again
+                                result = session.run("SHOW DATABASES")
+                                updated_databases = [record["name"] for record in result]
+                                if database_name in updated_databases:
+                                    logger.info(f"Database {database_name} verified and ready")
+                                    break
+                                else:
+                                    logger.debug(f"Database {database_name} not yet available, attempt {attempt + 1}/{max_retries}")
+                            except Exception as verify_error:
+                                logger.debug(f"Error verifying database {database_name}, attempt {attempt + 1}/{max_retries}: {verify_error}")
+
+                        # Final verification attempt
+                        try:
+                            with driver.session(database=database_name) as test_session:
+                                test_session.run("RETURN 1")
+                                logger.info(f"Database {database_name} is accessible")
+                        except Exception as final_test_error:
+                            logger.warning(f"Database {database_name} created but not accessible: {final_test_error}")
+                            logger.warning(f"Falling back to default database: {config.default_database}")
+                            return config.default_database
+
                     except Exception as create_error:
                         logger.warning(f"Could not create database '{database_name}': {create_error}")
                         logger.warning("This might be due to insufficient privileges or Neo4j version limitations")
@@ -367,16 +396,37 @@ def _load_kg_to_neo4j(kg: KG, driver: GraphDatabase.driver, database_name: str =
     """Load knowledge graph into Neo4j database"""
     logger.info(f"Loading knowledge graph into Neo4j database: {database_name}")
 
-    # Clear existing data in the specified database
-    with driver.session(database=database_name) as session:
-        session.run("MATCH (n) DETACH DELETE n")
+    import time
 
-        # Create constraints
+    # Retry mechanism for database connection
+    max_retries = 5
+    retry_delay = 1.0
+
+    for attempt in range(max_retries):
         try:
-            session.run("CREATE CONSTRAINT IF NOT EXISTS FOR (n:Entity) REQUIRE n.name IS UNIQUE")
-        except:
-            # Handle case for older Neo4j versions
-            pass
+            # Clear existing data in the specified database
+            with driver.session(database=database_name) as session:
+                session.run("MATCH (n) DETACH DELETE n")
+
+                # Create constraints
+                try:
+                    session.run("CREATE CONSTRAINT IF NOT EXISTS FOR (n:Entity) REQUIRE n.name IS UNIQUE")
+                except:
+                    # Handle case for older Neo4j versions
+                    pass
+
+            # If we get here, the database is accessible
+            break
+
+        except Exception as e:
+            if attempt < max_retries - 1:
+                logger.warning(f"Database {database_name} not accessible on attempt {attempt + 1}/{max_retries}: {e}")
+                logger.info(f"Retrying in {retry_delay} seconds...")
+                time.sleep(retry_delay)
+                retry_delay *= 2  # Exponential backoff
+            else:
+                logger.error(f"Failed to access database {database_name} after {max_retries} attempts: {e}")
+                raise
 
     # Load triplets
     total_triplets = len(kg.triplets)
@@ -628,8 +678,10 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
 
                     for (engine_name, model_name), data in usage_per_engine.items():
                         if (engine_name, model_name) in PRICING:
+                            logger.debug(f"Using pricing model: {engine_name} - {model_name}")
                             batch_runtime_info += RuntimeInfo.estimate_cost(data, estimate_cost, pricing=PRICING[(engine_name, model_name)])
                         else:
+                            logger.warning(f"No pricing model found for: {engine_name} - {model_name}, using raw data")
                             batch_runtime_info += data
 
                     # Add total elapsed time

@@ -299,7 +299,28 @@ def _format_predictions(details: list[ResponseDetail], qas: list[SquadQAPair]):
     return predictions, references
 
 
-def eval_scenario(scenario: EvalScenario, path: Path):
+def _merge_neo4j_configs(global_config: Neo4jConfig, scenario_config: Neo4jConfig) -> Neo4jConfig:
+    """Merge global Neo4j configuration with scenario-specific configuration.
+    Scenario-specific settings override global settings."""
+
+    # Start with global config
+    merged_data = global_config.model_dump()
+
+    # Override with scenario-specific settings if they are not default values
+    scenario_data = scenario_config.model_dump()
+
+    for key, value in scenario_data.items():
+        # Only override if the scenario value is different from the default Neo4jConfig value
+        default_config = Neo4jConfig()
+        default_value = getattr(default_config, key)
+
+        if value != default_value:
+            merged_data[key] = value
+
+    return Neo4jConfig(**merged_data)
+
+
+def eval_scenario(scenario: EvalScenario, path: Path, global_neo4j_config: Neo4jConfig = None):
     """Run evaluation for a single scenario"""
 
     logger.info(
@@ -307,6 +328,15 @@ def eval_scenario(scenario: EvalScenario, path: Path):
         scenario.id,
         scenario.dataset_mode,
     )
+
+    # Merge global and scenario-specific Neo4j configurations
+    if global_neo4j_config is not None:
+        merged_neo4j_config = _merge_neo4j_configs(global_neo4j_config, scenario.neo4j)
+        logger.info(f"Using merged Neo4j configuration for scenario '{scenario.id}'")
+        logger.debug(f"Global Neo4j enabled: {global_neo4j_config.enabled}, Scenario Neo4j enabled: {scenario.neo4j.enabled}, Merged enabled: {merged_neo4j_config.enabled}")
+    else:
+        merged_neo4j_config = scenario.neo4j
+        logger.info(f"Using scenario-specific Neo4j configuration for scenario '{scenario.id}'")
 
     ontology = None
     ontology_runtime_stats = {}
@@ -346,7 +376,7 @@ def eval_scenario(scenario: EvalScenario, path: Path):
         topic_path = topics_path / title
         topic_path.mkdir(exist_ok=True, parents=True)
 
-        _eval_squad_topic(title, ontology, topic_path, scenario.neo4j, scenario.dataset_mode, scenario.skip_qa)
+        _eval_squad_topic(title, ontology, topic_path, merged_neo4j_config, scenario.dataset_mode, scenario.skip_qa)
 
 
 def _generate_run_metrics_and_stats(path: Path, config: EvalConfig):
@@ -360,9 +390,21 @@ def _generate_run_metrics_and_stats(path: Path, config: EvalConfig):
         'total_topics': sum(len(scenario.squad_titles) for scenario in config.scenarios),
         'scenarios_with_ontology': sum(1 for scenario in config.scenarios if scenario.domain is not None),
         'scenarios_without_ontology': sum(1 for scenario in config.scenarios if scenario.domain is None),
-        'neo4j_enabled_scenarios': sum(1 for scenario in config.scenarios if scenario.neo4j.enabled),
         'scenarios': []
     }
+
+    # Calculate Neo4j enabled scenarios based on merged configuration
+    neo4j_enabled_scenarios = 0
+    for scenario in config.scenarios:
+        if config.neo4j is not None:
+            merged_config = _merge_neo4j_configs(config.neo4j, scenario.neo4j)
+            if merged_config.enabled:
+                neo4j_enabled_scenarios += 1
+        else:
+            if scenario.neo4j.enabled:
+                neo4j_enabled_scenarios += 1
+
+    run_metrics['neo4j_enabled_scenarios'] = neo4j_enabled_scenarios
 
     # Initialize aggregated runtime statistics
     total_runtime_info = RuntimeInfo(0, 0, 0, 0, 0, 0, 0, 0)
@@ -375,11 +417,18 @@ def _generate_run_metrics_and_stats(path: Path, config: EvalConfig):
             logger.warning(f"Scenario path {scenario_path} does not exist, skipping...")
             continue
 
+        # Determine Neo4j enabled status based on merged configuration
+        if config.neo4j is not None:
+            merged_neo4j_config = _merge_neo4j_configs(config.neo4j, scenario.neo4j)
+            neo4j_enabled = merged_neo4j_config.enabled
+        else:
+            neo4j_enabled = scenario.neo4j.enabled
+
         scenario_metrics = {
             'id': scenario.id,
             'domain': scenario.domain,
             'dataset_mode': scenario.dataset_mode,
-            'neo4j_enabled': scenario.neo4j.enabled,
+            'neo4j_enabled': neo4j_enabled,
             'topics': [],
             'total_questions': 0,
             'total_kg_triplets': 0,
@@ -445,7 +494,7 @@ def _generate_run_metrics_and_stats(path: Path, config: EvalConfig):
                     logger.warning(f"Failed to load KG data from {kg_path}: {e}")
 
             # Load Neo4j metrics if enabled
-            if scenario.neo4j.enabled:
+            if neo4j_enabled:
                 neo4j_metrics_path = topic_path / "neo4j_eval" / "neo4j_metrics.json"
                 if neo4j_metrics_path.exists():
                     try:

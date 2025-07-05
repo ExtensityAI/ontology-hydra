@@ -1,0 +1,235 @@
+{
+  "name": "Biomedical Engineer",
+  "triplets": [
+    {
+      "subject": "alpha_waves",
+      "predicate": "suppressedBy",
+      "object": "visual_and_sensory_stimuli"
+    },
+    {
+      "subject": "piezoelectric_device",
+      "predicate": "isA",
+      "object": "Device"
+    },
+    {
+      "subject": "electrocardiograph",
+      "predicate": "measures",
+      "object": "electrical_activity_of_heart"
+    },
+    {
+      "subject": "fibrillation",
+      "predicate": "impairs",
+      "object": "heart_function"
+    },
+    {
+      "subject": "electrocardiograph",
+      "predicate": "isA",
+      "object": "Device"
+    },
+    {
+      "subject": "dead_zone",
+      "predicate": "occursWhen",
+      "object": "measurement_value_does_not_change"
+    },
+    {
+      "subject": "fibrillation",
+      "predicate": "isOneOf",
+      "object": "most_dangerous_conditions_heart_diseases"
+    },
+    {
+      "subject": "saturation",
+      "predicate": "occursWhen",
+      "object": "measurement_value_reaches_maximum"
+    },
+    {
+      "subject": "blood_pressure_measuring_device",
+      "predicate": "uses",
+      "object": "piezoelectric_sensor"
+    },
+    {
+      "subject": "thermoelectricity",
+      "predicate": "generateVoltage",
+      "object": "temperature_difference"
+    },
+    {
+      "subject": "sensitivity_drift",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "nonlinear_characteristics",
+      "predicate": "includes",
+      "object": "breakdown"
+    },
+    {
+      "subject": "sensitivity_drift",
+      "predicate": "degradeAccuracyOf",
+      "object": "measuring_devices"
+    },
+    {
+      "subject": "dead_zone",
+      "predicate": "isA",
+      "object": "Condition"
+    },
+    {
+      "subject": "breakdown",
+      "predicate": "occursWhen",
+      "object": "device_fails"
+    },
+    {
+      "subject": "fibrillation",
+      "predicate": "impair",
+      "object": "heart_function"
+    },
+    {
+      "subject": "breakdown",
+      "predicate": "isA",
+      "object": "Condition"
+    },
+    {
+      "subject": "piezoelectric_sensor",
+      "predicate": "isA",
+      "object": "Sensor"
+    },
+    {
+      "subject": "breakdown",
+      "predicate": "occursWhen",
+      "object": "device_is_destroyed"
+    },
+    {
+      "subject": "ultrasound_imaging_device",
+      "predicate": "uses",
+      "object": "piezoelectric_sensor"
+    },
+    {
+      "subject": "alpha_waves",
+      "predicate": "appearsIn",
+      "object": "relaxed_state"
+    },
+    {
+      "subject": "sensitivity_drift",
+      "predicate": "means",
+      "object": "sensitivity_changes_over_time"
+    },
+    {
+      "subject": "electrocardiograph",
+      "predicate": "doesNotUse",
+      "object": "piezoelectric_sensor"
+    },
+    {
+      "subject": "piezoelectric_sensor",
+      "predicate": "detects",
+      "object": "pressure"
+    },
+    {
+      "subject": "sensitivity_drift",
+      "predicate": "requires",
+      "object": "calibration"
+    },
+    {
+      "subject": "saturation",
+      "predicate": "occursWhen",
+      "object": "output_signal_fixed"
+    },
+    {
+      "subject": "visual_and_sensory_stimuli",
+      "predicate": "isA",
+      "object": "Stimuli"
+    },
+    {
+      "subject": "sensitivity_drift",
+      "predicate": "refersTo",
+      "object": "change_in_measured_values_over_time"
+    },
+    {
+      "subject": "dead_zone",
+      "predicate": "occursWhen",
+      "object": "output_signal_unchanged"
+    },
+    {
+      "subject": "fibrillation",
+      "predicate": "causes",
+      "object": "electrical_and_structural_chaos_in_heart"
+    },
+    {
+      "subject": "alpha_wave",
+      "predicate": "isA",
+      "object": "Brainwave"
+    },
+    {
+      "subject": "alpha_wave",
+      "predicate": "suppressedBy",
+      "object": "visual_and_sensory_stimuli"
+    },
+    {
+      "subject": "sensitivity_drift",
+      "predicate": "notCharacteristicOf",
+      "object": "nonlinearity"
+    },
+    {
+      "subject": "nonlinear_characteristics",
+      "predicate": "includes",
+      "object": "dead_zone"
+    },
+    {
+      "subject": "nonlinear_characteristics",
+      "predicate": "includes",
+      "object": "saturation"
+    },
+    {
+      "subject": "sensitivity_drift",
+      "predicate": "causedBy",
+      "object": "environmental_factors"
+    },
+    {
+      "subject": "biometric_measuring_device",
+      "predicate": "isA",
+      "object": "Device"
+    },
+    {
+      "subject": "saturation",
+      "predicate": "isA",
+      "object": "Condition"
+    },
+    {
+      "subject": "fibrillation",
+      "predicate": "isA",
+      "object": "HeartCondition"
+    },
+    {
+      "subject": "phonocardiogram_device",
+      "predicate": "uses",
+      "object": "piezoelectric_sensor"
+    },
+    {
+      "subject": "thermoelectricity",
+      "predicate": "isA",
+      "object": "Phenomenon"
+    },
+    {
+      "subject": "piezoelectric_device",
+      "predicate": "generateForceBy",
+      "object": "pressure_or_electrical_potential"
+    },
+    {
+      "subject": "alpha_waves",
+      "predicate": "isA",
+      "object": "Brainwave"
+    },
+    {
+      "subject": "electrical_and_structural_chaos_in_heart",
+      "predicate": "isA",
+      "object": "Condition"
+    },
+    {
+      "subject": "relaxed_state",
+      "predicate": "isA",
+      "object": "State"
+    },
+    {
+      "subject": "alpha_wave",
+      "predicate": "appearsIn",
+      "object": "relaxed_state"
+    }
+  ]
+}

@@ -10,11 +10,15 @@ from eval.config import EvalScenario, EvalConfig
 from eval.eval import eval_scenario, _generate_run_metrics_and_stats
 from eval.logs import init_logging
 
-
-class EvalConfig(BaseModel):
-    model_config = ConfigDict(frozen=True)
-
-    scenarios: tuple[EvalScenario, ...]
+from symai.backend.engines.neurosymbolic.engine_deepseekX_reasoning import \
+    DeepSeekXReasoningEngine
+from symai.backend.engines.neurosymbolic.engine_google_geminiX_reasoning import \
+    GeminiXReasoningEngine
+from symai.backend.engines.neurosymbolic.engine_openai_gptX_chat import \
+    GPTXChatEngine
+from symai.backend.engines.neurosymbolic.engine_openai_gptX_reasoning import \
+    GPTXReasoningEngine
+from symai.functional import EngineRepository
 
 
 def _generate_run_id():
@@ -60,7 +64,7 @@ def _run(path: Path, config: EvalConfig):
         scenario_path.mkdir(exist_ok=True, parents=True)
 
         with logger.contextualize(domain_id=scenario.id):
-            eval_scenario(scenario, scenario_path)
+            eval_scenario(scenario, scenario_path, config.neo4j)
 
     _generate_run_metrics_and_stats(path, config)
 
@@ -75,6 +79,37 @@ def _start_new_evaluation(args):
 
     config = EvalConfig.model_validate_json(args.config.read_text(encoding="utf-8"))
     path = args.output
+
+    if config.model.engine.startswith('gpt-4.1'):
+        engine = GPTXChatEngine(
+            api_key=config.model.api_key,
+            model=config.model.engine
+        )
+        EngineRepository.register('neurosymbolic', engine, allow_engine_override=True)
+    elif config.model.engine == 'o4-mini' or config.model.engine.startswith('o3'):
+        engine = GPTXReasoningEngine(
+            api_key=config.model.api_key,
+            model=config.model.engine
+        )
+        EngineRepository.register('neurosymbolic', engine, allow_engine_override=True)
+    elif config.model.engine.startswith('deepseek'):
+        engine = DeepSeekXReasoningEngine(
+            api_key=config.model.api_key,
+            model=config.model.engine
+        )
+        EngineRepository.register('neurosymbolic', engine, allow_engine_override=True)
+    elif config.model.engine.startswith('gemini'):
+        engine = GeminiXReasoningEngine(
+            api_key=config.model.api_key,
+            model=config.model.engine
+        )
+        EngineRepository.register('neurosymbolic', engine, allow_engine_override=True)
+    else:
+        engine = GPTXChatEngine(
+            api_key=config.model.api_key,
+            model=config.model.engine
+        )
+        EngineRepository.register('neurosymbolic', engine, allow_engine_override=True)
 
     # prepare output path
     path.mkdir(exist_ok=True, parents=True)

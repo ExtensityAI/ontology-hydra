@@ -1,0 +1,82 @@
+{
+  "total_scenarios": 1,
+  "total_topics": 1,
+  "scenarios_with_ontology": 0,
+  "scenarios_without_ontology": 1,
+  "scenarios": [
+    {
+      "id": "kg_only",
+      "domain": null,
+      "dataset_mode": "dev",
+      "neo4j_enabled": true,
+      "topics": [
+        {
+          "title": "Biomedical Engineer",
+          "questions": 5,
+          "kg_triplets": 64,
+          "squad_metrics": {
+            "exact_match": 0.0,
+            "f1": 0.0,
+            "no_answer_probability": 0.0,
+            "skip_qa": true
+          },
+          "neo4j_metrics": {
+            "database_name": "r20250705btr0rq",
+            "run_id": "20250705_btr0rQ",
+            "successful_queries": 5,
+            "total_queries": 5,
+            "success_rate": 1.0,
+            "queries_with_results": 0,
+            "results_rate": 0.0,
+            "correct_queries": 0,
+            "accuracy": 0.0,
+            "total_elapsed_time_seconds": 19.501547749969177,
+            "estimated_cost_usd": 0.013036799999999998,
+            "auto_cleanup_enabled": false
+          }
+        }
+      ],
+      "total_questions": 5,
+      "total_kg_triplets": 64,
+      "squad_metrics": {
+        "exact_match": 0.0,
+        "f1": 0.0,
+        "no_answer_probability": 0.0
+      },
+      "neo4j_metrics": {
+        "successful_queries": 5,
+        "total_queries": 5,
+        "success_rate": 1.0,
+        "queries_with_results": 0,
+        "results_rate": 0.0,
+        "correct_queries": 0,
+        "accuracy": 0.0
+      }
+    }
+  ],
+  "neo4j_enabled_scenarios": 1,
+  "overall_squad_metrics": {
+    "exact_match": 0.0,
+    "f1": 0.0,
+    "no_answer_probability": 0.0
+  },
+  "overall_neo4j_metrics": {
+    "successful_queries": 5,
+    "total_queries": 5,
+    "success_rate": 1.0,
+    "queries_with_results": 0,
+    "results_rate": 0.0,
+    "correct_queries": 0,
+    "accuracy": 0.0
+  },
+  "runtime_stats": {
+    "total_elapsed_time_seconds": 63.936462249956094,
+    "total_prompt_tokens": 12404.0,
+    "total_completion_tokens": 1247.0,
+    "total_reasoning_tokens": 0.0,
+    "total_cached_tokens": 8704.0,
+    "total_tokens": 13651.0,
+    "total_calls": 5.0,
+    "estimated_cost_usd": 0.0130367999999999
+  }
+}

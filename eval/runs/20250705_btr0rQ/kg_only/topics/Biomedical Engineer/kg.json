@@ -1,0 +1,325 @@
+{
+  "name": "Biomedical Engineer",
+  "triplets": [
+    {
+      "subject": "time",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "temperature",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "environmental_factors",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "environmental_factors",
+      "predicate": "suchAs",
+      "object": "humidity"
+    },
+    {
+      "subject": "blood_pressure_measuring_devices",
+      "predicate": "use",
+      "object": "piezoelectric_sensors"
+    },
+    {
+      "subject": "humidity",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "fibrillation",
+      "predicate": "causes",
+      "object": "disrupted_contraction_and_relaxation"
+    },
+    {
+      "subject": "alpha_waves",
+      "predicate": "appearIn",
+      "object": "relaxed_state"
+    },
+    {
+      "subject": "dead_zone",
+      "predicate": "occursWhen",
+      "object": "output_signal_does_not_change"
+    },
+    {
+      "subject": "dead_zone",
+      "predicate": "isIncludedIn",
+      "object": "nonlinear_characteristics_of_biometric_measuring_devices"
+    },
+    {
+      "subject": "sensitivity_drift",
+      "predicate": "notCharacteristicOf",
+      "object": "nonlinear_characteristics"
+    },
+    {
+      "subject": "saturation",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "change_in_measured_values",
+      "predicate": "occursOver",
+      "object": "time"
+    },
+    {
+      "subject": "electrocardiograph",
+      "predicate": "isA",
+      "object": "Device"
+    },
+    {
+      "subject": "breakdown",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "accuracy_of_measuring_devices",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "nonlinear_characteristics",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "measurement_value_does_not_change",
+      "predicate": "isA",
+      "object": "Event"
+    },
+    {
+      "subject": "piezoelectric_sensors",
+      "predicate": "convertsInto",
+      "object": "electrical_signal"
+    },
+    {
+      "subject": "alpha_waves",
+      "predicate": "isA",
+      "object": "Brainwave"
+    },
+    {
+      "subject": "electrocardiograph",
+      "predicate": "measures",
+      "object": "electrical_activity_of_heart"
+    },
+    {
+      "subject": "saturation",
+      "predicate": "conditionWhere",
+      "object": "measurement_value_reaches_maximum"
+    },
+    {
+      "subject": "breakdown",
+      "predicate": "isIncludedIn",
+      "object": "nonlinear_characteristics_of_biometric_measuring_devices"
+    },
+    {
+      "subject": "output_signal_does_not_change",
+      "predicate": "isA",
+      "object": "Event"
+    },
+    {
+      "subject": "environmental_factors",
+      "predicate": "suchAs",
+      "object": "temperature"
+    },
+    {
+      "subject": "change_in_measured_values_over_time",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "alpha_waves",
+      "predicate": "becomePronouncedWhen",
+      "object": "visual_and_sensory_stimuli_suppressed"
+    },
+    {
+      "subject": "breakdown",
+      "predicate": "refersTo",
+      "object": "destruction_due_to_overload"
+    },
+    {
+      "subject": "sensitivity_drift",
+      "predicate": "degrades",
+      "object": "accuracy_of_measuring_devices"
+    },
+    {
+      "subject": "output_signal_becomes_fixed",
+      "predicate": "happensWhen",
+      "object": "input_signal_exceeds_certain_range"
+    },
+    {
+      "subject": "sensitivity_drift",
+      "predicate": "changes",
+      "object": "sensitivity_of_biometric_measuring_device"
+    },
+    {
+      "subject": "destruction_due_to_overload",
+      "predicate": "isA",
+      "object": "Event"
+    },
+    {
+      "subject": "sensitivity_drift",
+      "predicate": "requires",
+      "object": "calibration"
+    },
+    {
+      "subject": "input_signal_within_certain_range",
+      "predicate": "isA",
+      "object": "Event"
+    },
+    {
+      "subject": "fibrillation",
+      "predicate": "occursIn",
+      "object": "heart"
+    },
+    {
+      "subject": "sensitivity_of_biometric_measuring_device",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "fibrillation",
+      "predicate": "involves",
+      "object": "electrical_and_structural_chaos"
+    },
+    {
+      "subject": "relaxed_state",
+      "predicate": "isA",
+      "object": "State"
+    },
+    {
+      "subject": "visual_and_sensory_stimuli_suppressed",
+      "predicate": "isA",
+      "object": "Condition"
+    },
+    {
+      "subject": "dead_zone",
+      "predicate": "conditionWhere",
+      "object": "measurement_value_does_not_change"
+    },
+    {
+      "subject": "input_signal_exceeds_certain_range",
+      "predicate": "isA",
+      "object": "Event"
+    },
+    {
+      "subject": "measurement_value_reaches_maximum",
+      "predicate": "isA",
+      "object": "Event"
+    },
+    {
+      "subject": "piezoelectric_devices",
+      "predicate": "generatesElectromotiveForceDueTo",
+      "object": "pressure_or_electrical_potential"
+    },
+    {
+      "subject": "saturation",
+      "predicate": "isIncludedIn",
+      "object": "nonlinear_characteristics_of_biometric_measuring_devices"
+    },
+    {
+      "subject": "piezoelectric_sensors",
+      "predicate": "detects",
+      "object": "pressure"
+    },
+    {
+      "subject": "change_in_measured_values",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "dead_zone",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "fibrillation",
+      "predicate": "potentiallyLeadsTo",
+      "object": "cardiac_arrest"
+    },
+    {
+      "subject": "fibrillation",
+      "predicate": "isA",
+      "object": "Condition"
+    },
+    {
+      "subject": "piezoelectric_sensors",
+      "predicate": "isA",
+      "object": "Device"
+    },
+    {
+      "subject": "phonocardiogram_devices",
+      "predicate": "use",
+      "object": "piezoelectric_sensors"
+    },
+    {
+      "subject": "sensitivity_drift",
+      "predicate": "refersTo",
+      "object": "change_in_measured_values"
+    },
+    {
+      "subject": "sensitivity_drift",
+      "predicate": "refersTo",
+      "object": "change_in_measured_values_over_time"
+    },
+    {
+      "subject": "ultrasound_imaging_devices",
+      "predicate": "use",
+      "object": "piezoelectric_sensors"
+    },
+    {
+      "subject": "sensitivity_drift",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "sensitivity_drift",
+      "predicate": "occursDueTo",
+      "object": "environmental_factors"
+    },
+    {
+      "subject": "piezoelectric_devices",
+      "predicate": "isA",
+      "object": "Device"
+    },
+    {
+      "subject": "saturation",
+      "predicate": "occursWhen",
+      "object": "output_signal_becomes_fixed"
+    },
+    {
+      "subject": "biometric_measuring_device_fails",
+      "predicate": "isA",
+      "object": "Event"
+    },
+    {
+      "subject": "breakdown",
+      "predicate": "occursWhen",
+      "object": "biometric_measuring_device_fails"
+    },
+    {
+      "subject": "output_signal_becomes_fixed",
+      "predicate": "isA",
+      "object": "Event"
+    },
+    {
+      "subject": "biometric_measuring_device_fails",
+      "predicate": "happensWhen",
+      "object": "input_signal_exceeds_certain_threshold"
+    },
+    {
+      "subject": "calibration",
+      "predicate": "isA",
+      "object": "Concept"
+    },
+    {
+      "subject": "output_signal_does_not_change",
+      "predicate": "happensWhen",
+      "object": "input_signal_within_certain_range"
+    }
+  ]
+}

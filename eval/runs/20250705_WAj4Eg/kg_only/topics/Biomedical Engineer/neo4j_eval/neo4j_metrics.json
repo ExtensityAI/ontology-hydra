@@ -1,0 +1,14 @@
+{
+  "database_name": "r20250705waj4eg",
+  "run_id": "20250705_WAj4Eg",
+  "successful_queries": 5,
+  "total_queries": 5,
+  "success_rate": 1.0,
+  "queries_with_results": 0,
+  "results_rate": 0.0,
+  "correct_queries": 0,
+  "accuracy": 0.0,
+  "total_elapsed_time_seconds": 16.00418633292429,
+  "estimated_cost_usd": 0.0125988,
+  "auto_cleanup_enabled": false
+}
