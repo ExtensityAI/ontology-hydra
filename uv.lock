@@ -715,6 +715,18 @@ wheels = [
 ]
 
 [[package]]
+name = "neo4j"
+version = "5.28.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pytz" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/4b/20/733dac16f7cedc80b23093415822c9763302519cba0e7c8bcdb5c01fc512/neo4j-5.28.1.tar.gz", hash = "sha256:ae8e37a1d895099062c75bc359b2cce62099baac7be768d0eba7180c1298e214", size = 231094, upload-time = "2025-02-10T08:36:22.566Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/6a/57/94225fe5e9dabdc0ff60c88cbfcedf11277f4b34e7ab1373d3e62dbdd207/neo4j-5.28.1-py3-none-any.whl", hash = "sha256:6755ef9e5f4e14b403aef1138fb6315b120631a0075c138b5ddb2a06b87b09fd", size = 312258, upload-time = "2025-02-10T08:36:16.209Z" },
+]
+
+[[package]]
 name = "nest-asyncio"
 version = "1.6.0"
 source = { registry = "https://pypi.org/simple" }
@@ -862,11 +874,15 @@ name = "ontopipe"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "neo4j" },
     { name = "symbolicai" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "symbolicai", git = "https://github.com/ExtensityAI/symbolicai.git?rev=912642d2da2a4aa83909bb6c06d1b5d3a167c48a" }]
+requires-dist = [
+    { name = "neo4j", specifier = ">=5.28.1" },
+    { name = "symbolicai", git = "https://github.com/ExtensityAI/symbolicai.git?rev=912642d2da2a4aa83909bb6c06d1b5d3a167c48a" },
+]
 
 [[package]]
 name = "openai"
