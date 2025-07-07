@@ -1,9 +1,0 @@
-metric,value,formatted_value
-total_elapsed_time_seconds,19.501547749969177,19.50
-total_prompt_tokens,12404.0,"12,404"
-total_completion_tokens,1247.0,"1,247"
-total_reasoning_tokens,0.0,0
-total_cached_tokens,8704.0,"8,704"
-total_tokens,13651.0,"13,651"
-total_calls,5.0,5
-estimated_cost_usd,0.013036799999999998,$0.0130

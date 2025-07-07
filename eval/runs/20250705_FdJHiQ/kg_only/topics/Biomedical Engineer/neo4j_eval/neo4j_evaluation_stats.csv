@@ -1,6 +1,0 @@
-query_idx,question,expected_answer,successful_any_iteration,returned_results_any_iteration,correct_any_iteration,successful_iterations,results_iterations,correct_iterations
-1,Which EEG waveform is most commonly seen in the parietal or occipital region and is suppressed by visual and sensory stimuli?,Alpha waves,True,False,False,1,0,0
-2,Which of the following is NOT a nonlinear characteristic of a biometric measuring device?,Sensitivity drift,True,False,False,1,0,0
-3,What is the phenomenon called where the myocardium contracts and relaxes asynchronously due to the electrical and structural chaos in the heart?,Fibrillation,True,False,False,1,0,0
-4,Which of the following descriptions about piezoelectric devices is incorrect?,A device made up of the junction of two different metals that generates electromotive force (EMF) due to the temperature difference between the two ends,True,True,False,1,1,0
-5,Which of the following devices does not use a piezoelectric sensor?,electrocardiograph,True,False,False,1,0,0

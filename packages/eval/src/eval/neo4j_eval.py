@@ -39,14 +39,12 @@ PRICING = {
     ('GPTXSearchEngine', 'gpt-4.1-mini'): {
         'input': 0.40 / 1e6,
         'cached_input': 0.10 / 1e6,
-        'output': 1.6 / 1e6,
-        'calls': 30. / 1e3
+        'output': 1.6 / 1e6
     },
     ('GPTXSearchEngine', 'gpt-4.1'): {
         'input': 2. / 1e6,
         'cached_input': 0.5 / 1e6,
-        'output': 8. / 1e6,
-        'calls': 50 / 1e3
+        'output': 8. / 1e6
     },
     ('GPTXChatEngine', 'gpt-4o'): {
         'input': 1.2 / 1e6,
@@ -57,6 +55,21 @@ PRICING = {
         'input': 1.1 / 1e6,
         'cached_input': 0.275 / 1e6,
         'output': 4.4 / 1e6
+    },
+    ('GPTXSearchEngine', 'gpt-4.1-nano'): {
+        'input': 0.10 / 1e6,
+        'cached_input': 0.025 / 1e6,
+        'output': 0.40 / 1e6
+    },
+    ('GeminiEngine', 'gemini-2.5-flash'): {
+        'input': 0.15 / 1e6,
+        'cached_input': 0.0375 / 1e6,
+        'output': 0.60 / 1e6
+    },
+    ('GeminiEngine', 'gemini-2.5-pro'): {
+        'input': 1.25 / 1e6,
+        'cached_input': 0.3125 / 1e6,
+        'output': 10.00 / 1e6
     }
 }
 

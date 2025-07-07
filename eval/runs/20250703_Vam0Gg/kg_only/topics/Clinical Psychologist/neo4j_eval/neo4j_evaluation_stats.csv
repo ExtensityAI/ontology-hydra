@@ -1,6 +1,0 @@
-query_idx,question,expected_answer,successful_any_iteration,returned_results_any_iteration,correct_any_iteration,successful_iterations,results_iterations,correct_iterations
-1,Which of the following statements is not the view of human nature in reality therapy?,"According to the choice theory of reality therapy, humans are born as a blank state motivated by some external force.",True,True,False,3,1,0
-2,What is the typical personality trait associated with coronary heart disease based on behavioral medicine?,Type A personality,True,False,False,3,0,0
-3,Which of the following is not the unique role of a clinical psychologist?,Case management,True,True,False,3,1,0
-4,Which of the following is least related to the potential problems of behavioral observation?,Direct association with therapy,True,True,False,3,1,0
-5,Which of the following is NOT a factor that leads to good outcomes in short-term psychotherapy?,Avoidance of the problem,True,True,False,3,1,0
