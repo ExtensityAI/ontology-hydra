@@ -166,10 +166,9 @@ def ontopipe(domain: str, cache_path: Path = Path(tempfile.mkdtemp("ontopipe")))
     cqs = _generate_cqs_with_cache(domain, scope, comittee, cqs_path)
     logger.debug("Generated %d CQs for domain '%s'", len(cqs), domain)
 
-    # use o3-mini for ontology generation
     # TODO make this configurable
-    with DynamicEngine("o4-mini", os.getenv("NEUROSYMBOLIC_ENGINE_API_KEY")):
-        ontology = _generate_ontology_with_cache(domain, cqs, ontology_path, fixed_ontology_path)
+    # with DynamicEngine("o4-mini", os.getenv("NEUROSYMBOLIC_ENGINE_API_KEY")):
+    ontology = _generate_ontology_with_cache(domain, cqs, ontology_path, fixed_ontology_path)
 
     logger.debug(
         "Generated ontology for domain '%s' with %d subclass relations",
