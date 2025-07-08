@@ -11,7 +11,7 @@ from ontopipe.models import (
     OntologyState,
     OWLBuilderInput,
 )
-from ontopipe.ontology.ontology_validation import validate_additions
+from ontopipe.ontology.ontology_validation import try_add_concepts
 from ontopipe.prompts import prompt_registry
 
 logger = logging.getLogger("ontopipe.ontology_generation")
@@ -24,7 +24,9 @@ logger = logging.getLogger("ontopipe.ontology_generation")
     pre_remedy=False,
     post_remedy=True,
     verbose=True,
-    remedy_retry_params=dict(tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False),
+    remedy_retry_params=dict(
+        tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False
+    ),
 )
 class OWLBuilder(Expression):
     def __init__(self, ontology: Ontology, *args, **kwargs):
@@ -54,11 +56,12 @@ class OWLBuilder(Expression):
 
         # TODO we have a problem: currently, we are not checking if there are duplicates in the output itself (i.e. classes, props, etc.)
 
-        is_valid, issues = validate_additions(self._ontology, output.concepts)
+        is_valid, issues, _ = try_add_concepts(self._ontology, output.concepts)
 
         if not is_valid:
             raise ValueError(
-                "Ontology validation failed with the following errors:\n- " + "\n- ".join(map(str, issues))
+                "Ontology validation failed with the following errors:\n- "
+                + "\n- ".join(map(str, issues))
             )
 
         return True
@@ -81,7 +84,13 @@ def generate_ontology(
     fname: str = "ontology.json",
     batch_size: int = 1,
 ) -> Ontology:
-    ontology = Ontology(name=ontology_name, classes=[], subclass_relations=[], object_properties=[], data_properties=[])
+    ontology = Ontology(
+        name=ontology_name,
+        classes=[],
+        subclass_relations=[],
+        object_properties=[],
+        data_properties=[],
+    )
     builder = OWLBuilder(ontology)
 
     usage = None
@@ -90,7 +99,9 @@ def generate_ontology(
     with MetadataTracker() as tracker:  # For gpt-* models
         for i in tqdm(range(0, len(cqs), batch_size)):
             batch_cqs = cqs[i : i + batch_size]
-            input_data = OWLBuilderInput(competency_question=batch_cqs, ontology_state=state)
+            input_data = OWLBuilderInput(
+                competency_question=batch_cqs, ontology_state=state
+            )
             try:
                 new_state = builder(input=input_data)
             except Exception as e:

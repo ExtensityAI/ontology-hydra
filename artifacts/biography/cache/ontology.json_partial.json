@@ -2,137 +2,103 @@
   "name": "A structured representation of individuals' life histories, detailing personal information, educational and career trajectories, significant life events, relationships, and affiliations, each contextualized with temporal and spatial attributes to provide a comprehensive overview of a person's life journey.",
   "classes": [
     {
+      "name": "Entity",
+      "description": "A generic top-level class acting as the absolute root for the ontology hierarchy.",
+      "usage_guideline": null
+    },
+    {
       "name": "Thing",
-      "description": "The most general class of entities in the ontology, serving as the single root of the hierarchy.",
-      "usage_guideline": {
-        "description": "Use as the universal superclass for all ontology classes to ensure a single-root hierarchical structure.",
-        "naming_convention": "PascalCase for classes",
-        "constraints": "All classes must be direct or indirect subclasses of Thing"
-      }
-    },
-    {
-      "name": "PersonLifeEvent",
-      "description": "Represents significant events occurring in an individual's life such as marriage, divorce, childbirth, adoption, health crises, migration, or retirement.",
-      "usage_guideline": {
-        "description": "Use to categorize and model distinct life events associated with a person.",
-        "naming_convention": "PascalCase for classes",
-        "constraints": "Each instance must have a temporal and locational context if available"
-      }
-    },
-    {
-      "name": "GeographicLocation",
-      "description": "Represents a physical place relevant to a person's life events, including residences, workplaces, schools, migration waypoints, and sites of significant events.",
-      "usage_guideline": {
-        "description": "Use to specify locations tied to life events or movements of persons.",
-        "naming_convention": "PascalCase for classes",
-        "constraints": "Should be linked to PersonLifeEvent or Person instances via object properties"
-      }
-    },
-    {
-      "name": "FamilyRelationship",
-      "description": "Represents the type of familial relationship between persons such as parent, child, sibling, spouse, extended, adoptive, step, and chosen family.",
-      "usage_guideline": {
-        "description": "Use to define relationship roles within a family network of persons.",
-        "naming_convention": "PascalCase for classes",
-        "constraints": "Model as either classes or detailed object properties depending on relation complexity"
-      }
-    },
-    {
-      "name": "LifeStatus",
-      "description": "Represents sequential or overlapping statuses or conditions in a person's life that can be temporally bounded and visualized on a timeline.",
-      "usage_guideline": {
-        "description": "Use to model periods or conditions affecting a person's life (e.g., employment status, health conditions).",
-        "naming_convention": "PascalCase for classes",
-        "constraints": "Should be associated with temporal data"
-      }
-    },
-    {
-      "name": "FamilyMember",
-      "description": "Represents a person who is a member of an individual's family network.",
-      "usage_guideline": {
-        "description": "Use for persons related through any familial relationship to the subject person.",
-        "naming_convention": "PascalCase for classes",
-        "constraints": "Linked via FamilyRelationship properties"
-      }
-    },
-    {
-      "name": "MigrationPathway",
-      "description": "Represents a sequence or path of GeographicLocations traversed by a Person during migration.",
-      "usage_guideline": {
-        "description": "Use to model geographic movement patterns of a person over time.",
-        "naming_convention": "PascalCase for classes",
-        "constraints": "Should be linked to Person and ordered sequence of GeographicLocations"
-      }
+      "description": "The most general class representing any entity in the ontology, serving as the root class for all other classes.",
+      "usage_guideline": null
     },
     {
       "name": "Person",
-      "description": "Represents an individual human being with personal, familial, and life event attributes.",
-      "usage_guideline": {
-        "description": "Use as the central class for individuals in the ontology.",
-        "naming_convention": "PascalCase for classes",
-        "constraints": "Serves as domain for personal relations and events"
-      }
+      "description": "An individual human being with a distinct identity.",
+      "usage_guideline": null
     },
     {
-      "name": "UncertaintyRepresentation",
-      "description": "Represents the modeling of uncertainty or incomplete information in a person's life history or events.",
-      "usage_guideline": {
-        "description": "Use to represent cases where life history data is incomplete, disrupted, or uncertain, enabling explicit modeling of unknown or uncertain aspects.",
-        "naming_convention": "PascalCase for classes",
-        "constraints": "Instances should be linked to PersonLifeEvent or other relevant classes to specify uncertain information."
-      }
+      "name": "LifeEvent",
+      "description": "An occurrence with significance in a person's life, such as marriage, childbirth, adoption, health crises, migration, or retirement.",
+      "usage_guideline": null
     },
     {
-      "name": "TemporalOrderingRelation",
-      "description": "Represents a temporal ordering or overlap relationship between two PersonLifeEvents or LifeStatus instances, indicating concurrency or sequence.",
-      "usage_guideline": {
-        "description": "Use to model temporal relationships such as ordering, concurrency, or overlap between life events or statuses in an individual's life history.",
-        "naming_convention": "PascalCase for classes",
-        "constraints": "Connects temporally related event or status instances."
-      }
+      "name": "Location",
+      "description": "A geographic place relevant to a person's life events or statuses.",
+      "usage_guideline": null
     },
     {
-      "name": "UncertaintyRepresentation",
-      "description": "Represents the modeling of uncertainty or incomplete information in a person's life history or events.",
-      "usage_guideline": {
-        "description": "Use to represent cases where life history data is incomplete, disrupted, or uncertain, enabling explicit modeling of unknown or uncertain aspects.",
-        "naming_convention": "PascalCase for classes",
-        "constraints": "Instances should be linked to PersonLifeEvent or other relevant classes to specify uncertain information."
-      }
+      "name": "FamilyRelationship",
+      "description": "A specific type of relationship between persons indicating familial connections including parent, child, sibling, spouse, adoptive, step, extended, and chosen family.",
+      "usage_guideline": null
     },
     {
-      "name": "TemporalOrderingRelation",
-      "description": "Represents a temporal ordering or overlap relationship between two PersonLifeEvents or LifeStatus instances, indicating concurrency or sequence.",
-      "usage_guideline": {
-        "description": "Use to model temporal relationships such as ordering, concurrency, or overlap between life events or statuses in an individual's life history.",
-        "naming_convention": "PascalCase for classes",
-        "constraints": "Connects temporally related event or status instances."
-      }
+      "name": "MigrationPathway",
+      "description": "A sequence of geographic locations representing the movements of a person over time.",
+      "usage_guideline": null
+    },
+    {
+      "name": "Status",
+      "description": "A condition or state experienced or held by a person at a given time, often overlapping with life events.",
+      "usage_guideline": null
+    },
+    {
+      "name": "Timeline",
+      "description": "A conceptual sequence that represents events or statuses in chronological order including ages and corresponding locations.",
+      "usage_guideline": null
+    },
+    {
+      "name": "Residence",
+      "description": "A location where a person has lived or currently lives.",
+      "usage_guideline": null
+    },
+    {
+      "name": "Workplace",
+      "description": "A location where a person works or has worked.",
+      "usage_guideline": null
+    },
+    {
+      "name": "School",
+      "description": "An educational institution or location attended by a person during their life.",
+      "usage_guideline": null
+    },
+    {
+      "name": "TimelineEntry",
+      "description": "An entry in a Timeline representing a specific event or status with time, age, and location information.",
+      "usage_guideline": null
+    },
+    {
+      "name": "Uncertainty",
+      "description": "A conceptual class representing unknown, incomplete, or non-traditional information in a person's life history, including missing or disrupted data.",
+      "usage_guideline": null
+    },
+    {
+      "name": "SocialRelationship",
+      "description": "A type of connection between persons that includes social, chosen, or non-familial relationships beyond biological, adoptive, or step-family ties.",
+      "usage_guideline": null
+    },
+    {
+      "name": "TemporalOverlap",
+      "description": "Represents an overlapping or concurrent temporal relationship between two TimelineEntries or LifeEvents in a person's timeline.",
+      "usage_guideline": null
+    },
+    {
+      "name": "FamilialRelationship",
+      "description": "A subclass of FamilyRelationship specifying different types of biological or legal familial connections including parent, child, sibling, spouse, adoptive, and step family.",
+      "usage_guideline": null
+    },
+    {
+      "name": "ChosenRelationship",
+      "description": "A subclass of SocialRelationship representing relationships chosen or selected by individuals such as close friends or community members recognized as family.",
+      "usage_guideline": null
     }
   ],
   "subclass_relations": [
     {
-      "subclass": "PersonLifeEvent",
-      "superclass": "Thing"
+      "subclass": "Thing",
+      "superclass": "Entity"
     },
     {
-      "subclass": "GeographicLocation",
-      "superclass": "Thing"
-    },
-    {
-      "subclass": "FamilyRelationship",
-      "superclass": "Thing"
-    },
-    {
-      "subclass": "LifeStatus",
-      "superclass": "Thing"
-    },
-    {
-      "subclass": "FamilyMember",
-      "superclass": "Thing"
-    },
-    {
-      "subclass": "MigrationPathway",
+      "subclass": "Entity",
       "superclass": "Thing"
     },
     {
@@ -140,160 +106,110 @@
       "superclass": "Thing"
     },
     {
-      "subclass": "UncertaintyRepresentation",
+      "subclass": "LifeEvent",
       "superclass": "Thing"
     },
     {
-      "subclass": "TemporalOrderingRelation",
+      "subclass": "Location",
       "superclass": "Thing"
     },
     {
-      "subclass": "UncertaintyRepresentation",
+      "subclass": "FamilyRelationship",
       "superclass": "Thing"
     },
     {
-      "subclass": "TemporalOrderingRelation",
+      "subclass": "MigrationPathway",
       "superclass": "Thing"
+    },
+    {
+      "subclass": "Status",
+      "superclass": "Thing"
+    },
+    {
+      "subclass": "Timeline",
+      "superclass": "Thing"
+    },
+    {
+      "subclass": "Residence",
+      "superclass": "Location"
+    },
+    {
+      "subclass": "Workplace",
+      "superclass": "Location"
+    },
+    {
+      "subclass": "School",
+      "superclass": "Location"
+    },
+    {
+      "subclass": "TimelineEntry",
+      "superclass": "Thing"
+    },
+    {
+      "subclass": "Uncertainty",
+      "superclass": "Thing"
+    },
+    {
+      "subclass": "SocialRelationship",
+      "superclass": "FamilyRelationship"
+    },
+    {
+      "subclass": "TemporalOverlap",
+      "superclass": "Thing"
+    },
+    {
+      "subclass": "FamilialRelationship",
+      "superclass": "FamilyRelationship"
+    },
+    {
+      "subclass": "ChosenRelationship",
+      "superclass": "SocialRelationship"
     }
   ],
   "object_properties": [
     {
-      "name": "hasFamilyMember",
-      "description": "Relates a Person to another Person who is a member of their family network.",
+      "name": "hasLifeEvent",
+      "description": "Relates a Person to significant LifeEvents experienced by them.",
       "domain": [
         "Person"
       ],
       "range": [
-        "FamilyMember"
+        "LifeEvent"
+      ],
+      "characteristics": [],
+      "usage_guideline": null
+    },
+    {
+      "name": "occurredAtLocation",
+      "description": "Relates a LifeEvent to the Location where it took place.",
+      "domain": [
+        "LifeEvent"
+      ],
+      "range": [
+        "Location"
+      ],
+      "characteristics": [
+        "functional"
+      ],
+      "usage_guideline": null
+    },
+    {
+      "name": "hasFamilyRelationship",
+      "description": "Relates a Person to another Person describing their familial relationship type.",
+      "domain": [
+        "Person"
+      ],
+      "range": [
+        "Person"
       ],
       "characteristics": [
         "asymmetric"
       ],
-      "usage_guideline": {
-        "description": "Use to connect persons with their family members; asymmetric because family relation directions are not bidirectional for this property conceptually.",
-        "naming_convention": "camelCase starting with 'has'",
-        "constraints": "Domain is Person; Range is FamilyMember"
-      }
-    },
-    {
-      "name": "hasFamilyRelationship",
-      "description": "Relates two Persons with a specific type of familial relationship.",
-      "domain": [
-        "Person"
-      ],
-      "range": [
-        "FamilyRelationship"
-      ],
-      "characteristics": [
-        "functional"
-      ],
-      "usage_guideline": {
-        "description": "Use to specify the nature of family ties between individuals.",
-        "naming_convention": "camelCase starting with 'has'",
-        "constraints": "Assumes each pair has at most one primary family relationship type"
-      }
-    },
-    {
-      "name": "hasLifeEvent",
-      "description": "Relates a Person to a PersonLifeEvent they experienced.",
-      "domain": [
-        "Person"
-      ],
-      "range": [
-        "PersonLifeEvent"
-      ],
-      "characteristics": [],
-      "usage_guideline": {
-        "description": "Use to associate persons with their life events.",
-        "naming_convention": "camelCase starting with 'has'",
-        "constraints": "Multiple life events possible per person"
-      }
-    },
-    {
-      "name": "occurredAtLocation",
-      "description": "Relates a PersonLifeEvent to the GeographicLocation where it occurred.",
-      "domain": [
-        "PersonLifeEvent"
-      ],
-      "range": [
-        "GeographicLocation"
-      ],
-      "characteristics": [
-        "functional"
-      ],
-      "usage_guideline": {
-        "description": "Use to link life events to their locations; functional assuming one primary location per event.",
-        "naming_convention": "camelCase starting with verb",
-        "constraints": "Domain is PersonLifeEvent, Range is GeographicLocation"
-      }
-    },
-    {
-      "name": "hasLifeStatus",
-      "description": "Relates a Person to a LifeStatus describing a temporal condition or state.",
-      "domain": [
-        "Person"
-      ],
-      "range": [
-        "LifeStatus"
-      ],
-      "characteristics": [],
-      "usage_guideline": {
-        "description": "Use to represent statuses or conditions experienced by a person over time.",
-        "naming_convention": "camelCase starting with 'has'",
-        "constraints": "Multiple statuses may apply and overlap temporally"
-      }
-    },
-    {
-      "name": "livedAtLocation",
-      "description": "Relates a Person to a GeographicLocation representing a place of residence during a time period.",
-      "domain": [
-        "Person"
-      ],
-      "range": [
-        "GeographicLocation"
-      ],
-      "characteristics": [],
-      "usage_guideline": {
-        "description": "Use to link persons to places they resided; temporal qualifiers handled via additional properties or related classes.",
-        "naming_convention": "camelCase starting with verb",
-        "constraints": "Multiple residences possible; not necessarily functional"
-      }
-    },
-    {
-      "name": "workedAtLocation",
-      "description": "Relates a Person to a GeographicLocation representing a workplace.",
-      "domain": [
-        "Person"
-      ],
-      "range": [
-        "GeographicLocation"
-      ],
-      "characteristics": [],
-      "usage_guideline": {
-        "description": "Use to link persons to their places of employment.",
-        "naming_convention": "camelCase starting with verb",
-        "constraints": "Multiple workplaces possible"
-      }
-    },
-    {
-      "name": "studiedAtLocation",
-      "description": "Relates a Person to a GeographicLocation representing an educational institution attended.",
-      "domain": [
-        "Person"
-      ],
-      "range": [
-        "GeographicLocation"
-      ],
-      "characteristics": [],
-      "usage_guideline": {
-        "description": "Use to link persons to schools or educational locations.",
-        "naming_convention": "camelCase starting with verb",
-        "constraints": "Multiple schools possible"
-      }
+      "usage_guideline": null
     },
     {
       "name": "hasMigrationPathway",
-      "description": "Relates a Person to their MigrationPathway representing geographic movements over time.",
+      "description": "Relates a Person to their MigrationPathway representing their geographic movements over time.",
       "domain": [
         "Person"
       ],
@@ -303,135 +219,203 @@
       "characteristics": [
         "functional"
       ],
-      "usage_guideline": {
-        "description": "Use to link a person with a single migration pathway summarizing geographic movement.",
-        "naming_convention": "camelCase starting with 'has'",
-        "constraints": "Assumes one primary migration pathway per person"
-      }
+      "usage_guideline": null
     },
     {
-      "name": "hasUncertainty",
-      "description": "Relates an entity such as a PersonLifeEvent or LifeStatus to its UncertaintyRepresentation describing uncertainty or incompleteness of information.",
+      "name": "includesLocation",
+      "description": "Relates a MigrationPathway to the Locations that form part of the movement sequence.",
       "domain": [
-        "PersonLifeEvent",
-        "LifeStatus"
+        "MigrationPathway"
       ],
       "range": [
-        "UncertaintyRepresentation"
+        "Location"
       ],
       "characteristics": [],
-      "usage_guideline": {
-        "description": "Use to associate life events or statuses with their uncertainty representations when data is incomplete or disrupted.",
-        "naming_convention": "camelCase starting with 'has'",
-        "constraints": "Multiple uncertainties may apply; domain includes events or statuses where uncertainty can be relevant."
-      }
+      "usage_guideline": null
     },
     {
-      "name": "hasTemporalOrderingRelation",
-      "description": "Relates a PersonLifeEvent or LifeStatus to another temporally related PersonLifeEvent or LifeStatus describing their temporal ordering or overlap.",
+      "name": "hasStatus",
+      "description": "Relates a Person to a Status they hold or have held.",
       "domain": [
-        "PersonLifeEvent",
-        "LifeStatus"
+        "Person"
       ],
       "range": [
-        "TemporalOrderingRelation"
+        "Status"
+      ],
+      "characteristics": [],
+      "usage_guideline": null
+    },
+    {
+      "name": "hasLocation",
+      "description": "Relates a Status or LifeEvent to its associated Location.",
+      "domain": [
+        "Status",
+        "LifeEvent"
+      ],
+      "range": [
+        "Location"
       ],
       "characteristics": [
         "functional"
       ],
-      "usage_guideline": {
-        "description": "Use to link an event or status to a temporal ordering relation indicating overlap or sequencing with other events or statuses.",
-        "naming_convention": "camelCase starting with 'has'",
-        "constraints": "Functional property assuming one primary temporal ordering relation per event or status."
-      }
+      "usage_guideline": null
     },
     {
-      "name": "relatesToEventOrStatus",
-      "description": "Relates a TemporalOrderingRelation to a PersonLifeEvent or LifeStatus that it orders or relates temporally.",
+      "name": "hasTimeline",
+      "description": "Relates a Person to their Timeline of events and statuses including ages and locations.",
       "domain": [
-        "TemporalOrderingRelation"
+        "Person"
       ],
       "range": [
-        "PersonLifeEvent",
-        "LifeStatus"
-      ],
-      "characteristics": [],
-      "usage_guideline": {
-        "description": "Use to specify the events or statuses involved in a TemporalOrderingRelation.",
-        "naming_convention": "camelCase starting with verb",
-        "constraints": "Typically links two distinct events or statuses to describe temporal ordering or overlap."
-      }
-    },
-    {
-      "name": "hasUncertainty",
-      "description": "Relates an entity such as a PersonLifeEvent or LifeStatus to its UncertaintyRepresentation describing uncertainty or incompleteness of information.",
-      "domain": [
-        "PersonLifeEvent",
-        "LifeStatus"
-      ],
-      "range": [
-        "UncertaintyRepresentation"
-      ],
-      "characteristics": [],
-      "usage_guideline": {
-        "description": "Use to associate life events or statuses with their uncertainty representations when data is incomplete or disrupted.",
-        "naming_convention": "camelCase starting with 'has'",
-        "constraints": "Multiple uncertainties may apply; domain includes events or statuses where uncertainty can be relevant."
-      }
-    },
-    {
-      "name": "hasTemporalOrderingRelation",
-      "description": "Relates a PersonLifeEvent or LifeStatus to another temporally related PersonLifeEvent or LifeStatus describing their temporal ordering or overlap.",
-      "domain": [
-        "PersonLifeEvent",
-        "LifeStatus"
-      ],
-      "range": [
-        "TemporalOrderingRelation"
+        "Timeline"
       ],
       "characteristics": [
         "functional"
       ],
-      "usage_guideline": {
-        "description": "Use to link an event or status to a temporal ordering relation indicating overlap or sequencing with other events or statuses.",
-        "naming_convention": "camelCase starting with 'has'",
-        "constraints": "Functional property assuming one primary temporal ordering relation per event or status."
-      }
+      "usage_guideline": null
     },
     {
-      "name": "relatesToEventOrStatus",
-      "description": "Relates a TemporalOrderingRelation to a PersonLifeEvent or LifeStatus that it orders or relates temporally.",
+      "name": "hasTimelineEntry",
+      "description": "Relates a Timeline to its constituent TimelineEntries describing events or statuses sequentially.",
       "domain": [
-        "TemporalOrderingRelation"
+        "Timeline"
       ],
       "range": [
-        "PersonLifeEvent",
-        "LifeStatus"
+        "TimelineEntry"
       ],
       "characteristics": [],
-      "usage_guideline": {
-        "description": "Use to specify the events or statuses involved in a TemporalOrderingRelation.",
-        "naming_convention": "camelCase starting with verb",
-        "constraints": "Typically links two distinct events or statuses to describe temporal ordering or overlap."
-      }
+      "usage_guideline": null
+    },
+    {
+      "name": "representsLifeEvent",
+      "description": "Relates a TimelineEntry to the LifeEvent it represents.",
+      "domain": [
+        "TimelineEntry"
+      ],
+      "range": [
+        "LifeEvent"
+      ],
+      "characteristics": [
+        "functional"
+      ],
+      "usage_guideline": null
+    },
+    {
+      "name": "representsStatus",
+      "description": "Relates a TimelineEntry to the Status it represents.",
+      "domain": [
+        "TimelineEntry"
+      ],
+      "range": [
+        "Status"
+      ],
+      "characteristics": [
+        "functional"
+      ],
+      "usage_guideline": null
+    },
+    {
+      "name": "hasUncertainty",
+      "description": "Relates instances of LifeEvent, Status, or TimelineEntry to Uncertainty representing incomplete or disrupted information about that event, status, or timeline entry.",
+      "domain": [
+        "LifeEvent",
+        "Status",
+        "TimelineEntry"
+      ],
+      "range": [
+        "Uncertainty"
+      ],
+      "characteristics": [],
+      "usage_guideline": null
+    },
+    {
+      "name": "hasSocialRelationship",
+      "description": "Relates a Person to another Person describing their social or chosen relationships not covered by formal FamilyRelationship.",
+      "domain": [
+        "Person"
+      ],
+      "range": [
+        "Person"
+      ],
+      "characteristics": [
+        "asymmetric"
+      ],
+      "usage_guideline": null
+    },
+    {
+      "name": "hasTemporalOverlapWith",
+      "description": "Relates a TimelineEntry or LifeEvent to another TimelineEntry or LifeEvent that overlaps or is concurrent in time, modeling simultaneous or overlapping periods.",
+      "domain": [
+        "TimelineEntry",
+        "LifeEvent"
+      ],
+      "range": [
+        "TimelineEntry",
+        "LifeEvent"
+      ],
+      "characteristics": [
+        "symmetric",
+        "irreflexive"
+      ],
+      "usage_guideline": null
+    },
+    {
+      "name": "hasTemporalOrderAfter",
+      "description": "Relates a TimelineEntry or LifeEvent to another TimelineEntry or LifeEvent that occurs immediately after it in temporal sequence, defining temporal ordering of life events or statuses.",
+      "domain": [
+        "TimelineEntry",
+        "LifeEvent"
+      ],
+      "range": [
+        "TimelineEntry",
+        "LifeEvent"
+      ],
+      "characteristics": [
+        "asymmetric",
+        "irreflexive",
+        "transitive"
+      ],
+      "usage_guideline": null
     }
   ],
   "data_properties": [
     {
       "name": "occurredOnDate",
-      "description": "Specifies the date or date range when a PersonLifeEvent occurred.",
+      "description": "Specifies the date when a LifeEvent occurred.",
       "domain": [
-        "PersonLifeEvent"
+        "LifeEvent"
       ],
       "range": "xsd:date",
       "characteristics": [
         "functional"
       ],
-      "usage_guideline": {
-        "description": "Use data property to record the date of a life event; consider date ranges by multiple events or statuses.",
-        "naming_convention": "camelCase starting with verb",
-        "constraints": "Functional as only one primary date per event is recorded"
-      }
+      "usage_guideline": null
+    },
+    {
+      "name": "hasAgeAtEvent",
+      "description": "Specifies the age of a Person at the time of a TimelineEntry event or status.",
+      "domain": [
+        "TimelineEntry"
+      ],
+      "range": "xsd:integer",
+      "characteristics": [
+        "functional"
+      ],
+      "usage_guideline": null
+    },
+    {
+      "name": "hasDocumentationStatus",
+      "description": "Specifies the degree or quality of documentation available for data about a LifeEvent, Status, or TimelineEntry, e.g., complete, partial, uncertain.",
+      "domain": [
+        "LifeEvent",
+        "Status",
+        "TimelineEntry"
+      ],
+      "range": "xsd:string",
+      "characteristics": [
+        "functional"
+      ],
+      "usage_guideline": null
     }
   ]
 }

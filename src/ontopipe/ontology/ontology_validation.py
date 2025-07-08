@@ -1,291 +1,217 @@
 from dataclasses import dataclass
 
-from ontopipe.models import Class, Concept, DataProperty, ObjectProperty, Ontology, SubClassRelation
+from ontopipe.models import (
+    Class,
+    Concept,
+    DataProperty,
+    ObjectProperty,
+    Ontology,
+    SubClassRelation,
+)
 
 
 @dataclass(frozen=True, slots=True)
 class Issue:
     code: str
-    concept: Concept | None
+    path: str
     message: str
+    context: str | None = None
     hint: str | None = None
 
-    def _get_concept_name(self) -> str:
-        if self.concept is None:
-            return ""
-
-        if not isinstance(self.concept, SubClassRelation):
-            return f"{self.concept.__class__.__name__} '{self.concept.name}'"
-
-        return f"SubClassRelation from '{self.concept.subclass}' to '{self.concept.superclass}'"
-
     def __str__(self) -> str:
-        return f"{self._get_concept_name()}: {self.message}" + (f" (Hint: {self.hint})" if self.hint else "")
+        return f"[{self.path}] {self.message}{f' (context: {self.context})' if self.context else ''}{f' (hint: {self.hint})' if self.hint else ''}"
 
 
-def _validate_class(ontology: Ontology, cls: Class, new_classes: set[str]):
-    # check if class already exists
-    if existing_class := ontology.get_class(cls.name):
-        return Issue(
-            code="class_already_exists",
-            concept=cls,
-            message=f"Class '{cls.name}' already exists in the ontology.",
-            hint=f"Please ensure unique class names. Existing class: <value>{existing_class.model_dump_json()}</value>",
-        )
-    if cls.name[0] == cls.name[0].lower():
-        return Issue(
-            code="class_name_lowercase",
-            concept=cls,
-            message=f"Class name '{cls.name}' should start with an uppercase letter. Are you trying to define a class or a relationship?",
-        )
+def _try_add_classes(ontology: Ontology, classes: list[Class]):
+    for cls in classes:
+        if existing_class := ontology.get_class(cls.name):
+            # ensure class does not yet exist
+            yield Issue(
+                code="class_already_exists",
+                path=f"class:{cls.name}",
+                message=f"Class '{cls.name}' already exists in the ontology",
+                context=f"Existing class is '{existing_class.name}'",
+                hint="Choose a different name or if it is a this duplicate class definition, omit it.",
+            )
+            continue
+
+        if cls.name[0].lower() == cls.name[0]:
+            # ensure class name starts uppercase
+            yield Issue(
+                code="class_name_not_uppercase",
+                path=cls.name,
+                message=f"Class name '{cls.name}' must start with an uppercase letter.",
+                hint="Rename the class to start with an uppercase letter.",
+            )
+            continue
+
+        ontology.classes.append(cls)
 
 
-def _validate_subclass_relation(ontology: Ontology, relation: SubClassRelation, new_classes: set[str]):
-    # check if subclass and superclass exist
-    if not ontology.get_class(relation.subclass) and relation.subclass not in new_classes:
-        return Issue(
-            code="subclass_not_found",
-            concept=relation,
-            message=f"Subclass {relation.subclass} does not exist in the ontology.",
-        )
+def _try_add_subclass_relations(
+    ontology: Ontology, classes: list[Class], rels: list[SubClassRelation]
+):
+    all_superclasses = ontology.superclasses
 
-    if not ontology.get_class(relation.superclass) and relation.superclass not in new_classes:
-        return Issue(
-            code="superclass_not_found",
-            concept=relation,
-            message=f"Superclass {relation.superclass} does not exist in the ontology.",
-        )
+    for rel in rels:
+        path = f"relation:{rel.subclass}->{rel.superclass}"
+        if not ontology.get_class(rel.subclass):
+            # ensure subclass exists
+            yield Issue(
+                code="subclass_not_found",
+                path=path,
+                message=f"Subclass '{rel.subclass}' not found in ontology",
+                context=None,
+                hint="Define this class before creating the subclass relation",
+            )
+            continue
 
-    # check if prospective subclass is already defined as a subclass
-    if (superclass := ontology.get_superclass(relation.subclass)) is not None:
-        return Issue(
-            code="subclass_already_defined",
-            concept=relation,
-            message=f"Subclass '{relation.subclass}' is already defined as a subclass of '{superclass}'. Please ensure that each subclass has only one direct superclass.",
-        )
+        if not ontology.get_class(rel.superclass):
+            # ensure superclass exists
+            yield Issue(
+                code="superclass_not_found",
+                path=path,
+                message=f"Superclass '{rel.superclass}' not found in ontology",
+                context=None,
+                hint="Define this class before creating the subclass relation",
+            )
+            continue
 
-    # TODO allow type narrowing for subclasses, i.e. a more specific superclass than currently assigned is allowed.
-
-
-def _validate_object_property(ontology: Ontology, prop: ObjectProperty, new_classes: set[str]):
-    # check if object property already exists
-    if existing_prop := ontology.get_property(prop.name):
-        return Issue(
-            code="object_property_already_exists",
-            concept=prop,
-            message=f"Property '{prop.name}' already exists in the ontology.",
-            hint=f"Please ensure unique object property names. Existing property: <value>{existing_prop.model_dump_json()}</value>",
-        )
-
-    # check if domains and ranges are valid classes
-    for domain in prop.domain:
-        if not ontology.get_class(domain) and domain not in new_classes:
-            return Issue(
-                code="domain_class_not_found",
-                concept=prop,
-                message=f"Domain class '{domain}' of object property '{prop.name}' does not exist.",
+        if sc := ontology.get_superclass(rel.subclass):
+            # ensure subclass does not already have a superclass
+            # TODO allow specification (i.e. a more specific superclass)
+            yield Issue(
+                code="subclass_already_has_superclass",
+                path=path,
+                message=f"'{rel.subclass}' already has superclass '{sc}'",
+                context=None,
+                hint="Remove this relation or replace the existing one if this is more specific",
             )
 
-    for range in prop.range:
-        if not ontology.get_class(range) and range not in new_classes:
-            return Issue(
-                code="range_class_not_found",
-                concept=prop,
-                message=f"Range class '{range}' of object property '{prop.name}' does not exist.",
+        # ensure no cycles
+        su_superclasses = all_superclasses[rel.superclass]
+        sc_superclasses = all_superclasses[rel.subclass]
+
+        if any(sc in su_superclasses for sc in sc_superclasses):
+            yield Issue(
+                code="circular_subclass_relation",
+                path=path,
+                message="Circular hierarchy detected",
+                context=f"'{rel.superclass}' is already a subclass of '{rel.subclass}' (directly or indirectly)",
+                hint="Remove this relation or restructure the hierarchy",
             )
+            continue
 
-    if len(prop.range) == 0:
-        return Issue(
-            code="object_property_range_not_defined",
-            concept=prop,
-            message=f"Object property '{prop.name}' must have at least one range class defined. Please add a range class or remove the property.",
-        )
+        ontology.subclass_relations.append(rel)
 
-    if len(prop.domain) == 0:
-        return Issue(
-            code="object_property_domain_not_defined",
-            concept=prop,
-            message=f"Object property '{prop.name}' must have at least one domain class defined. Please add a domain class or remove the property.",
-        )
+    # TODO we should omit classes from the bottom check if the subclass relation validation failed for them
 
+    root = ontology.root
+    has_root = root is not None
 
-def _validate_data_property(ontology: Ontology, prop: DataProperty, new_classes: set[str]):
-    # check if data property already exists
-    if existing_prop := ontology.get_property(prop.name):
-        return Issue(
-            code="data_property_already_exists",
-            concept=prop,
-            message=f"Property '{prop.name}' already exists in the ontology.",
-            hint=f"Please ensure unique data property names. Existing property: <value>{existing_prop.model_dump_json()}</value>",
-        )
+    if root and any(cls.name == root.name for cls in classes):
+        # if the root class is one of the classes we have just defined, we do not assume that we have a root yet!
+        root = None
+        has_root = False
 
-    if len(prop.domain) == 0:
-        return Issue(
-            code="data_property_domain_not_defined",
-            concept=prop,
-            message=f"Data property '{prop.name}' must have at least one domain class defined. Please add a domain class or remove the property.",
-        )
+    classes_without_superclass = []
 
-    # check if domains are valid classes
-    for domain in prop.domain:
-        if not ontology.get_class(domain) and domain not in new_classes:
-            return Issue(
-                code="domain_class_not_found",
-                concept=prop,
-                message=f"Domain class '{domain}' of data property '{prop.name}' does not exist. Either define the class or remove it from the domain.",
-            )
-
-
-_VALIDATORS = {
-    Class: _validate_class,
-    SubClassRelation: _validate_subclass_relation,
-    ObjectProperty: _validate_object_property,
-    DataProperty: _validate_data_property,
-}
-
-
-def _check_for_duplicates(concepts: list[Concept]):
-    names = set()
-
-    for concept in (concept for concept in concepts if not isinstance(concept, SubClassRelation)):
-        # check if we have any duplicate names
-        if concept.name in names:
-            # TODO print both values?
-            return Issue(
-                code="duplicate_concept",
-                concept=concept,
-                message=f"Duplicate concept found: {concept.name}. Please ensure all concepts have unique names.",
-            )
-        names.add(concept.name)
-
-    subclasses = set()
-    for relation in (concept for concept in concepts if isinstance(concept, SubClassRelation)):
-        # check if we have any duplicate subclass relations
-        if relation.subclass in subclasses:
-            return Issue(
-                code="duplicate_subclass_relation",
-                concept=relation,
-                message=f"Duplicate subclass relation found: {relation.subclass} is already defined as a subclass. Please ensure each subclass has only one direct superclass.",
-            )
-
-        subclasses.add(relation.subclass)
-
-
-def _build_graph(ontology: Ontology, additions: list[Concept]):
-    """Return (adjacency, all_classes, new_classes)."""
-    adjacency: dict[str, set[str]] = {c.name: set() for c in ontology.classes}
-    all_classes: set[str] = set(adjacency)
-    new_classes: set[str] = set()
-
-    # merge in new classes
-    for c in (x for x in additions if isinstance(x, Class)):
-        all_classes.add(c.name)
-        new_classes.add(c.name)
-        adjacency.setdefault(c.name, set())
-
-    # existing relations
-    for r in ontology.subclass_relations:
-        adjacency.setdefault(r.superclass, set()).add(r.subclass)
-
-    # additions relations
-    for r in (x for x in additions if isinstance(x, SubClassRelation)):
-        adjacency.setdefault(r.superclass, set()).add(r.subclass)
-
-    return adjacency, all_classes, new_classes
-
-
-def _find_roots(adjacency: dict[str, set[str]]) -> set[str]:
-    children = {child for kids in adjacency.values() for child in kids}
-    return set(adjacency) - children
-
-
-def validate_additions(ontology: Ontology, concepts: list[Concept]):
-    """Validate that the concepts can be added to the ontology without conflicts.
-
-    Args:
-        ontology (Ontology): The ontology to validate against.
-        concepts (list[Concept]): The concepts to validate.
-
-    Returns:
-        tuple[bool, list[str]]: A tuple containing a boolean indicating if the validation passed and a list of issues found."""
-
-    issues = []
-
-    if issue := _check_for_duplicates(concepts):
-        issues.append(issue)
-
-    # ensure that the ontology is well-formed (tree structure)
-    adj, all_classes, new_classes = _build_graph(ontology, concepts)
-
-    for concept in concepts:
-        validator = _VALIDATORS.get(type(concept))
-
-        if issue := validator(ontology, concept, new_classes):
-            issues.append(issue)
-
-    has_top_level_class = ontology.get_top_level_class() is not None
-
-    # ensure all new classes have a subclass relation
-    subclasses_in_rel = {r.subclass for r in concepts if isinstance(r, SubClassRelation)}
-    for cls in new_classes:
-        if cls not in subclasses_in_rel:
-            if has_top_level_class:
-                issues.append(
-                    Issue(
-                        code="missing_subclass_relation",
-                        concept=None,
-                        message=f"Class '{cls}' is defined but has no SubClassRelation.",
-                        hint="Add exactly one SubClassRelation or delete the class.",
-                    )
+    # ensure all classes have subclass relations
+    for cls in classes:
+        if not ontology.get_superclass(cls.name):
+            if has_root:
+                # if the class has no superclass and there is a root, it should be a subclass of some class
+                yield Issue(
+                    code="superclass_not_found",
+                    path=f"class:{cls.name}",
+                    message=f"Class '{cls.name}' has no superclass",
+                    hint=f"Add a subclass relation for '{cls.name}' to place it in the hierarchy",
                 )
+                continue
 
-            has_top_level_class = True
+            # if we do not have a root yet, and there is just one class without a superclass, then that will be the root and this is not an issue. However, we need to collect them in case more than one have no root, which would be invalid again.
+            classes_without_superclass.append(cls)
 
-    roots = _find_roots(adj)
-    if len(roots) != 1:
-        # we have no root or multiple roots
-        issues.append(
-            Issue(
-                code="multiple_roots" if roots else "no_root",
-                concept=None,
-                message=f"Expected exactly one root, found {len(roots)}: {', '.join(roots) or '∅'}.",
-                hint="Ensure there is a single top-level class with no superclass.",
-            )
+    if len(classes_without_superclass) > 1:
+        yield Issue(
+            code="multiple_classes_without_superclass",
+            path="hierarchy",
+            message="Multiple top-level classes detected",
+            context=f"Classes without superclass are {', '.join(f"'{cls.name}'" for cls in classes_without_superclass)}",
+            hint="It is recommended to create a new (general) top-level class that is general enough s.t. all classes can inherit from it. All classes but the top-level one must have a superclass, thus you need to define a subclass relation for each of them.",
         )
-    else:
-        # ensure we have no cycles
-        root = next(iter(roots))
-        visited, stack = set(), [root]
-        parent = {}
-        while stack:
-            node = stack.pop()
-            if node in visited:
-                # back-edge ⇒ cycle
-                loop = f"{node} → {parent[node]}"
-                issues.append(
-                    Issue(
-                        code="cycle_detected",
-                        concept=None,
-                        message=f"Cycle detected starting at '{node}'.",
-                        hint=f"Break the loop at '{loop}'.",
-                    )
-                )
-                break
-            visited.add(node)
-            for child in adj.get(node, ()):
-                parent[child] = node
-                stack.append(child)
 
-        # ensure we have no disconnected classes
-        missing = all_classes - visited
-        if missing:
-            issues.append(
-                Issue(
-                    code="disconnected_classes",
-                    concept=None,
-                    message=f"{len(missing)} class(es) are not reachable from root '{root}'.",
-                    hint=f"Link {' ,'.join(list(missing)[:3])}… to the tree.",
-                )
+
+def _try_add_properties(ontology: Ontology, props: list[DataProperty | ObjectProperty]):
+    for prop in props:
+        path = f"property:{prop.name}"
+        if existing_prop := ontology.get_property(prop.name):
+            # ensure property does not yet exist
+            yield Issue(
+                code="property_already_exists",
+                path=path,
+                message=f"Property '{prop.name}' already exists",
+                context=f"Existing property is '{existing_prop.name}'",
+                hint="Choose a different name or remove this duplicate property",
             )
+            continue
 
-    return len(issues) == 0, issues
+        # ensure all domain classes exist (applies to both data and object properties)
+        invalid_domains = [
+            domain for domain in prop.domain if not ontology.get_class(domain)
+        ]
+        if invalid_domains:
+            yield Issue(
+                code="domain_classes_not_found",
+                path=path,
+                message=f"Domain classes not found for property '{prop.name}'",
+                context=f"Missing classes are {', '.join(f"'{domain}'" for domain in invalid_domains)}",
+                hint="Define these classes first or remove them from the domain",
+            )
+            continue
+
+        if isinstance(prop, ObjectProperty):
+            # ensure all range classes exist
+            invalid_ranges = [
+                range_ for range_ in prop.range if not ontology.get_class(range_)
+            ]
+
+            if invalid_ranges:
+                yield Issue(
+                    code="range_classes_not_found",
+                    path=path,
+                    message=f"Range classes not found for property '{prop.name}'",
+                    context=f"Missing classes are {', '.join(f"'{range_}'" for range_ in invalid_ranges)}",
+                    hint="Define these classes first or remove them from the range",
+                )
+                continue
+
+            ontology.object_properties.append(prop)
+        elif isinstance(prop, DataProperty):
+            # TODO validate data type of range
+            ontology.data_properties.append(prop)
+
+
+def try_add_concepts(ontology: Ontology, concepts: list[Concept]):
+    """Try to add concepts to the ontology, returning any issues found."""
+
+    ontology = ontology.clone()
+
+    issues = list[Issue]()
+
+    classes = [c for c in concepts if isinstance(c, Class)]
+    subclass_rels = [c for c in concepts if isinstance(c, SubClassRelation)]
+    props = [c for c in concepts if isinstance(c, (DataProperty, ObjectProperty))]
+
+    issues += _try_add_classes(ontology, classes)
+
+    if issues:
+        # TODO should we actually stop here if there was an issue with class defs?
+        return False, issues, None
+
+    issues += _try_add_subclass_relations(ontology, classes, subclass_rels)
+
+    issues += _try_add_properties(ontology, props)
+
+    is_valid = len(issues) == 0
+    return is_valid, issues, ontology if is_valid else None
