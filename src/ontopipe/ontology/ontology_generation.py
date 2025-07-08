@@ -7,14 +7,11 @@ from symai.strategy import contract
 from tqdm import tqdm
 
 from ontopipe.models import (
-    Class,
-    DataProperty,
-    ObjectProperty,
     Ontology,
     OntologyState,
     OWLBuilderInput,
-    SubClassRelation,
 )
+from ontopipe.ontology.ontology_validation import validate_additions
 from ontopipe.prompts import prompt_registry
 
 logger = logging.getLogger("ontopipe.ontology_generation")
@@ -57,98 +54,12 @@ class OWLBuilder(Expression):
 
         # TODO we have a problem: currently, we are not checking if there are duplicates in the output itself (i.e. classes, props, etc.)
 
-        temp = Ontology(
-            name="temp",
-            classes=[],
-            subclass_relations=[],
-            object_properties=[],
-            data_properties=[],
-        )
+        is_valid, issues = validate_additions(self._ontology, output.concepts)
 
-        temp.extend(output.concepts)
-
-        errors = []
-
-        all_superclasses = self._ontology.superclasses
-
-        for concept in output.concepts:
-            if isinstance(concept, Class):
-                # check if class already exists
-                if self._ontology.has_class(concept.name):
-                    errors.append(
-                        f"Class '{concept.name}' already exists in the ontology. Please ensure unique class names."
-                    )
-
-                    continue
-
-                if concept.name[0] == concept.name[0].lower():
-                    errors.append(
-                        f"Class name '{concept.name}' should start with an uppercase letter. Are you trying to define a class or a relationship?"
-                    )
-
-            elif isinstance(concept, SubClassRelation):
-                # check if subclass and superclass exist
-                if not self._ontology.has_class(concept.subclass) and not temp.has_class(concept.subclass):
-                    errors.append(f"Subclass {concept.subclass} does not exist in the ontology.")
-                    continue
-
-                if not self._ontology.has_class(concept.superclass) and not temp.has_class(concept.superclass):
-                    errors.append(f"Superclass {concept.superclass} does not exist in the ontology.")
-                    continue
-
-                # check if prospective subclass is already defined as a subclass
-                if (superclass := self._ontology.get_superclass_of(concept.subclass)) is not None:
-                    errors.append(
-                        f"Subclass '{concept.subclass}' is already defined as a subclass of '{superclass}'. Please ensure that each subclass has only one direct superclass."
-                    )
-
-                    continue
-
-                # ensure no circular subclass relations
-                su_superclasses = all_superclasses[concept.superclass]
-                sc_superclasses = all_superclasses[concept.subclass]
-
-                if any(sc in su_superclasses for sc in sc_superclasses):
-                    errors.append(
-                        f"Circular subclass relation detected: '{concept.subclass}' cannot be a subclass of '{concept.superclass}' as it is already a superclass of one of its subclasses."
-                    )
-                    continue
-
-            elif isinstance(concept, ObjectProperty):
-                # check if object property already exists
-                if self._ontology.has_property(concept.name):
-                    errors.append(
-                        f"Property '{concept.name}' already exists in the ontology. Please ensure unique object property names."
-                    )
-                    continue
-
-                # check if domains and ranges are valid classes
-                for domain in concept.domain:
-                    if not self._ontology.has_class(domain) and not temp.has_class(domain):
-                        errors.append(f"Domain class '{domain}' of object property '{concept.name}' does not exist.")
-                        continue
-
-                for range in concept.range:
-                    if not self._ontology.has_class(range) and not temp.has_class(range):
-                        errors.append(f"Range class '{range}' of object property '{concept.name}' does not exist.")
-                        continue
-
-            elif isinstance(concept, DataProperty):
-                # check if data property already exists
-                if self._ontology.has_property(concept.name):
-                    errors.append(
-                        f"Property '{concept.name}' already exists in the ontology. Please ensure unique data property names."
-                    )
-                    continue
-
-                # check if domains are valid classes
-                for domain in concept.domain:
-                    if not self._ontology.has_class(domain) and not temp.has_class(domain):
-                        errors.append(f"Domain class '{domain}' of data property '{concept.name}' does not exist.")
-                        continue
-
-        if errors:
-            raise ValueError("Ontology validation failed with the following errors:\n- " + "\n- ".join(errors))
+        if not is_valid:
+            raise ValueError(
+                "Ontology validation failed with the following errors:\n- " + "\n- ".join(map(str, issues))
+            )
 
         return True
 

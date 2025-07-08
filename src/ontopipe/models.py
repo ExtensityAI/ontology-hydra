@@ -35,6 +35,10 @@ class UsageGuideline(LLMDataModel):
     """Represents usage guidelines for ontology elements."""
 
     description: str | None = Field(default=None, description="Textual description of how to use this element.")
+    naming_convention: str | None = Field(
+        default=None,
+        description="Naming convention to follow when using this element (always snake_case, but what elements/...?)",
+    )
     constraints: str | None = Field(
         default=None, description="Constraints or rules that must be followed when using this element."
     )
@@ -120,6 +124,9 @@ class OWLBuilderInput(LLMDataModel):
     )
 
 
+Concept = Class | SubClassRelation | ObjectProperty | DataProperty
+
+
 class Ontology(LLMDataModel):
     name: str = Field(description="Name of the ontology (without namespace).")
     classes: list[Class] = Field(description="List of classes in the ontology.")
@@ -131,17 +138,18 @@ class Ontology(LLMDataModel):
     def from_json_file(cls, path: Path | str):
         return cls.model_validate_json(Path(path).read_text())
 
-    def has_class(self, class_name: str):
-        """Check if the ontology contains a class with the given name."""
-        return any(class_name.lower() == cls.name.lower() for cls in self.classes)
-
-    def has_property(self, property_name: str):
-        """Check if the ontology contains a property with the given name."""
-        return any(property_name == prop.name for prop in self.object_properties) or any(
-            property_name == prop.name for prop in self.data_properties
+    def get_top_level_class(self):
+        # return the tl class that has no superclass relations
+        return next(
+            (
+                cls
+                for cls in self.classes
+                if not any(relation.superclass == cls.name for relation in self.subclass_relations)
+            ),
+            None,
         )
 
-    def extend(self, concepts: list[Class | SubClassRelation | ObjectProperty | DataProperty]):
+    def extend(self, concepts: list[Concept]):
         for concept in concepts:
             if isinstance(concept, Class):
                 self.classes.append(concept)
@@ -152,10 +160,18 @@ class Ontology(LLMDataModel):
             elif isinstance(concept, DataProperty):
                 self.data_properties.append(concept)
 
-    def get_superclass_of(self, subclass_name: str):
+    def get_class(self, class_name: str):
+        return next((cls for cls in self.classes if class_name.lower() == cls.name.lower()), None)
+
+    def get_superclass(self, subclass_name: str):
+        """Get the superclass of a given subclass name."""
         return next(
             (relation.superclass for relation in self.subclass_relations if relation.subclass == subclass_name), None
         )
+
+    def get_subclasses(self, superclass_name: str):
+        """Get all subclasses of a given superclass name."""
+        return [relation.subclass for relation in self.subclass_relations if relation.superclass == superclass_name]
 
     def get_property(self, property_name: str):
         """Get a property by name."""
@@ -288,5 +304,8 @@ class KG(LLMDataModel):
 
 class TripletExtractorInput(LLMDataModel):
     text: str = Field(description="Text to extract triplets from.")
-    ontology: Ontology | None = Field(default=None, description="Ontology schema to use for discovery. If None, no ontology constraints will be applied.")
+    ontology: Ontology | None = Field(
+        default=None,
+        description="Ontology schema to use for discovery. If None, no ontology constraints will be applied.",
+    )
     state: KGState | None = Field(description="Existing knowledge graph state (triplets), if any.")
