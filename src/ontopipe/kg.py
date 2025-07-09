@@ -41,10 +41,9 @@ def is_snake_case(s):
     accumulate_errors=False,
 )
 class TripletExtractor(Expression):
-    def __init__(self, name: str, ontology: Ontology | None = None, threshold: float = 0.7, *args, **kwargs):
+    def __init__(self, name: str, ontology: Ontology | None = None, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.name = name
-        self.threshold = threshold
         self.ontology = ontology
         self._triplets = set[Triplet]()
 
@@ -211,11 +210,10 @@ def generate_kg(
     texts: list[str],
     kg_name: str,
     ontology: Ontology | None = None,
-    threshold: float = 0.7,
     batch_size: int = 1,
     epochs: int = 3,
 ) -> KG:
-    extractor = TripletExtractor(name=kg_name, threshold=threshold, ontology=ontology)
+    extractor = TripletExtractor(name=kg_name, ontology=ontology)
 
     partial_path = kg_path.with_suffix(".partial.json")
 

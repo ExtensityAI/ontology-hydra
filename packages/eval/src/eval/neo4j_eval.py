@@ -1,4 +1,5 @@
 import json
+import re
 import time
 from collections import defaultdict
 from math import ceil
@@ -82,6 +83,79 @@ def estimate_cost(info: RuntimeInfo, pricing: dict) -> float:
     return input_cost + cached_input_cost + output_cost
 
 
+class AnswerInput(LLMDataModel):
+    """Input for answer matching"""
+    predicted_answer: str = Field(description="The predicted answer to match")
+    expected_answer: str = Field(description="The expected answer to match")
+
+class AnswerOutput(LLMDataModel):
+    """Output for answer matching"""
+    match_score: float = Field(description="The similarity score between the predicted and expected answers")
+
+@contract(
+    pre_remedy=False,
+    post_remedy=True,
+    verbose=False,
+    remedy_retry_params=dict(
+        tries=25,
+        delay=0.5,
+        max_delay=10,
+        jitter=0.1,
+        backoff=2,
+        graceful=False
+    )
+)
+class FuzzyAnswerMatcher(Expression):
+    def __init__(
+        self,
+        threshold: float = 0.8,
+        seed: Optional[int] = 42,
+        *args,
+        **kwargs,
+    ):
+        super().__init__(*args, **kwargs)
+        self.threshold = threshold
+        self.seed = seed
+
+    def forward(self, input: AnswerInput) -> AnswerOutput:
+        """Match predicted answers with expected answers using fuzzy matching."""
+        if self.contract_result is None:
+            return AnswerOutput(match_score=0.0)
+        return self.contract_result
+
+    def pre(self, input: AnswerInput) -> bool:
+        """Validate input data contains required fields."""
+        if not isinstance(input, AnswerInput):
+            raise ValueError("Input must be a AnswerInput instance!")
+        return True
+
+    def post(self, output: AnswerOutput) -> bool:
+        """Validate output contains match score."""
+        if not isinstance(output, AnswerOutput):
+            raise ValueError("Output must be a AnswerOutput instance!")
+        if not isinstance(output.match_score, (int, float)):
+            raise ValueError("match_score must be a number!")
+        if output.match_score < 0 or output.match_score > 1:
+            raise ValueError("match_score must be between 0 and 1!")
+        return True
+
+    @property
+    def prompt(self) -> str:
+        """Return prompt template for fuzzy answer matching."""
+        return f"""[[Fuzzy Answer Matching]]
+Compare the predicted answer with the expected answer and return a similarity score between 0 and 1.
+
+Analyze the similarity between these answers considering:
+1. Exact match
+2. Case-insensitive match
+3. Semantic similarity
+4. Word overlap and containment
+5. Character-level similarity
+
+Be lenient with formatting differences (case, spaces, underscores) but strict with semantic meaning.
+Focus on whether the answers convey the same concept."""
+
+
 class Neo4jQueryInput(LLMDataModel):
     """Input for Neo4j query generation"""
     questions: List[str] = Field(description="List of natural language questions to convert to Cypher")
@@ -94,13 +168,12 @@ class Neo4jQueryOutput(LLMDataModel):
     """Output containing the generated Cypher queries"""
     queries: List[str] = Field(description="List of generated Cypher queries")
 
-
 @contract(
     pre_remedy=False,
     post_remedy=True,
-    verbose=False,
+    verbose=True,
     remedy_retry_params=dict(
-        tries=3,
+        tries=25,
         delay=0.5,
         max_delay=10,
         jitter=0.1,
@@ -112,6 +185,7 @@ class BatchQuestionToCypherConverter(Expression):
     def __init__(
         self,
         driver: GraphDatabase.driver,
+        database_name: str = "neo4j",
         seed: Optional[int] = 42,
         *args,
         **kwargs,
@@ -120,9 +194,18 @@ class BatchQuestionToCypherConverter(Expression):
         self.seed = seed
         self.data_model = Neo4jQueryOutput
         self.driver = driver
+        self.database_name = database_name
 
     def get_schema(self, database_name: str = "neo4j") -> str:
-        """Query Neo4j for complete schema information."""
+        """Query Neo4j for complete schema information.
+
+        Returns:
+            str: Formatted schema string with comprehensive schema details including:
+                - Node labels and their counts
+                - Relationship types and their counts
+                - Properties and their usage across node types
+                - Common relationship patterns
+        """
         with self.driver.session(database=database_name) as session:
             # Get node labels and their counts
             labels_result = session.run("""
@@ -167,30 +250,30 @@ class BatchQuestionToCypherConverter(Expression):
             patterns = [(record["fromType"], record["relType"], record["toType"], record["count"])
                        for record in patterns_result]
 
-            # Format the schema string
-            schema = f"Complete Neo4j Schema (Database: {database_name}):\n\n"
+        # Format the schema string
+        schema = f"Complete Neo4j Schema (Database: {database_name}):\n\n"
 
-            schema += "1. Node Labels and Counts:\n"
-            for label, count in node_labels:
-                schema += f"   - {label}: {count} nodes\n"
+        schema += "1. Node Labels and Counts:\n"
+        for label, count in node_labels:
+            schema += f"   - {label}: {count} nodes\n"
 
-            schema += "\n2. Relationship Types and Counts:\n"
-            for rel_type, count in relationship_types:
-                schema += f"   - :{rel_type}: {count} relationships\n"
+        schema += "\n2. Relationship Types and Counts:\n"
+        for rel_type, count in relationship_types:
+            schema += f"   - :{rel_type}: {count} relationships\n"
 
-            schema += "\n3. Property Keys by Node Label:\n"
-            current_label = None
-            for label, prop, count in property_usage:
-                if label != current_label:
-                    schema += f"\n   {label}:\n"
-                    current_label = label
-                schema += f"   - {prop} (used in {count} nodes)\n"
+        schema += "\n3. Property Keys by Node Label:\n"
+        current_label = None
+        for label, prop, count in property_usage:
+            if label != current_label:
+                schema += f"\n   {label}:\n"
+                current_label = label
+            schema += f"   - {prop} (used in {count} nodes)\n"
 
-            schema += "\n4. Common Relationship Patterns:\n"
-            for from_type, rel_type, to_type, count in patterns:
-                schema += f"   - ({from_type})-[:{rel_type}]->({to_type}): {count} occurrences\n"
+        schema += "\n4. Common Relationship Patterns:\n"
+        for from_type, rel_type, to_type, count in patterns:
+            schema += f"   - ({from_type})-[:{rel_type}]->({to_type}): {count} occurrences\n"
 
-            return schema
+        return schema
 
     def forward(self, input: Neo4jQueryInput, **kwargs) -> Neo4jQueryOutput:
         if self.contract_result is None:
@@ -211,30 +294,109 @@ class BatchQuestionToCypherConverter(Expression):
             raise ValueError("Generated Cypher queries cannot be empty")
 
         # Validate that number of output queries matches number of input questions
-        if len(output.queries) != len(self._input.questions):
-            raise ValueError(f"Number of output queries ({len(output.queries)}) does not match number of input questions ({len(self._input.questions)})")
+        if len(output.queries) != self.num_qs:
+            raise ValueError(f"Number of output queries ({len(output.queries)}) does not match number of input questions ({self.num_qs})")
 
-        # Basic validation of query format
+        try:
+            with self.driver.session(database=self.database_name) as session:
+                labels, rels, props = session.read_transaction(self._get_schema)
+        except Exception as e:
+            raise ValueError(f"Failed to get schema from Neo4j database '{self.database_name}': {e}")
+
+        # Debug: Log available schema elements
+        logger.debug(f"Available labels in database '{self.database_name}': {sorted(labels)}")
+        logger.debug(f"Available relationships in database '{self.database_name}': {sorted(rels)}")
+        logger.debug(f"Available properties in database '{self.database_name}': {sorted(props)}")
+
         for i, query in enumerate(output.queries):
             if not query.strip():
                 raise ValueError(f"Query {i+1} cannot be empty")
             if not query.upper().startswith("MATCH"):
                 raise ValueError(f"Query {i+1} must start with MATCH: {query[:50]}...")
 
+            # Extract and validate schema elements
+            q_labels, q_rels, q_props = self._extract_cypher_elements(query)
+
+            # Debug: Log extracted elements
+            logger.debug(f"Query {i+1} extracted labels: {q_labels}")
+            logger.debug(f"Query {i+1} extracted relationships: {q_rels}")
+            logger.debug(f"Query {i+1} extracted properties: {q_props}")
+
+            invalid_labels = q_labels - labels
+            invalid_rels = q_rels - rels
+            invalid_props = q_props - props
+
+            if invalid_labels:
+                raise ValueError(f"Query {i+1} uses non-existent labels: {invalid_labels}. Available labels: {sorted(labels)}")
+            if invalid_rels:
+                raise ValueError(f"Query {i+1} uses non-existent relationships: {invalid_rels}. Available relationships: {sorted(rels)}")
+            if invalid_props:
+                raise ValueError(f"Query {i+1} uses non-existent properties: {invalid_props}. Available properties: {sorted(props)}")
+
+            # Extract name values from property patterns and WHERE clauses
+            pattern1 = r'(\{[^}]*name\s*:\s*[\'"`])([^\'"`]+)([\'"`][^}]*\})'
+            pattern2 = r'(WHERE\s+[a-zA-Z_][a-zA-Z0-9_]*\.name\s*=\s*[\'"`])([^\'"`]+)([\'"`])'
+
+            # Check name values for proper formatting
+            for pattern in [pattern1, pattern2]:
+                matches = re.finditer(pattern, query)
+                for match in matches:
+                    name_value = match.group(2)
+                    if any(c.isupper() for c in name_value) or ' ' in name_value:
+                        raise ValueError(f"Name value '{name_value}' must be lowercase and have underscores instead of spaces")
+
         return True
+
+    def _get_schema(self, tx):
+        """Get schema elements from Neo4j."""
+        labels = {record["label"] for record in tx.run("CALL db.labels()")}
+        rels = {record["relationshipType"] for record in tx.run("CALL db.relationshipTypes()")}
+        props = {record["propertyKey"] for record in tx.run("CALL db.propertyKeys()")}
+        return labels, rels, props
 
     def _extract_cypher_elements(self, query):
         """Extract Cypher elements using regex."""
-        import re
-        labels = set(re.findall(r":([A-Z][a-zA-Z0-9_]*)", query))
-        relationships = set(re.findall(r":([A-Z_]+)", query))
+        # Extract node labels - look for :Label patterns in node definitions
+        # Node labels appear in patterns like (n:Label) or (n:Label1:Label2)
+        # This regex looks for :Label inside parentheses, which indicates node labels
+        labels = set(re.findall(r"\([^)]*:([A-Z][a-zA-Z0-9_]*|[a-z][a-zA-Z0-9_]*|[A-Z][a-z]+[A-Z][a-zA-Z0-9_]*)[^)]*\)", query))
+
+        # Extract relationship types - look for :RELATIONSHIP patterns in relationship definitions
+        # Relationship types appear in patterns like [r:RELATIONSHIP] or -[:RELATIONSHIP]->
+        # This regex looks for :RELATIONSHIP inside square brackets, which indicates relationship types
+        relationships = set()
+        # Pattern 1: [r:RELATIONSHIP] or [r:RELATIONSHIP]-> or [r:RELATIONSHIP]-
+        rel_pattern1 = re.findall(r"\[[^\]]*:([A-Z_]+)[^\]]*\]", query)
+        relationships.update(rel_pattern1)
+
+        # Pattern 2: -[:RELATIONSHIP]-> or -[:RELATIONSHIP]-
+        rel_pattern2 = re.findall(r"-\s*\[:([A-Z_]+)\]\s*[->-]", query)
+        relationships.update(rel_pattern2)
+
+        # Extract property names - look for .property patterns
         properties = set(re.findall(r"\.\s*([a-zA-Z0-9_]+)", query))
         return labels, relationships, properties
+
+    def act(self, input: Neo4jQueryInput, **kwargs) -> Neo4jQueryInput:
+        self.num_qs = len(input.questions)
+        return input
+
 
     @property
     def prompt(self) -> str:
         return """[[Neo4j Cypher Query Generation - Batch Processing]]
 Convert the given list of natural language questions into Neo4j Cypher queries using ONLY the schema elements provided. No other elements exist or can be used.
+
+IMPORTANT NAME FORMATTING RULES:
+- ALL names in property values must be lowercase with underscores instead of spaces
+- Examples:
+  * "Infrared" becomes "infrared"
+  * "Extracorporeal Shock Wave Lithotripter" becomes "extracorporeal_shock_wave_lithotripter"
+  * "Electromagnetic Vibration Method" becomes "electromagnetic_vibration_method"
+  * "Dermatological Surgery" becomes "dermatological_surgery"
+- This applies to all {name: 'value'} patterns in the queries and (name = 'value') patterns
+- Node labels and relationship types remain as provided in the schema
+- Always use the exact names from the question/options, but convert them to this format
 
 For each question in the batch, generate a corresponding Cypher query following these guidelines:
 
@@ -259,7 +421,7 @@ IMPORTANT GUIDELINES:
    - Use aggregation (COLLECT, COUNT) when appropriate to group related items
 
 Example for "What is used in dermatological surgery?":
-MATCH (p:MedicalProcedure {name: 'DermatologicalSurgery'})
+MATCH (p:MedicalProcedure {name: 'dermatological_surgery'})
 OPTIONAL MATCH (p)-[r1]-(d:MedicalDevice)
 OPTIONAL MATCH (p)-[r2]-(t:Technique)
 OPTIONAL MATCH (p)-[r3]-(m:Material)
@@ -268,9 +430,19 @@ RETURN
     COLLECT(DISTINCT t.name) as techniques,
     COLLECT(DISTINCT m.name) as materials
 
+Example for "What is the band of electromagnetic waves used in a thermographic camera?":
+MATCH (em:ElectromagneticWave {name: 'infrared'}) RETURN em.name as band
+
+Example for "What is the energy generation method used in extracorporeal shock wave lithotripter?":
+MATCH (l:MedicalDevice {name: 'extracorporeal_shock_wave_lithotripter'})
+OPTIONAL MATCH (l)-[r:INVOLVES]-(m:Method)
+WHERE m.name = 'electromagnetic_vibration_method'
+RETURN m.name AS energy_generation_method
+
 Remember:
 - Generate one query for each question in the input batch
 - Only use the exact node labels, relationship types, and properties listed in the schema
+- ALL names in property values must be lowercase with underscores instead of spaces
 - Any other elements will fail as they do not exist in the database
 - Maintain consistent query structure across the batch for similar question types"""
 
@@ -286,6 +458,8 @@ class Neo4jConfig(BaseModel):
     use_run_specific_databases: bool = True  # New field to control database strategy
     default_database: str = "neo4j"  # Fallback database name
     auto_cleanup: bool = False  # New field to control automatic cleanup
+    use_fuzzy_matching: bool = True  # Enable fuzzy answer matching
+    fuzzy_threshold: float = 0.8  # Threshold for fuzzy matching
 
     def __init__(self, **data):
         # Allow environment variables to override defaults
@@ -304,6 +478,10 @@ class Neo4jConfig(BaseModel):
             data['default_database'] = os.environ['NEO4J_DEFAULT_DATABASE']
         if 'NEO4J_AUTO_CLEANUP' in os.environ:
             data['auto_cleanup'] = os.environ['NEO4J_AUTO_CLEANUP'].lower() == 'true'
+        if 'NEO4J_USE_FUZZY_MATCHING' in os.environ:
+            data['use_fuzzy_matching'] = os.environ['NEO4J_USE_FUZZY_MATCHING'].lower() == 'true'
+        if 'NEO4J_FUZZY_THRESHOLD' in os.environ:
+            data['fuzzy_threshold'] = float(os.environ['NEO4J_FUZZY_THRESHOLD'])
 
         super().__init__(**data)
 
@@ -616,7 +794,15 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
         _load_kg_to_neo4j(kg, driver, database_name)
 
         # Initialize converter with the driver (it will use the database_name parameter in queries)
-        converter = BatchQuestionToCypherConverter(driver=driver)
+        converter = BatchQuestionToCypherConverter(driver=driver, database_name=database_name)
+
+        # Initialize fuzzy answer matcher if enabled
+        fuzzy_matcher = None
+        if config.use_fuzzy_matching:
+            fuzzy_matcher = FuzzyAnswerMatcher(threshold=config.fuzzy_threshold)
+            logger.info(f"Fuzzy matching enabled with threshold: {config.fuzzy_threshold}")
+        else:
+            logger.info("Exact matching enabled")
 
         # Get schema from the run-specific database
         schema = _get_database_schema(driver, database_name)
@@ -628,8 +814,8 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
 
         for qa in qas:
             all_questions.append(qa.question)
-            # For SQuAD format, we need to extract options from the answers
-            options = [ans.text for ans in qa.answers] if qa.answers else []
+            # Extract multiple choice options from all_answers
+            options = [ans.text for ans in qa.all_answers] if qa.all_answers else []
             all_options.append(options)
             all_answers.append(qa.answers[0].text if qa.answers else "")
 
@@ -740,10 +926,40 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
                                     iteration_result['returned_results'] = True
                                     result_value = list(results[0].values())[0] if results[0] else None
                                     if result_value is not None:
-                                        result_str = str(result_value).lower().replace(' ', '')
-                                        answer_str = str(answer).lower().replace(' ', '')
-                                        if result_str == answer_str:
-                                            iteration_result['correct'] = True
+                                        # Use fuzzy matching if enabled, otherwise use exact matching
+                                        if fuzzy_matcher:
+                                            # Prepare data for fuzzy matching
+                                            match_input = AnswerInput(
+                                                predicted_answer=str(result_value),
+                                                expected_answer=str(answer)
+                                            )
+
+                                            try:
+                                                # Use fuzzy matcher to determine similarity score
+                                                match_output = fuzzy_matcher(match_input)
+                                                match_score = match_output.match_score
+
+                                                # Determine if answer is correct based on threshold
+                                                is_correct = match_score >= config.fuzzy_threshold
+
+                                                iteration_result['correct'] = is_correct
+                                                iteration_result['match_score'] = match_score
+
+                                                logger.debug(f"Fuzzy match - Score: {match_score:.3f}, Threshold: {config.fuzzy_threshold}, Correct: {is_correct}")
+
+                                            except Exception as match_error:
+                                                logger.warning(f"Fuzzy matching failed, falling back to exact matching: {match_error}")
+                                                # Fallback to exact matching
+                                                result_str = str(result_value).lower().replace(' ', '')
+                                                answer_str = str(answer).lower().replace(' ', '')
+                                                iteration_result['correct'] = (result_str == answer_str)
+                                                iteration_result['match_score'] = 1.0 if iteration_result['correct'] else 0.0
+                                        else:
+                                            # Use exact matching
+                                            result_str = str(result_value).lower().replace(' ', '')
+                                            answer_str = str(answer).lower().replace(' ', '')
+                                            iteration_result['correct'] = (result_str == answer_str)
+                                            iteration_result['match_score'] = 1.0 if iteration_result['correct'] else 0.0
 
                                 logger.debug(f"Neo4j Question {query_idx + 1}: '{question}' - Success: {iteration_result['successful']}, Results: {iteration_result['returned_results']}, Correct: {iteration_result['correct']}")
 
@@ -789,11 +1005,24 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
         queries_with_results = sum(1 for stats in query_stats.values() if stats['returned_results'])
         correct_queries = sum(1 for stats in query_stats.values() if stats['correct'])
 
+        # Calculate average match score across all queries
+        all_match_scores = []
+        for stats in query_stats.values():
+            for iter_result in stats['iterations']:
+                if iter_result.get('match_score') is not None:
+                    all_match_scores.append(iter_result['match_score'])
+
+        avg_overall_match_score = sum(all_match_scores) / len(all_match_scores) if all_match_scores else 0.0
+
         logger.info("Neo4j Evaluation Results:")
         logger.info(f"Database used: {database_name}")
+        logger.info(f"Matching method: {'Fuzzy' if config.use_fuzzy_matching else 'Exact'}")
+        if config.use_fuzzy_matching:
+            logger.info(f"Fuzzy threshold: {config.fuzzy_threshold}")
         logger.info(f"Successfully processed: {successful_queries} / {total_queries} queries")
         logger.info(f"Queries that returned results: {queries_with_results} / {total_queries}")
         logger.info(f"Correct results: {correct_queries} / {total_queries}")
+        logger.info(f"Average match score: {avg_overall_match_score:.3f}")
         logger.info(f"Total elapsed time: {total_runtime_info.total_elapsed_time:.2f} seconds")
         logger.info(f"Estimated cost: ${total_runtime_info.cost_estimate:.4f}")
 
@@ -804,11 +1033,15 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
         if df_results.empty:
             logger.warning("No results data to process, creating empty DataFrames")
             df_results = pd.DataFrame(columns=['iteration', 'query_idx', 'question', 'options', 'expected_answer',
-                                              'generated_query', 'successful', 'returned_results', 'correct', 'results', 'error'])
+                                              'generated_query', 'successful', 'returned_results', 'correct', 'match_score', 'results', 'error'])
 
         # Aggregated statistics DataFrame
         stats_data = []
         for query_idx, stats in query_stats.items():
+            # Calculate average match score for this query across all iterations
+            match_scores = [iter_result.get('match_score', 0.0) for iter_result in stats['iterations'] if iter_result.get('match_score') is not None]
+            avg_match_score = sum(match_scores) / len(match_scores) if match_scores else 0.0
+
             stats_data.append({
                 'query_idx': query_idx + 1,
                 'question': stats['iterations'][0]['question'],
@@ -818,7 +1051,9 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
                 'correct_any_iteration': stats['correct'],
                 'successful_iterations': sum(1 for iter_result in stats['iterations'] if iter_result['successful']),
                 'results_iterations': sum(1 for iter_result in stats['iterations'] if iter_result['returned_results']),
-                'correct_iterations': sum(1 for iter_result in stats['iterations'] if iter_result['correct'])
+                'correct_iterations': sum(1 for iter_result in stats['iterations'] if iter_result['correct']),
+                'avg_match_score': avg_match_score,
+                'max_match_score': max(match_scores) if match_scores else 0.0
             })
 
         df_stats = pd.DataFrame(stats_data)
@@ -939,6 +1174,8 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
         neo4j_metrics = {
             'database_name': database_name,
             'run_id': run_id,
+            'matching_method': 'fuzzy' if config.use_fuzzy_matching else 'exact',
+            'fuzzy_threshold': config.fuzzy_threshold if config.use_fuzzy_matching else None,
             'successful_queries': successful_queries,
             'total_queries': total_queries,
             'success_rate': successful_queries / total_queries if total_queries > 0 else 0,
@@ -946,6 +1183,7 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
             'results_rate': queries_with_results / total_queries if total_queries > 0 else 0,
             'correct_queries': correct_queries,
             'accuracy': correct_queries / total_queries if total_queries > 0 else 0,
+            'average_match_score': avg_overall_match_score,
             'total_elapsed_time_seconds': total_runtime_info.total_elapsed_time,
             'estimated_cost_usd': total_runtime_info.cost_estimate,
             'auto_cleanup_enabled': config.auto_cleanup

@@ -1,6 +1,7 @@
 """Defines data structures for the SQuAD v2 dataset (re: https://huggingface.co/datasets/rajpurkar/squad_v2)"""
 
 from pydantic import BaseModel
+from typing import Optional, List
 
 
 class SquadAnswer(BaseModel):
@@ -9,6 +10,14 @@ class SquadAnswer(BaseModel):
 
     answer_start: int
     """The starting character index of the answer in the context"""
+
+
+class SquadAllAnswer(BaseModel):
+    text: str
+    """The answer text"""
+
+    option: Optional[str] = None
+    """The option letter (A, B, C, D) for multiple choice questions"""
 
 
 class SquadQAPair(BaseModel):
@@ -23,6 +32,9 @@ class SquadQAPair(BaseModel):
 
     is_impossible: bool = False
     """Indicates if the question has no answer"""
+
+    all_answers: Optional[list[SquadAllAnswer]] = None
+    """List of all possible answers for multiple choice questions"""
 
 
 class SquadParagraph(BaseModel):
