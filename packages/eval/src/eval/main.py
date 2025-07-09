@@ -77,7 +77,7 @@ def _start_new_evaluation(args):
             f"Output path '{args.output}' already exists. Please choose a different path to start a new evaluation run."
         )
 
-    config = EvalConfig.model_validate_json(args.config.read_text(encoding="utf-8"))
+    config = EvalConfig.model_validate_json(args.config.read_text(encoding='utf-8', errors='ignore'))
     path = args.output
 
     if config.model.engine.startswith('gpt-4.1'):
@@ -136,7 +136,7 @@ def _resume_evaluation(args):
             f"Could not find config file under '{config_path}'. Are you sure this is a valid run path?"
         )
 
-    config = EvalConfig.model_validate_json(config_path.read_text(encoding="utf-8"))
+    config = EvalConfig.model_validate_json(config_path.read_text(encoding='utf-8', errors='ignore'))
 
     init_logging(args.path / "logs")
 

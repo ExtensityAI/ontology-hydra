@@ -19,7 +19,7 @@ logger = getLogger("ontopipe.pipe")
 
 def _generate_comittee_with_cache(domain: str, cache_path: Path):
     if cache_path.exists():
-        return Comittee.model_validate_json(cache_path.read_text())
+        return Comittee.model_validate_json(cache_path.read_text(encoding='utf-8', errors='ignore'))
 
     comittee = generate_comittee_for_domain(domain)
     cache_path.write_text(comittee.model_dump_json(indent=2), encoding="utf-8")
@@ -34,7 +34,7 @@ def _generate_scope_documents_with_cache(domain: str, comittee: Comittee, cache_
         doc_cache_path = cache_path / f"scope_{i}.txt"
 
         if doc_cache_path.exists():
-            documents.append(doc_cache_path.read_text())
+            documents.append(doc_cache_path.read_text(encoding='utf-8', errors='ignore'))
             continue
 
         doc = generate_scope_document(domain, [m.persona for m in group])
@@ -47,7 +47,7 @@ def _generate_scope_documents_with_cache(domain: str, comittee: Comittee, cache_
 
 def _merge_scope_documents_with_cache(domain: str, documents: list[str], cache_path: Path):
     if cache_path.exists():
-        return cache_path.read_text()
+        return cache_path.read_text(encoding='utf-8', errors='ignore')
 
     merged_scope = merge_scope_documents(domain, documents)
     cache_path.write_text(merged_scope, encoding="utf-8")
@@ -59,7 +59,7 @@ def _generate_scope_with_cache(domain: str, comittee: Comittee, cache_path: Path
 
     # in case the merged scope exists, we can load it directly and skip everything else
     if merged_scope_path.exists():
-        return merged_scope_path.read_text()
+        return merged_scope_path.read_text(encoding='utf-8', errors='ignore')
 
     documents = _generate_scope_documents_with_cache(domain, comittee, cache_path)
 
@@ -87,7 +87,7 @@ def _generate_cqs_with_cache(domain: str, merged_scope: str, comittee: Comittee,
 
     # in case all cqs were generated and combined, we can load them directly and skip everything else
     if combined_cqs_path.exists():
-        return combined_cqs_path.read_text().split("\n")
+        return combined_cqs_path.read_text(encoding='utf-8', errors='ignore').split("\n")
 
     cqs = []
 
@@ -95,7 +95,7 @@ def _generate_cqs_with_cache(domain: str, merged_scope: str, comittee: Comittee,
         group_cqs_cache_path = cache_path / f"cqs_{i}.txt"
 
         if group_cqs_cache_path.exists():
-            cqs.extend(group_cqs_cache_path.read_text().split("\n"))
+            cqs.extend(group_cqs_cache_path.read_text(encoding='utf-8', errors='ignore').split("\n"))
             continue
 
         group_cqs = generate_questions(domain, group, merged_scope)
@@ -113,10 +113,10 @@ def _generate_cqs_with_cache(domain: str, merged_scope: str, comittee: Comittee,
 def _generate_ontology_with_cache(domain: str, cqs: list[str], cache_path: Path, fixed_cache_path: Path):
     if fixed_cache_path.exists():
         # we have a cached fixed ontology, load it directly
-        return Ontology.model_validate_json(fixed_cache_path.read_text())
+        return Ontology.model_validate_json(fixed_cache_path.read_text(encoding='utf-8', errors='ignore'))
 
     if cache_path.exists():
-        ontology = Ontology.model_validate_json(cache_path.read_text())
+        ontology = Ontology.model_validate_json(cache_path.read_text(encoding='utf-8', errors='ignore'))
 
     else:
         logger.debug("Generating ontology from %d CQs", len(cqs))

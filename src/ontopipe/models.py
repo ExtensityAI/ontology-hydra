@@ -160,7 +160,7 @@ class Ontology(LLMDataModel):
 
     @classmethod
     def from_json_file(cls, path: Path | str):
-        return cls.model_validate_json(Path(path).read_text())
+        return cls.model_validate_json(Path(path).read_text(encoding='utf-8', errors='ignore'))
 
     @property
     def root(self):

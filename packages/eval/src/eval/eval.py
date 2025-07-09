@@ -41,7 +41,7 @@ def load_dataset(mode: str, topic: str) -> SquadDataset:
             "Please follow the instructions in the README."
         )
 
-    return SquadDataset.model_validate_json(dataset_path.read_text(encoding="utf-8"))
+    return SquadDataset.model_validate_json(dataset_path.read_text(encoding='utf-8', errors='ignore'))
 
 
 def _generate_kg(texts: list[str], domain: str, kg_path: Path, ontology: Ontology | None = None):
@@ -49,7 +49,7 @@ def _generate_kg(texts: list[str], domain: str, kg_path: Path, ontology: Ontolog
 
     if kg_path.exists():
         # load cached KG
-        return KG.model_validate_json(kg_path.read_text(encoding="utf-8"))
+        return KG.model_validate_json(kg_path.read_text(encoding='utf-8', errors='ignore'))
 
     # Track runtime for KG generation
     with MetadataTracker() as tracker:
@@ -170,7 +170,7 @@ def _answer_all_questions(kg: KG, qas: list[SquadQAPair], cache_path: Path):
 
     if cache_path.exists():
         # load cached responses
-        details = ResponseDetails.model_validate_json(cache_path.read_text(encoding="utf-8")).responses
+        details = ResponseDetails.model_validate_json(cache_path.read_text(encoding='utf-8', errors='ignore')).responses
         logger.debug("Loaded {} cached answers from {}", len(details), cache_path)
 
     logger.debug("Answering {} questions", len(qas))
@@ -473,7 +473,7 @@ def _generate_run_metrics_and_stats(path: Path, config: EvalConfig):
             squad_metrics_path = topic_path / "metrics.json"
             if squad_metrics_path.exists():
                 try:
-                    squad_metrics = json.loads(squad_metrics_path.read_text(encoding="utf-8"))
+                    squad_metrics = json.loads(squad_metrics_path.read_text(encoding='utf-8', errors='ignore'))
                     topic_metrics['squad_metrics'] = squad_metrics
 
                     # Aggregate SQuAD metrics for scenario
@@ -487,7 +487,7 @@ def _generate_run_metrics_and_stats(path: Path, config: EvalConfig):
             kg_path = topic_path / "kg.json"
             if kg_path.exists():
                 try:
-                    kg_data = json.loads(kg_path.read_text(encoding="utf-8"))
+                    kg_data = json.loads(kg_path.read_text(encoding='utf-8', errors='ignore'))
                     topic_metrics['kg_triplets'] = len(kg_data.get('triplets', []))
                     scenario_metrics['total_kg_triplets'] += topic_metrics['kg_triplets']
                 except Exception as e:
@@ -498,7 +498,7 @@ def _generate_run_metrics_and_stats(path: Path, config: EvalConfig):
                 neo4j_metrics_path = topic_path / "neo4j_eval" / "neo4j_metrics.json"
                 if neo4j_metrics_path.exists():
                     try:
-                        neo4j_metrics = json.loads(neo4j_metrics_path.read_text(encoding="utf-8"))
+                        neo4j_metrics = json.loads(neo4j_metrics_path.read_text(encoding='utf-8', errors='ignore'))
                         topic_metrics['neo4j_metrics'] = neo4j_metrics
 
                         # Aggregate Neo4j metrics for scenario
@@ -541,7 +541,7 @@ def _generate_run_metrics_and_stats(path: Path, config: EvalConfig):
             kg_runtime_path = topic_path / "kg_runtime_stats.json"
             if kg_runtime_path.exists():
                 try:
-                    kg_runtime_stats = json.loads(kg_runtime_path.read_text(encoding="utf-8"))
+                    kg_runtime_stats = json.loads(kg_runtime_path.read_text(encoding='utf-8', errors='ignore'))
                     total_runtime_info.total_elapsed_time += kg_runtime_stats.get('total_elapsed_time_seconds', 0)
                     total_runtime_info.prompt_tokens += kg_runtime_stats.get('total_prompt_tokens', 0)
                     total_runtime_info.completion_tokens += kg_runtime_stats.get('total_completion_tokens', 0)
@@ -554,7 +554,7 @@ def _generate_run_metrics_and_stats(path: Path, config: EvalConfig):
             qa_runtime_path = topic_path / "qa_runtime_stats.json"
             if qa_runtime_path.exists():
                 try:
-                    qa_runtime_stats = json.loads(qa_runtime_path.read_text(encoding="utf-8"))
+                    qa_runtime_stats = json.loads(qa_runtime_path.read_text(encoding='utf-8', errors='ignore'))
                     total_runtime_info.total_elapsed_time += qa_runtime_stats.get('total_elapsed_time_seconds', 0)
                     total_runtime_info.prompt_tokens += qa_runtime_stats.get('total_prompt_tokens', 0)
                     total_runtime_info.completion_tokens += qa_runtime_stats.get('total_completion_tokens', 0)
@@ -580,7 +580,7 @@ def _generate_run_metrics_and_stats(path: Path, config: EvalConfig):
             ontology_runtime_path = scenario_path / "ontology_runtime_stats.json"
             if ontology_runtime_path.exists():
                 try:
-                    ontology_runtime_stats = json.loads(ontology_runtime_path.read_text(encoding="utf-8"))
+                    ontology_runtime_stats = json.loads(ontology_runtime_path.read_text(encoding='utf-8', errors='ignore'))
                     total_runtime_info.total_elapsed_time += ontology_runtime_stats.get('total_elapsed_time_seconds', 0)
                     total_runtime_info.prompt_tokens += ontology_runtime_stats.get('total_prompt_tokens', 0)
                     total_runtime_info.completion_tokens += ontology_runtime_stats.get('total_completion_tokens', 0)
