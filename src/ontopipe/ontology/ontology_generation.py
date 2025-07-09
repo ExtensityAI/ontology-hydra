@@ -66,22 +66,11 @@ class OWLBuilder(Expression):
 
         return True
 
-    def dump_ontology(self, folder: Path, fname: str = "ontology.json"):
-        """Dumps the current ontology to a JSON file."""
-        if not folder.exists():
-            folder.mkdir(parents=True, exist_ok=True)
-
-        ontology_path = folder / fname
-        with ontology_path.open("w", encoding="utf-8") as f:
-            f.write(self._ontology.model_dump_json(indent=2))
-        logger.debug("Ontology dumped to %s", ontology_path)
-
 
 def generate_ontology(
     cqs: list[str],
     ontology_name: str,
-    folder: Path,
-    fname: str = "ontology.json",
+    cache_path: Path,
     batch_size: int = 1,
 ) -> Ontology:
     ontology = Ontology(
@@ -91,6 +80,9 @@ def generate_ontology(
         object_properties=[],
         data_properties=[],
     )
+    # TODO consider providing scope document
+    # TODO do this iteratively, i.e. generate until done. Then, critique ontology and regenerate from there.
+
     builder = OWLBuilder(ontology)
 
     usage = None
@@ -99,9 +91,11 @@ def generate_ontology(
     with MetadataTracker() as tracker:  # For gpt-* models
         for i in tqdm(range(0, len(cqs), batch_size)):
             batch_cqs = cqs[i : i + batch_size]
+
             input_data = OWLBuilderInput(
                 competency_question=batch_cqs, ontology_state=state
             )
+
             try:
                 new_state = builder(input=input_data)
             except Exception as e:
@@ -111,21 +105,20 @@ def generate_ontology(
             concepts.extend(new_state.concepts)
             ontology.extend(new_state.concepts)
 
-            builder.dump_ontology(folder, fname + "_partial.json")
+            cache_path.with_suffix(".partial.json").write_text(
+                ontology.model_dump_json(indent=2),
+                encoding="utf-8",
+            )
 
             state = OntologyState(concepts=concepts)
         builder.contract_perf_stats()
         usage = tracker.usage
 
     logger.debug("API Usage:\n%s", usage)
-    builder.dump_ontology(folder, fname)
+    cache_path.write_text(
+        ontology.model_dump_json(indent=2),
+        encoding="utf-8",
+    )
     logger.debug("Ontology creation completed!")
 
     return ontology
-
-
-if __name__ == "__main__":
-    cqs = ["What is the capital of France?", "What is the population of New York City?"]
-    ontology_name = "example_ontology"
-    folder = Path("/tmp/output")
-    generate_ontology(cqs, ontology_name, folder)

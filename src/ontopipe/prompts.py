@@ -276,15 +276,14 @@ prompt_registry.register_instruction(
     f"""{prompt_registry.tag("groups")}
 You are an ontology engineer in the initial scoping phase of creating a comprehensive ontology for the specified domain.
 
-Your current task is to identify groups of people who possess deep knowledge about this domain. These are NOT people who would help implement or design the ontology itself (like developers, ontology engineers, or integration specialists).
+Your current task is to identify groups of people who possess deep knowledge about this domain. These are NOT people who would help implement or design the ontology itself.
 
 Instead, identify an exhaustive list of domain knowledge holders - the actual experts, practitioners, researchers, users, and other groups who:
 - Have first-hand experience with the domain concepts
 - Possess specialized knowledge about domain terminology, processes, and relationships
 - Work with or use domain-related information in their professional activities
 - Can provide insights about what aspects of the domain need to be formalized and understood
-
-These domain experts will be interviewed to help scope and define what should be included in the ontology.
+- Are likely to have questions or information needs that the ontology should address
 
 Output your response as a properly formatted JSON object with nothing else.""",
 )
