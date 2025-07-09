@@ -8,11 +8,21 @@ prompt_registry = PromptRegistry()
 # ==================================================#
 # Tags
 prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_class", "OWL CLASS")
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_subclass_relation", "OWL SUBCLASS RELATION")
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_object_property", "OWL OBJECT PROPERTY")
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_data_property", "OWL DATA PROPERTY")
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "competency_question", "COMPETENCY QUESTION")
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "ontology_guidelines", "ONTOLOGY GUIDELINES")
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "owl_subclass_relation", "OWL SUBCLASS RELATION"
+)
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "owl_object_property", "OWL OBJECT PROPERTY"
+)
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "owl_data_property", "OWL DATA PROPERTY"
+)
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "competency_question", "COMPETENCY QUESTION"
+)
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "ontology_guidelines", "ONTOLOGY GUIDELINES"
+)
 
 # Instructions
 prompt_registry.register_instruction(
@@ -113,6 +123,8 @@ Analyze competency questions to identify ontological requirements and extract fo
    - Example: If you have Article with subclasses ReviewArticle and EmpiricalStudy, do not create a
      redundant "hasArticleType" data property that encodes this same classification
 
+9. Consider adding a label property to the top-level class. This property can be used to provide a human-readable name or description for the instances.
+
 # Naming Conventions
 1. Classes: PascalCase (e.g., `ResearchPaper`, `Author`)
 2. Properties: camelCase starting with a verb (e.g., `hasAuthor`, `isPublishedIn`)
@@ -157,7 +169,9 @@ Return your output as a structured set of operations with explicit details (incl
 # ----Triplet Extraction----------------------------#
 # ==================================================#
 # Tags
-prompt_registry.register_tag(PromptLanguage.ENGLISH, "triplet_extraction", "TRIPLET EXTRACTION")
+prompt_registry.register_tag(
+    PromptLanguage.ENGLISH, "triplet_extraction", "TRIPLET EXTRACTION"
+)
 
 # Instructions
 prompt_registry.register_instruction(
@@ -198,16 +212,6 @@ Your final output must be a JSON array (list) of objects, where each object repr
 - The predicate should be the property name from the ontology (for isA triples, the predicate is simply "isA").
 
 Format the output as a JSON list [...] containing one object per triple. Do not include any additional commentary or explanation in the output—only the JSON data.
-
-### Example Output values:
-
-- {{"subject": "claude_shannon", "predicate": "isA", "object": "Person" }}
-- {{"subject": "claude_shannon_develops_phd_dissertation_1939", "predicate": "isA", "object": "LifeEvent" }}
-- {{"subject": "claude_shannon_phd_dissertation", "predicate": "isA", "object": "Document" }}
-- {{"subject": "claude_shannon_develops_phd_dissertation_1939", "predicate": "has_participant", "object": "claude_shannon" }}
-- {{"subject": "claude_shannon_develops_phd_dissertation_1939", "predicate": "happens_in", "object": "1939" }}
-- {{"subject": "claude_shannon_develops_phd_dissertation_1939", "predicate": "produces_document", "object": "claude_shannon_phd_dissertation" }}
-- {{"subject": "claude_shannon_phd_dissertation", "predicate": "completed_in_year", "object": "1939" }}
 
 
 Instructions Recap: Extract all relevant triples from the text, including each entity's isA type triple, and present them as JSON {{subject, predicate, object}} objects. Follow the naming rules and use the ontology's vocabulary strictly. Ensure every fact is backed by the text, with no extraneous or inferred information. Avoid overloaded or redundant entity names. By adhering to these guidelines, the output will consist of high-quality triples ready for knowledge graph construction.
@@ -250,15 +254,6 @@ Your final output must be a JSON array (list) of objects, where each object repr
 - The predicate should be a meaningful relationship name in camelCase (for isA triples, the predicate is simply "isA").
 
 Format the output as a JSON list [...] containing one object per triple. Do not include any additional commentary or explanation in the output—only the JSON data.
-
-### Example Output values:
-
-- {{"subject": "claude_shannon", "predicate": "isA", "object": "Person" }}
-- {{"subject": "claude_shannon_develops_phd_dissertation_1939", "predicate": "isA", "object": "Event" }}
-- {{"subject": "claude_shannon_phd_dissertation", "predicate": "isA", "object": "Document" }}
-- {{"subject": "claude_shannon_develops_phd_dissertation_1939", "predicate": "hasParticipant", "object": "claude_shannon" }}
-- {{"subject": "claude_shannon_develops_phd_dissertation_1939", "predicate": "happensIn", "object": "1939" }}
-- {{"subject": "claude_shannon_develops_phd_dissertation_1939", "predicate": "producesDocument", "object": "claude_shannon_phd_dissertation" }}
 
 Instructions Recap: Extract all relevant triples from the text, including each entity's isA type triple, and present them as JSON {{subject, predicate, object}} objects. Follow the naming rules and create meaningful relationships. Ensure every fact is backed by the text, with no extraneous or inferred information. Avoid overloaded or redundant entity names. By adhering to these guidelines, the output will consist of high-quality triples ready for knowledge graph construction.
 """,
@@ -420,6 +415,7 @@ Competency questions are specific queries that domain users would want to answer
 3. Ensure questions are concrete and answerable with facts
 4. Cover diverse aspects of the domain
 5. Phrase questions using natural language as users would ask them
+6. Keep questions concise. If necessary, write two simpler questions instead of one that is too complex.
 
 Generate a list of as many competency questions as required to cover the domain comprehensively.
 """,

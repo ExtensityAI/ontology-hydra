@@ -88,9 +88,22 @@ def _try_add_subclass_relations(
                 hint="Remove this relation or replace the existing one if this is more specific",
             )
 
+        if rel.superclass == rel.subclass:
+            # ensure subclass is not the same as superclass
+            yield Issue(
+                code="subclass_equals_superclass",
+                path=path,
+                message=f"Class '{rel.subclass}' cannot be it's own superclass",
+                context=None,
+                hint="Remove this relation or correct the names",
+            )
+            continue
+
         # ensure no cycles
         su_superclasses = all_superclasses[rel.superclass]
         sc_superclasses = all_superclasses[rel.subclass]
+
+        # TODO consider allowing redefinition of types? i.e. choosing a different parent?
 
         if any(sc in su_superclasses for sc in sc_superclasses):
             yield Issue(
@@ -177,12 +190,13 @@ def _try_add_properties(ontology: Ontology, props: list[DataProperty | ObjectPro
             ]
 
             if invalid_ranges:
+                # TODO check if xsd: is in range, then the model likely wanted a data property instead
                 yield Issue(
                     code="range_classes_not_found",
                     path=path,
                     message=f"Range classes not found for property '{prop.name}'",
                     context=f"Missing classes are {', '.join(f"'{range_}'" for range_ in invalid_ranges)}",
-                    hint="Define these classes first or remove them from the range",
+                    hint="Define these classes first or remove them from the range.",
                 )
                 continue
 

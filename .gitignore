@@ -177,3 +177,5 @@ artifacts/.DS_Store
 
 experiment.ipynb
 symai.config.json
+
+temp/

@@ -881,7 +881,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "neo4j", specifier = ">=5.28.1" },
-    { name = "symbolicai", git = "https://github.com/ExtensityAI/symbolicai.git?rev=912642d2da2a4aa83909bb6c06d1b5d3a167c48a" },
+    { name = "symbolicai", git = "https://github.com/ExtensityAI/symbolicai.git?rev=f46a288fc115933cc4c934d856e24b0616fc2130" },
 ]
 
 [[package]]
@@ -1589,8 +1589,8 @@ wheels = [
 
 [[package]]
 name = "symbolicai"
-version = "0.12.0"
-source = { git = "https://github.com/ExtensityAI/symbolicai.git?rev=912642d2da2a4aa83909bb6c06d1b5d3a167c48a#912642d2da2a4aa83909bb6c06d1b5d3a167c48a" }
+version = "0.13.1"
+source = { git = "https://github.com/ExtensityAI/symbolicai.git?rev=f46a288fc115933cc4c934d856e24b0616fc2130#f46a288fc115933cc4c934d856e24b0616fc2130" }
 dependencies = [
     { name = "accelerate" },
     { name = "aiohttp" },
