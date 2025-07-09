@@ -97,14 +97,14 @@ class TripletExtractor(Expression):
                 )
                 continue
 
-            if not self.ontology.has_class(triplet.object):
+            if not self.ontology.get_class(triplet.object):
                 # ensure ontology has class for object
                 errors.append(
                     f"{triplet}: '{triplet.object}' is not a defined class in the ontology schema. For isA relations, the object must be a class defined in the ontology schema."
                 )
                 continue
 
-            if self.ontology.has_class(triplet.subject):
+            if self.ontology.get_class(triplet.subject):
                 # Ensure that the subject is not an ontology class
                 errors.append(
                     f"{triplet}: '{triplet.subject}' is a class, not an entity instance. In isA relations, the subject must be an entity instance, not a class."
@@ -140,14 +140,14 @@ class TripletExtractor(Expression):
                 )
                 continue
 
-            if self.ontology.has_class(triplet.subject):
+            if self.ontology.get_class(triplet.subject):
                 # Ensure that the subject entity is not an ontology class (this is only allowed for isA predicates!)
                 errors.append(
                     f"{triplet}: '{triplet.subject}' is a class definition, not an entity instance. For non-isA relations, both subject and object must be entity instances."
                 )
                 continue
 
-            if self.ontology.has_class(triplet.object):
+            if self.ontology.get_class(triplet.object):
                 # Ensure that the object entity is not an ontology class (this is only allowed for isA predicates!)
                 errors.append(
                     f"{triplet}: '{triplet.object}' is a class definition, not an entity instance. For non-isA relations, both subject and object must be entity instances."
