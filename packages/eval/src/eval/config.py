@@ -29,7 +29,7 @@ class EvalScenario(BaseModel):
 
     skip_qa: bool = False  # Skip question answering evaluation (only do KG generation and Neo4j)
 
-    epoch: int = 3  # Number of epochs for KG generation
+    epochs: int = 3  # Number of epochs for KG generation
 
 
 class EvalConfig(BaseModel):

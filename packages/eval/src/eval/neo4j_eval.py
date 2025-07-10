@@ -37,12 +37,12 @@ PRICING = {
         'cached_input': 0.5 / 1e6,
         'output': 8. / 1e6
     },
-    ('GPTXSearchEngine', 'gpt-4.1-mini'): {
+    ('GPTXChatEngine', 'gpt-4.1-mini'): {
         'input': 0.40 / 1e6,
         'cached_input': 0.10 / 1e6,
         'output': 1.6 / 1e6
     },
-    ('GPTXSearchEngine', 'gpt-4.1'): {
+    ('GPTXChatEngine', 'gpt-4.1'): {
         'input': 2. / 1e6,
         'cached_input': 0.5 / 1e6,
         'output': 8. / 1e6
@@ -57,7 +57,7 @@ PRICING = {
         'cached_input': 0.275 / 1e6,
         'output': 4.4 / 1e6
     },
-    ('GPTXSearchEngine', 'gpt-4.1-nano'): {
+    ('GPTXChatEngine', 'gpt-4.1-nano'): {
         'input': 0.10 / 1e6,
         'cached_input': 0.025 / 1e6,
         'output': 0.40 / 1e6
@@ -83,19 +83,19 @@ def estimate_cost(info: RuntimeInfo, pricing: dict) -> float:
     return input_cost + cached_input_cost + output_cost
 
 
-class AnswerInput(LLMDataModel):
-    """Input for answer matching"""
-    predicted_answer: str = Field(description="The predicted answer to match")
-    expected_answer: str = Field(description="The expected answer to match")
 
-class AnswerOutput(LLMDataModel):
-    """Output for answer matching"""
-    match_score: float = Field(description="The similarity score between the predicted and expected answers")
+class BatchAnswerInput(LLMDataModel):
+    """Input for batch answer matching"""
+    answer_pairs: List[dict] = Field(description="List of answer pairs to match, each containing 'predicted_answer' and 'expected_answer'")
+
+class BatchAnswerOutput(LLMDataModel):
+    """Output for batch answer matching"""
+    match_scores: List[float] = Field(description="List of similarity scores between predicted and expected answers")
 
 @contract(
     pre_remedy=False,
     post_remedy=True,
-    verbose=False,
+    verbose=True,
     remedy_retry_params=dict(
         tries=25,
         delay=0.5,
@@ -105,7 +105,7 @@ class AnswerOutput(LLMDataModel):
         graceful=False
     )
 )
-class FuzzyAnswerMatcher(Expression):
+class BatchFuzzyAnswerMatcher(Expression):
     def __init__(
         self,
         threshold: float = 0.8,
@@ -117,35 +117,51 @@ class FuzzyAnswerMatcher(Expression):
         self.threshold = threshold
         self.seed = seed
 
-    def forward(self, input: AnswerInput) -> AnswerOutput:
-        """Match predicted answers with expected answers using fuzzy matching."""
+    def forward(self, input: BatchAnswerInput) -> BatchAnswerOutput:
+        """Match predicted answers with expected answers using fuzzy matching for a batch."""
         if self.contract_result is None:
-            return AnswerOutput(match_score=0.0)
+            print(self.contract_result)
+            print("Failed")
+            return BatchAnswerOutput(match_scores=[0.0] * len(input.answer_pairs))
         return self.contract_result
 
-    def pre(self, input: AnswerInput) -> bool:
+    def pre(self, input: BatchAnswerInput) -> bool:
         """Validate input data contains required fields."""
-        if not isinstance(input, AnswerInput):
-            raise ValueError("Input must be a AnswerInput instance!")
+        if not isinstance(input, BatchAnswerInput):
+            raise ValueError("Input must be a BatchAnswerInput instance!")
+        if not input.answer_pairs or len(input.answer_pairs) == 0:
+            raise ValueError("Answer pairs list cannot be empty!")
+        for pair in input.answer_pairs:
+            if not isinstance(pair, dict) or 'predicted_answer' not in pair or 'expected_answer' not in pair:
+                raise ValueError("Each answer pair must be a dict with 'predicted_answer' and 'expected_answer' keys!")
         return True
 
-    def post(self, output: AnswerOutput) -> bool:
-        """Validate output contains match score."""
-        if not isinstance(output, AnswerOutput):
-            raise ValueError("Output must be a AnswerOutput instance!")
-        if not isinstance(output.match_score, (int, float)):
-            raise ValueError("match_score must be a number!")
-        if output.match_score < 0 or output.match_score > 1:
-            raise ValueError("match_score must be between 0 and 1!")
+    def post(self, output: BatchAnswerOutput) -> bool:
+        """Validate output contains match scores."""
+        if not isinstance(output, BatchAnswerOutput):
+            raise ValueError("Output must be a BatchAnswerOutput instance!")
+        if len(output.match_scores) != self.num_a:
+            raise ValueError(f"Number of match scores ({len(output.match_scores)}) does not match number of input pairs ({self.num_a})")
+        if not isinstance(output.match_scores, list):
+            raise ValueError("match_scores must be a list!")
+        for score in output.match_scores:
+            if not isinstance(score, (int, float)):
+                raise ValueError("All match scores must be numbers!")
+            if score < 0 or score > 1:
+                raise ValueError("All match scores must be between 0 and 1!")
         return True
+
+    def act(self, input: BatchAnswerInput, **kwargs) -> BatchAnswerInput:
+        self.num_a = len(input.answer_pairs)
+        return input
 
     @property
     def prompt(self) -> str:
-        """Return prompt template for fuzzy answer matching."""
-        return f"""[[Fuzzy Answer Matching]]
-Compare the predicted answer with the expected answer and return a similarity score between 0 and 1.
+        """Return prompt template for batch fuzzy answer matching."""
+        return f"""[[Batch Fuzzy Answer Matching]]
+Compare multiple pairs of predicted answers with their expected answers and return similarity scores between 0 and 1 for each pair.
 
-Analyze the similarity between these answers considering:
+For each answer pair, analyze the similarity considering:
 1. Exact match
 2. Case-insensitive match
 3. Semantic similarity
@@ -153,7 +169,10 @@ Analyze the similarity between these answers considering:
 5. Character-level similarity
 
 Be lenient with formatting differences (case, spaces, underscores) but strict with semantic meaning.
-Focus on whether the answers convey the same concept."""
+Focus on whether the answers convey the same concept.
+
+Return a list of similarity scores in the same order as the input pairs."""
+
 
 
 class Neo4jQueryInput(LLMDataModel):
@@ -458,7 +477,6 @@ class Neo4jConfig(BaseModel):
     use_run_specific_databases: bool = True  # New field to control database strategy
     default_database: str = "neo4j"  # Fallback database name
     auto_cleanup: bool = False  # New field to control automatic cleanup
-    use_fuzzy_matching: bool = True  # Enable fuzzy answer matching
     fuzzy_threshold: float = 0.8  # Threshold for fuzzy matching
 
     def __init__(self, **data):
@@ -478,8 +496,6 @@ class Neo4jConfig(BaseModel):
             data['default_database'] = os.environ['NEO4J_DEFAULT_DATABASE']
         if 'NEO4J_AUTO_CLEANUP' in os.environ:
             data['auto_cleanup'] = os.environ['NEO4J_AUTO_CLEANUP'].lower() == 'true'
-        if 'NEO4J_USE_FUZZY_MATCHING' in os.environ:
-            data['use_fuzzy_matching'] = os.environ['NEO4J_USE_FUZZY_MATCHING'].lower() == 'true'
         if 'NEO4J_FUZZY_THRESHOLD' in os.environ:
             data['fuzzy_threshold'] = float(os.environ['NEO4J_FUZZY_THRESHOLD'])
 
@@ -796,13 +812,9 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
         # Initialize converter with the driver (it will use the database_name parameter in queries)
         converter = BatchQuestionToCypherConverter(driver=driver, database_name=database_name)
 
-        # Initialize fuzzy answer matcher if enabled
-        fuzzy_matcher = None
-        if config.use_fuzzy_matching:
-            fuzzy_matcher = FuzzyAnswerMatcher(threshold=config.fuzzy_threshold)
-            logger.info(f"Fuzzy matching enabled with threshold: {config.fuzzy_threshold}")
-        else:
-            logger.info("Exact matching enabled")
+        # Initialize batch fuzzy answer matcher
+        batch_fuzzy_matcher = BatchFuzzyAnswerMatcher(threshold=config.fuzzy_threshold)
+        logger.info(f"Batch fuzzy matching enabled with threshold: {config.fuzzy_threshold}")
 
         # Get schema from the run-specific database
         schema = _get_database_schema(driver, database_name)
@@ -890,7 +902,11 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
                     queries = result.queries
                     logger.debug(f"Generated {len(queries)} Neo4j queries")
 
-                    # Process each query in the batch
+                    # Initialize batch results
+                    batch_iteration_results = []
+                    batch_answer_pairs = []
+
+                    # First pass: Execute all queries and collect results
                     for i, (question, options, answer, query) in enumerate(zip(batch_questions, batch_options, batch_answers, queries)):
                         query_idx = start_idx + i
 
@@ -926,51 +942,73 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
                                     iteration_result['returned_results'] = True
                                     result_value = list(results[0].values())[0] if results[0] else None
                                     if result_value is not None:
-                                        # Use fuzzy matching if enabled, otherwise use exact matching
-                                        if fuzzy_matcher:
-                                            # Prepare data for fuzzy matching
-                                            match_input = AnswerInput(
-                                                predicted_answer=str(result_value),
-                                                expected_answer=str(answer)
-                                            )
+                                        # Add to batch for fuzzy matching
+                                        batch_answer_pairs.append({
+                                            'predicted_answer': str(result_value),
+                                            'expected_answer': str(answer)
+                                        })
+                                    else:
+                                        # No result value, add empty pair
+                                        batch_answer_pairs.append({
+                                            'predicted_answer': '',
+                                            'expected_answer': str(answer)
+                                        })
+                                else:
+                                    # No results, add empty pair
+                                    batch_answer_pairs.append({
+                                        'predicted_answer': '',
+                                        'expected_answer': str(answer)
+                                    })
 
-                                            try:
-                                                # Use fuzzy matcher to determine similarity score
-                                                match_output = fuzzy_matcher(match_input)
-                                                match_score = match_output.match_score
-
-                                                # Determine if answer is correct based on threshold
-                                                is_correct = match_score >= config.fuzzy_threshold
-
-                                                iteration_result['correct'] = is_correct
-                                                iteration_result['match_score'] = match_score
-
-                                                logger.debug(f"Fuzzy match - Score: {match_score:.3f}, Threshold: {config.fuzzy_threshold}, Correct: {is_correct}")
-
-                                            except Exception as match_error:
-                                                logger.warning(f"Fuzzy matching failed, falling back to exact matching: {match_error}")
-                                                # Fallback to exact matching
-                                                result_str = str(result_value).lower().replace(' ', '')
-                                                answer_str = str(answer).lower().replace(' ', '')
-                                                iteration_result['correct'] = (result_str == answer_str)
-                                                iteration_result['match_score'] = 1.0 if iteration_result['correct'] else 0.0
-                                        else:
-                                            # Use exact matching
-                                            result_str = str(result_value).lower().replace(' ', '')
-                                            answer_str = str(answer).lower().replace(' ', '')
-                                            iteration_result['correct'] = (result_str == answer_str)
-                                            iteration_result['match_score'] = 1.0 if iteration_result['correct'] else 0.0
-
-                                logger.debug(f"Neo4j Question {query_idx + 1}: '{question}' - Success: {iteration_result['successful']}, Results: {iteration_result['returned_results']}, Correct: {iteration_result['correct']}")
+                                logger.debug(f"Neo4j Question {query_idx + 1}: '{question}' - Success: {iteration_result['successful']}, Results: {iteration_result['returned_results']}")
 
                             except Exception as e:
                                 iteration_result['error'] = str(e)
                                 logger.debug(f"Error executing Neo4j query: {e}")
+                                # Add empty pair for failed query
+                                batch_answer_pairs.append({
+                                    'predicted_answer': '',
+                                    'expected_answer': str(answer)
+                                })
 
-                        # Store iteration result
+                        batch_iteration_results.append(iteration_result)
+
+                    # Second pass: Perform batch fuzzy matching if we have answer pairs
+                    if batch_answer_pairs:
+                        try:
+                            # Prepare batch input for fuzzy matching
+                            batch_match_input = BatchAnswerInput(answer_pairs=batch_answer_pairs)
+
+                            # Use batch fuzzy matcher to determine similarity scores
+                            batch_match_output = batch_fuzzy_matcher(input=batch_match_input)
+                            batch_match_scores = batch_match_output.match_scores
+
+                            # Apply match scores to results
+                            for i, (iteration_result, match_score) in enumerate(zip(batch_iteration_results, batch_match_scores)):
+                                if iteration_result['returned_results'] and iteration_result['successful']:
+                                    # Determine if answer is correct based on threshold
+                                    is_correct = match_score >= config.fuzzy_threshold
+                                    iteration_result['correct'] = is_correct
+                                    iteration_result['match_score'] = match_score
+                                    logger.debug(f"Batch fuzzy match {i+1} - Score: {match_score:.3f}, Threshold: {config.fuzzy_threshold}, Correct: {is_correct}")
+                                else:
+                                    # No results or failed query, mark as incorrect
+                                    iteration_result['correct'] = False
+                                    iteration_result['match_score'] = 0.0
+
+                        except Exception as match_error:
+                            logger.warning(f"Batch fuzzy matching failed: {match_error}")
+                            # Mark all as incorrect if batch fuzzy matching fails
+                            for iteration_result in batch_iteration_results:
+                                iteration_result['correct'] = False
+                                iteration_result['match_score'] = 0.0
+
+                    # Store all iteration results
+                    for iteration_result in batch_iteration_results:
                         results_data.append(iteration_result)
 
                         # Update query stats
+                        query_idx = iteration_result['query_idx'] - 1  # Convert back to 0-based index
                         query_stats[query_idx]['iterations'].append(iteration_result)
                         if iteration_result['successful']:
                             query_stats[query_idx]['successful'] = True
@@ -1016,9 +1054,8 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
 
         logger.info("Neo4j Evaluation Results:")
         logger.info(f"Database used: {database_name}")
-        logger.info(f"Matching method: {'Fuzzy' if config.use_fuzzy_matching else 'Exact'}")
-        if config.use_fuzzy_matching:
-            logger.info(f"Fuzzy threshold: {config.fuzzy_threshold}")
+        logger.info(f"Matching method: Batch Fuzzy")
+        logger.info(f"Fuzzy threshold: {config.fuzzy_threshold}")
         logger.info(f"Successfully processed: {successful_queries} / {total_queries} queries")
         logger.info(f"Queries that returned results: {queries_with_results} / {total_queries}")
         logger.info(f"Correct results: {correct_queries} / {total_queries}")
@@ -1174,8 +1211,8 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
         neo4j_metrics = {
             'database_name': database_name,
             'run_id': run_id,
-            'matching_method': 'fuzzy' if config.use_fuzzy_matching else 'exact',
-            'fuzzy_threshold': config.fuzzy_threshold if config.use_fuzzy_matching else None,
+            'matching_method': 'fuzzy',
+            'fuzzy_threshold': config.fuzzy_threshold,
             'successful_queries': successful_queries,
             'total_queries': total_queries,
             'success_rate': successful_queries / total_queries if total_queries > 0 else 0,
