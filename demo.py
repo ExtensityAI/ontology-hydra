@@ -345,7 +345,6 @@ def compute_ontology_and_kg(
             texts=chunked_texts,
             kg_name=kg_name,
             ontology=ontology,
-            threshold=threshold,
             batch_size=batch_size,
         )
         visualize_kg(kg, output_path / "kg.html", ontology)
