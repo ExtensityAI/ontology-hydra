@@ -207,7 +207,7 @@ class TripletExtractor(Expression):
 
 
 def generate_kg(
-    kg_path: Path,
+    cache_path: Path,
     texts: list[str],
     kg_name: str,
     ontology: Ontology | None = None,
@@ -216,7 +216,7 @@ def generate_kg(
 ) -> KG:
     extractor = TripletExtractor(name=kg_name, ontology=ontology)
 
-    partial_path = kg_path.with_suffix(".partial.json")
+    partial_path = cache_path.with_suffix(".partial.json")
 
     usage = None
     triplets = []
@@ -259,7 +259,7 @@ def generate_kg(
                         )
 
                         visualize_kg(
-                            extractor.get_kg(), kg_path.with_suffix(".partial.html"), ontology, open_browser=False
+                            extractor.get_kg(), cache_path.with_suffix(".partial.html"), ontology, open_browser=False
                         )
 
                 except Exception as e:
@@ -282,6 +282,6 @@ def generate_kg(
             break
 
     kg = extractor.get_kg()
-    kg_path.write_text(kg.model_dump_json(indent=2), encoding="utf-8")
+    cache_path.write_text(kg.model_dump_json(indent=2), encoding="utf-8")
 
     return kg

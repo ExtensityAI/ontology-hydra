@@ -278,12 +278,14 @@ version = "0.1.0"
 source = { editable = "packages/eval" }
 dependencies = [
     { name = "evaluate" },
+    { name = "neo4j" },
     { name = "ontopipe" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "evaluate", specifier = "==0.4.3" },
+    { name = "neo4j", specifier = ">=5.28.1" },
     { name = "ontopipe", editable = "." },
 ]
 
@@ -919,15 +921,11 @@ name = "ontopipe"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
-    { name = "neo4j" },
     { name = "symbolicai" },
 ]
 
 [package.metadata]
-requires-dist = [
-    { name = "neo4j", specifier = ">=5.28.1" },
-    { name = "symbolicai", git = "https://github.com/ExtensityAI/symbolicai.git?rev=912642d2da2a4aa83909bb6c06d1b5d3a167c48a" },
-]
+requires-dist = [{ name = "symbolicai", git = "https://github.com/ExtensityAI/symbolicai.git?branch=dev" }]
 
 [[package]]
 name = "openai"
@@ -1639,8 +1637,8 @@ wheels = [
 
 [[package]]
 name = "symbolicai"
-version = "0.12.0"
-source = { git = "https://github.com/ExtensityAI/symbolicai.git?rev=912642d2da2a4aa83909bb6c06d1b5d3a167c48a#912642d2da2a4aa83909bb6c06d1b5d3a167c48a" }
+version = "0.13.2"
+source = { git = "https://github.com/ExtensityAI/symbolicai.git?branch=dev#722a65abe2eccca2a2bf31f512e0f659a37af8b3" }
 dependencies = [
     { name = "accelerate" },
     { name = "aiohttp" },
