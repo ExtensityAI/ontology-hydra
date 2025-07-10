@@ -1,5 +1,6 @@
 import tempfile
 from collections.abc import Iterable
+from concurrent.futures import ThreadPoolExecutor
 from logging import getLogger
 from pathlib import Path
 
@@ -34,19 +35,21 @@ def _generate_comittee_with_cache(domain: str, cache_path: Path):
 
 def _generate_scope_documents_with_cache(domain: str, comittee: Comittee, cache_path: Path, group_size):
     groups = comittee.divide_into_groups(group_size)
-    documents = []
+    documents = [None] * len(groups)
 
-    for i, group in enumerate(groups):
+    def process_group(i_group):
+        i, group = i_group
         doc_cache_path = cache_path / f"scope_{i}.txt"
-
         if doc_cache_path.exists():
-            documents.append(doc_cache_path.read_text(encoding="utf-8", errors="ignore"))
-            continue
-
+            return i, doc_cache_path.read_text(encoding="utf-8", errors="ignore")
         doc = generate_scope_document(domain, [m.persona for m in group])
-        documents.append(doc)
-
         doc_cache_path.write_text(doc, encoding="utf-8")
+        return i, doc
+
+    with ThreadPoolExecutor() as executor:
+        results = executor.map(process_group, enumerate(groups))
+        for i, doc in results:
+            documents[i] = doc
 
     return documents
 
