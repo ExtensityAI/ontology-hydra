@@ -1,5 +1,4 @@
 from logging import getLogger
-from typing import List
 
 from pydantic import Field
 from symai import Expression
@@ -18,12 +17,28 @@ class QuestionGenerationInput(LLMDataModel):
     scope_document: str = Field(..., description="The scope document containing domain information")
 
 
+class QuestionGeneratorOutput(LLMDataModel):
+    items: list[str] = Field(..., description="List of generated questions")
+
+
+class Question(LLMDataModel):
+    index: int
+    text: str
+
+
 class Questions(LLMDataModel):
-    items: List[str] = Field(..., description="List of generated questions")
+    items: list[Question] = Field(..., description="List of questions")
 
 
-class DeduplicatedQuestions(LLMDataModel):
-    items: List[str] = Field(..., description="List of deduplicated questions")
+class Duplicate(LLMDataModel):
+    question: str = Field(..., description="The question text that is duplicated")
+    indexes: list[int] = Field(
+        ..., description="List of indexes of duplicates (including the original! thus, length is at least 2)"
+    )
+
+
+class Duplicates(LLMDataModel):
+    duplicates: list[Duplicate] = Field(..., description="List of duplicates found in the questions")
 
 
 @contract(
@@ -37,12 +52,12 @@ class QuestionGenerator(Expression):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-    def forward(self, input: QuestionGenerationInput, **kwargs) -> Questions:
+    def forward(self, input: QuestionGenerationInput, **kwargs) -> QuestionGeneratorOutput:
         if self.contract_result is None:
             raise ValueError("Contract failed!")
         return self.contract_result
 
-    def post(self, output: Questions) -> bool:
+    def post(self, output: QuestionGeneratorOutput) -> bool:
         # Ensure we have at least one question (TODO in the future improve this massively, and maybe skip the scoping step as well!)
         if not output.items or len(output.items) == 0:
             return False
@@ -53,11 +68,13 @@ class QuestionGenerator(Expression):
         return prompt_registry.instruction("generate_questions")
 
 
-def generate_questions(domain: str, group: list[ComitteeMember], scope_document: str) -> List[str]:
+def generate_questions(domain: str, group: list[ComitteeMember], scope_document: str) -> list[str]:
     generator = QuestionGenerator()
 
     with MetadataTracker() as tracker:
-        result = generator(input=QuestionGenerationInput(domain=domain, group=group, scope_document=scope_document))
+        result: QuestionGeneratorOutput = generator(
+            input=QuestionGenerationInput(domain=domain, group=group, scope_document=scope_document)
+        )
 
         generator.contract_perf_stats()
         logger.debug("API Usage: %s", tracker.usage)
@@ -76,15 +93,12 @@ class QuestionDeduplicator(Expression):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-    def forward(self, input: Questions, **kwargs) -> DeduplicatedQuestions:
+    def forward(self, input: Questions, **kwargs) -> Duplicates:
         if self.contract_result is None:
             raise ValueError("Contract failed!")
         return self.contract_result
 
-    def post(self, output: DeduplicatedQuestions) -> bool:
-        # Ensure we have at least one question after deduplication
-        if not output.items or len(output.items) == 0:
-            return False
+    def post(self, output: Duplicates) -> bool:
         return True
 
     @property

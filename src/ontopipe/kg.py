@@ -15,6 +15,7 @@ from ontopipe.models import (
     TripletExtractorInput,
 )
 from ontopipe.prompts import prompt_registry
+from ontopipe.vis import visualize_kg
 
 logger = getLogger("ontopipe.kg")
 
@@ -206,7 +207,7 @@ class TripletExtractor(Expression):
 
 
 def generate_kg(
-    kg_path: Path,
+    cache_path: Path,
     texts: list[str],
     kg_name: str,
     ontology: Ontology | None = None,
@@ -215,7 +216,7 @@ def generate_kg(
 ) -> KG:
     extractor = TripletExtractor(name=kg_name, ontology=ontology)
 
-    partial_path = kg_path.with_suffix(".partial.json")
+    partial_path = cache_path.with_suffix(".partial.json")
 
     usage = None
     triplets = []
@@ -246,12 +247,19 @@ def generate_kg(
                         n_new_triplets_in_epoch += n_new_triplets
 
                         # write partial kg state to file already
-                        partial_path.write_text(extractor.get_kg().model_dump_json(indent=2), encoding="utf-8")
+                        partial_path.write_text(
+                            extractor.get_kg().model_dump_json(indent=2),
+                            encoding="utf-8",
+                        )
 
                         logger.debug(
                             "Extracted %i new triplets from text chunk: %s",
                             n_new_triplets,
                             text[:50],
+                        )
+
+                        visualize_kg(
+                            extractor.get_kg(), cache_path.with_suffix(".partial.html"), ontology, open_browser=False
                         )
 
                 except Exception as e:
@@ -274,6 +282,6 @@ def generate_kg(
             break
 
     kg = extractor.get_kg()
-    kg_path.write_text(kg.model_dump_json(indent=2), encoding="utf-8")
+    cache_path.write_text(kg.model_dump_json(indent=2), encoding="utf-8")
 
     return kg
