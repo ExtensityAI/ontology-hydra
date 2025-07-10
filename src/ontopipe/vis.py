@@ -9,7 +9,7 @@ from ontopipe.models import KG, Ontology
 
 
 # Global backward compatibility functions to match the original API
-def visualize_ontology(ontology: Ontology, output_html_path: Path):
+def visualize_ontology(ontology: Ontology, output_html_path: Path, open_browser: bool = True):
     """
     Backwards compatible function that matches the original API.
     Creates an interactive visualization of an ontology.
@@ -21,7 +21,7 @@ def visualize_ontology(ontology: Ontology, output_html_path: Path):
     output_html_path : Path
         Path to save the HTML visualization
     """
-    viz = KnowledgeGraphViz(output_dir=str(output_html_path.parent))
+    viz = KnowledgeGraphViz(output_dir=str(output_html_path.parent), auto_open=open_browser)
     return viz.visualize_ontology(ontology, filename=output_html_path.name)
 
 

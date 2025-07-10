@@ -8,21 +8,11 @@ prompt_registry = PromptRegistry()
 # ==================================================#
 # Tags
 prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_class", "OWL CLASS")
-prompt_registry.register_tag(
-    PromptLanguage.ENGLISH, "owl_subclass_relation", "OWL SUBCLASS RELATION"
-)
-prompt_registry.register_tag(
-    PromptLanguage.ENGLISH, "owl_object_property", "OWL OBJECT PROPERTY"
-)
-prompt_registry.register_tag(
-    PromptLanguage.ENGLISH, "owl_data_property", "OWL DATA PROPERTY"
-)
-prompt_registry.register_tag(
-    PromptLanguage.ENGLISH, "competency_question", "COMPETENCY QUESTION"
-)
-prompt_registry.register_tag(
-    PromptLanguage.ENGLISH, "ontology_guidelines", "ONTOLOGY GUIDELINES"
-)
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_subclass_relation", "OWL SUBCLASS RELATION")
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_object_property", "OWL OBJECT PROPERTY")
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "owl_data_property", "OWL DATA PROPERTY")
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "competency_question", "COMPETENCY QUESTION")
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "ontology_guidelines", "ONTOLOGY GUIDELINES")
 
 # Instructions
 prompt_registry.register_instruction(
@@ -169,9 +159,7 @@ Return your output as a structured set of operations with explicit details (incl
 # ----Triplet Extraction----------------------------#
 # ==================================================#
 # Tags
-prompt_registry.register_tag(
-    PromptLanguage.ENGLISH, "triplet_extraction", "TRIPLET EXTRACTION"
-)
+prompt_registry.register_tag(PromptLanguage.ENGLISH, "triplet_extraction", "TRIPLET EXTRACTION")
 
 # Instructions
 prompt_registry.register_instruction(
@@ -318,7 +306,7 @@ Two questions are duplicates if:
 
 Instructions:
 1. Compare each question against all others
-2. Only keep the first occurrence of any semantically identical question
+2. Only keep the first occurrence of any semantically identical question (be careful, a more specific question is not a duplicate of a more general one!)
 3. Return the deduplicated list in the original format
 4. Return ONLY the questions themselves with no additional text
 
@@ -341,18 +329,11 @@ Your task is to create a scope document that defines what is included within the
 4. Do not include any title, introduction, summary, or conclusion - only the content sections
 
 ## Content Guidelines
-1. Domain Definition:
    - Provide a clear, concise definition of the domain
    - Describe the conceptual areas that comprise this domain
-
-2. Core Topics:
    - List all major conceptual areas within the domain
-   - For each core topic, list all relevant sub-topics
+   - For each core topic, list all relevant sub-topics (and go as many levels deep as necessary!)
    - Ensure topics are defined at an appropriate level of abstraction
-
-3. Terminology:
-   - Define domain-specific terms and concepts
-   - Identify hierarchical relationships between key concepts
 
 Remember: Anything mentioned in this document is considered in-scope for the ontology. The document should thoroughly describe what the domain is about.""",
 )
@@ -414,7 +395,7 @@ Competency questions are specific queries that domain users would want to answer
 3. Ensure questions are concrete and answerable with facts
 4. Cover diverse aspects of the domain
 5. Phrase questions using natural language as users would ask them
-6. Keep questions concise. If necessary, write two simpler questions instead of one that is too complex.
+6. Keep most questions concise. If necessary, write two simpler questions instead of one that is too complex in most cases. For 4-5 simple questions, generate a more complex one s.t. we get a good mix!
 
 Generate a list of as many competency questions as required to cover the domain comprehensively.
 """,

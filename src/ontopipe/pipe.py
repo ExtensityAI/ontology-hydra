@@ -1,4 +1,5 @@
 import tempfile
+from collections.abc import Iterable
 from logging import getLogger
 from pathlib import Path
 
@@ -6,6 +7,8 @@ from symai.components import MetadataTracker
 
 from ontopipe.cqs.comittee import Comittee, generate_comittee_for_domain
 from ontopipe.cqs.question_generation import (
+    Duplicates,
+    Question,
     QuestionDeduplicator,
     Questions,
     generate_questions,
@@ -22,28 +25,22 @@ logger = getLogger("ontopipe.pipe")
 
 def _generate_comittee_with_cache(domain: str, cache_path: Path):
     if cache_path.exists():
-        return Comittee.model_validate_json(
-            cache_path.read_text(encoding="utf-8", errors="ignore")
-        )
+        return Comittee.model_validate_json(cache_path.read_text(encoding="utf-8", errors="ignore"))
 
     comittee = generate_comittee_for_domain(domain)
     cache_path.write_text(comittee.model_dump_json(indent=2), encoding="utf-8")
     return comittee
 
 
-def _generate_scope_documents_with_cache(
-    domain: str, comittee: Comittee, cache_path: Path
-):
-    groups = comittee.divide_into_groups(4)  # TODO n is hyperparam
+def _generate_scope_documents_with_cache(domain: str, comittee: Comittee, cache_path: Path, group_size):
+    groups = comittee.divide_into_groups(group_size)
     documents = []
 
     for i, group in enumerate(groups):
         doc_cache_path = cache_path / f"scope_{i}.txt"
 
         if doc_cache_path.exists():
-            documents.append(
-                doc_cache_path.read_text(encoding="utf-8", errors="ignore")
-            )
+            documents.append(doc_cache_path.read_text(encoding="utf-8", errors="ignore"))
             continue
 
         doc = generate_scope_document(domain, [m.persona for m in group])
@@ -54,9 +51,7 @@ def _generate_scope_documents_with_cache(
     return documents
 
 
-def _merge_scope_documents_with_cache(
-    domain: str, documents: list[str], cache_path: Path
-):
+def _merge_scope_documents_with_cache(domain: str, documents: list[str], cache_path: Path):
     if cache_path.exists():
         return cache_path.read_text(encoding="utf-8", errors="ignore")
 
@@ -65,58 +60,61 @@ def _merge_scope_documents_with_cache(
     return merged_scope
 
 
-def _generate_scope_with_cache(domain: str, comittee: Comittee, cache_path: Path):
+def _generate_scope_with_cache(domain: str, comittee: Comittee, group_size: int, cache_path: Path):
     merged_scope_path = cache_path / "scope_merged.txt"
 
     # in case the merged scope exists, we can load it directly and skip everything else
     if merged_scope_path.exists():
         return merged_scope_path.read_text(encoding="utf-8", errors="ignore")
 
-    documents = _generate_scope_documents_with_cache(domain, comittee, cache_path)
+    documents = _generate_scope_documents_with_cache(domain, comittee, cache_path, group_size)
 
     return _merge_scope_documents_with_cache(domain, documents, merged_scope_path)
 
 
-def _deduplicate_cqs(cqs: list[str]) -> list[str]:
-    cqs = list(set(cqs))
-    cqs = sorted(cqs, key=lambda x: len(x.split(" ")), reverse=True)
+def _sort_cqs(cqs: Iterable[str]):
+    """Sorts CQs by length of the question, longest first."""
+    return sorted(cqs, key=lambda x: len(x.split(" ")), reverse=True)
+
+
+def _deduplicate_cqs(cqs: list[str], cache_path: Path) -> list[str]:
+    cqs = _sort_cqs(set(cqs))
+    questions = Questions(items=[Question(index=i, text=q) for i, q in enumerate(cqs)])
 
     with MetadataTracker() as tracker:
         deduplicator = QuestionDeduplicator()
-        deduplicated_cqs = deduplicator(input=Questions(items=cqs))
+        res: Duplicates = deduplicator(input=questions)
 
         deduplicator.contract_perf_stats()
         logger.debug("CQ Deduplication API Usage: %s", tracker.usage)
 
-    logger.debug(
-        "Deduplicated %d CQs to %d unique CQs", len(cqs), len(deduplicated_cqs.items)
-    )
+    # TODO write duplicates to cache file, but not only with indexes but actual questions!
+    cache_path.write_text(res.model_dump_json(indent=2), encoding="utf-8")
 
-    return deduplicated_cqs.items
+    # deduplicate CQs based on the duplicates found (1. take new questions and 2. add all non-duplicates)
+    deduplicated_cqs = set(d.question for d in res.duplicates)
+    deduplicated_cqs.update(set(cqs) - set(cqs[i] for d in res.duplicates for i in d.indexes))
+
+    len_before = len(cqs)
+    cqs = _sort_cqs(deduplicated_cqs)
+    logger.debug("Deduplicated %d CQs to %d unique CQs", len_before, len(cqs))
+    return cqs
 
 
-def _generate_cqs_with_cache(
-    domain: str, merged_scope: str, comittee: Comittee, cache_path: Path
-):
+def _generate_cqs_with_cache(domain: str, merged_scope: str, group_size: int, comittee: Comittee, cache_path: Path):
     combined_cqs_path = cache_path / "cqs_combined.txt"
 
     # in case all cqs were generated and combined, we can load them directly and skip everything else
     if combined_cqs_path.exists():
-        return combined_cqs_path.read_text(encoding="utf-8", errors="ignore").split(
-            "\n"
-        )
+        return combined_cqs_path.read_text(encoding="utf-8", errors="ignore").split("\n")
 
     cqs = []
 
-    for i, group in enumerate(comittee.divide_into_groups(4)):  # TODO n is hyperparam
+    for i, group in enumerate(comittee.divide_into_groups(group_size)):
         group_cqs_cache_path = cache_path / f"cqs_{i}.txt"
 
         if group_cqs_cache_path.exists():
-            cqs.extend(
-                group_cqs_cache_path.read_text(encoding="utf-8", errors="ignore").split(
-                    "\n"
-                )
-            )
+            cqs.extend(group_cqs_cache_path.read_text(encoding="utf-8", errors="ignore").split("\n"))
             continue
 
         group_cqs = generate_questions(domain, group, merged_scope)
@@ -124,7 +122,7 @@ def _generate_cqs_with_cache(
         cqs.extend(group_cqs)
 
     # deduplicate CQs
-    cqs = _deduplicate_cqs(cqs)
+    cqs = _deduplicate_cqs(cqs, cache_path / "duplicates.json")
 
     combined_cqs_path.write_text("\n".join(cqs), encoding="utf-8")
 
@@ -132,43 +130,41 @@ def _generate_cqs_with_cache(
 
 
 def _generate_ontology_with_cache(
-    domain: str, cqs: list[str], cache_path: Path, fixed_cache_path: Path
+    domain: str, cqs: list[str], cache_path: Path, fixed_cache_path: Path, batch_size: int = 4
 ):
     if fixed_cache_path.exists():
         # we have a cached fixed ontology, load it directly
-        return Ontology.model_validate_json(
-            fixed_cache_path.read_text(encoding="utf-8", errors="ignore")
-        )
+        return Ontology.model_validate_json(fixed_cache_path.read_text(encoding="utf-8", errors="ignore"))
 
     if cache_path.exists():
-        ontology = Ontology.model_validate_json(
-            cache_path.read_text(encoding="utf-8", errors="ignore")
-        )
+        ontology = Ontology.model_validate_json(cache_path.read_text(encoding="utf-8", errors="ignore"))
 
     else:
         logger.debug("Generating ontology from %d CQs", len(cqs))
-        ontology = generate_ontology(cqs, domain, cache_path, batch_size=4)
+        ontology = generate_ontology(cqs, domain, cache_path, batch_size=batch_size)
 
     logger.debug("Fixing ontology")
     ontology = fix_ontology(ontology, fixed_cache_path.parent, fixed_cache_path.name)
     fixed_cache_path.write_text(ontology.model_dump_json(indent=2), encoding="utf-8")
 
-    visualize_ontology(ontology, Path(str(cache_path) + ".html"))
+    visualize_ontology(ontology, cache_path.with_suffix(".html"))
 
     return ontology
 
 
-def ontopipe(domain: str, cache_path: Path = Path(tempfile.mkdtemp("ontopipe"))):
+def ontopipe(
+    domain: str, group_size: int = 4, cqs_per_batch: int = 4, cache_path: Path = Path(tempfile.mkdtemp("ontopipe"))
+):
     """Runs the ontopipe pipeline to generate an ontology for the given domain.
 
     Args:
         domain (str): The domain for which to generate the ontology.
+        group_size (int): The number of committee members to group together for scope and cq generation. Defaults to 4.
+        cqs_per_batch (int): The number of CQs to process in a single batch during ontology generation. Defaults to 4.
         cache_path (Path): The path to the cache directory. If it does not exist, a temp directory will be created."""
 
     if not cache_path.exists() or not cache_path.is_dir():
-        raise ValueError(
-            f"Cache path '{cache_path}' is not a directory or does not exist"
-        )
+        raise ValueError(f"Cache path '{cache_path}' is not a directory or does not exist")
 
     logger.debug("Generating ontology for domain: '%s'", domain)
     logger.debug("Using cache path: %s", cache_path)
@@ -189,19 +185,13 @@ def ontopipe(domain: str, cache_path: Path = Path(tempfile.mkdtemp("ontopipe")))
         len(comittee.members),
     )
 
-    scope = _generate_scope_with_cache(domain, comittee, scopes_path)
-    logger.debug(
-        "Generated scope for domain '%s' with %d words", domain, len(scope.split(" "))
-    )
+    scope = _generate_scope_with_cache(domain, comittee, group_size, scopes_path)
+    logger.debug("Generated scope for domain '%s' with %d words", domain, len(scope.split(" ")))
 
-    cqs = _generate_cqs_with_cache(domain, scope, comittee, cqs_path)
+    cqs = _generate_cqs_with_cache(domain, scope, group_size, comittee, cqs_path)
     logger.debug("Generated %d CQs for domain '%s'", len(cqs), domain)
 
-    # TODO make this configurable
-    # with DynamicEngine("o4-mini", os.getenv("NEUROSYMBOLIC_ENGINE_API_KEY")):
-    ontology = _generate_ontology_with_cache(
-        domain, cqs, ontology_path, fixed_ontology_path
-    )
+    ontology = _generate_ontology_with_cache(domain, cqs, ontology_path, fixed_ontology_path, batch_size=4)
 
     logger.debug(
         "Generated ontology for domain '%s' with %d subclass relations",
