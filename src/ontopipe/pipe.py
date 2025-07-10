@@ -111,18 +111,25 @@ def _generate_cqs_with_cache(domain: str, merged_scope: str, group_size: int, co
     if combined_cqs_path.exists():
         return combined_cqs_path.read_text(encoding="utf-8", errors="ignore").split("\n")
 
-    cqs = []
+    groups = list(comittee.divide_into_groups(group_size))
+    cqs = [None] * len(groups)
 
-    for i, group in enumerate(comittee.divide_into_groups(group_size)):
+    def process_group(i_group):
+        i, group = i_group
         group_cqs_cache_path = cache_path / f"cqs_{i}.txt"
-
         if group_cqs_cache_path.exists():
-            cqs.extend(group_cqs_cache_path.read_text(encoding="utf-8", errors="ignore").split("\n"))
-            continue
-
+            return i, group_cqs_cache_path.read_text(encoding="utf-8", errors="ignore").split("\n")
         group_cqs = generate_questions(domain, group, merged_scope)
         group_cqs_cache_path.write_text("\n".join(group_cqs), encoding="utf-8")
-        cqs.extend(group_cqs)
+        return i, group_cqs
+
+    with ThreadPoolExecutor() as executor:
+        results = executor.map(process_group, enumerate(groups))
+        for i, group_cqs in results:
+            cqs[i] = group_cqs
+
+    # flatten the list of lists
+    cqs = [cq for gcq in cqs for cq in gcq]
 
     # deduplicate CQs
     cqs = _deduplicate_cqs(cqs, cache_path / "duplicates.json")
