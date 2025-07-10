@@ -11,8 +11,8 @@ dependencies = ["neo4j>=5.28.1", "symbolicai"]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-[tool.uv.sources]
-symbolicai = { git = "https://github.com/ExtensityAI/symbolicai.git", rev = "f46a288fc115933cc4c934d856e24b0616fc2130" } # fixed commit hash, update if needed
-
 [tool.uv.workspace]
 members = ["packages/eval"]
+
+[tool.uv.sources]
+symbolicai = { git = "https://github.com/ExtensityAI/symbolicai.git", branch = "dev" }

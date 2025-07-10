@@ -44,7 +44,7 @@ def load_dataset(mode: str, topic: str) -> SquadDataset:
     return SquadDataset.model_validate_json(dataset_path.read_text(encoding='utf-8', errors='ignore'))
 
 
-def _generate_kg(texts: list[str], domain: str, kg_path: Path, ontology: Ontology | None = None):
+def _generate_kg(texts: list[str], domain: str, kg_path: Path, ontology: Ontology | None = None, epochs: int = 3):
     """Generate a knowledge graph from a list of texts as well as the current ontology and domain"""
 
     if kg_path.exists():
@@ -61,6 +61,7 @@ def _generate_kg(texts: list[str], domain: str, kg_path: Path, ontology: Ontolog
                 domain,
                 ontology=ontology,
                 batch_size=KG_BATCH_SIZE,  # TODO hyperparam
+                epochs=epochs
             )
         finally:
             end_time = time.perf_counter()
@@ -204,7 +205,7 @@ def _answer_all_questions(kg: KG, qas: list[SquadQAPair], cache_path: Path):
     return details
 
 
-def _eval_squad_topic(title: str, ontology: Ontology | None, path: Path, neo4j_config: Neo4jConfig, dataset_mode: str, skip_qa: bool = True):
+def _eval_squad_topic(title: str, ontology: Ontology | None, path: Path, neo4j_config: Neo4jConfig, dataset_mode: str, skip_qa: bool = True, epochs: int = 3):
     """Evaluate QA performance on a specific scenario consisting of multiple SQuAD topics using the generated ontology."""
 
     logger.info("Generating kg for '{}' using {} dataset", title, dataset_mode)
@@ -224,7 +225,7 @@ def _eval_squad_topic(title: str, ontology: Ontology | None, path: Path, neo4j_c
         title,
     )
 
-    kg = _generate_kg(contexts, title, path / "kg.json", ontology)
+    kg = _generate_kg(contexts, title, path / "kg.json", ontology, epochs)
 
     visualize_kg(kg, path / "kg.html", ontology)
 
@@ -376,7 +377,7 @@ def eval_scenario(scenario: EvalScenario, path: Path, global_neo4j_config: Neo4j
         topic_path = topics_path / title
         topic_path.mkdir(exist_ok=True, parents=True)
 
-        _eval_squad_topic(title, ontology, topic_path, merged_neo4j_config, scenario.dataset_mode, scenario.skip_qa)
+        _eval_squad_topic(title, ontology, topic_path, merged_neo4j_config, scenario.dataset_mode, scenario.skip_qa, scenario.epochs)
 
 
 def _generate_run_metrics_and_stats(path: Path, config: EvalConfig):
