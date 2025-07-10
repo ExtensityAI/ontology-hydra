@@ -9,7 +9,7 @@ from ontopipe.models import KG, Ontology
 
 
 # Global backward compatibility functions to match the original API
-def visualize_ontology(ontology: Ontology, output_html_path: Path):
+def visualize_ontology(ontology: Ontology, output_html_path: Path, open_browser: bool = True):
     """
     Backwards compatible function that matches the original API.
     Creates an interactive visualization of an ontology.
@@ -21,11 +21,11 @@ def visualize_ontology(ontology: Ontology, output_html_path: Path):
     output_html_path : Path
         Path to save the HTML visualization
     """
-    viz = KnowledgeGraphViz(output_dir=str(output_html_path.parent))
+    viz = KnowledgeGraphViz(output_dir=str(output_html_path.parent), auto_open=open_browser)
     return viz.visualize_ontology(ontology, filename=output_html_path.name)
 
 
-def visualize_kg(kg: KG, output_html_path: Path, ontology: Ontology | None = None):
+def visualize_kg(kg: KG, output_html_path: Path, ontology: Ontology | None = None, open_browser: bool = True):
     """
     Backwards compatible function that matches the original API.
     Creates an interactive visualization of a knowledge graph.
@@ -39,7 +39,7 @@ def visualize_kg(kg: KG, output_html_path: Path, ontology: Ontology | None = Non
     ontology : Ontology | None
         Optional ontology for enhanced visualization
     """
-    viz = KnowledgeGraphViz(output_dir=str(output_html_path.parent))
+    viz = KnowledgeGraphViz(output_dir=str(output_html_path.parent), auto_open=open_browser)
     return viz.visualize_kg(kg, filename=output_html_path.name, ontology=ontology)
 
 

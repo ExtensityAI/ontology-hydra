@@ -10,7 +10,7 @@ from symai import Import, Symbol
 from symai.components import FileReader
 
 from ontopipe.kg import generate_kg
-from ontopipe.models import Ontology
+from ontopipe.models import KG, Ontology
 from ontopipe.pipe import ontopipe
 from ontopipe.vis import visualize_kg, visualize_ontology
 
@@ -341,11 +341,10 @@ def compute_ontology_and_kg(
         ontology = Ontology.from_json_file(ontology_file)
         visualize_ontology(ontology, output_path / "ontology_kg.html")
         kg = generate_kg(
-            kg_path=output_path / "kg.json",
+            cache_path=output_path / "kg.json",
             texts=chunked_texts,
             kg_name=kg_name,
             ontology=ontology,
-            threshold=threshold,
             batch_size=batch_size,
         )
         visualize_kg(kg, output_path / "kg.html", ontology)
@@ -408,7 +407,7 @@ def visualize_from_files(
             with open(kg_json_file, "r") as f:
                 kg_data = json.load(f)
 
-            kg = Ontology.model_validate(kg_data)
+            kg = KG.model_validate(kg_data)
 
             kg_html = output_path / "kg_visualization.html"
             visualize_kg(kg, kg_html)

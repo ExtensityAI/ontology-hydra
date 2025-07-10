@@ -113,6 +113,8 @@ Analyze competency questions to identify ontological requirements and extract fo
    - Example: If you have Article with subclasses ReviewArticle and EmpiricalStudy, do not create a
      redundant "hasArticleType" data property that encodes this same classification
 
+9. Consider adding a label property to the top-level class. This property can be used to provide a human-readable name or description for the instances.
+
 # Naming Conventions
 1. Classes: PascalCase (e.g., `ResearchPaper`, `Author`)
 2. Properties: camelCase starting with a verb (e.g., `hasAuthor`, `isPublishedIn`)
@@ -199,16 +201,6 @@ Your final output must be a JSON array (list) of objects, where each object repr
 
 Format the output as a JSON list [...] containing one object per triple. Do not include any additional commentary or explanation in the output—only the JSON data.
 
-### Example Output values:
-
-- {{"subject": "claude_shannon", "predicate": "isA", "object": "Person" }}
-- {{"subject": "claude_shannon_develops_phd_dissertation_1939", "predicate": "isA", "object": "LifeEvent" }}
-- {{"subject": "claude_shannon_phd_dissertation", "predicate": "isA", "object": "Document" }}
-- {{"subject": "claude_shannon_develops_phd_dissertation_1939", "predicate": "has_participant", "object": "claude_shannon" }}
-- {{"subject": "claude_shannon_develops_phd_dissertation_1939", "predicate": "happens_in", "object": "1939" }}
-- {{"subject": "claude_shannon_develops_phd_dissertation_1939", "predicate": "produces_document", "object": "claude_shannon_phd_dissertation" }}
-- {{"subject": "claude_shannon_phd_dissertation", "predicate": "completed_in_year", "object": "1939" }}
-
 
 Instructions Recap: Extract all relevant triples from the text, including each entity's isA type triple, and present them as JSON {{subject, predicate, object}} objects. Follow the naming rules and use the ontology's vocabulary strictly. Ensure every fact is backed by the text, with no extraneous or inferred information. Avoid overloaded or redundant entity names. By adhering to these guidelines, the output will consist of high-quality triples ready for knowledge graph construction.
 """,
@@ -251,15 +243,6 @@ Your final output must be a JSON array (list) of objects, where each object repr
 
 Format the output as a JSON list [...] containing one object per triple. Do not include any additional commentary or explanation in the output—only the JSON data.
 
-### Example Output values:
-
-- {{"subject": "claude_shannon", "predicate": "isA", "object": "Person" }}
-- {{"subject": "claude_shannon_develops_phd_dissertation_1939", "predicate": "isA", "object": "Event" }}
-- {{"subject": "claude_shannon_phd_dissertation", "predicate": "isA", "object": "Document" }}
-- {{"subject": "claude_shannon_develops_phd_dissertation_1939", "predicate": "hasParticipant", "object": "claude_shannon" }}
-- {{"subject": "claude_shannon_develops_phd_dissertation_1939", "predicate": "happensIn", "object": "1939" }}
-- {{"subject": "claude_shannon_develops_phd_dissertation_1939", "predicate": "producesDocument", "object": "claude_shannon_phd_dissertation" }}
-
 Instructions Recap: Extract all relevant triples from the text, including each entity's isA type triple, and present them as JSON {{subject, predicate, object}} objects. Follow the naming rules and create meaningful relationships. Ensure every fact is backed by the text, with no extraneous or inferred information. Avoid overloaded or redundant entity names. By adhering to these guidelines, the output will consist of high-quality triples ready for knowledge graph construction.
 """,
 )
@@ -281,15 +264,14 @@ prompt_registry.register_instruction(
     f"""{prompt_registry.tag("groups")}
 You are an ontology engineer in the initial scoping phase of creating a comprehensive ontology for the specified domain.
 
-Your current task is to identify groups of people who possess deep knowledge about this domain. These are NOT people who would help implement or design the ontology itself (like developers, ontology engineers, or integration specialists).
+Your current task is to identify groups of people who possess deep knowledge about this domain. These are NOT people who would help implement or design the ontology itself.
 
 Instead, identify an exhaustive list of domain knowledge holders - the actual experts, practitioners, researchers, users, and other groups who:
 - Have first-hand experience with the domain concepts
 - Possess specialized knowledge about domain terminology, processes, and relationships
 - Work with or use domain-related information in their professional activities
 - Can provide insights about what aspects of the domain need to be formalized and understood
-
-These domain experts will be interviewed to help scope and define what should be included in the ontology.
+- Are likely to have questions or information needs that the ontology should address
 
 Output your response as a properly formatted JSON object with nothing else.""",
 )
@@ -324,7 +306,7 @@ Two questions are duplicates if:
 
 Instructions:
 1. Compare each question against all others
-2. Only keep the first occurrence of any semantically identical question
+2. Only keep the first occurrence of any semantically identical question (be careful, a more specific question is not a duplicate of a more general one!)
 3. Return the deduplicated list in the original format
 4. Return ONLY the questions themselves with no additional text
 
@@ -347,18 +329,11 @@ Your task is to create a scope document that defines what is included within the
 4. Do not include any title, introduction, summary, or conclusion - only the content sections
 
 ## Content Guidelines
-1. Domain Definition:
    - Provide a clear, concise definition of the domain
    - Describe the conceptual areas that comprise this domain
-
-2. Core Topics:
    - List all major conceptual areas within the domain
-   - For each core topic, list all relevant sub-topics
+   - For each core topic, list all relevant sub-topics (and go as many levels deep as necessary!)
    - Ensure topics are defined at an appropriate level of abstraction
-
-3. Terminology:
-   - Define domain-specific terms and concepts
-   - Identify hierarchical relationships between key concepts
 
 Remember: Anything mentioned in this document is considered in-scope for the ontology. The document should thoroughly describe what the domain is about.""",
 )
@@ -420,6 +395,7 @@ Competency questions are specific queries that domain users would want to answer
 3. Ensure questions are concrete and answerable with facts
 4. Cover diverse aspects of the domain
 5. Phrase questions using natural language as users would ask them
+6. Keep most questions concise. If necessary, write two simpler questions instead of one that is too complex in most cases. For 4-5 simple questions, generate a more complex one s.t. we get a good mix!
 
 Generate a list of as many competency questions as required to cover the domain comprehensively.
 """,

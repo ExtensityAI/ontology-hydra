@@ -449,14 +449,14 @@ RETURN
     COLLECT(DISTINCT t.name) as techniques,
     COLLECT(DISTINCT m.name) as materials
 
-Example for "What is the band of electromagnetic waves used in a thermographic camera?":
-MATCH (em:ElectromagneticWave {name: 'infrared'}) RETURN em.name as band
+Example for "What type of imaging is used to detect bone fractures?":
+MATCH (em:ImagingModality {name: 'x_ray'}) RETURN em.name as imaging_type
 
-Example for "What is the energy generation method used in extracorporeal shock wave lithotripter?":
-MATCH (l:MedicalDevice {name: 'extracorporeal_shock_wave_lithotripter'})
-OPTIONAL MATCH (l)-[r:INVOLVES]-(m:Method)
-WHERE m.name = 'electromagnetic_vibration_method'
-RETURN m.name AS energy_generation_method
+Example for "What power source is used in a continuous glucose monitor?":
+MATCH (d:MedicalDevice {name: 'continuous_glucose_monitor'})
+OPTIONAL MATCH (d)-[r:POWERED_BY]-(p:PowerSource)
+WHERE p.name = 'lithium_battery'
+RETURN p.name AS power_source
 
 Remember:
 - Generate one query for each question in the input batch

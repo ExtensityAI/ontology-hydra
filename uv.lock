@@ -278,12 +278,14 @@ version = "0.1.0"
 source = { editable = "packages/eval" }
 dependencies = [
     { name = "evaluate" },
+    { name = "neo4j" },
     { name = "ontopipe" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "evaluate", specifier = "==0.4.3" },
+    { name = "neo4j", specifier = "==5.28.1" },
     { name = "ontopipe", editable = "." },
 ]
 
@@ -919,15 +921,11 @@ name = "ontopipe"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
-    { name = "neo4j" },
     { name = "symbolicai" },
 ]
 
 [package.metadata]
-requires-dist = [
-    { name = "neo4j", specifier = ">=5.28.1" },
-    { name = "symbolicai", git = "https://github.com/ExtensityAI/symbolicai.git?branch=dev" },
-]
+requires-dist = [{ name = "symbolicai", git = "https://github.com/ExtensityAI/symbolicai.git?branch=dev" }]
 
 [[package]]
 name = "openai"
