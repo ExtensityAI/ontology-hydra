@@ -14,6 +14,11 @@ It combines symbolic AI techniques (using the [symbolicai](https://github.com/Ex
 
 ## Setup
 
+```bash
+$ git clone <repository-url>
+cd <repository-name>
+```
+
 To set up the environment, install the Python package manager [uv](https://github.com/astral-sh/uv).
 
 Then, create a virtual environment and install the dependencies by running:
@@ -23,6 +28,25 @@ $ uv sync --all-packages
 ```
 
 _Note: It is important to use the `--all-packages` parameter as the evaluation framework is located in a separate package under `./packages/eval`._
+
+Now, you need to configure your `symbolicai` config. First, run:
+```bash
+$ uv run symconfig
+```
+
+Upon running this command for the first time, it will start the initial packages caching and initializing the `symbolicai` configuration files in the `uv`'s `.venv` directory, ultimately displaying the following warning:
+```text
+UserWarning: No configuration file found for the environment. A new configuration file has been created at <full-path>/<repository-name>/.venv/.symai/symai.config.json. Please configure your environment.
+```
+
+You then must edit the `symai.config.json` file. A neurosymbolic engine is **required** for the `symbolicai` framework to be used. More about configuration management [here](https://extensityai.gitbook.io/symbolicai/installation#configuration-file).
+
+Once you've set up the `symbolicai` config, you can must also installed an additional plugin for the `ontopipe` package:
+```bash
+$ uv run sympkg i ExtensityAI/chonkie-symai
+```
+
+Now, you are set up.
 
 ## Usage
 
