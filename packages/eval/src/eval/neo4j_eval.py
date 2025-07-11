@@ -1525,6 +1525,12 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
         df_runtime_stats.to_csv(runtime_stats_file, index=False)
         logger.info(f"Neo4j runtime statistics saved to: {runtime_stats_file}")
 
+        # Save the Neo4j schema for accountability
+        schema_file = neo4j_output_path / "neo4j_schema.txt"
+        with open(schema_file, 'w') as f:
+            f.write(schema)
+        logger.info(f"Neo4j schema saved to: {schema_file}")
+
         # Save summary metrics with clear documentation
         neo4j_metrics = {
             'database_name': database_name,
