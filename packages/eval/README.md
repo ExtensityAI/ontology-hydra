@@ -9,6 +9,7 @@ This package provides an evaluation framework for the ontopipe system, allowing 
 - **SQuAD v2 Integration**: Uses the SQuAD v2 dataset format for evaluation
 - **Caching**: Intermediate results are cached to avoid recomputation
 - **Visualization**: Automatic generation of HTML visualizations for ontologies and knowledge graphs
+- **Parallel Processing**: Neo4j evaluation supports parallel batch processing for faster execution
 
 ## Installation
 
@@ -101,6 +102,13 @@ The evaluation framework uses JSON configuration files to define evaluation scen
 - `password`: Neo4j password (default: `ontology`)
 - `batch_size`: Number of questions per batch (default: 5)
 - `num_iterations`: Number of evaluation iterations (default: 1)
+- `max_workers`: Maximum number of parallel workers for batch processing (default: 4)
+- `fuzzy_threshold`: Threshold for fuzzy answer matching (default: 0.8)
+- `use_run_specific_databases`: Use separate databases per evaluation run (default: true)
+- `default_database`: Fallback database name (default: "neo4j")
+- `auto_cleanup`: Automatically clean up old run-specific databases (default: false)
+
+**Note**: The APOC plugin must be installed in your Neo4j database for the evaluation to work properly. You can install it via the Neo4j Desktop application or by following the [APOC installation guide](https://neo4j.com/labs/apoc/installation/).
 
 ### Example Configurations
 
@@ -119,7 +127,7 @@ The evaluation framework uses JSON configuration files to define evaluation scen
 }
 ```
 
-**Full evaluation with test dataset:**
+**Full evaluation with test dataset and parallel processing:**
 ```json
 {
   "scenarios": [{
@@ -128,7 +136,9 @@ The evaluation framework uses JSON configuration files to define evaluation scen
     "squad_titles": ["Biomedical Engineer"],
     "dataset_mode": "test",
     "neo4j": {
-      "enabled": true
+      "enabled": true,
+      "max_workers": 8,
+      "batch_size": 10
     }
   }]
 }
@@ -177,6 +187,39 @@ To compare ontology-guided vs. ontology-free knowledge graph generation:
 1. Run full evaluation: `uv run eval new --config eval/config.json`
 2. Run KG-only evaluation by setting `domain: null` in your config and running: `uv run eval new --config eval/config_kg_only.json`
 3. Compare metrics in the respective `metrics.json` files
+
+## Parallel Processing
+
+The Neo4j evaluation supports parallel processing to speed up batch operations. You can control the level of parallelism using the `max_workers` parameter in your Neo4j configuration.
+
+### Parallel Processing Configuration
+
+```json
+{
+  "neo4j": {
+    "enabled": true,
+    "max_workers": 8,  // Process up to 8 batches in parallel
+    "batch_size": 5    // Each batch contains 5 questions
+  }
+}
+```
+
+### Performance Considerations
+
+- **CPU-bound operations**: Cypher query generation and fuzzy answer matching benefit from parallelization
+- **I/O-bound operations**: Neo4j database queries are I/O-bound and can benefit from multiple concurrent connections
+- **Memory usage**: Each worker maintains its own connection pool and runtime tracking
+- **Optimal settings**: Start with `max_workers = 4` and adjust based on your system's capabilities
+
+### Environment Variables
+
+You can also control parallelization via environment variables:
+
+```bash
+export NEO4J_MAX_WORKERS=8
+export NEO4J_BATCH_SIZE=10
+uv run eval new --config eval/config.json
+```
 
 ## Customization
 

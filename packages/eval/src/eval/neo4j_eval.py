@@ -5,6 +5,7 @@ from collections import defaultdict
 from math import ceil
 from pathlib import Path
 from typing import List, Optional
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import pandas as pd
 from .logging_setup import logger
@@ -216,83 +217,8 @@ class BatchQuestionToCypherConverter(Expression):
         self.database_name = database_name
 
     def get_schema(self, database_name: str = "neo4j") -> str:
-        """Query Neo4j for complete schema information.
-
-        Returns:
-            str: Formatted schema string with comprehensive schema details including:
-                - Node labels and their counts
-                - Relationship types and their counts
-                - Properties and their usage across node types
-                - Common relationship patterns
-        """
-        with self.driver.session(database=database_name) as session:
-            # Get node labels and their counts
-            labels_result = session.run("""
-                MATCH (n)
-                WITH labels(n) as labels
-                UNWIND labels as label
-                WITH label, count(*) as count
-                RETURN label, count
-                ORDER BY label
-            """)
-            node_labels = [(record["label"], record["count"]) for record in labels_result]
-
-            # Get relationship types and their counts
-            rels_result = session.run("""
-                MATCH ()-[r]->()
-                WITH type(r) as relType, count(*) as count
-                RETURN relType, count
-                ORDER BY relType
-            """)
-            relationship_types = [(record["relType"], record["count"]) for record in rels_result]
-
-            # Get property keys and their usage across node types
-            props_result = session.run("""
-                MATCH (n)
-                WITH labels(n) as nodeLabels, keys(n) as props
-                UNWIND nodeLabels as label
-                UNWIND props as prop
-                WITH label, prop, count(*) as count
-                RETURN label, prop, count
-                ORDER BY label, prop
-            """)
-            property_usage = [(record["label"], record["prop"], record["count"]) for record in props_result]
-
-            # Get common relationship patterns
-            patterns_result = session.run("""
-                MATCH (a)-[r]->(b)
-                WITH labels(a)[0] as fromType, type(r) as relType, labels(b)[0] as toType,
-                     count(*) as count
-                RETURN fromType, relType, toType, count
-                ORDER BY count DESC
-            """)
-            patterns = [(record["fromType"], record["relType"], record["toType"], record["count"])
-                       for record in patterns_result]
-
-        # Format the schema string
-        schema = f"Complete Neo4j Schema (Database: {database_name}):\n\n"
-
-        schema += "1. Node Labels and Counts:\n"
-        for label, count in node_labels:
-            schema += f"   - {label}: {count} nodes\n"
-
-        schema += "\n2. Relationship Types and Counts:\n"
-        for rel_type, count in relationship_types:
-            schema += f"   - :{rel_type}: {count} relationships\n"
-
-        schema += "\n3. Property Keys by Node Label:\n"
-        current_label = None
-        for label, prop, count in property_usage:
-            if label != current_label:
-                schema += f"\n   {label}:\n"
-                current_label = label
-            schema += f"   - {prop} (used in {count} nodes)\n"
-
-        schema += "\n4. Common Relationship Patterns:\n"
-        for from_type, rel_type, to_type, count in patterns:
-            schema += f"   - ({from_type})-[:{rel_type}]->({to_type}): {count} occurrences\n"
-
-        return schema
+        """Get schema using Neo4j built-in procedures."""
+        return _get_neo4j_schema(self.driver, database_name)
 
     def forward(self, input: Neo4jQueryInput, **kwargs) -> Neo4jQueryOutput:
         if self.contract_result is None:
@@ -318,7 +244,15 @@ class BatchQuestionToCypherConverter(Expression):
 
         try:
             with self.driver.session(database=self.database_name) as session:
-                labels, rels, props = session.read_transaction(self._get_schema)
+                # Get schema elements using Neo4j built-in procedures
+                labels_result = session.run("CALL db.labels() YIELD label RETURN label")
+                labels = {record["label"] for record in labels_result}
+
+                rels_result = session.run("CALL db.relationshipTypes() YIELD relationshipType RETURN relationshipType")
+                rels = {record["relationshipType"] for record in rels_result}
+
+                props_result = session.run("CALL db.propertyKeys() YIELD propertyKey RETURN propertyKey")
+                props = {record["propertyKey"] for record in props_result}
         except Exception as e:
             raise ValueError(f"Failed to get schema from Neo4j database '{self.database_name}': {e}")
 
@@ -366,12 +300,7 @@ class BatchQuestionToCypherConverter(Expression):
 
         return True
 
-    def _get_schema(self, tx):
-        """Get schema elements from Neo4j."""
-        labels = {record["label"] for record in tx.run("CALL db.labels()")}
-        rels = {record["relationshipType"] for record in tx.run("CALL db.relationshipTypes()")}
-        props = {record["propertyKey"] for record in tx.run("CALL db.propertyKeys()")}
-        return labels, rels, props
+
 
     def _extract_cypher_elements(self, query):
         """Extract Cypher elements using regex."""
@@ -409,9 +338,9 @@ Convert the given list of natural language questions into Neo4j Cypher queries u
 IMPORTANT NAME FORMATTING RULES:
 - ALL names in property values must be lowercase with underscores instead of spaces
 - Examples:
-  * "Infrared" becomes "infrared"
-  * "Extracorporeal Shock Wave Lithotripter" becomes "extracorporeal_shock_wave_lithotripter"
-  * "Electromagnetic Vibration Method" becomes "electromagnetic_vibration_method"
+  * "Magnetic Resonance Imaging" becomes "magnetic_resonance_imaging"
+  * "Robotic Surgical System" becomes "robotic_surgical_system"
+  * "Ultrasound Guided Biopsy" becomes "ultrasound_guided_biopsy"
   * "Dermatological Surgery" becomes "dermatological_surgery"
 - This applies to all {name: 'value'} patterns in the queries and (name = 'value') patterns
 - Node labels and relationship types remain as provided in the schema
@@ -478,6 +407,7 @@ class Neo4jConfig(BaseModel):
     default_database: str = "neo4j"  # Fallback database name
     auto_cleanup: bool = False  # New field to control automatic cleanup
     fuzzy_threshold: float = 0.8  # Threshold for fuzzy matching
+    max_workers: int = 4  # New field for parallel processing
 
     def __init__(self, **data):
         # Allow environment variables to override defaults
@@ -498,6 +428,8 @@ class Neo4jConfig(BaseModel):
             data['auto_cleanup'] = os.environ['NEO4J_AUTO_CLEANUP'].lower() == 'true'
         if 'NEO4J_FUZZY_THRESHOLD' in os.environ:
             data['fuzzy_threshold'] = float(os.environ['NEO4J_FUZZY_THRESHOLD'])
+        if 'NEO4J_MAX_WORKERS' in os.environ:
+            data['max_workers'] = int(os.environ['NEO4J_MAX_WORKERS'])
 
         super().__init__(**data)
 
@@ -600,10 +532,13 @@ def _create_run_specific_database(driver: GraphDatabase.driver, run_id: str, con
 
 
 def _load_kg_to_neo4j(kg: KG, driver: GraphDatabase.driver, database_name: str = "neo4j"):
-    """Load knowledge graph into Neo4j database"""
+    """Load knowledge graph into Neo4j database using CSV method"""
     logger.info(f"Loading knowledge graph into Neo4j database: {database_name}")
 
     import time
+    import json
+    import csv
+    import os
 
     # Retry mechanism for database connection
     max_retries = 5
@@ -635,39 +570,155 @@ def _load_kg_to_neo4j(kg: KG, driver: GraphDatabase.driver, database_name: str =
                 logger.error(f"Failed to access database {database_name} after {max_retries} attempts: {e}")
                 raise
 
-    # Load triplets
-    total_triplets = len(kg.triplets)
-    for i, triplet in enumerate(kg.triplets, 1):
-        _load_triplet(driver, triplet.subject, triplet.predicate, triplet.object, database_name)
-        if i % 100 == 0:
-            logger.debug(f"Processed {i}/{total_triplets} triplets")
+    # Neo4j import folder path
+    neo4j_import_dir = "/Users/ryang/Library/Application Support/Neo4j Desktop/Application/relate-data/dbmss/dbms-8ff6e63e-4586-411a-a8ba-f42cb734d84b/import"
 
-    logger.info(f"Successfully loaded {total_triplets} triplets into Neo4j database: {database_name}")
+    # Convert KG to CSV format
+    triplets = kg.triplets
 
+    # Collect unique node names
+    nodes = set()
+    for t in triplets:
+        nodes.add(t.subject)
+        nodes.add(t.object)
 
-def _load_triplet(driver: GraphDatabase.driver, subject: str, predicate: str, object: str, database_name: str = "neo4j"):
-    """Create a single triplet in the graph with proper labels and relationship types."""
-    # Clean up predicate and object for use as Neo4j identifiers
-    rel_type = predicate.upper().replace(' ', '_')
-    label = object.replace(' ', '_')
+    # Generate identifier for CSV files
+    identifier = f"kg_{database_name}_{int(time.time())}"
 
-    if predicate.lower() == "isa":
-        # For isA relationships, add the object as a label to the subject node
-        query = f"""
-        MERGE (s:Entity {{name: $subject}})
-        SET s:{label}
-        MERGE (o:Entity {{name: $object}})
-        MERGE (s)-[r:`{rel_type}`]->(o)
-        """
-    else:
-        query = f"""
-        MERGE (s:Entity {{name: $subject}})
-        MERGE (o:Entity {{name: $object}})
-        MERGE (s)-[r:`{rel_type}`]->(o)
-        """
+    # Write nodes.csv
+    nodes_file = os.path.join(neo4j_import_dir, f"nodes_{identifier}.csv")
+    with open(nodes_file, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["name"])  # header
+        for node in sorted(nodes):
+            writer.writerow([node])
 
+    # Write relationships.csv
+    relationships_file = os.path.join(neo4j_import_dir, f"relationships_{identifier}.csv")
+    with open(relationships_file, "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["subject", "predicate", "object"])  # header
+        for t in triplets:
+            writer.writerow([t.subject, t.predicate, t.object])
+
+    logger.info(f"CSV files created: {nodes_file}, {relationships_file}")
+
+    # Load nodes from CSV
     with driver.session(database=database_name) as session:
-        session.run(query, subject=subject, object=object)
+        filename = os.path.basename(nodes_file)
+        file_url = f"file:///{filename}"
+
+        result = session.run(f"""
+        LOAD CSV WITH HEADERS FROM '{file_url}' AS row
+        MERGE (n:Entity {{name: row.name}})
+        RETURN count(*) as nodes_created
+        """)
+        count = result.single()["nodes_created"]
+        logger.info(f"Loaded {count} nodes from CSV")
+
+    # Load relationships from CSV
+    with driver.session(database=database_name) as session:
+        filename = os.path.basename(relationships_file)
+        file_url = f"file:///{filename}"
+
+        result = session.run(f"""
+        LOAD CSV WITH HEADERS FROM '{file_url}' AS row
+        MATCH (a:Entity {{name: row.subject}}), (b:Entity {{name: row.object}})
+        CALL apoc.create.relationship(a, row.predicate, {{}}, b) YIELD rel
+        RETURN count(*) as relationships_created
+        """)
+        count = result.single()["relationships_created"]
+        logger.info(f"Loaded {count} relationships from CSV")
+
+    logger.info(f"Successfully loaded knowledge graph into Neo4j database: {database_name} using CSV method")
+
+
+def _get_neo4j_schema(driver: GraphDatabase.driver, database_name: str) -> str:
+    """Get schema using Neo4j built-in procedures and functions."""
+    with driver.session(database=database_name) as session:
+        schema_parts = []
+        schema_parts.append(f"Complete Neo4j Schema (Database: {database_name}):\n")
+
+        # 1. Get node labels using CALL db.labels()
+        try:
+            labels_result = session.run("CALL db.labels() YIELD label RETURN label ORDER BY label")
+            labels = [record["label"] for record in labels_result]
+            schema_parts.append("\n1. Node Labels:")
+            for label in labels:
+                # Get count for each label
+                count_result = session.run(f"MATCH (n:{label}) RETURN count(n) as count")
+                count = count_result.single()["count"]
+                schema_parts.append(f"   - {label}: {count} nodes")
+        except Exception as e:
+            logger.warning(f"Could not get node labels: {e}")
+            schema_parts.append("\n1. Node Labels: Could not retrieve")
+
+        # 2. Get relationship types using CALL db.relationshipTypes()
+        try:
+            rels_result = session.run("CALL db.relationshipTypes() YIELD relationshipType RETURN relationshipType ORDER BY relationshipType")
+            rels = [record["relationshipType"] for record in rels_result]
+            schema_parts.append("\n2. Relationship Types:")
+            for rel in rels:
+                # Get count for each relationship type
+                count_result = session.run(f"MATCH ()-[r:{rel}]->() RETURN count(r) as count")
+                count = count_result.single()["count"]
+                schema_parts.append(f"   - :{rel}: {count} relationships")
+        except Exception as e:
+            logger.warning(f"Could not get relationship types: {e}")
+            schema_parts.append("\n2. Relationship Types: Could not retrieve")
+
+        # 3. Get property keys using CALL db.propertyKeys()
+        try:
+            props_result = session.run("CALL db.propertyKeys() YIELD propertyKey RETURN propertyKey ORDER BY propertyKey")
+            props = [record["propertyKey"] for record in props_result]
+            schema_parts.append("\n3. Property Keys:")
+            for prop in props:
+                schema_parts.append(f"   - {prop}")
+        except Exception as e:
+            logger.warning(f"Could not get property keys: {e}")
+            schema_parts.append("\n3. Property Keys: Could not retrieve")
+
+        # 4. Get constraints using CALL db.constraints()
+        try:
+            constraints_result = session.run("CALL db.constraints() YIELD name, description RETURN name, description ORDER BY name")
+            constraints = [(record["name"], record["description"]) for record in constraints_result]
+            if constraints:
+                schema_parts.append("\n4. Constraints:")
+                for name, description in constraints:
+                    schema_parts.append(f"   - {name}: {description}")
+            else:
+                schema_parts.append("\n4. Constraints: None")
+        except Exception as e:
+            logger.warning(f"Could not get constraints: {e}")
+            schema_parts.append("\n4. Constraints: Could not retrieve")
+
+        # 5. Get indexes using CALL db.indexes()
+        try:
+            indexes_result = session.run("CALL db.indexes() YIELD name, type, labelsOrTypes, properties RETURN name, type, labelsOrTypes, properties ORDER BY name")
+            indexes = [(record["name"], record["type"], record["labelsOrTypes"], record["properties"]) for record in indexes_result]
+            if indexes:
+                schema_parts.append("\n5. Indexes:")
+                for name, idx_type, labels, props in indexes:
+                    schema_parts.append(f"   - {name}: {idx_type} on {labels} ({props})")
+            else:
+                schema_parts.append("\n5. Indexes: None")
+        except Exception as e:
+            logger.warning(f"Could not get indexes: {e}")
+            schema_parts.append("\n5. Indexes: Could not retrieve")
+
+        # 6. Get database info using CALL db.info()
+        try:
+            info_result = session.run("CALL db.info() YIELD name, version, edition RETURN name, version, edition")
+            info = info_result.single()
+            schema_parts.append(f"\n6. Database Info:")
+            schema_parts.append(f"   - Name: {info['name']}")
+            schema_parts.append(f"   - Version: {info['version']}")
+            schema_parts.append(f"   - Edition: {info['edition']}")
+        except Exception as e:
+            logger.warning(f"Could not get database info: {e}")
+            schema_parts.append("\n6. Database Info: Could not retrieve")
+
+        return "\n".join(schema_parts)
 
 
 def _cleanup_old_databases(driver: GraphDatabase.driver, config: Neo4jConfig):
@@ -711,76 +762,190 @@ def _cleanup_old_databases(driver: GraphDatabase.driver, config: Neo4jConfig):
         logger.warning(f"Failed to perform database cleanup: {e}")
 
 
-def _get_database_schema(driver: GraphDatabase.driver, database_name: str) -> str:
-    """Get the complete schema information from a Neo4j database."""
-    with driver.session(database=database_name) as session:
-        # Get node labels and their counts
-        labels_result = session.run("""
-            MATCH (n)
-            WITH labels(n) as labels
-            UNWIND labels as label
-            WITH label, count(*) as count
-            RETURN label, count
-            ORDER BY label
-        """)
-        node_labels = [(record["label"], record["count"]) for record in labels_result]
 
-        # Get relationship types and their counts
-        rels_result = session.run("""
-            MATCH ()-[r]->()
-            WITH type(r) as relType, count(*) as count
-            RETURN relType, count
-            ORDER BY relType
-        """)
-        relationship_types = [(record["relType"], record["count"]) for record in rels_result]
 
-        # Get property keys and their usage across node types
-        props_result = session.run("""
-            MATCH (n)
-            WITH labels(n) as nodeLabels, keys(n) as props
-            UNWIND nodeLabels as label
-            UNWIND props as prop
-            WITH label, prop, count(*) as count
-            RETURN label, prop, count
-            ORDER BY label, prop
-        """)
-        property_usage = [(record["label"], record["prop"], record["count"]) for record in props_result]
 
-        # Get common relationship patterns
-        patterns_result = session.run("""
-            MATCH (a)-[r]->(b)
-            WITH labels(a)[0] as fromType, type(r) as relType, labels(b)[0] as toType,
-                 count(*) as count
-            RETURN fromType, relType, toType, count
-            ORDER BY count DESC
-        """)
-        patterns = [(record["fromType"], record["relType"], record["toType"], record["count"])
-                   for record in patterns_result]
+def _process_batch_parallel(batch_data, converter, batch_fuzzy_matcher, driver, database_name, config, iteration, start_idx, schema):
+    """Process a single batch of questions in parallel.
 
-        # Format the schema string
-        schema = f"Complete Neo4j Schema (Database: {database_name}):\n\n"
+    Args:
+        batch_data: Tuple of (batch_questions, batch_options, batch_answers)
+        converter: BatchQuestionToCypherConverter instance
+        batch_fuzzy_matcher: BatchFuzzyAnswerMatcher instance
+        driver: Neo4j driver
+        database_name: Database name to use
+        config: Neo4jConfig instance
+        iteration: Current iteration number
+        start_idx: Starting index for this batch
+        schema: Database schema string
 
-        schema += "1. Node Labels and Counts:\n"
-        for label, count in node_labels:
-            schema += f"   - {label}: {count} nodes\n"
+    Returns:
+        Tuple of (batch_results, batch_runtime_info)
+    """
+    batch_questions, batch_options, batch_answers = batch_data
 
-        schema += "\n2. Relationship Types and Counts:\n"
-        for rel_type, count in relationship_types:
-            schema += f"   - :{rel_type}: {count} relationships\n"
+    # Initialize batch runtime tracking
+    batch_runtime_info = RuntimeInfo(0, 0, 0, 0, 0, 0, 0, 0)
+    batch_iteration_results = []
 
-        schema += "\n3. Property Keys by Node Label:\n"
-        current_label = None
-        for label, prop, count in property_usage:
-            if label != current_label:
-                schema += f"\n   {label}:\n"
-                current_label = label
-            schema += f"   - {prop} (used in {count} nodes)\n"
+    try:
+        # Convert questions to queries using contract
+        input_data = Neo4jQueryInput(
+            questions=batch_questions,
+            options=batch_options,
+            answers=batch_answers,
+            schema=schema
+        )
 
-        schema += "\n4. Common Relationship Patterns:\n"
-        for from_type, rel_type, to_type, count in patterns:
-            schema += f"   - ({from_type})-[:{rel_type}]->({to_type}): {count} occurrences\n"
+        # Track runtime information for this batch
+        with MetadataTracker() as tracker:
+            start_time = time.perf_counter()
+            try:
+                result = converter(input=input_data)
+            except Exception as e:
+                raise e
+            finally:
+                time.sleep(0.05)
+                end_time = time.perf_counter()
 
-        return schema
+        # Process runtime information
+        usage_per_engine = RuntimeInfo.from_tracker(tracker, end_time - start_time)
+
+        for (engine_name, model_name), data in usage_per_engine.items():
+            if (engine_name, model_name) in PRICING:
+                logger.debug(f"Using pricing model: {engine_name} - {model_name}")
+                batch_runtime_info += RuntimeInfo.estimate_cost(data, estimate_cost, pricing=PRICING[(engine_name, model_name)])
+            else:
+                logger.warning(f"No pricing model found for: {engine_name} - {model_name}, using raw data")
+                batch_runtime_info += data
+
+        # Add total elapsed time
+        batch_runtime_info.total_elapsed_time = end_time - start_time
+
+        queries = result.queries
+        logger.debug(f"Generated {len(queries)} Neo4j queries")
+
+        # Initialize batch results
+        batch_answer_pairs = []
+
+        # First pass: Execute all queries and collect results
+        for i, (question, options, answer, query) in enumerate(zip(batch_questions, batch_options, batch_answers, queries)):
+            query_idx = start_idx + i
+
+            # Initialize iteration result
+            iteration_result = {
+                'iteration': iteration + 1,
+                'query_idx': query_idx + 1,
+                'question': question,
+                'options': options,
+                'expected_answer': answer,
+                'generated_query': query,
+                'successful': False,
+                'returned_results': False,
+                'correct': False,
+                'results': [],
+                'error': None
+            }
+
+            if not query.strip():
+                iteration_result['error'] = "No Cypher query generated"
+                logger.debug(f"Skipping: '{question}' (No Cypher query generated)")
+            else:
+                try:
+                    # Execute query in the run-specific database
+                    with driver.session(database=database_name) as session:
+                        result = session.run(query)
+                        results = [record.data() for record in result]
+
+                    iteration_result['results'] = results
+                    iteration_result['successful'] = True
+
+                    if len(results) > 0:
+                        iteration_result['returned_results'] = True
+                        result_value = list(results[0].values())[0] if results[0] else None
+                        if result_value is not None:
+                            # Add to batch for fuzzy matching
+                            batch_answer_pairs.append({
+                                'predicted_answer': str(result_value),
+                                'expected_answer': str(answer)
+                            })
+                        else:
+                            # No result value, add empty pair
+                            batch_answer_pairs.append({
+                                'predicted_answer': '',
+                                'expected_answer': str(answer)
+                            })
+                    else:
+                        # No results, add empty pair
+                        batch_answer_pairs.append({
+                            'predicted_answer': '',
+                            'expected_answer': str(answer)
+                        })
+
+                    logger.debug(f"Neo4j Question {query_idx + 1}: '{question}' - Success: {iteration_result['successful']}, Results: {iteration_result['returned_results']}")
+
+                except Exception as e:
+                    iteration_result['error'] = str(e)
+                    logger.debug(f"Error executing Neo4j query: {e}")
+                    # Add empty pair for failed query
+                    batch_answer_pairs.append({
+                        'predicted_answer': '',
+                        'expected_answer': str(answer)
+                    })
+
+            batch_iteration_results.append(iteration_result)
+
+        # Second pass: Perform batch fuzzy matching if we have answer pairs
+        if batch_answer_pairs:
+            try:
+                # Prepare batch input for fuzzy matching
+                batch_match_input = BatchAnswerInput(answer_pairs=batch_answer_pairs)
+
+                # Use batch fuzzy matcher to determine similarity scores
+                batch_match_output = batch_fuzzy_matcher(input=batch_match_input)
+                batch_match_scores = batch_match_output.match_scores
+
+                # Apply match scores to results
+                for i, (iteration_result, match_score) in enumerate(zip(batch_iteration_results, batch_match_scores)):
+                    if iteration_result['returned_results'] and iteration_result['successful']:
+                        # Determine if answer is correct based on threshold
+                        is_correct = match_score >= config.fuzzy_threshold
+                        iteration_result['correct'] = is_correct
+                        iteration_result['match_score'] = match_score
+                        logger.debug(f"Batch fuzzy match {i+1} - Score: {match_score:.3f}, Threshold: {config.fuzzy_threshold}, Correct: {is_correct}")
+                    else:
+                        # No results or failed query, mark as incorrect
+                        iteration_result['correct'] = False
+                        iteration_result['match_score'] = 0.0
+
+            except Exception as match_error:
+                logger.warning(f"Batch fuzzy matching failed: {match_error}")
+                # Mark all as incorrect if batch fuzzy matching fails
+                for iteration_result in batch_iteration_results:
+                    iteration_result['correct'] = False
+                    iteration_result['match_score'] = 0.0
+
+    except Exception as e:
+        logger.error(f"Error processing batch starting at index {start_idx}: {e}")
+
+        # Mark all queries in this batch as failed
+        for i in range(len(batch_questions)):
+            iteration_result = {
+                'iteration': iteration + 1,
+                'query_idx': start_idx + i + 1,
+                'question': batch_questions[i],
+                'options': batch_options[i],
+                'expected_answer': batch_answers[i],
+                'generated_query': "",
+                'successful': False,
+                'returned_results': False,
+                'correct': False,
+                'results': [],
+                'error': f"Batch processing error: {type(e).__name__}: {str(e)}"
+            }
+            batch_iteration_results.append(iteration_result)
+
+    return batch_iteration_results, batch_runtime_info
 
 
 def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_path: Path):
@@ -816,8 +981,8 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
         batch_fuzzy_matcher = BatchFuzzyAnswerMatcher(threshold=config.fuzzy_threshold)
         logger.info(f"Batch fuzzy matching enabled with threshold: {config.fuzzy_threshold}")
 
-        # Get schema from the run-specific database
-        schema = _get_database_schema(driver, database_name)
+        # Get schema using Neo4j built-in functions
+        schema = _get_neo4j_schema(driver, database_name)
 
         # Collect all questions, options, and answers
         all_questions = []
@@ -850,193 +1015,89 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
         for iteration in range(config.num_iterations):
             logger.info(f"Neo4j iteration {iteration + 1}/{config.num_iterations}")
 
-            # Process questions in batches
+            # Process questions in batches with parallel execution
             num_batches = ceil(len(all_questions) / config.batch_size)
 
+            # Prepare batch data for parallel processing
+            batch_tasks = []
             for batch_idx in range(num_batches):
                 start_idx = batch_idx * config.batch_size
                 end_idx = min((batch_idx + 1) * config.batch_size, len(all_questions))
-
-                logger.debug(f"Processing Neo4j batch {batch_idx + 1}/{num_batches}")
 
                 batch_questions = all_questions[start_idx:end_idx]
                 batch_options = all_options[start_idx:end_idx]
                 batch_answers = all_answers[start_idx:end_idx]
 
-                try:
-                    # Convert questions to queries using contract
-                    input_data = Neo4jQueryInput(
-                        questions=batch_questions,
-                        options=batch_options,
-                        answers=batch_answers,
-                        schema=schema
-                    )
+                batch_tasks.append((batch_questions, batch_options, batch_answers, start_idx))
 
-                    # Track runtime information for this batch
-                    batch_runtime_info = RuntimeInfo(0, 0, 0, 0, 0, 0, 0, 0)
-                    with MetadataTracker() as tracker:
-                        start_time = time.perf_counter()
-                        try:
-                            result = converter(input=input_data)
-                        except Exception as e:
-                            raise e
-                        finally:
-                            time.sleep(0.05)
-                            end_time = time.perf_counter()
+            logger.info(f"Processing {num_batches} batches with up to {config.max_workers} parallel workers")
 
-                    # Process runtime information
-                    usage_per_engine = RuntimeInfo.from_tracker(tracker, end_time - start_time)
+            # Process batches in parallel
+            with ThreadPoolExecutor(max_workers=config.max_workers) as executor:
+                # Submit all batch tasks
+                future_to_batch = {
+                    executor.submit(
+                        _process_batch_parallel,
+                        batch_data,
+                        converter,
+                        batch_fuzzy_matcher,
+                        driver,
+                        database_name,
+                        config,
+                        iteration,
+                        start_idx,
+                        schema
+                    ): (batch_data, start_idx) for batch_data, start_idx in [(task[0:3], task[3]) for task in batch_tasks]
+                }
 
-                    for (engine_name, model_name), data in usage_per_engine.items():
-                        if (engine_name, model_name) in PRICING:
-                            logger.debug(f"Using pricing model: {engine_name} - {model_name}")
-                            batch_runtime_info += RuntimeInfo.estimate_cost(data, estimate_cost, pricing=PRICING[(engine_name, model_name)])
-                        else:
-                            logger.warning(f"No pricing model found for: {engine_name} - {model_name}, using raw data")
-                            batch_runtime_info += data
+                # Collect results as they complete
+                for future in as_completed(future_to_batch):
+                    batch_data, start_idx = future_to_batch[future]
+                    batch_idx = start_idx // config.batch_size
 
-                    # Add total elapsed time
-                    batch_runtime_info.total_elapsed_time = end_time - start_time
-                    total_runtime_info += batch_runtime_info
+                    try:
+                        batch_iteration_results, batch_runtime_info = future.result()
 
-                    queries = result.queries
-                    logger.debug(f"Generated {len(queries)} Neo4j queries")
+                        # Add batch runtime to total
+                        total_runtime_info += batch_runtime_info
 
-                    # Initialize batch results
-                    batch_iteration_results = []
-                    batch_answer_pairs = []
+                        # Store all iteration results
+                        for iteration_result in batch_iteration_results:
+                            results_data.append(iteration_result)
 
-                    # First pass: Execute all queries and collect results
-                    for i, (question, options, answer, query) in enumerate(zip(batch_questions, batch_options, batch_answers, queries)):
-                        query_idx = start_idx + i
+                            # Update query stats
+                            query_idx = iteration_result['query_idx'] - 1  # Convert back to 0-based index
+                            query_stats[query_idx]['iterations'].append(iteration_result)
+                            if iteration_result['successful']:
+                                query_stats[query_idx]['successful'] = True
+                            if iteration_result['returned_results']:
+                                query_stats[query_idx]['returned_results'] = True
+                            if iteration_result['correct']:
+                                query_stats[query_idx]['correct'] = True
 
-                        # Initialize iteration result
-                        iteration_result = {
-                            'iteration': iteration + 1,
-                            'query_idx': query_idx + 1,
-                            'question': question,
-                            'options': options,
-                            'expected_answer': answer,
-                            'generated_query': query,
-                            'successful': False,
-                            'returned_results': False,
-                            'correct': False,
-                            'results': [],
-                            'error': None
-                        }
+                        logger.debug(f"Completed Neo4j batch {batch_idx + 1}/{num_batches}")
 
-                        if not query.strip():
-                            iteration_result['error'] = "No Cypher query generated"
-                            logger.debug(f"Skipping: '{question}' (No Cypher query generated)")
-                        else:
-                            try:
-                                # Execute query in the run-specific database
-                                with driver.session(database=database_name) as session:
-                                    result = session.run(query)
-                                    results = [record.data() for record in result]
+                    except Exception as e:
+                        logger.error(f"Error processing Neo4j batch {batch_idx + 1}: {e}")
 
-                                iteration_result['results'] = results
-                                iteration_result['successful'] = True
-
-                                if len(results) > 0:
-                                    iteration_result['returned_results'] = True
-                                    result_value = list(results[0].values())[0] if results[0] else None
-                                    if result_value is not None:
-                                        # Add to batch for fuzzy matching
-                                        batch_answer_pairs.append({
-                                            'predicted_answer': str(result_value),
-                                            'expected_answer': str(answer)
-                                        })
-                                    else:
-                                        # No result value, add empty pair
-                                        batch_answer_pairs.append({
-                                            'predicted_answer': '',
-                                            'expected_answer': str(answer)
-                                        })
-                                else:
-                                    # No results, add empty pair
-                                    batch_answer_pairs.append({
-                                        'predicted_answer': '',
-                                        'expected_answer': str(answer)
-                                    })
-
-                                logger.debug(f"Neo4j Question {query_idx + 1}: '{question}' - Success: {iteration_result['successful']}, Results: {iteration_result['returned_results']}")
-
-                            except Exception as e:
-                                iteration_result['error'] = str(e)
-                                logger.debug(f"Error executing Neo4j query: {e}")
-                                # Add empty pair for failed query
-                                batch_answer_pairs.append({
-                                    'predicted_answer': '',
-                                    'expected_answer': str(answer)
-                                })
-
-                        batch_iteration_results.append(iteration_result)
-
-                    # Second pass: Perform batch fuzzy matching if we have answer pairs
-                    if batch_answer_pairs:
-                        try:
-                            # Prepare batch input for fuzzy matching
-                            batch_match_input = BatchAnswerInput(answer_pairs=batch_answer_pairs)
-
-                            # Use batch fuzzy matcher to determine similarity scores
-                            batch_match_output = batch_fuzzy_matcher(input=batch_match_input)
-                            batch_match_scores = batch_match_output.match_scores
-
-                            # Apply match scores to results
-                            for i, (iteration_result, match_score) in enumerate(zip(batch_iteration_results, batch_match_scores)):
-                                if iteration_result['returned_results'] and iteration_result['successful']:
-                                    # Determine if answer is correct based on threshold
-                                    is_correct = match_score >= config.fuzzy_threshold
-                                    iteration_result['correct'] = is_correct
-                                    iteration_result['match_score'] = match_score
-                                    logger.debug(f"Batch fuzzy match {i+1} - Score: {match_score:.3f}, Threshold: {config.fuzzy_threshold}, Correct: {is_correct}")
-                                else:
-                                    # No results or failed query, mark as incorrect
-                                    iteration_result['correct'] = False
-                                    iteration_result['match_score'] = 0.0
-
-                        except Exception as match_error:
-                            logger.warning(f"Batch fuzzy matching failed: {match_error}")
-                            # Mark all as incorrect if batch fuzzy matching fails
-                            for iteration_result in batch_iteration_results:
-                                iteration_result['correct'] = False
-                                iteration_result['match_score'] = 0.0
-
-                    # Store all iteration results
-                    for iteration_result in batch_iteration_results:
-                        results_data.append(iteration_result)
-
-                        # Update query stats
-                        query_idx = iteration_result['query_idx'] - 1  # Convert back to 0-based index
-                        query_stats[query_idx]['iterations'].append(iteration_result)
-                        if iteration_result['successful']:
-                            query_stats[query_idx]['successful'] = True
-                        if iteration_result['returned_results']:
-                            query_stats[query_idx]['returned_results'] = True
-                        if iteration_result['correct']:
-                            query_stats[query_idx]['correct'] = True
-
-                except Exception as e:
-                    logger.error(f"Error processing Neo4j batch {batch_idx + 1}: {e}")
-
-                    # Mark all queries in this batch as failed
-                    for i in range(start_idx, end_idx):
-                        iteration_result = {
-                            'iteration': iteration + 1,
-                            'query_idx': i + 1,
-                            'question': all_questions[i],
-                            'options': all_options[i],
-                            'expected_answer': all_answers[i],
-                            'generated_query': "",
-                            'successful': False,
-                            'returned_results': False,
-                            'correct': False,
-                            'results': [],
-                            'error': f"Batch processing error: {type(e).__name__}: {str(e)}"
-                        }
-                        results_data.append(iteration_result)
-                        query_stats[i]['iterations'].append(iteration_result)
+                        # Mark all queries in this batch as failed
+                        batch_questions, batch_options, batch_answers = batch_data
+                        for i in range(len(batch_questions)):
+                            iteration_result = {
+                                'iteration': iteration + 1,
+                                'query_idx': start_idx + i + 1,
+                                'question': batch_questions[i],
+                                'options': batch_options[i],
+                                'expected_answer': batch_answers[i],
+                                'generated_query': "",
+                                'successful': False,
+                                'returned_results': False,
+                                'correct': False,
+                                'results': [],
+                                'error': f"Batch processing error: {type(e).__name__}: {str(e)}"
+                            }
+                            results_data.append(iteration_result)
+                            query_stats[start_idx + i]['iterations'].append(iteration_result)
 
         # Calculate aggregated statistics
         successful_queries = sum(1 for stats in query_stats.values() if stats['successful'])
@@ -1056,6 +1117,7 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
         logger.info(f"Database used: {database_name}")
         logger.info(f"Matching method: Batch Fuzzy")
         logger.info(f"Fuzzy threshold: {config.fuzzy_threshold}")
+        logger.info(f"Parallel processing: {config.max_workers} workers")
         logger.info(f"Successfully processed: {successful_queries} / {total_queries} queries")
         logger.info(f"Queries that returned results: {queries_with_results} / {total_queries}")
         logger.info(f"Correct results: {correct_queries} / {total_queries}")
@@ -1213,6 +1275,7 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
             'run_id': run_id,
             'matching_method': 'fuzzy',
             'fuzzy_threshold': config.fuzzy_threshold,
+            'parallel_workers': config.max_workers,
             'successful_queries': successful_queries,
             'total_queries': total_queries,
             'success_rate': successful_queries / total_queries if total_queries > 0 else 0,
