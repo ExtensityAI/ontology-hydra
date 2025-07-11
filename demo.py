@@ -388,6 +388,7 @@ def visualize_from_files(
     output_path.mkdir(parents=True, exist_ok=True)
 
     graph = None
+    ontology = None
 
     # Visualize ontology if provided
     if ontology_json_file and ontology_json_file.exists():
@@ -410,7 +411,7 @@ def visualize_from_files(
             kg = KG.model_validate(kg_data)
 
             kg_html = output_path / "kg_visualization.html"
-            visualize_kg(kg, kg_html)
+            visualize_kg(kg, kg_html, ontology)
             print(f"Knowledge graph visualization saved to {kg_html}")
 
             # Convert KG to NetworkX DiGraph for return
