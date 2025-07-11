@@ -4,7 +4,7 @@ import time
 from collections import defaultdict
 from math import ceil
 from pathlib import Path
-from typing import List, Optional
+from typing import List, Optional, Dict, Tuple
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import pandas as pd
@@ -83,6 +83,103 @@ def estimate_cost(info: RuntimeInfo, pricing: dict) -> float:
     output_cost = info.completion_tokens * pricing.get('output', 0)
     return input_cost + cached_input_cost + output_cost
 
+
+class SemanticMappingInput(LLMDataModel):
+    """Input for semantic option mapping"""
+    options: List[str] = Field(description="List of answer options to map to KG entities")
+    schema: str = Field(description="The schema of the Neo4j database")
+    question_context: str = Field(description="The question context to help with mapping")
+
+
+class SemanticMappingOutput(LLMDataModel):
+    """Output for semantic option mapping"""
+    mappings: List[Dict[str, str]] = Field(description="List of mappings from option text to KG entity names")
+
+
+@contract(
+    pre_remedy=False,
+    post_remedy=True,
+    verbose=True,
+    remedy_retry_params=dict(
+        tries=25,
+        delay=0.5,
+        max_delay=10,
+        jitter=0.1,
+        backoff=2,
+        graceful=False
+    )
+)
+class SemanticOptionMapper(Expression):
+    """Maps answer options to relevant KG entities/concepts using semantic understanding."""
+
+    def __init__(
+        self,
+        seed: Optional[int] = 42,
+        *args,
+        **kwargs,
+    ):
+        super().__init__(*args, **kwargs)
+        self.seed = seed
+        self.data_model = SemanticMappingOutput
+
+    def forward(self, input: SemanticMappingInput) -> SemanticMappingOutput:
+        if self.contract_result is None:
+            # Return empty mappings if contract fails
+            return SemanticMappingOutput(mappings=[{"original": opt, "mapped": ""} for opt in input.options])
+        return self.contract_result
+
+    def pre(self, input: SemanticMappingInput) -> bool:
+        if not isinstance(input, SemanticMappingInput):
+            raise ValueError("Input must be a SemanticMappingInput instance!")
+        if not input.options or len(input.options) == 0:
+            raise ValueError("Options list cannot be empty!")
+        if not input.schema:
+            raise ValueError("Schema cannot be empty!")
+        return True
+
+    def post(self, output: SemanticMappingOutput) -> bool:
+        if not isinstance(output, SemanticMappingOutput):
+            raise ValueError("Output must be a SemanticMappingOutput instance!")
+        if len(output.mappings) != self.num_options:
+            raise ValueError(f"Number of mappings ({len(output.mappings)}) does not match number of input options ({self.num_options})")
+        return True
+
+    def act(self, input: SemanticMappingInput, **kwargs) -> SemanticMappingInput:
+        self.num_options = len(input.options)
+        return input
+
+    @property
+    def prompt(self) -> str:
+        return """[[Semantic Option Mapping]]
+Map each answer option to the most relevant entity/concept in the knowledge graph schema. Do NOT treat the full option text as a node name. Instead, identify the core concept or entity that the option describes.
+
+MAPPING GUIDELINES:
+1. Extract the core concept from each option text
+2. Find the most semantically similar entity in the schema
+3. Use the exact entity name from the schema (with proper formatting)
+4. If no exact match exists, choose the closest semantic match
+5. Consider the question context when making mappings
+
+FORMATTING RULES:
+- All entity names must be lowercase with underscores instead of spaces
+- Use exact names from the schema
+- If an option describes multiple concepts, map to the primary one
+
+EXAMPLES:
+Option: "A protein that helps carry oxygen in red blood cells and gives them their red color"
+Mapped to: "hemoglobin" (not the full option text)
+
+Option: "A type of white blood cell that produces antibodies to fight infection"
+Mapped to: "b_lymphocyte"
+
+Option: "A hormone produced by the pancreas that regulates blood sugar levels"
+Mapped to: "insulin"
+
+Return a list of mappings where each mapping contains:
+- "original": the original option text
+- "mapped": the mapped entity name from the schema
+
+If no suitable mapping is found, use an empty string for "mapped"."""
 
 
 class BatchAnswerInput(LLMDataModel):
@@ -175,13 +272,16 @@ Focus on whether the answers convey the same concept.
 Return a list of similarity scores in the same order as the input pairs."""
 
 
-
 class Neo4jQueryInput(LLMDataModel):
     """Input for Neo4j query generation"""
     questions: List[str] = Field(description="List of natural language questions to convert to Cypher")
     options: List[List[str]] = Field(description="List of possible answers for each question")
     answers: List[str] = Field(description="List of expected answers for each question")
     schema: str = Field(description="The schema of the Neo4j database")
+    semantic_mappings: Optional[List[List[Dict[str, str]]]] = Field(
+        description="List of semantic mappings for each question's options",
+        default=None
+    )
 
 
 class Neo4jQueryOutput(LLMDataModel):
@@ -332,8 +432,17 @@ class BatchQuestionToCypherConverter(Expression):
 
     @property
     def prompt(self) -> str:
-        return """[[Neo4j Cypher Query Generation - Batch Processing]]
+        return """[[Neo4j Cypher Query Generation - Batch Processing with Semantic Mapping]]
 Convert the given list of natural language questions into Neo4j Cypher queries using ONLY the schema elements provided. No other elements exist or can be used.
+
+CRITICAL SEMANTIC MAPPING INSTRUCTIONS:
+When generating Cypher queries, do NOT treat full answer option text as node names. Instead, use the provided semantic mappings to map options to relevant KG entities/concepts.
+
+SEMANTIC MAPPING APPROACH:
+- Each option has been pre-mapped to the most relevant entity in the knowledge graph
+- Use the mapped entity names (not the original option text) in your queries
+- The mappings are provided in the semantic_mappings field
+- If no mapping is available, use semantic understanding to find the best match
 
 IMPORTANT NAME FORMATTING RULES:
 - ALL names in property values must be lowercase with underscores instead of spaces
@@ -344,7 +453,6 @@ IMPORTANT NAME FORMATTING RULES:
   * "Dermatological Surgery" becomes "dermatological_surgery"
 - This applies to all {name: 'value'} patterns in the queries and (name = 'value') patterns
 - Node labels and relationship types remain as provided in the schema
-- Always use the exact names from the question/options, but convert them to this format
 
 For each question in the batch, generate a corresponding Cypher query following these guidelines:
 
@@ -368,6 +476,14 @@ IMPORTANT GUIDELINES:
    - Return meaningful properties and relationships, not just node IDs
    - Use aggregation (COLLECT, COUNT) when appropriate to group related items
 
+SEMANTIC MAPPING EXAMPLES:
+Question: "What device is used to measure temperature differences?"
+Options: ["A device made up of the junction of two different metals...", "A device that deforms when voltage is applied"]
+Mappings: [{"original": "A device made up of the junction...", "mapped": "thermocouple"}, {"original": "A device that deforms...", "mapped": "piezoelectric_device"}]
+
+Instead of using the full option text, use:
+MATCH (d:Entity {name: 'thermocouple'}) RETURN d.name as device_name
+
 Example for "What is used in dermatological surgery?":
 MATCH (p:MedicalProcedure {name: 'dermatological_surgery'})
 OPTIONAL MATCH (p)-[r1]-(d:MedicalDevice)
@@ -389,6 +505,7 @@ RETURN p.name AS power_source
 
 Remember:
 - Generate one query for each question in the input batch
+- Use semantic mappings when available, not full option text
 - Only use the exact node labels, relationship types, and properties listed in the schema
 - ALL names in property values must be lowercase with underscores instead of spaces
 - Any other elements will fail as they do not exist in the database
@@ -408,6 +525,8 @@ class Neo4jConfig(BaseModel):
     auto_cleanup: bool = False  # New field to control automatic cleanup
     fuzzy_threshold: float = 0.8  # Threshold for fuzzy matching
     max_workers: int = 4  # New field for parallel processing
+    enable_semantic_mapping: bool = True  # New field to enable/disable semantic mapping
+    semantic_mapping_batch_size: int = 10  # Batch size for semantic mapping operations
 
     def __init__(self, **data):
         # Allow environment variables to override defaults
@@ -430,6 +549,10 @@ class Neo4jConfig(BaseModel):
             data['fuzzy_threshold'] = float(os.environ['NEO4J_FUZZY_THRESHOLD'])
         if 'NEO4J_MAX_WORKERS' in os.environ:
             data['max_workers'] = int(os.environ['NEO4J_MAX_WORKERS'])
+        if 'NEO4J_ENABLE_SEMANTIC_MAPPING' in os.environ:
+            data['enable_semantic_mapping'] = os.environ['NEO4J_ENABLE_SEMANTIC_MAPPING'].lower() == 'true'
+        if 'NEO4J_SEMANTIC_MAPPING_BATCH_SIZE' in os.environ:
+            data['semantic_mapping_batch_size'] = int(os.environ['NEO4J_SEMANTIC_MAPPING_BATCH_SIZE'])
 
         super().__init__(**data)
 
@@ -762,7 +885,65 @@ def _cleanup_old_databases(driver: GraphDatabase.driver, config: Neo4jConfig):
         logger.warning(f"Failed to perform database cleanup: {e}")
 
 
+def _perform_semantic_mapping(questions: List[str], options: List[List[str]], schema: str, config: Neo4jConfig) -> List[List[Dict[str, str]]]:
+    """Perform semantic mapping for all questions and their options.
 
+    Args:
+        questions: List of questions
+        options: List of option lists for each question
+        schema: Database schema
+        config: Neo4jConfig instance
+
+    Returns:
+        List of semantic mappings for each question's options
+    """
+    if not config.enable_semantic_mapping:
+        logger.info("Semantic mapping disabled, using empty mappings")
+        return [[{"original": opt, "mapped": ""} for opt in question_options] for question_options in options]
+
+    logger.info("Performing semantic mapping for answer options...")
+
+    semantic_mapper = SemanticOptionMapper()
+    all_mappings = []
+
+    # Process in batches to avoid overwhelming the LLM
+    batch_size = config.semantic_mapping_batch_size
+    num_batches = ceil(len(questions) / batch_size)
+
+    for batch_idx in range(num_batches):
+        start_idx = batch_idx * batch_size
+        end_idx = min((batch_idx + 1) * batch_size, len(questions))
+
+        batch_questions = questions[start_idx:end_idx]
+        batch_options = options[start_idx:end_idx]
+
+        logger.debug(f"Processing semantic mapping batch {batch_idx + 1}/{num_batches} (questions {start_idx + 1}-{end_idx})")
+
+        for i, (question, question_options) in enumerate(zip(batch_questions, batch_options)):
+            try:
+                # Create input for semantic mapping
+                mapping_input = SemanticMappingInput(
+                    options=question_options,
+                    schema=schema,
+                    question_context=question
+                )
+
+                # Perform semantic mapping
+                mapping_output = semantic_mapper(input=mapping_input)
+
+                # Store mappings for this question
+                all_mappings.append(mapping_output.mappings)
+
+                logger.debug(f"Semantic mapping for question {start_idx + i + 1}: {len(question_options)} options mapped")
+
+            except Exception as e:
+                logger.warning(f"Failed to perform semantic mapping for question {start_idx + i + 1}: {e}")
+                # Create empty mappings as fallback
+                fallback_mappings = [{"original": opt, "mapped": ""} for opt in question_options]
+                all_mappings.append(fallback_mappings)
+
+    logger.info(f"Completed semantic mapping for {len(questions)} questions")
+    return all_mappings
 
 
 def _process_batch_parallel(batch_data, converter, batch_fuzzy_matcher, driver, database_name, config, iteration, start_idx, schema):
@@ -789,12 +970,16 @@ def _process_batch_parallel(batch_data, converter, batch_fuzzy_matcher, driver, 
     batch_iteration_results = []
 
     try:
-        # Convert questions to queries using contract
+        # Perform semantic mapping for this batch (if enabled)
+        batch_semantic_mappings = _perform_semantic_mapping(batch_questions, batch_options, schema, config)
+
+        # Convert questions to queries using contract with semantic mappings
         input_data = Neo4jQueryInput(
             questions=batch_questions,
             options=batch_options,
             answers=batch_answers,
-            schema=schema
+            schema=schema,
+            semantic_mappings=batch_semantic_mappings
         )
 
         # Track runtime information for this batch
@@ -840,6 +1025,7 @@ def _process_batch_parallel(batch_data, converter, batch_fuzzy_matcher, driver, 
                 'options': options,
                 'expected_answer': answer,
                 'generated_query': query,
+                'semantic_mappings': batch_semantic_mappings[i] if i < len(batch_semantic_mappings) else [],
                 'successful': False,
                 'returned_results': False,
                 'correct': False,
@@ -937,6 +1123,7 @@ def _process_batch_parallel(batch_data, converter, batch_fuzzy_matcher, driver, 
                 'options': batch_options[i],
                 'expected_answer': batch_answers[i],
                 'generated_query': "",
+                'semantic_mappings': [],
                 'successful': False,
                 'returned_results': False,
                 'correct': False,
@@ -1090,6 +1277,7 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
                                 'options': batch_options[i],
                                 'expected_answer': batch_answers[i],
                                 'generated_query': "",
+                                'semantic_mappings': [],
                                 'successful': False,
                                 'returned_results': False,
                                 'correct': False,
@@ -1115,6 +1303,7 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
 
         logger.info("Neo4j Evaluation Results:")
         logger.info(f"Database used: {database_name}")
+        logger.info(f"Semantic mapping: {'Enabled' if config.enable_semantic_mapping else 'Disabled'}")
         logger.info(f"Matching method: Batch Fuzzy")
         logger.info(f"Fuzzy threshold: {config.fuzzy_threshold}")
         logger.info(f"Parallel processing: {config.max_workers} workers")
@@ -1132,7 +1321,7 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
         if df_results.empty:
             logger.warning("No results data to process, creating empty DataFrames")
             df_results = pd.DataFrame(columns=['iteration', 'query_idx', 'question', 'options', 'expected_answer',
-                                              'generated_query', 'successful', 'returned_results', 'correct', 'match_score', 'results', 'error'])
+                                              'generated_query', 'semantic_mappings', 'successful', 'returned_results', 'correct', 'match_score', 'results', 'error'])
 
         # Aggregated statistics DataFrame
         stats_data = []
@@ -1273,6 +1462,8 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
         neo4j_metrics = {
             'database_name': database_name,
             'run_id': run_id,
+            'semantic_mapping_enabled': config.enable_semantic_mapping,
+            'semantic_mapping_batch_size': config.semantic_mapping_batch_size,
             'matching_method': 'fuzzy',
             'fuzzy_threshold': config.fuzzy_threshold,
             'parallel_workers': config.max_workers,
