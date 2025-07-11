@@ -946,8 +946,88 @@ def _perform_semantic_mapping(questions: List[str], options: List[List[str]], sc
     return all_mappings
 
 
+def _process_iteration_parallel(iteration_data, converter, batch_fuzzy_matcher, driver, database_name, config, schema):
+    """Process a single iteration of all questions sequentially.
+
+    Args:
+        iteration_data: Tuple of (iteration, all_questions, all_options, all_answers)
+        converter: BatchQuestionToCypherConverter instance
+        batch_fuzzy_matcher: BatchFuzzyAnswerMatcher instance
+        driver: Neo4j driver
+        database_name: Database name to use
+        config: Neo4jConfig instance
+        schema: Database schema string
+
+    Returns:
+        Tuple of (iteration_results, iteration_runtime_info)
+    """
+    iteration, all_questions, all_options, all_answers = iteration_data
+
+    # Initialize iteration runtime tracking
+    iteration_runtime_info = RuntimeInfo(0, 0, 0, 0, 0, 0, 0, 0)
+    iteration_results = []
+
+    logger.info(f"Processing Neo4j iteration {iteration + 1}/{config.num_iterations}")
+
+    try:
+        # Process questions in batches sequentially within this iteration
+        num_batches = ceil(len(all_questions) / config.batch_size)
+
+        for batch_idx in range(num_batches):
+            start_idx = batch_idx * config.batch_size
+            end_idx = min((batch_idx + 1) * config.batch_size, len(all_questions))
+
+            batch_questions = all_questions[start_idx:end_idx]
+            batch_options = all_options[start_idx:end_idx]
+            batch_answers = all_answers[start_idx:end_idx]
+
+            logger.debug(f"Processing batch {batch_idx + 1}/{num_batches} in iteration {iteration + 1}")
+
+            # Process this batch
+            batch_results, batch_runtime_info = _process_batch_parallel(
+                (batch_questions, batch_options, batch_answers),
+                converter,
+                batch_fuzzy_matcher,
+                driver,
+                database_name,
+                config,
+                iteration,
+                start_idx,
+                schema
+            )
+
+            # Add batch results and runtime to iteration totals
+            iteration_results.extend(batch_results)
+            iteration_runtime_info += batch_runtime_info
+
+            logger.debug(f"Completed batch {batch_idx + 1}/{num_batches} in iteration {iteration + 1}")
+
+    except Exception as e:
+        logger.error(f"Error processing iteration {iteration + 1}: {e}")
+
+        # Mark all queries in this iteration as failed
+        for i in range(len(all_questions)):
+            iteration_result = {
+                'iteration': iteration + 1,
+                'query_idx': i + 1,
+                'question': all_questions[i],
+                'options': all_options[i],
+                'expected_answer': all_answers[i],
+                'generated_query': "",
+                'semantic_mappings': [],
+                'successful': False,
+                'returned_results': False,
+                'correct': False,
+                'results': [],
+                'error': f"Iteration processing error: {type(e).__name__}: {str(e)}"
+            }
+            iteration_results.append(iteration_result)
+
+    return iteration_results, iteration_runtime_info
+
+
 def _process_batch_parallel(batch_data, converter, batch_fuzzy_matcher, driver, database_name, config, iteration, start_idx, schema):
-    """Process a single batch of questions in parallel.
+    """Process a single batch of questions sequentially within an iteration.
 
     Args:
         batch_data: Tuple of (batch_questions, batch_options, batch_answers)
@@ -1198,94 +1278,79 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
         # Initialize runtime tracking
         total_runtime_info = RuntimeInfo(0, 0, 0, 0, 0, 0, 0, 0)
 
-        # Run evaluation N times
+        # Process iterations in parallel instead of batches within iterations
+        logger.info(f"Processing {config.num_iterations} iterations with up to {config.max_workers} parallel workers")
+
+        # Prepare iteration data for parallel processing
+        iteration_tasks = []
         for iteration in range(config.num_iterations):
-            logger.info(f"Neo4j iteration {iteration + 1}/{config.num_iterations}")
+            iteration_tasks.append((iteration, all_questions, all_options, all_answers))
 
-            # Process questions in batches with parallel execution
-            num_batches = ceil(len(all_questions) / config.batch_size)
+        # Process iterations in parallel
+        with ThreadPoolExecutor(max_workers=config.max_workers) as executor:
+            # Submit all iteration tasks
+            future_to_iteration = {
+                executor.submit(
+                    _process_iteration_parallel,
+                    iteration_data,
+                    converter,
+                    batch_fuzzy_matcher,
+                    driver,
+                    database_name,
+                    config,
+                    schema
+                ): iteration_data for iteration_data in iteration_tasks
+            }
 
-            # Prepare batch data for parallel processing
-            batch_tasks = []
-            for batch_idx in range(num_batches):
-                start_idx = batch_idx * config.batch_size
-                end_idx = min((batch_idx + 1) * config.batch_size, len(all_questions))
+            # Collect results as they complete
+            for future in as_completed(future_to_iteration):
+                iteration_data = future_to_iteration[future]
+                iteration = iteration_data[0]
 
-                batch_questions = all_questions[start_idx:end_idx]
-                batch_options = all_options[start_idx:end_idx]
-                batch_answers = all_answers[start_idx:end_idx]
+                try:
+                    iteration_results, iteration_runtime_info = future.result()
 
-                batch_tasks.append((batch_questions, batch_options, batch_answers, start_idx))
+                    # Add iteration runtime to total
+                    total_runtime_info += iteration_runtime_info
 
-            logger.info(f"Processing {num_batches} batches with up to {config.max_workers} parallel workers")
+                    # Store all iteration results
+                    for iteration_result in iteration_results:
+                        results_data.append(iteration_result)
 
-            # Process batches in parallel
-            with ThreadPoolExecutor(max_workers=config.max_workers) as executor:
-                # Submit all batch tasks
-                future_to_batch = {
-                    executor.submit(
-                        _process_batch_parallel,
-                        batch_data,
-                        converter,
-                        batch_fuzzy_matcher,
-                        driver,
-                        database_name,
-                        config,
-                        iteration,
-                        start_idx,
-                        schema
-                    ): (batch_data, start_idx) for batch_data, start_idx in [(task[0:3], task[3]) for task in batch_tasks]
-                }
+                        # Update query stats
+                        query_idx = iteration_result['query_idx'] - 1  # Convert back to 0-based index
+                        query_stats[query_idx]['iterations'].append(iteration_result)
+                        if iteration_result['successful']:
+                            query_stats[query_idx]['successful'] = True
+                        if iteration_result['returned_results']:
+                            query_stats[query_idx]['returned_results'] = True
+                        if iteration_result['correct']:
+                            query_stats[query_idx]['correct'] = True
 
-                # Collect results as they complete
-                for future in as_completed(future_to_batch):
-                    batch_data, start_idx = future_to_batch[future]
-                    batch_idx = start_idx // config.batch_size
+                    logger.debug(f"Completed Neo4j iteration {iteration + 1}/{config.num_iterations}")
 
-                    try:
-                        batch_iteration_results, batch_runtime_info = future.result()
+                except Exception as e:
+                    logger.error(f"Error processing Neo4j iteration {iteration + 1}: {e}")
 
-                        # Add batch runtime to total
-                        total_runtime_info += batch_runtime_info
-
-                        # Store all iteration results
-                        for iteration_result in batch_iteration_results:
-                            results_data.append(iteration_result)
-
-                            # Update query stats
-                            query_idx = iteration_result['query_idx'] - 1  # Convert back to 0-based index
-                            query_stats[query_idx]['iterations'].append(iteration_result)
-                            if iteration_result['successful']:
-                                query_stats[query_idx]['successful'] = True
-                            if iteration_result['returned_results']:
-                                query_stats[query_idx]['returned_results'] = True
-                            if iteration_result['correct']:
-                                query_stats[query_idx]['correct'] = True
-
-                        logger.debug(f"Completed Neo4j batch {batch_idx + 1}/{num_batches}")
-
-                    except Exception as e:
-                        logger.error(f"Error processing Neo4j batch {batch_idx + 1}: {e}")
-
-                        # Mark all queries in this batch as failed
-                        batch_questions, batch_options, batch_answers = batch_data
-                        for i in range(len(batch_questions)):
-                            iteration_result = {
-                                'iteration': iteration + 1,
-                                'query_idx': start_idx + i + 1,
-                                'question': batch_questions[i],
-                                'options': batch_options[i],
-                                'expected_answer': batch_answers[i],
-                                'generated_query': "",
-                                'semantic_mappings': [],
-                                'successful': False,
-                                'returned_results': False,
-                                'correct': False,
-                                'results': [],
-                                'error': f"Batch processing error: {type(e).__name__}: {str(e)}"
-                            }
-                            results_data.append(iteration_result)
-                            query_stats[start_idx + i]['iterations'].append(iteration_result)
+                    # Mark all queries in this iteration as failed
+                    iteration_questions, iteration_options, iteration_answers = iteration_data[1:]
+                    for i in range(len(iteration_questions)):
+                        iteration_result = {
+                            'iteration': iteration + 1,
+                            'query_idx': i + 1,
+                            'question': iteration_questions[i],
+                            'options': iteration_options[i],
+                            'expected_answer': iteration_answers[i],
+                            'generated_query': "",
+                            'semantic_mappings': [],
+                            'successful': False,
+                            'returned_results': False,
+                            'correct': False,
+                            'results': [],
+                            'error': f"Iteration processing error: {type(e).__name__}: {str(e)}"
+                        }
+                        results_data.append(iteration_result)
+                        query_stats[i]['iterations'].append(iteration_result)
 
         # Calculate aggregated statistics based on unique queries
         unique_queries_count = len(query_stats)  # Number of unique queries
