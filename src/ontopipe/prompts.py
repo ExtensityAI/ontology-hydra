@@ -49,8 +49,8 @@ Analyze competency questions to identify ontological requirements and extract fo
 * Use camelCase naming starting with a verb (e.g., hasAuthor, isPartOf)
 * Specify domain and range classes
 * Determine applicable characteristics:
-  - Functional: Each subject has at most one value
-  - Inverse functional: Each object relates to at most one subject
+  - Functional: Each subject has at most one value (DO NOT OVERUSE THIS! Reality is often complex. Only use when you are confident!)
+  - Inverse functional: Each object relates to at most one subject (DO NOT OVERUSE THIS! Reality is often complex. Only use when you are confident!)
   - Transitive: If A relates to B and B to C, then A relates to C
   - Symmetric: If A relates to B, then B relates to A
   - Asymmetric: If A relates to B, then B cannot relate to A
