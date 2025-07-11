@@ -1287,12 +1287,13 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
                             results_data.append(iteration_result)
                             query_stats[start_idx + i]['iterations'].append(iteration_result)
 
-        # Calculate aggregated statistics
+        # Calculate aggregated statistics based on unique queries
+        unique_queries_count = len(query_stats)  # Number of unique queries
         successful_queries = sum(1 for stats in query_stats.values() if stats['successful'])
         queries_with_results = sum(1 for stats in query_stats.values() if stats['returned_results'])
         correct_queries = sum(1 for stats in query_stats.values() if stats['correct'])
 
-        # Calculate average match score across all queries
+        # Calculate average match score across all query-iteration combinations
         all_match_scores = []
         for stats in query_stats.values():
             for iter_result in stats['iterations']:
@@ -1307,9 +1308,12 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
         logger.info(f"Matching method: Batch Fuzzy")
         logger.info(f"Fuzzy threshold: {config.fuzzy_threshold}")
         logger.info(f"Parallel processing: {config.max_workers} workers")
-        logger.info(f"Successfully processed: {successful_queries} / {total_queries} queries")
-        logger.info(f"Queries that returned results: {queries_with_results} / {total_queries}")
-        logger.info(f"Correct results: {correct_queries} / {total_queries}")
+        logger.info(f"Unique queries processed: {unique_queries_count}")
+        logger.info(f"Total iterations: {config.num_iterations}")
+        logger.info(f"Total query-iteration combinations: {total_queries}")
+        logger.info(f"Queries successfully executed (any iteration): {successful_queries} / {unique_queries_count}")
+        logger.info(f"Queries that returned results (any iteration): {queries_with_results} / {unique_queries_count}")
+        logger.info(f"Queries with correct answers (any iteration): {correct_queries} / {unique_queries_count}")
         logger.info(f"Average match score: {avg_overall_match_score:.3f}")
         logger.info(f"Total elapsed time: {total_runtime_info.total_elapsed_time:.2f} seconds")
         logger.info(f"Estimated cost: ${total_runtime_info.cost_estimate:.4f}")
@@ -1373,7 +1377,7 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
                     'successful_count': successful_count,
                     'results_count': results_count,
                     'correct_count': correct_count,
-                    'total_queries': len(iter_data)
+                    'total_queries': len(iter_data)  # This should be the number of queries in this iteration
                 })
             except Exception as e:
                 logger.warning(f"Error processing iteration {iteration + 1}: {e}")
@@ -1385,17 +1389,15 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
                     'total_queries': 0
                 })
 
-        # Add total row
-        total_successful = sum(row['successful_count'] for row in iteration_stats_data)
-        total_results = sum(row['results_count'] for row in iteration_stats_data)
-        total_correct = sum(row['correct_count'] for row in iteration_stats_data)
-        total_queries = sum(row['total_queries'] for row in iteration_stats_data)
+        # Add total row - show unique query counts (same as final metrics)
+        # The TOTAL row should show how many unique queries succeeded in any iteration
+        total_queries = len(query_stats)  # Number of unique queries
 
         iteration_stats_data.append({
             'iteration': 'TOTAL',
-            'successful_count': total_successful,
-            'results_count': total_results,
-            'correct_count': total_correct,
+            'successful_count': successful_queries,  # Unique queries that succeeded in any iteration
+            'results_count': queries_with_results,   # Unique queries that returned results in any iteration
+            'correct_count': correct_queries,        # Unique queries that were correct in any iteration
             'total_queries': total_queries
         })
 
@@ -1458,7 +1460,7 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
         df_runtime_stats.to_csv(runtime_stats_file, index=False)
         logger.info(f"Neo4j runtime statistics saved to: {runtime_stats_file}")
 
-        # Save summary metrics
+        # Save summary metrics with clear documentation
         neo4j_metrics = {
             'database_name': database_name,
             'run_id': run_id,
@@ -1467,17 +1469,27 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
             'matching_method': 'fuzzy',
             'fuzzy_threshold': config.fuzzy_threshold,
             'parallel_workers': config.max_workers,
-            'successful_queries': successful_queries,
-            'total_queries': total_queries,
-            'success_rate': successful_queries / total_queries if total_queries > 0 else 0,
-            'queries_with_results': queries_with_results,
-            'results_rate': queries_with_results / total_queries if total_queries > 0 else 0,
-            'correct_queries': correct_queries,
-            'accuracy': correct_queries / total_queries if total_queries > 0 else 0,
+            'total_queries': unique_queries_count,  # Number of unique queries
+            'successful_queries': successful_queries,  # Queries that executed successfully in at least one iteration
+            'success_rate': successful_queries / unique_queries_count if unique_queries_count > 0 else 0,
+            'queries_with_results': queries_with_results,  # Queries that returned results in at least one iteration
+            'results_rate': queries_with_results / unique_queries_count if unique_queries_count > 0 else 0,
+            'correct_queries': correct_queries,  # Queries with correct answers in at least one iteration
+            'accuracy': correct_queries / unique_queries_count if unique_queries_count > 0 else 0,
             'average_match_score': avg_overall_match_score,
             'total_elapsed_time_seconds': total_runtime_info.total_elapsed_time,
             'estimated_cost_usd': total_runtime_info.cost_estimate,
-            'auto_cleanup_enabled': config.auto_cleanup
+            'auto_cleanup_enabled': config.auto_cleanup,
+            'metrics_explanation': {
+                'total_queries': 'Number of unique questions/queries processed',
+                'successful_queries': 'Number of unique queries that executed successfully in at least one iteration',
+                'queries_with_results': 'Number of unique queries that returned results in at least one iteration',
+                'correct_queries': 'Number of unique queries with correct answers in at least one iteration',
+                'success_rate': 'Percentage of unique queries that executed successfully at least once',
+                'results_rate': 'Percentage of unique queries that returned results at least once',
+                'accuracy': 'Percentage of unique queries with correct answers at least once',
+                'average_match_score': 'Average fuzzy match score across all query-iteration combinations'
+            }
         }
 
         metrics_file = neo4j_output_path / "neo4j_metrics.json"

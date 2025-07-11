@@ -268,6 +268,65 @@ def _eval_squad_topic(title: str, ontology: Ontology | None, path: Path, neo4j_c
     _eval_neo4j_qa(kg, qas, neo4j_config, path)
 
 
+def _eval_squad_topic_existing_kg(title: str, ontology: Ontology | None, path: Path, neo4j_config: Neo4jConfig, dataset_mode: str, skip_qa: bool = True):
+    """Evaluate QA performance on a specific topic using an existing knowledge graph."""
+
+    logger.info("Loading existing kg for '{}' using {} dataset", title, dataset_mode)
+
+    # Load the existing knowledge graph
+    kg_path = path / "kg.json"
+    if not kg_path.exists():
+        raise FileNotFoundError(f"Knowledge graph file not found at {kg_path}")
+
+    kg = KG.model_validate_json(kg_path.read_text(encoding='utf-8', errors='ignore'))
+    logger.info("Loaded existing KG with {} triplets", len(kg.triplets))
+
+    # Load the appropriate dataset based on mode
+    dataset = load_dataset(dataset_mode, title)
+    topic = dataset.find_topic(title)
+
+    assert topic is not None, f"Topic '{title}' not found in SQuAD {dataset_mode} dataset"
+
+    # Visualize the existing KG
+    visualize_kg(kg, path / "kg.html", ontology)
+
+    qas = topic.qas
+
+    logger.debug("Found {} questions for topic '{}'", len(qas), title)
+
+    if skip_qa:
+        logger.info("Skipping question answering evaluation")
+        # Create empty metrics for consistency
+        empty_metrics = {
+            'exact_match': 0.0,
+            'f1': 0.0,
+            'no_answer_probability': 0.0,
+            'skip_qa': True
+        }
+        (path / "metrics.json").write_text(json.dumps(empty_metrics, indent=2), encoding="utf-8")
+        logger.debug("Saved empty evaluation results to '{}'", path / "metrics.json")
+    else:
+        qa_cache_path = path / "qas.json"
+
+        details = _answer_all_questions(kg, qas, qa_cache_path)
+
+        # TODO IMPORTANT how do we ensure that answers are sourced only from the KG?
+
+        # TODO also save preds and refs to file?
+
+        predictions, references = _format_predictions(details, qas)
+        metrics = squadv2.compute(predictions=predictions, references=references)
+        logger.info("Evaluation results for topic '{}':", title)
+        logger.info("{}", metrics)
+
+        # save results to file
+        (path / "metrics.json").write_text(json.dumps(metrics, indent=2), encoding="utf-8")
+        logger.debug("Saved evaluation results to '{}'", path / "metrics.json")
+
+    # --- Neo4j evaluation ---
+    _eval_neo4j_qa(kg, qas, neo4j_config, path)
+
+
 def _format_predictions(details: list[ResponseDetail], qas: list[SquadQAPair]):
     """Format the predictions for squad_v2.py evaluation script"""
 
