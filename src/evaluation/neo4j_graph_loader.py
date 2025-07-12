@@ -84,7 +84,7 @@ def main():
     NEO4J_PASSWORD = "ontology"
 
     # File path
-    KG_FILE = "../../eval/runs/20250702_D7Cxag/biomed/topics/Biomedical Engineering/kg.json"
+    KG_FILE = "/Users/ryang/Work/ExtensityAI/research-ontology/eval/runs/run_gpt-4.1-mini/biomedical_engineer/topics/Biomedical Engineer/kg.json"
 
     try:
         # Initialize loader
