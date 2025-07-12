@@ -309,6 +309,10 @@ class KG(LLMDataModel):
     name: str = Field(description="The name of the KG domain.")
     triplets: list[Triplet] | None = Field(description="List of triplets.")
 
+    @classmethod
+    def from_json_file(cls, path: Path | str):
+        return cls.model_validate_json(Path(path).read_text(encoding="utf-8", errors="ignore"))
+
 
 class TripletExtractorInput(LLMDataModel):
     text: str = Field(description="Text to extract triplets from.")
