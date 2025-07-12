@@ -5,7 +5,7 @@
 
 [![SymbolicAI](https://img.shields.io/badge/SymbolicAI-blue?style=for-the-badge)](https://github.com/ExtensityAI/symbolicai)
 [![Paper](https://img.shields.io/badge/Paper-32758e?style=for-the-badge)](?)
-[![DeepWiki](https://img.shields.io/badge/DeepWiki-yellow?style=for-the-badge)](?)
+[![DeepWiki](https://img.shields.io/badge/DeepWiki-yellow?style=for-the-badge)](https://deepwiki.com/ExtensityAI/ontology-hydra)
 
 [![Twitter](https://img.shields.io/twitter/url/https/twitter.com/symbolicapi.svg?style=social&label=@ExtensityAI)](https://twitter.com/ExtensityAI)
 
