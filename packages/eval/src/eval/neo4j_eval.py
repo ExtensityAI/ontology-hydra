@@ -574,10 +574,24 @@ class Neo4jConfig(BaseModel):
     max_workers: int = 4  # New field for parallel processing
     enable_semantic_mapping: bool = True  # New field to enable/disable semantic mapping
     semantic_mapping_batch_size: int = 10  # Batch size for semantic mapping operations
+    neo4j_import_dir: str  # Neo4j import directory path for CSV file loading
 
     def __init__(self, **data):
         # Allow environment variables to override defaults
         import os
+
+        # Available environment variables:
+        # NEO4J_URI - Neo4j connection URI
+        # NEO4J_USER - Neo4j username
+        # NEO4J_PASSWORD - Neo4j password
+        # NEO4J_USE_RUN_SPECIFIC_DATABASES - Enable/disable run-specific databases
+        # NEO4J_DEFAULT_DATABASE - Default database name
+        # NEO4J_AUTO_CLEANUP - Enable/disable automatic database cleanup
+        # NEO4J_FUZZY_THRESHOLD - Threshold for fuzzy matching
+        # NEO4J_MAX_WORKERS - Number of parallel workers
+        # NEO4J_ENABLE_SEMANTIC_MAPPING - Enable/disable semantic mapping
+        # NEO4J_SEMANTIC_MAPPING_BATCH_SIZE - Batch size for semantic mapping
+        # NEO4J_IMPORT_DIR - Neo4j import directory path for CSV file loading
 
         # Override with environment variables if they exist
         if 'NEO4J_URI' in os.environ:
@@ -600,6 +614,8 @@ class Neo4jConfig(BaseModel):
             data['enable_semantic_mapping'] = os.environ['NEO4J_ENABLE_SEMANTIC_MAPPING'].lower() == 'true'
         if 'NEO4J_SEMANTIC_MAPPING_BATCH_SIZE' in os.environ:
             data['semantic_mapping_batch_size'] = int(os.environ['NEO4J_SEMANTIC_MAPPING_BATCH_SIZE'])
+        if 'NEO4J_IMPORT_DIR' in os.environ:
+            data['neo4j_import_dir'] = os.environ['NEO4J_IMPORT_DIR']
 
         super().__init__(**data)
 
@@ -701,7 +717,7 @@ def _create_run_specific_database(driver: GraphDatabase.driver, run_id: str, con
     return database_name
 
 
-def _load_kg_to_neo4j(kg: KG, driver: GraphDatabase.driver, database_name: str = "neo4j"):
+def _load_kg_to_neo4j(kg: KG, driver: GraphDatabase.driver, config: Neo4jConfig, database_name: str = "neo4j"):
     """Load knowledge graph into Neo4j database using improved loader"""
     logger.info(f"Loading knowledge graph into Neo4j database: {database_name}")
 
@@ -745,7 +761,7 @@ def _load_kg_to_neo4j(kg: KG, driver: GraphDatabase.driver, database_name: str =
                     uri=config.uri,  # Use the config URI instead of trying to construct it
                     user=config.user,
                     password=config.password,
-                    neo4j_import_dir=None  # Let it auto-detect
+                    neo4j_import_dir=config.neo4j_import_dir  # Use config import directory
                 )
 
                 # Load the knowledge graph
@@ -760,18 +776,18 @@ def _load_kg_to_neo4j(kg: KG, driver: GraphDatabase.driver, database_name: str =
         except ImportError as e:
             logger.warning(f"Could not import improved loader: {e}")
             logger.info("Falling back to basic CSV method")
-            _load_kg_to_neo4j_basic(kg, driver, database_name)
+            _load_kg_to_neo4j_basic(kg, driver, config, database_name)
         except Exception as e:
             logger.warning(f"Error using improved loader: {e}")
             logger.info("Falling back to basic CSV method")
-            _load_kg_to_neo4j_basic(kg, driver, database_name)
+            _load_kg_to_neo4j_basic(kg, driver, config, database_name)
     else:
         logger.warning(f"Could not find src/evaluation directory: {src_eval_path}")
         logger.info("Falling back to basic CSV method")
-        _load_kg_to_neo4j_basic(kg, driver, database_name)
+        _load_kg_to_neo4j_basic(kg, driver, config, database_name)
 
 
-def _load_kg_to_neo4j_basic(kg: KG, driver: GraphDatabase.driver, database_name: str = "neo4j"):
+def _load_kg_to_neo4j_basic(kg: KG, driver: GraphDatabase.driver, config: Neo4jConfig, database_name: str = "neo4j"):
     """Load knowledge graph into Neo4j database using basic CSV method (fallback)"""
     logger.info(f"Loading knowledge graph into Neo4j database using basic method: {database_name}")
 
@@ -810,8 +826,16 @@ def _load_kg_to_neo4j_basic(kg: KG, driver: GraphDatabase.driver, database_name:
                 logger.error(f"Failed to access database {database_name} after {max_retries} attempts: {e}")
                 raise
 
-    # Neo4j import folder path
-    neo4j_import_dir = "/Users/ryang/Library/Application Support/Neo4j Desktop/Application/relate-data/dbmss/dbms-8ff6e63e-4586-411a-a8ba-f42cb734d84b/import"
+        # Neo4j import folder path - must be provided in config
+    neo4j_import_dir = config.neo4j_import_dir
+    logger.info(f"Using Neo4j import directory: {neo4j_import_dir}")
+
+    # Validate that the import directory exists and is writable
+    if not os.path.exists(neo4j_import_dir):
+        raise FileNotFoundError(f"Neo4j import directory does not exist: {neo4j_import_dir}")
+
+    if not os.access(neo4j_import_dir, os.W_OK):
+        raise PermissionError(f"Cannot write to Neo4j import directory: {neo4j_import_dir}")
 
     # Convert KG to CSV format
     triplets = kg.triplets
@@ -1560,7 +1584,7 @@ def _eval_neo4j_qa(kg: KG, qas: List[SquadQAPair], config: Neo4jConfig, output_p
         logger.info(f"Using Neo4j database: {database_name}")
 
         # Load knowledge graph into the run-specific database
-        _load_kg_to_neo4j(kg, driver, database_name)
+        _load_kg_to_neo4j(kg, driver, config, database_name)
 
         # Initialize converter with the driver (it will use the database_name parameter in queries)
         converter = BatchQuestionToCypherConverter(driver=driver, database_name=database_name)
