@@ -399,10 +399,10 @@ class BatchQuestionToCypherConverter(Expression):
             raise ValueError(f"Failed to get graph data from Neo4j database '{self.database_name}': {e}")
 
         # Debug: Log available graph elements
-        logger.debug(f"Available labels in database '{self.database_name}': {sorted(labels)}")
-        logger.debug(f"Available relationships in database '{self.database_name}': {sorted(rels)}")
-        logger.debug(f"Available node names in database '{self.database_name}': {sorted(node_names)}")
-        logger.debug(f"Available properties in database '{self.database_name}': {sorted(props)}")
+        # logger.debug(f"Available labels in database '{self.database_name}': {sorted(labels)}")
+        # logger.debug(f"Available relationships in database '{self.database_name}': {sorted(rels)}")
+        # logger.debug(f"Available node names in database '{self.database_name}': {sorted(node_names)}")
+        # logger.debug(f"Available properties in database '{self.database_name}': {sorted(props)}")
 
         for i, query in enumerate(output.queries):
             if not query.strip():
@@ -574,7 +574,7 @@ class Neo4jConfig(BaseModel):
     max_workers: int = 4  # New field for parallel processing
     enable_semantic_mapping: bool = True  # New field to enable/disable semantic mapping
     semantic_mapping_batch_size: int = 10  # Batch size for semantic mapping operations
-    neo4j_import_dir: str  # Neo4j import directory path for CSV file loading
+    neo4j_import_dir: str = ""  # Neo4j import directory path for CSV file loading
 
     def __init__(self, **data):
         # Allow environment variables to override defaults
@@ -826,7 +826,9 @@ def _load_kg_to_neo4j_basic(kg: KG, driver: GraphDatabase.driver, config: Neo4jC
                 logger.error(f"Failed to access database {database_name} after {max_retries} attempts: {e}")
                 raise
 
-        # Neo4j import folder path - must be provided in config
+    # Neo4j import folder path - must be provided in config
+    if not config.neo4j_import_dir:
+        raise ValueError("Neo4j import directory must be configured via neo4j_import_dir parameter or NEO4J_IMPORT_DIR environment variable")
     neo4j_import_dir = config.neo4j_import_dir
     logger.info(f"Using Neo4j import directory: {neo4j_import_dir}")
 
