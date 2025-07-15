@@ -1,13 +1,5 @@
 # **HyDRA: A Hybrid-Driven Reasoning Architecture for Verifiable Knowledge Graphs**
 
-<div align="center">
-
-[![SymbolicAI](https://img.shields.io/badge/SymbolicAI-blue?style=for-the-badge)](https://github.com/ExtensityAI/symbolicai)
-[![Paper](https://img.shields.io/badge/Paper-32758e?style=for-the-badge)](?)
-[![DeepWiki](https://img.shields.io/badge/DeepWiki-yellow?style=for-the-badge)](https://deepwiki.com/ExtensityAI/ontology-hydra)
-
-</div>
-
 ---
 
 <div align="center">
@@ -16,12 +8,12 @@
 
 ## About
 
-`HyDRA` is a framework for generating **domain-specific ontologies** and **knowledge graphs**. It employs an AI persona committee-based approach to comprehensively scope domains, generate ontological structures, and create knowledge graphs for various applications including question answering and domain exploration. `HyDRA` is built entirely on the [symbolicai](https://github.com/ExtensityAI/symbolicAI) framework. Please support the project by starring the repository.
+`HyDRA` is a framework for generating **domain-specific ontologies** and **knowledge graphs**. It employs an AI persona committee-based approach to comprehensively scope domains, generate ontological structures, and create knowledge graphs for various applications including question answering and domain exploration. `HyDRA` is built entirely on the [symbolicai](https://github.com/XXX/symbolicAI) framework. Please support the project by starring the repository.
 
 ## Setup
 
 ```bash
-git clone git@github.com:ExtensityAI/ontology-hydra.git
+git clone git@github.com:XXX/ontology-hydra.git
 cd ontology-hydra
 ```
 
@@ -43,11 +35,11 @@ Upon running this command for the first time, it will start the initial packages
 UserWarning: No configuration file found for the environment. A new configuration file has been created at <full-path>/ontology-hydra/.venv/.symai/symai.config.json. Please configure your environment.
 ```
 
-You then must edit the `symai.config.json` file. A neurosymbolic engine is **required** for the `symbolicai` framework to be used. More about configuration management [here](https://extensityai.gitbook.io/symbolicai/installation#configuration-file).
+You then must edit the `symai.config.json` file. A neurosymbolic engine is **required** for the `symbolicai` framework to be used. More about configuration management [here](https://XXX.gitbook.io/symbolicai/installation#configuration-file).
 
 Once you've set up the `symbolicai` config, you can must also installed an additional plugin for the `ontopipe` package:
 ```bash
-uv run sympkg i ExtensityAI/chonkie-symai
+uv run sympkg i XXX/chonkie-symai
 ```
 
 Now, you are set up.
@@ -85,7 +77,7 @@ texts = ['...'] # provide your list of texts chunks here
 # E.g.:
 # ex_str = Symbol('this is a test string to generate a knowledge graph')
 # ChonkieChunker = Import.load_expression(
-#     'ExtensityAI/chonkie-symai',
+#     'XXX/chonkie-symai',
 #     'ChonkieChunker'
 # )
 # chonkie = ChonkieChunker(tokenizer_name='gpt2')
