@@ -162,7 +162,7 @@ def chunk_text(text: str, chunk_size: int = 512) -> List[str]:
     Returns:
         List of text chunks
     """
-    chunker = Import.load_expression("ExtensityAI/chonkie-symai", "ChonkieChunker")(tokenizer_name="Xenova/gpt-4o")
+    chunker = Import.load_expression("XXX/chonkie-symai", "ChonkieChunker")(tokenizer_name="Xenova/gpt-4o")
     sym = Symbol(text)
     chunks = chunker(sym, chunk_size=chunk_size)
 
