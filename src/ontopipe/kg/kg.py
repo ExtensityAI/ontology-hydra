@@ -1,6 +1,9 @@
+import json
 from logging import getLogger
 from pathlib import Path
+from typing import Literal
 
+from pydantic import Field, create_model
 from symai import Expression
 from symai.components import MetadataTracker
 from symai.strategy import contract
@@ -9,8 +12,8 @@ from tqdm import tqdm
 from ontopipe.models import (
     KG,
     KGState,
-    ObjectProperty,
-    Ontology,
+    ObjectPropertyModel,
+    OntologyModel,
     Triplet,
     TripletExtractorInput,
 )
@@ -38,11 +41,15 @@ def is_snake_case(s):
     pre_remedy=False,
     post_remedy=True,
     verbose=True,
-    remedy_retry_params=dict(tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False),
+    remedy_retry_params=dict(
+        tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False
+    ),
     accumulate_errors=False,
 )
 class TripletExtractor(Expression):
-    def __init__(self, name: str, ontology: Ontology | None = None, *args, **kwargs):
+    def __init__(
+        self, name: str, ontology: OntologyModel | None = None, *args, **kwargs
+    ):
         super().__init__(*args, **kwargs)
         self.name = name
         self.ontology = ontology
@@ -70,14 +77,18 @@ class TripletExtractor(Expression):
         errors = []
 
         new_type_defs = dict[str, str]()
-        existing_type_defs = {x.subject: x.object for x in self._triplets if x.predicate == "isA"}
+        existing_type_defs = {
+            x.subject: x.object for x in self._triplets if x.predicate == "isA"
+        }
 
         # ?: add information on how to fix for each of the errors
         # ?: consider adding context information to errors (i.e. for what types a property is valid, etc.)
 
         # first iteration: check for new isA triplets, ensure that they are valid
         for triplet in (t for t in triplets if t.predicate == "isA"):
-            if (subject_class := existing_type_defs.get(triplet.subject, None)) is not None or (
+            if (
+                subject_class := existing_type_defs.get(triplet.subject, None)
+            ) is not None or (
                 subject_class := new_type_defs.get(triplet.subject, None)
             ) is not None:
                 if subject_class in self.ontology.superclasses[triplet.object]:
@@ -161,15 +172,19 @@ class TripletExtractor(Expression):
                 )
                 continue
 
-            if isinstance(property, ObjectProperty):
-                if not object_class:  # (properties do not need type definition for object)
+            if isinstance(property, ObjectPropertyModel):
+                if (
+                    not object_class
+                ):  # (properties do not need type definition for object)
                     # Object entity does not have a type definition yet
                     errors.append(
                         f"{triplet}: Entity '{triplet.object}' lacks class assignment. First add ({triplet.object}, isA, <validClass>) before using this entity."
                     )
                     continue
 
-                if not property.is_valid_for(superclasses[subject_class], superclasses[object_class]):
+                if not property.is_valid_for(
+                    superclasses[subject_class], superclasses[object_class]
+                ):
                     # Ensure that the property is valid for the subject and object types
                     errors.append(
                         f"{triplet}: Property '{triplet.predicate}' cannot connect '{subject_class}' entities to '{object_class}' entities according to the ontology constraints."
@@ -186,7 +201,9 @@ class TripletExtractor(Expression):
             # ? consider adding validation for data properties
 
         if errors:
-            raise ValueError(f"Triplet extraction failed with the following errors: \n- {'\n- '.join(errors)}")
+            raise ValueError(
+                f"Triplet extraction failed with the following errors: \n- {'\n- '.join(errors)}"
+            )
 
         return True
 
@@ -210,7 +227,7 @@ def generate_kg(
     cache_path: Path,
     texts: list[str],
     kg_name: str,
-    ontology: Ontology | None = None,
+    ontology: OntologyModel | None = None,
     batch_size: int = 1,
     epochs: int = 3,
 ) -> KG:
@@ -218,12 +235,16 @@ def generate_kg(
 
     partial_path = cache_path.with_suffix(".partial.json")
 
+    schema = json.dumps(create_kg_input_model(ontology).model_json_schema(), indent=2)
+
     usage = None
     triplets = []
     for i in range(epochs):
         n_new_triplets_in_epoch = 0
         with MetadataTracker() as tracker:
-            for j in tqdm(range(0, len(texts), batch_size), desc=f"Epoch {i + 1}/{epochs}"):
+            for j in tqdm(
+                range(0, len(texts), batch_size), desc=f"Epoch {i + 1}/{epochs}"
+            ):
                 text = "\n".join(texts[j : j + batch_size])
 
                 input_data = TripletExtractorInput(
@@ -259,7 +280,10 @@ def generate_kg(
                         )
 
                         visualize_kg(
-                            extractor.get_kg(), cache_path.with_suffix(".partial.html"), ontology, open_browser=False
+                            extractor.get_kg(),
+                            cache_path.with_suffix(".partial.html"),
+                            ontology,
+                            open_browser=False,
                         )
 
                 except Exception as e:
@@ -285,3 +309,75 @@ def generate_kg(
     cache_path.write_text(kg.model_dump_json(indent=2), encoding="utf-8")
 
     return kg
+
+
+def create_kg_input_model(ontology: OntologyModel):
+    """
+    Creates a dynamic Pydantic model that represents entities from an ontology.
+
+    The function generates:
+    1. A Pydantic model for each class in the ontology
+    2. A container model with an 'entities' field containing instances of all class models
+
+    Each entity model includes:
+    - name: The entity name (required)
+    - type: The ontology class name (for type discrimination)
+    - Data properties from the ontology as fields with appropriate types
+    - Object properties as lists of strings (names of related entities)
+
+    Args:
+        ontology: The ontology containing classes, data properties, and object properties
+
+    Returns:
+        A container Pydantic model and a dictionary of class models
+    """
+
+    # Create a mapping from XSD types to Python types
+
+    # Dictionary to store generated models for each ontology class
+    class_models = []
+
+    # Create a model for each class in the ontology
+    for cls in ontology.classes:
+        # Basic fields that every entity has
+        fields = {
+            "name": (
+                str,
+                Field(description="Entity name"),
+            ),
+            "type": (
+                Literal[cls.name],
+                Field(default=cls.name),
+            ),  # Class type as discriminator
+        }
+
+        # Add data properties applicable to this class
+        for prop in ontology.data_properties:
+            if cls.name in prop.domain:
+                python_type = xsd_to_python.get(prop.range, str)
+
+                # Use Optional for non-functional properties
+                if "functional" in prop.characteristics:
+                    fields[prop.name] = python_type | None
+                else:
+                    fields[prop.name] = list[python_type]
+        # Add object properties applicable to this class
+        for prop in ontology.object_properties:
+            if cls.name in prop.domain:
+                # Object properties are lists of related entity names
+                fields[prop.name] = (list[str], [])
+
+        # Create the model dynamically
+        model_name = cls.name
+        class_models.append(create_model(model_name, **fields))
+
+    union = class_models[0]
+    for type in class_models[1:]:
+        union = union | type
+
+    KGModel = create_model(
+        "KnowledgeGraph",
+        entities=(list[union], []),
+    )
+
+    return KGModel

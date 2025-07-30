@@ -5,11 +5,13 @@ from pathlib import Path
 from typing import Any, Dict
 
 # Import models from your existing code
-from ontopipe.models import KG, Ontology
+from ontopipe.models import KG, OntologyModel
 
 
 # Global backward compatibility functions to match the original API
-def visualize_ontology(ontology: Ontology, output_html_path: Path, open_browser: bool = True):
+def visualize_ontology(
+    ontology: OntologyModel, output_html_path: Path, open_browser: bool = True
+):
     """
     Backwards compatible function that matches the original API.
     Creates an interactive visualization of an ontology.
@@ -21,11 +23,18 @@ def visualize_ontology(ontology: Ontology, output_html_path: Path, open_browser:
     output_html_path : Path
         Path to save the HTML visualization
     """
-    viz = KnowledgeGraphViz(output_dir=str(output_html_path.parent), auto_open=open_browser)
+    viz = KnowledgeGraphViz(
+        output_dir=str(output_html_path.parent), auto_open=open_browser
+    )
     return viz.visualize_ontology(ontology, filename=output_html_path.name)
 
 
-def visualize_kg(kg: KG, output_html_path: Path, ontology: Ontology | None = None, open_browser: bool = True):
+def visualize_kg(
+    kg: KG,
+    output_html_path: Path,
+    ontology: OntologyModel | None = None,
+    open_browser: bool = True,
+):
     """
     Backwards compatible function that matches the original API.
     Creates an interactive visualization of a knowledge graph.
@@ -39,7 +48,9 @@ def visualize_kg(kg: KG, output_html_path: Path, ontology: Ontology | None = Non
     ontology : Ontology | None
         Optional ontology for enhanced visualization
     """
-    viz = KnowledgeGraphViz(output_dir=str(output_html_path.parent), auto_open=open_browser)
+    viz = KnowledgeGraphViz(
+        output_dir=str(output_html_path.parent), auto_open=open_browser
+    )
     return viz.visualize_kg(kg, filename=output_html_path.name, ontology=ontology)
 
 
@@ -286,7 +297,7 @@ class AdvancedGraphVisualizer:
 
         return {"nodes": nodes, "edges": edges, "options": settings}
 
-    def visualize_ontology(self, ontology: Ontology, output_path: Path):
+    def visualize_ontology(self, ontology: OntologyModel, output_path: Path):
         """
         Generate an interactive visualization of an ontology.
 
@@ -419,7 +430,9 @@ class AdvancedGraphVisualizer:
                             "font": {
                                 "size": 9,  # Reduced from 10
                                 "align": "middle",
-                                "background": "#2E2E2E" if self.dark_mode else "#FFFFFF",
+                                "background": "#2E2E2E"
+                                if self.dark_mode
+                                else "#FFFFFF",
                             },
                             "arrows": {"to": {"enabled": True, "type": "arrow"}},
                             "color": {
@@ -463,7 +476,9 @@ class AdvancedGraphVisualizer:
             title=f"Ontology Visualization: {len(nodes)} classes & properties",
         )
 
-    def visualize_kg(self, kg: KG, output_path: Path, ontology: Ontology | None = None):
+    def visualize_kg(
+        self, kg: KG, output_path: Path, ontology: OntologyModel | None = None
+    ):
         """
         Generate an interactive visualization of a knowledge graph.
         If an ontology is provided, entities will be colored according to their ontology class.
@@ -531,7 +546,9 @@ class AdvancedGraphVisualizer:
             all_entities.add(triplet.object)
 
             # Count predicates
-            predicate_counts[triplet.predicate] = predicate_counts.get(triplet.predicate, 0) + 1
+            predicate_counts[triplet.predicate] = (
+                predicate_counts.get(triplet.predicate, 0) + 1
+            )
 
         # Calculate node sizes based on connections (degree centrality) - skip isA when considering
         node_connections = {}
@@ -540,8 +557,12 @@ class AdvancedGraphVisualizer:
             if ontology and triplet.predicate.lower() == "isa":
                 continue
 
-            node_connections[triplet.subject] = node_connections.get(triplet.subject, 0) + 1
-            node_connections[triplet.object] = node_connections.get(triplet.object, 0) + 1
+            node_connections[triplet.subject] = (
+                node_connections.get(triplet.subject, 0) + 1
+            )
+            node_connections[triplet.object] = (
+                node_connections.get(triplet.object, 0) + 1
+            )
 
         # Normalize node sizes - with more reasonable scaling
         max_connections = max(node_connections.values()) if node_connections else 1
@@ -654,7 +675,9 @@ class AdvancedGraphVisualizer:
             title=f"Knowledge Graph: {len(nodes)} entities, {len(edges)} relationships",
         )
 
-    def _create_visualization(self, graph_data, output_path, title="Graph Visualization"):
+    def _create_visualization(
+        self, graph_data, output_path, title="Graph Visualization"
+    ):
         """
         Create an HTML file with an interactive visualization - optimized for performance.
 
@@ -2760,7 +2783,7 @@ class AdvancedGraphVisualizer:
 
     def visualize_combined(
         self,
-        ontology: Ontology,
+        ontology: OntologyModel,
         kg: KG,
         output_path: Path,
         title: str = "Combined Visualization",
@@ -3055,7 +3078,9 @@ class AdvancedGraphVisualizer:
                                 "font": {
                                     "size": 7,  # Reduced from 8
                                     "align": "middle",
-                                    "background": "#2E2E2E" if self.dark_mode else "#FFFFFF",
+                                    "background": "#2E2E2E"
+                                    if self.dark_mode
+                                    else "#FFFFFF",
                                 },
                                 "arrows": {"to": {"enabled": True, "type": "arrow"}},
                                 "dashes": [3, 3],
@@ -3070,7 +3095,9 @@ class AdvancedGraphVisualizer:
         graph_data = self.generate_graph_data(nodes, edges)
 
         # Adjust physics settings for combined visualization
-        graph_data["options"]["physics"]["forceAtlas2Based"]["gravitationalConstant"] = -70
+        graph_data["options"]["physics"]["forceAtlas2Based"][
+            "gravitationalConstant"
+        ] = -70
         graph_data["options"]["physics"]["forceAtlas2Based"]["springLength"] = 150
 
         # Increase simulation iterations for better layout
@@ -3080,7 +3107,8 @@ class AdvancedGraphVisualizer:
         self._create_visualization(
             graph_data,
             output_path,
-            title=title or f"Combined Ontology & KG: {len(nodes)} nodes, {len(edges)} relationships",
+            title=title
+            or f"Combined Ontology & KG: {len(nodes)} nodes, {len(edges)} relationships",
         )
 
 
@@ -3110,7 +3138,9 @@ class KnowledgeGraphViz:
             max_nodes_full_render=500,  # Threshold for simplified rendering
         )
 
-    def visualize_ontology(self, ontology: Ontology, filename: str = "ontology_viz.html"):
+    def visualize_ontology(
+        self, ontology: OntologyModel, filename: str = "ontology_viz.html"
+    ):
         """
         Visualize an ontology with an interactive graph.
 
@@ -3129,7 +3159,12 @@ class KnowledgeGraphViz:
         output_path = self.output_dir / filename
         return self.visualizer.visualize_ontology(ontology, output_path)
 
-    def visualize_kg(self, kg: KG, filename: str = "knowledge_graph_viz.html", ontology: Ontology | None = None):
+    def visualize_kg(
+        self,
+        kg: KG,
+        filename: str = "knowledge_graph_viz.html",
+        ontology: OntologyModel | None = None,
+    ):
         """
         Visualize a knowledge graph with an interactive graph.
 
@@ -3152,7 +3187,7 @@ class KnowledgeGraphViz:
 
     def visualize_combined(
         self,
-        ontology: Ontology,
+        ontology: OntologyModel,
         kg: KG,
         filename: str = "combined_viz.html",
         title: str = "Combined Ontology & Knowledge Graph",
@@ -3224,13 +3259,19 @@ class KnowledgeGraphViz:
                 entity_types.setdefault(triplet.subject, []).append(triplet.object)
 
                 # Check if this entity should be included based on type
-                if "entity_types" not in filter_criteria or triplet.object in filter_criteria["entity_types"]:
+                if (
+                    "entity_types" not in filter_criteria
+                    or triplet.object in filter_criteria["entity_types"]
+                ):
                     entities_to_include.add(triplet.subject)
 
         # Second pass: add filtered triplets
         for triplet in kg.triplets or []:
             # Check if triplet should be excluded based on predicates
-            if "predicates" in filter_criteria and triplet.predicate not in filter_criteria["predicates"]:
+            if (
+                "predicates" in filter_criteria
+                and triplet.predicate not in filter_criteria["predicates"]
+            ):
                 continue
 
             # Check if entities should be excluded
@@ -3243,7 +3284,10 @@ class KnowledgeGraphViz:
             # For non-isA relationships, check if entities are in the inclusion list
             if triplet.predicate.lower() != "isa":
                 if "entity_types" in filter_criteria:
-                    if triplet.subject not in entities_to_include and triplet.object not in entities_to_include:
+                    if (
+                        triplet.subject not in entities_to_include
+                        and triplet.object not in entities_to_include
+                    ):
                         continue
 
             # Add the triplet to the filtered KG
@@ -3286,8 +3330,12 @@ class KnowledgeGraphViz:
             predicates[triplet.predicate] = predicates.get(triplet.predicate, 0) + 1
 
             # Count connections per entity (degree)
-            entity_connections[triplet.subject] = entity_connections.get(triplet.subject, 0) + 1
-            entity_connections[triplet.object] = entity_connections.get(triplet.object, 0) + 1
+            entity_connections[triplet.subject] = (
+                entity_connections.get(triplet.subject, 0) + 1
+            )
+            entity_connections[triplet.object] = (
+                entity_connections.get(triplet.object, 0) + 1
+            )
 
         # Calculate metrics
         node_count = len(entities)
@@ -3322,7 +3370,7 @@ class KnowledgeGraphViz:
 
     def generate_report(
         self,
-        ontology: Ontology = None,
+        ontology: OntologyModel = None,
         kg: KG = None,
         filename: str = "graph_analysis_report.html",
     ):
@@ -3386,7 +3434,9 @@ class KnowledgeGraphViz:
 
                 for degree, count in zip(degrees, degree_counts):
                     bin_index = degree // bin_size
-                    bin_label = f"{bin_index * bin_size}-{(bin_index + 1) * bin_size - 1}"
+                    bin_label = (
+                        f"{bin_index * bin_size}-{(bin_index + 1) * bin_size - 1}"
+                    )
                     binned_degrees[bin_label] = binned_degrees.get(bin_label, 0) + count
 
                 degrees = list(binned_degrees.keys())
@@ -3458,7 +3508,9 @@ class KnowledgeGraphViz:
 
                 # Add "Other" category if there are more predicates
                 if len(kg_metrics["predicate_distribution"]) > 10:
-                    other_count = sum(kg_metrics["predicate_distribution"].values()) - sum(pred_counts)
+                    other_count = sum(
+                        kg_metrics["predicate_distribution"].values()
+                    ) - sum(pred_counts)
                     pred_labels.append("Other")
                     pred_counts.append(other_count)
 
@@ -3694,7 +3746,9 @@ class KnowledgeGraphViz:
     <div class="container">
         <div class="header">
             <h1 class="title">Knowledge Graph Analysis Report</h1>
-            <p class="subtitle">Generated on {datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}</p>
+            <p class="subtitle">Generated on {
+            datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        }</p>
         </div>
 
         <div class="section">
@@ -3807,11 +3861,21 @@ class KnowledgeGraphViz:
             <h2 class="section-title">Visualizations</h2>
             <div class="tab-container">
                 <div class="tabs">
-                    {'<div class="tab active" data-tab="ontology-tab">Ontology</div>' if ontology else ""}
                     {
-            f'<div class="tab{" active" if not ontology else ""}" data-tab="kg-tab">Knowledge Graph</div>' if kg else ""
+            '<div class="tab active" data-tab="ontology-tab">Ontology</div>'
+            if ontology
+            else ""
         }
-                    {'<div class="tab" data-tab="combined-tab">Combined View</div>' if ontology and kg else ""}
+                    {
+            f'<div class="tab{" active" if not ontology else ""}" data-tab="kg-tab">Knowledge Graph</div>'
+            if kg
+            else ""
+        }
+                    {
+            '<div class="tab" data-tab="combined-tab">Combined View</div>'
+            if ontology and kg
+            else ""
+        }
                 </div>
 
                 {

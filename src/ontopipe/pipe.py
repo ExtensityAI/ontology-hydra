@@ -15,7 +15,7 @@ from ontopipe.cqs.question_generation import (
     generate_questions,
 )
 from ontopipe.cqs.scoping import generate_scope_document, merge_scope_documents
-from ontopipe.models import Ontology
+from ontopipe.models import OntologyModel
 from ontopipe.ontology.ontology_fixing import fix_ontology
 from ontopipe.ontology.ontology_generation import generate_ontology
 from ontopipe.vis import visualize_ontology
@@ -26,14 +26,18 @@ logger = getLogger("ontopipe.pipe")
 
 def _generate_comittee_with_cache(domain: str, cache_path: Path):
     if cache_path.exists():
-        return Comittee.model_validate_json(cache_path.read_text(encoding="utf-8", errors="ignore"))
+        return Comittee.model_validate_json(
+            cache_path.read_text(encoding="utf-8", errors="ignore")
+        )
 
     comittee = generate_comittee_for_domain(domain)
     cache_path.write_text(comittee.model_dump_json(indent=2), encoding="utf-8")
     return comittee
 
 
-def _generate_scope_documents_with_cache(domain: str, comittee: Comittee, cache_path: Path, group_size):
+def _generate_scope_documents_with_cache(
+    domain: str, comittee: Comittee, cache_path: Path, group_size
+):
     groups = comittee.divide_into_groups(group_size)
     documents = [None] * len(groups)
 
@@ -54,7 +58,9 @@ def _generate_scope_documents_with_cache(domain: str, comittee: Comittee, cache_
     return documents
 
 
-def _merge_scope_documents_with_cache(domain: str, documents: list[str], cache_path: Path):
+def _merge_scope_documents_with_cache(
+    domain: str, documents: list[str], cache_path: Path
+):
     if cache_path.exists():
         return cache_path.read_text(encoding="utf-8", errors="ignore")
 
@@ -63,14 +69,18 @@ def _merge_scope_documents_with_cache(domain: str, documents: list[str], cache_p
     return merged_scope
 
 
-def _generate_scope_with_cache(domain: str, comittee: Comittee, group_size: int, cache_path: Path):
+def _generate_scope_with_cache(
+    domain: str, comittee: Comittee, group_size: int, cache_path: Path
+):
     merged_scope_path = cache_path / "scope_merged.txt"
 
     # in case the merged scope exists, we can load it directly and skip everything else
     if merged_scope_path.exists():
         return merged_scope_path.read_text(encoding="utf-8", errors="ignore")
 
-    documents = _generate_scope_documents_with_cache(domain, comittee, cache_path, group_size)
+    documents = _generate_scope_documents_with_cache(
+        domain, comittee, cache_path, group_size
+    )
 
     return _merge_scope_documents_with_cache(domain, documents, merged_scope_path)
 
@@ -96,7 +106,9 @@ def _deduplicate_cqs(cqs: list[str], cache_path: Path) -> list[str]:
 
     # deduplicate CQs based on the duplicates found (1. take new questions and 2. add all non-duplicates)
     deduplicated_cqs = set(d.question for d in res.duplicates)
-    deduplicated_cqs.update(set(cqs) - set(cqs[i] for d in res.duplicates for i in d.indexes))
+    deduplicated_cqs.update(
+        set(cqs) - set(cqs[i] for d in res.duplicates for i in d.indexes)
+    )
 
     len_before = len(cqs)
     cqs = _sort_cqs(deduplicated_cqs)
@@ -104,12 +116,20 @@ def _deduplicate_cqs(cqs: list[str], cache_path: Path) -> list[str]:
     return cqs
 
 
-def _generate_cqs_with_cache(domain: str, merged_scope: str, group_size: int, comittee: Comittee, cache_path: Path):
+def _generate_cqs_with_cache(
+    domain: str,
+    merged_scope: str,
+    group_size: int,
+    comittee: Comittee,
+    cache_path: Path,
+):
     combined_cqs_path = cache_path / "cqs_combined.txt"
 
     # in case all cqs were generated and combined, we can load them directly and skip everything else
     if combined_cqs_path.exists():
-        return combined_cqs_path.read_text(encoding="utf-8", errors="ignore").split("\n")
+        return combined_cqs_path.read_text(encoding="utf-8", errors="ignore").split(
+            "\n"
+        )
 
     groups = list(comittee.divide_into_groups(group_size))
     cqs = [None] * len(groups)
@@ -118,7 +138,9 @@ def _generate_cqs_with_cache(domain: str, merged_scope: str, group_size: int, co
         i, group = i_group
         group_cqs_cache_path = cache_path / f"cqs_{i}.txt"
         if group_cqs_cache_path.exists():
-            return i, group_cqs_cache_path.read_text(encoding="utf-8", errors="ignore").split("\n")
+            return i, group_cqs_cache_path.read_text(
+                encoding="utf-8", errors="ignore"
+            ).split("\n")
         group_cqs = generate_questions(domain, group, merged_scope)
         group_cqs_cache_path.write_text("\n".join(group_cqs), encoding="utf-8")
         return i, group_cqs
@@ -140,14 +162,22 @@ def _generate_cqs_with_cache(domain: str, merged_scope: str, group_size: int, co
 
 
 def _generate_ontology_with_cache(
-    domain: str, cqs: list[str], cache_path: Path, fixed_cache_path: Path, batch_size: int = 4
+    domain: str,
+    cqs: list[str],
+    cache_path: Path,
+    fixed_cache_path: Path,
+    batch_size: int = 4,
 ):
     if fixed_cache_path.exists():
         # we have a cached fixed ontology, load it directly
-        return Ontology.model_validate_json(fixed_cache_path.read_text(encoding="utf-8", errors="ignore"))
+        return OntologyModel.model_validate_json(
+            fixed_cache_path.read_text(encoding="utf-8", errors="ignore")
+        )
 
     if cache_path.exists():
-        ontology = Ontology.model_validate_json(cache_path.read_text(encoding="utf-8", errors="ignore"))
+        ontology = OntologyModel.model_validate_json(
+            cache_path.read_text(encoding="utf-8", errors="ignore")
+        )
 
     else:
         logger.debug("Generating ontology from %d CQs", len(cqs))
@@ -163,7 +193,10 @@ def _generate_ontology_with_cache(
 
 
 def ontopipe(
-    domain: str, group_size: int = 4, cqs_per_batch: int = 4, cache_path: Path = Path(tempfile.mkdtemp("ontopipe"))
+    domain: str,
+    group_size: int = 4,
+    cqs_per_batch: int = 4,
+    cache_path: Path = Path(tempfile.mkdtemp("ontopipe")),
 ):
     """Runs the ontopipe pipeline to generate an ontology for the given domain.
 
@@ -174,7 +207,9 @@ def ontopipe(
         cache_path (Path): The path to the cache directory. If it does not exist, a temp directory will be created."""
 
     if not cache_path.exists() or not cache_path.is_dir():
-        raise ValueError(f"Cache path '{cache_path}' is not a directory or does not exist")
+        raise ValueError(
+            f"Cache path '{cache_path}' is not a directory or does not exist"
+        )
 
     logger.debug("Generating ontology for domain: '%s'", domain)
     logger.debug("Using cache path: %s", cache_path)
@@ -196,12 +231,16 @@ def ontopipe(
     )
 
     scope = _generate_scope_with_cache(domain, comittee, group_size, scopes_path)
-    logger.debug("Generated scope for domain '%s' with %d words", domain, len(scope.split(" ")))
+    logger.debug(
+        "Generated scope for domain '%s' with %d words", domain, len(scope.split(" "))
+    )
 
     cqs = _generate_cqs_with_cache(domain, scope, group_size, comittee, cqs_path)
     logger.debug("Generated %d CQs for domain '%s'", len(cqs), domain)
 
-    ontology = _generate_ontology_with_cache(domain, cqs, ontology_path, fixed_ontology_path, batch_size=4)
+    ontology = _generate_ontology_with_cache(
+        domain, cqs, ontology_path, fixed_ontology_path, batch_size=4
+    )
 
     logger.debug(
         "Generated ontology for domain '%s' with %d subclass relations",

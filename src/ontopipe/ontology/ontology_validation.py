@@ -1,12 +1,12 @@
 from dataclasses import dataclass
 
 from ontopipe.models import (
-    Class,
+    ClassModel,
     Concept,
     DataProperty,
-    ObjectProperty,
-    Ontology,
-    SubClassRelation,
+    ObjectPropertyModel,
+    OntologyModel,
+    SubClassRelationModel,
 )
 
 
@@ -22,7 +22,7 @@ class Issue:
         return f"[{self.path}] {self.message}{f' (context: {self.context})' if self.context else ''}{f' (hint: {self.hint})' if self.hint else ''}"
 
 
-def _try_add_classes(ontology: Ontology, classes: list[Class]):
+def _try_add_classes(ontology: OntologyModel, classes: list[ClassModel]):
     for cls in classes:
         if existing_class := ontology.get_class(cls.name):
             # ensure class does not yet exist
@@ -49,7 +49,9 @@ def _try_add_classes(ontology: Ontology, classes: list[Class]):
 
 
 def _try_add_subclass_relations(
-    ontology: Ontology, classes: list[Class], rels: list[SubClassRelation]
+    ontology: OntologyModel,
+    classes: list[ClassModel],
+    rels: list[SubClassRelationModel],
 ):
     all_superclasses = ontology.superclasses
 
@@ -155,7 +157,9 @@ def _try_add_subclass_relations(
         )
 
 
-def _try_add_properties(ontology: Ontology, props: list[DataProperty | ObjectProperty]):
+def _try_add_properties(
+    ontology: OntologyModel, props: list[DataProperty | ObjectPropertyModel]
+):
     for prop in props:
         path = f"property:{prop.name}"
         if existing_prop := ontology.get_property(prop.name):
@@ -183,7 +187,7 @@ def _try_add_properties(ontology: Ontology, props: list[DataProperty | ObjectPro
             )
             continue
 
-        if isinstance(prop, ObjectProperty):
+        if isinstance(prop, ObjectPropertyModel):
             # ensure all range classes exist
             invalid_ranges = [
                 range_ for range_ in prop.range if not ontology.get_class(range_)
@@ -206,16 +210,16 @@ def _try_add_properties(ontology: Ontology, props: list[DataProperty | ObjectPro
             ontology.data_properties.append(prop)
 
 
-def try_add_concepts(ontology: Ontology, concepts: list[Concept]):
+def try_add_concepts(ontology: OntologyModel, concepts: list[Concept]):
     """Try to add concepts to the ontology, returning any issues found."""
 
     ontology = ontology.clone()
 
     issues = list[Issue]()
 
-    classes = [c for c in concepts if isinstance(c, Class)]
-    subclass_rels = [c for c in concepts if isinstance(c, SubClassRelation)]
-    props = [c for c in concepts if isinstance(c, (DataProperty, ObjectProperty))]
+    classes = [c for c in concepts if isinstance(c, ClassModel)]
+    subclass_rels = [c for c in concepts if isinstance(c, SubClassRelationModel)]
+    props = [c for c in concepts if isinstance(c, (DataProperty, ObjectPropertyModel))]
 
     issues += _try_add_classes(ontology, classes)
 

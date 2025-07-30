@@ -7,7 +7,7 @@ from symai.strategy import contract
 from tqdm import tqdm
 
 from ontopipe.models import (
-    Ontology,
+    OntologyModel,
     OntologyState,
     OWLBuilderInput,
 )
@@ -25,10 +25,12 @@ logger = logging.getLogger("ontopipe.ontology_generation")
     pre_remedy=False,
     post_remedy=True,
     verbose=True,
-    remedy_retry_params=dict(tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False),
+    remedy_retry_params=dict(
+        tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False
+    ),
 )
 class OWLBuilder(Expression):
-    def __init__(self, ontology: Ontology, *args, **kwargs):
+    def __init__(self, ontology: OntologyModel, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._ontology = ontology
 
@@ -49,7 +51,8 @@ class OWLBuilder(Expression):
 
         if not is_valid:
             raise ValueError(
-                "Ontology validation failed with the following errors:\n- " + "\n- ".join(map(str, issues))
+                "Ontology validation failed with the following errors:\n- "
+                + "\n- ".join(map(str, issues))
             )
 
         return True
@@ -60,8 +63,8 @@ def generate_ontology(
     ontology_name: str,
     cache_path: Path,
     batch_size: int = 1,
-) -> Ontology:
-    ontology = Ontology(
+) -> OntologyModel:
+    ontology = OntologyModel(
         name=ontology_name,
         classes=[],
         subclass_relations=[],
@@ -80,7 +83,9 @@ def generate_ontology(
         for i in tqdm(range(0, len(cqs), batch_size)):
             batch_cqs = cqs[i : i + batch_size]
 
-            input_data = OWLBuilderInput(competency_question=batch_cqs, ontology_state=state)
+            input_data = OWLBuilderInput(
+                competency_question=batch_cqs, ontology_state=state
+            )
 
             try:
                 new_state = builder(input=input_data)
@@ -96,7 +101,9 @@ def generate_ontology(
                 encoding="utf-8",
             )
 
-            visualize_ontology(ontology, cache_path.with_suffix(".partial.html"), open_browser=False)
+            visualize_ontology(
+                ontology, cache_path.with_suffix(".partial.html"), open_browser=False
+            )
 
             state = OntologyState(concepts=concepts)
         builder.contract_perf_stats()

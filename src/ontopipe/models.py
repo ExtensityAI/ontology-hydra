@@ -20,7 +20,7 @@ Characteristic = Literal[
     "irreflexive",
 ]
 
-Datatype = Literal[
+DataType = Literal[
     "xsd:string",
     "xsd:integer",
     "xsd:float",
@@ -31,7 +31,7 @@ Datatype = Literal[
 ]
 
 
-class UsageGuideline(LLMDataModel):
+class UsageGuidelineModel(LLMDataModel):
     """Represents usage guidelines for ontology elements."""
 
     description: str | None = Field(
@@ -47,7 +47,7 @@ class UsageGuideline(LLMDataModel):
         return hash((self.description, self.constraints))
 
 
-class Class(LLMDataModel):
+class ClassModel(LLMDataModel):
     """Represents an ontology class (concept/category).
 
     Classes define types of things in the domain, not relationships.
@@ -57,10 +57,12 @@ class Class(LLMDataModel):
     name: str = Field(description="Name of the class (without namespace).")
 
     description: str = Field(description="Description of what this class represents.")
-    usage_guideline: UsageGuideline | None = Field(default=None, description="Usage guidelines for this class.")
+    usage_guideline: UsageGuidelineModel | None = Field(
+        default=None, description="Usage guidelines for this class."
+    )
 
 
-class SubClassRelation(LLMDataModel):
+class SubClassRelationModel(LLMDataModel):
     """Represents a taxonomic (isA) relationship between two classes.
 
     Establishes class hierarchy where every instance of the subclass
@@ -71,7 +73,7 @@ class SubClassRelation(LLMDataModel):
     superclass: str = Field(description="The superclass (without namespace).")
 
 
-class ObjectProperty(LLMDataModel):
+class ObjectPropertyModel(LLMDataModel):
     """Represents a relationship between instances of two classes.
 
     Use for modeling relationships between entities (NOT as classes).
@@ -79,18 +81,26 @@ class ObjectProperty(LLMDataModel):
     """
 
     name: str = Field(description="Name of the object property (without namespace).")
-    description: str = Field(description="Description of what this object property represents.")
+    description: str = Field(
+        description="Description of what this object property represents."
+    )
     domain: list[str] = Field(description="Domain classes.")
     range: list[str] = Field(description="Range classes.")
-    characteristics: list[Characteristic] = Field(description="Property characteristics.")
+    characteristics: list[Characteristic] = Field(
+        description="Property characteristics."
+    )
 
-    usage_guideline: UsageGuideline | None = Field(
+    usage_guideline: UsageGuidelineModel | None = Field(
         default=None, description="Usage guidelines for this object property."
     )
 
-    def is_valid_for(self, subject_types: Iterable[str], object_types: Iterable[str]) -> bool:
+    def is_valid_for(
+        self, subject_types: Iterable[str], object_types: Iterable[str]
+    ) -> bool:
         # pass in lists for both as we have subclass relations
-        return any(st in self.domain for st in subject_types) and any(ot in self.range for ot in object_types)
+        return any(st in self.domain for st in subject_types) and any(
+            ot in self.range for ot in object_types
+        )
 
 
 class DataProperty(LLMDataModel):
@@ -101,16 +111,24 @@ class DataProperty(LLMDataModel):
     """
 
     name: str = Field(description="Name of the data property (without namespace).")
-    description: str = Field(description="Description of what this data property represents.")
+    description: str = Field(
+        description="Description of what this data property represents."
+    )
     domain: list[str] = Field(description="Names of domain classes.")
-    range: Datatype = Field(description="Datatype (e.g., xsd:string).")
-    characteristics: list[Characteristic] = Field(description="Property characteristics.")
+    range: DataType = Field(description="Datatype (e.g., xsd:string).")
+    characteristics: list[Characteristic] = Field(
+        description="Property characteristics."
+    )
 
-    usage_guideline: UsageGuideline | None = Field(default=None, description="Usage guidelines for this data property.")
+    usage_guideline: UsageGuidelineModel | None = Field(
+        default=None, description="Usage guidelines for this data property."
+    )
 
 
 class OntologyState(LLMDataModel):
-    concepts: list[Class | SubClassRelation | ObjectProperty | DataProperty] = Field(
+    concepts: list[
+        ClassModel | SubClassRelationModel | ObjectPropertyModel | DataProperty
+    ] = Field(
         description="List of the newly extracted concepts in the ontology. Only return new and unique concepts."
     )
 
@@ -124,19 +142,25 @@ class OWLBuilderInput(LLMDataModel):
     )
 
 
-Concept = Class | SubClassRelation | ObjectProperty | DataProperty
+Concept = ClassModel | SubClassRelationModel | ObjectPropertyModel | DataProperty
 
 
-class Ontology(LLMDataModel):
+class OntologyModel(LLMDataModel):
     name: str = Field(description="Name of the ontology (without namespace).")
-    classes: list[Class] = Field(description="List of classes in the ontology.")
-    subclass_relations: list[SubClassRelation] = Field(description="List of subclass relationships.")
-    object_properties: list[ObjectProperty] = Field(description="List of object properties.")
+    classes: list[ClassModel] = Field(description="List of classes in the ontology.")
+    subclass_relations: list[SubClassRelationModel] = Field(
+        description="List of subclass relationships."
+    )
+    object_properties: list[ObjectPropertyModel] = Field(
+        description="List of object properties."
+    )
     data_properties: list[DataProperty] = Field(description="List of data properties.")
 
     @classmethod
     def from_json_file(cls, path: Path | str):
-        return cls.model_validate_json(Path(path).read_text(encoding="utf-8", errors="ignore"))
+        return cls.model_validate_json(
+            Path(path).read_text(encoding="utf-8", errors="ignore")
+        )
 
     @property
     def root(self):
@@ -145,18 +169,21 @@ class Ontology(LLMDataModel):
             (
                 cls
                 for cls in self.classes
-                if not any(relation.superclass == cls.name for relation in self.subclass_relations)
+                if not any(
+                    relation.superclass == cls.name
+                    for relation in self.subclass_relations
+                )
             ),
             None,
         )
 
     def extend(self, concepts: list[Concept]):
         for concept in concepts:
-            if isinstance(concept, Class):
+            if isinstance(concept, ClassModel):
                 self.classes.append(concept)
-            elif isinstance(concept, SubClassRelation):
+            elif isinstance(concept, SubClassRelationModel):
                 self.subclass_relations.append(concept)
-            elif isinstance(concept, ObjectProperty):
+            elif isinstance(concept, ObjectPropertyModel):
                 self.object_properties.append(concept)
             elif isinstance(concept, DataProperty):
                 self.data_properties.append(concept)
@@ -170,13 +197,21 @@ class Ontology(LLMDataModel):
     def get_superclass(self, subclass_name: str):
         """Get the superclass of a given subclass name."""
         return next(
-            (relation.superclass for relation in self.subclass_relations if relation.subclass == subclass_name),
+            (
+                relation.superclass
+                for relation in self.subclass_relations
+                if relation.subclass == subclass_name
+            ),
             None,
         )
 
     def get_subclasses(self, superclass_name: str):
         """Get all subclasses of a given superclass name."""
-        return [relation.subclass for relation in self.subclass_relations if relation.superclass == superclass_name]
+        return [
+            relation.subclass
+            for relation in self.subclass_relations
+            if relation.superclass == superclass_name
+        ]
 
     def get_property(self, property_name: str):
         """Get a property by name."""
@@ -214,14 +249,16 @@ class Ontology(LLMDataModel):
 # ==================================================#
 class Cluster(LLMDataModel):
     index: int = Field(description="The cluster's index.")
-    relations: list[SubClassRelation] = Field(
+    relations: list[SubClassRelationModel] = Field(
         description="A list of discovered superclass-subclass relations that form a cluster."
     )
 
 
 class Merge(LLMDataModel):
-    indexes: list[int] = Field(description="The indices of the clusters that are being merged.")
-    relations: list[SubClassRelation] = Field(
+    indexes: list[int] = Field(
+        description="The indices of the clusters that are being merged."
+    )
+    relations: list[SubClassRelationModel] = Field(
         description="A list of superclass-subclass relations chosen from the existing two clusters in such a way that they merge."
     )
 
@@ -236,8 +273,10 @@ class Merge(LLMDataModel):
 
 
 class Bridge(LLMDataModel):
-    indexes: list[int] = Field(description="The indices of the clusters that are being bridged.")
-    relations: list[SubClassRelation] = Field(
+    indexes: list[int] = Field(
+        description="The indices of the clusters that are being bridged."
+    )
+    relations: list[SubClassRelationModel] = Field(
         description="A list of new superclass-subclass relations used to bridge the two clusters from the ontology."
     )
 
@@ -252,8 +291,12 @@ class Bridge(LLMDataModel):
 
 
 class Prune(LLMDataModel):
-    indexes: list[int] = Field(description="The indices of the clusters that are being pruned.")
-    classes: list[str] = Field(description="A list of classes that are being pruned from the ontology.")
+    indexes: list[int] = Field(
+        description="The indices of the clusters that are being pruned."
+    )
+    classes: list[str] = Field(
+        description="A list of classes that are being pruned from the ontology."
+    )
 
     @field_validator("indexes")
     @classmethod
@@ -266,17 +309,21 @@ class Prune(LLMDataModel):
 
 
 class Operation(LLMDataModel):
-    type: Merge | Bridge | Prune = Field(description="The type of operation to perform.")
+    type: Merge | Bridge | Prune = Field(
+        description="The type of operation to perform."
+    )
 
 
 class WeaverInput(LLMDataModel):
-    ontology: Ontology = Field(
+    ontology: OntologyModel = Field(
         description="The current state of the ontology that's the result of the performed chain of operations from history. At the beginning of the process, it is initialized with a predefined ontology and the history will be None."
     )
     clusters: list[Cluster] = Field(
         description="A list of clusters that are being managed by the weaver. The objective is to create only one cluster."
     )
-    history: list[Operation] | None = Field(description="The history of performed operations.")
+    history: list[Operation] | None = Field(
+        description="The history of performed operations."
+    )
 
 
 # ==================================================#
@@ -292,7 +339,11 @@ class Triplet(LLMDataModel):
     def __eq__(self, other):
         if not isinstance(other, Triplet):
             return False
-        return self.subject == other.subject and self.predicate == other.predicate and self.object == other.object
+        return (
+            self.subject == other.subject
+            and self.predicate == other.predicate
+            and self.object == other.object
+        )
 
     def __hash__(self):
         return hash((hash(self.subject), hash(self.predicate), hash(self.object)))
@@ -311,13 +362,17 @@ class KG(LLMDataModel):
 
     @classmethod
     def from_json_file(cls, path: Path | str):
-        return cls.model_validate_json(Path(path).read_text(encoding="utf-8", errors="ignore"))
+        return cls.model_validate_json(
+            Path(path).read_text(encoding="utf-8", errors="ignore")
+        )
 
 
 class TripletExtractorInput(LLMDataModel):
     text: str = Field(description="Text to extract triplets from.")
-    ontology: Ontology | None = Field(
+    ontology: OntologyModel | None = Field(
         default=None,
         description="Ontology schema to use for discovery. If None, no ontology constraints will be applied.",
     )
-    state: KGState | None = Field(description="Existing knowledge graph state (triplets), if any.")
+    state: KGState | None = Field(
+        description="Existing knowledge graph state (triplets), if any."
+    )
