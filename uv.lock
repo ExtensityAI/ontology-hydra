@@ -1794,8 +1794,8 @@ wheels = [
 
 [[package]]
 name = "symbolicai"
-version = "0.15.0"
-source = { git = "https://github.com/ExtensityAI/symbolicai.git?branch=dev#06e6261b369b6465ff04995ff23ffd26837d525a" }
+version = "0.15.1"
+source = { git = "https://github.com/ExtensityAI/symbolicai.git?branch=dev#7ca2046415faf3e8e66700b321d24ed0e2f37a04" }
 dependencies = [
     { name = "aiohttp" },
     { name = "anthropic" },
