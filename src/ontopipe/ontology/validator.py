@@ -1,13 +1,6 @@
 from dataclasses import dataclass
 
-from ontopipe.models import (
-    ClassModel,
-    Concept,
-    DataProperty,
-    ObjectPropertyModel,
-    OntologyModel,
-    SubClassRelationModel,
-)
+from ontopipe.ontology.models import Class, Concept, DataProperty, ObjectProperty, Ontology
 
 
 @dataclass(frozen=True, slots=True)
@@ -22,9 +15,9 @@ class Issue:
         return f"[{self.path}] {self.message}{f' (context: {self.context})' if self.context else ''}{f' (hint: {self.hint})' if self.hint else ''}"
 
 
-def _try_add_classes(ontology: OntologyModel, classes: list[ClassModel]):
+def _try_add_classes(ontology: Ontology, classes: list[Class]):
     for cls in classes:
-        if existing_class := ontology.get_class(cls.name):
+        if existing_class := ontology.classes.get(cls.name):
             # ensure class does not yet exist
             yield Issue(
                 code="class_already_exists",
@@ -45,79 +38,59 @@ def _try_add_classes(ontology: OntologyModel, classes: list[ClassModel]):
             )
             continue
 
-        ontology.classes.append(cls)
+        ontology.classes[cls.name] = cls
 
 
-def _try_add_subclass_relations(
-    ontology: OntologyModel,
-    classes: list[ClassModel],
-    rels: list[SubClassRelationModel],
+def _validate_class_hierarchy(
+    ontology: Ontology,
+    classes: list[Class],
 ):
-    all_superclasses = ontology.superclasses
+    for cls in classes:
+        path = f"class:{cls.name}"
 
-    for rel in rels:
-        path = f"relation:{rel.subclass}->{rel.superclass}"
-        if not ontology.get_class(rel.subclass):
-            # ensure subclass exists
-            yield Issue(
-                code="subclass_not_found",
-                path=path,
-                message=f"Subclass '{rel.subclass}' not found in ontology",
-                context=None,
-                hint="Define this class before creating the subclass relation",
-            )
-            continue
-
-        if not ontology.get_class(rel.superclass):
-            # ensure superclass exists
+        if cls.superclass is not None and not ontology.classes.get(cls.superclass):
+            # ensure superclass exists (if class has one)
             yield Issue(
                 code="superclass_not_found",
                 path=path,
-                message=f"Superclass '{rel.superclass}' not found in ontology",
+                message=f"Superclass '{cls.superclass}' of class '{cls.name}' not found in ontology",
                 context=None,
-                hint="Define this class before creating the subclass relation",
+                hint=f"Define the superclass '{cls.superclass}', choose a different one or remove the class.",
             )
             continue
 
-        if sc := ontology.get_superclass(rel.subclass):
-            # ensure subclass does not already have a superclass
-            # TODO allow specification (i.e. a more specific superclass)
-            yield Issue(
-                code="subclass_already_has_superclass",
-                path=path,
-                message=f"'{rel.subclass}' already has superclass '{sc}'",
-                context=None,
-                hint="Remove this relation or replace the existing one if this is more specific",
-            )
-
-        if rel.superclass == rel.subclass:
+        if cls.superclass == cls.name:
             # ensure subclass is not the same as superclass
             yield Issue(
                 code="subclass_equals_superclass",
                 path=path,
-                message=f"Class '{rel.subclass}' cannot be it's own superclass",
+                message=f"Class '{cls.name}' cannot be its own superclass",
                 context=None,
-                hint="Remove this relation or correct the names",
+                hint="Choose a different superclass or remove the class.",
             )
             continue
 
-        # ensure no cycles
-        su_superclasses = all_superclasses[rel.superclass]
-        sc_superclasses = all_superclasses[rel.subclass]
+        # ensure we have no cycles in class hierarchy
+        for cls in classes:
+            if (sup := ontology.get_superclass(cls)) is None:
+                # if class has no superclass, it can't have a circular relation
+                continue
 
-        # TODO consider allowing redefinition of types? i.e. choosing a different parent?
+            cls_descendants = [c.name for c in ontology.get_descendants(cls)]
+            sup_ancestors = [c.name for c in ontology.get_ancestors(sup)]
 
-        if any(sc in su_superclasses for sc in sc_superclasses):
-            yield Issue(
-                code="circular_subclass_relation",
-                path=path,
-                message="Circular hierarchy detected",
-                context=f"'{rel.superclass}' is already a subclass of '{rel.subclass}' (directly or indirectly)",
-                hint="Remove this relation or restructure the hierarchy",
-            )
-            continue
+            # TODO consider allowing redefinition of types? i.e. choosing a different parent?
 
-        ontology.subclass_relations.append(rel)
+            if any(sc in sup_ancestors for sc in cls_descendants) or cls.name in sup_ancestors:
+                # if any descendant of the class or the class itself is an ancestor of the superclass, we have a circular relation
+                yield Issue(
+                    code="circular_class_hierarchy",
+                    path=f"class:{cls.name}",
+                    message="Circular hierarchy detected",
+                    context=f"'{cls.superclass}' is already a subclass of '{cls.name}' (directly or indirectly)",
+                    hint="Remove this relation or restructure the hierarchy",
+                )
+                continue
 
     # TODO we should omit classes from the bottom check if the subclass relation validation failed for them
 
@@ -133,14 +106,14 @@ def _try_add_subclass_relations(
 
     # ensure all classes have subclass relations
     for cls in classes:
-        if not ontology.get_superclass(cls.name):
+        if cls.superclass is None:
             if has_root:
                 # if the class has no superclass and there is a root, it should be a subclass of some class
                 yield Issue(
                     code="superclass_not_found",
                     path=f"class:{cls.name}",
                     message=f"Class '{cls.name}' has no superclass",
-                    hint=f"Add a subclass relation for '{cls.name}' to place it in the hierarchy",
+                    hint=f"Set the superclass of '{cls.name}' to place it in the hierarchy",
                 )
                 continue
 
@@ -157,12 +130,11 @@ def _try_add_subclass_relations(
         )
 
 
-def _try_add_properties(
-    ontology: OntologyModel, props: list[DataProperty | ObjectPropertyModel]
-):
+def _try_add_properties(ontology: Ontology, props: list[DataProperty | ObjectProperty]):
     for prop in props:
         path = f"property:{prop.name}"
-        if existing_prop := ontology.get_property(prop.name):
+
+        if existing_prop := ontology.properties.get(prop.name):
             # ensure property does not yet exist
             yield Issue(
                 code="property_already_exists",
@@ -174,9 +146,8 @@ def _try_add_properties(
             continue
 
         # ensure all domain classes exist (applies to both data and object properties)
-        invalid_domains = [
-            domain for domain in prop.domain if not ontology.get_class(domain)
-        ]
+        invalid_domains = [domain for domain in prop.domain if not ontology.classes.get(domain)]
+
         if invalid_domains:
             yield Issue(
                 code="domain_classes_not_found",
@@ -187,11 +158,9 @@ def _try_add_properties(
             )
             continue
 
-        if isinstance(prop, ObjectPropertyModel):
+        if isinstance(prop, ObjectProperty):
             # ensure all range classes exist
-            invalid_ranges = [
-                range_ for range_ in prop.range if not ontology.get_class(range_)
-            ]
+            invalid_ranges = [range_ for range_ in prop.range if not ontology.classes.get(range_)]
 
             if invalid_ranges:
                 # TODO check if xsd: is in range, then the model likely wanted a data property instead
@@ -204,32 +173,42 @@ def _try_add_properties(
                 )
                 continue
 
-            ontology.object_properties.append(prop)
+            ontology.object_properties[prop.name] = prop
         elif isinstance(prop, DataProperty):
-            # TODO validate data type of range
-            ontology.data_properties.append(prop)
+            # no need to validate range as it is a fixed Literal type
+            ontology.data_properties[prop.name] = prop
 
 
-def try_add_concepts(ontology: OntologyModel, concepts: list[Concept]):
-    """Try to add concepts to the ontology, returning any issues found."""
+def try_add_concepts(ontology: Ontology, concepts: list[Concept]):
+    """Try to add concepts to the ontology, returning any issues found. If no issues are found, the ontology is updated with the new concepts."""
 
-    ontology = ontology.clone()
+    ontology = ontology.model_copy(deep=True)  # ensure we do not modify the original ontology
 
     issues = list[Issue]()
 
-    classes = [c for c in concepts if isinstance(c, ClassModel)]
-    subclass_rels = [c for c in concepts if isinstance(c, SubClassRelationModel)]
-    props = [c for c in concepts if isinstance(c, (DataProperty, ObjectPropertyModel))]
+    classes = [c for c in concepts if isinstance(c, Class)]
+    props = [c for c in concepts if isinstance(c, (DataProperty | ObjectProperty))]
 
     issues += _try_add_classes(ontology, classes)
 
     if issues:
         # TODO should we actually stop here if there was an issue with class defs?
-        return False, issues, None
+        return False, issues
 
-    issues += _try_add_subclass_relations(ontology, classes, subclass_rels)
+    issues += _validate_class_hierarchy(ontology, classes)
 
     issues += _try_add_properties(ontology, props)
 
     is_valid = len(issues) == 0
-    return is_valid, issues, ontology if is_valid else None
+
+    if is_valid:
+        # if no issues, we can add the concepts to the ontology
+        for concept in concepts:
+            if isinstance(concept, Class):
+                ontology.classes[concept.name] = concept
+            elif isinstance(concept, DataProperty):
+                ontology.data_properties[concept.name] = concept
+            elif isinstance(concept, ObjectProperty):
+                ontology.object_properties[concept.name] = concept
+
+    return is_valid, issues

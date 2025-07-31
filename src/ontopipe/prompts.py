@@ -17,7 +17,7 @@ prompt_registry.register_tag(PromptLanguage.ENGLISH, "ontology_guidelines", "ONT
 # Instructions
 prompt_registry.register_instruction(
     PromptLanguage.ENGLISH,
-    "owl_builder",
+    "ontology_generator",
     f"""
 You are an ontology engineer extracting concepts from competency questions to enhance an existing ontology using OWL 2 (Web Ontology Language).
 

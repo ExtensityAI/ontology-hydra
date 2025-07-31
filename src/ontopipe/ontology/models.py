@@ -1,6 +1,9 @@
 from typing import Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
+from symai.strategy import LLMDataModel
+
+from ontopipe.ontology.validator import try_add_concepts
 
 Characteristic = Literal[
     "functional",
@@ -23,7 +26,13 @@ DataType = Literal[
 ]
 
 
-class Description(BaseModel):
+class Model(LLMDataModel):
+    model_config = ConfigDict(
+        frozen=True  # model is immutable by default
+    )
+
+
+class Description(Model):
     """Represents the description of an ontology element."""
 
     description: str | None = Field(
@@ -39,18 +48,17 @@ class Description(BaseModel):
         return hash((self.description, self.constraints))
 
 
-class DataProperty(BaseModel):
+class DataProperty(Model):
     name: str
     description: Description | None = None
-
-    type: DataType
 
     characteristics: list[Characteristic] = []
 
     domain: list[str] = []
+    range: DataType
 
 
-class ObjectProperty(BaseModel):
+class ObjectProperty(Model):
     name: str
     description: Description | None = None
 
@@ -60,7 +68,7 @@ class ObjectProperty(BaseModel):
     range: list[str] = []
 
 
-class Class(BaseModel):
+class Class(Model):
     name: str
     description: Description | None = None
     own_properties: list[str]
@@ -68,25 +76,33 @@ class Class(BaseModel):
     superclass: str | None
 
 
-class Ontology(BaseModel):
-    classes: dict[str, Class]
-    object_properties: dict[str, ObjectProperty]
-    data_properties: dict[str, DataProperty]
+Concept = Class | ObjectProperty | DataProperty
+
+
+class Ontology(Model):
+    classes: dict[str, Class] = dict()
+    object_properties: dict[str, ObjectProperty] = dict()
+    data_properties: dict[str, DataProperty] = dict()
 
     @property
     def properties(self):
         """Returns a combined dictionary of all object and data properties."""
-        return dict[str, DataProperty | ObjectProperty](
-            **self.object_properties, **self.data_properties
-        )
+        return dict[str, DataProperty | ObjectProperty](**self.object_properties, **self.data_properties)
+
+    @property
+    def root(
+        self,
+    ):  # TODO enforce a root in the first iteration of ontology generator, then we can ensure that this is never None
+        """Returns the root class of the ontology, which is the class without a superclass."""
+        return next((cls for cls in self.classes.values() if cls.superclass is None), None)
 
     def get_superclass(self, cls: Class):
         """Returns the super class of the given class, or None if it is the root."""
         return self.classes[cls.superclass] if cls.superclass is not None else None
 
-    def get_class_hierarchy(self, cls: Class):
+    def get_ancestors(self, cls: Class):
         """Returns the class hierarchy chain starting from the root down to the given class."""
-        chain = []
+        chain = list[Class]()
         c = cls
 
         while c is not None:
@@ -95,11 +111,15 @@ class Ontology(BaseModel):
 
         return chain
 
+    def get_descendants(self, cls: Class):
+        """Returns all descendant classes of the given class."""
+        return [c for c in self.classes.values() if c.superclass == cls.name]
+
     def get_properties(self, cls: Class, include_inherited: bool = True):
         """Returns all properties associated with a class, optionally including inherited properties."""
 
         all_props = self.properties
-        chain = self.get_class_hierarchy(cls) if include_inherited else [cls]
+        chain = self.get_ancestors(cls) if include_inherited else [cls]
 
         props = dict[str, DataProperty | ObjectProperty]()
 

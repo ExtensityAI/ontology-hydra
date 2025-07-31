@@ -17,20 +17,13 @@ symbolicai = { git = "https://github.com/ExtensityAI/symbolicai.git", branch = "
 [dependency-groups]
 dev = ["ruff>=0.12.7"]
 
+[tool.ruff]
+line-length = 120
+
 [tool.ruff.lint]
-select = [
-    # pycodestyle
-    "E",
-    # Pyflakes
-    "F",
-    # pyupgrade
-    "UP",
-    # flake8-bugbear
-    "B",
-    # flake8-simplify
-    "SIM",
-    # isort
-    "I",
+select = ["E", "F", "UP", "B", "SIM", "I"]
+ignore = [
+    "E501", # line too long
 ]
 
 fixable = ["ALL"]

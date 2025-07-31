@@ -38,7 +38,7 @@ def _generate_property_field(prop: DataProperty | ObjectProperty):
 
     if isinstance(prop, DataProperty):
         return (
-            _data_type_to_python[prop.type]
+            _data_type_to_python[prop.range]
             | None,  # data properties can be None (open-world assumption)
             Field(None, description=_generate_description(prop.description)),
         )
