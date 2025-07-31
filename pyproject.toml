@@ -13,3 +13,24 @@ build-backend = "hatchling.build"
 
 [tool.uv.sources]
 symbolicai = { git = "https://github.com/ExtensityAI/symbolicai.git", branch = "dev" }
+
+[dependency-groups]
+dev = ["ruff>=0.12.7"]
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
+
+fixable = ["ALL"]
