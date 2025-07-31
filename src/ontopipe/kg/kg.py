@@ -9,6 +9,7 @@ from symai.components import MetadataTracker
 from symai.strategy import contract
 from tqdm import tqdm
 
+from ontopipe.kg.schema import generate_kg_schema
 from ontopipe.models import (
     KG,
     KGState,
@@ -192,7 +193,6 @@ class TripletExtractor(Expression):
 
         return True
 
-    # TODO: Will this work?
     @property
     def prompt(self) -> str:
         if self.ontology is None:
@@ -218,12 +218,17 @@ def generate_kg(
 ) -> KG:
     extractor = TripletExtractor(name=kg_name, ontology=ontology)
 
-    partial_path = cache_path.with_suffix(".partial.json")
+    partial_json_cache_path = cache_path.with_suffix(".partial.json")
+    partial_html_cache_path = cache_path.with_suffix(".partial.html")
 
-    schema = json.dumps(create_kg_input_model(ontology).model_json_schema(), indent=2)
+    if not ontology:
+        raise NotImplementedError("For now, ontology must be provided to generate a knowledge graph due to update.")
+
+    PartialKnowledgeGraph = generate_kg_schema(ontology)
 
     usage = None
     triplets = []
+
     for i in range(epochs):
         n_new_triplets_in_epoch = 0
         with MetadataTracker() as tracker:
@@ -237,7 +242,6 @@ def generate_kg(
                 )
 
                 try:
-                    # TODO we can drastically reduce input size by sending triplets in a form of (subject, predicate, object) instead of escaped JSON
                     result = extractor(input=input_data)
 
                     if result.triplets is not None:
@@ -251,7 +255,7 @@ def generate_kg(
                         n_new_triplets_in_epoch += n_new_triplets
 
                         # write partial kg state to file already
-                        partial_path.write_text(
+                        partial_json_cache_path.write_text(
                             extractor.get_kg().model_dump_json(indent=2),
                             encoding="utf-8",
                         )
@@ -264,7 +268,7 @@ def generate_kg(
 
                         visualize_kg(
                             extractor.get_kg(),
-                            cache_path.with_suffix(".partial.html"),
+                            partial_html_cache_path,
                             ontology,
                             open_browser=False,
                         )
@@ -290,5 +294,9 @@ def generate_kg(
 
     kg = extractor.get_kg()
     cache_path.write_text(kg.model_dump_json(indent=2), encoding="utf-8")
+
+    # remove partial cache files once again
+    partial_json_cache_path.unlink(missing_ok=True)
+    partial_html_cache_path.unlink(missing_ok=True)
 
     return kg

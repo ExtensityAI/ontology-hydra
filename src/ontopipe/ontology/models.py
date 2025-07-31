@@ -129,9 +129,11 @@ class Ontology(Model):
 
 
 class ClassModel(Model):
+    # TODO add field and type __doc__!!!
     name: str
     description: Description | None = None
     superclass: str | None
 
 
+# TODO make object and data properties models too, i.e. decouple their inter class from the generated ones like with class model
 Concept = ClassModel | ObjectProperty | DataProperty

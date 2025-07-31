@@ -79,6 +79,9 @@ def generate_ontology(
     ontology = Ontology()
     generator = OntologyGenerator(ontology)
 
+    partial_json_cache_path = cache_path.with_suffix(".partial.json")
+    partial_html_cache_path = cache_path.with_suffix(".partial.html")
+
     usage = None
     with MetadataTracker() as tracker:  # For gpt-* models
         for i in tqdm(range(0, len(cqs), cqs_per_batch)):
@@ -93,12 +96,12 @@ def generate_ontology(
                 logger.error(f"Error getting state update for batch: {e}")
                 continue
 
-            cache_path.with_suffix(".partial.json").write_text(
+            partial_json_cache_path.write_text(
                 ontology.model_dump_json(indent=2),
                 encoding="utf-8",
             )
 
-            visualize_ontology(ontology, cache_path.with_suffix(".partial.html"), open_browser=False)
+            visualize_ontology(ontology, partial_html_cache_path, open_browser=False)
 
         generator.contract_perf_stats()
         usage = tracker.usage
@@ -109,6 +112,10 @@ def generate_ontology(
         ontology.model_dump_json(indent=2),
         encoding="utf-8",
     )
+
+    # remove partial cache files once again
+    partial_json_cache_path.unlink(missing_ok=True)
+    partial_html_cache_path.unlink(missing_ok=True)
 
     logger.debug("Ontology creation completed!")
 

@@ -1,8 +1,10 @@
 from datetime import date, datetime, time
+from typing import Literal
 
 from pydantic import BaseModel, Field, create_model
 
 from ontopipe.ontology.models import (
+    Class,
     DataProperty,
     DataType,
     Description,
@@ -54,42 +56,47 @@ def _generate_property_field(prop: DataProperty | ObjectProperty):
         )
 
 
+# TODO improve __doc__ and everything for the schemas, mention that the model can use it to extract partial data from the knowledge graph, i.e. just one field for a specific class
+
+
+def _generate_class_schema(ontology: Ontology, cls: Class):
+    """Generates a Pydantic model schema for a class in the ontology."""
+
+    fields: dict = {
+        "name": (str, Field(..., description="Entity name.")),
+        "type": (Literal[cls.name], Field(..., description="Entity type.")),  # discriminator field
+    }
+
+    for prop in ontology.get_properties(cls).values():
+        fields[prop.name] = _generate_property_field(prop)
+
+    return create_model(
+        f"Partial{cls.name}",
+        __doc__=_generate_description(cls.description),
+        **fields,
+    )
+
+
 def generate_kg_schema(ontology: Ontology):
     """Generates a Pydantic model schema for a knowledge graph based on the provided ontology."""
-
-    # the schema is then used to extract structured data from the ontology.
 
     if not ontology.classes:
         raise ValueError("Ontology must contain at least one class.")
 
-    classes = list[type[BaseModel]]()
-
-    for cls in ontology.classes.values():
-        fields: dict = {
-            "name": (
-                str,
-                Field(..., description="Entity name."),
-            ),  # TODO add proper description!
-        }
-
-        for prop in ontology.get_properties(cls).values():
-            fields[prop.name] = _generate_property_field(prop)
-
-        classes.append(create_model(cls.name, __doc__=_generate_description(cls.description), **fields))
+    # we do not allow the root class in the schema, as it should not be instantiated directly (TODO: check if this is good)
+    classes = [_generate_class_schema(ontology, cls) for cls in ontology.classes.values() if cls.superclass is None]
 
     # create a union type out of the classes
     any_class_type = classes[0]
     for cls in classes[1:]:
         any_class_type |= cls
 
-    print(any_class_type)
-
     PartialKnowledgeGraph = create_model(
         "PartialKnowledgeGraph",
-        __doc__="A partial knowledge graph containing entities from the ontology.",
-        entities=(
+        __doc__="A partial knowledge graph containing structured data.",
+        data=(
             list[any_class_type] | None,
-            Field(None, description="List of entities in the knowledge graph."),
+            Field(None),
         ),
     )
 
