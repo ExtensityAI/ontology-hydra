@@ -377,13 +377,13 @@ class AdvancedGraphVisualizer:
 
         for cls in ontology.classes.values():
             add_node(cls.name, "class")
-            if cls.superclass:
+            if cls.superclass is not None:
                 add_node(cls.superclass, "class")
 
                 edges.append(
                     {
-                        "from": cls.superclass,
-                        "to": cls.name,
+                        "from": get_node_id(cls.superclass),
+                        "to": get_node_id(cls.name),
                         "label": "isA",
                         "font": {
                             "size": 9,  # Reduced from 10
@@ -2865,8 +2865,8 @@ class AdvancedGraphVisualizer:
 
                 edges.append(
                     {
-                        "from": cls.superclass,
-                        "to": cls.name,
+                        "from": get_node_id(cls.superclass),
+                        "to": get_node_id(cls.name),
                         "label": "isA",
                         "font": {
                             "size": 8,  # Reduced from 10

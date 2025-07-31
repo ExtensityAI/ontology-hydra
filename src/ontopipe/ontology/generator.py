@@ -16,7 +16,7 @@ logger = logging.getLogger("ontopipe.ontology.generator")
 
 
 class OntologyGeneratorInput(LLMDataModel):
-    competency_question: list[str] = Field(
+    cqs: list[str] = Field(
         description="A list of competency questions discovered during an interview process by the ontology engineer. Extract a list of relevant concepts."  # TODO mention that the extracted concepts should be GENERAL but also useful to answer the questions.
     )
     ontology: Ontology = Field(
@@ -26,6 +26,9 @@ class OntologyGeneratorInput(LLMDataModel):
 
 class OntologyGeneratorOutput(LLMDataModel):
     additions: list[Concept] = Field(description="List of new concepts that should be added to the ontology.")
+
+
+# TODO: make sure that properties are not applied to a class and to its superclass (could be autofixed, but rather not have the model generate that. Also, maybe allow moving properties around or EXTENDING properties?)
 
 
 # =========================================#
@@ -81,7 +84,7 @@ def generate_ontology(
         for i in tqdm(range(0, len(cqs), cqs_per_batch)):
             batch_cqs = cqs[i : i + cqs_per_batch]
 
-            input = OntologyGeneratorInput(competency_question=batch_cqs, ontology=ontology)
+            input = OntologyGeneratorInput(cqs=batch_cqs, ontology=ontology)
 
             try:
                 output: OntologyGeneratorOutput = generator(input=input)

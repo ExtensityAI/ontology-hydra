@@ -1,9 +1,7 @@
 from typing import Literal
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import ConfigDict, Field
 from symai.strategy import LLMDataModel
-
-from ontopipe.ontology.validator import try_add_concepts
 
 Characteristic = Literal[
     "functional",
@@ -76,9 +74,6 @@ class Class(Model):
     superclass: str | None
 
 
-Concept = Class | ObjectProperty | DataProperty
-
-
 class Ontology(Model):
     classes: dict[str, Class] = dict()
     object_properties: dict[str, ObjectProperty] = dict()
@@ -131,3 +126,12 @@ class Ontology(Model):
     def resolve_class_names(self, class_names: list[str]):
         """Resolves the given class names to class instances."""
         return [self.classes[cn] for cn in class_names]
+
+
+class ClassModel(Model):
+    name: str
+    description: Description | None = None
+    superclass: str | None
+
+
+Concept = ClassModel | ObjectProperty | DataProperty

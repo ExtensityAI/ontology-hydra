@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from ontopipe.ontology.models import Class, Concept, DataProperty, ObjectProperty, Ontology
+from ontopipe.ontology.models import Class, ClassModel, Concept, DataProperty, ObjectProperty, Ontology
 
 
 @dataclass(frozen=True, slots=True)
@@ -15,8 +15,8 @@ class Issue:
         return f"[{self.path}] {self.message}{f' (context: {self.context})' if self.context else ''}{f' (hint: {self.hint})' if self.hint else ''}"
 
 
-def _try_add_classes(ontology: Ontology, classes: list[Class]):
-    for cls in classes:
+def _try_add_classes(ontology: Ontology, class_models: list[ClassModel]):
+    for cls in class_models:
         if existing_class := ontology.classes.get(cls.name):
             # ensure class does not yet exist
             yield Issue(
@@ -38,7 +38,12 @@ def _try_add_classes(ontology: Ontology, classes: list[Class]):
             )
             continue
 
-        ontology.classes[cls.name] = cls
+        ontology.classes[cls.name] = Class(
+            name=cls.name,
+            description=cls.description,
+            superclass=cls.superclass,
+            own_properties=[],  # this needs to be validated and filled after properties are done
+        )
 
 
 def _validate_class_hierarchy(
@@ -179,21 +184,37 @@ def _try_add_properties(ontology: Ontology, props: list[DataProperty | ObjectPro
             ontology.data_properties[prop.name] = prop
 
 
+def _update_own_properties(ontology: Ontology):
+    props = ontology.properties
+
+    # add props to own_properties of classes where the class name is in the domain of a prop
+    for prop in props.values():
+        for class_name in prop.domain:
+            c = ontology.classes[class_name]
+
+            # add to own properties only if not already contained
+            if prop.name not in c.own_properties:
+                c.own_properties.append(prop.name)
+
+
 def try_add_concepts(ontology: Ontology, concepts: list[Concept]):
     """Try to add concepts to the ontology, returning any issues found. If no issues are found, the ontology is updated with the new concepts."""
 
-    ontology = ontology.model_copy(deep=True)  # ensure we do not modify the original ontology
+    original_ontology = ontology
+    ontology = ontology.model_copy(deep=True)  # ensure we do not modify the original ontology while validating
 
     issues = list[Issue]()
 
-    classes = [c for c in concepts if isinstance(c, Class)]
+    class_models = [c for c in concepts if isinstance(c, ClassModel)]
     props = [c for c in concepts if isinstance(c, (DataProperty | ObjectProperty))]
 
-    issues += _try_add_classes(ontology, classes)
+    issues += _try_add_classes(ontology, class_models)
 
     if issues:
         # TODO should we actually stop here if there was an issue with class defs?
         return False, issues
+
+    classes = [ontology.classes[cm.name] for cm in class_models]
 
     issues += _validate_class_hierarchy(ontology, classes)
 
@@ -201,14 +222,22 @@ def try_add_concepts(ontology: Ontology, concepts: list[Concept]):
 
     is_valid = len(issues) == 0
 
-    if is_valid:
-        # if no issues, we can add the concepts to the ontology
-        for concept in concepts:
-            if isinstance(concept, Class):
-                ontology.classes[concept.name] = concept
-            elif isinstance(concept, DataProperty):
-                ontology.data_properties[concept.name] = concept
-            elif isinstance(concept, ObjectProperty):
-                ontology.object_properties[concept.name] = concept
+    try:
+        if is_valid:
+            # if no issues, we can add the concepts to the ontology
+            for cls in classes:
+                original_ontology.classes[cls.name] = cls
+
+            for concept in concepts:
+                if isinstance(concept, DataProperty):
+                    original_ontology.data_properties[concept.name] = concept
+                elif isinstance(concept, ObjectProperty):
+                    original_ontology.object_properties[concept.name] = concept
+
+            _update_own_properties(original_ontology)
+    except Exception as e:
+        print(e)
+        print(e.__traceback__)
+        return 1 / 0
 
     return is_valid, issues

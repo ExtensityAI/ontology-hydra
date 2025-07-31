@@ -38,8 +38,9 @@ def _generate_property_field(prop: DataProperty | ObjectProperty):
 
     if isinstance(prop, DataProperty):
         return (
-            _data_type_to_python[prop.range]
-            | None,  # data properties can be None (open-world assumption)
+            list[_data_type_to_python[prop.range]]
+            | None,  # data properties can be None (open-world assumption), also, if they are not functional, they can have multiple values
+            # TODO respect functionality
             Field(None, description=_generate_description(prop.description)),
         )
 
@@ -47,6 +48,8 @@ def _generate_property_field(prop: DataProperty | ObjectProperty):
         return (
             list[str]
             | None,  # Assuming object properties are represented as lists of strings (entity names) (can be None as well, open-world assumption)
+            # TODO ADD DESCRIPTION AS TO WHAT ENTITIES CAN BE NAMED HERE!
+            # TODO respect functionality
             Field(None, description=_generate_description(prop.description)),
         )
 
@@ -61,7 +64,7 @@ def generate_kg_schema(ontology: Ontology):
 
     classes = list[type[BaseModel]]()
 
-    for name, cls in ontology.classes.items():
+    for cls in ontology.classes.values():
         fields: dict = {
             "name": (
                 str,
@@ -69,12 +72,10 @@ def generate_kg_schema(ontology: Ontology):
             ),  # TODO add proper description!
         }
 
-        for name, prop in ontology.get_properties(cls).items():
-            fields[name] = _generate_property_field(prop)
+        for prop in ontology.get_properties(cls).values():
+            fields[prop.name] = _generate_property_field(prop)
 
-        classes.append(
-            create_model(name, __doc__=_generate_description(cls.description), **fields)
-        )
+        classes.append(create_model(cls.name, __doc__=_generate_description(cls.description), **fields))
 
     # create a union type out of the classes
     any_class_type = classes[0]
