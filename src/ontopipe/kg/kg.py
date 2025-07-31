@@ -1,21 +1,12 @@
-import json
 from logging import getLogger
 from pathlib import Path
-from typing import Literal
 
-from pydantic import Field, create_model
 from symai import Expression
 from symai.components import MetadataTracker
 from symai.strategy import contract
 from tqdm import tqdm
 
-from ontopipe.kg.schema import generate_kg_schema
-from ontopipe.models import (
-    KG,
-    KGState,
-    Triplet,
-    TripletExtractorInput,
-)
+from ontopipe.kg.schema import DynamicPartialKnowledgeGraph, generate_kg_schema
 from ontopipe.ontology.models import Ontology
 from ontopipe.prompts import prompt_registry
 from ontopipe.vis import visualize_kg
@@ -31,10 +22,12 @@ def is_snake_case(s):
     if "__" in s:
         return False
     # Must only contain lowercase letters, numbers, or underscores
-    for c in s:
-        if not (c.islower() or c.isdigit() or c == "_"):
-            return False
-    return True
+    return all(c.islower() or c.isdigit() or c == "_" for c in s)
+
+
+class KnowledgeGraphGeneratorInput(Expression):
+    texts: list[str]
+    kg: DynamicPartialKnowledgeGraph  # the current knowledge graph state (type is a dynamically generated subclass)
 
 
 @contract(
@@ -44,7 +37,7 @@ def is_snake_case(s):
     remedy_retry_params=dict(tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False),
     accumulate_errors=False,
 )
-class TripletExtractor(Expression):
+class KnowledgeGraphGenerator(Expression):
     def __init__(self, name: str, ontology: Ontology | None = None, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.name = name
@@ -216,7 +209,7 @@ def generate_kg(
     batch_size: int = 1,
     epochs: int = 3,
 ) -> KG:
-    extractor = TripletExtractor(name=kg_name, ontology=ontology)
+    extractor = KnowledgeGraphGenerator(name=kg_name, ontology=ontology)
 
     partial_json_cache_path = cache_path.with_suffix(".partial.json")
     partial_html_cache_path = cache_path.with_suffix(".partial.html")
@@ -227,7 +220,7 @@ def generate_kg(
     PartialKnowledgeGraph = generate_kg_schema(ontology)
 
     usage = None
-    triplets = []
+    kg = PartialKnowledgeGraph(data=[])
 
     for i in range(epochs):
         n_new_triplets_in_epoch = 0

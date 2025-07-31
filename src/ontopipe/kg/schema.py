@@ -1,7 +1,8 @@
 from datetime import date, datetime, time
 from typing import Literal
 
-from pydantic import BaseModel, Field, create_model
+from pydantic import Field, create_model
+from symai.strategy import LLMDataModel
 
 from ontopipe.ontology.models import (
     Class,
@@ -11,6 +12,16 @@ from ontopipe.ontology.models import (
     ObjectProperty,
     Ontology,
 )
+
+
+class DynamicEntity(LLMDataModel):
+    name: str = Field(..., description="Entity name.")
+
+
+class DynamicPartialKnowledgeGraph(LLMDataModel):
+    # this class is the base class for dynamic partial knowledge graphs generated using `generate_kg_schema`
+    pass
+
 
 _data_type_to_python: dict[DataType, type] = {
     "string": str,
@@ -63,7 +74,6 @@ def _generate_class_schema(ontology: Ontology, cls: Class):
     """Generates a Pydantic model schema for a class in the ontology."""
 
     fields: dict = {
-        "name": (str, Field(..., description="Entity name.")),
         "type": (Literal[cls.name], Field(..., description="Entity type.")),  # discriminator field
     }
 
@@ -72,6 +82,7 @@ def _generate_class_schema(ontology: Ontology, cls: Class):
 
     return create_model(
         f"Partial{cls.name}",
+        __base__=DynamicEntity,
         __doc__=_generate_description(cls.description),
         **fields,
     )
@@ -93,10 +104,11 @@ def generate_kg_schema(ontology: Ontology):
 
     PartialKnowledgeGraph = create_model(
         "PartialKnowledgeGraph",
+        __base__=DynamicPartialKnowledgeGraph,
         __doc__="A partial knowledge graph containing structured data.",
         data=(
-            list[any_class_type] | None,
-            Field(None),
+            list[any_class_type],
+            Field(default_factory=list),
         ),
     )
 
