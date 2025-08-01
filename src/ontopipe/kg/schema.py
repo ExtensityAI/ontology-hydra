@@ -46,6 +46,8 @@ def _generate_description(description: Description | None):
     )
 
 
+# TODO consider to have the KG Output from extractor be a dict[str, DynamicPartialEntityData] or sth where data does not contain the name field. Then, the pydantic errors would be more useful to the model as it does not provide errors like "data.0.someProp is wrong" but "data.entityName.someProp is wrong"
+
 # TODO in prompt, mention not to generate information already present in the current kg!
 # TODO think about a property "isMistake" s.t. the model can mark outputs as mistakes if the information is not correct in case it generated something wrong!!
 
