@@ -9,10 +9,10 @@ from symai import Import, Symbol
 from symai.components import FileReader
 
 from ontopipe import generate_kg
-from ontopipe.models import KG
 from ontopipe.ontology.models import Ontology
 from ontopipe.pipe import ontopipe
-from ontopipe.vis import visualize_kg, visualize_ontology
+
+# from ontopipe.vis import visualize_kg, visualize_ontology
 
 
 def is_supported_file(file_path: Path) -> bool:
@@ -243,7 +243,7 @@ def compute_ontology_and_kg(
     threshold: float = 0.7,
     batch_size: int = 1,
     chunk_size: int = 512,
-) -> nx.DiGraph:
+):
     """
     Computes the ontology and knowledge graph from input files and returns a NetworkX DiGraph.
 
@@ -338,15 +338,14 @@ def compute_ontology_and_kg(
         print(f"Generating knowledge graph with {len(chunked_texts)} text segments...")
         print("Ontology file:", ontology_file)
         ontology = Ontology.model_validate_json(ontology_file.read_text(encoding="utf-8", errors="ignore"))
-        visualize_ontology(ontology, output_path / "ontology_kg.html")
+        # visualize_ontology(ontology, output_path / "ontology_kg.html")
         kg = generate_kg(
             cache_path=output_path / "kg.json",
             texts=chunked_texts,
-            kg_name=kg_name,
             ontology=ontology,
             batch_size=batch_size,
         )
-        visualize_kg(kg, output_path / "kg.html", ontology)
+        # visualize_kg(kg, output_path / "kg.html", ontology)
     except Exception as e:
         print(f"Error generating knowledge graph: {e}")
         # print stack trace for debugging
@@ -356,15 +355,15 @@ def compute_ontology_and_kg(
         raise
 
     # Convert KG to NetworkX DiGraph
-    G = nx.DiGraph()
-    if kg.triplets:
-        for triplet in kg.triplets:
-            G.add_edge(triplet.subject, triplet.object, label=triplet.predicate)
-        print(f"Created graph with {len(G.nodes())} nodes and {len(G.edges())} edges")
-    else:
-        print("Warning: No triplets were generated.")
+    #    G = nx.DiGraph()
+    # if kg.triplets:
+    #    for triplet in kg.triplets:
+    #        G.add_edge(triplet.subject, triplet.object, label=triplet.predicate)
+    #    print(f"Created graph with {len(G.nodes())} nodes and {len(G.edges())} edges")
+    # else:
+    #    print("Warning: No triplets were generated.")
 
-    return G
+    # return G
 
 
 def visualize_from_files(
@@ -395,13 +394,13 @@ def visualize_from_files(
             print(f"Loading ontology from {ontology_json_file}")
             ontology = Ontology.model_validate_json(ontology_json_file.read_text(encoding="utf-8", errors="ignore"))
             ontology_html = output_path / "ontology_visualization.html"
-            visualize_ontology(ontology, ontology_html)
+            # visualize_ontology(ontology, ontology_html)
             print(f"Ontology visualization saved to {ontology_html}")
         except Exception as e:
             print(f"Error visualizing ontology: {e}")
 
     # Visualize knowledge graph if provided
-    if kg_json_file and kg_json_file.exists():
+    """if kg_json_file and kg_json_file.exists():
         try:
             print(f"Loading knowledge graph from {kg_json_file}")
             with open(kg_json_file) as f:
@@ -453,7 +452,7 @@ def visualize_from_files(
 
             traceback.print_exc()
 
-    return graph
+    return graph"""
 
 
 def main():
@@ -519,7 +518,7 @@ def main():
         return None
 
     ontology_file = Path(args.ontology) if args.ontology else None
-
+    """
     try:
         graph = compute_ontology_and_kg(
             args.input,
@@ -532,6 +531,7 @@ def main():
             chunk_size=args.chunk_size,
         )
 
+        
         # Output basic statistics
         print("\nKnowledge Graph Statistics:")
         print(f"Nodes: {len(graph.nodes())}")
@@ -568,6 +568,7 @@ def main():
 
         traceback.print_exc()
         raise
+    """
 
 
 # Example usage

@@ -3,13 +3,12 @@ from pathlib import Path
 
 from symai import Expression
 from symai.components import MetadataTracker
-from symai.strategy import contract
+from symai.strategy import LLMDataModel, contract
 from tqdm import tqdm
 
 from ontopipe.kg.schema import DynamicPartialKnowledgeGraph, generate_kg_schema
 from ontopipe.ontology.models import Ontology
 from ontopipe.prompts import prompt_registry
-from ontopipe.vis import visualize_kg
 
 logger = getLogger("ontopipe.kg")
 
@@ -25,11 +24,7 @@ def is_snake_case(s):
     return all(c.islower() or c.isdigit() or c == "_" for c in s)
 
 
-class KnowledgeGraphGeneratorInput(Expression):
-    texts: list[str]
-    kg: DynamicPartialKnowledgeGraph  # the current knowledge graph state (type is a dynamically generated subclass)
-
-
+"""
 @contract(
     pre_remedy=False,
     post_remedy=True,
@@ -199,18 +194,54 @@ class KnowledgeGraphGenerator(Expression):
 
     def get_kg(self) -> KG:
         return KG(name=self.name, triplets=self._triplets)
+"""
+
+
+def _create_extractor(pkg_type: type[DynamicPartialKnowledgeGraph]):
+    class Input(LLMDataModel):
+        texts: list[str]
+        kg: pkg_type  # pyright: ignore[reportInvalidTypeForm] we use this dynamically defined schema here
+
+    Output = pkg_type
+
+    @contract(
+        pre_remedy=False,
+        post_remedy=True,
+        verbose=True,
+        remedy_retry_params=dict(tries=25, delay=0.5, max_delay=15, jitter=0.1, backoff=2, graceful=False),
+        accumulate_errors=False,
+    )
+    class Extractor(Expression):
+        def __init__(self, ontology: Ontology, pkg: type[DynamicPartialKnowledgeGraph], *args, **kwargs):
+            super().__init__(*args, **kwargs)
+            self._ontology = ontology
+            self._pkg = pkg
+
+        def forward(self, input: Input, **kwargs) -> Output:  # pyright: ignore[reportInvalidTypeForm] we again use dynamically defined schema here
+            if self.contract_result is None:
+                raise ValueError("Contract failed!")
+            return self.contract_result
+
+        def pre(self, input: Input) -> bool:
+            return True
+
+        def post(self, output: Output) -> bool:  # pyright: ignore[reportInvalidTypeForm] here too
+            return True
+
+        @property
+        def prompt(self) -> str:
+            return prompt_registry.instruction("triplet_extraction")
+
+    return Input, Extractor, Output
 
 
 def generate_kg(
     cache_path: Path,
     texts: list[str],
-    kg_name: str,
     ontology: Ontology | None = None,
     batch_size: int = 1,
     epochs: int = 3,
-) -> KG:
-    extractor = KnowledgeGraphGenerator(name=kg_name, ontology=ontology)
-
+) -> None:
     partial_json_cache_path = cache_path.with_suffix(".partial.json")
     partial_html_cache_path = cache_path.with_suffix(".partial.html")
 
@@ -219,71 +250,30 @@ def generate_kg(
 
     PartialKnowledgeGraph = generate_kg_schema(ontology)
 
+    Input, Extractor, Output = _create_extractor(PartialKnowledgeGraph)
+
     usage = None
     kg = PartialKnowledgeGraph(data=[])
 
-    for i in range(epochs):
-        n_new_triplets_in_epoch = 0
-        with MetadataTracker() as tracker:
-            for j in tqdm(range(0, len(texts), batch_size), desc=f"Epoch {i + 1}/{epochs}"):
-                text = "\n".join(texts[j : j + batch_size])
+    extractor = Extractor(ontology, PartialKnowledgeGraph)
 
-                input_data = TripletExtractorInput(
-                    text=text,
-                    ontology=ontology,
-                    state=KGState(triplets=triplets) if triplets else None,
+    with MetadataTracker() as tracker:
+        for i in range(epochs):
+            for j in tqdm(range(0, len(texts), batch_size), desc=f"Epoch {i + 1}/{epochs}"):
+                input_data = Input(
+                    texts=texts[j : j + batch_size],
+                    kg=kg,
                 )
 
-                try:
-                    result = extractor(input=input_data)
+                # TODO annotate output with chunk information!
 
-                    if result.triplets is not None:
-                        n_triplets_before = len(triplets)
-                        new_triplets = result.triplets
-                        triplets.extend(new_triplets)
-                        extractor.extend_triplets(new_triplets)
-                        n_triplets = len(triplets)
+                output: Output = extractor(input=input_data)  # pyright: ignore[reportInvalidTypeForm] once again
+                print(output.model_dump_json(indent=2, exclude_none=True))
+                exit(0)
 
-                        n_new_triplets = n_triplets - n_triplets_before
-                        n_new_triplets_in_epoch += n_new_triplets
-
-                        # write partial kg state to file already
-                        partial_json_cache_path.write_text(
-                            extractor.get_kg().model_dump_json(indent=2),
-                            encoding="utf-8",
-                        )
-
-                        logger.debug(
-                            "Extracted %i new triplets from text chunk: %s",
-                            n_new_triplets,
-                            text[:50],
-                        )
-
-                        visualize_kg(
-                            extractor.get_kg(),
-                            partial_html_cache_path,
-                            ontology,
-                            open_browser=False,
-                        )
-
-                except Exception as e:
-                    logger.error("Error extracting triplets from text", exc_info=e)
-
-            usage = tracker.usage
-            extractor.contract_perf_stats()
-
-        logger.info(
-            "Epoch %i: Extracted %i new triplets, total %i triplets",
-            i,
-            n_new_triplets_in_epoch,
-            len(triplets),
-        )
-
-        logger.debug("API Usage in Epoch %i: %s", i, usage)
-
-        if n_new_triplets_in_epoch == 0:
-            logger.info("No new triplets extracted in epoch %i, stopping early.", i)
-            break
+        usage = tracker.usage
+        extractor.contract_perf_stats()
+        logger.debug("API Usage: %s", usage)
 
     kg = extractor.get_kg()
     cache_path.write_text(kg.model_dump_json(indent=2), encoding="utf-8")

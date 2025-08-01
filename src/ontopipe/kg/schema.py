@@ -95,7 +95,7 @@ def generate_kg_schema(ontology: Ontology):
         raise ValueError("Ontology must contain at least one class.")
 
     # we do not allow the root class in the schema, as it should not be instantiated directly (TODO: check if this is good)
-    classes = [_generate_class_schema(ontology, cls) for cls in ontology.classes.values() if cls.superclass is None]
+    classes = [_generate_class_schema(ontology, cls) for cls in ontology.classes.values() if cls.superclass is not None]
 
     # create a union type out of the classes
     any_class_type = classes[0]

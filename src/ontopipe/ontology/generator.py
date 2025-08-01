@@ -10,7 +10,8 @@ from tqdm import tqdm
 from ontopipe.ontology.models import Concept, Ontology
 from ontopipe.ontology.validator import try_add_concepts
 from ontopipe.prompts import prompt_registry
-from ontopipe.vis import visualize_ontology
+
+# from ontopipe.vis import visualize_ontology
 
 logger = logging.getLogger("ontopipe.ontology.generator")
 
@@ -101,7 +102,7 @@ def generate_ontology(
                 encoding="utf-8",
             )
 
-            visualize_ontology(ontology, partial_html_cache_path, open_browser=False)
+            # visualize_ontology(ontology, partial_html_cache_path, open_browser=False)
 
         generator.contract_perf_stats()
         usage = tracker.usage

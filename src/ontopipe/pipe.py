@@ -18,7 +18,6 @@ from ontopipe.cqs.question_generation import (
 from ontopipe.cqs.scoping import generate_scope_document, merge_scope_documents
 from ontopipe.ontology.generator import generate_ontology
 from ontopipe.ontology.models import Ontology
-from ontopipe.vis import visualize_ontology
 
 logger = getLogger("ontopipe.pipe")
 # use standard logging module as ontopipe is a tool/library and we do not want to enforce a specific logging library on users
@@ -156,8 +155,6 @@ def _generate_ontology_with_cache(
     else:
         logger.debug("Generating ontology from %d CQs", len(cqs))
         ontology = generate_ontology(cqs, cache_path, cqs_per_batch=cqs_per_batch)
-
-    visualize_ontology(ontology, cache_path.with_suffix(".html"))
 
     return ontology
 

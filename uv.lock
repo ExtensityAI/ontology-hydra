@@ -167,6 +167,25 @@ wheels = [
 ]
 
 [[package]]
+name = "chonkie"
+version = "1.1.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "tqdm" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/eb/cb/5d95cecf45c07faff0e8057f10187ad3b1127c6a34f2c57fb5d5dbae2fdf/chonkie-1.1.1.tar.gz", hash = "sha256:391f90bd137fba5b82ed34411082a2abe46b6d12c00d75d73655f59f6c1ae504", size = 266261, upload-time = "2025-07-18T05:08:19.285Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/12/86/e4d51c0434a3dc140007f040bd7b2fa7479dd0c402c854335683c5be535a/chonkie-1.1.1-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:c9e3249d55173c08fb9692992ce5021704a83c91c01615f1386748b0cb24a25e", size = 350657, upload-time = "2025-07-18T05:08:08.718Z" },
+    { url = "https://files.pythonhosted.org/packages/48/27/cb12efacc6986df836939fdec93ad230fd0b8ce5f7a22d579f22fa2f3e57/chonkie-1.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:acfc4f6827e2bba98c31805fcd71feba654957140c42970a3bd995eff89625b7", size = 657579, upload-time = "2025-07-18T05:08:09.652Z" },
+    { url = "https://files.pythonhosted.org/packages/52/51/0dd22ee961cff21410d7b3067dac9f498dd8e56c42dbb188ce2669d2ee8e/chonkie-1.1.1-cp312-cp312-win_amd64.whl", hash = "sha256:afad359a02f3db46d3fcad2639d062ead5a3ad2bae45cb9f511ae0efdec79656", size = 349686, upload-time = "2025-07-18T05:08:10.689Z" },
+]
+
+[package.optional-dependencies]
+tiktoken = [
+    { name = "tiktoken" },
+]
+
+[[package]]
 name = "colorama"
 version = "0.4.6"
 source = { registry = "https://pypi.org/simple" }
@@ -795,6 +814,7 @@ name = "ontopipe"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "chonkie", extra = ["tiktoken"] },
     { name = "symbolicai" },
 ]
 
@@ -804,7 +824,10 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "symbolicai", git = "https://github.com/ExtensityAI/symbolicai.git?branch=dev" }]
+requires-dist = [
+    { name = "chonkie", extras = ["tiktoken"], specifier = ">=1.1.1" },
+    { name = "symbolicai", git = "https://github.com/ExtensityAI/symbolicai.git?branch=dev" },
+]
 
 [package.metadata.requires-dev]
 dev = [{ name = "ruff", specifier = ">=0.12.7" }]
