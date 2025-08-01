@@ -6,6 +6,7 @@ from symai.components import MetadataTracker
 from symai.strategy import LLMDataModel, contract
 from tqdm import tqdm
 
+from ontopipe.kg.merging import try_merge
 from ontopipe.kg.schema import DynamicPartialKnowledgeGraph, generate_kg_schema
 from ontopipe.ontology.models import Ontology
 from ontopipe.prompts import prompt_registry
@@ -197,12 +198,10 @@ class KnowledgeGraphGenerator(Expression):
 """
 
 
-def _create_extractor(pkg_type: type[DynamicPartialKnowledgeGraph]):
+def _create_extractor(PartialKnowledgeGraphType: type[DynamicPartialKnowledgeGraph]):
     class Input(LLMDataModel):
         texts: list[str]
-        kg: pkg_type  # pyright: ignore[reportInvalidTypeForm] we use this dynamically defined schema here
-
-    Output = pkg_type
+        kg: PartialKnowledgeGraphType  # pyright: ignore[reportInvalidTypeForm] we use this dynamically defined schema here
 
     @contract(
         pre_remedy=False,
@@ -212,12 +211,12 @@ def _create_extractor(pkg_type: type[DynamicPartialKnowledgeGraph]):
         accumulate_errors=False,
     )
     class Extractor(Expression):
-        def __init__(self, ontology: Ontology, pkg: type[DynamicPartialKnowledgeGraph], *args, **kwargs):
+        def __init__(self, ontology: Ontology, kg: PartialKnowledgeGraphType, *args, **kwargs):  # pyright: ignore[reportInvalidTypeForm] use dynamic type here
             super().__init__(*args, **kwargs)
             self._ontology = ontology
-            self._pkg = pkg
+            self._kg = kg
 
-        def forward(self, input: Input, **kwargs) -> Output:  # pyright: ignore[reportInvalidTypeForm] we again use dynamically defined schema here
+        def forward(self, input: Input, **kwargs) -> PartialKnowledgeGraphType:  # pyright: ignore[reportInvalidTypeForm] we again use dynamically defined schema here
             if self.contract_result is None:
                 raise ValueError("Contract failed!")
             return self.contract_result
@@ -225,14 +224,31 @@ def _create_extractor(pkg_type: type[DynamicPartialKnowledgeGraph]):
         def pre(self, input: Input) -> bool:
             return True
 
-        def post(self, output: Output) -> bool:  # pyright: ignore[reportInvalidTypeForm] here too
+        def post(self, output: PartialKnowledgeGraphType) -> bool:  # pyright: ignore[reportInvalidTypeForm] here too
+            # TODO add combination step here (or maybe alternatively in forward? CHECK DOCS! Essentially, in the output, we want to combine all partial entities that have the same name as that simplifies merging)
+
+            # combine output values
+
+            # TODO validate that all object properties are related to the correct ontology classes, i.e. no leo hasParent car (if car is not a Person but a Car and leo is a Person)
+
+            success, issues, merged = try_merge(self._ontology, PartialKnowledgeGraphType, self._kg, output)
+
+            if not success or merged is None:
+                raise ValueError("Some issues occured while merging:" + "\n".join(issues))
+
+            self._kg = merged
+
             return True
 
         @property
-        def prompt(self) -> str:
+        def prompt(self):
             return prompt_registry.instruction("triplet_extraction")
 
-    return Input, Extractor, Output
+        @property
+        def kg(self):
+            return self._kg
+
+    return Input, Extractor
 
 
 def generate_kg(
@@ -242,6 +258,8 @@ def generate_kg(
     batch_size: int = 1,
     epochs: int = 3,
 ) -> None:
+    cache_path = cache_path / "kg.json"
+
     partial_json_cache_path = cache_path.with_suffix(".partial.json")
     partial_html_cache_path = cache_path.with_suffix(".partial.html")
 
@@ -250,12 +268,12 @@ def generate_kg(
 
     PartialKnowledgeGraph = generate_kg_schema(ontology)
 
-    Input, Extractor, Output = _create_extractor(PartialKnowledgeGraph)
+    Input, Extractor = _create_extractor(PartialKnowledgeGraph)
 
     usage = None
     kg = PartialKnowledgeGraph(data=[])
 
-    extractor = Extractor(ontology, PartialKnowledgeGraph)
+    extractor = Extractor(ontology, kg)
 
     with MetadataTracker() as tracker:
         for i in range(epochs):
@@ -267,9 +285,11 @@ def generate_kg(
 
                 # TODO annotate output with chunk information!
 
-                output: Output = extractor(input=input_data)  # pyright: ignore[reportInvalidTypeForm] once again
-                print(output.model_dump_json(indent=2, exclude_none=True))
-                exit(0)
+                _ = extractor(input=input_data)  # pyright: ignore[reportInvalidTypeForm] once again
+
+                kg = extractor.kg
+
+                partial_json_cache_path.write_text(kg.model_dump_json(indent=2, exclude_none=True))
 
         usage = tracker.usage
         extractor.contract_perf_stats()

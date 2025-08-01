@@ -1,5 +1,5 @@
 from datetime import date, datetime, time
-from typing import Literal
+from typing import Annotated, Literal
 
 from pydantic import Field, create_model
 from symai.strategy import LLMDataModel
@@ -14,7 +14,7 @@ from ontopipe.ontology.models import (
 )
 
 
-class DynamicEntity(LLMDataModel):
+class DynamicPartialEntity(LLMDataModel):
     name: str = Field(..., description="Entity name.")
 
 
@@ -46,6 +46,10 @@ def _generate_description(description: Description | None):
     )
 
 
+# TODO in prompt, mention not to generate information already present in the current kg!
+# TODO think about a property "isMistake" s.t. the model can mark outputs as mistakes if the information is not correct in case it generated something wrong!!
+
+
 def _generate_property_field(prop: DataProperty | ObjectProperty):
     """Generates a Pydantic field for a property in the ontology."""
 
@@ -56,6 +60,8 @@ def _generate_property_field(prop: DataProperty | ObjectProperty):
             # TODO respect functionality
             Field(None, description=_generate_description(prop.description)),
         )
+
+    # TODO for date, time and datetime, add format information
 
     elif isinstance(prop, ObjectProperty):
         return (
@@ -69,12 +75,14 @@ def _generate_property_field(prop: DataProperty | ObjectProperty):
 
 # TODO improve __doc__ and everything for the schemas, mention that the model can use it to extract partial data from the knowledge graph, i.e. just one field for a specific class
 
+# TODO disallow "name" and "cls" properties in ontology generator - these are reserved by us!
+
 
 def _generate_class_schema(ontology: Ontology, cls: Class):
     """Generates a Pydantic model schema for a class in the ontology."""
 
     fields: dict = {
-        "type": (Literal[cls.name], Field(..., description="Entity type.")),  # discriminator field
+        "cls": (Literal[cls.name], Field(..., description="Entity class.")),  # discriminator field
     }
 
     for prop in ontology.get_properties(cls).values():
@@ -82,7 +90,7 @@ def _generate_class_schema(ontology: Ontology, cls: Class):
 
     return create_model(
         f"Partial{cls.name}",
-        __base__=DynamicEntity,
+        __base__=DynamicPartialEntity,
         __doc__=_generate_description(cls.description),
         **fields,
     )
@@ -107,9 +115,11 @@ def generate_kg_schema(ontology: Ontology):
         __base__=DynamicPartialKnowledgeGraph,
         __doc__="A partial knowledge graph containing structured data.",
         data=(
-            list[any_class_type],
+            list[Annotated[any_class_type, Field(discriminator="cls")]],
             Field(default_factory=list),
         ),
     )
+
+    # TODO update prompt! it currently asks for triplets
 
     return PartialKnowledgeGraph

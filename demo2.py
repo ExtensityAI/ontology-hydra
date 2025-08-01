@@ -45,7 +45,7 @@ texts = [
 ]  # TODO add support for other text formats
 
 tokenizer = tiktoken.get_encoding("o200k_base")
-chunker = TokenChunker(chunk_size=2048, chunk_overlap=256, tokenizer=tokenizer)
+chunker = TokenChunker(chunk_size=4096, chunk_overlap=512, tokenizer=tokenizer)
 
 chunks = chunker(texts)
 
