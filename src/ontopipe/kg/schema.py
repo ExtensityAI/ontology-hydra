@@ -38,7 +38,7 @@ def _generate_description(description: Description | None):
     """Generates a description string for a class or property."""
 
     if description is None:
-        return None
+        return "No description provided."
 
     return (
         f"{description.description or 'No description provided.'}\n"
@@ -59,25 +59,28 @@ def _generate_property_field(prop: DataProperty | ObjectProperty):
         return (
             list[_data_type_to_python[prop.range]]
             | None,  # data properties can be None (open-world assumption), also, if they are not functional, they can have multiple values
-            # TODO respect functionality
+            # TODO respect functional props (not a list then)
             Field(None, description=_generate_description(prop.description)),
         )
 
     # TODO for date, time and datetime, add format information
 
     elif isinstance(prop, ObjectProperty):
+        range = ", ".join(prop.range)
+
         return (
             list[str]
             | None,  # Assuming object properties are represented as lists of strings (entity names) (can be None as well, open-world assumption)
             # TODO ADD DESCRIPTION AS TO WHAT ENTITIES CAN BE NAMED HERE!
             # TODO respect functionality
-            Field(None, description=_generate_description(prop.description)),
+            Field(
+                None,
+                description=f"Provide a list of entity names ONLY OF the specified range ({range}). {_generate_description(prop.description)}",
+            ),
         )
 
 
 # TODO improve __doc__ and everything for the schemas, mention that the model can use it to extract partial data from the knowledge graph, i.e. just one field for a specific class
-
-# TODO disallow "name" and "cls" properties in ontology generator - these are reserved by us!
 
 
 def _generate_class_schema(ontology: Ontology, cls: Class):
@@ -121,7 +124,5 @@ def generate_kg_schema(ontology: Ontology):
             Field(default_factory=list),
         ),
     )
-
-    # TODO update prompt! it currently asks for triplets
 
     return PartialKnowledgeGraph

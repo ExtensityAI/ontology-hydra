@@ -3,7 +3,7 @@ from typing import cast
 from ontopipe.kg.schema import DynamicPartialEntity, DynamicPartialKnowledgeGraph
 from ontopipe.ontology.models import Ontology
 
-_MERGE_IGNORE_VALUES = {"name", "cls"}
+_IGNORE_MERGE_KEYS = {"name", "cls"}
 
 
 def _merge_values(a: list | None, b: list | None):
@@ -59,7 +59,7 @@ def try_merge(
 
         # TODO currently, we ignore functional properties, but should not do so later!
 
-        all_keys = (set(a_json.keys()) | set(b_json.keys())) - _MERGE_IGNORE_VALUES
+        all_keys = (set(a_json.keys()) | set(b_json.keys())) - _IGNORE_MERGE_KEYS
 
         d = {"name": name, "cls": class_name, **{k: _merge_values(a_json.get(k), b_json.get(k)) for k in all_keys}}
         output.append(entity_type.model_validate(d))

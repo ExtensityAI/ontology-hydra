@@ -139,6 +139,16 @@ def _try_add_properties(ontology: Ontology, props: list[DataProperty | ObjectPro
     for prop in props:
         path = f"property:{prop.name}"
 
+        if prop.name.strip().lower() in {"name", "cls"}:
+            # name and cls are reserved, we use them in the kg extractor!
+            yield Issue(
+                code="reserved_property_name",
+                path=path,
+                message=f"Property '{prop.name}' is a reserved name",
+                hint="Choose a different name for this property",
+            )
+            continue
+
         if existing_prop := ontology.properties.get(prop.name):
             # ensure property does not yet exist
             yield Issue(
