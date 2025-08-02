@@ -173,21 +173,26 @@ Extraction Guidelines:
 
 1. Extract Stated Facts Only: Identify only the triples that are explicitly stated in the input text. Do not infer, assume, or add information that the text does not provide. No hallucination or guesswork is allowed - every triple must be directly supported by the text.
 
-2. Include Entity Types (isA): For every unique entity you mention in any triple, include one triple using the predicate isA to state that entity’s class/type. The object of this isA triple must be a class name from the ontology that appropriately describes the entity. For example: claude_shannon isA Person. If an entity does not have a corresponding isA triple in your output, that entity is considered invalid. Ensure you choose the correct class from the ontology for each entity.
+2. Include Entity Types (isA): For every unique entity you mention in any triple, include one triple using the predicate isA to state that entity's class/type. The object of this isA triple must be a class name from the ontology that appropriately describes the entity. For example: claude_shannon isA Person. If an entity does not have a corresponding isA triple in your output, that entity is considered invalid. Ensure you choose the correct class from the ontology for each entity.
 
-3. Strict Entity Naming Conventions:
+3. Incremental Knowledge Building: You can extract partial information about entities and build upon existing knowledge. If an entity already exists in the current knowledge graph, you can provide additional properties for that entity by creating a new object with the same name and cls fields. The system will automatically merge the new information with existing data. This allows you to:
+   - Add new properties to entities mentioned in previous text chunks
+   - Enrich existing entities with additional details found in the current text
+   - Build comprehensive entity profiles incrementally across multiple extractions
+
+4. Strict Entity Naming Conventions:
     - Use snake_case for multi-word names: Combine words in lowercase with underscores. Examples: alan_turing, vienna_city_hall.
     - Event Entity Format: If the entity represents a specific event or occurrence, name it in the format {{subject}}_{{verb}}_{{object}}_{{YYYY}} (optionally add _MMDD for month and day if known). Use the main subject's canonical name, a concise verb, and an object that is the focus of the event (not concatenating multiple entities). The object part should be the *main* object relevant to the event—never include more than needed (e.g., do not combine location or year into the object part). For example: claude_shannon_develops_phd_dissertation_1939 for the event where Claude Shannon develops his PhD dissertation in 1939. Any additional information, such as location or associated documents, should be represented as separate entities and attached using properties, not combined in the event entity name.
     - Compound or Relationship Entities: For composite entities that inherently involve multiple named parties (e.g., a marriage, treaty, or partnership), include the full names of all primary participants to avoid ambiguity. Connect them with _and_ if needed. Example: marriage_john_doe_and_jane_doe.
     - Each entity must have only the information needed to uniquely identify it, and never redundant or concatenated details. Do not combine information like location or date in the name unless required by the event pattern above. Names must be globally unique, clear, and concise.
 
-4. Use Ontology-Defined Terms Only: When choosing predicate names (relations) and class names, only use those defined in the provided ontology JSON. Do not invent or assume any new relation or class names that are not in the ontology. Stick exactly to the naming (including capitalization or formatting) of classes and properties as given by the ontology. If the text implies a relationship but the corresponding property is not defined in the ontology, skip that triple.
+5. Use Ontology-Defined Terms Only: When choosing predicate names (relations) and class names, only use those defined in the provided ontology JSON. Do not invent or assume any new relation or class names that are not in the ontology. Stick exactly to the naming (including capitalization or formatting) of classes and properties as given by the ontology. If the text implies a relationship but the corresponding property is not defined in the ontology, skip that triple.
 
-5. Consistent Entity References: Maintain consistency in entity naming throughout all triples. If the same entity is mentioned multiple times in the text (even under different names or aliases), use the exact same entity name (same spelling and underscores) every time in your output.
+6. Consistent Entity References: Maintain consistency in entity naming throughout all triples. If the same entity is mentioned multiple times in the text (even under different names or aliases), use the exact same entity name (same spelling and underscores) every time in your output. This is crucial for proper merging with existing knowledge.
 
-6. Coreference Resolution: Resolve pronouns and ambiguous references in the text to their specific entities. If the text says “He founded the company in 1998” and earlier it's clear that “He” refers to, say, Larry Page, then use the explicit entity name (larry_page) in the triple. Only replace a pronoun with an entity name when you are certain of the reference from the context. If a reference cannot be resolved unambiguously, it's safer to omit that potential triple than to guess.
+7. Coreference Resolution: Resolve pronouns and ambiguous references in the text to their specific entities. If the text says "He founded the company in 1998" and earlier it's clear that "He" refers to, say, Larry Page, then use the explicit entity name (larry_page) in the triple. Only replace a pronoun with an entity name when you are certain of the reference from the context. If a reference cannot be resolved unambiguously, it's safer to omit that potential triple than to guess.
 
-7. Avoid Overloaded or Redundant Entity Names: Never create entity names that concatenate multiple unrelated elements (e.g., including both a document and a location in a single entity name). Each entity should represent exactly one thing, and additional facts like location, date, or related items should be expressed as separate triples using properties. For instance, for an event where Claude Shannon develops his PhD dissertation at Cold Spring Harbor in 1939, represent:
+8. Avoid Overloaded or Redundant Entity Names: Never create entity names that concatenate multiple unrelated elements (e.g., including both a document and a location in a single entity name). Each entity should represent exactly one thing, and additional facts like location, date, or related items should be expressed as separate triples using properties. For instance, for an event where Claude Shannon develops his PhD dissertation at Cold Spring Harbor in 1939, represent:
     - The event as claude_shannon_develops_phd_dissertation_1939 (LifeEvent)
     - The dissertation as claude_shannon_phd_dissertation (Document)
     - The location and year as separate properties attached to the event or document, not in the entity name itself.
@@ -201,11 +206,14 @@ Your final output must be a JSON array (list) of objects, where each object repr
 
 Format the output as a JSON list [...] containing one object per triple. Do not include any additional commentary or explanation in the output—only the JSON data.
 
+## Merging Behavior:
+When you output multiple objects with the same entity name and class (same "subject" and same "isA" object), the system will automatically merge their properties. This allows you to incrementally build comprehensive entity descriptions by extracting partial information from different parts of the text or across multiple processing rounds.
 
-Instructions Recap: Extract all relevant triples from the text, including each entity's isA type triple, and present them as JSON {{subject, predicate, object}} objects. Follow the naming rules and use the ontology's vocabulary strictly. Ensure every fact is backed by the text, with no extraneous or inferred information. Avoid overloaded or redundant entity names. By adhering to these guidelines, the output will consist of high-quality triples ready for knowledge graph construction.
+Instructions Recap: Extract all relevant triples from the text, including each entity's isA type triple, and present them as JSON {{subject, predicate, object}} objects. Follow the naming rules and use the ontology's vocabulary strictly. Ensure every fact is backed by the text, with no extraneous or inferred information. Avoid overloaded or redundant entity names. Take advantage of incremental knowledge building by adding information to existing entities when appropriate. By adhering to these guidelines, the output will consist of high-quality triples ready for knowledge graph construction and merging.
 """,
 )
 
+# TODO update this as well to be in line with new extraction
 # Instructions for ontology-free triplet extraction
 prompt_registry.register_instruction(
     PromptLanguage.ENGLISH,

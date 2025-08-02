@@ -42,7 +42,7 @@ def _generate_description(description: Description | None):
 
     return (
         f"{description.description or 'No description provided.'}\n"
-        + f"(Constraints: {description.constraints or 'No constraints provided.'})\n"
+        + f"(Constraints: {description.constraints or 'None'})\n"
     )
 
 
